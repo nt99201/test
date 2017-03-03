@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="Ko" lang="Ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+<title>audio</title>
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+	$(document).ready(function () {
+		//gnbLink (a와 형제로 가져오기)
+		gnbArea();
+
+		//gnbLink (따로 클래스 불러오기)
+		gnbArea2();
+
+		//btnover
+		btnover();
+
+	});
+
+	function gnbArea(){
+		$(".gnb_area li a").removeClass("on");
+		$(".gnb_area li > a").mousedown(function(event){
+			var $wcWidth = $("#wrap_cont1").width();
+			var $idx = $(this).parent().index();
+
+			//gnbLink
+			$(this).addClass("on").next().show();
+			$(this).parent().siblings("li").find(".sub_menu").hide().end().find("> a").removeClass("on");
+			
+			//gnb submenu width (정확한 this의 index값을 찾지 못하면 position값을 가지고 오지 못한다.)
+			$gnbPosL = $(".gnb_area > li:eq("+$idx+")").position().left;
+			$(".gnb_area > li:eq("+$idx+")").find(".sub_menu").css("width",($wcWidth-$gnbPosL)+"px");
+
+			//버블링 function(event)도 같이 넣어줘야한다.
+			event.stopPropagation();
+		});	
+
+		$(".gnb_area").mouseleave(function(){
+			$(".sub_menu").hide();
+		});
+	}
+
+	function gnbArea2(){
+		$(".gnb_bot").css("display","none");
+
+		$(".gnb_area2 li a").removeClass("on");
+
+		$(".gnb_area2 li > a").mouseenter(function(event){
+			var $wcWidth = $("#wrap_cont2").width();
+			var $idx = $(this).parent().index();
+
+			if($(".gnb_bot").css("display","none")){
+				$(".gnb_bot").css("display","block");
+			}
+			
+			$(".gnb_bot").css("width",$wcWidth+"px");
+
+			//버블링 function(event)도 같이 넣어줘야한다.
+			event.stopPropagation();
+		});	
+
+		$("#wrap_cont2").mouseleave(function(){
+			$(".gnb_bot").css("display","none");
+		});
+	}
+
+	function btnover(){
+		$(".btnbox a").click(function(){		
+			if($(this).hasClass("on") == true){
+				$(this).removeClass("on");
+			}else{
+				$(this).addClass("on");
+			}
+			return false;
+		});
+	}
+
+
+
+//]]>
+</script>
+
+<style type="text/css">
+/* common */
+html {font-size:12px; width:100%; height:100%;}
+body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0; padding:0; font-size:1rem; line-height:1.2rem; word-spacing:1px; letter-spacing:-1px;}
+body,input,textarea,select,button,table{font-size:14px; line-height:1.25em; font-family:Helvetica,sans-serif;}
+body {position:relative; -webkit-text-size-adjust:none; background-color:#fff; color:#666;}
+img, fieldset {border:none;}
+img {vertical-align:top;}
+ul, li, ol {list-style:none;}
+em, i, address {font-style:normal;}
+
+a {text-decoration:none; color:#666;}
+a:hover {color:blue;}
+
+/* newbtn & newbanner*/
+.btn_box {margin-top:10px;}
+.btn_box .btn1 {display:inline-block; height:20px; padding:0 5px; border:1px solid #444; border-radius:4px; line-height:20px; vertical-align:top;}
+.btn_box .btn1:before {display:inline-block; margin-right:2px; font-size:12px; line-height:20px; vertical-align:top; content:'·';}
+
+.btn_box .btn2 {position:relative; display:inline-block; height:20px; padding:0 5px 0 10px; border:1px solid #444; border-radius:4px; line-height:20px; vertical-align:top;}
+.btn_box .btn2:before {position:absolute; left:5px; top:50%; margin-top:-1px; display:block; width:2px; height:2px; background-color:#444; content:'';}
+
+.btn_box .btn3 {position:relative; display:inline-block; vertical-align:top;}
+.btn_box .btn3 a {overflow:hidden; position:absolute; top:0; left:0; display:block; width:15px; height:15px; text-indent:-9999px;}
+.btn_box .btn3 a:before {display:block; width:15px; height:15px; background:url('img/sp_bullet.gif') -5px -485px no-repeat; content:'';}
+
+.banner_box {margin-top:10px; border-top:1px solid #444; border-bottom:1px solid #444;}
+.banner_box .banner_inner {display:table; max-width:320px; max-height:110px; margin:0 auto;}
+.banner_box .txtarea {display:table-cell; width:auto; padding:10px; vertical-align:middle;}
+.banner_box .txtarea .tit {display:inline-block; font-size:17px; line-height:20px; color:#444;}
+.banner_box .txtarea .txt {display:inline-block; margin-top:5px;}
+.banner_box .img {display:table-cell; width:63px; height:110px; background-image:url('img/bg_banner_usertrans.png'); background-position:center; background-repeat:no-repeat; background-size:63px; auto; padding:0 10px; vertical-align:middle;}
+
+.banner_box.user .img {width:70px; background-image:url('img/bg_banner_trans.png'); background-size:70px auto;}
+
+/* gnbmenu */
+#wrap_cont1 {width:1000px; margin:0 auto;}
+#wrap_cont1 .gnb_area {position:relative; margin-top:20px; width:100%; height:30px; background-color:#f1f1f1;}
+#wrap_cont1 .gnb_area li {position:relative; float:left; margin-right:10px; height:30px; text-align:center; font-weight:bold;}
+#wrap_cont1 .gnb_area li a {display:block; height:22px; padding:8px 10px 0 10px;}
+#wrap_cont1 .gnb_area li .on {color:blue;}
+#wrap_cont1 .gnb_area li .sub_menu {position:absolute; top:30px; left:0;  background-color:#ccc; display:none;}
+#wrap_cont1 .gnb_area li .sub_menu li {float:left; margin-right:0; font-weight:normal;}
+#wrap_cont1 .gnb_area li .sub_menu li:after {position:absolute; top:50%; left:0; margin-top:-15px; width:1px; height:30px; background-color:#444; content:'';}
+#wrap_cont1 .gnb_area li .sub_menu li a {color:#fff;}
+#wrap_cont1 .gnb_area li .sub_menu li:first-child:after {width:0;}
+
+/* gnbmenu */
+#wrap_cont2 {width:1000px; margin:40px auto 0;}
+#wrap_cont2 .gnb_area2 {overflow:hidden; position:relative; margin-top:20px; width:100%; height:30px; background-color:#f1f1f1;}
+#wrap_cont2 .gnb_area2 li {position:relative; float:left; margin-right:10px; height:30px; text-align:center; font-weight:bold;}
+#wrap_cont2 .gnb_area2 li a {display:block; height:22px; padding:8px 10px 0 10px;}
+#wrap_cont2 .gnb_area2 li .on {color:blue;}
+
+#wrap_cont2 .gnb_bot {overflow:hidden; width:100%;}
+#wrap_cont2 .sub_menu2 {float:left; position:relative; width:20%; min-height:30px; padding:5px 0; background:url('img/gnb_bg.gif') left top repeat-y; background-color:#ccc; text-align:left;}
+#wrap_cont2 .sub_menu2:first-child {background:none; background-color:#ccc;}
+#wrap_cont2 .sub_menu2 li {position:relative; margin-right:0; font-weight:normal; font-size:12px; line-height:14px;}
+#wrap_cont2 .sub_menu2 li a {display:inline-block; padding:3px 10px; color:#fff;}
+#wrap_cont2 .sub_menu2 li a:hover {color:blue;}
+</style>
+
+</head>
+<body>
+
+	<div class="btn_box">
+		<a href="#" class="btn1">버튼1</a>
+		<a href="#" class="btn2">버튼2</a>
+		<span class="btn3"><a href="#">버튼3</a></span>
+	</div>
+
+	<div class="banner_box">
+		<div class="banner_inner">
+			<span class="txtarea">
+				<strong class="tit">다국어 번역문 참여하기</strong>
+				<span class="txt">영어 예문을 중국어로 번역해 보세요.</span>
+			</span>
+			<span class="img"></span>
+		</div>
+	</div>
+
+	<div class="banner_box user">
+		<div class="banner_inner">
+			<span class="img"></span>
+			<span class="txtarea">
+				<strong class="tit">다국어 번역문 참여하기</strong>
+				<span class="txt">小就应该养成爱花草的习 惯从小就应该养成爱花草的习惯从 小就应该养成爱花草的习惯 从小就应该养成爱花草的习惯小就应该养成爱花草的习 惯从小就应该养成爱花草的习惯从 小就应该养成爱花草的习惯 从小就应该养成爱花草的习惯</span>
+			</span>
+		</div>
+	</div>
+
+	<div id="wrap_cont1">
+		<ul class="gnb_area">
+			<li>
+				<a href="#11" class="on">메뉴1</a>
+				<ul class="sub_menu">
+					<li><a href="#1">sub1</a></li>
+					<li><a href="#2">sub2</a></li>
+					<li><a href="#3">sub3</a></li>
+					<li><a href="#4">sub4</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#22">메뉴2</a>
+				<ul class="sub_menu">
+					<li><a href="#1">sub1</a></li>
+					<li><a href="#2">sub2</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#33">메뉴3</a>
+				<ul class="sub_menu">
+					<li><a href="www.naver.com">sub1</a></li>
+					<li><a href="#2">sub2</a></li>
+				</ul>
+			</li>
+		</ul>	
+	</div>
+
+	<div id="wrap_cont2">
+		<ul class="gnb_area2">
+			<li>
+				<a href="#11" class="on">메뉴1</a>
+			</li>
+			<li>
+				<a href="#22">메뉴2</a>
+			</li>
+			<li>
+				<a href="#33">메뉴3</a>
+			</li>
+		</ul>
+
+		<div class="gnb_bot">
+			<ul class="sub_menu2">
+				<li><a href="www.naver.com">sub1</a></li>
+				<li><a href="#2">sub2</a></li>
+				<li><a href="#3">sub3</a></li>
+			</ul>
+			<ul class="sub_menu2">
+				<li><a href="www.naver.com">sub1</a></li>
+				<li><a href="#2">sub2</a></li>
+				<li><a href="#3">sub3</a></li>
+			</ul>
+			<ul class="sub_menu2">
+				<li><a href="www.naver.com">sub1</a></li>
+				<li><a href="#2">sub2</a></li>
+				<li><a href="#3">sub3</a></li>
+			</ul>
+			<ul class="sub_menu2">
+				<li><a href="www.naver.com">sub1</a></li>
+				<li><a href="#2">sub2</a></li>
+				<li><a href="#3">sub3</a></li>
+			</ul>
+			<ul class="sub_menu2">
+				<li><a href="www.naver.com">sub1</a></li>
+				<li><a href="#2">sub2</a></li>
+				<li><a href="#3">sub3</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>
