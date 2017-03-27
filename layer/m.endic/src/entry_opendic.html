@@ -1,0 +1,76 @@
+<!--[D] 엔트리 폰트 조정 -->
+<!--[D] 1단계 - 클래스 없음 -->
+<!--[D] 2단계 - fs2-->
+<!--[D] 3단계 - fs3-->
+<!--[D] 4단계 - fs4-->
+<!--[D] 5단계 - fs5-->
+
+<!-- 오픈사전 엔트리 -->
+<div class="entry_wrap">
+    <section class="section_entry">
+        <h2 class="u_hc">단어 섹션</h2>
+        <? include 'layer_option_menu.html' ?>
+
+        <div class="entry_word">
+            <? include ''.$word_type ?>
+        </div>
+    </section>
+
+    <section class="section_entry">
+        <h2 class="u_hc">정의 섹션</h2>
+        <div class="entry_mean">
+            <ul class="mean_wrap">
+                <li class="mean_itm">
+                    <em class="num">1</em>
+                    <div class="inner_wrap">
+                        <p class="mean">재일 특권을 용납하지 않는 시민 모임</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="source">출처: 옥스퍼드</a>
+        </div>
+
+        <div class="entry_opendic">
+            <ul class="lst_example">
+                <li>
+                    <div class="user_mean_wrap">
+                        <span class="tag red">오픈사전</span>
+                        <p class="user_mean">룸 서비스를 주문하다</p>
+                        <p class="user_info">
+                            <span class="username">최우동(emma****)</span>
+                            <span class="bar"></span>
+                            <em class="date">2015-05-21</em>
+                        </p>
+                        <div class="btn_area">
+                            <button type="button" class="like"><span class="hc">추천: </span>278</button>
+                            <button type="button" class="dislike"><span class="hc">비 추천: </span>7</button>
+                        </div>
+                        <button type="button" class="btn_detail_show">상세보기</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="user_mean_wrap">
+                        <p class="user_mean">룸 서비스를 주문하다</p>
+                        <p class="user_info">
+                            <span class="username">최우동(emma****)</span>
+                            <span class="bar"></span>
+                            <em class="date">2015-05-21</em>
+                        </p>
+                        <div class="btn_area">
+                            <button type="button" class="like"><span class="hc">추천: </span>278</button>
+                            <button type="button" class="dislike"><span class="hc">비 추천: </span>7</button>
+                        </div>
+                        <button type="button" class="btn_detail_show">상세보기</button>
+                    </div>
+                </li>
+            </ul>
+            <p class="notice">이용자들이 직접 등록한 단어로 일부 정확하지 않은 정보가 포함될 수 있습니다.</p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_opendic_show">오픈사전 전체 보기</button>
+            </div>
+        </div>
+    </section>
+
+    <? include 'layer_totalSearchResult.html' ?>
+    <? include 'layer_opendic.html' ?>
+</div>

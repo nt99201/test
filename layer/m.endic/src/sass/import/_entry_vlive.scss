@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+/* V live */
+
+%ellipsis{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.ico_vlive{
+	@extend %sprite_vlive_img;
+
+	width:20px;
+	height: 27px;
+	margin-right: 5px;
+	background-position: 0 0;
+}
+.ico_return{
+	@extend %sprite_vlive_img;
+
+	width:12px;
+	height: 13px;
+	margin:5px 5px 0 0;
+	background-position: -50px 0;
+}
+.vlive_help{
+	@include relative;
+	display:inline-block;
+	margin: 2px 0 0 5px;
+	vertical-align: top;
+	z-index:10;
+
+	.help_toggle{
+		@extend %sprite_vlive_img;
+
+		width:20px;
+		height:20px;
+		background-position: -25px 0;
+	}
+	.layer_help{
+		@include absolute(top 27px left -83px);
+
+		width: 145px;
+		padding: 12px 28px 12px 12px;
+		background-color: #fff8cf;
+		border:1px solid #ddd5aa;
+		font-size: 15px;
+		line-height: 20px;
+		color:#49453c;
+		letter-spacing: -1px;
+		word-wrap: break-word;
+		-ms-word-break: keep-all;
+		word-break: keep-all;
+
+		&:after{
+			@extend %sprite_vlive_img;
+			@include absolute(left 87px top -6px);
+
+			width:12px;
+			height:6px;
+			background-position: 0 -30px;
+			content:'';
+		}
+	}
+	.layer_close{
+		@extend %sprite_vlive_img;
+		@include absolute(right 7px top 7px);
+
+		width:15px;
+		height: 15px;
+		background-position: -25px -25px;
+	}
+
+}
+.vlive_card{
+	padding: 17px 17px 0 17px;
+
+	.example_wrap{
+		.example_stc{
+			font-size:17px;
+			line-height:22px;
+			color:#000;
+		}
+		.example_mean{
+			margin-top:3px;
+			font-size: 19px;
+			line-height:24px;
+			color:#828282;
+		}
+	}
+	.vlive_info_area{
+		@include relative;
+		padding: 11px 0;
+		margin-top: 15px;
+		border-top: 1px solid #f0f0f0;
+		overflow:hidden;
+
+		.star_thumb{
+			float:left;
+			width:32px;
+			height:32px;
+			border:1px solid #ccc;
+			-webkit-border-radius:16px;
+			-moz-border-radius:16px;
+			border-radius:16px;
+
+			img{
+				width:32px;
+				height:32px;
+				-webkit-border-radius:16px;
+				-moz-border-radius:16px;
+				border-radius:16px;
+			}
+		}
+		.vlive_info{
+			padding:0 92px 0 40px;
+
+			.star_name{
+				@extend %ellipsis;
+
+				font-size:12px;
+				font-weight:bold;
+				color:#000;
+			}
+			.vlive_name{
+				@extend %ellipsis;
+
+				font-size:12px;
+				color:#aaa;
+			}
+		}
+	}
+	.btn_detail_show{
+		@include absolute(right 10px top 14px);
+	}
+}
+
+/* V LIVE 자막 페이지 */
+
+.vplay_card{
+	background-color:#fff;
+	font-family:HelveticaNeue,Helvetica,sans-serif;
+
+	.vplay_subject{
+		padding: 14px 15px;
+		font-size:15px;
+		line-height: 20px;
+		color:#000;
+	}
+	.vlive_info_area{
+		@include relative;
+
+		padding: 10px 15px;
+		min-height: 40px;
+		border-top: 1px solid #e4e4e4;
+		border-bottom: 1px solid #d8d8d8;
+
+		.star_thumb{
+			float:left;
+			width:38px;
+			height:38px;
+			border:1px solid #ccc;
+			-webkit-border-radius:19px;
+			-moz-border-radius:19px;
+			border-radius:19px;
+
+			img{
+				width:38px;
+				height:38px;
+				-webkit-border-radius:19px;
+				-moz-border-radius:19px;
+				border-radius:19px;
+			}
+		}
+		.vlive_info{
+			padding:3px 92px 0 53px;
+
+			.star_name{
+				@extend %ellipsis;
+
+				font-size:14px;
+				font-weight:bold;
+				color:#000;
+			}
+			.vlive_date{
+				@extend %ellipsis;
+
+				font-size:12px;
+				color:#2b3037;
+			}
+		}
+		.btn_go_vlive{
+			@include absolute(right 15px top 15px);
+
+			height:25px;
+			line-height:24px;
+			padding: 0 7px;
+			-webkit-border-radius:3px;
+			-moz-border-radius:3px;
+			border-radius:3px;
+			border:1px solid #1ecfff;
+			font-size: 14px;
+			font-weight:bold;
+			color:#1ecfff;
+		}
+	}
+
+	.vplay_area{
+		@include relative;
+
+		padding-bottom:56.25%;
+
+		.paid_play_bg{
+			@include absolute(all);
+			width: 100%;
+			height: 100%;
+			background-position: 50% 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		iframe{
+			@include absolute(all);
+		}
+
+		.paid_option{
+			@include absolute(left 0 bottom 0 right 0);
+
+			padding: 0 15px 15px;
+
+			.btn_paid_link{
+				@extend %sprite_vlive_img;
+
+				width:46px;
+				height:16px;
+				margin:2px 3px 0 0;
+				background-position:0 -50px;
+			}
+			.txt{
+				font-size:13px;
+				color:#d5d5d5;
+
+				.blue{
+					color:#1ecfff;
+				}
+			}
+			.play_time{
+				float:right;
+				font-size:13px;
+				color:#fff;
+			}
+		}
+	}
+}
+
+.vlive_subtitle{
+	@include relative;
+
+	overflow: hidden;
+	margin-top:8px;
+	padding: 38px 0;
+	background-color: #fff;
+	border-top: 1px solid #efeff1;
+	border-bottom: 1px solid #efeff1;
+	font-family:HelveticaNeue,Helvetica,sans-serif;
+
+	.subtitles{
+		padding:3px 15px 25px;
+
+
+		p{
+			margin-top: 22px;
+			span{
+				display:block;
+				font-size: 16px;
+				line-height:21px;
+				color:#777;
+
+				&[lang="en"]{
+					font-size: 15px;
+					line-height:20px;
+				}
+			}
+			&.current{
+				span{
+					color:#00ba36;
+				}
+			}
+		}
+	}
+	.btn_direction{
+		button{
+			@include absolute(left 0 right 0);
+
+			width:100%;
+			height:36px;
+			background-color:#fff;
+			line-height: 36px;
+			text-align:center;
+
+			[class^="ico_"]{
+				@extend %sprite_vlive_img;
+				width: 18px;
+				height:8px;
+				margin-top:15px;
+			}
+			.ico_up{
+				background-position: -50px -25px;
+			}
+			.ico_dn{
+				background-position: -50px -40px;
+			}
+			&.btn_prev{
+				top:0;
+				border-bottom: 1px solid #efeff1;
+			}
+			&.btn_next{
+				bottom:0;
+				border-top: 1px solid #efeff1;
+			}
+		}
+	}
+}
+.translator_area{
+	overflow:hidden;
+	padding:18px 15px;
+	font-family:HelveticaNeue,Helvetica,sans-serif;
+
+	.translator_info{
+		overflow:hidden;
+		float:right;
+		font-size: 13px;
+		color:#666;
+		dt{
+			float:left;
+
+			&:after{
+				margin-right:4px;
+				content:':';
+			}
+		}
+		dd{
+			float:left;
+
+			&.service{
+				font-weight:bold;
+				color:#000;
+
+				&:before{
+					display:inline-block;
+					width:1px;
+					height:10px;
+					margin:0 8px;
+					background-color:#cfcfcf;
+					content:'';
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+[git 자주 사용하는 명령어는 위 9가지 정도로 정리]
+@master]$ git status
+@master]$ git add -A 
+@master]$ git add '파일명'
+@master]$ git reset HEAD 
+@master]$ git reset '파일명'
+@master]$ git commit -m '코멘트' 
+@master]$ git push -u [원격저장소 별칭(alias)] [branc명] 
+@master]$ git pull 
+@master]$ git merge [원격저장소 별칭] [branc명]
+
+
+
+[명령어 사용 내용]
+1. git status
+- git status는 로컬 저장소내 변경 파일에 대해서 확인하는 명령어입니다.
+- git status라고 명령어를 치면 로컬 저장소의 변경 내역을 확인하는 명령어
+
+[팁]
+★ change to be commited : 커밋이 가능하다.
+★ change but not update  :  업데이트를 받아야 된다.
+★ change to be commited에 있는 리스트가 아니면 커밋 명령어를 아무리 쳐봐도 반영되지 않는다.
+
+
+
+2. git add
+- git add 명령어로 commit이 가능한 상태로 변경한 후 status로 상태를 확인하다.
+- 추가로 모든 파일을 일괄적으로 commit 가능한 상태로 변경해주고 싶을때는 A 옵션을 사용하여 git add -A  라고 사용하기도 한다.
+
+[팁]
+★ change to be commited : 커밋이 가능하다.
+★ change but not update  :  업데이트를 받아야 된다.
+★ change to be commited에 있는 리스트가 아니면 커밋 명령어를 아무리 쳐봐도 반영되지 않는다.
+
+
+
+3. git commit -m '코멘트
+- 실무에서 자주 사용하는 옵션은 m 옵션입니다. 
+- m은 커밋 메세지를 남길 수 있는 옵션입니다. 
+- git commit -m '남길말' 을 적어두면 실제로 이렇게 남겨져서 Remote 서버로 전송이 된다. 
+- 즉 , 누가 무엇을 수정했는지 간략하게 남기기 위해서 사용해주는 옵션임. 
+- 보통 git commit -m '메인 페이지 디자인수정' 등으로 간략하게 수정한 내용을 메모 형식으로 남김.
+- 그러면 다시 status 명령어로 살펴보면 현재 마스터 브랜치에 1 commit 이 존재하고 있다는 내용을 확인할 수 있습니다.
+
+
+
+4. git push -u [원격저장소명칭] [branch명] / ex) git push -u origin master
+
+- 그러면 이제 이걸 Remote 서버로 올려줄 작업만 남았음. 
+- 즉 , 메인 저장소로 올려주어야 다른 사람이 내 변경된 소스를 본인의 로컬 저장소에 반영시킬 수가 있음 
+- 이 때 필요한 명령어가 git push 입니다. 실무에 자주 사용하는 옵션은 -u 옵션인데,
+- 이 옵션은 향후에 수정된 내용을 push, 혹은 pull 하기 쉽게 하도록 하는 옵션임. 
+- 이 과정이 끝나면 비로소 본인이 수정한 내역이 remote [메인] 저장소로 올라가게 된 것이고, 
+- 본인의 변경된 소스를 다른 개발자가 반영할 수 있는 상태가 된 것입니다.
+
+
+
+5. git pull (부록 . 다른사람이 반영한 소스를 내 저장소에 반영시키고자 할때 쓰는 명령어)
+ 
+- 그러면, 내가 수정한걸 다른 사람이 받을 수 있도록 Remote 서버에 올리는 방법에 대해서는 위에서 설명했지만, 
+- 반대로 다름사람이 작업한 내용을 내 로컬 저장소에 받으려면??
+- 그때 사용하는 명령어가 git pull 이라는 명령어, 또는 git merge [브랜치명] 라는 명령어 입니다만, 
+- 보통 git pull 명령어를 저는 많이 사용합니다. 
+- pull 이란 Remote에서 변경된 내역을 내 로컬 저장소에 알아서 다운 받아주고 merge까지 일괄적으로 해주는 명령어 이기 때문입니다. 
+- 따라서 본인 서버에서 git pull 만 쳐주면 변경된 내역이 알아서 다운로드 되므로 그렇게 사용하시면 됩니다 ^^
+ 
+여기까지가 일반적으로 가장 많이 실무에서 사용하는 git 명령어들 입니다.

@@ -1,0 +1,20 @@
+.sub_header .btn_pv:after,.sub_header .btn_cncl:after{-webkit-background-size:300px auto;background-size:300px auto;background-image:url(http://static.naver.net/kin/m/n_kin/sp_kin_160902.png);background-repeat:no-repeat;}
+
+.sub_header .btn_pv, .sub_header .btn_cncl {overflow:hidden; position:absolute; top:0; left:0; width:4rem; height:4rem; font-size:0; line-height:0; text-indent:-999em;}
+.sub_header .btn2,.sub_header .btn3{position:absolute; top:5px; right:10px; height:30px; padding:0 10px; line-height:28px; text-align:center;}
+.sub_header .btn_q {width:75px; letter-spacing:-1px;}
+
+.sub_header .btn_pv:after,.sub_header .btn_cncl:after{display:block;position:absolute;top:50%;left:50%;width:14px;height:14px;margin:-7px 0 0 -7px;content:''}
+.sub_header .btn_pv:after {width:18px; background-position:-145px -62px;}
+.sub_header .btn_cncl:after{background-position:-4px -320px;}
+
+
+============================================================================================================================================================================================================
+[버튼 :after로 작업하기]
+
+/* 버튼공통값 */
+.sub_header .btn_pv {overflow:hidden; position:absolute; top:0; left:0; width:4rem; height:4rem; font-size:0; line-height:0; text-indent:-999em;}
+.sub_header .btn_pv:after {-webkit-background-size:300px auto;background-size:300px auto;background-image:url(http://static.naver.net/kin/m/n_kin/sp_kin_160902.png);background-repeat:no-repeat;}
+
+/* 각각버튼제어 */
+.sub_header .btn_pv:after {display:block;position:absolute;top:50%;left:50%;width:14px;height:14px;margin:-7px 0 0 -7px;background-position:-145px -62px;content:'';}

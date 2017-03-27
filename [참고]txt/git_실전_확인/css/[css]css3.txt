@@ -1,0 +1,31 @@
+/* 텍스트 사이즈 크기 제어 */
+body {
+	position: relative;
+	-webkit-text-size-adjust: none;
+	background-color:#448fc1;
+	color:#fff;
+}
+
+
+/* 2줄 텍스트 말줄임 처리 */
+.ellipsis{
+ overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 2; /* 라인수 */
+ -webkit-box-orient: vertical;
+ word-wrap:break-word;
+ line-height: 1.2em;
+ height: 2.4em;
+}
+
+
+/* 접근성 텍스트 숨기기 */
+.blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}

@@ -1,0 +1,27 @@
+git branch newImage
+git checkout newImage; git commit
+
+
+
+git merge bugFix master
+
+
+git reset HEAD~1
+
+git revert HEAD
+
+
+
+
+음, 여기 꽤 여러개의 브랜치가 있습니다! 이 브랜치들의 모든 작업내역을 master에 리베이스 해볼까요?
+
+윗선에서 일을 복잡하게 만드네요 -- 그 분들이 이 모든 커밋들을 순서에 맞게 정렬하라고 합니다. 그럼 결국 우리의 최종 목표 트리는 제일 아래에 C7' 커밋, 그 위에 C6' 커밋, 또 그 위에 순서대로 보여합니다.
+
+만일 작업중에 내용이 꼬인다면, reset이라고 쳐서 처음부터 다시 시작할 수 있습니다. 모범 답안을 확인해 보시고, 혹시 더 적은 수의 커맨드로 해결할 수 있는지 알아보세요!
+
+
+
+
+
+
+git revert

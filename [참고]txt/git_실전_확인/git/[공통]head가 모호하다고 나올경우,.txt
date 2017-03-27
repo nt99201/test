@@ -1,0 +1,9 @@
+git warning: refname 'HEAD' is ambiguous.
+
+경고 : refname 'HEAD'가 모호합니다.라고 나올경우,
+아래 값대로 지정해주면 head(현재브랜치)는 마스터를 바라보다,
+
+==================================================
+
+$ git checkout -B master heads/master
+$ git pull origin master

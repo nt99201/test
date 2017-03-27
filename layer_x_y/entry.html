@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title></title>
+<style type="text/css">
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {margin:0; padding:0;}
+
+body, input, textarea, select, button, table {font-size:14px; font-family:HelveticaNeue,Helvetica,sans-serif; line-height:1.25em;}
+body {position:relative; background-color:#ececed; color:#000; -webkit-text-size-adjust:none;}
+img, fieldset {border:0;}
+ul, ol {list-style:none;}
+em, address {font-style:normal;}
+a {color:#222; text-decoration:none;}
+table {border-collapse:collapse;}
+hr {display:none !important;}
+
+.hc {position: absolute; color: transparent; font-size:0; line-height:0;}
+.u_hc {overflow:hidden; position:absolute; visibility:hidden; top:0; left:-9999px; font-size:0; line-height:0;}
+.u_vc, .u_skip, caption, .blind {overflow:hidden; position:absolute; display:inline-block; width:1px; height:1px; font-size:1px; line-height:1px; text-indent:4px; white-space:nowrap;}
+
+.ly_pop_clt {position: fixed; top:50%; left:50%; z-index:100; box-sizing:border-box; width:275px; padding:8px 12px; border:1px solid #c3c1a2; background-color:#fffef0; font-size:15px; line-height:18px; color:#000000;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  /* transform: translateX(-50%); */ /* x축만 사용할 경우 */
+  /* -webkit-transform: translateX(-50%); */
+}
+
+.ly_pop_clt.off {display:none;}
+.ly_pop_clt .close {position:absolute; top:0; right:0; display:block; width:29px; height:29px; background:url("img/btn_close.gif") center center no-repeat; background-size:12px;}
+.ly_pop_clt .tit {display:inline-block; margin-top:7px; font-size:14px; line-height:15px; color:#11c948; font-weight:bold;}
+.ly_pop_clt .tit:first-child {margin-top:0;}
+.ly_pop_clt .txt {margin-top:3px; letter-spacing:-0.075em; font-weight:normal;}
+</style>
+</head>
+<body>
+
+<!-- [D]close 클릭시 ly_pop_clt : ly_pop_clt off 닫기 처리 --> 
+<div class="ly_pop_clt">
+	<p class="tit">웹수집</p>
+	<p class="txt">지식백과, 전문정보, 뉴스 등의 웹 페이지에서<br /> 수집한 영어 단어입니다.</p>
+	<p class="tit">출현 횟수</p>
+	<p class="txt">웹 페이지에서 특정 뜻으로 언급된 횟수입니다.</p>
+	<a href="#1" class="close"><span class="hc">닫기</span></a>
+</div>    
+
+<!-- [D]close 클릭시 ly_pop_clt : ly_pop_clt off 닫기 처리 --> 
+<div class="ly_pop_clt">
+	<p class="tit">TIP</p>
+	<p class="txt">이용자들이 직접 번역한 예문입니다.<br />맞아요/틀려요 평가를 해주세요.</p>
+	<a href="#1" class="close"><span class="hc">닫기</span></a>
+</div>
+
+<!-- [D]close 클릭시 ly_pop_clt : ly_pop_clt off 닫기 처리 --> 
+<div class="ly_pop_clt">
+	<p class="tit">TIP</p>
+	<p class="txt">이용자들이 직접 등록한 단어입니다.</p>
+	<a href="#1" class="close"><span class="hc">닫기</span></a>
+</div>
+</body>
+</html>

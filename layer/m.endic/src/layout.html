@@ -1,0 +1,108 @@
+<? include 'common.html' ?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/endic.css">
+    <link rel="stylesheet" href="css/comment_w.css">
+    <!-- 마크업 확인용 - 개발 시 삭제 -->
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/demo/asset/jindo.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Component.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.UIComponent.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/demo/asset/demojs/common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Touch.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.SwipeCommon.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Effect.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Morph.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Animation.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Slide.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Flick.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.SlideFlicking.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.Flicking.js" charset="uft-8"></script>
+    <script type="text/javascript" src="http://jindo.dev.naver.com/docs/jindo-mobile/archive/latest/src/jindo.m.CircularFlicking.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/lib/jindo_mobile_component.js" charset="utf-8"></script>
+    <!-- //마크업 확인용 - 개발 시 삭제 -->
+</head>
+<!--[D] 스킨 : 클래스 skin 추가-->
+<body class="">
+<!-- 20160819 접근성 추가 -->
+<div id="u_skip">
+    <a href="#content" onclick="document.getElementById(content).tabIndex = -1;">본문 바로가기</a>
+</div>
+<!-- //20160819 접근성 추가 -->
+<div id="wrap">
+    <!-- <? include 'banner_old_ver.html' ?> -->
+    <? include ''.$head_type ?>
+
+    <div id="content">
+        <? include 'content.html' ?>
+    </div>
+
+    <? include 'layer_pop_webcollect.html' ?>
+    <? include 'layer_pop_helpdic.html' ?>
+    <? include 'layer_pop_autosave.html' ?>
+    <? include 'layer_pop_recentsearch.html' ?>
+    <? include 'layer_pop_usertrans.html' ?>
+    <? include 'layer_pop_usertrans1.html' ?>
+    <? include 'layer_pop_usertrans2.html' ?>
+    <? include 'layer_pop_usertrans3.html' ?>
+    <? include 'layer_pop_usertrans4.html' ?>
+    <? include 'layer_pop_usertrans5.html' ?>
+    <? include 'layer_pop_usertrans6.html' ?>
+    <? include 'layer_pop_usertrans_video.html' ?>
+    <? include 'layer_pop_usertrans_example.html' ?>
+    <? include 'layer_pop_selectlang.html' ?>
+    <? include 'layer_toast_addwordbook.html' ?>
+    <? include 'incl_footer.html' ?>
+</div>
+<div>
+    <a href="#" class="ico_top">Top</a>
+</div>
+<div class="ly_fontsize_wrap">
+    <div class="ly_fontsize">
+        가장 작아졌을때 : <span class="min">가장 작은</span> 글자 크기 입니다.
+        가장 커졌을때 : <span class="max">가장 큰</span> 글자 크기 입니다.
+        작아질때 : 글자 크기가 작아졌습니다.
+        커질때 : 글자 크기가 커졌습니다.
+    </div>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/develop/js/common_menu_template_v2.js"></script>
+<!--<script type="text/javascript" src="js/header.js" charset="utf-8"></script>-->
+<!--<script type="text/javascript" src="js/layout.js" charset="utf-8"></script>-->
+<!--<script type="text/javascript" src="js/pop.js" charset="utf-8"></script>-->
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("en");
+    sideTemplate.init();
+
+    $(window).scroll(function() {
+        var nScrollTop = $(this).scrollTop();
+
+        if(nScrollTop > 41){
+            $('.header').addClass('is_fixed');
+            $('body').css("padding-top","42px");
+        }else{
+            $('.header').removeClass('is_fixed');
+            $('body').css("padding-top","0");
+        }
+    });
+
+    $(".Ngnb_tooltip .Nbtn_close").click(function(){
+        $(".Ngnb_tooltip").hide();
+    });
+
+	// For iOS home shortcut layer
+	$(".layer_shortcut_close").click(function() {
+		$(".layer_shortcut").hide();
+		return false;
+	});
+</script>
+</body>
+</html>

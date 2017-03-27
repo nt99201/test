@@ -1,0 +1,547 @@
+@charset "UTF-8";
+
+/* 팝업 */
+.ly_help_pop {
+	position: absolute;
+	z-index: 50;
+	width: 100%;
+	padding: 0 0 13px;
+	border: 1px solid #323232;
+	border-left: 0;
+	border-right: 0;
+	background: url(../img/bg_ly.png) repeat 0 0;
+	-webkit-background-size: 2px 2px;
+	font-size: 15px;
+	color: #888;
+
+	.ly_arr {
+		@extend %sprite_helpdic_img;
+		position: absolute;
+		bottom: -9px;
+		width: 12px;
+		height: 8px;
+		background-position: -10px -39px;
+	}
+
+	.ly_info {
+		padding: 0 30px 10px 10px;
+		border-bottom: 1px solid #444;
+
+		.ly_tit {
+			display: inline-block;
+			padding: 13px 40px 10px 0;
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+
+			sup {
+				font-size: 9px;
+				vertical-align: 7px;
+			}
+		}
+
+		.word {
+			margin-bottom: 8px;
+			line-height: 22px;
+		}
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+
+	.btn_show_result {
+		float: right;
+		position: relative;
+		padding: 10px;
+		margin: -10px 0;
+		font-size: 14px;
+		color: #c0c0c0;
+
+		&:after {
+			@extend %sprite_helpdic_img;
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 4px;
+			width: 10px;
+			height: 10px;
+			background-position: 5px -39px;
+		}
+	}
+	.btn_close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 10px;
+		margin: -10px;
+
+		&:after {
+			@extend %sprite_helpdic_img;
+			content: '';
+			display: inline-block;
+			width: 24px;
+			height: 23px;
+			background-position: 0 0;
+		}
+	}
+
+	.ly_arr {
+		@extend %sprite_helpdic_img;
+		position: absolute;
+		bottom: -9px;
+		width: 12px;
+		height: 8px;
+		background-position: -10px -39px;
+
+		&.top {
+			top: -6px;
+			bottom: auto;
+			background-position: -27px -39px;
+		}
+	}
+}
+.pop_area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 12200;
+}
+.pop_wrap {
+    overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	padding-top: 27px;
+	margin: -70px 0 0 -137px;
+	width: 275px;
+	background: #fff;
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 1px 1px rgba(0, 0, 0, 0.02);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 1px 1px rgba(0, 0, 0, 0.02);
+	border-radius: 3px;
+	text-align: center;
+	line-height: 20px;
+
+	.text {
+		padding: 0 20px;
+		font-size: 15px;
+		line-height: 20px;
+		color: #444;
+		.point {
+			font-size: 14px;
+			color: #1eb501;
+		}
+
+		.sub {
+			display: block;
+			font-size: 13px;
+			color: #999;
+		}
+	}
+
+	.btn_area {
+		position: relative;
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		text-align: center;
+		margin-top: 27px;
+		border-top: 1px solid #e7e7e7;
+		background-color: #eee;
+		line-height: 45px;
+		border-bottom-left-radius: 3px;
+		-webkit-border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+
+		& > a {
+			display: block;
+			-webkit-box-flex: 1;
+			position: relative;
+			font-size: 15px;
+			color: #666;
+		}
+
+		& > a ~ a {
+			border-left: 1px solid #d8d7d7;
+		}
+	}
+
+	.btn_usertranslation {
+		display: block;
+		height: 50px;
+		border-top: 1px solid #d8d7d7;
+		background: #bbdef3;
+		color: #598fc6;
+		text-align: center;
+		line-height: 50px;
+
+		& > em {
+			color: #2c7dc9;
+			font-weight: bold;
+		}
+
+		&:after {
+			@extend %sprite_common_img;
+            content: '';
+            display: inline-block;
+            width: 7px;
+            height: 13px;
+            margin: 18px 0 0 7px;
+            background-position: -109px -114px;
+            vertical-align: top;
+		}
+	}
+}
+.pop_autosave, .pop_delete_word,
+.pop_usertrans, .pop_usertrans1, .pop_usertrans2, .pop_usertrans3, .pop_usertrans4, .pop_usertrans5, .pop_usertrans6,
+.pop_lang, .pop_show_detail {
+	background: rgba(0, 0, 0, .3);
+}
+.pop_video {
+	background: rgba(0, 0, 0, .8);
+}
+.pop_usertrans {
+	.pop_wrap {
+		margin-top: -80px;
+	}
+}
+//참여 번역
+.pop_usertrans2 {
+	position: fixed;
+
+	.pop_wrap {
+		position: absolute;
+	}
+
+	.text {
+		padding: 0;
+		.point {
+			font-family: $G-font-helveticaNeue;
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+
+	.content_wrap {
+		padding: 12px 22px 16px;
+		font-size: 14px;
+		color: #444;
+		line-height: 20px;
+		text-align: left;
+		border-bottom: 1px solid #f3f3f3;
+
+		.text, .lnk_show_detail {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.text {
+			margin-right: 7px;
+		}
+
+		.lnk_show_detail {
+			margin-left: 6px;
+			color: #46619e;
+
+			&:after {
+				@extend %sprite_popup_img;
+				content: '';
+				display: inline-block;
+				vertical-align: top;
+				margin: 4px 0 0 4px;
+				width: 5px;
+				height: 10px;
+				background-position: 0 -55px;
+			}
+		}
+	}
+
+	.sub_content_wrap {
+		padding: 15px 22px 21px;
+		text-align: left;
+
+		.text {
+			display: block;
+			font-size: 13px;
+			color: #999;
+		}
+
+		.sentence {
+			color: #000;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	.btn_area {
+		margin-top: 0;
+	}
+
+	.btn_close {
+		top: 10px;
+		right: 10px;
+	}
+}
+.pop_lang {
+	.pop_wrap {
+		padding-top: 26px;
+		margin-top: -110px;
+	}
+
+	.text {
+		padding-bottom: 11px;
+		font-size: 19px;
+		line-height: 24px;
+
+		.point {
+			font-weight: bold;
+			font-size: 19px;
+		}
+	}
+
+	.lang_area {
+		position: relative;
+		padding: 10px 34px 0 34px;
+		overflow: hidden;
+		font-size: 13px;
+		margin-bottom: -1px;
+
+		&:before {
+			@extend %common_dot_patt;
+			top: 0;
+		}
+
+		a {
+			display: inline-block;
+			float: left;
+			position: relative;
+			text-align: left;
+			width: 50%;
+			color: #999;
+
+			&:nth-child(2n) {
+				label {
+					padding-left: 17px;
+				}
+			}
+		}
+
+		.radio {
+			visibility: hidden;
+			position: absolute;
+			top: -3px;
+			left: 10px;
+			width: 18px;
+			height: 18px;
+			margin-top: 10px;
+			vertical-align: baseline;
+
+			&.on {
+				& + label {
+					color: #444;
+					&:before {
+						background-position: -67px 0;
+					}
+				}
+			}
+		}
+
+		label {
+			position: relative;
+			padding: 0 10px;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 17px;
+			line-height: 30px;
+			color: #999;
+
+			&:before {
+				@extend %sprite_common_img;
+				display: inline-block;
+				position: relative;
+				top: -1px;
+				width: 17px;
+				height: 17px;
+				margin-right: 3px;
+				background-position: -102px -60px;
+				vertical-align: middle;
+				content: '';
+			}
+		}
+
+		input[type=radio] {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+			&:checked + label:before {
+				background-position: -102px -83px;
+			}
+		}
+	}
+
+	.btn_close {
+		position: absolute;
+		top: 7px;
+		right: 7px;
+		padding: 3px;
+
+		&:after {
+			@extend %sprite_popup_img;
+			content: '';
+			display: block;
+			width: 21px;
+			height: 21px;
+			background-position: 0 0;
+		}
+	}
+
+	.btn_area {
+		width: 100%;
+		margin-top: 14px;
+		background-color: #03c73c;
+		border-top: none;
+		font-family: $G-font-helveticaNeue;
+		font-weight: bold;
+		font-size: 15px;
+		a {
+			color: #fff;
+		}
+	}
+}
+//칸 아카데미 공통 닫기 버튼
+.pop_video, .pop_show_detail, .pop_usertrans2 {
+	.btn_close {
+		@extend %sprite_popup_img;
+		position: absolute;
+		width: 21px;
+		height: 21px;
+		background-position: 0 -33px;
+		color: transparent;
+		font-size: 0;
+		line-height: 0;
+	}
+}
+//영상 보기
+.pop_video {
+	.pop_wrap {
+		position: relative;
+		margin: 0 12px;
+		padding-top: 30px;
+		top: 100px;
+		left: 0;
+		width: auto;
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	.content_wrap {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+		max-width: 100%;
+		iframe, object, embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.btn_close {
+		top: 0;
+		right: 0;
+	}
+}
+//예문 더보기
+.pop_show_detail {
+	.pop_wrap {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 0;
+		width: auto;
+		background: #fff;
+		margin: 0 13px;
+		text-align: left;
+	}
+
+	.btn_close {
+		background-position: 0 0;
+		top: 13px;
+		right: 10px;
+	}
+
+	.example_tit {
+		padding: 15px 40px 10px 20px;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: bold;
+		font-family: $G-font-helveticaNeue;
+		color: #000;
+		border-bottom: 1px solid #f3f3f3;
+
+		.tmp_height {
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 100%;
+		}
+
+		.txt {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.content_wrap {
+		padding: 10px 20px 15px 20px;
+		font-size: 14px;
+		line-height: 17px;
+		font-family: $G-font-helveticaNeue;
+
+		.example_content {
+			display: block;
+			color: #666;
+
+			strong {
+				font-weight: normal;
+			}
+
+			& ~ .example_content {
+				margin-top: 21px;
+			}
+
+			&.highlight {
+				display: block;
+				color: #46619e;
+			}
+		}
+	}
+}
+.ly_toast_wordbook {
+	position: fixed;
+	bottom: 15px;
+	width: 100%;
+	z-index: 2010;
+
+	.msg {
+		position: relative;
+		min-height: 19px;
+		margin: 0 10px;
+		padding: 8px;
+		border: 1px solid rgba(0, 0, 0, .3);
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		background: rgba(0, 0, 0, .8);
+		font-size: 14px;
+		color: #fff;
+		text-align: center;
+		text-indent: 0;
+		vertical-align: top;
+	}
+}

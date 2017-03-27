@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var program = require('commander'),
+    Screenshots  = require('../lib/screenshots'),
+    package = require('../package.json');
+
+program
+  .version(package.version)
+
+  function list(val) {
+      return val.split(',').map(String);
+  }
+
+program
+  .command('compare')
+  .description('command to compare screenshots')
+  .option('-p --previous-release [previousRelease]', 'Previous release beeing compared.')
+  .option('-c --current-release [currentRelease]', 'Current release beeing compared.')
+  .option('-s --source [source]', 'Where are your screenshots folder?')
+  .option('-i --ignore-not-changed [ignoreNotChanged]', 'Should I ignore not changed scenarios?')
+  .option('-o --outputFormat [outputFormat]', 'output formats as as list, default is html e.g. html,json', list, ['html'])
+  .action(function(opts){
+    new Screenshots().compare(opts);
+  })
+
+program.parse(process.argv);

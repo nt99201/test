@@ -1,0 +1,94 @@
+<!--[D] 엔트리 폰트 조정 -->
+<!--[D] 1단계 - 클래스 없음 -->
+<!--[D] 2단계 - fs2-->
+<!--[D] 3단계 - fs3-->
+<!--[D] 4단계 - fs4-->
+<!--[D] 5단계 - fs5-->
+
+<!-- 자동 번역 + 댓글 -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+
+    <section class="section_entry">
+        <h2 class="u_hc">단어 섹션</h2>
+        <? include 'layer_option_menu.html' ?>
+
+        <div class="entry_word">
+            <? include 'entry_headword8.html' ?>
+            <? if ($khan == "khan") { ?>
+            <span class="source">출처: 옥스퍼드</span>
+            <? } ?>
+        </div>
+    </section>
+
+    <div class="section_usertrans_tit"><h2>이용자 참여 번역문</h2><? if ($khan != "khan") { ?><a href="#" class="lnk_notice">안내</a><? } ?></div>
+    <section class="section_entry">
+        <!-- 자동번역 -->
+        <div class="entry_example">
+            <div class="usertrans_btn_wrap">
+                <? if ($khan != "khan") { ?>
+                <div class="trans_lang_select">
+                    <select id="select_lang" title="언어선택">
+                        <option value="ko" selected="selected">한국어</option>
+                        <option value="zh-cn">中文</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
+                <? } ?>
+                <button type="button" class="btn_show_exam"><span class="hc">예문 상세보기</span></button>
+                <button type="button" class="btn_show_video"><span class="hc">영상보기</span></button>
+                <!-- [D] 칸아카데미 예문인 경우 제거 -->
+                <? if ($khan != "khan") { ?>
+                <button type="button" class="btn_join_trans">번역하기</button>
+                <? } ?>
+            </div>
+
+            <? if ($khan != "khan") { ?>
+            <div class="transbox_wrap" style="display: block;">
+                <div class="inner_wrap">
+                    <!-- [D] 클릭 시 label 요소에 display:none -->
+                    <textarea rows="4" class="transbox">장난, 욕설 여부 확인 후 바로 이용자 참여 번역문으로 등록됩니다.</textarea>
+                    <!--<textarea rows="4" class="transbox">그래서 당신은 1973년까지 회상, 어디 공식적으로 북쪽, 남쪽, 남한과 미국인들 간의 평화 파리</textarea>-->
+                    <!-- [D] 텍스트 입력 시 숫자 변경 -->
+                    <p class="num_area">
+                        <strong class="num">15</strong><span class="total_num">/1500</span>
+                    </p>
+                    <div class="btn_area">
+                        <a href="#" class="btn_ok">확인</a>
+                        <a href="#" class="btn_cancel">취소</a>
+                    </div>
+                </div>
+            </div>
+            <? } ?>
+
+            <!-- [D] 대기중일 경우 waiting클래스 추가 -->
+            <ul class="lst_usertrans">
+                <li>
+                    <div class="example_wrap">
+                        <span class="tag gray">자동번역</span>
+                        <p class="user_mean">우리는 같은 집에서 살고있다</p>
+                        <a href="#" class="translator">네이버 번역기</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section_entry">
+        <ul class="examples_tab">
+            <li class="tab_item on"><a href="#">비슷한 예문</a></li>
+            <li class="tab_item "><a href="#">번역을 기다리는 예문</a></li>
+        </ul>
+        <!-- 20160819 접근성수정
+            [D] 상위 tab에 활성화에 따라 아래의 타이틀을 변경해주세요.
+            예)<h3 class="blind">비슷한 예문</h3>
+            <h3 class="blind">번역을 기다리는 예문</h3>
+        -->
+        <h3 class="blind">비슷한 예문</h3>
+        <!-- //20160819 접근성수정 -->
+        <? include 'entry_examples_tab1.html' ?>
+    </section>
+
+
+    <? include 'entry_footer.html' ?>
+</div>

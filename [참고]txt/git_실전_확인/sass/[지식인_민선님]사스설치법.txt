@@ -1,0 +1,103 @@
+$ sass
+$ ruby -v
+$ sass -v
+
+sass --watch src/scss/w.scss:src/css/w.css --style compact --sourcemap=none
+
+
+[참고]
+sass 사용법
+
+css를 수정하면 안되고 sass로 수정해야 된다.
+사스에서 수정하면 css로 내뱉음
+
+================================================================================
+
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ ruby
+
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ gem install sass
+ERROR:  Could not find a valid gem 'sass' (>= 0), here is why:
+          Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygems.org/specs.4.8.gz)
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ gem install sass
+ERROR:  Could not find a valid gem 'sass' (>= 0), here is why:
+          Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygems.org/specs.4.8.gz)
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ sass
+
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ ls
+config.rb  Gruntfile.js  npm-debug.log  package.json  README  src/
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ cd src/
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin/src (KINSUS-25540)
+$ ls
+'@imglist.php'         expert_lst.php                new_all.php
+'@imgsearch.php'       expert_nth.php                new_fld.php
+'@index.php'           expert_profile.php            new_fld_add2.php
+alert/                 hall.php                      new_fld_none.php
+best_end_layout.php    hall_adoption.php             new_fld_nth.php
+best_end_question.php  hall_comment.php              new_fld_set2.php
+best_home.php          hall_donation.php             new_key.php
+best_none.php          hall_qna.php                  new_key_nth.php
+best_typical.php       hall_topic.php                new_my_around_poi_list.php
+best_typical_none.php  header_menu.php               new_my_around_q_list.php
+css/                   home_bingo.php                new_one.php
+design.php             home_edu.php                  new_tag_none.php
+directory_home.php     home_edu_activity.php         news_none.php
+end_a.php              home_edu_activity_none.php    opinion.php
+end_a3.php             home_edu_answer.php           opinion_write.php
+end_adopt_dim.php      home_edu_certify.php          poi_end.php
+end_answer.php         home_edu_certify_none.php     pop_edu_complete.php
+end_answer_write.php   home_edu_faq.php              pop_edu_request.php
+end_exp.php            home_edu_stop.php             pop_shrine.php
+end_layout.php         home_edu_stopping.php         question.php
+end_ly_dim.php         home_flds.php                 question_attch_file.php
+end_map_ifr.html       home_kimyoungran.php          question_direct.php
+end_noti.php           home_new.php                  question_exp.php
+end_opendic.php        home_shrine.php               question_mdf.php
+end_other_answer.php   home_spot_ly.php              question_poi_step1.php
+end_poi_question.php   home_yearend_adjustment.php   question_poi_step2.php
+end_question.php       im/                           question_poi_step3.php
+end_search.php         incl_tmp/                     question2.php
+end_select2.php        js/                           report.php
+end_talk.php           kin_certificate.php           review.html
+end_talk_celeb.php     kinpeople_god.php             scss/
+end_talk_celeb2.php    kinpeople_honor.php           search.php
+end_talk_celeb3.php    kinpeople_modify.php          search_kin.php
+end_talk_celeb4.php    kinpeople_respondent.php      sprite/
+end_talk_celeb5.php    kinpeople_respondent_img.php  survey.php
+end_talk_celeb6.php    myqna_a.php                   tag_detail.php
+end_talk_nodata.php    myqna_menu.php                tag_detail_none.php
+end_talk_suggest.php   myqna_mynews.php              tag_relate.php
+end_vs.php             myqna_pointhistory.php        thanks_write.php
+expert_all.php         myqna_q.php                   vs_lst.php
+expert_layout.php      myqna_q_nth.php
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin/src (KINSUS-25540)
+$ cd ..
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ sass --style compact ^C
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ ruby -v
+ruby 2.3.1p112 (2016-04-26 revision 54768) [i386-mingw32]
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ sass -v
+Sass 3.4.22 (Selective Steve)
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m.kin (KINSUS-25540)
+$ sass --watch src/scss/w.scss:src/css/w.css --style compact --sourcemap=none
+>>> Sass is watching for changes. Press Ctrl-C to stop.
+      write src/css/w.css

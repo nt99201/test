@@ -1,0 +1,49 @@
+1. package.json 에서 name명, url도 2개 수정
+2. gulpfile.js 에서 remotePath: '/dict/xdic/' 디렉토리명에 맞게 수정
+
+====================================================
+[package.json]
+
+{
+  "name": "xdic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab2.uit.nhncorp.com/dict/xdic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.14.3",
+    "gulp": "3.9.1",
+    "gulp-clean-css": "2.0.12",
+    "gulp-rename": "1.2.2",
+    "vinyl-ftp": "0.5.0",
+    "vinyl-ftp-branch": "0.2.1"
+  }
+}
+
+====================================================
+[gulpfile.js]
+
+// 소스파일 ftp 업로드
+gulp.task('ftp', function() {
+	var options = vfb({
+		host: 'view.ui.naver.com',
+		port: '2001',
+		userKeyFile: '.ftppass',
+		userKey: 'key1',
+		remotePath: '/dict/xdic/',
+		log: true
+	});
+	var conn = ftp.create(options);
+
+	return gulp.src(['src/**/*'], {buffer: false})
+		.pipe(conn.newer(options.finalRemotePath))
+		.pipe(conn.dest(options.finalRemotePath));
+});

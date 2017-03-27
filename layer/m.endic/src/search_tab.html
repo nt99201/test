@@ -1,0 +1,22 @@
+<!-- 검색결과 엔드 페이지 -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+    <? include 'layer_search_keyword.html' ?>
+    <? include 'layer_search_keyword2.html' ?>
+
+    <? include ''.$content_type ?>
+
+    <!-- 더보기 영역 -->
+    <div class="common_btn_wrap">
+        <button class="btn_lst_more_show"><span class="txt">더보기</span><strong class="num">15</strong><span class="total_num">/120,647</span></button>
+    </div>
+
+    <!-- 검색결과 1500건이 넘을 경우 -->
+    <div class="common_box_wrap">
+        <p class="search_notice_area">최상의 검색 품질을 위해, <span>1,500</span>건 이상의 검색결과를 제공하지 않습니다. <br>
+        원하시는 결과가 없는 경우, <strong>보다 구체적인 검색어</strong>를 입력해 보세요.</p>
+    </div>
+
+    <? include 'layer_opendic.html' ?>
+    <? include 'entry_footer.html' ?>
+</div>

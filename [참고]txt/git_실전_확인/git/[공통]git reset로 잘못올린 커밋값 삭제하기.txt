@@ -1,0 +1,90 @@
+$ git log --oneline --decorate --graph
+$ git reset 커밋아이디 번호
+$ git log --oneline --decorate --graph
+$ git push origin lim_01 -f
+
+
+====================================================================================
+
+
+[git reset같은 경우에는 선택한 버젼의 상태로 돌아간다(선택한 버젼의 이후 버젼들은 전부 삭제 됨.)]
+reset을 하면 선택한 커밋 아이디 번호 이후의 커밋들은 삭제되고, 선택한 커밋 아이디 번호부터의 값들이 남는다.
+
+여기서 push origin 하고 브랜치명 뒤에 -f를 쓰는 이유는,
+reset같은 경우에는 기존 id값을 삭제하기 때문에,
+git log에서 값이 달라진다, 그러기에 강제로 push할 필요하다.
+
+
+====================================================================================
+
+*** 선택한 버젼(커밋 아이디 번호) 이후의 커밋들은 삭제 됨.
+*** 선택한 버젼의 상태로 돌아감.
+
+====================================================================================
+
+
+NAVER@E-AD00049667 MINGW64 /d/work/HUB/test (lim_01)
+$ git log --oneline --decorate --graph
+warning: refname 'HEAD' is ambiguous.
+* 2137114 (HEAD -> lim_01) 161118_v1
+* 80fee07 Revert "3"
+* 036a95c 3
+* ab52534 2
+* d2ff127 1
+* 4b35b04 수정
+* 7bc5912 텍스트 수정
+*   37c45a3 merge
+|\
+| * 04d3465 css 수정
+| * 2d9bac6 수정
+* | 0e590c0 텍스트
+* | 0a4cf48 수정
+|/
+* bc98215 새로작성
+* 7f05a1f 텍스트 수정
+* 8d979ee 새로작성
+* 598aa27 텍스트 수정
+* 2d3751b 시간으로 텍스트 수정3
+* 74913f9 no message
+* a5f1508 first
+* c0684ee Initial commit
+
+
+
+NAVER@E-AD00049667 MINGW64 /d/work/HUB/test (lim_01)
+$ git reset 2137114
+Unstaged changes after reset:
+M       audio.html
+warning: refname 'HEAD' is ambiguous.
+
+NAVER@E-AD00049667 MINGW64 /d/work/HUB/test (lim_01)
+$ git log --oneline --decorate --graph
+warning: refname 'HEAD' is ambiguous.
+* 2137114 (HEAD -> lim_01) 161118_v1
+* 80fee07 Revert "3"
+* 036a95c 3
+* ab52534 2
+* d2ff127 1
+* 4b35b04 수정
+* 7bc5912 텍스트 수정
+*   37c45a3 merge
+|\
+| * 04d3465 css 수정
+| * 2d9bac6 수정
+* | 0e590c0 텍스트
+* | 0a4cf48 수정
+|/
+* bc98215 새로작성
+* 7f05a1f 텍스트 수정
+* 8d979ee 새로작성
+* 598aa27 텍스트 수정
+* 2d3751b 시간으로 텍스트 수정3
+* 74913f9 no message
+* a5f1508 first
+* c0684ee Initial commit
+
+NAVER@E-AD00049667 MINGW64 /d/work/HUB/test (lim_01)
+$ git push origin lim_01 -f
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/nt99201/test.git
+ + 8f840cb...2137114 lim_01 -> lim_01 (forced update)

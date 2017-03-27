@@ -1,0 +1,30 @@
+	.obj_info{
+		padding-left:75px;
+
+		.tw_name{
+			top:2px;
+			font-size:16px;
+			color:#141414;
+			font-family:$fnt_sdSM;
+        .lang {
+          font-size:13px; 
+          letter-spacing:-1px;
+          &:before {
+            content:'¤ý';
+            display: inline-block;
+            color: #888;
+            font-size: 10px;
+          } 
+        }
+        strong + .lang {
+          &:before {
+            content:'';
+            display: inline-block;
+            width: 1px;
+            height: 16px;
+            margin:2px 6px 0 6px;
+            background: #cdcdcd;
+            vertical-align:top;
+          } 
+        }
+		}

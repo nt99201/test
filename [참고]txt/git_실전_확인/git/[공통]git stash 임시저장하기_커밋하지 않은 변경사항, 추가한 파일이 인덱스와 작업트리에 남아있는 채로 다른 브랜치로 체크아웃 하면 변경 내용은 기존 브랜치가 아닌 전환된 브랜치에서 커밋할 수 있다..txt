@@ -1,0 +1,72 @@
+$ git status
+$ git stash
+$ git stash list
+(stash@{0}: WIP on KINSUS-17836: 7d6ccd3 Merge branch 'hotfix_161013' into develop) --> 번호 부분을 체크해서 부르면 됨
+$ git stash apply stash@{0}
+
+
+
+[리스트 내역을 지우고 싶을경우]
+$ git stash clear
+$ git stash list
+
+============================================================================================================================
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$ git status
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$ git stash
+Saved working directory and index state WIP on KINSUS-17836: 7d6ccd3 Merge branch 'hotfix_161013' into develop
+HEAD is now at 7d6ccd3 Merge branch 'hotfix_161013' into develop
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$ git stash list
+stash@{0}: WIP on KINSUS-17836: 7d6ccd3 Merge branch 'hotfix_161013' into develop
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$ git stash apply stash@{0}
+On branch KINSUS-17836
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   src/best_end_layout.php
+        modified:   src/best_typical.php
+        modified:   src/best_typical_none.php
+        modified:   src/css/w.css
+        modified:   src/directory_home.php
+        modified:   src/end_layout.php
+        modified:   src/end_noti.php
+        modified:   src/end_opendic.php
+        modified:   src/end_select2.php
+        modified:   src/expert_layout.php
+        modified:   src/new_fld_set2.php
+        modified:   src/opinion.php
+        modified:   src/opinion_write.php
+        modified:   src/pop_edu_complete.php
+        modified:   src/pop_edu_request.php
+        modified:   src/pop_shrine.php
+        modified:   src/question.php
+        modified:   src/question2.php
+        modified:   src/question_direct.php
+        modified:   src/question_exp.php
+        modified:   src/question_mdf.php
+        modified:   src/report.php
+        modified:   src/survey.php
+        modified:   src/tag_detail.php
+        modified:   src/tag_detail_none.php
+        modified:   src/tag_relate.php
+        modified:   src/thanks_write.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$ git stash clear
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$ git stash list
+
+NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/KIN/m_title/m.kin (KINSUS-17836)
+$

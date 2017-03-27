@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title>오픈 이벤트 &gt; 프라임존 그랜드오픈</title>
+<style type="text/css">
+/* Common */
+html {font-size:12px; width:100%; height:100%;}
+
+/* Common */
+body, p,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+dl, dt, dd,
+table, th, td,
+form, fieldset, legend, input, textarea, button, select {
+	margin: 0;
+	padding: 0;
+	font-size:1rem; 
+	line-height:1.2rem; 
+	word-spacing:1px; 
+	letter-spacing:-1px;
+}
+
+body,
+input,
+textarea,
+select,
+button,
+table {
+	font-size: 14px;
+	line-height: 1.25em;
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	position: relative;
+	-webkit-text-size-adjust: none;
+	background-color:#448fc1;
+	color:#fff;
+}
+
+img,
+fieldset {
+	border: 0;
+}
+
+img {vertical-align:top;}
+
+ul,
+ol {
+	list-style: none;
+}
+
+em,
+address {
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color:#fff;
+}
+
+
+.blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+/*content*/
+.prime_event {min-width:320px; background:url('http://static.naver.net/m/comic/im/promo/prime/pattern_overlay_50.png') repeat; background-size:auto;}
+.prime_event .top_sec {position:relative;}
+.prime_event .per_100 {width:100%;}
+
+.top_sec .fortune {position:absolute; top:48%; left:50%;}
+.top_sec .fortune {width:100%; margin-left:-50%;}
+.top_sec .fortune img {position:absolute; width:100%;}
+
+.top_sec .btn_box {position:absolute; top:78.5%; left:50%; width:50%; margin-left:-24.5%;}
+.top_sec .btn_box a {display:block;}
+.top_sec .btn_box img {width:100%;}
+
+.cont_sec_2 {padding:6% 4% 15% 7%;}
+.cont_sec_2 .list_sec {overflow:hidden; width:100%; height:100%;}
+.cont_sec_2 .list_sec li {float:left; width:33.3%;}
+.cont_sec_2 .list_sec li:nth-child(3n+1) {clear:left;}
+.cont_sec_2 .list_sec li a {display:block; margin:0 8% 10% 0;}
+.cont_sec_2 .list_sec li .pic_box {position:relative; border:1px solid #276c9c; background-color:#276c9c;}
+.cont_sec_2 .list_sec li .pic_box .pic {position:absolute; top:0; left:0; z-index:1; width:100%; height:100%;}
+.cont_sec_2 .list_sec li .pic_box:after{position:absolute; top:0; left:1%; z-index:10; width:3%; height:100%; background:url('http://static.naver.net/m/comic/im/promo/prime/pic_line_bg.png') left top repeat-y; background-size:100% 100%; content:'';}
+
+.cont_sec_2 .list_sec li .pic_box img {width:100%;}
+.cont_sec_2 .list_sec li .pic_box {display:block;}
+.cont_sec_2 .list_sec li .txt_box {padding:6% 5% 5% 5%; text-align:center;}
+.cont_sec_2 .list_sec li .txt_box dt {overflow:hidden; max-height:28px; margin-bottom:5%; color:#fff;}
+.cont_sec_2 .list_sec li .txt_box dd {font-size:0.9rem; color:#ffdb50;}
+.cont_sec_2 .list_sec li .txt_box dd span {display:inline-block; margin-right:1px; font-size:0.9rem; color:#15466c;}
+
+.cont_sec_2 .btn_box {margin:4% auto 0 auto; width:60%;}
+.cont_sec_2 .btn_box a {display:block;}
+.cont_sec_2 .btn_box img {width:100%;}
+
+.cont_sec_3 {
+	background-image:url('http://static.naver.net/m/comic/im/promo/prime/pattern_overlay_50.png'),url('http://static.naver.net/m/comic/im/promo/prime/prime_cont_3_bg.png');
+	background-repeat:repeat,no-repeat;
+	background-size:auto, 100% 100%;
+	background-color:#2a6f9d;
+}
+
+
+.ellipsis{
+ overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 2; /* 라인수 */
+ -webkit-box-orient: vertical;
+ word-wrap:break-word;
+ line-height: 1.2em;
+ height: 2.4em;
+}
+
+
+@media only screen and (min-width:640px) {
+	html {font-size:23px;}
+	ul,ol,li,a,table,td,th,p,dl,dd,dt,strong,span,div {letter-spacing:-2px;}
+	.cont_sec_2 .list_sec li {min-height:420px;}
+}
+
+</style>
+</head>
+<body>
+<div class="prime_event">
+	<div class="top_sec">
+		<h1><img src="http://static.naver.net/m/comic/im/promo/prime/prime_t.png" alt="2016.12.02 12.06  프라임존 그랜드오픈 매일 포춘쿠키를 열어 무료쿠키 받아가세요!" class="per_100" /></h1>
+		<!-- [D]_2,_3,_5,_10개의 포춘쿠키 이미지가 랜덤으로 추천됨/1.fortune 안의 경우의 따른 close, open 값에 제어 됨, 2.gif와 png 확장자명이 다름 -->
+		<div class="fortune">
+			<!-- close --> <img src="http://static.naver.net/m/comic/im/promo/prime/img_fortune.gif" alt="포춘쿠키 열기" /> 
+			<!-- open  <img src="http://static.naver.net/m/comic/im/promo/prime/img_fortune_2.png" alt="포춘쿠키 2개 획득" />  --> 
+		</div>
+		<!-- [D]_2,_3,_5,_10개의 포춘쿠키 버튼 이미지가 랜덤으로 추천됨/포춘쿠키 열렸을 경우에는 버튼 삭제 -->
+		<div class="btn_box"><a href="#"><img src="http://static.naver.net/m/comic/im/promo/prime/btn_fortune.png" alt="포춘쿠키 열기" /></a></div>
+	</div>
+
+	<div class="cont_sec_1">
+		<img src="http://static.naver.net/m/comic/im/promo/prime/prime_cont_1.png" alt="이벤트 안내/프라임존 작품" class="per_100" />
+		<div class="blind">
+			<h2>이벤트 안내</h2>
+			<p>
+				쿠키 는 네이버북스의 새로운 결제수단으로 프라임존에서 사용 가능합니다.
+				쿠키 개수는 2,3,5,10개 랜덤이며, 꽝 없는 100%당첨입니다.				
+			</p>
+			<h2>프라임존 작품</h2>
+			<p>
+				프라임존은 인기작품을 더 저렴하고 더 쉽게  쿠키로
+				감상할 수 있는 공간입니다. 쿠키로 작품을 감상해보세요!
+			</p>
+		</div>
+	</div>
+
+	<div class="cont_sec_2">
+		<!-- [D]타이틀부분 max 2줄 말줄임 표시로 나오게 작업되야 합니다~ -->
+		<ul class="list_sec">
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_1.jpg" alt="김영자 부띠끄에 어서오세요" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">김영자 부띠끄에 어서오세요김영자..</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>	
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_2.jpg" alt="설희" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">설희</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_3.jpg" alt="믹스" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">믹스</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+
+
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_4.jpg" alt="러브 도서관" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">러브 도서관</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_5.jpg" alt="커피 한잔 할까요" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">커피 한잔 할까요</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_6.jpg" alt="센과만" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">센과만</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_7.jpg" alt="나를 훔쳐줘" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">나를 훔쳐줘나를 훔쳐줘나를 훔쳐줘..</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_8.jpg" alt="소년 노트" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">소년 노트</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_9.jpg" alt="요괴소녀" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">요괴소녀</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+
+
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_10.jpg" alt="그가 있는 집" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">그가 있는 집그가 있는 집그가 있는..</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_11.jpg" alt="풍월주" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">풍월주</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="pic_box">
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_h.gif" alt="" />
+						<img src="http://static.naver.net/m/comic/im/promo/prime/pic_img_12.jpg" alt="카르페디엠" class="pic" />
+					</div>
+					<dl class="txt_box">
+						<dt class="ellipsis">카르페디엠</dt>
+						<dd>
+							<span class="tit">대여</span> 쿠키 3개
+						</dd>
+						<dd>
+							<span class="tit">구매</span> 쿠키 5개
+						</dd>
+					</dl>
+				</a>
+			</li>
+		</ul>
+		<div class="btn_box"><a href="#"><img src="http://static.naver.net/m/comic/im/promo/prime/btn_prime_go.png" alt="프라임존 바로가기" /></a></div>
+	</div>
+	<div class="cont_sec_3">
+		<img src="http://static.naver.net/m/comic/im/promo/prime/prime_cont_3.png" alt="주의사항" class="per_100" />
+		<div class="blind">
+			<h2>주의사항</h2>
+			<ul>
+				<li>앱,웹 구분하지 않고 하루 한번만 참여 가능합니다.</li>
+				<li>쿠키는 네이버북스앱/완전판앱(안드로이드), N스토어(모바일/PC), 웹툰스토어에서 사용 가능합니다.</li>
+				<li>쿠키의 유효기간은 지급받은 시점부터 3일입니다.</li>
+				<li>본 이벤트를 통해 받은 쿠키는 환불되지 않습니다.</li>
+			</ul>
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+소스트리 사용법
+pull > work > commit > pull > push
+
+충돌 해결
+
+명령어
+git merge --abort 가 머지한것을 무시하겠다
+git fetch 내가 서버에 있는것을 revision(커밋명)하되 현재 내 브랜치랑 머지하지 않고 그냥 origin것만 받아오겠다.
+
+소스트리
+해당 버전에서 우클릭> Reset current branch to this commit >hard클릭
+
+hard는 현재 내소스랑 받아온 소스랑 틀리더라도 강제로 origin 소스쪽으로 같게 옮기는 것
+mixed 선택하면 내거를 유지하면서 옮기는 거라 충돌이 나서 해결해야 함
+
+관련 용어 정리
+http://cafe.naver.com/kosta95th/1893
+
+SASS(SASS 초창기 문법) / SCSS(css3 문법에 맞는 최근문법) 변환 사이트
+http://css2sass.herokuapp.com/
+
+권한설정 안했을때 오류
+git -c diff.mnemonicprefix=false -c core.quotepath=false push -v --tags --set-upstream origin feature_comment:feature_comment
+POST git-receive-pack (50224 bytes)
+
+깃 명령어
+https://git-scm.com/book/ko/v2/Git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%84%A4%EC%B9%98%EC%99%80-%EC%84%A4%EC%A0%95
