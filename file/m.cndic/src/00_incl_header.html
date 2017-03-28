@@ -1,0 +1,348 @@
+<? if($header == 'write'){ ?>
+<!-- 필기인식기용 헤더 -->
+<div class="writer_header autocomplet_wrap">
+    <div class="ts" id="ts">
+        <h1>
+            <a href="#" class="lk"><span>필기 인식기</span></a>
+            <div class="help_wrap">
+                <a href="#" class="help"><span class="hc">도움말</span></a>
+                <!-- [D] 도움말 클릭시, class명 "helpt_on"-->
+                <!-- [D] 도움말 닫을시, class명 "helpt"-->
+                <div class="helpt">
+                    <div class="sbox">
+                        필기인식기에서 한자를 손으로 써서 검색 할 수 있습니다.<br>1획 지우기, 전체 지우기 기능을 사용하여 필기 입력한
+                        획을 수정할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="kiclo"><span class="btn_txt">닫기</span></a>
+        </h1>
+    </div>
+
+    <form action="" name="search" id="search" method="get">
+        <fieldset class="hs ki">
+            <legend class="hc">검색</legend>
+            <div class="hs_search">
+                <!-- [D] 사용자가 문자를 입력하였을 경우, 아래 삭제 버튼 display:block으로 변경. -->
+                <span class="itw"> </span>
+                <!-- 검색용 데이터 시작-->
+                <input type="hidden" name="query" value=""> <input type="hidden" name="mflag" value="1">
+                <!-- 검색용 데이터 끝-->
+                <button type="button" title="삭제" style="display: none" class="crlt">삭제</button>
+                <button type="button" title="검색" class="hssbt">
+                    <span class="hc">검색</span>
+                </button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="autoCompleteParent" class="atcp atcpt" style="display: block;">
+        <div class="atcpw">
+            <div class="atcpw3">
+                <h3 class="hc">자동완성</h3>
+                <ul class="lst_word">
+                <li>
+                    <a href="#">
+                        <span class="word_wrap"><em class="keyword">学</em></span>
+                        <span class="mean">배우다, 학습하다, 익히다. 배우다, 학습하다, 익히다. 배우다, 학습하다, 익히다</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="word_wrap"><em class="keyword">学</em>乖</span>
+                        <span class="mean">재롱을 피우다.</span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<? }else if($langType == 'krcn_cn' || $langType == 'krcn_kr'){ ?>
+
+<!-- 기본 헤더 -->
+<!--[D] 스크롤이 Ngnb의 높이이상 될때 is_fixed 추가, 높이 미만일때 is_fixed 삭제, is_fixed일때 body에 padding-top:42px을 해주세요.
+        iOS에서 폼요소 포커싱되었을때 상단고정이 되는데 스크롤시에 깨짐 현상이 일어납니다. 다른 영역터치시에는 포커싱을 없애주셔야 합니다.
+ -->
+<header id="header" class="header">
+    <!-- gnb -->
+    <div class="Ngnb is_scale">
+        <span class="Ngnb_logo"><a href="#" class="Nlogo_link"><span class="Nicon_logo">NAVER</span></a></span>
+        <div class="Ngnb_service">
+            <h1 class="Nservice_item"><a href="#">韩中词典</a></h1>
+            <span class="Nservice_subitem">
+                <a href="#">
+                    翻译器
+                </a>
+            </span>
+        </div>
+        <div class="Ngnb_tool">
+            <!--  button 태그 / a 태그 모두 사용할 수 있음 -->
+            <button type="button" class="Ntool_button" data-event="click|drawer(.Ndrawer),click|dimmed(.Ndimmed)"><span class="Nicon_drawer">확장영역 열기</span></button>
+        </div>
+    </div>
+    <!-- //gnb -->
+
+    <!-- search -->
+    <div class="Nsearch is_fold">
+        <div class="Nsearch_inner">
+            <div class="Nsearch_box">
+                <div class="Nsearch_box_inner">
+                    <span class="Nbox_text"><input type="text" value="" title="검색어 입력" class="Nbox_input_text"></span>
+                <span class="Nbox_tool">
+                    <button type="button" class="Nbox_button Nbox_delete"><span class="Nicon_delete">검색어 삭제</span></button>
+                </span>
+                </div>
+            </div>
+            <div class="Nsearch_tool">
+                <button type="submit" class="Ntool_search"><span class="Nicon_search">검색</span></button>
+                <!--[D] 입력기 선택 메뉴 클릭시 span 에 is_active 클래스 추가, write_select_wrap 에 is_opened 추가 -->
+                <button type="submit" class="Ntool_search Nicon_input"><span class="Nicon_input">입력기 선택</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //search -->
+
+    <!-- tooltip layer -->
+    <div class="Ngnb_tooltip">
+        <strong class="Ntit">TIP</strong>
+        <span class="Ntip_txt">사전 홈으로 이동하려면 <span class="green">메뉴</span>를 선택하세요.</span>
+        <button class="Nbtn_close"><span class="Nicon_close">툴팁 닫기</span></a>
+    </div>
+
+    <!-- 입력기 선택 레이어 -->
+    <!--[D] 레이어 열릴때 is_opened 추가 -->
+    <div class="write_select_wrap">
+        <div class="write_select">
+            <a href="#" class="btn_write kr">韩文键盘</a>
+            <a href="#" class="btn_write cn">中文手写输入</a>
+        </div>
+    </div>
+    <!-- 한글 키보드 -->
+    <!--[D] 선택시 노출-->
+    <div class="wrap_keyboard" >
+        <div class="key_item">
+            <button type="button" class="btn">ㅃ</button>
+            <button type="button" class="btn">ㅉ</button>
+            <button type="button" class="btn">ㄸ</button>
+            <button type="button" class="btn">ㄲ</button>
+            <button type="button" class="btn">ㅆ</button>
+            <button type="button" class="btn">ㅒ</button>
+            <button type="button" class="btn">ㅖ</button>
+        </div>
+        <div class="key_item">
+            <button type="button" class="btn">ㅂ</button>
+            <button type="button" class="btn">ㅈ</button>
+            <button type="button" class="btn">ㄷ</button>
+            <button type="button" class="btn">ㄱ</button>
+            <button type="button" class="btn">ㅅ</button>
+            <button type="button" class="btn">ㅛ</button>
+            <button type="button" class="btn">ㅕ</button>
+            <button type="button" class="btn">ㅑ</button>
+            <button type="button" class="btn">ㅐ</button>
+            <button type="button" class="btn">ㅔ</button>
+        </div>
+        <div class="key_item">
+            <button type="button" class="btn">ㅁ</button>
+            <button type="button" class="btn">ㄴ</button>
+            <button type="button" class="btn">ㅇ</button>
+            <button type="button" class="btn">ㄹ</button>
+            <button type="button" class="btn">ㅎ</button>
+            <button type="button" class="btn">ㅗ</button>
+            <button type="button" class="btn">ㅓ</button>
+            <button type="button" class="btn">ㅏ</button>
+            <button type="button" class="btn">ㅣ</button>
+        </div>
+        <div class="key_item">
+            <button type="button" class="btn">ㅋ</button>
+            <button type="button" class="btn">ㅌ</button>
+            <button type="button" class="btn">ㅊ</button>
+            <button type="button" class="btn">ㅍ</button>
+            <button type="button" class="btn txt_top">ㅠ</button>
+            <button type="button" class="btn txt_top">ㅜ</button>
+            <button type="button" class="btn txt_top">ㅡ</button>
+            <button type="button" class="btn del">
+                <span class="inner">삭제</span>
+            </button>
+        </div>
+    </div>
+    <!--[D] 한국어입력기로 열릴시 ellipsis추가, 한자스킨 변경-->
+    <div id="ac_layer" class="autocomplet_wrap" style="display: none;">
+        <h3 class="hc">자동완성</h3>
+        <!--[D] 자동완성 끌때 style="display:none"-->
+        <ul class="lst_word">
+            <li>
+                <a href="#">
+                    <span class="word_wrap"><em class="keyword">学</em></span>
+                    <span class="mean">배우다, 학습하다, 익히다</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap"><em class="keyword">学</em>乖</span>
+                    <span class="mean">재롱을 피우다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap"><em class="keyword">안녕</em>-하다</span>
+                    <span class="mean">你好</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <!--[D] 간체 :  simplified  , 태그 작성시 간격(띄어쓰기 등)이 없게 해주세요-->
+                    <span class="word_wrap">学乖<span class="simplified">(<em class="keyword">學</em>乖)</span></span>
+                    <span class="mean"><em class="keyword">군사</em>를 배우다, 군사 기능을 배우다. 군사가 되기 위해 공부를 하다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap">腻</span>
+                    <span class="py">[<em class="keyword">nǐ</em>hǎo wǒde'ài]</span>
+                    <span class="mean">(음식물에) 기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가 너무 많다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap">腻</span>
+                    <span class="py">[<em class="keyword">nǐ</em>hǎo]</span>
+                    <span class="mean">(음식물에) 기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가 너무 많다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap">你</span>
+                    <span class="py">[<em class="keyword">니</em>하오]</span>
+                    <span class="mean">너</span>
+                </a>
+            </li>
+        </ul>
+        <div class="btn_wrap">
+            <!--[D] 자동완성 껐을때 : <a href="#" class="btn_auto_off">자동완성 켜기</a>-->
+            <a href="#" class="btn_auto_off">자동완성 끄기</a>
+            <button type="button" class="btn_close">닫기</button>
+        </div>
+    </div>
+
+    <!--[D] 입력기관련 팝업들이 열려있을때 dimmed 노출됩니다-->
+    <div class="dimmed" style="display:none;"></div>
+</header>
+
+<? }else{ ?>
+
+<!-- 기본 헤더 -->
+<!--[D] 스크롤이 Ngnb의 높이이상 될때 is_fixed 추가, 높이 미만일때 is_fixed 삭제, is_fixed일때 body에 padding-top:42px을 해주세요.
+        iOS에서 폼요소 포커싱되었을때 상단고정이 되는데 스크롤시에 깨짐 현상이 일어납니다. 다른 영역터치시에는 포커싱을 없애주셔야 합니다.
+ -->
+<header id="header" class="header">
+    <!-- gnb -->
+    <div class="Ngnb is_scale">
+        <span class="Ngnb_logo"><a href="#" class="Nlogo_link"><span class="Nicon_logo">NAVER</span></a></span>
+        <div class="Ngnb_service">
+            <h1 class="Nservice_item"><a href="#"><span class="Nicon_service">중국어사전</span></a></h1>
+            <span class="Nservice_subitem">
+                <a href="#">
+                    <span class="Nicon_family Nicon_wordbook">단어장</span>
+                </a>
+            </span>
+            <span class="Nservice_subitem">
+                <a href="#">
+                    <span class="Nicon_family Nicon_translate">번역기</span>
+                </a>
+            </span>
+        </div>
+        <div class="Ngnb_tool">
+            <!--  button 태그 / a 태그 모두 사용할 수 있음 -->
+            <button type="button" class="Ntool_button" data-event="click|drawer(.Ndrawer),click|dimmed(.Ndimmed)"><span class="Nicon_drawer">확장영역 열기</span></button>
+        </div>
+    </div>
+    <!-- //gnb -->
+
+    <!-- search -->
+    <div class="Nsearch is_fold">
+        <div class="Nsearch_inner">
+            <div class="Nsearch_box">
+                <div class="Nsearch_box_inner">
+                    <span class="Nbox_text"><input type="text" value="" title="검색어 입력" class="Nbox_input_text"></span>
+                <span class="Nbox_tool">
+                    <button type="button" class="Nbox_button Nbox_delete"><span class="Nicon_delete">검색어 삭제</span></button>
+                </span>
+                </div>
+            </div>
+            <div class="Nsearch_tool">
+                <button type="submit" class="Ntool_search"><span class="Nicon_search">검색</span></button>
+                <button type="submit" class="Ntool_search Ntool_writing"><span class="Nicon_writing">필기 인식기</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //search -->
+
+    <!--[D] 한국어입력기로 열릴시 ellipsis추가, 한자스킨 변경-->
+    <div id="ac_layer" class="autocomplet_wrap" style="display: none;">
+        <h3 class="hc">자동완성</h3>
+        <!--[D] 자동완성 끌때 style="display:none"-->
+        <ul class="lst_word">
+            <li>
+                <a href="#">
+                    <span class="word_wrap"><em class="keyword">学</em></span>
+                    <span class="mean">배우다, 학습하다, 익히다</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap"><em class="keyword">学</em>乖</span>
+                    <span class="mean">재롱을 피우다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap"><em class="keyword">안녕</em>-하다</span>
+                    <span class="mean">你好</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <!--[D] 간체 :  simplified  , 태그 작성시 간격(띄어쓰기 등)이 없게 해주세요-->
+                    <span class="word_wrap">学乖<span class="simplified">(<em class="keyword">學</em>乖)</span></span>
+                    <span class="mean"><em class="keyword">군사</em>를 배우다, 군사 기능을 배우다. 군사가 되기 위해 공부를 하다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap">腻</span>
+                    <span class="py">[<em class="keyword">nǐ</em>hǎo wǒde'ài]</span>
+                    <span class="mean">(음식물에) 기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가 너무 많다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap">腻</span>
+                    <span class="py">[<em class="keyword">nǐ</em>hǎo]</span>
+                    <span class="mean">(음식물에) 기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가기름기가 너무 많다.</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="word_wrap">你</span>
+                    <span class="py">[<em class="keyword">니</em>하오]</span>
+                    <span class="mean">너</span>
+                </a>
+            </li>
+        </ul>
+        <div class="btn_wrap">
+            <!--[D] 자동완성 껐을때 : <a href="#" class="btn_auto_off">자동완성 켜기</a>-->
+            <a href="#" class="btn_auto_off">자동완성 끄기</a>
+            <button type="button" class="btn_close">닫기</button>
+        </div>
+    </div>
+
+    <!-- tooltip layer -->
+    <div class="Ngnb_tooltip">
+        <strong class="Ntit">TIP</strong>
+        <span class="Ntip_txt">사전 홈으로 이동하려면 <span class="green">메뉴</span>를 선택하세요.</span>
+        <button class="Nbtn_close"><span class="Nicon_close">툴팁 닫기</span></a>
+    </div>
+
+</header>
+
+<? } ?>

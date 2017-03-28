@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="http://www.naver.com/favicon.ico" type="image/x-icon">
+    <title>네이버 영어사전</title>
+    <link type="text/css" rel="stylesheet" href="css/common_font.css">
+    <link type="text/css" rel="stylesheet" href="css/main_font.css">
+</head>
+<body>
+<div id="wrap">
+<div id="skip"><a href="#start">메뉴건너뛰고 본문 바로가기</a></div>
+
+<!-- 공통 GNB -->
+<div id="header">
+    <!-- 마크업 확인용 / 개발 적용 X -->
+    <link rel="stylesheet" type="text/css" href="../../common/css/gnb.css">
+    <?php include '../../common/common_gnb.html' ?>
+    <!-- // 마크업 확인용 / 개발 적용 X -->
+</div>
+<!-- //공통 GNB -->
+
+<!-- content -->
+<div id="main_content2">
+    <div class="con1b">
+        <h3>네이버 영어사전</h3>
+        <ul class="select_dic_lang">
+            <li><a href="#" class="ko">한국어</a></li>
+            <li><a href="#" class="en on">영어</a></li>
+            <!--[D] a요소 class에 on을 추가해주시면 됩니다. -->
+        </ul>
+        <a href="#" class="btn_mob">모바일</a>
+        <div class="lyr_mobile" id ="mobile_intro_layer" onMouseOver="mobileImgLayerShow();"  style="display:block">
+            <p>모바일에 최적화된<br><strong>영어사전</strong>을<br>체험하세요</p>
+            <div>
+                <a href="javascript:blockChk('endic');" class="N=a:STA*m.sms">URL 문자 전송</a>
+            </div>
+        </div>
+
+        <div class="search" id="top_search">
+            <fieldset class="sel_box">
+                <legend>검색영역</legend>
+                <span class="keybox"><input id="ac_input" type="text" name="query" value="" class="keyword" title="검색어" accesskey="s" maxlength="70"/></span>
+                <span class="static_keyword" style="display:none"></span>
+                <div class="auto_complete2" id="ac_layer">
+                    <ul class="list_a">
+                    </ul>
+                    <p class="auto_on_info">현재 자동완성 기능을 사용하고 계십니다.</p>
+                    <p class="auto_off_info">네이버 <strong>검색어 자동완성</strong>을 아시나요?<br/>검색어를 한 글자만 입력해도 찾으시려는 단어를 추천해주는 편리한 기능입니다.<br/><a href="#"><img height="18" width="99" alt="자동완성 사용하기" src="http://sstatic.naver.com/search/images11/btn_atcmp.gif"/></a></p>
+                    <p class="nothing">해당 단어로 추천어가 없습니다.</p>
+                    <div class="option"><a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'fcatid=184'})">도움말</a> <span class="bar">| <a href="#">기능끄기</a></span></div>
+                </div>
+                <a href="#" class="s1 ajax_searchbutton"><img src="http://dicimg.naver.com/endic/img/btn_sch_down.gif" alt="검색" width="52" height="40"/></a>
+                <a href="#" class="s1 ajax_searchbutton_ee"><img alt="영영사전" src="http://dicimg.naver.com/endic/img/btn_main_enen.gif" width="65" height="39"/></a>
+                <a href="#" onClick="openDetailedSearch()" class="s1 s2 N=a:gnb.detail"><img alt="상세검색" src="http://dicimg.naver.com/endic/img/btn_detail.gif" width="47" height="10"/></a>
+                <img class="arrow" height="15" width="15" alt="" src="http://dicimg.naver.com/endic/img/blank.gif"/>
+            </fieldset>
+            <div class="detail_layer" style="display:none" id="detail_layer">
+                <p class="tit">
+                    <span class="blind">영어사전 상세검색</span>
+                    <a href="javascript:openDetailedSearch()" class="btn_close N=a:dti.close"><span class="blind">닫기</span></a>
+                </p>
+                <div class="inqu_area">
+                    <dl class="srch">
+                        <dt class="tit2">부분단어 검색</dt>
+                        <dd class="srch_con">
+                            <form action="">
+                                <fieldset>
+                                    <legend>부분단어 검색</legend><input type="text" id="open_words" name="open_words" onkeydown="javascript: if (event.keyCode == 13) {goDetailedSearch();}"><label for="open_words">(으)로 시작하는 단어 검색하기</label><input type="text" id="end_words" name="end_words" onkeydown="javascript: if (event.keyCode == 13) {goDetailedSearch();}"><label for="end_words">(으)로 끝나는 단어 검색하기</label><input type="text" id="of_words" name="of_words" onkeydown="javascript: if (event.keyCode == 13) {goDetailedSearch();}"><label for="of_words">(이)가 포함된 단어 검색하기</label>
+                                </fieldset>
+                            </form>
+                            <p class="tips">포함된 단어 검색은 한 가지 조건만 선택이 가능합니다.</p>
+                        </dd>
+                    </dl>
+                    <a href="javascript:goDetailedSearch()" class="btn_check N=a:dti.search"><img src="http://dicimg.naver.com/endic/img/btn_check.gif" width="57" height="20" alt="검색하기"></a>
+                    <p class="txt">사전검색 입력창에서 직접 와일드 카드(*,?)를 사용하여 검색이 가능합니다.</p>
+                    <dl class="case">
+                        <dt>예시)</dt>
+                        <dd>s로 시작하는 모든 단어 : s*</dd>
+                        <dd>s로 끝나는 모든 단어 : *s</dd>
+                        <dd>s가 포함된 모든 단어 : *s*</dd>
+                        <dd>s앞에 두 글자가 포함된 모든 단어 : ??s</dd>
+                    </dl>
+                    <a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'faqId=23440'});openDetailedSearch()" class="more_link N=a:dti.guide">상세검색 규칙보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="history" id="myword">
+            <div class="tit">
+                <p class="l"><a id="more_word_list_btn_top" href="#"><img src="./img/self_history.gif" alt="내가 찾은 단어" width="83" height="12" /></a></p>
+                <ul class="r">
+                    <li class="first"><a href="http://wordbook.naver.com/endic" class="N=a:man.wordbook"><img src="./img/txt_main_myword.gif" alt="내단어장" width="41" height="12" /></a></li>
+                    <li><a href="javascript: SPS.miniPage('popManager.nhn?m=miniPopMain');void(0);" class="N=a:man.min"><img src="./img/txt_main_minwin.gif" alt="작은창" width="31" height="12" /></a></li>
+                </ul>
+            </div>
+            <ul class="word_list mywordList"></ul>
+            <ul class="word_list mywordList"></ul>
+            <p class="noword">찾은 단어가 없습니다.</p>
+            <div class="more"><a href="#" id="more_word_list_btn" class="layerBtn" onClick=clickcr(this,'rct.more','','',event,1)></a></div>
+            <div id="moreLayer">
+                <div class="jump_search">
+                    <div class="close"><a href="#" class="layerBtn"><img src="http://dicimg.naver.com/endic/img/btn_close3.gif" alt="" width="19" height="19" /></a></div>
+                    <ul class="moreWordList">
+                    </ul>
+                    <p class="btn_area"><a href="#" class="layerBtn"><img src="http://dicimg.naver.com/endic/img/btn_close4.gif" alt="" width="45" height="26" /></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap_trans">
+        <div class="area_trans">
+            <div class="select_trans_lang">
+                <span class="origin_lang">한국어</span>
+                <span class="blind">를</span>
+                <span class="trans_lang">영어</span>
+                <span class="blind">로 번역합니다.</span>
+                <button class="btn_change_translang"><span class="blind">원문언어와 번역언어를 서로 바꾸기</span></button>
+            </div>
+            <div class="area_origin"> <!-- [D] textarea에 onfocus시 focus 클래스 추가 -->
+                <label for="txt_origin" class="blind">번역할 내용을 입력하세요.</label>
+                <textarea id="txt_origin" class="ta_origin" cols="100" rows="5">번역할 내용을 여기에 입력하세요.</textarea>
+                <a href="#" class="btn_trans">번역하기</a> <!-- [D] 텍스트 입력하여 활성화되면 active 클래스 추가 -->
+            </div>
+            <a href="#" class="btn_gotrans">번역기 바로가기 <span class="ico_arr"></span></a>
+        </div>
+
+        <div class="con_find">
+            <h4 class="h_learn">단어학습</h4>
+            <dl class="lst_find">
+                <dt><a href="#">분야별 단어 찾기</a></dt>
+                <dd>
+                    <a href="#" class="first">전체</a>
+                    <span class="bar">|</span>
+                    <a href="#">철학</a>
+                    <span class="bar">|</span>
+                    <a href="#">종교</a>
+                    <span class="bar">|</span>
+                    <a href="#">역사</a>
+                    <span class="bar">|</span>
+                    <a href="#">문학</a>
+                    <span class="bar">|</span>
+                    <a href="#">언어</a>
+                </dd>
+            </dl>
+            <dl class="lst_find s2">
+                <dt><a href="#">중요도/품사별 단어 찾기</a></dt>
+                <dd>
+                    <a href="#" class="first">전체</a>
+                    <span class="bar">|</span>
+                    <a href="#">매우중요</a>
+                    <span class="bar">|</span>
+                    <a href="#">중요</a>
+                    <span class="bar">|</span>
+                    <a href="#">중요도없음</a>
+                </dd>
+            </dl>
+            <dl class="lst_find s3">
+                <dt><a href="#">중고등학교 교과서 단어 찾기</a></dt>
+                <dd>
+                    <a href="#" class="first">중1</a>
+                    <span class="bar">|</span>
+                    <a href="#">중2</a>
+                    <span class="bar">|</span>
+                    <a href="#">중3</a>
+                    <span class="bar">|</span>
+                    <a href="#">고교 공통</a>
+                    <span class="bar">|</span>
+                    <a href="#">고교 영어1</a>
+                    <!--<span class="bar">|</span>-->
+                    <a href="#">고교 영어2</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- 20110513 -->
+    <div class="main_ad_nav">
+        <ul>
+            <li class="first"><a target="_blank" href="http://blog.naver.com/dic_master/90084009163" class="N=a:btm.banner1"><img src="img/banner_trans.png" alt="예문 번역 참여하기 NEW-번역문 없는 예문에 내 이름표를 달아 주세요." width="143" height="52" /></a></li>
+            <li><a target="_blank" href="http://endic.naver.com/search_example.nhn?query=%EB%AA%85%EC%96%B8&preQuery=&forceRedirect=N&fieldType=11" class="N=a:btm.banner2"><img src="http://dicimg.naver.com/endic/img/banner_13.gif" alt="명언 속담 검색서비스 제공 주제별, 인물별, 나라별로 영어 명언과 속담을 찾아드립니다."  width="141" height="52" /></a></li>
+            <li><a target="_blank" href="#"><img src="img/banner_20.gif" alt="모바일 영단어장 출시 - 모바일 영단어장으로 중요 단어 외우고, 퀴즈 3종 세트에 도전 하세요." width="168" height="52" /></a></li>
+            <li><a target="_blank" href="#"><img src="img/banner_21.gif" alt="표제어 300만 건 돌파 .주요 영어사전도 각 분야 전문용어도 네이버 영어사전에 있습니다." width="150" height="52" /></a></li>
+        </ul>
+        <!--
+        <p class="m_ad"><a target="_blank" href="http://blog.naver.com/dic_master/90077360972" class="N=a:btm.rolling1"><img src="http://dicimg.naver.com/endic/img/banner_01.gif" alt="편리한 보조사전" /></a></p>
+        <p class="m_ad"><a target="_blank" href="http://blog.naver.com/dic_master/90114735203" class="N=a:btm.rolling1"><img src="http://dicimg.naver.com/endic/img/banner_main_01.png" width="260" height="107" /></a></p>
+        <p class="m_ad"><a target="_blank" href="http://campaign.naver.com/naverapp" class="N=a:btm.rolling1"><img src="http://dicimg.naver.com/endic/img/e_main_banner_7.jpg" width="260" height="107" /></a></p>
+        -->
+        <p class="m_ad"><a target="_blank" href="http://phrasebook.naver.com/?targetLanguage=en" class="N=a:btm.rolling1"><img src="img/banner_phrase_main_1.png" width="260" height="107" alt="글로벌회화 출시!. 스마트폰에 담아두는 14개 언어 여행회화사전"></a></p>
+    </div>
+    <!-- //20110513 -->
+    <div class="con1c">
+        <img alt="영한/한영사전" src="http://dicimg.naver.com/endic/img/main_txt_list01.gif" width="980" height="36" /><img alt="영영사전" src="http://dicimg.naver.com/endic/img/main_txt_list02.gif" width="980" height="36" /><img alt="숙어/관용구사전" src="http://dicimg.naver.com/endic/img/main_txt_list03_new.gif" width="980" height="36" /><img alt="예문 제공처" src="http://dicimg.naver.com/endic/img/main_txt_list04n.gif" width="980" height="56" />
+    </div>
+</div>
+
+<!-- 141015 오픈영어 이벤트 팝업 -->
+<div class="event_pop_area">
+    <div class="mask"></div>
+    <!--[D] 영문 팝업은 div요소 class에 en을 추가해주시면 됩니다. -->
+    <div class="pop_info">
+        <span class="blind">네이버 오픈영어 이벤트! 궁금한 단어 질문만 해도! 새로운 단어 등록만 해도! 푸짐한 선물 GET! 상품은 w호텔숙박권 1명, 아이패드 미니 3명, 라인 보틀+파우치 SET 30명, 문화상품권 30명, CGV 골드클래스 6명!</span>
+        <button class="pop_btn_close"><span class="blind">닫기</span></button>
+        <a href="#" class="pop_btn_detail_lk"><span class="blind">이벤트 자세히보기</span></a>
+        <button class="pop_btn_do_not_look"><span class="blind">오늘 다시 보지 않기</span></button>
+    </div>
+</div>
+
+<!--// content -->
+<div class="wb_event" style="display:none">
+    <div class="blind">
+        <h2>NAVER</h2>
+        <h3>모바일 영단어장 오픈 이벤트</h3>
+        <p>매일널 매일 일단 널리 참여 하세요!</p>
+        <dl>
+            <dt>이벤트 기간</dt>
+            <dd>12월 3일(월)~12월 12일(수)</dd>
+            <dt>당첨자 발표</dt>
+            <dd>12월 14일(금) 오후 3시 사전 공식 블로그</dd>
+        </dl>
+        <h4>모바일웹 바로가기 QR코드</h4>
+        <p>손쉽게 꺼내보는 영어 단어장! 스마트 폰에서 이용해 보세요.</p>
+    </div>
+    <a href="http://blog.naver.com/dic_master/90157930637" class="btn_blog"><span class="blind">사전 공식 블로그 바로가기</span></a>
+    <a href="http://blog.naver.com/dic_master/90157930637" class="btn_blog2"><span class="blind">오픈 이벤트 자세히 보기</span></a>
+    <a href="http://m.wordbook.naver.com/endic/" class="btn_wb"><span class="blind">모바일 영단어장 바로가기</span></a>
+    <ol class="blind">
+        <li>매일 오세요! 오늘의 영어. 오늘의 단어 푸시 알림을 설정하고, 오늘의 퀴즈를 매일 풀어 보세요. 스타벅스 카페라테 매일 50명</li>
+        <li>일단 풀어 보세요! 도전 퀴즈. 도전!퀴즈를 풀어보세요. 참가만 해도 상품이 팡팡! CU 모바일 상품권 5천원권 매일 30명 미스터피자 쉬림프 골드&amp;홈샐러드 매일 1명</li>
+        <li>널리 알리세요! 영단어장. 메인, 오늘의 영어 하단에 있는 미투, 라인, 카톡으로 영단어장을 추천해 주세요. KFC 하프치킨 버텟 매일 5명</li>
+    </ol>
+    <p class="btn_today">
+        <input id="btn_today" type="checkbox" name="">
+        <label for="btn_today">오늘 하루동안 보지 않기</label>
+        <a href="#" class="btn_clse2"><span class="blind">이벤트 레이어 다시 보지 않기 선택후 닫기</span></a>
+    </p>
+    <a href="#" class="btn_clse"><span class="blind">이벤트 레이어 닫기</span></a>
+</div>
+<!-- main_footer -->
+<div id="footer">
+    <div class="f_ref">
+        <ul>
+            <li class="copyRightImg"><img src="http://dicimg.naver.com/endic/img/copyright_dictype_2.gif" width="35" height="11" alt="자료제공"></li>
+            <li><a href="http://www.oxford.co.kr" target="_blank" class="N=a:fot.oxford"><img src="http://dicimg.naver.com/endic/img/origin_01.gif" width="116" height="11" alt="Oxford University Press"></a></li>
+            <li><a href="http://www.neungyule.com" target="_blank" class="N=a:fot.neungryul"><img src="http://dicimg.naver.com/endic/img/origin_02.gif" width="54" height="11" alt="능률 한영사전"></a></li>
+            <li><a href="http://www.doosandonga.com" target="_blank" class="N=a:fot.doosan"><img src="http://dicimg.naver.com/endic/img/origin_03.gif" width="100" height="11" alt="두산동아 프라임 영어사전"></a></li>
+            <li><a href="http://www.harpercollins.com" target="_blank" class="N=a:fot.collins"><img src="http://dicimg.naver.com/endic/img/origin_04.gif" width="141" height="11" alt="HarperCollins Publishers Ltd"></a></li>
+            <li><a href="http://www.ybmsisa.com/" target="_blank" class="N=a:fot.ybm"><img src="http://dicimg.naver.com/endic/img/origin_05.gif" width="59" height="11" alt="YBM 시사닷컴"></a></li>
+            <li><a href="http://blog.naver.com/eduoneyes" target="_blank"><img src="http://dicimg.naver.com/endic/img/origin_06.gif" width="73" height="11" alt="잉글리시히든카드"></a></li>
+            <li class="last"><a href="http://www.timescore.co.kr/" target="_blank"><img src="http://dicimg.naver.com/endic/img/origin_07.gif" width="46" height="11" alt="타임즈코어"></a></li>
+        </ul>
+        <a href="http://toolbar.naver.com" target="_blank" class="btn_tool N=a:fot.toolbar"><img src="http://dicimg.naver.com/endic/img/footer_download.gif" width="107" height="21" alt="네이버 툴바 다운로드"></a>
+    </div>
+    <div class="f_terms">
+        <dl class="policy">
+            <dt class="blind">네이버 정책 및 약관</dt>
+            <dd class="frst"><a href="#" target="_blank">이용약관</a></dd>
+            <dd><a href="#" target="_blank"><strong>개인정보취급방침</strong></a></dd>
+            <dd><a href="#" target="_blank">책임의 한계와 법적고지</a></dd>
+            <dd><a href="#" target="_blank">사전 도움말</a></dd>
+            <dd><a href="#" target="_blank">문의하기</a></dd>
+        </dl>
+        <address>
+            <a href="#" target="_blank" class="logo"><img src="http://static.naver.net/common/footer/ci_naver.gif" width="63" height="11" alt="NAVER"></a>
+            <em>Copyright ©</em>
+            <a href="#" target="_blank">NAVER Corp.</a>
+            <span>All Rights Reserved.</span>
+        </address>
+    </div>
+</div>
+<!--// main_footer -->
+</div>
+</body>
+</html>

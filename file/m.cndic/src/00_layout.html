@@ -1,0 +1,209 @@
+<?php include '00_common.html'; ?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>사전 :: 중국어사전</title>
+<link rel="stylesheet" href="css/w.css">
+<link rel="stylesheet" href="css/ngnb.css">
+</head>
+<body>
+<!-- [D] 필기입력기일때 필요 -->
+<? if($header == 'write'){ ?> <div class="writer_content"> <? } ?>
+<? include '00_incl_header.html' ?>
+<hr />
+<!-- ct -->
+<!-- [D] 오픈사전 엔트리 userentry_word 클래스 추가 -->
+<!-- [D] 필기인식기 페이지 drawing 클래스 추가 -->
+<!-- [D] If main-page, "main" class add. -->
+<div id="ct" class="<?php echo $classType ?>">
+<?php
+    if($tabmenu) {include '00_incl_tab.html';}
+    include '00_content.html';
+    if($tabmenu) {include '00_incl_spi.html';}
+?>
+<?php if($classType != 'drawing'){ ?>
+    <div class="main_offer">
+        <h4 class="main_h4">자료제공</h4>
+        <p class="main_p2">교학사, 진명출판사, 흑룡강조선민족출판사, 학고방, 당중거모, Haper Collins Publisher Ltd, 삼정 KPMG 회계•세무용어사전, KOTRA, 한국관광공사</p>
+    </div>
+
+</div>
+<?php } ?>
+<!-- //ct -->
+<!-- bottom area -->
+<? if($tabmenu) { include '00_incl_bottom.html'; } ?>
+<hr />
+
+
+<!-- footer area -->
+<? if(!$header && $classType != 'drawing'){ include '00_incl_footer.html'; } ?>
+<!-- [D] 필기입력기일때 필요 -->
+<!-- popup area -->
+<? if($popup) { include '04_cndic_popup.html'; } ?>
+
+<!-- layer_exfilter -->
+
+<!-- Dev Note: Show Status
+<div class="layer_exfilter"> -->
+
+<!-- Dev Note: Hide Status -->
+<div class="layer_exfilter is_hide">
+    <div class="layer_exfilter_inner">
+
+        <!-- exfilter_guide -->
+        <div class="exfilter_guide">
+
+            <!-- Dev Note: Hide Status
+            <div class="exfilter_guide is_hide"> -->
+            <h6 class="exfilter_guide_title">검색결과 조건안내</h6>
+            <span role="button" class="exfilter_guide_action"><i class="exfilter_guide_close">닫기</i></span>
+
+            <ul role="listbox" class="exfilter_guide_menu">
+                <li class="item">
+                    <!-- Dev Note: Selected Status -->
+                    <span role="option" class="action is_selected">수준별</span>
+
+                    <!-- Dev Note: Unelected Status
+                    <span role="option" class="action">수준별</span> -->
+                </li>
+                <li class="item2"><span role="option" class="action">중국어 능력 시험</span></li>
+            </ul>
+
+            <!-- Dev Note: Show Status -->
+            <div class="exfilter_guide_article">
+
+                <!-- Dev Note: Hide Status
+                <div class="exfilter_guide_article is_hide"> -->
+                <dl class="list">
+                    <dt>초급</dt>
+                    <dd>간단하게 일상생활에서 일어나는 화제에 대해 이야기 할 수있는 수준의 예문.</dd>
+                    <dt>중급</dt>
+                    <dd>비교적 유창하게 원어민과 대화하고 교류할 수 있는 수준의 예문.</dd>
+                    <dt>고급</dt>
+                    <dd>자신의 견해를 유창하고 적절하게 전달할 수 있는 수준의 예문.</dd>
+                </dl>
+            </div>
+
+            <!-- Dev Note: Show Status
+            <div class="exfilter_guide_article2"> -->
+
+            <!-- Dev Note: Hide Status -->
+            <div class="exfilter_guide_article2 is_hide">
+
+                <dl class="list">
+                    <dt>HSK (Chinese Proficiency Test)</dt>
+                    <dd>중국교육부국가한어수평고시로 제1언어가 중국어가 아닌 사람의 중국어 능력을 평가하기 위해 만들어진 국가급 표준화 고시.</dd>
+                    <dt>BCT(Business Chinese Test)</dt>
+                    <dd>중국어를 모국어로 사용하지 않는 사람을 대상으로 하며, 비즈니스 활동에 종사하는 데 있어 갖추어야 할 중국어 실력을 측정하는 표준화된 시험.</dd>
+                    <dt>등급외 단어포함</dt>
+                    <dd>등급외 단어 포함을 선택하시면, <br>HSK등급에속하지 않은 단어를 포함한 예문도 함께 노출됩니다.</dd>
+                </dl>
+
+            </div>
+        </div>
+        <!-- //exfilter_guide -->
+
+    </div>
+    <div class="layer_exfilter_dimmed"></div>
+</div>
+<!-- //layer_exfilter -->
+
+<? if($header == 'write'){?> </div> <? } ?>
+
+<!-- [D] 마크업 확인용. 개발시 삭제 -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/develop/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var code = sessionStorage.getItem("langCode")?sessionStorage.getItem("langCode"):"cn";
+    $("a.cnkr_kr, a.cnkr_cn, a.krcn_kr, a.krcn_cn").click(function(){
+        var $this = $(this);
+        var href = $this.attr("title");
+        var contLang = $this.attr("class");
+        sessionStorage.setItem('langCode', contLang);
+        if(contLang === "cnkr_kr" || contLang === "cnkr_cn"){
+            sessionStorage.setItem('langCode', 'cn');
+        }else{
+            sessionStorage.setItem('langCode', 'krcn');
+        }
+        console.log(code);
+        window.location.href=href;
+    });
+    var sideTemplate = new SideTemplate(code);
+    sideTemplate.init();
+
+    $(window).scroll(function() {
+        var nScrollTop = $(this).scrollTop();
+
+        if(nScrollTop > 41){
+            $('.header').addClass('is_fixed');
+            $('body').css("padding-top","42px");
+        }else{
+            $('.header').removeClass('is_fixed');
+            $('body').css("padding-top","0");
+        }
+    });
+
+    $(".Ngnb_tooltip .Nbtn_close").click(function(){
+        $(".Ngnb_tooltip").hide();
+    });
+
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        window.__splugin = SocialPlugIn_Core({
+            // nEvent Key
+            "evKey"       : "news",
+            // 서비스명
+            "serviceName" : "뉴스",
+            // 출처명
+            "sourceName" : "아이유",
+            // 버튼 클릭후 호출되는 콜백함수
+            "onClick"     : function(button) {
+                // button = 버튼명(band:밴드보내기)
+            },
+            // 공유하기 레이어 노출 후 호출되는 콜백함수
+            "onShow"      : function() {
+
+            },
+            // 공유하기 레이어 닫기 후 호출되는 콜백함수
+            "onHide"      : function() {
+            }
+        });
+    }
+
+    function onSubscribe(elTarget) {
+        return {
+            popupType       : "B",
+            callbackUrl     : "/popupSample_js.html",
+            targetUrl       : "/subscribe/applyFeedRelation.nhn",
+            serviceId       : "navercast",
+            feedGroupId     : "004",
+            feedGroupName   : "오늘의 미술",
+            feedId          : ["001","002","003","004","005","006","007","008"],
+            feedName        : ["서양미술의 걸작","테마로 보는 미술"],
+            selected        : ["Y","N","N","N","N","N","N","N"]
+        };
+    }
+
+	// For iOS home shortcut layer
+	$(".layer_shortcut_close").click(function() {
+		$(".layer_shortcut").hide();
+		return false;
+	});
+</script>
+<script type="text/javascript" src="js/uiTest.js"></script>
+<script id="naver-splugin-sdk" type="text/javascript" charset="utf-8" src="http://spi.naver.com/js/release/ko_KR/splugin.m.js?20150803"></script>
+<!-- //QP예외코드 -->
+<div style="display:none;position:fixed;right:0;top:0;z-index:10000;opacity:0.8">
+<a href="#" class="exam1" style="display:block;padding:5px 8px;text-align:center;background:#ccc;border:1px solid #444;">자동완성</a>
+<a href="#" class="exam2" style="display:block;padding:5px 8px;text-align:center;background:#ccc;border:1px solid #444;">최근 검색어 내역 없음</a>
+<a href="00_layout.html" style="display:block;padding:5px 8px;text-align:center;background:#ccc;border:1px solid #444;">인덱스 홈</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿<? include '00_header.html' ?>
+    <!-- [D] 오픈사전 엔트리 userentry_word 클래스 추가 -->
+    <div id="ct" role="main" class="userentry_word">
+        <!-- content -->
+        <div id="content" class="huri_off detail_jpkr">
+            <ul class="m_tab">
+            <li class="on"><a href="javascript:clickcr(this,'nav.all','','',event);window.location.href='/search.nhn?range=all&q=1';">뜻</a></li>
+            <li><a href="javascript:clickcr(this,'nav.word','','',event);window.location.href='/search.nhn?range=word&page=1&q=%E3%81%8F%E3%82%8B';">단어</a></li>
+            <li><a href="javascript:clickcr(this,'nav.example','','',event);window.location.href='/search.nhn?range=example&page=1&q=%E3%81%8F%E3%82%8B';">예문</a></li>
+            <li class="last"><a href="javascript:clickcr(this,'nav.body','','',event);window.location.href='/search.nhn?range=meaning&page=1&q=%E3%81%8F%E3%82%8B';">본문</a></li>
+            </ul>
+            <!-- 20160823 접근성 추가
+                [D]tab 영역을 선택시 아래의 타이틀을 변경해주세요.
+                예) <h3 class="blind">뜻</h3>
+                <h3 class="blind">단어</h3>
+                <h3 class="blind">예문</h3>
+                <h3 class="blind">본문</h3>
+             -->
+            <h3 class="blind">뜻</h3>
+            <!-- //20160823 접근성 추가 -->
+            <!-- entry_header -->
+            <div class="spot_area">
+                <div class="resize">
+                    <h3 lang="ja">
+                        <span class="maintitle">くる</span>
+                    </h3>
+                    <div class="con_clt">
+                        <span class="txt_box1"><span class="hc">오픈사전</span></span>
+                        <span class="ask">
+                            <a href="#"><span class="hc">이용자 참여 도움말</span></a>
+                            <!-- [D] 팝업을 닫을 때, (pop_clt -> pop_clt off) / (arr_top -> arr_top off) -->
+                            <div class="pop_clt">
+                                <p>이용자들이 직접 등록한 단어입니다.</p>
+                                <a href="#"><span class="hc">닫기</span></a>
+                            </div>
+                            <span class="arr_top"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- //entry_header -->
+            <h3 id="tab_title" class="blind">뜻</h3>
+            <div class="entry_dn">
+                <p class="note">​<span class="ico"></span>이용자들이 직접 등록한 단어로 일부 정확하지 않은 정보가 포함될 수 있습니다.</p>
+                <div class="btn_area">
+                    <!-- [D] ft_big 클릭시 on클래스 추가 및 <div class="section">에 ft_mod클래스 추가 -->
+                    <a href="javascript:void(0)" id="btn_ft_small" class="ft_small btn_txt_style1" title="작기"><span class="hc">가</span></a>
+                    <a href="javascript:void(0)" id="btn_ft_big" class="ft_big btn_txt_style1 on" title="크기"><span class="hc">가</span></a>
+                </div>
+            </div>
+            <!-- meaning_body -->
+            <!-- [D] 글씨가 클때 ft_mod 를 추가 -->
+            <div class="section">
+                <ul class="entry_opendic">
+                    <li class="first">
+                        <div class="mean_wrap">
+                            <!-- [D] 뜻이 하나일 경우 -->
+                            <!-- [D] 일본어 경우 언어코드 삽입 -->
+                            <span class="mean jp" lang="ja">くるくるくるくるくるくるくる</span>
+                        </div>
+                        <p class="user_info">모나미 (333k****)<span class="bar">|</span><span class="date">2014-07-31</span></p>
+                        <div class="vote">
+                            <span class="like"><a href="javascript:void(0)">맞아요</a><em>156</em></span>
+                            <span class="dislike"><a href="javascript:void(0)">틀려요</a><em>53</em></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mean_wrap">
+                            <!-- [D] 뜻이 여러개일경우 넘버링 -->
+                            <span class="num">1.</span>
+                            <span class="mean">짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다짱이다</span>
+                        </div>
+                        <div class="exam">
+                            <p class="tel">That movie was clawesome!
+                            <span class="player">
+                                <button type="button" title="재생" class="play">재생</button>
+                            </span>
+                            </p>
+                            <p class="tel">그 영화 짱이었어!
+                            <span class="player">
+                                <button type="button" title="재생" class="play">재생</button>
+                            </span>
+                            </p>
+                        </div>
+                        <div class="mean_wrap">
+                            <span class="num">2.</span>
+                            <span class="mean">짱이다</span>
+                        </div>
+                        <div class="exam">
+                            <p class="tel">That movie was clawesome!
+                            <span class="player">
+                                <button type="button" title="재생" class="play">재생</button>
+                            </span>
+                            </p>
+                            <p class="tel">그 영화 짱이었어!
+                            <span class="player">
+                                <button type="button" title="재생" class="play">재생</button>
+                            </span>
+                            </p>
+                        </div>
+                        <p class="user_info">모나미 (333k****)<span class="bar">|</span><span class="date">2014-08-01</span></p>
+                        <div class="vote">
+                            <span class="like"><a href="javascript:void(0)" onclick="nclk(this, 'pos.right', '', ''); if(!dicTools.checkLogin(true)) return; evaluation('987d97630466421c8f04899bad892559', 'like', '333kyhlove');">맞아요</a><em id="987d97630466421c8f04899bad892559_like">24</em></span>
+                            <span class="dislike"><a href="javascript:void(0)" onclick="nclk(this, 'pos.wrong', '', ''); if(!dicTools.checkLogin(true)) return; evaluation('987d97630466421c8f04899bad892559', 'unlike', '333kyhlove');">틀려요</a><em id="987d97630466421c8f04899bad892559_unlike">5</em></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section2">
+                <div class="nav_sec v1">
+                    <a onclick="clickcr(this,'ext.all','','',event);" class="all" href="/search.nhn?range=all&q=%E3%81%8F%E3%82%8B" title="'くる'의 전체 검색결과 보기">'<strong><span class="jp" lang="ja">くる</span></strong>'의 전체 검색결과 보기</a>
+                    <a onclick="clickcr(this,'ext.word','','',event);" href="/search.nhn?range=word&page=1&q=%E3%81%8F%E3%82%8B" title="'くる'의 단어 검색결과 보기">단어</a><em>(49)</em> <span class="bar">|</span>
+                    <a onclick="clickcr(this,'ext.idiom','','',event);" href="/search.nhn?range=example&page=1&q=%E3%81%8F%E3%82%8B" title="'くる'의 예문 검색결과 보기">예문</a><em>(2,672)</em> <span class="bar">|</span>
+                    <a onclick="clickcr(this,'ext.example','','',event);" href="/search.nhn?range=meaning&page=1&q=%E3%81%8F%E3%82%8B" title="'くる'의 본문 검색결과 보기">본문</a><em>(231)</em>
+                </div>
+            </div>
+
+            <div class="usen_another">
+                <p>새로운 뜻을 알고 있다면 추가해보세요!</p>
+                <a onclick="" href="#" class="btn_regist">뜻 추가하기<span class="ico"></span></a><a onclick="" href="#" class="usen_all"><span class="ab">오픈사전 전체 보기</span><span class="more_ico userentry"></span></a>
+            </div>
+        </div>
+        <!-- //content -->
+    </div>
+
+<? include '00_footer_entry.html' ?>

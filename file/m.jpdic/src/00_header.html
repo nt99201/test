@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Header :: 일본어 사전</title>
+    <link rel="stylesheet" href="css/w.css">
+    <!--<link rel="stylesheet" href="css/e.css">-->
+    <link rel="stylesheet" href="css/ngnb.css">
+</head>
+<body class="">
+<!-- 20160823 접근성 추가 -->
+<a href="#ct" class="skip_to_content">본문 바로가기</a>
+<!-- 20160823 접근성 추가 -->
+
+<!-- header -->
+<!--[D] 스크롤이 Ngnb의 높이이상 될때 is_fixed 추가, 높이 미만일때 is_fixed 삭제, is_fixed일때 body에 padding-top:42px을 해주세요.
+        iOS에서 폼요소 포커싱되었을때 상단고정이 되는데 스크롤시에 깨짐 현상이 일어납니다. 다른 영역터치시에는 포커싱을 없애주셔야 합니다.
+ -->
+<header id="header" class="header">
+    <!-- gnb -->
+    <div class="Ngnb is_scale">
+        <span class="Ngnb_logo"><a href="#" class="Nlogo_link"><span class="Nicon_logo">NAVER</span></a></span>
+        <div class="Ngnb_service">
+            <h1 class="Nservice_item"><a href="#"><span class="Nicon_service">일본어사전</span></a></h1>
+            <span class="Nservice_subitem">
+                <a href="#">
+                    <span class="Nicon_family Nicon_wordbook">단어장</span>
+                </a>
+            </span>
+            <span class="Nservice_subitem">
+                <a href="#">
+                    <span class="Nicon_family Nicon_translate">번역기</span>
+                </a>
+            </span>
+        </div>
+        <div class="Ngnb_tool">
+            <!--  button 태그 / a 태그 모두 사용할 수 있음 -->
+            <button type="button" class="Ntool_button" data-event="click|drawer(.Ndrawer),click|dimmed(.Ndimmed)"><span class="Nicon_drawer">확장영역 열기</span></button>
+        </div>
+    </div>
+    <!-- //gnb -->
+
+    <!-- search -->
+    <div class="Nsearch">
+        <div class="Nsearch_inner">
+            <div class="Nsearch_box">
+                <div class="Nsearch_box_inner">
+                    <span class="Nbox_text"><input type="text" value="" title="검색어 입력" class="Nbox_input_text"></span>
+                <span class="Nbox_tool">
+                    <button type="button" class="Nbox_button Nbox_delete"><span class="Nicon_delete">검색어 삭제</span></button>
+                </span>
+                </div>
+            </div>
+            <div class="Nsearch_tool">
+                <button type="submit" class="Ntool_search"><span class="Nicon_search">검색</span></button>
+                <button type="submit" class="Ntool_search Nicon_input_jp"><span class="Nicon_input_jp">필기 인식기</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //search -->
+
+    <!-- tooltip layer -->
+    <div class="Ngnb_tooltip">
+        <strong class="Ntit">TIP</strong>
+        <span class="Ntip_txt">사전 홈으로 이동하려면 <span class="green">메뉴</span>를 선택하세요.</span>
+        <button class="Nbtn_close"><span class="Nicon_close">툴팁 닫기</span></a>
+    </div>
+
+    <!-- 입력기 선택 영역 -->
+    <div class="write_select_wrap" >
+        <div class="write_select">
+            <a href="#" class="btn_write write"><span class="blind">필기 인식기</span></a>
+            <a href="#" class="btn_write hira"><span class="blind">히라가나 입력기</span></a>
+            <a href="#" class="btn_write kata"><span class="blind">가타가나 입력기</span></a>
+            <a href="#" class="btn_write voice"><span class="blind">음성 인식기</span></a>
+            <a href="#" class="btn_write pic"><span class="blind">이미지 인식기</span></a>
+        </div>
+        <div class="dimmed"></div>
+    </div>
+
+    <!-- //입력기 선택 영역 -->
+    <!-- 자동완성 -->
+    <div id="ac_layer" class="auto_complete2" style="display:none">
+        <ul id="ac_result" class="list_head">
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1"><strong>아</strong></span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1">알다</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1">알</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1"><strong>아</strong>래</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1">앞</span></a></li>
+            <li class="line"></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">あ</span><span class="w2"><strong>아</strong></span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああ</span><span class="w2"><strong>아</strong></span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">あ-</span><span class="w2"><strong>아</strong></span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああいう</span><span class="w2"><strong>아</strong>이우</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああした</span><span class="w2"><strong>아</strong>아시타</span></a></li>
+            <li class="line"></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ア</span><span class="w2"><strong>아</strong></span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーカイブ</span><span class="w2"><strong>아</strong>카이부</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーカンソー</span><span class="w2 "><strong>아</strong>캉소오</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーキテクチャ</span><span class="w2 "><strong>아</strong>키테쿠챠</span></a></li>
+            <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーギュメント</span><span class="w2 "><strong>아</strong>아규멩토</span></a></li>
+        </ul>
+
+        <!-- [D] on 클래스 추가시 텍스트 보임  off 클래스 추가시 텍스트 숨김 -->
+        <div class="option">
+            <a href="#" class="write_txt off">자동완성 켜기</a>
+            <a href="#" class="write_txt on">자동완성 끄기</a>
+            <button type="button"><span class="w">닫기</span></button>
+        </div>
+        <div class="option">
+            <a href="#" class="write_txt off">自動完成オン</a>
+            <a href="#" class="write_txt on">自動完成オフ</a>
+            <button type="button"><span class="w">閉じる</span></button>
+        </div>
+        <div class="option">
+            <a href="#" class="write_txt delete_all" style="display: block;">履歴取り消し</a>
+            <a href="#" class="write_txt" style="display: none;">マイ検索単語オン</a>
+            <a href="#" class="write_txt" style="display: block;">マイ検索単語オフ</a>
+            <button type="button" class="write_close"><span class="w">閉じる</span></button>
+        </div>
+    </div>
+    <!-- //자동완성 -->
+
+</header>
+<!-- //header -->

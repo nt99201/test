@@ -1,0 +1,1433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+<meta name="keywords" content="중국어사전,중국어,중한사전,한중사전,중국어입력기,필기인식기,Chinesedictionary,naverChinesedictionary,中国語辞書,ネイバー中国語辞書,中国语词典,naver中国语词典,中韩词典,韩中词典">
+<meta name="description" content="중국어문장분석기,신HSK등급별단어찾기,중국어필기인식기/병음입력기제공">
+<title>네이버 중국어사전
+</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.naver.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/entry_add.css">
+
+<script type="text/javascript" src="/js/common/jindo2_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/common/sps.js?20130807091911"></script>
+<script type="text/javascript" src="/js/dic.setSearchSelectType_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/wordbook/packJindo_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/rand_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/handWritingIpad_min.js?20130807091911" language="JavaScript"></script>
+</head>
+
+<body>
+<script type="text/javascript" language="javaScript">$Ajax.SWFRequest.write("/js/common/ajax.swf");</script>
+<a href="#content" tabindex="2" class="skip_to_content">본문 바로가기</a>
+<div id="wrap">
+	<div id="header">
+		<!-- 공통 GNB -->
+		<!-- // 공통 GNB -->
+		<!-- top_search -->
+		<div id="top_search" class="sta">
+			<h2><a href="/" title="중국어사전" onclick="clickcr(this,'DTP.cndic','','',event);"><span class="blind">중국어사전</span></a></h2>
+			<fieldset class="auto_on">
+				<legend>검색영역</legend>
+				<div class="gbox ">
+					<div class="gbox_inner">
+						<dl id="igbox">
+						<dt><a href="javascript:void(0)">전체</a><input type="hidden" id="selectRange" value="all"></dt>
+						<dd id="isubGbox">
+							<ul class="opt">
+							<li><a href="javascript:void(0)" onclick="clickcr(this,'STA.all','','',event);" class="value01">전체</a></li>
+							<li><a href="javascript:void(0)" onclick="clickcr(this,'STA.word','','',event);" class="value02">단어</a></li>
+							<li><a href="javascript:void(0)" onclick="clickcr(this,'STA.example','','',event);" class="value03">예문</a></li>
+							<li><a href="javascript:void(0)" onclick="clickcr(this,'STA.body','','',event);" class="value04">본문</a></li>
+							</ul>
+						</dd>
+						</dl>
+						<span class="static_keyword" style="display:none"></span>
+						<input type="text" name="query" id="ac_input" title="검색어" accesskey="s" tabindex="1" maxlength="150" autocomplete="off" submiturl="/search.nhn?range=idiom&amp;query=" class="keyword">
+						<a href="javascript:void(0)" title="자동완성 펼치기" class="btn_arw arrow"><span class="blind">자동완성 펼치기</span></a>
+						<input type="hidden" id="hid_ac_input" value="a">
+						<!-- 자동완성레이어 -->
+						<div id="ac_layer" class="auto_complete auto_complete2">
+							<ul class="">
+							<li></li>
+							</ul>
+							<p class="auto_on_info">현재 자동완성 기능을 사용하고 계십니다.</p>
+							<p class="auto_off_info">네이버<strong>검색어 자동완성</strong>을 아시나요?<br>검색어를 한 글자만 입력해도 찾으시려는 단어를 추천해주는 편리한 기능입니다.<br><a href="#" onclick="clickcr(this,'msh.autoon','','',event)"><img src="http://sstatic.naver.com/search/images11/btn_atcmp.gif" width="99" height="18" alt="자동완성 사용하기"></a></p>
+							<p class="nothing">해당 단어로 추천어가 없습니다.</p>
+							<div class="option"><a href="#" onclick="OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'fcatid=184'});clickcr(this,'msh.autohelp','','',event); return false;">도움말</a> <span class="bar">|<a href="#" onclick="clickcr(this,'msh.autooff','','',event)">기능끄기</a></span></div>
+						</div>
+					</div>
+				</div>
+				<a href="#" title="검색" class="btn_sch"><span class="blind">검색</span></a>
+			</fieldset>
+			<ul class="select_ime">
+			<li class="fc on"><a href="#" tabindex="-1" onmouseup="clickcr(this,'DTP.write','','',event);" class="pen">필기인식기</a></li>
+			<li class="input"><a href="#" onclick="clickcr(this,'DTP.pinyin','','',event);" class="pinyin">병음 입력기</a></li>
+			</ul>
+			<div class="write_device" style=" visibility: hidden; display: none;  position:absolute; top:62px; left:470px">
+				<dl>
+				<dt><img src="http://dicimg.naver.com/cndic/web/title_chinese_write.gif" width="95" height="13" alt="중국어 필기인식기"></dt>
+				<dd class="handwrite"><img src="http://dicimg.naver.com/cndic/web/@write_flash.gif" width="151" height="164" alt="필기인식기"></dd>
+				<dd id="writeDevice">
+					<table cellspacing="1" cellpadding="0">
+					<caption class="blind">중국어 필기인식기 결과</caption>
+					<tr>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					</tr>
+					<tr>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					</tr>
+					<tr>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					</tr>
+					<tr>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					<td onclick="void(0)">&nbsp;</td>
+					</tr>
+					</table>
+				</dd>
+				</dl>
+				<div class="info"><input type="checkbox" name="alwaysOpen" id="alwaysOpen_handWord" onclick="clickcr(this,'hdw.open','','',event)" class="J_alwaysOpen"><label for="alwaysOpen_handWord">항상 펼치기</label></div>
+				<div class="close"><input type="image" src="http://dicimg.naver.com/cndic/web/btn_device_close.gif" alt="필기인식기 닫기" onclick="clickcr(this,'hdw.close','','',event)"></div>
+			</div>
+
+			<a href="javascript:void(0)" onclick="clickcr(this,'DTP.trans','','',event);changeTag('unused');javascript:SPS.openWindow('/html/analysis.html',660,430,'no','no','analysis');" class="cn_assay">중국어 분석기</a>
+
+			<div>
+				<div>
+					<a href="#" id="mobile_btn" onclick="clickcr(this,'DTP.plusmobile','','',event); return false;" class="btn_mob">+Mobile</a>
+				</div>
+				<div id="mobile_layer" class="lyr_mobile" style="display: none; ">
+					<p>모바일에 최적화된<strong>중국어사전</strong>을<br>체험하세요</p>
+					<dl>
+					<dt>모바일 웹</dt>
+					<dd><a href="http://mobile.naver.com/service/cndic?tabTypeCode=CTT02" target="mobile_blank" class="btn1">모바일 웹 소개</a></dd>
+					<dt>모바일 애플리케이션</dt>
+					<dd>
+						<a href="http://mobile.naver.com/service/cndic?tabTypeCode=CTT01" target="mobile_blank" onclick="clickcr(this,'DTP*m.app','','',event)" class="btn1">모바일 웹 소개</a>
+					</dd>
+					</dl>
+
+					<div>
+						<span class="blind">중국어사전 모바일 QR코드-http://mobile.naver.com/qr/cndic</span>
+						<a href="#" onclick="blockChk('cndic');clickcr(this,'DTP*m.sms','','',event); return false;">URL 문자 전송</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="input_device" style="position: absolute;  right: 140px; top: 62px;">
+			<div class="dev_initials">
+				<table cellspacing="0" summary="병음입력기" width="600" cellpadding="0">
+				<caption>병음입력기-자음</caption>
+				<!-- colgroup>
+					<col style="width:47px; width:46px\9;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:34px; *width:33px;">
+					<col width="">
+				</colgroup -->
+				<tr>
+				<th scope="row" rowspan="2" class="noline"><div><img src="http://dicimg.naver.com/cndic/web/text_initials.gif" alt="자음" class="tit"></div></th>
+				<td tabindex="0" class="w25">b</td>
+				<td tabindex="0" class="w25">c</td>
+				<td tabindex="0" class="w25">ch</td>
+				<td tabindex="0" class="w25">d </td>
+				<td tabindex="0" class="w25">f</td>
+				<td tabindex="0" class="w25">g</td>
+				<td tabindex="0" class="w30">h</td>
+				<td tabindex="0" class="w30">j</td>
+				<td tabindex="0" class="w30">k</td>
+				<td tabindex="0" class="w30">l</td>
+				<td tabindex="0" class="w30">m</td>
+				<td tabindex="0" class="w30">n</td>
+				<td tabindex="0" class="w30">p</td>
+				<td tabindex="0" class="w30">q</td>
+				<td tabindex="0" class="w30">r</td>
+				<td tabindex="0" class="w30">s</td>
+				<td tabindex="0" class="w30">sh</td>
+				<td tabindex="0" class="w30">t</td>
+				<td tabindex="0" class="w33">w</td>
+				<td>x</td>
+				</tr>
+				<tr>
+				<td tabindex="0" class="line_b">y</td>
+				<td tabindex="0" class="line_b">z</td>
+				<td tabindex="0" class="line_b">zh</td>
+				<td tabindex="0" class="line_b">ng</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				<td class="line_b">&nbsp;</td>
+				</tr>
+				</table>
+			</div>
+
+			<div class="dev_finals">
+				<table cellspacing="0" summary="병음입력기" width="600" cellpadding="0">
+				<caption>병음입력기-모음</caption>
+				<!-- colgroup>
+					<col style="width:47px; width:46px\9;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:26px; *width:25px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:31px; *width:30px;">
+					<col style="width:34px; *width:33px;">
+					<col width="">
+				</colgroup -->
+				<tr>
+				<th scope="row" class="noline"><div><img src="http://dicimg.naver.com/cndic/web/text_finals.gif" alt="모음" class="tit"></div></th>
+				<th scope="col" tabindex="0" lang="zh">a</th>
+				<th scope="col" tabindex="0" lang="zh">e</th>
+				<th scope="col" tabindex="0" lang="zh">i</th>
+				<th scope="col" tabindex="0" lang="zh">o</th>
+				<th scope="col" tabindex="0" lang="zh">u</th>
+				<th scope="col" tabindex="0" lang="zh">ü</th>
+				<th scope="col" tabindex="0" lang="zh">ai</th>
+				<th scope="col" tabindex="0" lang="zh">ao</th>
+				<th scope="col" tabindex="0" lang="zh">ei</th>
+				<th scope="col" tabindex="0" lang="zh">ia</th>
+				<th scope="col" tabindex="0" lang="zh">ie</th>
+				<th scope="col" tabindex="0" lang="zh">io</th>
+				<th scope="col" tabindex="0" lang="zh">iu</th>
+				<th scope="col" tabindex="0" lang="zh">ou</th>
+				<th scope="col" tabindex="0" lang="zh">ua</th>
+				<th scope="col" tabindex="0" lang="zh">ui</th>
+				<th scope="col" tabindex="0" lang="zh">uo</th>
+				<th scope="col" tabindex="0" lang="zh">ue</th>
+				<th scope="col" tabindex="0" lang="zh">iao</th>
+				<th scope="col" tabindex="0" lang="zh">uai</th>
+				</tr>
+				<tr>
+				<th scope="row" class="noline"><div><img src="http://dicimg.naver.com/cndic/web/voice_one.gif" alt="1성"></div></th>
+				<td tabindex="0" class="w25">ā</td>
+				<td tabindex="0" class="w25">ē</td>
+				<td tabindex="0" class="w25">ī</td>
+				<td tabindex="0" class="w25">ō</td>
+				<td tabindex="0" class="w25">ū</td>
+				<td tabindex="0" class="w25">ǖ</td>
+				<td tabindex="0" class="w30">āi</td>
+				<td tabindex="0" class="w30">āo</td>
+				<td tabindex="0" class="w30">ēi</td>
+				<td tabindex="0" class="w30">iā</td>
+				<td tabindex="0" class="w30">iē</td>
+				<td tabindex="0" class="w30">iō</td>
+				<td tabindex="0" class="w30">iū</td>
+				<td tabindex="0" class="w30">ōu</td>
+				<td tabindex="0" class="w30">uā</td>
+				<td tabindex="0" class="w30">uī</td>
+				<td tabindex="0" class="w30">uō</td>
+				<td tabindex="0" class="w30">uē</td>
+				<td tabindex="0" class="w33">iāo</td>
+				<td tabindex="0">uāi</td>
+				</tr>
+				<tr>
+				<th scope="row" class="noline"><div><img src="http://dicimg.naver.com/cndic/web/voice_two.gif" alt="2성"></div></th>
+				<td tabindex="0">á</td>
+				<td tabindex="0">é</td>
+				<td tabindex="0">í</td>
+				<td tabindex="0">ó</td>
+				<td tabindex="0">ú</td>
+				<td tabindex="0">ǘ</td>
+				<td tabindex="0">ái</td>
+				<td tabindex="0">áo</td>
+				<td tabindex="0">éi</td>
+				<td tabindex="0">iá</td>
+				<td tabindex="0">ié</td>
+				<td tabindex="0">ió</td>
+				<td tabindex="0">iú</td>
+				<td tabindex="0">óu</td>
+				<td tabindex="0">uá</td>
+				<td tabindex="0">uí</td>
+				<td tabindex="0">uó</td>
+				<td tabindex="0">ué</td>
+				<td tabindex="0">iáo</td>
+				<td tabindex="0">uái</td>
+				</tr>
+				<tr>
+				<th scope="row" class="noline"><div><img src="http://dicimg.naver.com/cndic/web/voice_three.gif" alt="3성"></div></th>
+				<td tabindex="0">ǎ</td>
+				<td tabindex="0">ě</td>
+				<td tabindex="0">ǐ</td>
+				<td tabindex="0">ǒ</td>
+				<td tabindex="0">ǔ</td>
+				<td tabindex="0">ǚ</td>
+				<td tabindex="0">ǎi</td>
+				<td tabindex="0">ǎo</td>
+				<td tabindex="0">ěi</td>
+				<td tabindex="0">iǎ</td>
+				<td tabindex="0">iě</td>
+				<td tabindex="0">iǒ</td>
+				<td tabindex="0">iǔ</td>
+				<td tabindex="0">ǒu</td>
+				<td tabindex="0">uǎ</td>
+				<td tabindex="0">uǐ</td>
+				<td tabindex="0">uǒ</td>
+				<td tabindex="0">uě</td>
+				<td tabindex="0">iǎo</td>
+				<td tabindex="0">uǎi</td>
+				</tr>
+				<tr>
+				<th scope="row" class="noline"><div><img src="http://dicimg.naver.com/cndic/web/voice_four.gif" alt="4성"></div></th>
+				<td tabindex="0" class="line_b">à</td>
+				<td tabindex="0" class="line_b">è</td>
+				<td tabindex="0" class="line_b">ì</td>
+				<td tabindex="0" class="line_b">ò</td>
+				<td tabindex="0" class="line_b">ù</td>
+				<td tabindex="0" class="line_b">ǜ</td>
+				<td tabindex="0" class="line_b">ài</td>
+				<td tabindex="0" class="line_b">ào</td>
+				<td tabindex="0" class="line_b">èi</td>
+				<td tabindex="0" class="line_b">ià</td>
+				<td tabindex="0" class="line_b">iè</td>
+				<td tabindex="0" class="line_b">iò</td>
+				<td tabindex="0" class="line_b">iù</td>
+				<td tabindex="0" class="line_b">òu</td>
+				<td tabindex="0" class="line_b">uà</td>
+				<td tabindex="0" class="line_b">uì</td>
+				<td tabindex="0" class="line_b">uò</td>
+				<td tabindex="0" class="line_b">uè</td>
+				<td tabindex="0" class="line_b">iào</td>
+				<td tabindex="0" class="line_b">uài</td>
+				</tr>
+				</table>
+			</div>
+			<div class="open"><input type="checkbox" id="alwaysOpen_pinyin" onclick="clickcr(this,'pyw.open','','',event)" class="J_alwaysOpen"> <label for="alwaysOpen_pinyin">항상 펼치기</label></div>
+			<div class="del"><a href="javascript:;" onclick="clickcr(this,'pyw.del','','',event)" class="J_delAlone">한 글자 지우기</a> <a href="javascript:;" onclick="clickcr(this,'pyw.delall','','',event)" class="nobg J_delAll">모두 지우기</a></div>
+			<div class="close J_closePinyin"><input type="image" src="http://dicimg.naver.com/cndic/web/btn_04.gif" alt="병음 입력기 닫기" onclick="clickcr(this,'pyw.close','','',event)"></div>
+			<div id="over" class="over" style="display: none;">í</div>
+		</div>
+		<!-- //top_search -->
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- content --><div id="content">
+			<script type="text/javascript">//<![CDATA[
+	var nsc = "cndic.browse";
+	var ccsrv = "cc.naver.com";
+//]]>
+			</script>
+			<script type="text/javascript">function queryByCnt(){
+
+		var s=document.getElementById("strokeCntList");
+		var cnt=s.options[s.selectedIndex].value;
+		clickcr(this,'sou.stroke','',cnt,event);
+		if(cnt<=0)return;
+		document.getElementById("pronunciation").value='가';
+		document.getElementById("strokeCnt").value=cnt;
+		document.getElementById("queryForm").submit();
+	}
+	function queryByPronun(pronun){
+		document.getElementById("pronunciation").value=pronun;
+		document.getElementById("queryForm").submit();
+	}
+	function switchPronun(src,num){
+		for(var i=1;i<=14;i++){
+			document.getElementById("vowel"+i).className="";
+		}
+		src.className="on";
+		var text = src.innerText;
+		$Element(src).append("<span class='blind'>"+text+"</span>");
+		var v=document.getElementById("korealist"+num);
+		v.style.display='';
+		for(var i=1;i<=14;i++){
+			if(i==num)continue;
+			document.getElementById("korealist"+i).style.display="none";
+		}
+	}
+
+	function init(){
+		for(var i=1;i<=14;i++){
+			var v=document.getElementById("korealist"+i);
+			var l=v.getElementsByTagName("a");
+			for(var j=0;j<l.length;j++){
+				var ie=(l[j].innerText)?true:false;
+				var t;
+				if(ie)
+					t=l[j].innerText;
+				else
+					t=l[j].textContent;
+				l[j].href="javascript:queryByPronun('"+t+"')";
+				if('가'==t){
+					l[j].className="on";
+					$Element(l[j]).append("<span class='blind'>가</span>");
+					if(j!=0)l[0].className="";
+					switchPronun(document.getElementById("vowel"+i),i);
+				}
+			}
+		}
+	}
+	function letterSelect(letter){
+		var letterList=document.getElementsByName("letter");
+		for(var i=0;i<letterList.length;i++){
+			letterList[i].className="";
+		}
+		letter.className="on";
+	}
+			</script>
+<form action="yupian.nhn" id="queryForm">
+				<input type="hidden" name="m" id="m" value="pronunSearch">
+				<input type="hidden" name="pronunciation" id="pronunciation" value="">
+				<input type="hidden" name="strokeCnt" id="strokeCnt" value="">
+			</form>
+<div class="sear_method">
+				<h5><img src="http://dicimg.naver.com/cndic/web/search_tit.gif" width="65" height="16" alt="옥편처럼 찾기"></h5>
+				<ul class="sm_menu">
+				<li><a href="/yupian.nhn?m=pinyinSearch" id="" onclick="clickcr(this,'src.pinyin','','',event)"><img src="http://dicimg.naver.com/cndic/web/search_method01.gif" width="111" height="31" alt="병음으로 찾기"></a></li>
+				<li><a href="/bushou.nhn?m=searchBushou" id="" onclick="clickcr(this,'src.radical','','',event)"><img src="http://dicimg.naver.com/cndic/web/search_method02.gif" width="111" height="31" alt="부수로 찾기"></a></li>
+				<li class="on"><a href="/yupian.nhn?m=pronunSearch" onclick="clickcr(this,'src.sound','','',event)"><img src="http://dicimg.naver.com/cndic/web/search_method03_on.gif" width="111" height="31" alt="독음으로 찾기"></a></li>
+				<li><a href="/yupian.nhn?m=strokeCntSearch" id="" onclick="clickcr(this,'src.stroke','','',event)"><img src="http://dicimg.naver.com/cndic/web/search_method04.gif" width="111" height="31" alt="총획수로 찾기"></a></li>
+				</ul>
+
+				<div class="box">
+		          <!-- 20160811 접근성 추가 -->
+		          <h6 class="blind">독음으로 찾기</h6>
+		          <!-- //20160811 접근성 추가 -->
+					<!-- 20090108 eidt -->
+					<ul class="korlist">
+					<li class="first"><a href="javascript:queryByPronun('가')" id="vowel1" onclick="clickcr(this,'sou.con','','1',event)" class="on">ㄱ</a></li>
+					<li><a href="javascript:queryByPronun('나')" id="vowel2" onclick="clickcr(this,'sou.con','','2',event)">ㄴ</a></li>
+					<li><a href="javascript:queryByPronun('다')" id="vowel3" onclick="clickcr(this,'sou.con','','3',event)">ㄷ</a></li>
+					<li><a href="javascript:queryByPronun('라')" id="vowel4" onclick="clickcr(this,'sou.con','','4',event)">ㄹ</a></li>
+					<li><a href="javascript:queryByPronun('마')" id="vowel5" onclick="clickcr(this,'sou.con','','5',event)">ㅁ</a></li>
+					<li><a href="javascript:queryByPronun('박')" id="vowel6" onclick="clickcr(this,'sou.con','','6',event)">ㅂ</a></li>
+					<li><a href="javascript:queryByPronun('사')" id="vowel7" onclick="clickcr(this,'sou.con','','7',event)">ㅅ</a></li>
+					<li><a href="javascript:queryByPronun('아')" id="vowel8" onclick="clickcr(this,'sou.con','','8',event)">ㅇ</a></li>
+					<li><a href="javascript:queryByPronun('자')" id="vowel9" onclick="clickcr(this,'sou.con','','9',event)">ㅈ</a></li>
+					<li><a href="javascript:queryByPronun('차')" id="vowel10" onclick="clickcr(this,'sou.con','','10',event)">ㅊ</a></li>
+					<li><a href="javascript:queryByPronun('쾌')" id="vowel11" onclick="clickcr(this,'sou.con','','11',event)">ㅋ</a></li>
+					<li><a href="javascript:queryByPronun('타')" id="vowel12" onclick="clickcr(this,'sou.con','','12',event)">ㅌ</a></li>
+					<li><a href="javascript:queryByPronun('파')" id="vowel13" onclick="clickcr(this,'sou.con','','13',event)">ㅍ</a></li>
+					<li><a href="javascript:queryByPronun('하')" id="vowel14" onclick="clickcr(this,'sou.con','','14',event)">ㅎ</a></li>
+					</ul>
+					<ul id="korealist1" class="korealist">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">가</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">각</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">간</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">갈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">감</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">갑</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">강</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">개</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">객</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">갱</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">갹</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">거</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">건</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">걸</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">검</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">겁</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">게</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">격</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">견</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">결</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">겸</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">경</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">계</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">고</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">곡</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">곤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">골</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">공</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">과</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">곽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">관</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">괄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">광</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">괘</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">괴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">괵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">굉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">교</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">구</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','40',event)">국</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','41',event)">군</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','42',event)">굴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','43',event)">궁</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','44',event)">권</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','45',event)">궐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','46',event)">궤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','47',event)">귀</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','48',event)">규</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','49',event)">균</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','50',event)">귤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','51',event)">극</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','52',event)">근</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','53',event)">금</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','54',event)">급</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','55',event)">긍</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','56',event)">기</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','57',event)">긴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','58',event)">길</a></li>
+					</ul>
+
+					<ul id="korealist2" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">나</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">낙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">난</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">날</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">남</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">납</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">낭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">내</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">녀</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">녁</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">년</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">념</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">녕</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">녜</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">노</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">녹</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">논</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">농</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">뇌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">뇨</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">누</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">눈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">눌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">뉴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">뉵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">능</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">니</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">닉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">닐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">님</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">닙</a></li>
+					</ul>
+					<ul id="korealist3" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">다</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">단</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">달</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">담</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">답</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">당</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">대</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">덕</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">도</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">독</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">돈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">돌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">동</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">두</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">둔</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">득</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">등</a></li>
+					</ul>
+
+					<ul id="korealist4" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">라</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">락</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">란</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">랄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">람</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">랍</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">랑</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">래</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">랭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">략</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">량</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">려</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">력</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">련</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">렬</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">렴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">렵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">령</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">례</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">로</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">록</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">론</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">롱</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">뢰</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">료</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">룡</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">루</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">류</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">륙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">륜</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">률</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">륭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">륵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">름</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">릉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">리</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">린</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">림</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">립</a></li>
+					</ul>
+
+					<ul id="korealist5" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">마</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">막</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">만</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">말</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">망</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">매</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">맥</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">맹</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">먀</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">멱</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">면</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">멸</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">명</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">몌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">모</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">목</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">몰</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">몽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">묘</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">무</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">묵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">문</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">물</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">미</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">민</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">밀</a></li>
+					</ul>
+
+					<ul id="korealist6" class="korealist" style="display:none">
+					<li><a onclick="clickcr(this,'sou.sound','','1',event)" class="on">박</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">반</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">발</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">밤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">방</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">배</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">백</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">번</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">벌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">범</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">법</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">벽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">변</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">별</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">병</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">보</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">복</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">본</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">봉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">부</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">북</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">분</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">불</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">붕</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">비</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">빈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">빙</a></li>
+					</ul>
+					<ul id="korealist7" class="korealist" style="display:none">
+					<li><a onclick="clickcr(this,'sou.sound','','1',event)" class="on">사</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">삭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">산</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">살</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">삼</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">삽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">상</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">새</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">색</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">생</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">서</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">석</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">선</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">설</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">섬</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">섭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">성</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">세</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">소</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">속</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">손</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">솔</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">송</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">쇄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">쇠</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">수</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">숙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">순</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">술</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">숭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">쉬</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">슬</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">습</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">승</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">시</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">식</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">신</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">실</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">심</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','40',event)">십</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','41',event)">쌍</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','42',event)">씨</a></li>
+					</ul>
+
+					<ul id="korealist8" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">아</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">악</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">안</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">알</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">암</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">압</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">앙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">애</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">액</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">앵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">야</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">약</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">양</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">어</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">억</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">언</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">얼</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">엄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">업</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">에</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">여</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">역</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">연</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">열</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">염</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">엽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">영</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">예</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">오</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">옥</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">온</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">올</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">옹</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">와</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">완</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">왈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">왕</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">왜</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">외</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','40',event)">요</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','41',event)">욕</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','42',event)">용</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','43',event)">우</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','44',event)">욱</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','45',event)">운</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','46',event)">울</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','47',event)">웅</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','48',event)">원</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','49',event)">월</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','50',event)">위</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','51',event)">유</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','52',event)">육</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','53',event)">윤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','54',event)">율</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','55',event)">융</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','56',event)">은</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','57',event)">을</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','58',event)">음</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','59',event)">읍</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','60',event)">응</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','61',event)">의</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','62',event)">이</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','63',event)">익</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','64',event)">인</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','65',event)">일</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','66',event)">임</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','67',event)">입</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','68',event)">잉</a></li>
+					</ul>
+					<ul id="korealist9" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">자</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">작</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">잔</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">잠</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">잡</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">장</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">재</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">쟁</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">저</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">적</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">전</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">절</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">점</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">접</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">정</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">제</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">조</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">족</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">존</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">졸</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">종</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">좌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">죄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">주</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">죽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">준</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">줄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">중</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">즉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">즐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">즘</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">즙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">증</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">지</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">직</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">진</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">질</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">짐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">집</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','40',event)">징</a></li>
+					</ul>
+					<ul id="korealist10" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">차</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">착</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">찬</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">찰</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">참</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">창</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">채</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">책</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">처</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">척</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">천</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">철</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">첨</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">첩</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">청</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">체</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">초</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">촉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">촌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">총</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">촬</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">최</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">추</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">축</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">춘</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">출</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">충</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">췌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">취</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">측</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">츤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">층</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">치</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">칙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">친</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">칠</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">침</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">칩</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">칭</a></li>
+					</ul>
+					<ul id="korealist11" class="korealist" style="display:none">
+					<li><a onclick="clickcr(this,'sou.sound','','1',event)" class="on">쾌</a></li>
+					</ul>
+					<ul id="korealist12" class="korealist" style="display:none">
+					<li><a onclick="clickcr(this,'sou.sound','','1',event)" class="on">타</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">탁</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">탄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">탈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">탐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">탑</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">탕</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">태</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">택</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">탱</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">터</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">토</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">통</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">퇴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">투</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">특</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">틈</a></li>
+					</ul>
+					<ul id="korealist13" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">파</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">판</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">팔</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">패</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">팽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">퍅</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">편</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">폄</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">평</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">폐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">포</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">폭</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">표</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">품</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">풍</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">피</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">픽</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">필</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">핍</a></li>
+					</ul>
+					<ul id="korealist14" class="korealist" style="display:none">
+					<li><a id="" onclick="clickcr(this,'sou.sound','','1',event)" class="on">하</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','2',event)">학</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','3',event)">한</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','4',event)">할</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','5',event)">함</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','6',event)">항</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','7',event)">해</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','8',event)">핵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','9',event)">행</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','10',event)">향</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','11',event)">허</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','12',event)">헌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','13',event)">헐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','14',event)">험</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','15',event)">혁</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','16',event)">현</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','17',event)">혈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','18',event)">혐</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','19',event)">협</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','20',event)">형</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','21',event)">혜</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','22',event)">호</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','23',event)">혹</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','24',event)">혼</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','25',event)">홀</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','26',event)">홍</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','27',event)">화</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','28',event)">확</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','29',event)">환</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','30',event)">활</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','31',event)">황</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','32',event)">홰</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','33',event)">회</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','34',event)">획</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','35',event)">횡</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','36',event)">효</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','37',event)">후</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','38',event)">훈</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','39',event)">훌</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','40',event)">훙</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','41',event)">훤</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','42',event)">훼</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','43',event)">휘</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','44',event)">휴</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','45',event)">휵</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','46',event)">휼</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','47',event)">흉</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','48',event)">흑</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','49',event)">흔</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','50',event)">흘</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','51',event)">흠</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','52',event)">흡</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','53',event)">흥</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','54',event)">희</a></li>
+					<li><a id="" onclick="clickcr(this,'sou.sound','','55',event)">힐</a></li>
+					</ul>
+					<!-- //20090108 eidt -->
+
+				</div>
+			</div><div class="sech_word_list">
+				<h5>독음 :<strong>가</strong></h5>
+				<!-- 20160811 접근성 추가 -->
+				<select id="strokeCntList" name="strokeCntList" onchange="queryByCnt()" title="한자획수별 보기">
+					<option value="cnts">한자 획수별 보기</option>
+					<option value="5">총획  5 </option>
+					<option value="6">총획  6 </option>
+					<option value="7">총획  7 </option>
+					<option value="8">총획  8 </option>
+					<option value="9">총획  9 </option>
+					<option value="10">총획  10 </option>
+					<option value="11">총획  11 </option>
+					<option value="12">총획  12 </option>
+					<option value="13">총획  13 </option>
+					<option value="14">총획  14 </option>
+					<option value="15">총획  15 </option>
+					<option value="16">총획  16 </option>
+					<option value="18">총획  18 </option>
+				</select>
+				<!-- //20160811 접근성 추가 -->
+				<ul>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bbe4ac75" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe4ac75','1',event)">家</a><span>jiā</span>
+					<p>집 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bdeeac81" name="letter" onclick="clickcr(this,'sou.list','c_38f2bdeeac81','2',event)">加</a><span>jiā</span>
+					<p>더할 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f2b8eeaf80" name="letter" onclick="clickcr(this,'sou.list','c_39f2b8eeaf80','3',event)">歌</a><span>gē</span>
+					<p>노래 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f0b9e3ab6f" name="letter" onclick="clickcr(this,'sou.list','c_38f0b9e3ab6f','4',event)">街</a><span>jiē</span>
+					<p>거리 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6b8e0ae7b" name="letter" onclick="clickcr(this,'sou.list','c_3ff6b8e0ae7b','5',event)">可</a><span>kě</span>
+					<p>가능할 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e3a86b" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e3a86b','6',event)">架</a><span>jià</span>
+					<p>시렁 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b9e3ad73" name="letter" onclick="clickcr(this,'sou.list','c_38f2b9e3ad73','7',event)">假</a><span>jiǎ</span>
+					<p>빌릴 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2bbe7ab77" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe7ab77','8',event)">佳</a><span>jiā</span>
+					<p>아름다울 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39ffbfe7a987" name="letter" onclick="clickcr(this,'sou.list','c_39ffbfe7a987','9',event)">呵</a><span>hē</span>
+					<p>꾸짖을 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e1aa6b" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e1aa6b','10',event)">嫁</a><span>jià</span>
+					<p>시집 갈 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e1af70" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e1af70','11',event)">假</a><span>jià</span>
+					<p>휴가 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2b6e7a56c" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e7a56c','12',event)">价</a><span>jià</span>
+					<p>값 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38ffb6e7a478" name="letter" onclick="clickcr(this,'sou.list','c_38ffb6e7a478','13',event)">卡</a><span>kǎ</span>
+					<p>음역자 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e5ab70" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e5ab70','14',event)">驾</a><span>jià</span>
+					<p>탈 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3effbbefae95" name="letter" onclick="clickcr(this,'sou.list','c_3effbbefae95','15',event)">瘸</a><span>qué</span>
+					<p>절름발이 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_39f5bae5af7c" name="letter" onclick="clickcr(this,'sou.list','c_39f5bae5af7c','16',event)">嘎</a><span>gǎ</span>
+					<p>까불 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f5bae5ac79" name="letter" onclick="clickcr(this,'sou.list','c_39f5bae5ac79','17',event)">尕</a><span>gǎ</span>
+					<p>귀여울 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f5bae6a573" name="letter" onclick="clickcr(this,'sou.list','c_39f5bae6a573','18',event)">玍</a><span>gǎ</span>
+					<p>까불 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f5bae7a473" name="letter" onclick="clickcr(this,'sou.list','c_39f5bae7a473','19',event)">尜</a><span>gá</span>
+					<p>팽이 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_39f5bae7a574" name="letter" onclick="clickcr(this,'sou.list','c_39f5bae7a574','20',event)">钆</a><span>gá</span>
+					<p>가돌리늄 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f5bdeea881" name="letter" onclick="clickcr(this,'sou.list','c_39f5bdeea881','21',event)">咖</a><span>gā</span>
+					<p>음역자 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f5bdeead86" name="letter" onclick="clickcr(this,'sou.list','c_39f5bdeead86','22',event)">伽</a><span>gā</span>
+					<p>음역자 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b8e0af71" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e0af71','23',event)">豭</a><span>jiā</span>
+					<p>수퇘지 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2b8e0ac6e" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e0ac6e','24',event)">镓</a><span>jiā</span>
+					<p>갈륨 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b8e2a569" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e2a569','25',event)">嘉</a><span>jiā</span>
+					<p>아름다울 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b8e2ab6f" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e2ab6f','26',event)">跏</a><span>jiā</span>
+					<p>책상다리할 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b8e2a96d" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e2a96d','27',event)">葭</a><span>jiā</span>
+					<p>갈대 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2b8e2af73" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e2af73','28',event)">袈</a><span>jiā</span>
+					<p>가사 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b8e2ac70" name="letter" onclick="clickcr(this,'sou.list','c_38f2b8e2ac70','29',event)">笳</a><span>jiā</span>
+					<p>갈잎피리 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bbe4ad76" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe4ad76','30',event)">痂</a><span>jiā</span>
+					<p>부스럼 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bbe5aa74" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe5aa74','31',event)">枷</a><span>jiā</span>
+					<p>칼 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2bbe5ab75" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe5ab75','32',event)">珈</a><span>jiā</span>
+					<p>머리꾸미개 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bbe5a872" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe5a872','33',event)">迦</a><span>jiā</span>
+					<p>석가모니 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bbe5a973" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe5a973','34',event)">泇</a><span>jiā</span>
+					<p>물 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2bbe7ae7a" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe7ae7a','35',event)">茄</a><span>jiā</span>
+					<p>연줄기 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2bbe7ad79" name="letter" onclick="clickcr(this,'sou.list','c_38f2bbe7ad79','36',event)">伽</a><span>jiā</span>
+					<p>음역자 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39ffbfe7ac8a" name="letter" onclick="clickcr(this,'sou.list','c_39ffbfe7ac8a','37',event)">诃</a><span>hē</span>
+					<p>음역자 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f2b6e1ae70" name="letter" onclick="clickcr(this,'sou.list','c_39f2b6e1ae70','38',event)">舸</a><span>gě</span>
+					<p>큰 배 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_39f2b6e1af71" name="letter" onclick="clickcr(this,'sou.list','c_39f2b6e1af71','39',event)">哿</a><span>gě</span>
+					<p>좋을 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_39f2b8e6aa73" name="letter" onclick="clickcr(this,'sou.list','c_39f2b8e6aa73','40',event)">哥</a><span>gē</span>
+					<p>형 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6b9efad8a" name="letter" onclick="clickcr(this,'sou.list','c_3ff6b9efad8a','41',event)">岢</a><span>kě</span>
+					<p>땅 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6b9e0a472" name="letter" onclick="clickcr(this,'sou.list','c_3ff6b9e0a472','42',event)">坷</a><span>kě</span>
+					<p>길 울퉁불퉁할 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6b8e5ab7d" name="letter" onclick="clickcr(this,'sou.list','c_3ff6b8e5ab7d','43',event)">钶</a><span>kē</span>
+					<p>콜럼븀 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_3ff6b8e5a97b" name="letter" onclick="clickcr(this,'sou.list','c_3ff6b8e5a97b','44',event)">砢</a><span>kē</span>
+					<p>망신시킬 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6b8e5ae80" name="letter" onclick="clickcr(this,'sou.list','c_3ff6b8e5ae80','45',event)">牁</a><span>kē</span>
+					<p>땅 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6bbe0a474" name="letter" onclick="clickcr(this,'sou.list','c_3ff6bbe0a474','46',event)">轲</a><span>kē</span>
+					<p>사람 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6bbe0aa7a" name="letter" onclick="clickcr(this,'sou.list','c_3ff6bbe0aa7a','47',event)">柯</a><span>kē</span>
+					<p>자루 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_3ff6bbe0ab7b" name="letter" onclick="clickcr(this,'sou.list','c_3ff6bbe0ab7b','48',event)">珂</a><span>kē</span>
+					<p>옥 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6bbe0a979" name="letter" onclick="clickcr(this,'sou.list','c_3ff6bbe0a979','49',event)">呵</a><span>kē</span>
+					<p>땅 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6bbe2af81" name="letter" onclick="clickcr(this,'sou.list','c_3ff6bbe2af81','50',event)">苛</a><span>kē</span>
+					<p>가혹할 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ff6bbe2ad7f" name="letter" onclick="clickcr(this,'sou.list','c_3ff6bbe2ad7f','51',event)">坷</a><span>kē</span>
+					<p>흙덩이 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38ffb6e3ad7d" name="letter" onclick="clickcr(this,'sou.list','c_38ffb6e3ad7d','52',event)">胩</a><span>kǎ</span>
+					<p>카르빌아민 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38ffb6e4a97a" name="letter" onclick="clickcr(this,'sou.list','c_38ffb6e4a97a','53',event)">咔</a><span>kǎ</span>
+					<p>음역자 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38ffb6e4af80" name="letter" onclick="clickcr(this,'sou.list','c_38ffb6e4af80','54',event)">佧</a><span>Kǎ</span>
+					<p>종족 이름 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38ffb9eeac8a" name="letter" onclick="clickcr(this,'sou.list','c_38ffb9eeac8a','55',event)">咖</a><span>kā</span>
+					<p>커피 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38ffb9efa887" name="letter" onclick="clickcr(this,'sou.list','c_38ffb9efa887','56',event)">咔</a><span>kā</span>
+					<p>소리의 형용 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f1bce3ab73" name="letter" onclick="clickcr(this,'sou.list','c_38f1bce3ab73','57',event)">家</a><span>jie</span>
+					<p>어조사 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f1bce3a870" name="letter" onclick="clickcr(this,'sou.list','c_38f1bce3a870','58',event)">价</a><span>jie</span>
+					<p>어조사 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e0aa6a" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e0aa6a','59',event)">稼</a><span>jià</span>
+					<p>심을 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2b6e7aa71" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e7aa71','60',event)">瘕</a><span>jiǎ</span>
+					<p>적취 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e7ab72" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e7ab72','61',event)">榎</a><span>jiǎ</span>
+					<p>개오동나무 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e7a86f" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e7a86f','62',event)">槚</a><span>jiǎ</span>
+					<p>개오동나무 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_38f2b6e7ae75" name="letter" onclick="clickcr(this,'sou.list','c_38f2b6e7ae75','63',event)">斝</a><span>jiǎ</span>
+					<p>술잔 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_38f2b9e4ae75" name="letter" onclick="clickcr(this,'sou.list','c_38f2b9e4ae75','64',event)">贾</a><span>Jiǎ</span>
+					<p>성씨 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ef1b9e7a473" name="letter" onclick="clickcr(this,'sou.list','c_3ef1b9e7a473','65',event)">茄</a><span>qié</span>
+					<p>가지 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ef1b9e7ab7a" name="letter" onclick="clickcr(this,'sou.list','c_3ef1b9e7ab7a','66',event)">伽</a><span>qié</span>
+					<p>절 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_3ef0b8e6a470" name="letter" onclick="clickcr(this,'sou.list','c_3ef0b8e6a470','67',event)">髂</a><span>qià</span>
+					<p>허리뼈 가</p></li>
+				<li class="lend">
+					<a href="/zh/entry?entryID=c_3cfebfeeaa91" name="letter" onclick="clickcr(this,'sou.list','c_3cfebfeeaa91','68',event)">暇</a><span>xiá</span>
+					<p>겨를 가</p></li>
+				<li>
+					<a href="/zh/entry?entryID=c_32febce5ab7c" name="letter" onclick="clickcr(this,'sou.list','c_32febce5ab7c','69',event)">轲</a><span>kě</span>
+					<p>평탄치 못할 가</p></li>
+				</ul>
+			</div>
+
+			<script type="text/javascript">init();
+if(typeof $Agent!="undefined"){
+	var browser=new $Agent().navigator();
+	if(browser.ie&&browser.version<7){
+		if($Cookie().get("handwriteAlwaysOpen")=="true")$("strokeCntList").style.visibility="hidden";
+	}
+}
+			</script>
+
+		</div>
+		<!-- //content -->
+
+		<!-- right --><div class="aside">
+			<!-- 배너 영역 -->
+			<ul class="word_popup">
+			<li class="first"><a href="http://wordbook.naver.com/cndic" onclick="clickcr(this,'rmn.wordbook','','',event)" class="word">단어장</a></li>
+			<li><a href="javascript:SPS.miniPage('/mini/section')" onclick="clickcr(this,'rmn.small','','',event)" class="popup">작은창 사전</a></li>
+			</ul>
+			<div class="supply">
+				<dl>
+				<dt><img src="http://dicimg.naver.com/cndic/web/img_supply01.gif" width="40" height="11" alt="자료제공"></dt>
+				<dd><img src="http://dicimg.naver.com/cndic/web/img_supply02.gif" width="80" height="11" alt="교학사 중한사전"></dd>
+				<dd><img src="http://dicimg.naver.com/cndic/web/img_supply03.gif" width="71" height="11" alt="진명 한중사전"></dd>
+				</dl>
+			</div>
+			<div id="addiv" name="addiv" class="ad"><h2 class="blind">광고</h2><iframe src="" width="280" height="240" title="광고" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" id="f280240" name="f280240" border="0" align="middle"></iframe></div>
+			<script type="text/javascript">SPS.DOMLoad.attach(function(){$("f280240").src="http://ad.naver.com/adshow?unit=388B";});
+				if (typeof(getGNB) != "undefined")
+				SPS.DOMLoad.attach(function(){getGNB();});
+				SPS.DOMLoad.attach(function(){new SetSearchSelectType();});
+			</script>
+			<!-- //배너 영역 -->
+
+			<div class="aside_con">
+				<!-- 내가 찾은 단어 -->
+				<div class="section word">
+					<h3 class="at2"><img src="http://dicimg.naver.com/cndic/web/h3_myword_1.gif" alt="내가 찾은 단어"></h3>
+					<ul class="type2">
+					<li><a href="/zh/entry?entryID=c_38f6b7e0ac71" onclick="clickcr(this,'rec.view','c_38f6b7e0ac71','1',event)">花瓶</a>&nbsp;
+						<a href="/setting.nhn?m=removeReviewedWord&entryID=c_38f6b7e0ac71&dicType=1" onclick="clickcr(this,'rec.ldel','c_38f6b7e0ac71','1',event)" class="x"><img src="http://dicimg.naver.com/cndic/web/btn_x_1.gif" width="11" height="11" alt="삭제"></a></li>
+					</ul>
+					<div class="tit_pr">
+						<a href="#" entryid="zh-c_38f6b7e0ac71" onclick="clickcr(this,'rec.addall','zh-c_38f6b7e0ac71','%E8%8A%B1%E7%93%B6',event)" class="_addToWordBook"><img src="http://dicimg.naver.com/cndic/web/btn_add_all_1.gif" width="71" height="20" alt="모두 단어장 추가"></a>
+						<a href="/setting.nhn?m=removeAllofReviewedWord" onclick="clickcr(this,'rec.ldelall','','',event)"><img src="http://dicimg.naver.com/cndic/web/btn_delete_all_1.gif" width="60" height="20" alt="모두 삭제"></a>
+					</div>
+
+					<script type="text/javascript" language="javaScript"><!--
+						function setAutoSave( ) {
+							var isSave = document.getElementById("save").checked;
+							if(config_userId == "")
+				            {
+				                url = "http://nid.naver.com/nidlogin.login?mode=form&url=" + encodeURIComponent(location.href);
+				                location.href = url;
+				                return;
+				            }else{
+								var urlStr = '/setting.nhn?m=setAutoSaveReviewdWord&isAutoSave='+isSave ;
+								self.location.href = encodeURI( urlStr );
+							}
+						}
+					-->
+					</script>
+					<div class="note">
+						<p><input type="checkbox" name="" id="save" value="" onclick="setAutoSave();clickcr(this,'rec.auto','','',event)"><label for="save">단어장에 자동저장</label></p>
+						<div id="word_help_type" class="word_help_type">
+							<a href="javascript:void(0);" id="btn_word_help" onclick="clickcr(this,'rrc.info','','',event)" class="btn_word_help"><span class="blind">단어장 도움말</span></a>
+							<div id="word_help_layer" class="word_help_layer" style="display:none">
+								<span class="arr"></span>
+								<p class="word_help_txt1">내가 찾은 단어장에 상세 뜻을 확인한 단어를<br>최대 1만 개까지 자동 저장할 수 있습니다.</p>
+								<p class="word_help_txt2">단, 1만 개 초과 시 저장기간이<br>오래된 순으로 단어가 자동 삭제됩니다.</p>
+								<a href="javascript:void(0);" id="close_word_layer" onclick="clickcr(this,'rrc.infoclose','','',event)" class="close_word_layer"><span class="blind">단어장 도움말 닫기</span></a>
+							</div>
+						</div>
+						<a href="http://wordbook.naver.com/cndic/recentReviewdWordBook" onclick="setAutoSave();clickcr(this,'rec.my','','',event)">내단어장 가기</a>
+					</div>
+
+					<div class="mw_tips" style="display:none"><strong>단어장</strong>에 추가되었습니다.</div>
+				</div>
+				<!-- 20110328 -->
+				<div class="section">
+					<dl class="sta_hsk">
+					<dt><a href="/CnEntry.nhn?m=hskInfo" onclick="clickcr(this,'sty.rank','','',event)"><img src="http://dicimg.naver.com/cndic/web/tit_s_hsk.gif" alt="新HSK 등급별 단어 찾기"></a> <img src="http://dicimg.naver.com/cndic/web/ico_main_n.gif" alt="New"> </dt>
+					<dd>
+						<a href="/CnEntry.nhn?m=hskInfo&hskParam=1" onclick="clickcr(this,'sty.rank1','','',event)" class="f">1급</a>|<a href="/CnEntry.nhn?m=hskInfo&hskParam=2" onclick="clickcr(this,'sty.rank2','','',event)">2급</a>|<a href="/CnEntry.nhn?m=hskInfo&hskParam=3" onclick="clickcr(this,'sty.rank3','','',event)">3급</a>|<a href="/CnEntry.nhn?m=hskInfo&hskParam=4" onclick="clickcr(this,'sty.rank4','','',event)">4급</a>|<a href="/CnEntry.nhn?m=hskInfo&hskParam=5" onclick="clickcr(this,'sty.rank5','','',event)">5급</a>|<a href="/CnEntry.nhn?m=hskInfo&hskParam=6" onclick="clickcr(this,'sty.rank6','','',event)">6급</a>
+					</dd>
+					</dl>
+					<!-- // 20110328 -->
+					<dl class="myword2">
+					<dt><img src="http://dicimg.naver.com/cndic/web/h3_myword_2.gif" width="68" height="12" alt="옥편처럼 찾기"></dt>
+					<dd>
+						<ul>
+						<li><a href="http://cndic.naver.com/yupian.nhn?m=pinyinSearch" onclick="clickcr(this,'ccd.pinyin','','',event)">병음으로</a></li>
+						<li><a href="http://cndic.naver.com/bushou.nhn?m=searchBushou" onclick="clickcr(this,'ccd.radical','','',event)">부수로</a></li>
+						<li><a href="http://cndic.naver.com/yupian.nhn?m=pronunSearch" onclick="clickcr(this,'ccd.sound','','',event)">독음으로</a></li>
+						<li class="last"><a href="http://cndic.naver.com/yupian.nhn?m=strokeCntSearch" onclick="clickcr(this,'ccd.stroke','','',event)">총 획수로</a></li>
+						</ul>
+					</dd>
+					</dl>
+				</div>
+				<!-- 배너 -->
+				<ul class="ad_list1">
+				<li class="adv">
+					<a href="#" onclick="OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/mail.nhn',  param : 'upCatg=236'}); clickcr(this,'ban.report','','',event); return false;"><img src="http://dicimg.naver.com/cndic/web/new_ad_sub_2.gif" width="280" height="61" alt="사용자와 함께 만드는 네이버 사전 사전 내용 오류 신고 및 의견 제안하기"></a>
+					<a href="http://blog.naver.com/dic_master" target="_blank"><img src="http://cndic.naver.com/css/img/dhrvus.gif" width="280" height="43" alt="사전 공식 블로그 방문하기"></a>
+				</li>
+				<li class="adv2">
+					<a href="http://www.nciku.com" target="_blank" onclick="clickcr(this,'ban.nciku','','',event);"><img src="http://dicimg.naver.com/cndic/web/new_nciku.gif" width="276" height="39" alt="nciku 중영/영중 사전"></a>
+					<span></span>
+					<script type="text/javascript" language="javaScript">adForSearchRight(6)</script>
+				</li>
+				</ul>
+				<!-- //배너 -->
+			</div>
+		</div>
+		<!-- //right --><p class="advice"><a href="#" onclick="OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/mail.nhn',  param : 'upCatg=236'});clickcr(this,'fot.report','','',event); return false;"><span>[사용자와 함께 만드는 네이버 사전]</span> <b>오류 신고 및 의견 제안</b></a>.</p>
+		<div class="totop"><a href="#" onclick="clickcr(this,'fot.top','','',event)"><img src="http://dicimg.naver.com/cndic/web/btn_top_n.gif" width="42" height="11" alt="맨위로"></a></div>
+	</div>
+
+	<div id="add_layer_info" class="add_layer2" style="display: none; top: 129px; left: 28px;">
+		<p class="txt">단어장 이용약관에 동의하신 후 이용이 가능합니다.</p>
+		<p class="btn"><a href="#"><img src="http://dicimg.naver.com/cndic/web/btn_view_reg.gif" alt="약관보기"></a></p>
+	</div>
+	<!-- add_layer_agreement start -->
+	<div id="add_layer_agreement" class="add_layer_agreement" style="display: none; top: 129px; left: 28px;">
+		<h3><span class="fnt_k24">단어장 이용약관</span></h3>
+		<div class="reg_con">
+			<h3>제 1조 (목적)</h3>
+			<p>네이버 단어장 이용약관(이하 “약관”이라 합니다)은 “이용자”가 NAVER주식회사(이하 “회사”라 합니다)가 제공하는 단어장 서비스를 이용함에 있어 “회사”와 “이용자”간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+
+			<h3>제 2조 (용어의 정의)</h3>
+			<ol>
+			<li><span class="first_letter">①</span>“단어장”이란 구현되는 단말기(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 이용자가 네이버 사전상의 모든 단어, 숙어, 예문 등을 저장하여 열람, 편집, 인쇄 등을 할 수 있는 네이버 단어장 서비스를 의미합니다.</li>
+			<li><span class="first_letter">②</span>“이용자”란 네이버 이용약관(<a href="http://www.naver.com/rules/service.html" target="_blank">http://www.naver.com/rules/service.html</a>)에 동의한 네이버 회원 중 “회사”가 제공하는 단어장 서비스를 이용하기 위해 본 약관에 동의한 고객을 말합니다.</li>
+
+			</ol>
+
+			<h3>제 3조 (이용약관의 효력 및 변경)</h3>
+			<ol>
+			<li><span class="first_letter">①</span>본 약관은 “이용자”가 쉽게 알 수 있도록 “서비스” 초기 화면에 게시하고, “이용자”가 동의를 함으로써 효력이 발생합니다.</li>
+			<li><span class="first_letter">②</span>“회사”는 관련 법령에 위배되지 않는 범위 내에서 약관의 내용을 개정할 수 있습니다.</li>
+			<li><span class="first_letter">③</span>“회사”가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 제1항의 방식에 따라 그 개정약관의 적용일자 30일 전부터 적용일자 전일까지 공지합니다. 다만, “이용자”에게 불리한 약관 개정의 경우에는 공지 외에 일정기간 네이버 서비스를 통한 전자우편, 전자쪽지, 동의창 등의 전자적 수단을 통해 따로 명확히 통지하도록 합니다.</li>
+
+			<li><span class="first_letter">④</span>“회사”가 전항에 따라 개정약관을 공지 또는 통지하면서 “이용자”에게 30일 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 “이용자”가 명시적으로 거부의 의사표시를 하지 아니한 경우 “이용자”가 개정약관에 동의한 것으로 봅니다.</li>
+			<li><span class="first_letter">⑤</span>“이용자”가 개정약관의 적용에 동의하지 않는 경우 “회사”는 개정 약관의 내용을 적용할 수 없으며, 이 경우 “이용자”는 “단어장” 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 “회사”는 단어장 이용계약을 해지할 수 있습니다.</li>
+			</ol>
+			<h3>제 4조 (회사의 의무)</h3>
+			<p>회사는 계속적이고 안정적인 단어장 서비스의 제공을 위해 설비에 장애가 생기거나 멸실된 때에는 부득이한 사유가 없는 한 지체 없이 이를 수리 또는 복구합니다.</p>
+			<h3>제 5조 (이용자의 의무)</h3>
+
+			<p>“이용자”는 본인 사용의 목적에 한해서만 “단어장”의 내용을 열람, 편집, 인쇄, 사용할 수 있으며, 그 이외의 목적으로 “단어장”을 이용해서는 아니됩니다.</p>
+			<h3>제 6조 (단어장 컨텐츠의 저작권)</h3>
+			<p>네이버 사전으로부터 “단어장”으로 저장되는 모든 단어, 숙어, 예문의 저작권은 사전 컨텐츠 제공업체에 있습니다.</p>
+			<h3>제 7조 (서비스의 변경)</h3>
+			<ol>
+			<li><span class="first_letter">①</span>회사의 사정, 사전 컨텐츠 제공업체의 변경 등으로 인해 단어장 서비스의 일부 또는 전부가 변경, 종료될 수 있으며, 이 경우 “회사”는 그 사유를 변경 또는 종료 전 30일 이상 단어장 서비스 메인페이지에 게시하여야 합니다.</li>
+
+			<li><span class="first_letter">②</span>단어장 서비스의 변경 또는 종료에 따라 “단어장”에 저장된 내용이 삭제될 수 있습니다.</li>
+			<li><span class="first_letter">③</span>“회사”는 제1, 2항과 관련하여 관련법에 특별한 규정이 없는 한 “이용자”에게 별도의 보상을 하지 않습니다.</li>
+			</ol>
+			<h3>제 8조 (기타)</h3>
+			<p>본 약관에 명시되지 않은 사항은 네이버 이용약관(<a href="http://www.naver.com/rules/service.html" target="_blank">http://www.naver.com/rules/service.html</a>) 및 전기통신사업법 등 관계법령과 상관습에 따릅니다.</p>
+
+			<h3>&lt;부칙&gt;</h3>
+			<ol>
+			<li><span class="first_letter">1.</span>본 약관은 2009년 12월 29일부터 적용됩니다.</li>
+			</ol>
+
+		</div>
+		<div class="confirm">
+			<p><img src="http://dicimg.naver.com/cndic/web/txt_reg_agree.gif" alt="이용약관에 동의하시겠습니까?"></p>
+
+			<p id="agr_btn" class="btn"><a href="#"><img src="http://dicimg.naver.com/cndic/web/btn_reg_agree.gif" alt="동의"></a><a href="#" class="mar1"><img src="http://dicimg.naver.com/cndic/web/btn_reg_disagree.gif" alt="동의하지 않습니다"></a></p>
+		</div>
+		<a href="#" class="close_reg"><img src="http://dicimg.naver.com/cndic/web/btn_close3.gif" alt="중국어단어장 이용약관 팝업 닫기" class="close"></a>
+	</div>
+	<!-- // add_layer_agreement end -->
+
+	<!-- add_layer start -->
+	<ul id="add_layer_wblist" class="add_layer" style="display: none;">
+	<li>북경생활 만세</li>
+	<li>비즈니스 중국어</li>
+	<li>중국어로 이메일을</li>
+	<li class="new_create">새 단어장 만들기</li>
+	</ul>
+	<!-- add_layer end -->
+	<!-- add_layer_tip start -->
+	<div id="add_layer_tip" class="add_layer_tip" style="display: none;">추가 되었습니다</div>
+	<!-- add_layer_tip end -->
+	<!-- creat_layer start -->
+	<div id="create_layer_wbname" class="creat_layer">
+		<h3><span class="fnt_k24"><strong>중국어단어장 추가</strong></span></h3>
+		<p class="des"><span class="fnt_k26">단어장을 추가 합니다. 단어장 이름을 지어주세요.</span></p>
+		<!-- 20160811 접근성수정 input title달기 -->
+		<p class="in1"><label for="txt" class="fnt_k25">단어장 이름</label><input type="text" title="단어장 이름" maxlength="16" class="txt"></p><div class="add_tiplayer">&lt; 혹은 &gt; 기호는 사용하실 수 없습니다.</div>
+		<!-- //20160811 접근성수정 input title달기 -->
+		<p class="btn_area"><input type="image" name="" src="http://dicimg.naver.com/cndic/web/btn_submit2.gif" alt="단어장 추가 확인하기"><input type="image" name="" src="http://dicimg.naver.com/cndic/web/btn_cancel2.gif" alt="단어장 추가 취소하기" width="45" height="26" class="mar"></p>
+		<a href="#"><img src="http://dicimg.naver.com/cndic/web/btn_close3.gif" alt="중국어단어장 추가 팝업 닫기" class="close"><span class="blind">중국어단어장 추가 팝업 닫기</span></a>
+	</div>
+	<!-- creat_layer end -->
+	<div style="clear:both"></div>
+	<!-- //container -->
+
+	<!-- Footer (sub) -->
+	<div id="footer">
+	</div>
+	<!-- // Footer (sub) -->
+</div>
+<script type="text/javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js" language="javascript"></script></div>
+<script type="text/javascript" src="/js/entry_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/audioPlayer.js?20130807091911"></script>
+
+<script type="text/javascript" src="/js/layermanager_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/AutoCompleteDic_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/top_search_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/lcslog_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/wordbook/WordBook.AddToWordBook_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/clickcr_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/mobileBtn_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/wordbook/launcher_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/footer_search_min.js?20130807091911"></script>
+<script type="text/javascript" src="/js/addToWordbook.js?20130807091911" language="JavaScript"></script>
+<script type="text/javascript">SPS.__inst.top_search = new SPS.top_search("top_search", undefined);
+	SPS.__inst.footerSearch = new SPS.footer_search("IDfooter_search", undefined);
+</script>
+<script type="text/javascript">lcs_do();
+var flashSound=new audioPlayer({flashSrc:'/js/common/pronunciation.swf'});
+</script>
+</body>
+</html>

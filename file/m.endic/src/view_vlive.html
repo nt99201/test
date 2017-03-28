@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>V LIVE 자막</title>
+    <link rel="stylesheet" href="css/endic.css">
+    <link rel="stylesheet" href="css/Ngnb.css">
+</head>
+<body>
+<div id="u_skip">
+    <a href="#content" onclick="document.getElementById(content).tabIndex = -1;">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <div class="header" id="header">
+        <div class="Ngnb">
+            <div class="Nsearch_navigation"><a href="#" class="Nnavigation_link"><span class="Nnavigation_icon Nicon_prev">이전으로 돌아가기</span></a></div>
+            <div class="Ngnb_service">
+                <h1 class="Nservice_item">V LIVE 자막</h1>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="vplay_card">
+            <div class="vplay_area">
+                <!--[D] 유료 동영상 썸네일 영역 -->
+                <div class="paid_play_bg"  style="background-image:url('http://v.phinf.naver.net/20160914_281/1473851404454Gg821_PNG/upload_2016-09-14_20%3B09%3B14.PNG?type=a720');"></div>
+                <!--[D] //유료 동영상 썸네일 영역 -->
+
+                <!--[D] 유료시 보여지는 하단 영역 -->
+                <div class="paid_option">
+                    <a href="#" class="btn_paid_link"><span class="blind">V LIVE로 이동</span></a>
+                    <span class="txt"><span class="blue">상품을 구매</span>하시면 시청 가능합니다.</span>
+                    <span class="play_time">01:19</span>
+                </div>
+            </div>
+            <div class="vplay_subject">BIGBANG10 THE EXHIBITION - ‘A TO Z’ MAKING FILM</div>
+            <div class="vlive_info_area">
+                <span class="star_thumb"><img src="http://dev.ui.naver.com/tmp/?37x37_default_y_FFB4B4_50" width="37" height="37" alt="임시 이미지"></span>
+                <div class="vlive_info">
+                    <p class="star_name">BIGBANG</p>
+                    <p class="vlive_date">12일전</p>
+                </div>
+                <button type="button" class="btn_go_vlive">V LIVE</button>
+            </div>
+        </div>
+        <div class="vlive_subtitle">
+            <div class="subtitles">
+                <!--[D] 자막의 내용은 p태그 단위로 아래 붙으면 됩니다. -->
+                <!--[D] 시작과 끝 end_side 클래스 추가-->
+                <p class="end_side">
+                    <span class="time_area">08:05</span>
+                    <span class="sub_area">
+                        <span>그런데 전 진짜 빠르다고 들었어요.</span>
+                        <span lang="en">But I heard it was fast.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></span>
+                    </span>
+                </p>
+                <p>
+                    <span class="time_area">08:05</span>
+                    <span class="sub_area">
+                        <span>무궁화 호보다 빠른 게 KTX입니다.</span>
+                        <span lang="en">The KTX is fasterthan the Mugunghwa.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></span>
+                     </span>
+                </p>
+                <p class="current">
+                    <span class="time_area">08:05</span>
+                    <span class="sub_area">
+                        <span>그냥 빠르다는 거죠.</span>
+                        <span lang="en">Just saying KTX is faster.</span>
+                     </span>
+                </p>
+                <p>
+                    <span class="time_area">08:05</span>
+                    <span class="sub_area">
+                        <span>여러분, 아무튼 저희 곧 2시간 뒤에 보니까요.</span>
+                        <span lang="en">Anyway, everyone, we'll see you in 2 hours.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></span>
+                     </span>
+                </p>
+                <!--[D] 시작과 끝 end_side 클래스 추가-->
+                <p class="end_side">
+                    <span class="time_area">08:05</span>
+                    <span class="sub_area">
+                        <span>대전에 오시는 분들은요?</span>
+                        <span lang="en">The people coming to Daejeon?<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></span>
+                     </span>
+                </p>
+            </div>
+            <div class="btn_direction">
+                <!--[D] 비활성화 disabled 추가-->
+                <button class="btn_prev disabled"><span class="ico_up"><span class="blind">이전 자막 보기</span></span></button>
+                <button class="btn_next"><span class="ico_dn"><span class="blind">다음 자막 보기</span></span></button>
+            </div>
+        </div>
+        <div class="translator_area">
+            <dl class="translator_info">
+                <dt>번역가</dt>
+                <dd>VSUB_official</dd>
+                <dt class="blind">서비스</dt>
+                <dd class="service">V Fansubs</dd>
+            </dl>
+        </div>
+    </div>
+    <? include 'incl_footer.html' ?>
+</div>
+</body>
+</html>

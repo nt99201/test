@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>Main :: 일본어 사전</title>
+<link rel="stylesheet" href="css/w.css">
+</head>
+<!-- [D] 한국어 스킨이 아닌경우 skin 클래스 추가 -->
+<body class="">
+    <!-- header -->
+    <div class="header" role="banner">
+        <h1>
+            <ul>
+                <li class="gnb_l on"><a href="#"><span class="tab_name">일본어사전</span></a></li>
+                <li class="gnb_m"><span class="line"></span><a href="#"><span class="tab_name">단어장</span></a></li>
+                <li class="gnb_r"><span class="line"></span><a href="#"><span class="tab_name">번역기</span></a></li>
+            </ul>
+        </h1>
+        <!-- [D] 확장(햄버거) 메뉴 버튼 클릭시 , 아래 햄버거 영역 display:block-->
+        <a href="#" class="gnb ham"><span class="hc">확장메뉴 열기</span></a>
+        <aside>
+            <div id="u_gnbw" class="u_gnbw">
+                <a href="http://m.naver.com/services.html?f=svc.endic" id="aTopService" onclick="nclk(this, 'gnb.sitemap', '', 1);" class="gnb a_service" title="네이버 모바일 웹 사전홈으로 이동"><span id="gnbCaption" class="u_vc">사전</span></a>
+            </div>
+        </aside>
+    </div>
+    <!-- 햄버거 메뉴 영역 -->
+    <!-- [D] 햄버거 영역 display:block으로 변경시, dmm 클래스 영역도 display:block으로 변경 -->
+    <div id="side_menu_nav" style="display:none"></div>
+    <div id="dmm" class="dmm" style="display:none;-webkit-transition: none 0ms linear; transition: none 0ms linear; opacity: 1;"></div>
+    <!-- //header -->
+    <!-- 검색영역 -->
+    <form action="#" role="search">
+        <!-- [D] 검색창 터치시 <fieldset class="hs">에 focusin 클래스 추가 => <fieldset class="hs focusin"> -->
+        <fieldset class="hs focusin">
+            <legend class="hc">검색</legend>
+            <div class="hsw">
+        <span class="itw">
+            <input type="search" class="it" title="검색어 입력">
+            <!--<button type="button" class="clrt" id="clear_input">입력 내용 삭제</button>-->
+        </span>
+        <span class="srch">
+            <button type="submit" class="hssbt"><span class="hc">검색</span></button>
+            <!-- [D] 활성화시 on 클래스 추가, div.area_inputdevice에 display:block으로 변경  -->
+            <a href="#" class="ipbt"><span class="hc">입력기</span></a>
+        </span>
+            </div>
+        </fieldset>
+    </form>
+    <!-- //검색영역 -->
+<!-- 자동완성 -->
+<div id="ac_layer" class="auto_complete2" style="display:block">
+	<ul id="ac_result" class="list_head">
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1"><strong>아</strong></span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1">알다</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1">알</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1"><strong>아</strong>래</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1">앞</span></a></li>
+	<li class="line"></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">あ</span><span class="w2"><strong>아</strong></span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああ</span><span class="w2"><strong>아</strong></span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">あ-</span><span class="w2"><strong>아</strong></span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああいう</span><span class="w2"><strong>아</strong>이우</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああした</span><span class="w2"><strong>아</strong>아시타</span></a></li>
+	<li class="line"></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ア</span><span class="w2"><strong>아</strong></span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーカイブ</span><span class="w2"><strong>아</strong>카이부</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーカンソー</span><span class="w2 "><strong>아</strong>캉소오</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーキテクチャ</span><span class="w2 "><strong>아</strong>키테쿠챠</span></a></li>
+	<li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーギュメント</span><span class="w2 "><strong>아</strong>아규멩토</span></a></li>
+	</ul>
+
+	<!-- [D] on 클래스 추가시 텍스트 보임  off 클래스 추가시 텍스트 숨김 -->
+	<div class="option">
+		<a href="#" class="write_txt off">자동완성 켜기</a>
+		<a href="#" class="write_txt on">자동완성 끄기</a>
+		<button type="button"><span class="w">닫기</span></button>
+	</div>
+</div>
+<!-- //자동완성 -->
+
+<!-- header -->
+<div class="header" role="banner">
+    <h1>
+        <ul>
+            <li class="gnb_l on"><a href="#"><span class="tab_name">일본어사전</span></a></li>
+            <li class="gnb_m"><span class="line"></span><a href="#"><span class="tab_name">단어장</span></a></li>
+            <li class="gnb_r"><span class="line"></span><a href="#"><span class="tab_name">번역기</span></a></li>
+        </ul>
+    </h1>
+    <!-- [D] 확장(햄버거) 메뉴 버튼 클릭시 , 아래 햄버거 영역 display:block-->
+    <a href="#" class="gnb ham"><span class="hc">확장메뉴 열기</span></a>
+    <aside>
+        <div id="u_gnbw" class="u_gnbw">
+            <a href="http://m.naver.com/services.html?f=svc.endic" id="aTopService" onclick="nclk(this, 'gnb.sitemap', '', 1);" class="gnb a_service" title="네이버 모바일 웹 사전홈으로 이동"><span id="gnbCaption" class="u_vc">사전</span></a>
+        </div>
+    </aside>
+</div>
+<!-- 햄버거 메뉴 영역 -->
+<!-- [D] 햄버거 영역 display:block으로 변경시, dmm 클래스 영역도 display:block으로 변경 -->
+<div id="side_menu_nav" style="display:none"></div>
+<div id="dmm" class="dmm" style="display:none;-webkit-transition: none 0ms linear; transition: none 0ms linear; opacity: 1;"></div>
+<!-- //header -->
+<!-- 검색영역 -->
+<form action="#" role="search">
+    <!-- [D] 검색창 터치시 <fieldset class="hs">에 focusin 클래스 추가 => <fieldset class="hs focusin"> -->
+    <fieldset class="hs focusin">
+        <legend class="hc">검색</legend>
+        <div class="hsw">
+    <span class="itw">
+        <input type="search" class="it" title="검색어 입력">
+        <button type="button" class="clrt" id="clear_input">입력 내용 삭제</button>
+    </span>
+    <span class="srch">
+        <button type="submit" class="hssbt"><span class="hc">검색</span></button>
+        <!-- [D] 활성화시 on 클래스 추가, div.area_inputdevice에 display:block으로 변경  -->
+        <a href="#" class="ipbt"><span class="hc">입력기</span></a>
+    </span>
+        </div>
+    </fieldset>
+</form>
+<!-- //검색영역 -->
+<!-- 자동완성 -->
+<div id="ac_layer" class="auto_complete2" style="display:block">
+    <ul id="ac_result" class="list_head">
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1"><strong>아</strong></span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1">알다</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1">알</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1"><strong>아</strong>래</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1">앞</span></a></li>
+    <li class="line"></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">あ</span><span class="w2"><strong>아</strong></span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああ</span><span class="w2"><strong>아</strong></span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">あ-</span><span class="w2"><strong>아</strong></span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああいう</span><span class="w2"><strong>아</strong>이우</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ああした</span><span class="w2"><strong>아</strong>아시타</span></a></li>
+    <li class="line"></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">ア</span><span class="w2"><strong>아</strong></span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーカイブ</span><span class="w2"><strong>아</strong>카이부</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーカンソー</span><span class="w2 "><strong>아</strong>캉소오</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーキテクチャ</span><span class="w2 "><strong>아</strong>키테쿠챠</span></a></li>
+    <li class="_auto_complete_list_item"><a href="#"><span class="w1 jp">アーギュメント</span><span class="w2 "><strong>아</strong>아규멩토</span></a></li>
+    </ul>
+
+    <!-- [D] on 클래스 추가시 텍스트 보임  off 클래스 추가시 텍스트 숨김 -->
+    <div class="option">
+        <a href="#" class="write_txt on">자동완성 켜기</a>
+        <a href="#" class="write_txt off">자동완성 끄기</a>
+        <button type="button"><span class="w">닫기</span></button>
+    </div>
+</div>
+<!-- //자동완성 -->
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ipad대응 -->
+<meta name="viewport" content="width=100%">
+<!-- //ipad대응 -->
+<link rel="shortcut icon" href="http://www.naver.com/favicon.ico" type="image/x-icon">
+<title>SafeZone :: 네이버 영어사전 </title>
+<link type="text/css" rel="stylesheet" href="css/mini_pop_font.css" />
+<link type="text/css" rel="stylesheet" href="css/entry_add_mini.css">
+<script type="text/javascript" >
+var isPad = false
+</script>
+<script>
+var searchQuery="SafeZone";
+var windowType="mini";
+</script>
+<script type="text/javascript" src="js/clickcr.js?20121218163105" ></script>
+<script type="text/javascript" src="js/Common.org.js?20121218163105" ></script>
+<script type="text/javascript" src="js/Mini.js?20121218163105" ></script>
+<script type="text/javascript" src="js/nclktag.js?20121218163105"></script>
+<script type="text/javascript" language="javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js"></script>
+<script type="text/javascript">
+if (document.location.host.indexOf('naver.com') != -1)
+	document.domain = "naver.com";
+//Global 변수 선언
+//<![CDATA[
+var nsc = "endic.entry";
+var ccsrv="cc.naver.com";
+var nclk_evt = 3;
+
+// 이벤트 Listener 함수 호출
+nclk_do();
+try{
+        var w0=405;
+        var h0=513;
+        var w1=window.opera?document.body.clientWidth:document.documentElement.clientWidth||document.body.clientWidth;
+        var h1=window.opera?document.body.clientHeight:document.documentElement.clientHeight||document.body.clientHeight;
+        var stepX=w0-w1;
+        var stepY=h0-h1;
+        window.resizeBy(stepX,stepY);
+}
+catch(e){
+}
+
+//]]>
+</script>
+
+<script type="text/javascript">
+	jindo.$Cookie().set("small_deleteExampleCookie", "true");
+	var	config_userId = "yanzi510";
+	var entryIdForWB="EK_9e9293a6e68841dfb9c2ee3a2161f585"
+	var autoCompleteUrl="http://dev.ac.endic.naver.com/ac";
+	var wordbookUrl="http://dev.wordbook.naver.com";
+	var searchOption = "";
+	if(!searchOption) searchOption = "";
+	//window.resizeTo(415, 590);
+	jindo.$Fn(function() {
+			if(window.UTB) window.UTB.destroy();
+			window.UTB = new nhn.UserTransButtonCtrl({
+				url: "enAddTranslation.nhn"
+			});
+		}).attach(document, "domready");
+
+
+	function doChanged4DicType(){
+	 	var mutilEntriesDiv=document.getElementById('mutilEntries4DifferDicType');
+	 	if(mutilEntriesDiv==null){
+	 		var url= document.getElementById('transferedURL4DicType').value;
+	  		 window.location.href=url;
+	 	}else{
+	 	//	var divShowOrHidden=mutilEntriesDiv.style.display;
+	 	//	if(divShowOrHidden=="none"){
+		//   		document.getElementById('mutilEntries4DifferDicType').style.display="";
+		//   	}else{
+		//   	 	document.getElementById('mutilEntries4DifferDicType').style.display="none";
+		//   	}
+			var url="/popManager.nhn?m=search&query=SafeZone&searchOption=all";
+			if ('N'=='Y') {
+				url=url+"&isOnlyViewEE=N";
+			} else {
+				url=url+"&isOnlyViewEE=Y";
+			}
+			window.location.href=url;
+	 	}
+	}
+
+	function searchEE2EKChange(obj){
+		var searchOptionStr="";
+
+		if(searchOptionStr=="example"){
+			jindo.$Cookie().set("small_deleteExampleCookie", "false");
+			location.href = "popSearchExample.nhn?query=SafeZone&isOnlyViewEE="+obj.value;
+		}else{
+			location.href = "/popManager.nhn?m=search&query="+'SafeZone'+"&searchOption="+searchOptionStr+"&isOnlyViewEE="+obj.value;
+		}
+	}
+
+	function searchChange(obj){
+		location.href = "/popManager.nhn?m=search&query="+'SafeZone'+"&searchOption="+obj.value;
+	}
+
+	   <!--用来判断改entry是否已经添加到单词本中-->
+   jindo.$Fn( function() {
+     if(config_userId!=""){
+     	url = wordbookUrl+"/wordBookEntry.nhn";
+		var ajax = jindo.$Ajax(
+							url,
+							{
+								type :"jsonp",
+								onload : function(res) {
+									if(res.json().status=="0"){
+										return;
+									}else if(res.json().status=="-98"){
+											return;
+									}else if(res.json().status==undefined){
+										return;
+									}else{
+										var entryEditLink=wordbookUrl+res.json().entryEditLink;
+										if($("entry_wb_nm")) {
+										$("entry_wb_nm").innerHTML="<p class=\"desc\"><a target=\"endicWordBook\" href=\""+entryEditLink+"\">'단어장'</a>에 추가된 단어입니다.</p>";
+										//$("entry_wb_nm").innerHTML="<p class=\"desc\"><a href=\"javascript:openOnePage('"+entryEditLink+"','endicWordBook')\">'단어장'</a>에 추가된 단어입니다.</p>";
+										//$("entry_wb_nm").innerHTML="<p class=\"dic_desc5\"> 단어장에 이미 추가된 단어입니다. <a target=\"_bland\" href=\""+entryEditLink+"\">단어장 내용 확인</a></p>";
+										}
+									}
+
+								}
+							}).request( {
+						m :'getLastestEntryForEditByOriginEntryId',
+						originEntryID :entryIdForWB,
+						userId :config_userId,
+						dicType:1
+					});
+     }
+}).attach(document, "domready");
+</script>
+
+
+
+</head>
+
+<body>
+<script type="text/javascript" src="js/Sub.js?20121218163105" ></script>
+<!-- 20160830 접근성 추가 -->
+<div id="u_skip"><a href="#container">본문 바로가기</a></div>
+<!-- //20160830 접근성 추가 -->
+<div id="wrap">
+	<div id="header">
+		<h1>
+			<a href="http://www.naver.com/" target="_blank">NAVER</a><!-- 20090116 edit -->
+			<a href="/popManager.nhn?m=miniPopMain" class="service">영어사전</a>
+		</h1>
+		<div class="lnb">
+			<ul class="menu">
+			<li><a href="javascript:window.location.reload(true);"><img src="http://dicimg.naver.com/endic/img/tab_eng_on_02.gif" alt="영어/영영사전" /></a></li>
+				<li><a href="http://krdic.naver.com/small_search.nhn?query=SafeZone"><img src="http://static.naver.com/dic/small/cndic/tab_kor_off.gif" width="47" height="30" alt="국어사전" /></a></li>
+				<li><a href="http://hanja.naver.com/small/search?query=SafeZone"><img src="http://static.naver.com/dic/small/cndic/tab_oldkor_off.gif" width="47" height="30" alt="한자사전" /></a></li>
+				<li><a href="http://jpdic.naver.com/mini_search.nhn?query=SafeZone"><strong><img src="http://static.naver.com/dic/small/cndic/tab_jp_off.gif" width="60" height="30" alt="일본어사전" /></strong></a></li><!-- 20090116 edit -->
+				<li class="on"><a href="http://cndic.naver.com/mini/search/all?q=SafeZone"><img src="http://static.naver.com/dic/small/cndic/tab_chi_off.gif" width="60" height="30" alt="중국어사전" /></a></li>
+				<li><a href="http://frdic.naver.com/search_mini.nhn?query=SafeZone"><img height="30" width="73" alt="프랑스어사전" src="http://dicimg.naver.com/common/tab_fr_off.gif"></a></li>
+				</ul>
+		</div>
+		<ul class="useful">
+		<li><a href="#" target="_blank">큰창</a></li>
+		<li><a href="#" target="_blank">내단어장</a></li>
+		<li><a href="#" target="_blank">사전홈</a></li>
+		<li><a href="#" target="_blank">번역기</a></li>
+		</ul>
+
+		<p class="goback">
+			<a href="javascript:history.back()" title="이전">이전</a><a href="javascript:history.forward()" title="다음">다음</a>
+		</p>
+	</div>
+	<div class="search" id="top_search">
+		<fieldset class="sel_box">
+			<legend>검색영역</legend>
+			<span class="keybox"><input id="ac_input" type="text" name="ac_input" value="SafeZone" class="keyword" title="검색어" accesskey="s" maxlength="70"/></span>
+			<input type="hidden" id="hidac" name="hidac" value="SafeZone"/>
+			<span class="static_keyword" style="display:none">SafeZone</span>
+			<div class="auto_complete2" id="ac_layer">
+				<ul class="list_a">
+
+				</ul>
+
+				<p class="auto_on_info">현재 자동완성 기능을 사용하고 계십니다.</p>
+                <p class="auto_off_info">네이버 <strong>검색어 자동완성</strong>을 아시나요?<br/>검색어를 한 글자만 입력해도 찾으시려는 단어를 추천해주는 편리한 기능입니다.<br/><a href="#"><img height="18" width="99" alt="자동완성 사용하기" src="http://sstatic.naver.com/search/images11/btn_atcmp.gif"/></a></p>
+                <p class="nothing">해당 단어로 추천어가 없습니다.</p>
+                <div class="option"><a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'fcatid=184'})">도움말</a> <span class="bar">| <a href="#">기능끄기</a></span></div>
+
+			</div>
+
+			<img src="img/btn_srch.gif" alt="검색" class="s1 ajax_searchbutton"/>
+			<img class="arrow" height="15" width="15" alt="" src="http://dicimg.naver.com/endic/img/blank.gif"/>
+		</fieldset>
+		<div class="device">
+				<a href="/search.nhn?query=SafeZone" target="_blank">
+		<img src="http://dicimg.naver.com/endic/img/btn_bigwin_seach.gif" alt=""/></a></div>
+	</div>
+	<div id="start" class="skip">본문시작</div>
+
+
+
+<div id="container">
+ <a name="hittop" id="hittop"></a>
+
+	<div id="content">
+    	<div id="PronPlayerLayer" style="position: absolute"></div>
+         <div class="view_list2">
+            <ul>
+            	<li class="tx_depth1"><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=all" class="N=a:tab.all"><span>전체</span></a></li>
+                <li class="tx_depth2"><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=entry_idiom" class="N=a:tab.word" ><span>단어/숙어</span></a></li>
+                <li class="tx_depth3"><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=mean" class="N=a:tab.content"><span>본문</span></a></li>
+                <li class="tx_depth4"><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=example" class="N=a:tab.example"><span>예문</span></a></li>
+                <li class="tx_depth5"><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=thesaurus" class="N=a:tab.thesaurus"><span>유의어/반의어</span></a></li>
+            	<!--
+                <li><input name="searchOption" type="radio" value="all" id="s1" onclick="searchChange(this)" class="N=a:tab.all" /><label for="s1"><img src="http://dicimg.naver.com/endic/img/view_list01_off.gif" alt="전체" /></label></li>
+                <li><input name="searchOption" type="radio" value="entry_idiom" id="s2" onclick="searchChange(this)" class="N=a:tab.word" /><label for="s2"><img src="http://dicimg.naver.com/endic/img/view_list02_off.gif" alt="단어/숙어" /></label></li>
+                <li><input name="searchOption" type="radio" value="mean" id="s5" onclick="searchChange(this)" class="N=a:tab.content" /><label for="s5"><img src="http://dicimg.naver.com/endic/img/view_list05_off.gif" alt="본문" /></label></li>
+                <li><input name="searchOption" type="radio" value="example" id="s3" onclick="searchChange(this)" class="N=a:tab.example" /><label for="s3"><img src="http://dicimg.naver.com/endic/img/view_list03_off.gif" alt="예문" /></label></li>
+                <li><input name="searchOption" type="radio" value="thesaurus" id="s4" onclick="searchChange(this)" class="N=a:tab.thesaurus" /><label for="s4"><img src="http://dicimg.naver.com/endic/img/view_list04_off.gif" alt="유의어/반의어" /></label></li>
+                -->
+            </ul>
+        </div>
+        <!--//  -->        <div class="word_view">
+			<div class="tit">
+				<span class="fnt_e15">
+					<strong>SafeZone</strong>
+
+
+
+
+						<div class="que_box">
+							<span class="collect"><img src="http://dicimg.naver.com/endic/img/btn_collect2.gif" alt="웹수집" width="43" height="19" /></span>
+							<span class="ask">
+						        <a href="#" onClick="webCollectHelp('9e9293a6e68841dfb9c2ee3a2161f585');return false;"><img src="http://dicimg.naver.com/endic/img/btn_ask.gif" alt="?" width="16" height="16" /></a>
+			            		<span id="webHelp_9e9293a6e68841dfb9c2ee3a2161f585" class="que_con">
+						            <span><strong>웹수집</strong>: 지식백과, 전문정보, 뉴스 등의 웹 페이지에서 수집한 영어 단어입니다.</span>
+									<span><strong>출현 회수</strong>: 웹 페이지에서 특정 뜻으로 언급된 횟수입니다</span>
+									<span id ="arrTop" class="arr_top"></span>
+									<a href="#" class="close" onClick="webCollectHelp('9e9293a6e68841dfb9c2ee3a2161f585');return false;"><img src="http://dicimg.naver.com/endic/img/ico_close.gif" alt="" width="9" height="9"></a>
+						        </span>
+							</span>
+						</div>
+
+				</span>
+			</div>
+		</div>
+        <div class="btn_zoom">
+			<p class="btn"><a href="#" class="wordbook N=a:wbp.add"><input type="hidden" value="9e9293a6e68841dfb9c2ee3a2161f585"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_add2_new.gif" id="minidic" alt="단어장에 추가" /></a><a href="javascript:SPS.printPage('print_enkrEntry.nhn?m=printEntry&entryId=9e9293a6e68841dfb9c2ee3a2161f585');"><img src="http://dicimg.naver.com/endic/img/btn_print_new.gif" class="print" alt="인쇄" /></a></p>
+	        <div id="entry_wb_nm"></div>
+	        <div id="dts_area" class="sel">
+	        	<!-- 20160819 접근성 label for값 리얼 id 값으로 변경 -->
+	            <input name="" type="checkbox"  id="isOnlyReviewEnenDone"  disabled="true" onclick="doChanged4DicType();" />
+	            <label for="isOnlyReviewEnenDone"><strong>영영사전</strong></label>
+	        	<!-- //20160819 접근성 label for값 리얼 id 값으로 변경 -->
+	            <div class="tip_over" style="display: none;"><p><span>영영사전 전용 모드로 변경합니다.</span></p></div>
+			</div>
+		</div>
+		<div class="list_select">
+			<ul>
+	        	  	 		<li class="last"><a href="#" class="underlink N=a:pos.tab"></a></li>
+	        </ul>
+	        <!-- 20160819 접근성 label의 for값 id로 변경 -->
+	        <p class="sel"><input type="radio" id="mean_view"  value="" name="view_m"/><label for="mean_view">뜻</label></p>
+			<p class="sel"><input type="radio" id="mean_ex_view"  checked="" value="" name="mean_ex_view"/><label for="s1">뜻+예문</label></p>
+	        <!-- //20160819 접근성 label의 for값 id로 변경 -->
+		</div>
+
+	    <!--页面打印英韩的释义部分-->
+        		<div class="box_wrap1 box_wrap1_mar1 box_wrap25">
+
+
+         				<dl class="list_a3">
+         						<dt class="first  mean_on">
+     								<span class="fnt_e11">1.</span><em class="align_line">
+		                 				<span class="fnt_k06">안전지대</span>
+			                 	        <a name="WEB_1"></a>
+			                 	        		<span class="fnt_k04"> (<a href="javascript:webCountDisp(1);">5회 출현</a><span id ="webCntDisp_1" class="off">off</span>)</span>
+		                 			</em>
+         						</dt>
+                						<dd id="webListdd_1">
+	                 						<div class="frst_dd off" id="webList_1">
+	                 						    	<p>∙ 달도록 했다. 또 일찍 등하교하는 학생들을 한 곳에서 보호할 수 있는 '<b>Safe-Zone</b>(<b>안전지대</b>)'...<span class="source">(출처: <a href="http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=102&oid=001&aid=0003376525" target="_blank" class="btn_lk">뉴스</a>)</a></p>
+	                 						    	<p>∙ 학교에 일찍 오거나 늦게 가는 아이들은 한 곳에 머물면서 보호하는 교내 <b>Safe-Zone</b>(<b>안전지대</b>)...<span class="source">(출처: <a href="http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=102&oid=003&aid=0003336295" target="_blank" class="btn_lk">뉴스</a>)</span></p>
+	                 						    	<p>∙ 항상 신분증을 달도록 하고 일찍 등하교하는 학생들을 보호하기 위한 '<b>Safe-Zone</b>(<b>안전지대</b>)'도...<span class="source">(출처: <a href="http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=102&oid=020&aid=0002151290" target="_blank" class="btn_lk">뉴스</a>)</span></p>
+	                 						    	<p>∙ 학교에 일찍 오거나 늦게 가는 아이들은 한 곳에 머물면서 보호하는 교내 '<b>Safe-Zone</b>(<b>안전지대</b>...<span class="source">(출처: <a href="http://www.boannews.com/media/view.asp?idx=22309&kind=1" target="_blank" class="btn_lk">뉴스</a>)</span></p>
+	                 						    	<p>∙ 학교에 일찍 오거나 늦게 가는 아이들은 한 곳에 머물면서 보호하는 교내 <b>Safe-Zone</b>(<b>안전지대</b>)...<span class="source">(출처: <a href="http://www.ccdailynews.com/section/?knum=160214" target="_blank" class="btn_lk">뉴스</a>)</span></p>
+                 						    </div>
+                 						</dd>
+         						<dt class=" mean_on">
+     								<span class="fnt_e11">2.</span><em class="align_line">
+		                 				<span class="fnt_k06">안전지역</span>
+			                 	        <a name="WEB_2"></a>
+			                 	        		<span class="fnt_k04"> (<a href="javascript:webCountDisp(2);">1회 출현</a><span id ="webCntDisp_2" class="off">off</span>)</span>
+		                 			</em>
+         						</dt>
+                						<dd id="webListdd_2">
+	                 						<div class="frst_dd off" id="webList_2">
+	                 						    	<p>∙ 조례 제정, 어린이 지킴이의 집과 아동안전지킴이집 지정, 배움터 지킴이,<b> 교내안전지역</b>(<b>Safe-Zone</b>...<span class="source">(출처: <a href="http://www.daejonilbo.com/news/newsitem.asp?pk_no=898442" target="_blank" class="btn_lk">뉴스</a>)</span></p>
+                 						    </div>
+                 						</dd>
+         				</dl>
+         				<p class="note">웹수집 영어 단어는 일부 정확하지 않은 정보가 포함될 수 있습니다. </p>
+         		</div>
+	  	<!--英英部分显示的内容，对应于一个英英单词-->
+        <!--英英部分显示的内容，对应于多个英英单词-->
+        <!-- -术语部分搜索-->
+        <!--예문  -->
+        <!--例句部分搜索结果-->
+            <div class="box_wrap21">
+	<h3 class="dic_tit2"><img src="http://dicimg.naver.com/endic/img/dic_tit14.gif" alt="예문" /><span class="fnt_k03">(146건)</span><span><a class="fnt_k15 N=a:xmp.sem" href="/popManager.nhn?m=search&query=SafeZone&searchOption=example">특정 분야의 예문만 보기</a></span></h3>
+	<ul class="list_a">
+	<li class="first utb">
+	<div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=According">According</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=to">to</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=quarantine">quarantine</a></i> officials, <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=only">only</a></i> Jeju <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=Island">Island</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a">a</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zone</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=from">from</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=virus">virus</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=nationwide">nationwide</a></i>.</span><a href="#" class="play2 N=a:xmp.listen,r:1,i:28050367"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a>
+    <a href="#" class="source fnt_k10">출처:타임즈코어</a>
+    <div style="left:169px; top: -10px;" class="tips2">
+        <div>
+            <ul>
+            <li class="first">현대</li>
+            <li>해당없음</li>
+            <li>초급</li>
+            <li class="last"><a href="http://www.timescore.co.kr/" target="_blank">이동</a></li>
+            </ul>
+        </div>
+    </div>
+    <input name="" type="hidden" value="According to the quarantine officials, only Jeju Island is a &lt;b&gt;safe zone&lt;/b&gt; from the virus nationwide.">
+    </div>
+    <!--
+	<p class="mar_top01"><span class="fnt_k09">[일반]</span> <span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=According">According</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=to">to</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=quarantine">quarantine</a></i> officials, <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=only">only</a></i> Jeju <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=Island">Island</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a">a</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zone</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=from">from</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=virus">virus</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=nationwide">nationwide</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a> <span class="fnt_k10">(출처:타임즈코어)</span><input name="" type="hidden" value="According to the quarantine officials, only Jeju Island is a &lt;b&gt;safe zone&lt;/b&gt; from the virus nationwide."></p>
+	-->
+	<p class="mar_top01"><span class="fnt_k10">검역 사무소 직원에 따르면, 제주도만이 전국적인 바이러스에서 안전한 구역이라고 합니다. </span></p>
+	</li>
+	<li class="utb">
+	<div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=it">It</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=necessary">necessary</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=to">to</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=recognise">recognise</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=that">that</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=provision">provision</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=about">about</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=create">creating</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safer</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zones</b></a></i>.</span><a href="#" class="play2 N=a:xmp.listen,r:2,i:23308688"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a>
+    <a href="#" class="source fnt_k10">출처:Hansard</a>
+    <div style="left:169px; top: -10px;" class="tips2">
+        <div>
+            <ul>
+            <li class="first">현대</li>
+            <li>영국</li>
+            <li>중급</li>
+            <li class="last"><a href="http://www.publications.parliament.uk/pa/cm200405/cmhansrd/cm050222/debtext/50222-34.htm" target="_blank">이동</a></li>
+            </ul>
+        </div>
+    </div>
+    <input name="" type="hidden" value="It is necessary to recognise that the provision is about creating &lt;b&gt;safer zones&lt;/b&gt;.">
+    </div>
+    <!--
+	<p class="mar_top01"><span class="fnt_k09">[일반]</span> <span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=it">It</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=necessary">necessary</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=to">to</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=recognise">recognise</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=that">that</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=provision">provision</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=about">about</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=create">creating</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safer</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zones</b></a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a> <span class="fnt_k10">(출처:Hansard)</span><input name="" type="hidden" value="It is necessary to recognise that the provision is about creating &lt;b&gt;safer zones&lt;/b&gt;."></p>
+	-->
+	<p><a href="#"><img src="http://dicimg.naver.com/endic/img/btn_credit.gif" alt="번역문 만들기 참여" class="mar_top1 img_padbot2" /></a></p>
+    <p class="edit_ktxt" style="display:none">
+    	<input name="_23308688" type="text" maxlength="300" class="input1" value="" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_submit.gif" alt="확인" width="45" height="25" class="submit" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_cancel.gif" alt="취소" width="45" height="25" class="cancel" />
+    </p>
+	<p class="mar_top1 fnt_k10" style="display:none;"></p>
+	</li>
+	<li class="utb">
+	<div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">The</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=secretary">Secretary</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=of state">of State</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=speak of">spoke of</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zones</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=on">on</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> &quot;<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=today">Today</a></i>&quot; <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=programme">programme</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=last">last</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=wednesday">Wednesday</a></i>.</span><a href="#" class="play2 N=a:xmp.listen,r:3,i:8794785"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a>
+    <a href="#" class="source fnt_k10">출처:Hansard</a>
+    <div style="left:169px; top: -10px;" class="tips2">
+        <div>
+            <ul>
+            <li class="first">현대</li>
+            <li>영국</li>
+            <li>중급</li>
+            <li class="last"><a href="http://www.publications.parliament.uk/pa/cm200001/cmhansrd/cm010320/debtext/10320-06.htm" target="_blank">이동</a></li>
+            </ul>
+        </div>
+    </div>
+    <input name="" type="hidden" value="The Secretary of State spoke of &lt;b&gt;safe zones&lt;/b&gt; on the &amp;quot;Today&amp;quot; programme last Wednesday.">
+    </div>
+    <!--
+	<p class="mar_top01"><span class="fnt_k09">[일반]</span> <span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">The</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=secretary">Secretary</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=of state">of State</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=speak of">spoke of</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zones</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=on">on</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> &quot;<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=today">Today</a></i>&quot; <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=programme">programme</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=last">last</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=wednesday">Wednesday</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a> <span class="fnt_k10">(출처:Hansard)</span><input name="" type="hidden" value="The Secretary of State spoke of &lt;b&gt;safe zones&lt;/b&gt; on the &amp;quot;Today&amp;quot; programme last Wednesday."></p>
+	-->
+	<p><a href="#"><img src="http://dicimg.naver.com/endic/img/btn_credit.gif" alt="번역문 만들기 참여" class="mar_top1 img_padbot2" /></a></p>
+    <p class="edit_ktxt" style="display:none">
+    	<input name="_8794785" type="text" maxlength="300" class="input1" value="" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_submit.gif" alt="확인" width="45" height="25" class="submit" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_cancel.gif" alt="취소" width="45" height="25" class="cancel" />
+    </p>
+	<p class="mar_top1 fnt_k10" style="display:none;"></p>
+	</li>
+	<li class="utb">
+	<div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=sla">SLA</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=shelling">shelling</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=kill">kills</a></i> 82 <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=civilian">civilians</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=inside">inside</a></i> '<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zone</b></a></i>'.</span><a href="#" class="play2 N=a:xmp.listen,r:4,i:20797832"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a>
+    <a href="#" class="source fnt_k10">출처:Telegraph Blogs</a>
+    <div style="left:169px; top: -10px;" class="tips2">
+        <div>
+            <ul>
+            <li class="first">현대</li>
+            <li>영국</li>
+            <li>중급</li>
+            <li class="last"><a href="http://blogs.telegraph.co.uk/emma_hartley/blog/2009/04/09/there_are_tamils_in_parliament_square__" target="_blank">이동</a></li>
+            </ul>
+        </div>
+    </div>
+    <input name="" type="hidden" value="SLA shelling kills 82 civilians inside '&lt;b&gt;safe zone&lt;/b&gt;'.">
+    </div>
+    <!--
+	<p class="mar_top01"><span class="fnt_k09">[일반]</span> <span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=sla">SLA</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=shelling">shelling</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=kill">kills</a></i> 82 <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=civilian">civilians</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=inside">inside</a></i> '<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zone</b></a></i>'.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a> <span class="fnt_k10">(출처:Telegraph Blogs)</span><input name="" type="hidden" value="SLA shelling kills 82 civilians inside '&lt;b&gt;safe zone&lt;/b&gt;'."></p>
+	-->
+	<p><a href="#"><img src="http://dicimg.naver.com/endic/img/btn_credit.gif" alt="번역문 만들기 참여" class="mar_top1 img_padbot2" /></a></p>
+    <p class="edit_ktxt" style="display:none">
+    	<input name="_20797832" type="text" maxlength="300" class="input1" value="" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_submit.gif" alt="확인" width="45" height="25" class="submit" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_cancel.gif" alt="취소" width="45" height="25" class="cancel" />
+    </p>
+	<p class="mar_top1 fnt_k10" style="display:none;"></p>
+	</li>
+	<li class="utb">
+	<div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=these">These</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=include">include</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=attack">attacks</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=on">on</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=government">government</a></i>-<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=proclaim">proclaimed</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zones</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=and">and</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=on">on</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=clearly">clearly</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=marked">marked</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=hospital">hospitals</a></i>.</span><a href="#" class="play2 N=a:xmp.listen,r:5,i:1271107"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a>
+    <a href="#" class="source fnt_k10">출처:Telegraph Blogs</a>
+    <div style="left:169px; top: -10px;" class="tips2">
+        <div>
+            <ul>
+            <li class="first">현대</li>
+            <li>영국</li>
+            <li>중급</li>
+            <li class="last"><a href="http://blogs.telegraph.co.uk/news/jameskirkup/9425107/In_praise_of_the_British_Tamils_Westminster_protest" target="_blank">이동</a></li>
+            </ul>
+        </div>
+    </div>
+    <input name="" type="hidden" value="These include attacks on the government-proclaimed &lt;b&gt;safe zones&lt;/b&gt; and on clearly marked hospitals.">
+    </div>
+    <!--
+	<p class="mar_top01"><span class="fnt_k09">[일반]</span> <span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=these">These</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=include">include</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=attack">attacks</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=on">on</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=the">the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=government">government</a></i>-<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=proclaim">proclaimed</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=safe"><b>safe</b></a></i><b> </b><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=zone"><b>zones</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=and">and</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=on">on</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=clearly">clearly</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=marked">marked</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=hospital">hospitals</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="play" /></a> <span class="fnt_k10">(출처:Telegraph Blogs)</span><input name="" type="hidden" value="These include attacks on the government-proclaimed &lt;b&gt;safe zones&lt;/b&gt; and on clearly marked hospitals."></p>
+	-->
+	<p><a href="#"><img src="http://dicimg.naver.com/endic/img/btn_credit.gif" alt="번역문 만들기 참여" class="mar_top1 img_padbot2" /></a></p>
+    <p class="edit_ktxt" style="display:none">
+    	<input name="_1271107" type="text" maxlength="300" class="input1" value="" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_submit.gif" alt="확인" width="45" height="25" class="submit" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_cancel.gif" alt="취소" width="45" height="25" class="cancel" />
+    </p>
+	<p class="mar_top1 fnt_k10" style="display:none;"></p>
+	</li>
+	</ul>
+    <p class="dic_more"><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=example" class="fnt_k12 N=a:xmp.more">예문 더보기</a></p>
+            </div>
+
+
+        <!-- speed control -->
+        <div id="speed_control" class="speed_control mini">
+			<p class="btn"><a class="close"></a></p>
+			<div class="bar">
+				<div class="btn"><img height="12" width="7" class="slider-thumb S2418736" src="http://dicimg.naver.com/endic/img/btn_run_v.gif" style="left: 0px;"/></div>
+				<p class="num"><span class="num01 on">0</span><span class="num02">1</span><span class="num03">2</span></p>
+				<div class="tips">
+					<span class="col1">반복속도 : </span>
+					<ul class="col2">
+					<li class="speed1" style="display: list-item">간격없음</li>
+					<li class="speed2">간격있음</li>
+					<li class="speed3">간격길게</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+  	<div class="cx_list">
+	<strong>검색결과 :</strong>
+		<a href="/popManager.nhn?m=search&query=SafeZone&searchOption=entry_idiom">단어/숙어</a>(4)
+		<span class="v_line">ㅣ</span><a href="/popManager.nhn?m=search&query=SafeZone&searchOption=mean">본문</a>(4)
+		<span class="v_line">ㅣ</span>	<a href="/popManager.nhn?m=search&query=SafeZone&searchOption=example">예문</a> (146)
+	</div>
+		<!-- /speed control -->
+		<p class="bot_info"><a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/mail.nhn',  param : 'upCatg=236'})">[사용자와 함께 만드는 네이버 사전] <b>오류 신고 및 의견 제안</b></a></p>
+        <p class="hit_top"><a href="#hittop"><img src="http://dicimg.naver.com/endic/img/hit_top2.gif" alt="맨위로" /></a></p>
+        <div id="pop_footer">
+            <strong class="blind">자료제공</strong>
+            <ul class="ref">
+            <li><a href="http://www.oxford.co.kr/" target="_blank" class="en">Oxford University Press</a></li>
+            <li><a href="http://www.doosandonga.com/" target="_blank">두산동아 프라임 영어사전</a></li>
+            </ul>
+            <ul class="ref">
+            <li><a href="http://www.harpercollins.com/" target="_blank" class="en">HarperCollins Publishers Ltd</a></li>
+            <li><a href="http://www.ybmsisa.com/" target="_blank">YBM 시사닷컴</a></li>
+            <li><a href="http://www.neungyule.com/" target="_blank">능률 한영사전</a></li>
+            </ul>
+            <address>
+                <em>Copyright ©</em>
+                <a href="#" target="_blank">NAVER Corp.</a>
+                <span>All Rights Reserved.</span>
+            </address>
+          </div>
+        </div>
+
+<script>
+	if(window.location.href.indexOf("#WEB_")!= -1){
+		var url = window.location.href;
+		var cutWebId = url.substring(url.indexOf("#WEB_")+5,url.indexOf("#WEB_")+6);
+		if($("webCntDisp_"+cutWebId)){
+			$("webCntDisp_"+cutWebId).className = "on";
+			$("webList_"+cutWebId).className = "frst_dd";
+		}
+	}
+	function showSingleAll() {
+		var temp = '<a name="English"></a>';
+		temp += '<h3 class="dic_tit6"><img src="http://dicimg.naver.com/endic/img/dic_tit12.gif" alt="영영사전" /></h3>';
+		temp += '<ul class="list_a5">';
+
+
+		temp += '</ul>';
+		document.getElementById("single_en").innerHTML = temp;
+	}
+</script>
+
+
+<!-- add_layer2 start -->
+ <div class="add_layer2" id="add_layer_info">
+            <p class="txt">단어장 이용약관에 동의하신 후 이용이 가능합니다.</p>
+            <p class="btn"><a href="http://dev.wordbook.naver.com/endic" target="_blank"><img src="http://dicimg.naver.com/endic/img/btn_view_reg.gif" alt="약관보기" /></a></p>
+        </div>
+        <!-- add_layer start -->
+        <div class="ly_sword" id="add_layer_wblist" style="display: none;"><dl></dl><a id="add_layer_close" class="btn_close2" href="#"><span class="blind">닫기</span></a></div>
+        <div class="ly_sword" id="add_layer_msg" style="display: none;"><dl></dl></div>
+        <!-- add_layer end -->
+        <!-- add_layer_tip start -->
+        <div class="add_layer_tip" id="add_layer_tip" style="display: none;">추가 되었습니다</div>
+        <!-- add_layer_tip end -->
+
+        <!-- creat_layer start -->
+        <div class="creat_layer" id="create_layer_wbname">
+            <h3><span class="fnt_k24"><strong>영어단어장 추가</strong></span></h3>
+            <p class="des"><span class="fnt_k26">단어장을 추가합니다. 단어장 이름을 지어주세요.</span></p>
+            <!-- 20160819 접근성 title 추가 -->
+            <p class="in1"><span class="fnt_k25">단어장 이름</span><input class="txt" type="text" maxlength="16" title="단어장 이름" /> <div class="add_tiplayer">&lt; 혹은 &gt; 기호는 사용하실 수 없습니다.</div></p>
+            <!-- /20160819 접근성 title 추가 -->
+
+            <p class="btn_area"><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_submit2.gif" alt="확인" width="45" height="26" /><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_cancel2.gif" alt="취소" width="45" height="26" class="mar" /></p>
+            <a href="#"><img src="http://dicimg.naver.com/endic/img/btn_close3.gif" alt="" class="close" /></a>
+        </div>
+        <!-- creat_layer end -->
+
+		</div>
+
+
+</div>
+</div>
+<script type="text/javascript">
+	SPS.__inst.minisearch = new SPS.minisearch("minisrch", null);
+</script>
+
+<div id="itt_info_tip_box" class="tip_cx">
+	<div><span>verb+noun phrase+adverb or prepositional phrase <br/>동사+명사구+부사구/전치사구</span></div>
+</div>
+<script type="text/javascript" src="js/launcher.js?20121218163105" ></script>
+<script type="text/javascript" src="js/lcslog.js?20121218163105"></script>
+<script type="text/javascript">lcs_do();</script>
+</body>
+</html>

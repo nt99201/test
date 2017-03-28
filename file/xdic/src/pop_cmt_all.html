@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>의견모음 : 네이버 사전</title>
+<link rel="shortcut icon" href="http://www.naver.com/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/comment_e.css">
+<link rel="stylesheet" type="text/css" href="css/pop.css">
+</head>
+
+<body>
+<!-- [D] 팝업 크기 600x620 -->
+<div id="pop_wrap" class="cmt">
+	<h1 class="blind">의견모음보기</h1>
+	<div id="pop_header">
+        <h2><em>test</em> 님의 의견 모음</h2>
+        <span class="count">총<em>1</em>개</span>
+        <div class="help_wrap">
+        	<a href="#" class="btn_help">도움말</a>
+            <div class="ly_help" style="display:">
+                <strong>네이버 사전의견 도움말</strong>
+                <p>의견은 회원정보에 등록된 별명으로 작성자를 표시합니다.<br>
+                  &#39;회원정보 &gt; 기본정보 수정 &#39;에서 변경할 수 있습니다.<br>
+                  소셜 계정 사용자는 해당 서비스에서 수정해주십시오.
+                </p>
+                <a href="#" class="btn_clse">레이어 닫기</a>
+            </div>
+        </div>
+        <div class="opt_area">
+        	<!-- [D] 선택되었을 때 class명 on 추가, 텍스트에 사전명을 넣어주세요. -->
+        	<a href="#" class="lang on">베트남어 사전<span class="blind">선택됨</span></a>
+            <ul style="display:">
+            <li><a href="#">러시아어 사전</a></li>
+            <li><a href="#">베트남어 사전</a></li>
+            </ul>
+        </div>
+	</div>
+	<div id="pop_container">
+    	<div class="cmt_no" style="display:none">
+        	<p>아직 등록한 의견이 없습니다.</p>
+        </div>
+        <!-- 공통댓글- 일반형 베스트 댓글 -->
+        <div id="cbox_module">
+            <div class="cbox_list_comment">
+                <ul>
+                <li class="cbox_thumb_off recommend_comment_no_381 cbox_best_comment">
+                    <div class="cbox_comment_area">
+                        <div class="cbox_desc_comment">
+                            <a href="#" class="tit">Россий ская Федерация</a>
+                            <p class="cbox_desc">테스트</p>
+                        </div>
+                        <div class="cbox_info_area">
+                            <div class="cbox_section"><span class="cbox_date">2013.06.17 오후 22:00</span></div>
+                            <div class="cbox_section2"><span class="cbox_first delete">|<a href="#" class="N=a:CML.del">삭제</a></span></div>
+                        </div>
+                    </div>
+                    <ul>
+                    </ul>
+                </li>
+                <li class="cbox_thumb_off recommend_comment_no_381 cbox_best_comment">
+                    <ul>
+                    <li class="cbox_thumb_off recommend_comment_no_381 cbox_best_comment">
+                        <div class="cbox_comment_area">
+                            <!-- [D] 하위댓글로 등록된 경우,<span class="ico_re">답글</span> 추가해주세요 -->
+                            <div class="cbox_desc_comment">
+                                <a href="#" class="tit">Россий ская Федерация</a>
+                                <p class="cbox_desc"><span class="ico_re">답글</span>테스트</p>
+                            </div>
+                            <div class="cbox_info_area">
+                                <div class="cbox_section"><span class="cbox_date">2013.06.17 오후 22:00</span></div>
+                                <div class="cbox_section2"><span class="cbox_first delete">|<a href="#" class="N=a:CML.del">삭제</a></span></div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </li>
+                <li class="cbox_thumb_off recommend_comment_no_381 cbox_best_comment">
+                    <div class="cbox_comment_area">
+                        <div class="cbox_desc_comment">
+                            <a href="#" class="tit">Россий ская Федерация</a>
+                            <p class="cbox_desc">테스트</p>
+                        </div>
+                        <div class="cbox_info_area">
+                            <div class="cbox_section"><span class="cbox_date">2013.06.17 오후 22:00</span></div>
+                            <div class="cbox_section2"><span class="cbox_first delete">|<a href="#" class="N=a:CML.del">삭제</a></span></div>
+                        </div>
+                    </div>
+                    <ul>
+                    </ul>
+                </li>
+                <li class="cbox_thumb_off recommend_comment_no_381 cbox_best_comment">
+                    <div class="cbox_comment_area">
+                        <div class="cbox_desc_comment">
+                            <a href="#" class="tit">Россий ская Федерация</a>
+                            <p class="cbox_desc">테스트</p>
+                        </div>
+                        <div class="cbox_info_area">
+                            <div class="cbox_section"><span class="cbox_date">2013.06.17 오후 22:00</span></div>
+                            <div class="cbox_section2"><span class="cbox_first delete">|<a href="#" class="N=a:CML.del">삭제</a></span></div>
+                        </div>
+                    </div>
+                    <ul>
+                    </ul>
+                </li>
+                <li class="cbox_thumb_off recommend_comment_no_381 cbox_best_comment">
+                    <div class="cbox_comment_area">
+                        <div class="cbox_desc_comment">
+                            <a href="#" class="tit">Россий ская Федерация</a>
+                            <p class="cbox_desc">테스트</p>
+                        </div>
+                        <div class="cbox_info_area">
+                            <div class="cbox_section"><span class="cbox_date">2013.06.17 오후 22:00</span></div>
+                            <div class="cbox_section2"><span class="cbox_first delete">|<a href="#" class="N=a:CML.del">삭제</a></span></div>
+                        </div>
+                    </div>
+                    <ul>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="cbox_paginate"><strong class="cbox_htitle">페이지 이동하기</strong><strong>1<span>현재 선택된 페이지</span></strong> <a href="#" class="N=a:CML.page,r:2">2</a> <a href="#" class="N=a:CML.page,r:3">3</a> <a href="#" class="N=a:CML.page,r:4">4</a> <a href="#" class="N=a:CML.page,r:5">5</a> <a href="#" class="N=a:CML.page,r:6">6</a> <a href="#" class="N=a:CML.page,r:7">7</a> <a href="#" class="N=a:CML.page,r:8">8</a> <a href="#" class="N=a:CML.page,r:9">9</a> <a href="#" class="N=a:CML.page,r:10">10</a> <a href="#" class="cbox_next N=a:CML.next">다음<span>페이지 목록으로 이동하기</span></a> <a href="#" class="cbox_next_end">맨뒤</a></div>
+            <div tier="1" class="cbox_layer_popup me2guideLayer" style="width: 278px; left: 0px; top: 0px; display: none;">
+                <button type="button" class="cbox_close N=a:CMW.close"><span><em>닫기</em></span></button>
+                <p class="cbox_desc6">체크박스를 선택하여<a href="http://me2day.net" target="_blank">미투데이</a>에 글을<br> 동시에 등록할 수 있습니다.</p>
+            </div>
+            <div tier="1" class="cbox_layer_popup profileLayer" style="width: 298px; left: 54px; top: -12px; display: none;">
+                <form action="#" method="post">
+                    <button type="button" class="cbox_close N=a:CMW.close"><span><em>닫기</em></span></button>
+                    <dl class="cbox_list_profile">
+                    <dt>프로필 선택</dt>
+                    <dd>내 댓글 작성자명에 해당 블로그 / 미투데이 링크가 걸립니다.</dd>
+                    </dl>
+                    <ul>
+                    <li>
+                        <input type="radio" name="rdo_profile" id="naver_blog" class="cbox_input_rdo">
+                        <div class="cbox_thumb"><a href="#"><img src="img/ru/img_default_profile.gif" width="40" height="40" alt="썸네일" class="cbox_user_thumb"><span class="cbox_tmp_border"></span></a></div>
+                        <dl>
+                        <dt>
+                            <label for="naver_blog">네이버 블로그 프로필</label>
+                        </dt>
+                        <dd><span class="cbox_nick_name"><a href="#" target="_blank"></a></span> <span class="cbox_user_id">(<a href="#" target="_blank"></a>)</span></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <input type="radio" name="rdo_profile" id="me2day" class="cbox_input_rdo">
+                        <div class="cbox_thumb"><a href="#"><img src="http://static1.me2day.com/images/user/pulip62/profile.png?1301034923" width="40" height="40" alt="썸네일" class="cbox_user_thumb"><span class="cbox_tmp_border"></span></a></div>
+                        <dl>
+                        <dt>
+                            <label for="me2day">미투데이 프로필</label>
+                            <span class="cbox_btn_area4">
+                                <button type="button" class="cbox_help"><span>도움말</span></button>
+                            </span></dt>
+                        <dd><span class="cbox_nick_name"><a href="#" target="_blank">pulip62</a></span> <span class="cbox_user_id">(<a href="#" target="_blank">puli****</a>)</span></dd>
+                        </dl>
+                    </li>
+                    <li class="cbox_li_type">
+                        <input type="radio" name="rdo_profile" id="naver" class="cbox_input_rdo">
+                        <dl>
+                        <dt>
+                            <label for="naver">네이버 별명</label>
+                            <span class="cbox_btn_area4">
+                                <button type="button" class="cbox_help"><span>도움말</span></button>
+                            </span></dt>
+                        <dd><span class="cbox_nick_name">pulip62</span> <span class="cbox_user_id">(puli****)</span></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <input type="radio" name="rdo_profile" id="baseball9" class="cbox_input_rdo">
+                        <div class="cbox_thumb"><a href="#" style="cursor: default;"><img src="img/ru/img_default_profile.gif" width="40" height="40" alt="썸네일" class="cbox_user_thumb"><span class="cbox_tmp_border" style="cursor: default;"></span></a></div>
+                        <dl>
+                        <dt>
+                            <label for="baseball9">야구9단 프로필</label>
+                        </dt>
+                        <dd><span class="cbox_nick_name"></span> <span class="cbox_user_id">(puli****)</span></dd>
+                        </dl>
+                    </li>
+                    </ul>
+                    <div class="cbox_btn_area2">
+                        <input type="image" src="img/ru/btn_confirm.gif" alt="확인" onmouseover="this.src='img/ru/btn_confirm_over.gif'" onmouseout="this.src='img/ru/btn_confirm.gif'" class="N=a:CMW.ok">
+                        <a href="#" class="N=a:CMW.cancel"><img src="img/ru/btn_cancel.gif" width="45" height="25" alt="취소" onmouseover="this.src='img/ru/btn_cancel_over.gif'" onmouseout="this.src='img/ru/btn_cancel.gif'"></a></div>
+                </form>
+            </div>
+            <span tier="2" class="cbox_layer_popup me2HelpLayer" style="width: 278px; left: 0px; top: 0px; display: none;"><a href="#" class="cbox_close"><span><em>닫기</em></span></a><span class="cbox_desc6">내 미투데이에 등록한 사진, 별명을 사용합니다.</span></span> <span tier="2" class="cbox_layer_popup naverHelpLayer" style="width: 278px; left: 0px; top: 0px; display: none;"><a href="#" class="cbox_close"><span><em>닫기</em></span></a><span class="cbox_desc6">네이버 회원정보에 등록한 별명을 사용합니다.</span></span>
+            <div tier="2" class="cbox_layer_popup best_info_layer bestInfoLayer" style="top: 32px; right: 0px; display: none;"><strong class="cbox_blind">BEST 댓글 운영 기준 안내 레이어</strong>
+                <button type="button" title="BEST 댓글 운영 기준 안내 레이어 닫기" class="cbox_close"><span><em>닫기</em></span></button>
+                <p>댓글에 대한 답글은 베스트 댓글 선정에서<br> 제외 됩니다.</p>
+                <p>타인에게 불쾌감을 주거나 저자의 요청을 받은<br> 경우도 베스트 댓글에서 제외될 수 있습니다.</p>
+            </div>
+            <div tier="2" class="cbox_layer_popup best_info_layer sortOldInfoLayer" style="display: none; top: 32px; right: 0px;"><strong class="cbox_blind">등록순 정렬 도움말 레이어</strong>
+                <button type="button" title="등록순 정렬 도움말 레이어 닫기" class="cbox_close"><span><em>닫기</em></span></button>
+                <p>댓글 등록일이 가장 늦은순으로 정렬 됩니다.</p>
+                <p>댓글을 중심으로 정렬되며, 댓글의 답글은<br> 영향받지 않습니다.</p>
+            </div>
+            <div class="ly_mobile" style="top: 26px; left: 159px; z-index: 30; display: none;">모바일에서 작성한 댓글입니다.<em></em></div>
+        </div>
+        <!-- //공통댓글- 일반형 베스트 댓글 -->
+    </div>
+</div>
+</body>
+</html>

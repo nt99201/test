@@ -1,0 +1,40 @@
+<!--[D] 엔트리 폰트 조정 -->
+<!--[D] 1단계 - 클래스 없음 -->
+<!--[D] 2단계 - fs2-->
+<!--[D] 3단계 - fs3-->
+<!--[D] 4단계 - fs4-->
+<!--[D] 5단계 - fs5-->
+
+<!-- 명언 엔트리 -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+
+    <section class="section_entry">
+        <h2 class="u_hc">단어 섹션</h2>
+        <? include 'layer_option_menu.html' ?>
+
+        <div class="entry_word">
+            <? include 'entry_headword8.html' ?>
+            <span class="source">출처: 옥스퍼드</span>
+        </div>
+        <div class="cp_trans_area">내일이 주중에 가장 바쁜 날이기 쉽다. (덴마크속담, 노력속담)</div>
+    </section>
+
+
+    <section class="section_entry">
+        <ul class="examples_tab">
+            <li class="tab_item on"><a href="#">비슷한 예문</a></li>
+            <li class="tab_item "><a href="#">번역을 기다리는 예문</a></li>
+        </ul>
+        <!-- 20160819 접근성수정
+            [D] 상위 tab에 활성화에 따라 아래의 타이틀을 변경해주세요.
+            예)<h3 class="blind">비슷한 예문</h3>
+            <h3 class="blind">번역을 기다리는 예문</h3>
+        -->
+        <h3 class="blind">비슷한 예문</h3>
+        <!-- //20160819 접근성수정 -->
+        <? include ''.$content_type ?>
+    </section>
+
+    <? include 'entry_footer.html' ?>
+</div>

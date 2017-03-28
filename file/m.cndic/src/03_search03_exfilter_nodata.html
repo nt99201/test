@@ -1,0 +1,177 @@
+	<h2 class="word_h2w2">예문
+		<span role="button" class="word_h2w2_action"><i class="ico">검색결과 조건안내</i></span>
+		<em class="word_h2_h">(721건)</em>
+	</h2>
+
+	<!-- exfilterset -->
+	<div class="exfilterset">
+		<h3 class="hc">예문 필터링</h3>
+
+		<dl class="exfilterset_list">
+		<dt class="exfilterset_list_level">
+			<!-- Dev Note: Unselected Status
+			<em role="button" class="action>수준별</em></dt> -->
+
+			<!-- Dev Note: Selected Status -->
+			<em role="button" class="action is_selected">수준별</em>
+		</dt>
+
+		<!-- Dev Note: Show Status -->
+		<dd class="exfilterset_list_leveldesc">
+
+		<!-- Dev Note: Hide Status
+		<dd class="exfilterset_list_leveldesc is_hide"> -->
+
+			<ul class="exfilterset_list_levelchild">
+			<li class="item">
+				<!-- Dev Note: Checked status - Add "is_checked" Class to <label class="click"> -->
+				<label class="click is_checked"><input type="radio" name="exfilter_option" class="click_radio" checked><i class="click_radio2"></i><span class="click_text">전체</span></label>
+			</li>
+			<li class="item2"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">초급</span></label></li>
+			<li class="item3"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">중급</span></label></li>
+			<li class="item4"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">고급</span></label></li>
+			</ul>
+
+		</dd>
+
+		<dt class="exfilterset_list_exam">
+			<!-- Dev Note: Unselected Status -->
+			<em role="button" class="action">중국어 능력 시험</em>
+			<!-- Dev Note: Selected Status
+			<em role="button" class="action is_selected">중국어 능력 시험</em> -->
+		</dt>
+
+		<!-- Dev Note: Show Status
+		<dd class="exfilterset_list_examdesc"> -->
+
+		<!-- Dev Note: Hide Status -->
+		<dd class="exfilterset_list_examdesc is_hide">
+
+			<ul class="exfilterset_list_hskchild">
+			<li class="item">
+				<!-- Dev Note: Checked status - Add "is_checked" Class to <label class="click">
+				<label class="click is_checked"><input type="radio" name="exfilter_option" class="click_radio" checked><i class="click_radio2"></i><span class="click_text">전체</span></label>-->
+				<label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">전체</span></label>
+			</li>
+			<li class="item2"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">HSK 1급</span></label></li>
+			<li class="item3"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">HSK 2급</span></label></li>
+			<li class="item4"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">HSK 3급</span></label></li>
+			<li class="item5"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">HSK 4급</span></label></li>
+			<li class="item6"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">HSK 5급</span></label></li>
+			<li class="item7"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">HSK 6급</span></label></li>
+			</ul>
+
+			<ul class="exfilterset_list_bctchild">
+			<li class="item">
+				<!-- Dev Note: Checked status - Add "is_checked" Class to <label class="click">
+				<label class="click is_checked"><input type="radio" name="exfilter_option" class="click_radio" checked><i class="click_radio2"></i><span class="click_text">BCT A급</span></label> -->
+				<label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">BCT A급</span></label>
+			</li>
+			<li class="item2"><label class="click"><input type="radio" name="exfilter_option" class="click_radio"><i class="click_radio2"></i><span class="click_text">BCT A급</span></label></li>
+			</ul>
+
+			<div class="exfilterset_list_examchild">
+				<!-- Dev Note: Checked status - Add "is_checked" Class to <label class="click">
+				<label class="click is_checked"><input type="checkbox" class="click_checkbox" checked><i class="click_checkbox2 "></i><span class="click_text">등급 외 단어 포함</span>-->
+				<label class="click"><input type="checkbox" class="click_checkbox"><i class="click_checkbox2"></i><span class="click_text">등급 외 단어 포함</span></label>
+			</div>
+
+		</dd>
+		</dl>
+	</div>
+	<!-- //exfilterset -->
+
+	<div class="exfilterset2">
+		<p class="exfilterset2_row">선택한 조건에 대한<br>예문 검색결과가 없습니다.</p>
+		<a href="" class="exfilterset2_click">전체 검색결과 가기</a>
+	</div>
+
+	<!-- Dev Note: For markup test, Delete developing -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	//Realated exfilter
+	$(".word_h2w2_action, .exfilter_guide_action").on("click",function(){
+		//alert($(this).parent().parent().parent(".layer_exfilter").attr("class"));
+		if($(".layer_exfilter").hasClass("is_hide")) {
+			$(".layer_exfilter").removeClass("is_hide");
+		} else {
+			$(".layer_exfilter").addClass("is_hide");
+		}
+		return false;
+	});
+
+	$(".exfilter_guide_menu .item .action").on("click",function(){
+		$(".exfilter_guide_menu .item .action").addClass("is_selected");
+		$(".exfilter_guide_menu .item2 .action").removeClass("is_selected");
+		$(".exfilter_guide_article").removeClass("is_hide");
+		$(".exfilter_guide_article2").addClass("is_hide");
+		return false;
+	});
+
+	$(".exfilter_guide_menu .item2 .action").on("click",function(){
+		$(".exfilter_guide_menu .item .action").removeClass("is_selected");
+		$(".exfilter_guide_menu .item2 .action").addClass("is_selected");
+		$(".exfilter_guide_article").addClass("is_hide");
+		$(".exfilter_guide_article2").removeClass("is_hide");
+		return false;
+	});
+
+	$(".exfilterset_list_level .action").on("click",function(){
+		$(".exfilterset_list_level .action").addClass("is_selected");
+		$(".exfilterset_list_exam .action").removeClass("is_selected");
+		$(".exfilterset_list_leveldesc").removeClass("is_hide");
+		$(".exfilterset_list_examdesc").addClass("is_hide");
+		$(".exfilterset_list_levelchild .click, .exfilterset_list_hskchild .click").removeClass("is_checked");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_hskchild .click_radio").removeAttr("checked");
+		$(".exfilterset_list_levelchild .click, .exfilterset_list_bctchild .click").removeClass("is_checked");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_bctchild .click_radio").removeAttr("checked");
+		$(".exfilterset_list_levelchild .item .click").addClass("is_checked");
+		$(".exfilterset_list_levelchild .item .click_radio").attr("checked",true);
+		return false;
+	});
+
+	$(".exfilterset_list_exam .action").on("click",function(){
+		$(".exfilterset_list_level .action").removeClass("is_selected");
+		$(".exfilterset_list_exam .action").addClass("is_selected");
+		$(".exfilterset_list_leveldesc").addClass("is_hide");
+		$(".exfilterset_list_examdesc").removeClass("is_hide");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_hskchild .click_radio").removeClass("is_checked");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_hskchild .click_radio").removeAttr("checked");
+				$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_bctchild .click_radio").removeClass("is_checked");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_bctchild .click_radio").removeAttr("checked");
+		$(".exfilterset_list_hskchild .item .click").addClass("is_checked");
+		$(".exfilterset_list_hskchild .item .click_radio").attr("checked",true);
+		$(".exfilterset_list_bctchild .item .click").addClass("is_checked");
+		$(".exfilterset_list_bctchild .item .click_radio").attr("checked",true);
+		return false;
+	});
+
+	$(".exfilterset_list_levelchild .click, .exfilterset_list_hskchild .click, .exfilterset_list_bctchild .click").on("click",function(){
+		$(".exfilterset_list_levelchild .click, .exfilterset_list_hskchild .click").removeClass("is_checked");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_hskchild .click_radio").removeAttr("checked");
+		$(".exfilterset_list_levelchild .click, .exfilterset_list_bctchild .click").removeClass("is_checked");
+		$(".exfilterset_list_levelchild .click_radio, .exfilterset_list_bctchild .click_radio").removeAttr("checked");
+
+		if($(this).hasClass("is_checked")) {
+			$(this).removeClass("is_checked");
+			$(this).children(".click_radio").removeAttr("checked");
+		} else {
+			$(this).addClass("is_checked");
+			$(this).children(".click_radio").attr("checked",true);
+			//alert($(this).children(".click_radio").attr("class") );
+		}
+		return false;
+	});
+
+	$(".exfilterset_list_examchild .click").on("click",function(){
+		if($(this).hasClass("is_checked")) {
+			$(this).removeClass("is_checked");
+			$(this).children(".click_checkbox").removeAttr("checked");
+		} else {
+			$(this).addClass("is_checked");
+			$(this).children(".click_checkbox").addClass("is_checked");
+		}
+		return false;
+	});
+	</script>
+	<!-- //Dev Note: For markup test, Delete developing -->

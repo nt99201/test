@@ -1,0 +1,363 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<title>일본어입력기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+<link type="text/css" rel="stylesheet" href="css/w.css">
+<!--<link type="text/css" rel="stylesheet" href="css/e.css">-->
+<style>
+body,html {	height: 100%;}
+
+#_writer_Content {	min-height: 100%;	position: relative;}
+
+#ct {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<div id="_writer_Content">
+    <div id="_wirter_Header">
+        <a href="#ct" class="hc">본문 바로가기</a>
+        <!-- 입력기 상단 -->
+        <div class="ts">
+            <h1>
+                <ul>
+                    <li class="top_a on"><a href="#"><span class="tab_name">필기인식</span></a></li>
+                    <li class="top_a2"><span class="line"></span><a href="#"><span class="tab_name">히라가나</span></a></li>
+                    <li class="top_a3"><span class="line"></span><a href="#"><span class="tab_name">가타가나</span></a></li>
+                </ul>
+                <div class="help_wrap">
+                    <a href="#" class="help"><span class="hc">도움말</span></a>
+                    <!-- [D] 도움말 클릭시, display:block-->
+                    <div id="helpter" class="helpt" style="display:none">
+                        <div class="sbox wr">필기 인식기에 글자를 써서 검색할 수 있습니다.<p class="se">[1획 지우기],[전체 지우기]를 누르면<br>필기한 획을 수정할 수 있습니다.</p><p class="se">[한자입력],[가나입력]을  누르면 한자/가나 입력을 전환할 수 있습니다.</p></div>
+                    </div>
+                </div>
+                <a href="#" class="kiclo"><span class="btn_txt">닫기</span></a>
+            </h1>
+        </div>
+
+        <!-- 검색 -->
+        <form name="search"  onsubmit="return searchSubmit();" id="search" method="get">
+        <input type="hidden" name="range" value="all"/>
+        <input type="hidden" name="q" id="nx_query" maxlength="255" value="" />
+        <input type="hidden" name="sm" value="jpd_hty" />
+            <fieldset class="hs ki">
+                <legend class="hc">검색</legend>
+                <div class="hsw _searchArea">
+                    <span class="itw _characterDisplay" id="_selectCharacterDisplay"></span>
+                    <button type="button" class="clrt _clear_input" onclick><span id="clear_input" class="_clear_input">입력 내용 삭제</span></button>
+                    <button type="submit" class="hssbt _searchBtn" onclick><span class="hc">검색</span></button>
+                </div>
+            </fieldset>
+        </form>
+        <!-- //검색 -->
+        <!-- //입력기 상단 -->
+        <!-- 자동완성 -->
+        <div class="atcp atcpt ime_atcpt" id="autocomplete_layer" style="display:none;">
+        <div class="atcpw"><div class="atcpw3">
+            <h3 class="hc">자동완성</h3>
+            <ul id="autoComplete">
+                <li class="atcpli"><a href="javascript:void(0);" onClick="nclk(this,'jwm.keyword','',1);oAutoComplete.setValue(this);return false;" onMouseover="oAutoComplete.setSelected(this);" class="atcpa">@name@</a><input type="hidden" id="hidden_input" value="@in_txt@" /></li>
+            </ul>
+        </div>
+        </div></div>
+        <!-- //자동완성 -->
+
+    </div>
+
+
+    <!-- 자동완성 결과 영역 -->
+    <div class="_backPanel" id="backPanel" style="display:block;"></div>
+    <!-- //자동완성 결과 영역 -->
+
+    <div id="ct" style="position:fixed;">
+	<!-- 입력기(자판) -->
+    <!-- [D] 가로모드 : wide 추가 -->
+	<div class="kia _characterKeyboard" style="display:block;">
+	
+		<!-- 히라가나 입력기(자판) -->
+		<div class="pad _hirakanaKeyboard" style="display:none;">
+			<div class="l1">
+				<a href="javascript:void(0);" charid="hira_a" class="bn1 _sm" onClick="nclk(this,'jim.word','',1);">あ<sub>ㅇ</sub></a>
+				<div class="shf" charid="hira_a" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 sm_ _m" nclick="jim.word|1" >あ</a>
+					<a href="javascript:void(0);" class="bn2 sm_ _m" nclick="jim.word|1">い</a>
+					<a href="javascript:void(0);" class="bn3 sm_ _m" nclick="jim.word|1">う</a>
+					<a href="javascript:void(0);" class="bn4 sm_ _m" nclick="jim.word|1">え</a>
+					<a href="javascript:void(0);" class="bn5 sm_ _m" nclick="jim.word|1">お</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ka" class="bn2" onClick="nclk(this,'jim.word','',1);">か<sub>ㅋ</sub></a>
+				<div class="shf" charid="hira_ka" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">か</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">き</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">く</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">け</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">こ</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ga" class="bn3" onClick="nclk(this,'jim.word','',1);">が<sub>ㄱ</sub></a>
+				<div class="shf" charid="hira_ga" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">が</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ぎ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ぐ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">げ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ご</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_sa" class="bn4" onClick="nclk(this,'jim.word','',1);">さ<sub>ㅅ</sub></a>
+				<div class="shf" charid="hira_sa" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">さ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">し</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">す</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">せ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">そ</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_za" class="bn5" onClick="nclk(this,'jim.word','',1);">ざ<sub>ㅈ</sub></a>
+				<div class="shf" charid="hira_za" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ざ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">じ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ず</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ぜ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ぞ</a>
+				</div>
+			</div>
+			<div class="l2">
+				<a href="javascript:void(0);" charid="hira_ta" class="bn1" onClick="nclk(this,'jim.word','',1);">た<sub>ㅌ</sub></a>
+				<div class="shf" charid="hira_ta" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">た</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ち</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">つ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">て</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">と</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_da" class="bn2" onClick="nclk(this,'jim.word','',1);">だ<sub>ㄷ</sub></a>
+				<div class="shf" charid="hira_da" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">だ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ぢ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">づ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">で</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ど</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_na" class="bn3" onClick="nclk(this,'jim.word','',1);">な<sub>ㄴ</sub></a>
+				<div class="shf" charid="hira_na" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">な</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">に</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ぬ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ね</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">の</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ha" class="bn4" onClick="nclk(this,'jim.word','',1);">は<sub>ㅎ</sub></a>
+				<div class="shf" charid="hira_ha" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">は</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ひ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ふ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">へ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ほ</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ba" class="bn5" onClick="nclk(this,'jim.word','',1);">ば<sub>ㅂ</sub></a>
+				<div class="shf" charid="hira_ba" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ば</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">び</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ぶ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">べ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ぼ</a>
+				</div>
+			</div>
+			<div class="l3">
+				<a href="javascript:void(0);" charid="hira_pa" class="bn1" onClick="nclk(this,'jim.word','',1);">ぱ<sub>ㅃ</sub></a>
+				<div class="shf" charid="hira_pa" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ぱ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ぴ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ぷ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ぺ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ぽ</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ma" class="bn2" onClick="nclk(this,'jim.word','',1);">ま<sub>ㅁ</sub></a>
+				<div class="shf" charid="hira_ma" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ま</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">み</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">む</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">め</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">も</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ra" class="bn3" onClick="nclk(this,'jim.word','',1);">ら<sub>ㄹ</sub></a>
+				<div class="shf" charid="hira_ra" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ら</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">り</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">る</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">れ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ろ</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_wa" class="bn4 _sm _none">わ<sub>와</sub></a>
+				<div class="shf wa" charid="hira_wa" style="display:none;">
+					<a href="javascript:void(0);" class="bn4 sm_ _m" nclick="jim.word|1">わ</a>
+					<a href="javascript:void(0);" class="bn5 sm_ _m" nclick="jim.word|1">を</a>
+				</div>
+				<a href="javascript:void(0);" charid="hira_ya" class="bn5 _sm">や<sub>야</sub></a>
+				<div class="shf ya" charid="hira_ya" style="display:none;">
+					<a href="javascript:void(0);" class="bn3 sm_ _m" nclick="jim.word|1">や</a>
+					<a href="javascript:void(0);" class="bn4 sm_ _m" nclick="jim.word|1">ゆ</a>
+					<a href="javascript:void(0);" class="bn5 sm_ _m" nclick="jim.word|1">よ</a>
+				</div>
+			</div>
+			<div class="l4">
+				<a href="javascript:void(0);" charid="hira_choc" class="bn1" onClick="nclk(this,'jim.word','',1);">っ<sub>촉</sub></a>
+				<a href="javascript:void(0);" charid="hira_n" class="bn2" onClick="nclk(this,'jim.word','',1);">ん<sub>응</sub></a>
+				<span class="bn3" onClick="nclk(this,'jim.word','',1);"></span>
+				<span class="bn4" onClick="nclk(this,'jim.word','',1);"></span>
+				<span class="bn5" onClick="nclk(this,'jim.word','',1);"></span>
+			</div>
+		</div>
+		<!-- //히라가나 입력기(자판) -->
+
+		<!-- 가타가나 입력기(자판) -->
+		<div class="pad _katakanaKeyboard" style="display:block;">
+			<div class="l1">
+				<a href="javascript:void(0);" charid="kata_a" class="bn1 _sm" onClick="nclk(this,'jim.word','',1);return false;">ア<sub>ㅇ</sub></a>
+				<div class="shf" charid="kata_a" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 sm_ _m" nclick="jim.word|1">ア</a>
+					<a href="javascript:void(0);" class="bn2 sm_ _m" nclick="jim.word|1">イ</a>
+					<a href="javascript:void(0);" class="bn3 sm_ _m" nclick="jim.word|1">ウ</a>
+					<a href="javascript:void(0);" class="bn4 sm_ _m" nclick="jim.word|1">エ</a>
+					<a href="javascript:void(0);" class="bn5 sm_ _m" nclick="jim.word|1">オ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ka" class="bn2" onClick="nclk(this,'jim.word','',1);return false;">カ<sub>ㅋ</sub></a>
+				<div class="shf" charid="kata_ka" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">カ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">キ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ク</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ケ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">コ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ga" class="bn3" onClick="nclk(this,'jim.word','',1);return false;">ガ<sub>ㄱ</sub></a>
+				<div class="shf" charid="kata_ga" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ガ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ギ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">グ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ゲ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ゴ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_sa" class="bn4" onClick="nclk(this,'jim.word','',1);return false;">サ<sub>ㅅ</sub></a>
+				<div class="shf" charid="kata_sa" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">サ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">シ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ス</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">セ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ソ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_za" class="bn5" onClick="nclk(this,'jim.word','',1);return false;">ザ<sub>ㅈ</sub></a>
+				<div class="shf" charid="kata_za" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ザ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ジ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ズ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ゼ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ゾ</a>
+				</div>
+			</div>
+			<div class="l2">
+				<a href="javascript:void(0);" charid="kata_ta" class="bn1" onClick="nclk(this,'jim.word','',1);return false;">タ<sub>ㅌ</sub></a>
+				<div class="shf" charid="kata_ta" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">タ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">チ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ツ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">テ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ト</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_da" class="bn2" onClick="nclk(this,'jim.word','',1);return false;">ダ<sub>ㄷ</sub></a>
+				<div class="shf" charid="kata_da" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ダ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ヂ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ヅ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">デ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ド</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_na" class="bn3" onClick="nclk(this,'jim.word','',1);return false;">ナ<sub>ㄴ</sub></a>
+				<div class="shf" charid="kata_na" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ナ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ニ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ヌ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ネ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ノ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ha" class="bn4" onClick="nclk(this,'jim.word','',1);return false;">ハ<sub>ㅎ</sub></a>
+				<div class="shf" charid="kata_ha" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ハ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ヒ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">フ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ヘ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ホ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ba" class="bn5" onClick="nclk(this,'jim.word','',1);return false;">バ<sub>ㅂ</sub></a>
+				<div class="shf" charid="kata_ba" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">バ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ビ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ブ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ベ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ボ</a>
+				</div>
+			</div>
+			<div class="l3">
+				<a href="javascript:void(0);" charid="kata_pa" class="bn1" onClick="nclk(this,'jim.word','',1);return false;">パ<sub>ㅃ</sub></a>
+				<div class="shf" charid="kata_pa" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">パ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ピ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">プ</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">ペ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ポ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ma" class="bn2" onClick="nclk(this,'jim.word','',1);return false;">マ<sub>ㅁ</sub></a>
+				<div class="shf" charid="kata_ma" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">マ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">ミ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ム</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">メ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">モ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ra" class="bn3" onClick="nclk(this,'jim.word','',1);return false;">ラ<sub>ㄹ</sub></a>
+				<div class="shf" charid="kata_ra" style="display:none;">
+					<a href="javascript:void(0);" class="bn1 _m" nclick="jim.word|1">ラ</a>
+					<a href="javascript:void(0);" class="bn2 _m" nclick="jim.word|1">リ</a>
+					<a href="javascript:void(0);" class="bn3 _m" nclick="jim.word|1">ル</a>
+					<a href="javascript:void(0);" class="bn4 _m" nclick="jim.word|1">レ</a>
+					<a href="javascript:void(0);" class="bn5 _m" nclick="jim.word|1">ロ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_wa" class="bn4 _sm _none">ワ<sub>와</sub></a>
+				<div class="shf wa" charid="kata_wa" style="display:none;">
+					<a href="javascript:void(0);" class="bn4 sm_ _m" nclick="jim.word|1">ワ</a>
+					<a href="javascript:void(0);" class="bn5 sm_ _m" nclick="jim.word|1">ヲ</a>
+				</div>
+				<a href="javascript:void(0);" charid="kata_ya" class="bn5 _sm">ヤ<sub>야</sub></a>
+				<div class="shf ya" charid="kata_ya" style="display:none;">
+					<a href="javascript:void(0);" class="bn3 sm_ _m" nclick="jim.word|1">ヤ</a>
+					<a href="javascript:void(0);" class="bn4 sm_ _m" nclick="jim.word|1">ユ</a>
+					<a href="javascript:void(0);" class="bn5 sm_ _m" nclick="jim.word|1">ヨ</a>
+				</div>
+			</div>
+			<div class="l4">
+				<a href="javascript:void(0);" charid="kata_choc" class="bn1" onClick="nclk(this,'jim.word','',1);return false;">ッ<sub>촉</sub></a>
+				<a href="javascript:void(0);" charid="kata_n" class="bn2" onClick="nclk(this,'jim.word','',1);return false;">ン<sub>응</sub></a>
+				<a href="javascript:void(0);" charid="kata_jang" class="bn3" onClick="nclk(this,'jim.word','',1);return false;">ー<sub>장</sub></a>
+				<a href="javascript:void(0);" charid="kata_pu" class="bn4" onClick="nclk(this,'jim.word','',1);return false;">ヴ<sub>부</sub></a>
+				<span class="bn5" onClick="nclk(this,'jim.word','',1);"></span>
+			</div>
+		</div>
+		<!-- //가타가나 입력기(자판) -->
+		
+		<div class="butt _butt">
+			<a href="#" class="del _delKey"><span class="ico"></span><span class="hc">삭제</span></a>
+            <a href="#" class="shift _shiftKey"><span class="ico"></span><span class="hc">소문자 전환</span></a><!--[D]활성화될 경우 on클래스 추가-->
+            <!--<a href="#" class="space _spaceKey"><span class="ico"></span><span class="hc">한칸 띄우기</span></a>&lt;!&ndash;[D]활성화될 경우 on클래스 추가&ndash;&gt;-->
+            <!-- 20120411 -->
+
+            <!--<a href="#" class="search _hanjaImeSelect _imeSelect"><span class="txt">검색</span></a>-->
+		</div>
+	</div>
+	<!-- //입력기(자판) -->
+
+</div>
+</div>
+</body>
+</html>

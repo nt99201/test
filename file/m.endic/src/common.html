@@ -1,0 +1,38 @@
+<?
+    // page parameter
+    $page = $_GET['page'];
+
+    $head_type = $_GET['head'];
+    $word_type = $_GET['word'];
+    $usefultip_type = $_GET['usefultip'];
+    $body_type = $_GET['body'];
+    $content_type = $_GET['content'];
+    $usertrans_type = $_GET['usertrans'];
+    $pop_type = $_GET['pop'];
+
+    // 칸아카데미 예문
+    $khan =  $_GET['khan'];
+
+    if(empty($head_type)){
+        $head_type = 'incl_header.html';
+    }
+
+    if(empty($word_type)){
+        $word_type = 'entry_headword.html';
+    }
+
+    if(empty($usefultip_type)){
+      $usefultip_type = 'entry_usefultip.html';
+    }
+
+    if(empty($body_type)){
+        $body_type = 'search_tab_body.html';
+    }
+
+    // lang parameter or cookie
+    if(isset($_GET['lang'])) {
+        $lang = ($_GET['lang']);
+    } else {
+        $lang = ($_COOKIE['lang']);
+    }
+?>

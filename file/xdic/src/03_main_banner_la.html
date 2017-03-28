@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<!-- [D] 별도의 title UX 가이드가 없는 경우, 다음과 같이 title을 작성해주세요.
+     * 메뉴: 현재 페이지의 제목
+     * 브랜드명 서비스: 서비스명 -->
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<!-- [D] 각언어별 css -->
+<link rel="stylesheet" type="text/css" href="css/la.css">
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+
+</head>
+<body class=""><!-- [M] 모바일경우 클래스 없음 , 작은창 : mini, 일반 pc : pc , style="min-width:980px"-->
+
+<a href="#container" class="skip_to_content" tabindex="2">본문 바로가기</a>
+<div id="wrap" role="banner" class="header_wrap">
+<!-- 공통 header -->
+<div class="header">
+	<div class="u_skip"><a href="#ct">본문 바로가기</a></div>
+
+	<!-- 로고-->
+    <!-- [D] 언어별 사전텍스트 넣어주세요. -->
+	<h1><a href="#">라틴어사전</span></a></h1>
+	<a href="#" class="gnb naver"><span class="hc">네이버로 가기</span></a>
+	<!-- //로고 -->
+	<!-- 전체서비스 -->
+	<aside>
+		<div id="u_gnbw" class="u_gnbw">
+			<a href="#u_gnbuw" class="gnb a_service"><span class="u_vc">사전</span></a>
+		</div>
+	</aside>
+	<!-- //전체서비스 -->
+</div>
+<!-- 검색창 -->
+<div role="search" class="top_search_box">
+    <form method="get" action="#">
+        <fieldset class="sc">
+            <legend class="hc">검색</legend>
+            <!-- [D] 특수알파벳 기능 제공하지 않는 사전 -> class명 : sc2 -->
+            <!-- [D] 특수알파벳 기능 제공하는 사전 -> class명 : sc2_v2 -->
+            <div class="sc2">
+						<span class="sc_box">
+						    <input id="ac_input" type="text" name="query" title="검색어 입력" value="amigo" maxlength="50" class="keyword it">
+						</span>
+                <button type="submit" title="검색" class="sbt"></button>
+                <!-- [D] 특수알파벳 버튼 활성화시 on클래스 추가 및 style="display:block"으로 수정 -->
+                <button type="button" title="특수알파벳" class="sbt5"></button>
+                <!-- [D] 내용 입력시 style="display:block"으로 수정 -->
+                <button type="button" title="입력 내용 삭제" id="clear_input_top" class="sbt3" style="display:block"></button>
+            </div>
+        </fieldset>
+    </form>
+    <!-- [D] 입력기 : <div class="write_lstw type">
+             특수알파벳 입력기 : <div class="write_lstw">
+    -->
+    <!-- 20150119 특수알파벳 입력기 작업 -->
+    <!-- [D] 해당 언어에 해당하는 문자 입력기 class명 다르게 넣기! (중요) -->
+    <!-- [D] 독일어/알바니아어 문자 입력기 -> write_lstw_sp v1-->
+    <!-- [D] 스페인어 문자 입력기 -> write_lstw_sp v2 -->
+    <!-- [D] 프랑스어/라틴어/포르투갈어 문자 입력기 -> write_lstw_sp v3 -->
+    <div class="write_lstw_sp v1" style="display:none">
+        <ul>
+            <!-- [D] 가장 마지막 li에 class last_lst추가 ex) <li class="editor_lst last_lst">-->
+            <!-- [D] 버튼 클릭시 활성화 -> a태그에 on클래스 추가 ex) class="edit_lk on"> -->
+            <li class="editor_lst"><a href="#" class="edit_lk">é</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">í</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">ú</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">ç</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ä</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ö</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ß</a></li>
+            <li class="editor_lst last_lst"><a href="#" class="edit_lk">ü</a></li>
+        </ul>
+    </div>
+
+    <!-- [D] 스페인어 문자 입력기 -> write_lstw_v2 -->
+    <div class="write_lstw_sp v2" style="display:none">
+        <ul>
+            <!-- [D] 가장 마지막 li에 class last_lst추가 ex) <li class="editor_lst last_lst">-->
+            <!-- [D] 버튼 클릭시 활성화 -> a태그에 on클래스 추가 ex) class="edit_lk on"> -->
+            <li class="editor_lst"><a href="#" class="edit_lk">á</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">é</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">í</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ó</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ú</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">ü</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">ñ</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">á</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">é</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">í</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ó</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ú</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ü</a></li>
+            <li class="editor_lst last_lst"><a href="#" class="edit_lk">ñ</a></li>
+        </ul>
+    </div>
+
+    <!-- [D] 프랑스어/라틴어/포르투갈어 문자 입력기 -> write_lstw_v3 -->
+    <div class="write_lstw_sp v3" style="display:none">
+        <ul>
+            <!-- [D] 가장 마지막 li에 class last_lst추가 ex) <li class="editor_lst last_lst">-->
+            <!-- [D] 버튼 클릭시 활성화 -> a태그에 on클래스 추가 ex) class="edit_lk on"> -->
+            <li class="editor_lst"><a href="#" class="edit_lk">ç</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">ã</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">á</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">â</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">à</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ó</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ô</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">õ</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">é</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ê</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">í</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ú</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ü</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ì</a></li>
+            <li class="editor_lst last_lst"><a href="#" class="edit_lk">è</a></li>
+        </ul>
+    </div>
+
+    <!-- [D] + 문자 입력기 -> write_lstw_v4 -->
+    <div class="write_lstw_sp v4" style="display:none">
+        <ul>
+            <!-- [D] 가장 마지막 li에 class last_lst추가 ex) <li class="editor_lst last_lst">-->
+            <!-- [D] 버튼 클릭시 활성화 -> a태그에 on클래스 추가 ex) class="edit_lk on"> -->
+            <li class="editor_lst"><a href="#" class="edit_lk">ç</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">ã</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">á</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">â</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk on">à</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ó</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ô</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">õ</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">é</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ê</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">í</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ú</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ü</a></li>
+            <li class="editor_lst"><a href="#" class="edit_lk">ì</a></li>
+            <li class="editor_lst last_lst"><a href="#" class="edit_lk">è</a></li>
+        </ul>
+    </div>
+
+    <!-- 자동완성 -->
+    <div class="write_lstw3" style="width:100%;display:none;">
+        <ul style="display:block;">
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>acer<em class="col8">독수리,협박하는 사람,사기꾼,매가오리</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>aber<em class="col8">나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>erir<em class="col8">구역,지역,아르,네모진 작은 화단</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="writef_em">á</em>acer<em class="col8">독수리,협박하는 사람,사기꾼,매가오리</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>aber<em class="col8">나무,수목,인쇄기의 회전 굴대 윗부분에 있는</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>erir<em class="col8">구역,지역,아르,네모진 작은 화단</em></a></li>
+        </ul>
+        <div class="global_option">
+            <ul>
+                <li>
+                    <a href="#" style="display: none;">자동완성 켜기</a>
+                    <a href="#" style="display: block;">자동완성 끄기</a>
+                </li>
+            </ul>
+            <a href="#" class="btn_close">닫기</a>
+        </div>
+    </div>
+
+    <!--  자동완성 끈 상태 -->
+    <div class="write_lstw3" style="width: 100%; display:none; ">
+        <ul style="display: none; ">
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>acer<em class="col8">독수리,협박하는 사람,사기꾼,매가오리</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>aber<em class="col8">나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는나무,수목,인쇄기의 회전 굴대 윗부분에 있는</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>erir<em class="col8">구역,지역,아르,네모진 작은 화단</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>acer<em class="col8">독수리,협박하는 사람,사기꾼,매가오리</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>aber<em class="col8">나무,수목,인쇄기의 회전 굴대 윗부분에 있는</em></a></li>
+            <li class="write_lst"><a href="#" class="write_lk"><em class="write_em">á</em>erir<em class="col8">구역,지역,아르,네모진 작은 화단</em></a></li>
+        </ul>
+        <div class="global_option">
+            <ul>
+                <li>
+                    <a href="#" style="display: block;">자동완성 켜기</a>
+                    <a href="#" style="display: none;">자동완성 끄기</a>
+                </li>
+            </ul>
+            <a href="#" class="btn_close">닫기</a>
+        </div>
+    </div>
+    <!-- //특수 알파벳 입력기 -->
+
+    <!-- 내가 찾은 단어 -->
+    <div class="write_lstw3" style="width:100%;display:none;">
+        <ul style="display:block;">
+            <li class="write_lst"><a href="#" class="write_lk">comer</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">haber paño de que cortar</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">señor</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">사랑</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">haber</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">sol</a></li>
+        </ul>
+        <div class="global_option">
+            <ul>
+                <li>
+                    <a href="#" style="display: block;">기록삭제</a>
+                </li>
+                <li>
+                   <a href="#" style="display: none;">내가 찾은 단어 켜기</a>
+                   <a href="#" style="display: block;">내가 찾은 단어 끄기</a>
+                </li>
+            </ul>
+            <a href="#" class="btn_close">닫기</a>
+        </div>
+    </div>
+
+     <!-- 내가 찾은 단어 -->
+    <div class="write_lstw3" style="width: 100%; display:none;">
+        <ul style="display: none; ">
+            <li class="write_lst"><a href="#" class="write_lk">comer</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">haber paño de que cortar</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">señor</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">사랑</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">haber</a></li>
+            <li class="write_lst"><a href="#" class="write_lk">sol</a></li>
+        </ul>
+        <div class="global_option">
+            <ul>
+                <li>
+                    <a href="#" style="display: none;">기록삭제</a>
+                </li>
+                <li>
+                    <a href="#" style="display: block;">내가 찾은 단어 켜기</a>
+                    <a href="#" style="display: none;">내가 찾은 단어 끄기</a>
+                </li>
+            </ul>
+            <a href="#" class="btn_close">닫기</a>
+        </div>
+    </div>
+<!-- //검색창 --></div>
+<hr>
+<!-- content -->
+<div id="container">
+
+<div class="info_box" style="display:block">
+	<h3 class="info_tit">내가 찾은 단어</h3>
+	<ul class="myw_lst">
+	<li class="myw_li"><a href="#" class="myw_txt">flamenco</a><a href="#" class="ico_x2"><span class="hc">내가 찾은 단어 삭제</span></a></li>
+    <!-- [D] 짝수번째 myw_li 에만 even 클래스 추가 <li class="myw_li even">-->
+	<li class="myw_li even"><a href="#" class="myw_txt">Don Quijottttttttytttttttttttttttttttttttttttttttttttttttttttton Quijottttttttyttttttttttttttttttttttttttttttttttttttttttttsddddddddddddt</a><a href="#" class="ico_x2"><span class="hc">내가 찾은 단어 삭제</span></a></li>
+	<li class="myw_li"><a href="#" class="myw_txt">Chupar</a><a href="#" class="ico_x2"><span class="hc">내가 찾은 단어 삭제</span></a></li>
+    <!-- [D] 짝수번째 myw_li 에만 even 클래스 추가 <li class="myw_li even">-->
+	<li class="myw_li even"><a href="#" class="myw_txt">paella</a><a href="#" class="ico_x2"><span class="hc">내가 찾은 단어 삭제</span></a></li>
+	<li class="myw_li"><a href="#" class="myw_txt">sol</a><a href="#" class="ico_x2"><span class="hc">내가 찾은 단어 삭제</span></a></li>
+	</ul>
+    <a href="#" class="btn_all_del">
+    	<span class="ico_x"></span>
+    	전체삭제
+    </a>
+</div>
+<div class="info_box">
+	<h3 class="info_tit">오늘의 단어</h3>
+	<!-- [D] 발음듣기 버튼 로딩시 load클래스 추가,발음듣기 활성화시 on클래스 추가 -->
+	<ul class="td_lst">
+	<li class="td_li frst_li">
+		<h4><a href="#" class="td_h">говори́ть</a><a href="#" class="ico_pron"><span class="hc">발음듣기</span></a></h4>
+		<p class="td_txt">친한, 친밀한, 벗, 친구, 통나무</p>
+	</li>
+	<li class="td_li">
+		<h4><a href="#" class="td_h">Fásol</a><a href="#" class="ico_pron load"><span class="hc">발음듣기</span></a></h4>
+		<p class="td_txt">강낭콩</p>
+	</li>
+	<li class="td_li last_li">
+		<h4><a href="#" class="td_h">говори́ть</a><a href="#" class="ico_pron on"><span class="hc">발음듣기</span></a></h4>
+		<p class="td_txt">섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다</p>
+	</li>
+	</ul>
+</div>
+
+<!--[D] 기본베너-->
+<div class="main_dn opendic">
+	<a href="javascript:void(0)" class="main_np">
+		<span class="img"></span>
+		<strong class="pnt"><b class="colb2">오픈사전</b><br>궁금한 단어 질문, 새로운 단어 등록</strong>
+	</a>
+</div>
+
+<div class="info_box">
+	<h3 class="info_tit">사전 이용 Tip</h3>
+	<!-- [D] 발음듣기 버튼 로딩시 load클래스 추가,발음듣기 활성화시 on클래스 추가 -->
+	<ul class="td_lst td_lst_v2">
+	<li class="td_li frst_li">
+		<a href="#" class="dic_lk bg_ime">
+			<p class="td_txt"><span class="img"></span>라틴어 <em class="colb2">편리하게 입력</em>하기<span class="ico_arr"></span></p>
+		</a>
+	</li>
+	<li class="td_li">
+		<a href="#" class="dic_lk bg_recent">
+			<p class="td_txt"><span class="img"></span>라틴어 <em class="colb2">내가 찾은 단어</em> 보기<span class="ico_arr"></span></p>
+		</a>
+	</li>
+	</ul>
+</div>
+
+<!-- [D] Type1 : Korean banner -->
+<div class="banner_opendic_vn">
+	<a href="#" class="inner">
+		<span class="img_sv"></span>
+		<span class="tit">베트남인을 위한 한국어사전 오픈</span>
+		<span class="dsc">최고 품질의 원어민 발음듣기, <br>활용형정보를 제공합니다.</span>
+	</a>	
+</div>
+<!-- [D] Type1 : Vietnamese Banner -->
+ <div class="banner_opendic_vn">
+	<a href="#" class="inner">
+		<span class="img_sv"></span>
+		<span class="tit2">Ra mắt từ điển tiếng Hàn dành <br>cho người Việt Nam</span>
+		<span class="dsc2">Cung cấp thông tin hữu ích và nghe phát âm <br>của người bản ngữ với chất lượng tốt nhất.</span>
+	</a>	
+</div> 
+
+<!-- [D] Type2 : Korean banner -->
+<div class="banner_opendic_vn s2">
+	<a href="#" class="inner">
+		<span class="img_sv"></span>
+		<span class="tit3">베트남인을 위한 한국어사전 오픈</span>
+		<span class="dsc3">최고 품질의 원어민 발음듣기, <br>활용형정보를 제공합니다.</span>	
+	</a>	
+</div>
+<!-- [D] Type2 : English banner -->
+ <div class="banner_opendic_vn s2">
+	<a href="#" class="inner">
+		<span class="img_sv"></span>
+		<span class="tit4">Korean dictionary <br>for Vietnamese open!</span>
+		<span class="dsc4">The high quality native pronunciation and useful <br>information provided.</span>
+	</a>	
+</div> 
+
+<div class="main_dn">
+    <a href="#" class="main_np"><span class="img"></span>말이 통하는 라틴어 회화<br>네이버 <span class="colb2">글로벌회화</span></a>
+</div>
+<div class="main_dn app">
+	<a href="#" class="main_np"><span class="img"></span>기다리던 앱이 드디어 나왔다! <br><b>네이버사전</b> <span class="colb2">앱 출시</span></a>
+</div>
+
+<!--<div class="main_offer">
+	<h4 class="main_h4">자료제공 : KUIS 출판부</h4>
+</div>-->
+  <!-- [D] layoutType이 pc일때는 pc용 컨텐츠를 불러옴 -->
+
+</div>
+
+<!-- iOS home shortcut layer -->
+<div class="layer_shortcut">
+	<div class="inner">
+		<p class="layer_shortcut_row">
+			<img src="img/la/ico_app_ios.png" width="55" height="55" alt="" class="ico_dict"><em class="text_color">라틴어사전</em>을 빠르고 간편하게<br>
+			이용하려면, <span class="ico_arrowup">공유</span>버튼을 눌러<br>
+			<em class="text_color">홈 화면에 추가하세요.</em>
+		</p>
+		<a href="" class="layer_shortcut_close" role="button"><span class="ico_x">레이어창 닫기</span></a>
+		<span class="layer_shortcut_arrow"></span>
+	</div>
+</div>
+<!-- //iOS home shortcut layer -->
+
+<!-- //content -->
+<hr>
+<div role="contentinfo" class="u_ft">	
+	<footer role="contentinfo">
+		<!-- QP예외코드 -->
+		<!-- 검색 -->
+		<form method="get" action="#">
+			<div class="u_hsft">
+				<!-- [D] 통합검색 버튼 유무에 따라,
+					 * 통합검색 버튼이 있는 경우: class="u_hs"
+					 * 통합검색 버튼이 없는 경우: class="u_hs u_hs_nous" -->
+				<fieldset class="u_hs">
+					<legend class="u_hc">검색</legend>
+					<div class="u_hsw">
+						<!-- [D] placeholder는 HTML5 DTD에서만 사용 가능. 그 외 DTD에서는 스크립트로 처리.
+							 * HTML5 : <input ... placeholder="안내메시지" class="u_it">
+							 * 그 외 : <input ... value="안내메시지" class="u_it u_sd"> -->
+						<div class="u_itw">
+							<input id="ac_input_bottom" type="text" name="query" title="검색어 입력" value="haber" maxlength="50" class="fKeyword u_it u_sd">
+							<button id="clear_input_bottom" type="button" class="u_clrt" style="display:block">입력 내용 삭제</button>
+						</div>
+						<button type="submit" class="u_hssbt u_hssbt_ss"><span class="u_vc">검색</span></button>
+					</div>
+				</fieldset>
+			</div>
+		</form>
+		<!-- //검색 -->		<!-- //QP예외코드 -->
+		<!-- [D] 오픈사전 참여배너 확대 추가 -->
+		    	
+
+		<!-- 출처표시 -->	
+		<dl class="source_marking">
+		<dt class="mk_tit">출처</dt>
+		<dd class="mk_lst">
+			<!-- [D] 몽골어-한국어 스킨일때 -->
+			<!--
+			<span class="mk_so">몽골어-한국어 사전<br>(울란바타르대학교)</span>
+			<span class="mk_so">한국어-몽골어 사전<br>(울란바타르대학교)</span>
+			<span class="mk_so">몽골어-한국어입문소사전<br>(도서출판 문예림)</span>
+			<span class="mk_so">최신 몽골어 한국어 사전<br>(도서출판 문예림)</span>
+			-->
+			<!-- [D] 몽골어-몽골어 스킨일때 -->
+			<!--
+			<span class="mk_so">монгол-солонгос толь<br>(ULAANBAATAR UNIVERSITY)</span>
+			<span class="mk_so">солонгос-монгол толь<br>(ULAANBAATAR UNIVERSITY)</span>
+			<span class="mk_so">монгол-солонгос солонгос-монгол жижиг толь<br>(MOONYERIM)</span>
+			<span class="mk_so">орчин цагийн монголсолонгостоль<br>(MOONYERIM)</span>
+			-->
+			
+			<!-- [D] 태국어 -->
+			<!--
+			<span class="mk_so">태국어-한국어 사전<br>(한국외국어대학교 지식출판원)</span>
+			<span class="mk_so">한국어-태국어 사전<br>(한국외국어대학교 지식출판원)</span>
+			<span class="mk_so">Thai-English Dictionary<br>(SE-ED)</span>
+			<span class="mk_so">Thai-English Dictionary<br>(Lexitron)</span>
+			<span class="mk_so">Dictionary of Buddhism<br>(P. A. PAYUTTO)</span>
+			-->
+			
+			<!-- [D] 베트남어-한국어 스킨일때 -->			
+			<span class="mk_so">베트남어-한국어 사전<br>(조재현<span class="cp">한국외국어대학교 지식출판원)</span></span>
+			<span class="mk_so">한국어-베트남어 사전<br>(송정남, 박연관, 이관우<span class="cp">한국외국어대학교 지식출판원)</span></span>
+			<span class="mk_so">베트남어 한국어 입문사전<br>(Nguyen Thi To Tam, 류지은<span class="cp">도서출판 문예림)</span></span>
+			<span class="mk_so">한국어 베트남어 대사전<br>(Le Huy Khoa 가나다 어학당<span class="cp">도서출판 문예림)</span></span>
+			<span class="mk_so">한국어-베트남어 입문소사전<br>(신연희, 박민규<span class="cp">도서출판 문예림)</span></span>
+			<span class="mk_so">베트남어-한국어 입문소사전<br>(신연희, 박민규<span class="cp">도서출판 문예림)</span></span>
+			<span class="mk_so">Vietnamese-English Dictionary<br>(Vietnam Lexicography Centre)</span>
+			<span class="mk_so">Vietnamese Dictionary<br>(Vietnam Lexicography Centre)</span>
+			
+			<!-- [D] 베트남어-베트남어 스킨일때 -->
+			<!--
+			<span class="mk_so">TỪ ĐIỂN VIỆT-HÀN<br>(Hankuk University of Foreign Studies)</span>
+			<span class="mk_so">TỪ ĐIỂN HÀN-VIỆT<br>(Hankuk University of Foreign Studies)</span>
+			<span class="mk_so">VIỆT-HÀN NHẬP MÔN TỪ ĐIỂN<br>(MOONYERIM)</span>
+			<span class="mk_so">Đại TỪ ĐIỂN HÀN-VIỆT<br>(MOONYERIM)</span>
+			<span class="mk_so">TỪ ĐIỂN HÀN-VIỆT Cơ bản<br>(MOONYERIM)</span>
+			<span class="mk_so">TỪ ĐIỂN VIỆT-HÀN Cơ bản<br>(MOONYERIM)</span>
+			<span class="mk_so">Vietnamese-English Dictionary<br>(Vietnam Lexicography Centre)</span>
+			<span class="mk_so">Vietnamese Dictionary<br>(Vietnam Lexicography Centre)</span>
+			-->
+		</dd>
+		</dl>   
+    	
+		<!-- [D] 언어설정 추가 : 맨위로 버튼에 대한 예외처리 재작업 필요 -->
+		<div class="set_lang">
+			<label for="selec_lang">언어설정</label>
+			<div class="selec_wrap">
+				<select id="selec_lang">
+					<option value="ru" selected="">러시아어</option>
+					<option value="pt">포르투갈어</option>
+					<option value="vi">베트남어</option>
+					<option value="tr">터키어</option>
+				</select>
+			</div>
+			<a class="u_ftst" href="javascript:nclk(this, "btm.top", "", "1");window.scrollTo(0, 1);"><span class="ico_top"></span>맨위로</a>
+		</div>		<!-- //[D] 언어설정 추가 : 맨위로 버튼에 대한 예외처리 재작업 필요 -->
+
+		<div class="inde_restriction">접속하신 단말/브라우저에서 네이버 어학사전이 제공하는 일부 기능이 작동하지 않을 수 있는 점 양해부탁드립니다.</div>
+		<p id="u_ftlkw" class="u_ftlkw">
+			<a href="#" class="u_ftlk">로그인</a> <a href="#" class="u_ftlk">전체 앱</a>
+			<!-- [D] 전체서비스 접기: <a class="u_ftlkbt u_ftlkbt_fd">전체서비스<span class="u_vc"> 접기</span></a> -->
+			<a href="#u_gnbuw2" class="u_ftlk">전체서비스<span class="u_vc"> 펼치기</span></a>
+		</p>
+		<p class="u_cr">
+			<span class="u_cri"><a href="http://m.help.naver.com/serviceMain.nhn?falias=mo_dic_comm&type=faq#faq" class="u_cra u_cra_v1">도움말</a></span>
+            <span class="u_cri"><a href="http://m.help.naver.com/serviceMain.nhn?falias=mo_dic_comm&type=faq#mail" class="u_cra">문의 및 신고</a></span>
+            <span class="u_cri u_cri_v1"><a href="#" class="u_cra u_cra_v1">ⓒ NAVER Corp.</a></span>
+		</p>
+	</footer>
+
+	<!-- Android home shortcut banner -->
+	<div class="shortcut">
+		<a href="" class="shortcut_click">
+			<img src="img/la/ico_app_an.png" width="30" height="30" alt="" class="shortcut_ico">
+			<span class="shortcut_text">네이버앱의</span><br>
+			<span class="shortcut_text2"><em class="shortcut_text2_color">라틴어사전</em> 홈 화면에 바로가기 추가</span>
+			<span class="shortcut_ico2"></span>
+		</a>
+	</div>
+	<!-- //Android home shortcut banner -->
+
+</div>
+
+<div class="footer_pc" style="display:none">
+	<div class="section_btm">
+		<ul>
+		<li class="footer_info">자료 제공 : KUIS 출판부</li>
+		<li>저자 : 최한우 편</li>
+		</ul>
+        <a onclick="clickcr(this, 'fot.top','','',event);" class="btn_top" title="TOP" href="#">TOP</a>
+	</div>
+	<div class="footer_inner">
+    	<p class="notice"><a onclick="clickcr(this, 'fot.notice','','',event);" target="_blank" href="http://blog.naver.com/dic_master/90148253029"><span class="notice_txt"><strong>[공지]</strong> 몽골어사전을 출시하였습니다.</span><span class="ico_new">new</span></a></p>
+		<ul>
+		<li class="first"><a href="http://blog.naver.com/dic_master" target="_blank" onclick="clickcr(this, 'fot.blog','','',event);">사전 공식 블로그</a></li>
+		<li><a href="http://help.naver.com/ops/step2/faq.nhn?fcatid=13812&amp;tbox=236&amp;faqType=0" target="_blank" onclick="clickcr(this, 'fot.help','','',event);">사전 도움말</a></li>
+		<li><a href="#" onclick="OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/mail.nhn',  param : 'upCatg=236'}); clickcr(this, 'fot.report','','',event); return false;">오류신고 및 의견제안</a></li>
+
+		</ul>
+		<address>
+			<em>Copyright ⓒ</em>
+			<a href="#" target="_blank">NAVER Corp.</a>
+			<span>All Rights Reserved.</span>
+		</address>
+	</div>
+</div>
+
+<div class="btn_mobile" style="display:none"><a onclick="goMobilePage('http://m.rudic.naver.com');"><img src="im/common/btn_mo_pc_ru.gif" width="980" height="110" alt="모바일 버전으로 보기"></a></div>
+
+<!-- [D] 마크업 확인용. 개발시 삭제 -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/entry.js"></script>
+<script type="text/javascript">
+// 선택한 언어 표시
+	$(function() {
+		var sName = 'langId' + '=',
+			cookieData = document.cookie,
+			start = cookieData.indexOf(sName),
+			sValue = '';
+
+		if(start != -1) {
+			start += sName.length;
+			var end = cookieData.indexOf(';', start);
+
+			if(end == -1) {
+				end = cookieData.length;
+			}
+			sValue = cookieData.substring(start, end);
+		}
+
+		this.setSelectOption = function(sLang) {
+			$('#selector').find('option').each(function() {
+				var sOptionVal = $(this).val();
+
+				if(sOptionVal == sLang) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		};
+		this.setSelectOption(unescape(sValue));
+	}());
+
+	// 쿠키 설정
+	function setCookie(sName, sValue, nDays) {
+		var d = new Date(),
+			expires = "expires="+d.toUTCString();
+			d.setTime(d.getTime() + (nDays*24*60*60*1000));
+
+		document.cookie = sName + "=" + sValue + "; path=/; expires=" + d.toGMTString() + ";";
+	}
+	// 셀렉트 선택 이벤트
+	$('#selector').change(function() {
+		var sLangId = $(this).find('option:selected').val(),
+			sLangValue = $(this).find('option:selected').text();
+
+		setCookie('langId', sLangId, 1);
+		setCookie('langValue', sLangValue, 1);
+		location.reload();
+	});
+
+// For iOS home shortcut layer
+$(".layer_shortcut_close").click(function() {
+	$(".layer_shortcut").hide();
+	return false;
+});
+</script>
+
+</body>
+</html>

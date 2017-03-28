@@ -1,0 +1,25 @@
+<form method="get" onsubmit="return bottomSearch(); return false;" name="search" id="footer_search" action="">
+    <div class="u_hsft" id="IDfooter_search">
+        <!-- [D] 통합검색 버튼 유무에 따라,
+             * 통합검색 버튼이 있는 경우: class="u_hs"  
+             * 통합검색 버튼이 없는 경우: class="u_hs u_hs_nous" -->
+        <fieldset class="u_hs">
+            <legend class="u_hc">검색</legend>
+            <div class="u_hsw">
+                <!-- [D] placeholder는 HTML5 DTD에서만 사용 가능. 그 외 DTD에서는 스크립트로 처리.
+                     * HTML5 : <input ... placeholder="안내메시지" class="u_it">
+                     * 그 외 : <input ... value="안내메시지" class="u_it u_sd"> -->
+                <div class="u_itw">
+                    <!--<input type="text" name="msearch" title="검색어 입력" value="指头" class="fKeyword u_it u_sd" />-->
+                    <input id="ac_input_bottom" type="search" name="query" title="검색어 입력" value="指头" class="fKeyword u_it u_sd" autocorrect="off" autocapitalize="off" autocomplete="off" onblur="handleKeywordInputBoxOnBlur('ac_input_bottom','');" onfocus="onFocusHandler('ac_input_bottom','');" onkeyup="chk_sc_value('ac_input_bottom', 'clear_input_bottom')" maxlength="50">
+                    
+                    <button id="clear_input_bottom" type="button" class="u_clrt" style="display:block" onclick="clear_value('ac_input_bottom','ac_input','clear_input_bottom','clear_input_top');clickcr(this, 'fot.del', '', '');">입력 내용 삭제</button> 
+                </div> 
+                <button type="submit" class="u_hssbt u_hssbt_ss" onclick="clickcr(this, 'fot.go', '', '');"><span class="u_hc">검색</span></button> 
+            </div>
+        </fieldset>
+    </div>
+</form>
+
+<!-- 맨위로 -->
+<a href="#" class="ico_top">Top</a>

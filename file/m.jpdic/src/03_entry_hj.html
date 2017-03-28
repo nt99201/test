@@ -1,0 +1,253 @@
+﻿<? include '00_header.html' ?>
+<div id="ct" role="main">
+
+		<!-- content -->
+		<div id="content" class=" detail_hj huri_on">
+			<ul class="m_tab">
+			<li class="on"><a href="/entry/hanja/1.nhn" onclick="clickcr(this,'tab.entry','','',event);">뜻</a></li>
+			<li><a href="/search.nhn?range=word&amp;page=1&amp;q=%E4%B8%AD" onclick="clickcr(this,'tab.word','','',event);">단어</a></li>
+			<li><a href="/search.nhn?range=example&amp;page=1&amp;q=%E4%B8%AD" onclick="clickcr(this,'tab.example','','',event);">예문</a></li>
+			<li class="last"><a href="/search.nhn?range=meaning&amp;page=1&amp;q=%E4%B8%AD" onclick="clickcr(this,'tab.content','','',event);">본문</a></li>
+			</ul>
+            <!-- 20160823 접근성 추가
+                [D]tab 영역을 선택시 아래의 타이틀을 변경해주세요.
+                예) <h3 class="blind">뜻</h3>
+                <h3 class="blind">단어</h3>
+                <h3 class="blind">예문</h3>
+                <h3 class="blind">본문</h3>
+             -->
+            <h3 class="blind">뜻</h3>
+            <!-- //20160823 접근성 추가 -->
+			<!-- entry_header -->
+			<div class="spot_area">
+				<div class="resize">
+					<div id="reviewWord" data-entrytype="HANJA" data-entryid="1" data-entryname="中" style="display:none"></div>
+					<div class="hanja">
+						<h3><span class="maintitle">中</span></h3>
+
+
+
+						<a href="/jlpt/level-4/parts-0/p1.nhn" onclick="nclk (this, 'etr.jlpt', '', 1);" class="ico_jlpt4"><span class="blind">JLPT 4급</span></a>
+							<span class="ico_so"><span class="blind">소1</span></span>
+					</div>
+					<dl class="top_dn">
+					<dt class="top_dt"><span class="blind">Phonetic</span></dt>
+					<dd class="jp" lang="ja">
+							ちゅう
+					</dd>
+					<dt class="top_dt2"><span class="blind">Ideograph</span></dt>
+					<dd class="jp" lang="ja">
+							なか
+							<span class="mid_ico">·</span>あたる
+					</dd>
+					</dl>
+					<dl class="top_dn top_dn_v2">
+					<dt class="top_dt3"><span class="blind">총획</span></dt>
+					<dd>4획</dd>
+					<dt class="top_dt4"><span class="blind">부수</span></dt>
+					<dd>丨(1획)<em class="ps2">가운데 중 中</em></dd>
+					</dl>
+					<div class="top_rdn">
+						<a href="javascript:void(0);" class="hlpe" onclick="$Element($('layer_grade_info')).toggle();"><span class="blind">상용한자 정보 보기</span></a>상용한자 정보
+						<div id="layer_grade_info" class="rdn_ly" style="display:none">
+							<span class="arr"></span>
+							<p>상용한자는 일본 문부과학성 국어심의회가 발표한 표준한자입니다.</p>
+							<p class="ft_col">우측으로 갈수록 난이도가 높은 단어입니다.</p>
+							<div class="ly_dn">
+								<span class="ico_so"><span class="blind">소1</span></span><span class="col">&lt;</span>
+								<span class="ico_so2"><span class="blind">소2</span></span><span class="col2">&lt;</span>
+								<span class="ico_so3"><span class="blind">소3</span></span><span class="col3">&lt;</span>
+								<span class="ico_so4"><span class="blind">소4</span></span><span class="col4">&lt;</span>
+								<span class="ico_so5"><span class="blind">소5</span></span><span class="col5">&lt;</span>
+								<span class="ico_so6"><span class="blind">소6</span></span><span class="col6">&lt;</span>
+								<span class="ico_so7"><span class="blind">중학</span></span>
+							</div>
+							<a href="javascript:void(0);" class="btn_clse" onclick="$Element($('layer_grade_info')).hide();"><span class="blind">상용한자 정보 레이어 닫기</span></a>
+						</div>
+					</div>
+					<button title="단어장 저장" type="button" class="word_save save2wordbook_btn"><span class="blind">단어장 저장</span></button>
+				</div>
+			</div>
+			<!-- //entry_header -->
+			<!-- toolbar -->
+			<!-- 20160809 접근성 수정 -->
+			<h3 id="tab_title" class="blind">뜻 선택</h3>
+			<!-- //20160809 접근성 수정 -->
+            <div class="view_ctrl">
+                <div class="hurigana">
+                    <input type="checkbox" id="hurigana" class="huriOnChk">
+                    <label for="hurigana"><strong>Furigana</strong></label>
+                </div>
+                <!--
+				<button type="button" title="예문닫기" class="ex close expand_all_exam_bt btn_txt_style1"><span class="hc">예문닫기</span></button>
+                -->
+                <button type="button" title="예문더보기" class="ex open expand_all_exam_bt btn_txt_style1"><span class="hc">View more Examples</span></button>
+
+                <a href="javascript:void(0);" onclick="nclk (this, 'top.small', '', 1);" class="fontSizeBtn ft_small btn_txt_style1 on" size="" act="small" title="글자크기 작게"><span class="hc">가</span></a>
+                <a href="javascript:void(0);" onclick="nclk (this, 'top.large', '', 1);" class="fontSizeBtn ft_big btn_txt_style1 on" size="ft_mod" act="big" title="글자크기 크게"><span class="hc">가</span></a>
+            </div>
+			<!-- //toolbar -->
+			<div class="dt">
+				<ul class="tb">
+				<li><a href="#">Def.</a></li>
+				<!-- [D] 탭 선택시 on 클래스 추가 -->
+				<li><a href="#" class="on">Phonetic</a></li>
+				<li><a href="#">Ideograph</a></li>
+				</ul>
+			</div>
+<div class="dc section_box 1" id="dc_cont">
+			<!-- tc-panels -->
+			<div class="tc-panels">
+			<!-- tc-panel 1 -->
+			<div class="tc-panel tc-selected">
+			<div class="section section_v3  section_phonetic">
+				<h5 class="">음독</h5>
+				<h6 class="entry"><a href="/entry/jk/JK000000023609.nhn" class="jp" lang="ja">くうちゅう</a> [<span class="autolink2" lang="ja" data-query="空" onclick="nclk(this, 'han.autolink', '', 1);">空</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EA%B3%B5%EC%A4%91">공중</a>; <a class="kor_link" href="/search.nhn?query=%EC%B2%9C%EA%B3%B5">천공</a>(<span class="jp" lang="ja">天空</span>).</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000013141.nhn" class="jp" lang="ja">かいちゅう</a> [<span class="autolink2" lang="ja" data-query="懐" onclick="nclk(this, 'han.autolink', '', 1);">懐</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사, ス타동사]</span><a class="kor_link" href="/search.nhn?query=%ED%9A%8C%EC%A4%91">회중</a>; <a class="kor_link" href="/search.nhn?query=%ED%98%B8%EC%A3%BC%EB%A8%B8%EB%8B%88">호주머니</a> 속; <a class="kor_link" href="/search.nhn?query=%ED%8F%AC%EC%BC%93">포켓</a><a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EB%82%98">이나</a> <a class="kor_link" href="/search.nhn?query=%ED%92%88%EC%86%8D">품속</a>에 <a class="kor_link" href="/search.nhn?query=%EB%84%A3%EB%8B%A4">넣어</a> <a class="kor_link" href="/search.nhn?query=%EA%B0%80%EC%A7%80%EB%8B%A4">가지고</a> <a class="kor_link" href="/search.nhn?query=%EC%9E%88%EB%8B%A4">있음</a>.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000030884.nhn" class="jp" lang="ja">こちゅう</a> [<span class="autolink2" lang="ja" data-query="湖" onclick="nclk(this, 'han.autolink', '', 1);">湖</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%ED%98%B8%EC%A4%91">호중</a>; <a class="kor_link" href="/search.nhn?query=%ED%98%B8%EC%88%98">호수</a> 속.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000034116.nhn" class="jp" lang="ja">さちゅう</a> [<span class="autolink2" lang="ja" data-query="砂" onclick="nclk(this, 'han.autolink', '', 1);">砂</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="mid_ico"><span class="mid_ico">·</span></span><span class="autolink2" lang="ja" data-query="沙" onclick="nclk(this, 'han.autolink', '', 1);">沙</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%82%AC%EC%A4%91">사중</a>; <a class="kor_link" href="/search.nhn?query=%EB%AA%A8%EB%9E%98">모래</a> 속.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000040068.nhn" class="jp" lang="ja">じゅうちゅうはっく</a> [<span class="autolink2" lang="ja" data-query="十" onclick="nclk(this, 'han.autolink', '', 1);">十</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="autolink2" lang="ja" data-query="八" onclick="nclk(this, 'han.autolink', '', 1);">八</span><span class="autolink2" lang="ja" data-query="九" onclick="nclk(this, 'han.autolink', '', 1);">九</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span>(<span class="col_red">→</span><a href="/search.nhn?range=all&amp;q=%E3%81%98%E3%81%A3%E3%81%A1%E3%82%85%E3%81%86%E3%81%AF%E3%81%A3%E3%81%8F"><span class="jp" lang="ja">じっちゅうはっく</span></a>)</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000048843.nhn" class="jp" lang="ja">せっちゅう</a> [<span class="autolink2" lang="ja" data-query="雪" onclick="nclk(this, 'han.autolink', '', 1);">雪</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%84%9C%EB%8B%A4">설</a>중; 눈 속.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000057229.nhn" class="jp" lang="ja">ちゅうび</a> [<span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="autolink2" lang="ja" data-query="火" onclick="nclk(this, 'han.autolink', '', 1);">火</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EB%AD%89%EA%B7%BC%ED%95%98%EB%8B%A4">뭉근한</a> <a class="kor_link" href="/search.nhn?query=%EB%B6%88%EA%B3%BC">불과</a> <a class="kor_link" href="/search.nhn?query=%EA%B4%84%ED%95%98%EB%8B%A4">괄한</a> 불 <a class="kor_link" href="/search.nhn?query=%EC%A4%91%EA%B0%84">중간</a> <a class="kor_link" href="/search.nhn?query=%EC%A0%95%EB%8F%84">정도</a>의 <a class="kor_link" href="/search.nhn?query=%EC%84%B8%EB%8B%A4">센</a> 불.(<span class="col_red">↔</span><a href="/search.nhn?range=all&amp;q=%E5%BC%B7%E7%81%AB"><span class="jp" lang="ja">強火</span></a><span class="mid_ico">·</span><a href="/search.nhn?range=all&amp;q=%E3%81%A8%E3%82%8D%E7%81%AB"><span class="jp" lang="ja">とろ</span><span class="jp" lang="ja">火</span></a>)</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000060006.nhn" class="jp" lang="ja">でいちゅう</a> [<span class="autolink2" lang="ja" data-query="泥" onclick="nclk(this, 'han.autolink', '', 1);">泥</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EC%A4%91">이중</a>; <a class="kor_link" href="/search.nhn?query=%EC%A7%84%ED%9D%99">진흙</a> 속.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000093481.nhn" class="jp" lang="ja">りょちゅう</a> [<span class="autolink2" lang="ja" data-query="旅" onclick="nclk(this, 'han.autolink', '', 1);">旅</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%97%AC%EC%A4%91">여중</a>; <a class="kor_link" href="/search.nhn?query=%EC%97%AC%ED%96%89">여행</a><a class="kor_link" href="/search.nhn?query=%ED%95%98%EA%B3%A0">하고</a> <a class="kor_link" href="/search.nhn?query=%EC%9E%88%EB%8B%A4">있는</a> <a class="kor_link" href="/search.nhn?query=%EB%8F%99%EC%95%88">동안</a>.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK100011351001.nhn" class="jp" lang="ja">おはなしちゅう</a> [お<span class="autolink2" lang="ja" data-query="話" onclick="nclk(this, 'han.autolink', '', 1);">話</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EC%95%BC%EA%B8%B0">이야기</a>[<a class="kor_link" href="/search.nhn?query=%EB%A7%90%EC%94%80">말씀</a>] <a class="kor_link" href="/search.nhn?query=%EB%8F%84%EC%A4%91">도중</a>; (<a class="kor_link" href="/search.nhn?query=%EC%A0%84%ED%99%94">전화</a><a class="kor_link" href="/search.nhn?query=%EC%97%90%EC%84%9C">에서</a>) <a class="kor_link" href="/search.nhn?query=%ED%86%B5%ED%99%94">통화</a>중.</span>
+				</li>
+                </ul>
+			</div>
+			</div>
+			<!-- //tc-panel 1 -->
+			<!-- tc-panel 2 -->
+			<div class="tc-panel">
+			<div class="section section_v3  section_ideographic">
+				<h5 class="">훈독</h5>
+				<h6 class="entry"><a href="/entry/jk/JK000000058676.nhn" class="jp" lang="ja">つきなか</a> [<span class="autolink2" lang="ja" data-query="月" onclick="nclk(this, 'han.autolink', '', 1);">月</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="mid_ico">·</span><span class="autolink2" lang="ja" data-query="月" onclick="nclk(this, 'han.autolink', '', 1);">月</span><span class="autolink2" lang="ja" data-query="半" onclick="nclk(this, 'han.autolink', '', 1);">半</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span>(<span class="col_red">→</span><a href="/search.nhn?range=all&amp;q=%E3%81%A4%E3%81%8D%E3%81%AA%E3%81%8B%E3%81%B0"><span class="jp" lang="ja">つきなかば</span></a>)</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000065191.nhn" class="jp" lang="ja">なかおち</a> [<span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="autolink2" lang="ja" data-query="落" onclick="nclk(this, 'han.autolink', '', 1);">落</span>ち]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%83%9D%EC%84%A0">생선</a>의 <a class="kor_link" href="/search.nhn?query=%EC%96%91%EC%AA%BD">양쪽</a> 살을 <a class="kor_link" href="/search.nhn?query=%EB%B0%9C%EB%9D%BC%EB%82%B4%EB%8B%A4">발라낸</a> 후의 <a class="kor_link" href="/search.nhn?query=%EA%B0%80%EC%9A%B4%EB%8D%B0">가운데</a> <a class="kor_link" href="/search.nhn?query=%EB%93%B1%EB%BC%88">등뼈</a> <a class="kor_link" href="/search.nhn?query=%EB%B6%80%EB%B6%84">부분</a>.(<span class="col_red">=</span><a href="/search.nhn?range=all&amp;q=%E3%81%AA%E3%81%8B%E3%81%86%E3%81%A1"><span class="jp" lang="ja">なかうち</span></a>)</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000065233.nhn" class="jp" lang="ja">なかじきり</a> [<span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="autolink2" lang="ja" data-query="仕" onclick="nclk(this, 'han.autolink', '', 1);">仕</span><span class="autolink2" lang="ja" data-query="切" onclick="nclk(this, 'han.autolink', '', 1);">切</span>(り)]</h6>
+				<span class="pin">[명사]</span>
+				<ol class="lst lst_v3">
+									<li class="inner_lst">
+										<span class="lst_txt"><a class="kor_link" href="/search.nhn?query=%EC%A7%91%EC%95%88">집안</a><a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EB%82%98">이나</a> <a class="kor_link" href="/search.nhn?query=%EB%B0%A9%EC%95%88">방안</a>의 <a class="kor_link" href="/search.nhn?query=%EC%B9%B8%EB%A7%89%EC%9D%B4">칸막이</a>; <a class="kor_link" href="/search.nhn?query=%EC%96%B4%EA%B0%84%EC%9E%A5%EC%A7%80">어간장지</a>.</span>
+									</li>
+									<li class="inner_lst">
+										<span class="lst_txt"><a class="kor_link" href="/search.nhn?query=%EC%83%81%EC%9E%90">상자</a> <a class="kor_link" href="/search.nhn?query=%EB%94%B0%EC%9C%84">따위</a>의 속에 간을 <a class="kor_link" href="/search.nhn?query=%EC%A7%80%EB%A5%B4%EB%8B%A4">지르는</a> 것.</span>
+									</li>
+				</ol>
+				<h6 class="entry"><a href="/entry/jk/JK000000065306.nhn" class="jp" lang="ja">なかには</a> [<span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>には]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[부사]</span>(그)중<a class="kor_link" href="/search.nhn?query=%EC%97%90%EB%8A%94">에는</a>.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000065335.nhn" class="jp" lang="ja">なかぼね</a> [<span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span><span class="autolink2" lang="ja" data-query="骨" onclick="nclk(this, 'han.autolink', '', 1);">骨</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EB%AC%BC%EA%B3%A0%EA%B8%B0">물고기</a>의 <a class="kor_link" href="/search.nhn?query=%EB%93%B1%EB%BC%88">등뼈</a>.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000072112.nhn" class="jp" lang="ja">はらなか</a> [<span class="autolink2" lang="ja" data-query="原" onclick="nclk(this, 'han.autolink', '', 1);">原</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><status>[<a class="kor_link" href="/search.nhn?query=%EC%95%84%EC%96%B4">아어</a>(<span class="jp" lang="ja">雅語</span>)]</status>들의 <a class="kor_link" href="/search.nhn?query=%EB%B3%B5%ED%8C%90">복판</a>; <a class="kor_link" href="/search.nhn?query=%EB%93%A4%ED%8C%90">들판</a> <a class="kor_link" href="/search.nhn?query=%EA%B0%80%EC%9A%B4%EB%8D%B0">가운데</a>.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000072118.nhn" class="jp" lang="ja">はらのなか</a> [<span class="autolink2" lang="ja" data-query="腹" onclick="nclk(this, 'han.autolink', '', 1);">腹</span>の<span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span>(<a class="kor_link" href="/search.nhn?query=%EB%A7%88%EC%9D%8C%EC%86%8D">마음)속</a>; <a class="kor_link" href="/search.nhn?query=%EB%B1%83%EC%86%8D">뱃속</a>.(<span class="col_red">=</span><a href="/search.nhn?range=all&amp;q=%E3%81%AF%E3%82%89%E3%81%AE%E3%81%86%E3%81%A1"><span class="jp" lang="ja">はらのうち</span></a>)</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000083472.nhn" class="jp" lang="ja">まちなか</a> [<span class="autolink2" lang="ja" data-query="町" onclick="nclk(this, 'han.autolink', '', 1);">町</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%8B%9C%EB%82%B4">시내</a>; <a class="kor_link" href="/search.nhn?query=%EC%8B%9C%EC%A4%91">시중</a>; <a class="kor_link" href="/search.nhn?query=%EC%8B%9C%EA%B0%80">시가</a>지; <a class="kor_link" href="/search.nhn?query=%EB%B2%88%ED%99%94%EA%B0%80">번화가</a>.</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000083908.nhn" class="jp" lang="ja">まよなか</a> [<span class="autolink2" lang="ja" data-query="真" onclick="nclk(this, 'han.autolink', '', 1);">真</span><span class="autolink2" lang="ja" data-query="夜" onclick="nclk(this, 'han.autolink', '', 1);">夜</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%ED%95%9C%EB%B0%A4%EC%A4%91">한밤중</a>; <a class="kor_link" href="/search.nhn?query=%EC%8B%AC%EC%95%BC">심야</a>.(<span class="col_red">=</span><a href="/search.nhn?range=all&amp;q=%E5%A4%9C%E3%81%B5%E3%81%91"><span class="jp" lang="ja">夜</span><span class="jp" lang="ja">ふけ</span></a>)</span>
+				</li>
+                </ul>
+				<h6 class="entry"><a href="/entry/jk/JK000000089155.nhn" class="jp" lang="ja">やまなか</a> [<span class="autolink2" lang="ja" data-query="山" onclick="nclk(this, 'han.autolink', '', 1);">山</span><span class="autolink2" lang="ja" data-query="中" onclick="nclk(this, 'han.autolink', '', 1);">中</span>]</h6>
+                <ul class="lst lst_v2 lst_v3">
+                <li class="inner_lst">
+					<span class="lst_txt"><span class="pin">[명사]</span><a class="kor_link" href="/search.nhn?query=%EC%82%B0%EC%A4%91">산중</a>; 산속.(<span class="col_red">=</span><a href="/search.nhn?range=all&amp;q=%E3%81%95%E3%82%93%E3%81%A1%E3%82%85%E3%81%86"><span class="jp" lang="ja">さんちゅう</span></a>)</span>
+				</li>
+                </ul>
+			</div>
+			</div>
+			<!-- //tc-panel 2 -->
+			</div>
+			<!-- //tc-panels -->
+</div>
+			<div class="section2">
+				<div class="nav_sec">
+					<a onclick="clickcr(this,'btm.search','','',event);" class="all" href="/search.nhn?range=all&amp;q=%E4%B8%AD" title="'中'의 전체 검색결과 보기">'<strong><span class="jp" lang="ja">中</span></strong>'의 전체 검색결과 보기</a>
+					<a onclick="clickcr(this,'ext.word','','',event);" href="/search.nhn?range=word&amp;page=1&amp;q=%E4%B8%AD" title="'中'의 단어 검색결과 보기">단어</a><em>(381)</em> <span class="bar">|</span>
+					<a onclick="clickcr(this,'ext.idiom','','',event);" href="/search.nhn?range=example&amp;page=1&amp;q=%E4%B8%AD" title="'中'의 예문 검색결과 보기">예문</a><em>(1,181)</em> <span class="bar">|</span>
+					<a onclick="clickcr(this,'ext.example','','',event);" href="/search.nhn?range=meaning&amp;page=1&amp;q=%E4%B8%AD" title="'中'의 본문 검색결과 보기">본문</a><em>(578)</em>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+</div>
+<? include '00_footer_entry.html' ?>

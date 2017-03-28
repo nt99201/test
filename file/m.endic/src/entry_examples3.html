@@ -1,0 +1,212 @@
+<!--[D] 엔트리 폰트 조정 -->
+<!--[D] 1단계 - 클래스 없음 -->
+<!--[D] 2단계 - fs2-->
+<!--[D] 3단계 - fs3-->
+<!--[D] 4단계 - fs4-->
+<!--[D] 5단계 - fs5-->
+
+<!-- 이용자 참여 번역문 -->
+<!-- 5개 이상 번역문 (더보기 버튼 있음) -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+
+    <section class="section_entry">
+        <h2 class="u_hc">단어 섹션</h2>
+        <? include 'layer_option_menu.html' ?>
+
+        <div class="entry_word">
+            <? include 'entry_headword8.html' ?>
+        </div>
+    </section>
+
+    <!-- 변경 -->
+    <div class="section_usertrans_tit">
+		<h2>이용자 참여 번역문</h2><span class="total_num">총<em>1</em>개</span><em class="num">(3개 대기중)</em>		
+
+		<div class="lnk_notice">
+
+			<span class="ly_cont_clt">
+				<span class="ask">
+					<a href="#1" class="link"><span class="hc">도움말</span></a>
+				</span>
+			</span>
+			
+		</div>
+
+	</div>
+    <section class="section_entry">
+        <!-- 이용자 참여 번역문 - 5개 이상 더보기 -->
+        <div class="entry_example">
+            <div class="usertrans_btn_wrap">
+                <div class="trans_lang_select">
+                    <!-- 20160819 접근성 추가 -->
+                    <select id="select_lang" title="언어선택">
+                        <option value="ko" selected="selected">한국어</option>
+                        <option value="zh-cn">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="">Indonesia</option>
+                    </select>
+                    <!-- //20160819 접근성 추가 -->
+                </div>
+                <button type="button" class="btn_show_exam"><span class="hc">예문 상세보기</span></button>
+                <button type="button" class="btn_show_video"><span class="hc">영상보기</span></button>
+                <button type="button" class="btn_join_trans">번역하기</button>
+            </div>
+
+            <div class="transbox_wrap" style="display: block;">
+                <div class="inner_wrap">
+                    <!-- [D] 클릭 시 label 요소에 display:none -->
+                    <textarea rows="4" class="transbox">장난, 욕설 여부 확인 후 바로 이용자 참여 번역문으로 등록됩니다.</textarea>
+                    <!--<textarea rows="4" class="transbox">그래서 당신은 1973년까지 회상, 어디 공식적으로 북쪽, 남쪽, 남한과 미국인들 간의 평화 파리</textarea>-->
+                    <!-- [D] 텍스트 입력 시 숫자 변경 -->
+                    <p class="num_area">
+                        <strong class="num">15</strong><span class="total_num">/1500</span>
+                    </p>
+                    <div class="btn_area">
+                        <a href="#" class="btn_ok">확인</a>
+                        <a href="#" class="btn_cancel">취소</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- [D] 대기중일 경우 waiting클래스 추가 -->
+            <ul class="lst_usertrans">
+                <li>
+                    <div class="example_wrap">
+                        <span class="tag gray">中文</span>
+                        <p class="user_mean">룸 서비스를 주문하다</p>
+
+                        <div class="user_mean_wrap">
+                            <p class="user_info">
+                                <a href="#" class="username">최우동(emma****)</a>
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="배지명" class="badge">
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="2014" class="badge">
+                                <span class="bar"></span>
+                                <em class="date">2015-05-21</em>
+                            </p>
+                            <div class="btn_area">
+                                <button type="button" class="like"><span class="hc">추천: </span>278</button>
+                                <button type="button" class="dislike"><span class="hc">비 추천: </span>7</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="waiting">
+                    <div class="example_wrap">
+                        <span class="tag gray">대기중</span>
+                        <p class="user_mean">룸 서비스를 주문하다</p>
+
+                        <div class="user_mean_wrap">
+                            <p class="user_info">
+                                <a href="#" class="username">최우동(emma****)</a>
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="배지명" class="badge">
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="2014" class="badge">
+                                <span class="bar"></span>
+                                <em class="date">2015-05-21</em>
+                            </p>
+                        </div>
+                        <button type="button" class="btn_report">신고</button>
+                    </div>
+                </li>
+                <li class="waiting">
+                    <div class="example_wrap">
+                        <span class="tag gray">대기중</span>
+                        <p class="user_mean">나도 번역중이예요 지금 다같이</p>
+
+                        <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                        <div class="user_mean_wrap">
+                            <p class="user_info">
+                                <a href="#" class="username">최우동(emma****)</a>
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="배지명" class="badge">
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="2014" class="badge">
+                                <span class="bar"></span>
+                                <em class="date">2015-05-21</em>
+                            </p>
+                            <div class="btn_area">
+                                <button type="button" class="like"><span class="hc">추천: </span>278</button>
+                                <button type="button" class="dislike"><span class="hc">비 추천: </span>7</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 변경 : 추가 -->
+                <li class="notice">
+                    <p>정확하지 않은 정보가 포함될 수 있습니다. <br>번역자 배지는 전체 참여 번역문 앞자리 수 입니다.</p>
+                </li>
+                <li style="display:none">
+                    <div class="example_wrap">
+                        <span class="tag gray">中文</span>
+                        <p class="user_mean">룸 서비스를 주문하다</p>
+
+                        <div class="user_mean_wrap">
+                            <p class="user_info">
+                                <a href="#" class="username">최우동(emma****)</a>
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="배지명" class="badge">
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="2014" class="badge">
+                                <span class="bar"></span>
+                                <em class="date">2015-05-21</em>
+                            </p>
+                            <div class="btn_area">
+                                <button type="button" class="like"><span class="hc">추천: </span>278</button>
+                                <button type="button" class="dislike"><span class="hc">비 추천: </span>7</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="display:none">
+                    <div class="example_wrap">
+                        <span class="tag gray">中文</span>
+                        <p class="user_mean">룸 서비스를 주문하다</p>
+
+                        <div class="user_mean_wrap">
+                            <p class="user_info">
+                                <a href="#" class="username">최우동(emma****)</a>
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="배지명" class="badge">
+                                <img src="http://dev.ui.naver.com/tmp/?19x19" width="19" height="19" alt="2014" class="badge">
+                                <span class="bar"></span>
+                                <em class="date">2015-05-21</em>
+                            </p>
+                            <div class="btn_area">
+                                <button type="button" class="like"><span class="hc">추천: </span>278</button>
+                                <button type="button" class="dislike"><span class="hc">비 추천: </span>7</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 변경 : 버튼 추가 -->
+    <div class="example_btn_wrap">
+        <button class="btn_lst_more_show"><span class="txt">더보기</span><strong class="num">15</strong><span class="total_num">/120,647</span></button>
+    </div>
+
+    <!-- 변경 : 영역 추출 -->
+    <!-- [D] 번역 의견 없을 때 숫자 영역에 display:none-->
+    <!-- [D] 의견쓰기 클릭시 '의견쓰기 취소'로 text 변경 -->
+    <div class="section_comment_tit"><h2>번역 의견</h2><em class="num" style="display:inline-block">총 3개</em> <button type="button" class="btn_write_comment">의견쓰기</button></div>
+    <section class="section_entry">
+        <div class="comment_wrap">
+            <? include 'entry_examples_comment.html' ?>
+        </div>
+    </section>
+
+    <section class="section_entry">
+        <ul class="examples_tab">
+            <li class="tab_item on"><a href="#">비슷한 예문</a></li>
+            <li class="tab_item "><a href="#">번역을 기다리는 예문</a></li>
+        </ul>
+        <!-- 20160819 접근성수정
+            [D] 상위 tab에 활성화에 따라 아래의 타이틀을 변경해주세요.
+            예)<h3 class="blind">비슷한 예문</h3>
+            <h3 class="blind">번역을 기다리는 예문</h3>
+        -->
+        <h3 class="blind">비슷한 예문</h3>
+        <!-- //20160819 접근성수정 -->
+        <? include 'entry_examples_tab1.html' ?>
+    </section>
+
+
+    <? include 'entry_footer.html' ?>
+</div>

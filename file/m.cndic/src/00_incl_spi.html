@@ -1,0 +1,145 @@
+<? if($langType == 'cnkr_kr' || $langType == 'cnkr_cn'){ ?> 
+    <div class="share_area">
+        <div id="spi" class="naver-splugin"
+        data-style="sns"
+        data-url="http://m.star.naver.com/girlsgeneration/news/end?id=2416214"
+        data-title="소녀시대, 'Mr.Mr.' 국내 일간차트 올킬..글로벌 차트 석권"
+        data-kakaotalk-image-url="http://mimgnews1.naver.net/image/108/2014/03/22/2014032208111076164_1_59_20140322081402.jpg?type=w540"
+        data-line-image-url="http://mimgnews1.naver.net/image/108/2014/03/22/2014032208111076164_1_59_20140322081402.jpg?type=w540"
+        data-oninitialize="nhn.sample.func(this);"></div>
+    </div>
+<? }else if($langType == 'krcn_kr' || $langType == 'krcn_cn'){ ?> 
+    <!-- 한중사전 소셜플러그인 영역 -->
+    <div class="share_area">
+        <!-- [D] 중국어용 공유하기 팝업, 
+                한/영/일 일땐 share_area 아래 내용(css 포함) 삭제 후 기존의 공통 플러그인을 불러온다.
+        -->
+        <link rel="stylesheet" href="css/spi_cn_m.css">
+        <div class="naver-splugin">
+            <div class="spi_wrap layer_share_on ">    
+                <div class="spi">       
+                    <div class="spug">          
+                        <a href="#" class="spi_ico sns_blog"></a>
+                        <a href="#" class="spi_ico sns_wechat"></a>
+                        <a href="#" class="spi_ico sns_sina"></a>
+                        <a href="#" class="spi_ico sns_tencent"></a>
+                        <a href="#" class="spi_ico sns_kakaotalk"></a>
+                        <a href="#" class="spi_ico sns_band"></a>
+                        <a href="#" class="spi_ico sns_share">보내기</a>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 한중사전 소셜플러그인 영역 -->
+
+    <!-- [D] 중국어용 공유하기 팝업, 한/영/일 일땐 display:none; -->
+    <div id="naver-splugin-wrap-cn" style="display:none;">
+        <!-- [D] top의 위치는 공통플러그인과 동일한 조건으로 동작 -->
+        <div class="spi_card" style="display: block; top:auto;">
+            <strong class="h_spi_card">공유하기</strong>
+            <div class="spi_area" style="visibility: visible;">
+                <div class="spi_swipe" style="width: 281px;">
+                    <div class="spi_swipe_area" style="width: 281px; left: 0px; transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                        <div>
+                            <a href="#" class="spim_be lnk_blog"><span>블로그</span></a>
+                            <a href="#" class="spim_be lnk_wechat"><span>웨이씬</span></a>
+                            <a href="#" class="spim_be lnk_sina"><span>씬랑웨이보</span></a>
+                            <a href="#" class="spim_be lnk_tencent"><span>텅쉰웨이보</span></a>
+                            <a href="#" class="spim_be lnk_kakaotalk"><span>카카오톡</span></a>
+                            <a href="#" class="spim_be lnk_band"><span>밴드</span></a>
+                            <a href="#" class="spim_be lnk_memo"><span>메모</span></a>
+                            <a href="#" class="spim_be lnk_kakaostory"><span>카카오스토리</span></a>
+                            <a href="#" class="spim_be lnk_twitter"><span>트위터</span></a>
+                            <a href="#" class="spim_be lnk_facebook"><span>페이스북</span></a>
+                            <a href="#" class="spim_be lnk_line"><span>라인</span></a>
+                            <a href="#" class="spim_be lnk_mail"><span>메일</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_pager spi_pg" style="display:none;"></div>
+            <div class="spi_copyurl">
+                <div class="spi_copyurl_box">
+                    <a href="#" class="spi_copyurl_inappbtn">URL복사</a>
+                    <a href="#" class="spi_copyurl_url">http://me2.do/5gsnl7pZ</a>
+                </div>
+                <div class="spi_copyurl_msg">URL을 길게 누르시면 복사하실 수 있습니다.</div>
+            </div>
+            <a href="#" class="spi_cls"><span class="spim">닫기</span></a>
+        </div>
+        <div class="spi_card spi_card_msg" style="display:none;">
+            <div class="msg_area">
+                <p class="spim_be"><strong>북마크 되었습니다.</strong><em>네이버 북마크</em>에서 확인 가능합니다.</p>
+                <a href="#" class="lnk_bookmark">북마크 확인</a><a href="#" class="spi_cls"><span class="spim">닫기</span></a>
+            </div>
+        </div>
+        <div class="spi_card spi_card_msg" style="display:none;">
+            <div class="spi_common_pop">
+                <div class="spi_cp_msg">현재 북마크 되어 있습니다.<br>북마크를 해제하시겠습니까?</div>
+            </div>
+            <div class="spi_btm_btns">
+                <a href="#" class="spi_btm_link">예</a><a href="#" class="spi_btm_link">아니오</a>
+            </div>
+            <a href="#" class="spi_cls"><span class="spim">닫기</span></a>
+        </div>
+        <div class="spi_card spi_card_msg" style="display:none;">
+            <div class="spi_common_pop">
+                <div class="spi_cp_msg">주소가 복사되었습니다. <br>원하는 곳에 붙여넣기 해주세요.</div>
+            </div>
+            <div class="spi_btm_btns">
+                <a href="#" class="spi_btm_link">닫기</a>
+            </div>
+        </div>
+        <div class="spi_card spi_card_wechat" style="display:none;">
+            <div class="qr_area">
+                <p class="txt_qr_wechat">使用微信【扫一扫】扫描下面的二维码</p>
+                <span class="img_qr_wechat">wechat qrcode</span>
+            </div>
+            <a href="#" class="spi_cls"><span class="spim">닫기</span></a>
+        </div>
+    </div>
+    <!-- [D] 기존 플러그인의 dimmed와 동일조건 -->
+    <div class="naver-splugin-dimmed spi_card_dmm2" style="display: none; height: 100%;"><div class="naver-splugin-dimmed"></div></div>
+<? } ?>
+    <div class="word_otr">
+                <span class="word_otr_h"><em class="more_b">'<span class="ellip">haber</span>'</em>의 다른 어학사전 결과 보기</span>
+                <!-- [D] btn_open 클릭시 on 클래스 추가 -->
+                <ul class="word_otr_lst on">
+                <li><a href="#" class="word_otr_a">국어</a><span class="word_otr_dv">|</span></li>
+                <li><a href="#" class="word_otr_a">영어</a><span class="word_otr_dv">|</span></li>
+                <li><a href="#" class="word_otr_a">일본어</a><span class="word_otr_dv">|</span></li>
+                <!-- <li><a href="#" class="word_otr_a">중국어</a><span class="word_otr_dv">|</span></li> -->
+                <li><a href="#" class="word_otr_a">한자</a><span class="word_otr_dv bl">|</span></li>
+                <li class="bl bl_v2"><a href="#" class="word_otr_a">네덜란드어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">독일어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">라틴어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">러시아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">루마니아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">몽골어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">베트남어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">스와힐리어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">스웨덴어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">스페인어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">아랍어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">알바니아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">우즈베크어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">우크라이나어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">이탈리아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">인도네시아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">조지아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">체코어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">캄보디아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">태국어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">터키어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">페르시아어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">포르투갈어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">폴란드어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">프랑스어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">헝가리어</a><span class="word_otr_dv">|</span></li>
+                <li class="bl"><a href="#" class="word_otr_a">힌디어</a></li>
+                <li><a href="#" class="btn_open"><span class="u_hc">열기</span></a></li>
+                <!-- [D] 열기/ 닫기 상황에 따라 문구 변경 -->
+                <!-- <li><a href="#" class="btn_open"><span class="u_hc">닫기</span></a></li> -->
+                </ul>
+            </div>

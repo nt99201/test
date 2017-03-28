@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+// variable : [offset_x] [offset_y] [width] [height]
+$sp_gnb-Nicon_drawer: 0 0 30px 32px;
+$sp_gnb-Nicon_logo: 0 -100px 38px 36px;
+$sp_gnb-Nicon_close: -100px -50px 36px 36px;
+$sp_gnb-Nicon_complate: -250px -50px 22px 12px;
+$sp_gnb-Nicon_complate_close: -278px -50px 22px 12px;
+$sp_gnb-Nicon_search: 0 -50px 36px 36px;
+// ancestor
+$sp_gnb-shapes: ($sp_gnb-Nicon_drawer, $sp_gnb-Nicon_logo, $sp_gnb-Nicon_close, $sp_gnb-Nicon_search );
+$sp_gnb-width: 300px;
+$sp_gnb-height: 300px;
+$sp_gnb-png: str-slice('../img/Nsp_gnb.svg', 0, -5);
+
+// mixin
+@mixin Nsp_gnb() {
+	background-image: url(#{$sp_gnb-png}.png);
+	background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+	background-size: (300px / 2) (300px / 2);
+	background-repeat: no-repeat;
+}
+
+@mixin Nsprite($sprite) {
+	//@extend %Nsp_gnb;
+	@include Nsp_gnb;
+	width: nth($sprite, 3) / 2;
+	height: nth($sprite, 4) / 2;
+	background-position: (nth($sprite, 1)/2) (nth($sprite, 2)/2);
+}

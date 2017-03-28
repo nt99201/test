@@ -1,0 +1,88 @@
+<?
+	if(!$page) {
+?>
+		<style type="text/css">
+            .file_list,.popup_list{font-size:12px;width:300px;margin:30px auto;border-top:1px solid #1c1c1c}
+            .popup_list{border:none;margin:0 auto;padding-top:30px;}
+            .file_list li, .popup_list li{border:1px solid #000;border-top:0}
+            .popup_list li{background:#000;border-color:#fff;color:#FFF}
+            .file_list li a,.popup_list li a{display:block;padding:5px 0 5px 10px}
+            .popup_list li a{color:#FFF}
+
+            .file_list li:nth-child(1),.file_list li:nth-child(2),
+            .file_list li:nth-child(3),.file_list li:nth-child(4){background:#FFF}
+            .file_list li:nth-child(5),.file_list li:nth-child(6),.file_list li:nth-child(7),
+            .file_list li:nth-child(8),.file_list li:nth-child(9){background:#00895B}
+            .file_list li:nth-child(10),
+            .file_list li:nth-child(11),.file_list li:nth-child(12),
+            .file_list li:nth-child(13),.file_list li:nth-child(14),
+            .file_list li:nth-child(15),.file_list li:nth-child(16),.file_list li:nth-child(17){background:#E87DE1}
+
+            .popup_list li a{padding-right:5px;padding-left: 46px;  text-indent: -36px;}
+
+        </style>
+        <ul class="popup_list">
+            <li><a href="?page=01_main.html&classType=main&popup=1">[팝업] ios 웹으로 중한사전 접속했을때</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=7">[팝업] ios 웹으로 한중사전 접속했을때</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=2">[팝업] ios 웹으로 필기인식기 접속했을때</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=3">[팝업] android 웹으로 필기인식기 접속했을때</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=4">[팝업] 네이버 앱 홈화면 추가 배너</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=5">[팝업] 초기 언어선택</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=6">[팝업] 중국어단어장 출시기념 이벤트</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=8">[팝업] 오픈사전 신조어 출시기념 이벤트</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=9">[팝업] 최근검색어 전체 삭제</a></li>
+            <li><a href="?page=01_main.html&classType=main&popup=10">[팝업] 설문조사팝업</a></li>
+        </ul>
+
+        <ul class="file_list">
+    <?
+        $fileNames = array(
+            '01_main.html' => '메인',
+            '01_main02.html' => '메인 - 필기인식기',
+            '01_main03.html' => '메인 - 기능설명 - 검색어 입력',
+            '01_main04.html' => '메인 - 기능설명 - 보조사전기능',
+            '02_entry.html' => '엔트리',
+            '02_entry02.html' => '엔트리 - 웹수집',
+            '02_entry03.html' => '엔트리 - 오픈사전',
+            '02_entry04.html' => '엔트리 - 보조사전',
+            '02_entry05.html' => '엔트리 - tts',
+            '03_search.html' => '검색결과',
+            '03_search02.html' => '검색결과 - 단어',
+            '03_search03.html' => '검색결과 - 예문',
+			'03_search03_exfilter_nodata.html' => '검색결과 - 예문: 필터옵션 검색결과없음 ',
+            '03_search04.html' => '검색결과 - 본문',
+            '03_search05.html' => '검색결과 - 결과없음',
+            '03_search06.html' => '검색결과 - 결과없음 - 단어,예문,본문',
+			'03_search09.html' => '검색결과 - 상단 tts',
+            '03_search07.html' => '검색결과 - 비슷한 단어 추천결과 - 단어',
+            '03_search08.html' => '검색결과 - 비슷한 단어 추천결과 - 발음기호',           
+            '04_cndic_info.html' => '도움말'
+
+            );
+
+     foreach ($fileNames as $key => $val) {
+        if($key == "01_main02.html"){ ?>
+            <li><a href="?page=<?= $key ?>&classType=drawing&header=write"><?= $val ?></a></li>
+<? }else if($key == "02_entry03.html"){ ?>
+            <li><a href="?page=<?= $key ?>&classType=userentry_word"><?= $val ?></a></li>
+<? }else if($key == "01_main.html"){ ?>
+            <li><a href="?page=<?= $key ?>&classType=main"><?= $val ?></a></li>
+<? } else if(strpos($key,"02_") !== false) { ?>
+            <li><a href="?page=<?= $key ?>&tabmenu=1"><?= $val ?></a></li>
+<? } else if(strpos($key,"03_") !== false) { ?>
+            <li><a href="?page=<?= $key ?>&tabmenu=2"><?= $val ?></a></li>
+<? } else if(strpos($key,"04_") !== false) { ?>
+            <li><a href="?page=<?= $key ?>&tabmenu=3"><?= $val ?></a></li>
+<? }else{ ?>
+                <li><a href="?page=<?= $key ?>"><?= $val ?></a></li>
+
+<?
+            }
+		}
+?>
+			</ul>
+<?
+	} else {
+		include $page;
+	}
+?>

@@ -1,0 +1,44 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'Arimo';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../img/la/arimo.ttf) format('truetype');
+}
+/* NHNC Web Standard Team JHY 121115 */
+
+/* 사전Tip노출개수 */
+.m_tab_v2 .m_tab_l{width:50%}
+.m_tab_v2 .m_tab_l:nth-child(1){width:50%}
+
+/* 각 사전 별 수정부분 */
+.cont_main h2 .logo{width:256px;background:url(../img/la/sp_header_pc.png) no-repeat}
+.cont_main.change_lang h2 .logo{width:403px;margin-left:289px;background-position:0 -92px}
+.cont_main.change_lang .main_srch .btn_srch{width:61px;background:url(../img/la/sp_header_pc.png) no-repeat 0 -186px}
+.cont_main.change_lang .main_srch .device{left:403px;}
+.cont_main .main_srch{*width:448px}
+
+.dic_lk .img{background:url(../img/la/sp_dic.png) no-repeat;background-size:104px 219px;-webkit-background-size:104px 219px}
+.pc .lyr_mobile div{background:url(../img/la/img_qr.gif) no-repeat}
+.pc .header h1 a{background:url(../img/la/sp_dic_s.png) no-repeat 0 6px}
+.pc .dic_lk .img{background:url(../img/la/sp_dic_s.png) no-repeat}
+.dic_lk.bg_abbr{background-color:#f5f8ff}
+.dic_lk.bg_abbr .img{background-position:22px -168px}
+.dic_lk.bg_abbr .td_txt{font-weight:bold}
+.dic_lk.bg_abbr .colb2{font-size:14px}
+
+.cont_main .title_type{width:290px}
+p.use_p{display:inline-block;vertical-align:7px}
+.td_txt{line-height:19px}
+
+/* 안드로이드에서 라틴문자 표시 위한 웹폰트 적용 */
+.a *{font-family: 'Arimo', sans-serif !important;}
+
+/* GNB 타이틀 */
+.Ngnb_service .Nservice_item .Nicon_service {
+	width: 91px; /* 서비스에 맞게 변경 */
+	background-image: url(../img/la/Nicon_ladic.png); /* 서비스에 맞게 변경 */
+	background-image: linear-gradient(transparent, transparent), url(../img/la/Nicon_ladic.svg);
+	-webkit-background-size: 91px auto; /* 서비스에 맞게 변경 */
+	background-size: 91px auto; /* 서비스에 맞게 변경 */
+}

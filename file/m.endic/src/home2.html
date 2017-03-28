@@ -1,0 +1,245 @@
+<section class="home_cont_wrap">
+    <div class="recent_srchword">
+        <!-- [D] 최근검색어 레이어 활성화 시 a태그에 on 클래스 추가 -->
+        <a href="#" class="lnk_recent on">My Recent Search</a>
+        <div class="ly_srchword_wrap" style="display:block">
+            <div class="no_srchword" style="display:none"><span class="ico"></span>There is no MY Recent Search.</div>
+            <div id="mflick3" class="srchword_view">
+                <div class="flick-container">
+                    <div id="layer1" class="flick-panel">
+                        <ul class="lst_srchword">
+                            <li>
+                                <!-- [D] 영문일 경우 lang="en" 추가 -->
+                                <!-- [D] 상세까지 검색한 단어일 경우 detail클래스 추가 -->
+                                <a href="#" class="word detail" lang="en">different</a>
+                                <a href="#" class="btn_wordbook">단어장에 저장</a>
+                                <div class="btn_wordbook">
+                                    <span class="hc">단어장에 추가</span>
+                                    <!-- 20160819 접근성 title 추가 -->
+                                    <select class="select_wordbook" title="Select wordbook">
+                                        <option value="0">Select wordbook</option>
+                                        <option value="+">+ Create a new vocabulary list</option>
+                                        <option value="145573456">0926(1)</option>
+                                    </select>
+                                    <!-- //20160819 접근성 title 추가 -->
+                                </div>
+                                <a href="#" class="btn_del">목록삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="word detail" lang="en">dimension</a>
+                                <div class="btn_wordbook">
+                                    <span class="hc">단어장에 추가</span>
+                                    <!-- 20160819 접근성 title 추가 -->
+                                    <select class="select_wordbook" title="Select wordbook">
+                                        <option value="0">Select wordbook</option>
+                                        <option value="+">+ Create a new vocabulary list</option>
+                                        <option value="145573456">0926(1)</option>
+                                    </select>
+                                    <!-- //20160819 접근성 title 추가 -->
+                                </div>
+                                <a href="#" class="btn_del">목록삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="word" lang="en">sun</a>
+                                <a href="#" class="btn_del">목록삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="word">빵 영어</a>
+                                <a href="#" class="btn_del">목록삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="word" lang="en">take</a>
+                                <a href="#" class="btn_del">목록삭제</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="paging">
+                <a href="#" class="on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+            </div>
+            <div class="word_save">
+                <div class="chk_area">
+                    <input type="checkbox" id="wordsave3">
+                    <label for="wordsave3">Word Auto-saving</label>
+                </div>
+                <div class="btn_area">
+                    <span class="all_wordbook">
+                        <a href="#">Save all</a>
+                        <!-- 20160819 접근성 title 추가 -->
+                        <select class="select_wordbook" title="Select wordbook">
+                            <option value="0">Select wordbook</option>
+                            <option value="+">+ Create a new vocabulary list</option>
+                            <option value="145573456">0926(1)</option>
+                        </select>
+                        <!-- //20160819 접근성 title 추가 -->
+                    </span>
+                    <a href="#">Delete All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="common_tab_wrap">
+        <div class="lnk_area">
+            <ul class="lst">
+                <li><a href="#">Today's word</a></li>
+                <li><a href="#">Today's expression</a></li>
+                <li><a href="#">Open Dictionary</a></li>
+                <li><a href="#">User Translation</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section_card">
+        <div class="useful_cont">
+            <h2 class="tit">유용한 영어 Tip</h2>
+            <ul class="lst_useful">
+                <li><a href="#">냄새를 나타내는 표현들</a></li>
+                <li><a href="#">'borrow'와 'lend'의 차이</a></li>
+                <li><a href="#">영국식 vs. 미국식 표현의 다른점</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section_card">
+        <div class="subject_cont">
+            <div class="home_tit">
+                <h2 class="tit"><span class="hl">ves*</span> 로 시작하는 단어</h2>
+                <a href="#" class="lnk_more">더보기</a>
+            </div>
+            <div class="word_area">
+                <a href="#" class="word"><strong>ves</strong>sel</a>
+                <a href="#" class="word"><strong>ves</strong>t</a>
+                <a href="#" class="word"><strong>ves</strong>tige</a>
+                <a href="#" class="word"><strong>ves</strong>ted</a>
+                <a href="#" class="word"><strong>ves</strong>tibule</a>
+                <a href="#" class="word"><strong>ves</strong>icle</a>
+                <a href="#" class="word"><strong>ves</strong>tigial</a>
+                <a href="#" class="word"><strong>VES</strong>A</a>
+                <a href="#" class="word"><strong>ves</strong>tibular</a>
+                <a href="#" class="word"><strong>ves</strong>ting</a>
+                <a href="#" class="word"><strong>ves</strong>uvianite</a>
+            </div>
+        </div>
+    </div>
+
+    <? include 'layer_quiz.html' ?>
+
+    <!-- 신조어 -->
+    <div class="section_card">
+        <div class="neologism_cont">
+            <div class="home_tit">
+                <h2 class="tit"><a href="#">오픈사전</a></h2>
+                <div class="add_wordbook">
+                    <span class="hc">단어장에 추가</span>
+                    <!-- 20160819 접근성 title 추가 -->
+                    <select class="select_wordbook" title="Select wordbook">
+                        <option value="0">Select wordbook</option>
+                        <option value="+">+ Create a new vocabulary list</option>
+                        <option value="145573456">0926(1)</option>
+                    </select>
+                    <!-- //20160819 접근성 title 추가 -->
+                </div>
+            </div>
+            <div class="mean_area">
+                <strong class="word"><a href="#">friendscrapping</a></strong>
+                <p>트위터에서 친구의 친구들을 전부 자신의 트윗 목록에 추가하는 것을 의미한다. 친구(friends)를 스크랩한다(scrapping)는 두 단어가 합쳐진 말이다.</p>
+                <span class="source">by 자루(supo**)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 명언 -->
+    <div class="phrase_cont">
+        <span class="source">이탈리아 . 노력 속담</span>
+        <p class="stc"><a href="#">Heaven helps those who help themselves.</a><a href="#" class="voice_ico_white"><em class="u_hc">발음듣기</em></a></p>
+        <p class="mean">하늘은 스스로 돕는 자를 돕는다.</p>
+    </div>
+
+    <!-- 아래 스타일과 동일 -->
+    <!--<button class="btn_lst_more_show"><span class="txt">더보기</span></button>-->
+    <div class="common_btn_wrap">
+        <a href="#" class="btn_lst_more_show"><span class="txt">View More</span></a>
+    </div>
+
+    <div class="section_card">
+        <div class="banner_cont">
+            <div id="mflick2" class="bann_view">
+                <div class="flick-container">
+                    <div class="flick-panel">
+                        <!-- [D] 영어톡톡 배너는 talktalk 클래스 추가해주세요. -->
+                        <!-- [D] 운영시간 외:
+                                off 클래스 추가 및 문구, 이미지 교체
+                                <strong class="txt">운영중<span>외국인과 영어 톡톡 체험하기</span></strong>
+                                <span class="thmb"><img src="img/bg_talktalk_off.png" alt=""></span> 교체
+                        -->
+                        <div class="bann_area talktalk">
+                            <a href="#" class="bann_lnk">
+                                <span class="cont_wrap">
+                                    <strong class="txt">평일 오전9시부터 오후 6시까지 <span>외국인과 영어 톡톡 오전 9시 시작!</span></strong>
+                                    <span class="thmb"><img src="img/bg_talktalk_on.png" alt=""></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flick-panel">
+                        <div class="bann_area">
+                            <a href="#" class="bann_lnk">
+                                <span class="cont_wrap">
+                                    <strong class="txt">영어 번역기 신규 오픈<span>영어 메일도 척척척!<br>영자 신문도 쏙쏙쏙!</span></strong>
+                                    <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?240x220_default_y_C9DAF8_35" alt="임시 이미지"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flick-panel">
+                        <div class="bann_area">
+                            <a href="#" class="bann_lnk">
+                                <span class="cont_wrap">
+                                    <strong class="txt">영어 번역기 신규 오픈<span>영어 메일도 척척척!<br>영자 신문도 쏙쏙쏙!</span></strong>
+                                    <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?240x220_car_y_C9DAF8_35" alt="임시 이미지"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="layer4" class="flick-ct">
+                        <div class="bann_area">
+                            <a href="#" class="bann_lnk">
+                                <span class="cont_wrap">
+                                    <strong class="txt">네이버 사전 공식 블로그<span>아는 만큼 보이는 세상의 중심<br>네이버 사전!</span></strong>
+                                    <span class="thmb"><img src="img/banner_blog.png" alt="네이버 사전 공식 블로그"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paging">
+                <a href="#" class="on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script type="text/javascript">
+    var oFlicking = new jindo.m.CircularFlicking(jindo.$('mflick'),{
+        nDuration : 200,
+        nDefaultIndex : 3
+    });
+
+    var oFlicking = new jindo.m.CircularFlicking(jindo.$('mflick2'),{
+        nDuration : 200,
+        nDefaultIndex : 3
+    });
+
+    var element = document.getElementById('wrap');
+    element.classList.add('main');
+</script>
