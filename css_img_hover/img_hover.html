@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>audio</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style type="text/css">
+/* tl_bigimage */
+.tl_bigimage {
+	position: relative;
+	float: left;
+	margin-right: 14px;
+	margin-bottom: 19px; 
+	width: 346px;
+	height: 185px;
+}
+.tl_bigimage img {
+	image-rendering: -webkit-optimize-contrast;
+}
+.tl_bigimage .tb_a {
+	display: block;
+}
+.tl_bigimage .tb_a:hover .tb_d,
+.tl_bigimage .tb_a:hover .tb_t {
+	text-decoration: underline;
+}
+.tl_bigimage .tb_a:hover .tb_m {
+	transition-duration: 0.3s; 
+	-webkit-transform: scale(1.03); 
+	-ms-transform: scale(1.03); 
+	transform: scale(1.03);
+}
+.tl_bigimage .tb_mw {
+	position: relative;
+	overflow: hidden;
+}
+.tl_bigimage .tb_m {
+	display: block;
+	transition: -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tl_bigimage .tb_bd {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid #000; 
+	opacity: 0.05;
+	filter: alpha(opacity=5);
+}
+.tl_bigimage .tb_ow {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0 12px;
+	height: 50px;
+	zoom: 1;
+}
+.tl_bigimage .tb_ow:after {
+	display: table;
+	clear: both; 
+	table-layout: fixed;
+	content: "";
+}
+.tl_bigimage .tb_bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000; 
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+.tl_bigimage .tb_omw {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin-top: 8px;
+	margin-right: 10px;
+	border-radius: 17px;
+}
+.tl_bigimage .tb_omw .tb_bd {
+	border-radius: 17px;
+}
+.tl_bigimage .tb_om {
+	display: block;
+	border-radius: 17px;
+}
+.tl_bigimage .tb_ad {
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	margin-top: -10px;
+	width: 30px;
+	height: 20px;
+	color: #fff;
+	text-align: center; 
+	font-size: 13px;
+	font-family: Arial, Sans-serif;
+	line-height: 21px;
+}
+.tl_bigimage .tb_ad ~ .tb_tw {
+	padding-right: 40px;
+}
+.tl_bigimage .tb_abd {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid #fff; 
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.tl_bigimage .tb_tw {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding-top: 1px;
+	vertical-align: middle; 
+	zoom: 1;
+
+	*display: inline;
+}
+.tl_bigimage .tb_align {
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle; 
+	zoom: 1;
+
+	*display: inline;
+}
+.tl_bigimage .tb_d {
+	display: block;
+	color: #fff; 
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 16px;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.tl_bigimage .tb_d ~ .tb_t {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tl_bigimage .tb_t {
+	display: block;
+	color: #fff; 
+	vertical-align: top;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+}
+.tl_bigimage .tb_ico_video {
+	display: block;
+	margin-top: 9px; 
+	width: 16px;
+	height: 16px;
+	background-position: -494px -471px;
+}
+
+
+
+/* tl_default */
+.tl_default .td_ico_video .td_icon{
+	background-image: url('img/sp_themecast_v170321.png');
+	background-image: linear-gradient(transparent, transparent), url('img/sp_themecast_v170321.png');
+	background-repeat: no-repeat;
+}
+
+.tl_default {
+	position: relative;
+	float: left;
+	margin-right: 14px;
+	margin-bottom: 19px; 
+	width: 166px;
+	height: 185px;
+}
+.tl_default img {
+	image-rendering: -webkit-optimize-contrast;
+}
+.tl_default .td_a {
+	display: block;
+}
+.tl_default .td_a:hover {
+	text-decoration: none;
+}
+.tl_default .td_a:hover .td_time {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	transition-delay: 0.08s; 
+	transition-duration: 0.2s;
+}
+.tl_default .td_a:hover .td_m {
+	transition-duration: 0.3s; 
+	-webkit-transform: scale(1.05); 
+	-ms-transform: scale(1.05); 
+	transform: scale(1.05);
+}
+.tl_default .td_a:hover .td_t {
+	text-decoration: underline;
+}
+.tl_default .td_a:hover .td_bg {
+	width: 100%;
+	transition-delay: 0s; 
+	transition-duration: 0.3s;
+}
+.tl_default .td_a:hover .td_bg:nth-last-child(2) {
+	width: 24px;
+}
+.tl_default .td_a:visited .td_t {
+	color: #888;
+}
+.tl_default .td_mw {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.tl_default .td_m {
+	display: block;
+	transition: -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tl_default .td_bd {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid #000; 
+	opacity: 0.05;
+	filter: alpha(opacity=5);
+}
+.tl_default .td_tag {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+}
+.tl_default .td_tag .td_bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #00c73c; 
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+
+.tl_default .td_tag .td_tagtxt {
+	position: relative;
+	z-index: 1; 
+	display: block;
+	padding: 5px 6px 3px 5px;
+	min-height: 14px;
+	font-size: 12px;
+	line-height: 14px;
+}
+.tl_default .td_ad {
+	position: absolute;
+	right: 0;
+	bottom: 16px;
+	width: 25px;
+	border: 1px solid #e3e7ee;
+	color: #a0a0a0; 
+	text-align: center;
+	font-size: 11px;
+	font-family: Tahoma, Sans-serif;
+	line-height: 14px;
+}
+.tl_default .td_ad + .td_ow {
+	padding-right: 30px;
+}
+.tl_default .td_ow {
+	display: block;
+	overflow: hidden;
+	padding-top: 4px;
+	color: #888; 
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tl_default .td_o {
+	color: #888; 
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 16px;
+}
+.tl_default .td_bar {
+	position: relative;
+	top: 2px;
+	display: inline-block;
+	margin: 0 1px;
+	width: 1px;
+	height: 11px;
+	background: #e3e7ee;
+	vertical-align: top;
+}
+.tl_default .td_tw {
+	display: block;
+	padding-top: 8px;
+}
+.tl_default .td_t {
+	display: inline-block;
+	overflow: hidden;
+	max-height: 36px;
+	color: #222; 
+	vertical-align: top;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 18px;
+	zoom: 1;
+
+	*display: inline;
+}
+.tl_default .td_ico_video {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 24px;
+	zoom: 1;
+}
+.tl_default .td_ico_video:after {
+	display: table;
+	clear: both; 
+	table-layout: fixed;
+	content: "";
+}
+.tl_default .td_ico_video .td_bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 24px;
+	background: #000;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	transition: width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.tl_default .td_ico_video .td_icon {
+	position: relative;
+	display: block;
+	float: left; 
+	width: 24px;
+	height: 24px;
+	background-position: -10px -471px;
+}
+.tl_default .td_ico_video .td_time {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin-left: -2px;
+	padding-right: 8px;
+	color: #fff;
+	font-size: 11px;
+	font-family: Tahoma, Sans-serif;
+	line-height: 24px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	transition: opacity 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+</style>
+</head>
+<body>
+
+<ul class="themecast_list">
+	<li class="tl_bigimage">
+		<a href="#" class="tb_a">
+			<div class="tb_mw">
+				<img src="https://s.pstatic.net/static/www/mobile/edit/2017/0321/mobile_190908524196.jpg" width="346" height="185" alt="24평 아파트에 꾸민  싱글하우스" class="tb_m">
+				<span class="tb_bd"></span>
+			</div>
+			<div class="tb_ow">
+				<span class="tb_bg"></span>
+				<span class="tb_tw">
+					<span class="tb_d">나 혼자 산다</span>
+					<span class="tb_t">24평 아파트에 꾸민  싱글하우스</span>
+				</span>
+				<span class="tb_align"></span>
+			</div>
+		</a>
+	</li>
+	<li class="tl_default">
+		<a href="#" class="td_a">
+			<span class="td_mw">
+				<img src="https://s.pstatic.net/static/www/mobile/edit/2017/0327/mobile_125821122133.jpg" width="166" height="108" alt="우리 집 포인트, 다육이로 꾸민 플랜트월" class="td_m">
+				<span class="td_bd"></span>
+			</span>
+			<span class="td_tw">
+				<span class="td_t">우리 집 포인트, 다육이로 꾸민 플랜트월</span>
+			</span>
+		</a>
+		<span class="td_ow">
+			<span class="td_o">깊은샘 마중물</span>
+			<span class="td_bar"></span>
+			<span class="td_o">블로그</span>
+		</span>
+	</li>
+	<li class="tl_default">
+		<a href="#" class="td_a">
+			<span class="td_mw">
+				<img src="https://s.pstatic.net/static/www/mobile/edit/2017/0323/mobile_152636548549.jpg" width="166" height="108" alt="말끔하게 소독된 느낌, 스테인리스 주전자 물때 지우기" class="td_m">
+				<span class="td_bd"></span>
+			</span>
+			<span class="td_tw">
+				<span class="td_t">말끔하게 소독된 느낌, 스테인리스 주전자 물때 지우기</span>
+			</span>
+		</a>
+		<span class="td_ow">
+			<span class="td_o">눈부신하루</span>
+			<span class="td_bar"></span>
+			<span class="td_o">블로그</span>
+		</span>
+	</li>
+
+	<li class="tl_default">
+		<a href="#" class="td_a">
+			<span class="td_mw">
+				<img src="img/mobile_070825181609.jpg" width="166" height="108" alt="기이한 도적의 정체는 '큰 어르신' 윤균상?!" class="td_m">
+				<span class="td_bd"></span>
+				<span class="td_ico_video"><span class="blind">동영상</span><span class="td_bg"></span><span class="td_icon"></span><span class="td_time">2:51</span></span>
+			</span>
+			<span class="td_tw">
+				<span class="td_t">기이한 도적의 정체는 '큰 어르신' 윤균상?!</span>
+			</span>
+		</a>
+		<span class="td_ow">
+			<a href="#" class="td_o">역적</a>
+		</span>
+	</li>
+	<li class="tl_default">
+		<a href="#" class="td_a">
+			<span class="td_mw">
+				<img src="img/mobile_07291175533.jpg" width="166" height="108" alt="'초딩입맛' 딘딘, 어머니표 밑반찬은 안 먹는다" class="td_m">
+				<span class="td_bd"></span>
+				<span class="td_ico_video"><span class="blind">동영상</span><span class="td_bg"></span><span class="td_icon"></span><span class="td_time">2:55</span></span>
+			</span>
+			<span class="td_tw">
+				<span class="td_t">'초딩입맛' 딘딘, 어머니표 밑반찬은 안 먹는다</span>
+			</span>
+		</a>
+		<span class="td_ow">
+			<a href="#" class="td_o">냉장고를 부탁해</a>
+		</span>
+	</li>
+</ul>
+
+</body>
+</html>
