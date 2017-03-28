@@ -1,0 +1,432 @@
+@charset "UTF-8";
+%alert {
+	display: inline-block;
+	width: 225px;
+	text-align: center;
+
+	.txt_inner {
+		background-color: #fff;
+		padding: 20px 0;
+		border-radius: 5px 5px 0 0;
+		font-size: 15px;
+		line-height: 21px;
+		color: #222;
+
+		.c_red {
+			display: block;
+			color: #ff4747;
+		}
+	}
+}
+.ly_wrap {
+	@include fixed(all);
+	z-index: 3000;
+
+	.ly_container {
+		@include relative;
+		display: table;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+	}
+
+	.ly_content {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+
+		.btn_area {
+			display: table;
+			width: 100%;
+
+			> a {
+				display: table-cell;
+				width: 50%;
+				height: 40px;
+				line-height: 40px;
+				background-color: #03c73c;
+				border-left: 1px solid #49d672;
+				border-radius: 0 0 5px 0;
+				font-size: 13px;
+				color: #fff;
+				text-align: center;
+
+				&:first-child {
+					border: none;
+					border-radius: 0 0 0 5px;
+				}
+			}
+		}
+
+		.ly_alert .btn_area a:first-child {
+			border-radius: 0 0 5px 5px;
+		}
+	}
+}
+.dimmed {
+	@include fixed(all);
+	background: rgba(0, 0, 0, 0.8);
+}
+//출제문장보기 레이어
+.ly_exam_question {
+	@include relative;
+	display: inline-block;
+	width: 275px;
+	text-align: left;
+
+	.h_date {
+		padding: 0 10px;
+		border-radius: 5px 5px 0 0;
+		background-color: #fff;
+
+		span {
+			display: block;
+			padding: 15px 0 12px 6px;
+			border-bottom: 1px solid #f2f2f2;
+			font-size: 13px;
+			color: #222;
+		}
+	}
+	.lst_frame {
+		height: 204px;
+		padding: 0 10px;
+		background-color: #fff;
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		ul {
+			padding-bottom: 10px;
+		}
+		li {
+			display: table;
+			width: 100%;
+			min-height: 38px;
+			border-top: 1px solid #f2f2f2;
+
+			a {
+				display: table-cell;
+				padding: 10px 6px;
+				line-height: 19px;
+				font-size: 14px;
+				color: #222;
+				vertical-align: middle;
+			}
+			.ico_wrong {
+				display: none;
+				width: 25px;
+				height: 15px;
+				margin: 2px 0 0 6px;
+				line-height: 15px;
+				border: 1px solid #ff9797;
+				font-size: 11px;
+				color: #ff5151;
+				font-weight: bold;
+				text-align: center;
+				vertical-align: top;
+			}
+
+			&.wrong {
+				a {
+					color: #ff5151;
+				}
+				.ico_wrong {
+					display: inline-block;
+				}
+			}
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+	.btn_area3 {
+		display: table;
+		width: 100%;
+		height: 50px;
+		border-radius: 0 0 3px 3px;
+
+		.btn_replay {
+			display: table-cell;
+			width: 100%;
+			height: 50px;
+			padding-top: 1px;
+			background-color: #03c73c;
+			border-radius: 0 0 5px 5px;
+			font-size: 15px;
+			color: #fff;
+			font-weight: bold;
+			text-align: center;
+			vertical-align: middle;
+
+			span {
+				display: block;
+				margin-top: 1px;
+				font-size: 10px;
+				color: #ddf4e1;
+			}
+		}
+	}
+	.btn_cls {
+		@include absolute(right 15px top 15px);
+		@extend %sprite_conversation_img;
+		@include spriteConversation(15px, 15px, -120px, -355px);
+		display: block;
+	}
+}
+//정답확인 레이어
+.ly_wrong {
+	@include absolute(left 0 right 0);
+	z-index: 100;
+	padding: 13px 15px 15px;
+	background-color: #379eff;
+
+	.txt_wrap {
+		font-size: 20px;
+		line-height: 24px;
+		color: #fff;
+		text-align: center;
+	}
+	.pop_arrow {
+		@include absolute(left 50% top -7px);
+		@extend %sprite_conversation_img;
+		@include spriteConversation(12px, 8px, -30px, -290px);
+		display: block;
+		margin-left: -6px;
+	}
+}
+//주간복습 플로팅
+.ly_intro_review {
+	@include fixed(right 19px bottom 57px);
+	display: block;
+	width: 96px;
+	height: 96px;
+	border-radius: 48px;
+	background-color: #5f9aff;
+	z-index: 100;
+	text-align: center;
+
+	.circle {
+		display: table;
+		width: 88px;
+		height: 88px;
+		margin: 3px 0 0 3px;
+		border: 1px solid #7baafb;
+		border-radius: 44px;
+		font-size: 14px;
+		color: #fff;
+		.pop_content {
+			display: table-cell;
+			padding: 0 0 6px;
+			vertical-align: middle;
+		}
+		strong {
+			display: block;
+			margin-top: 4px;
+			font-size: 19px;
+			color: #fbff95;
+		}
+	}
+	.btn_cls {
+		@include absolute(right -9px top -10px);
+		@extend %sprite_conversation_img;
+		@include spriteConversation(24px, 24px, -60px, -310px);
+		display: block;
+	}
+}
+//톡톡 안내레이어
+.ly_talkinfo {
+	@include absolute(top 38px right 0);
+	display: inline-block;
+	padding: 8px 8px 9px 9px;
+	z-index: 2100;
+	border: 1px solid #888;
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000;
+	white-space: nowrap;
+
+	strong {
+		display: block;
+		padding-right: 20px;
+		margin-bottom: 2px;
+		font-weight: normal;
+		font-size: 15px;
+		color: #03c73c;
+	}
+
+	.pop_arrow {
+		@include absolute(right 9px top -7px);
+		@extend %sprite_conversation_img;
+		@include spriteConversation(11px, 8px, -90px, -310px);
+		display: block;
+	}
+	.btn_cls {
+		@include absolute(right 0 top 5px);
+		@extend %sprite_conversation_img;
+		@include spriteConversation(30px, 30px, -60px, -310px);
+		display: block;
+	}
+}
+//초기 안내 레이어
+.ly_new_info {
+	@include relative;
+	display: inline-block;
+	width: 275px;
+	height: 409px;
+	border-radius: 3px;
+	background-color: #80afe8;
+
+	&:before {
+		@include absolute(left -3px top -3px);
+		@extend %sprite_conv_infolayer;
+		@include spriteConversation(51px, 51px, 0, -840px);
+		content: '';
+	}
+
+	&:after {
+		@include absolute(left 0 right 0 bottom 0);
+		border-radius: 0 0 3px 3px;
+		background-color: #fff;
+		height: 165px;
+		content: '';
+	}
+	.swipe {
+		overflow: hidden;
+		visibility: hidden;
+		position: relative;
+		z-index: 10;
+	}
+	.swipe-wrap {
+		overflow: hidden;
+		position: relative;
+
+		> div {
+			float: left;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+
+			> span {
+				@extend %sprite_conv_infolayer;
+				@include spriteConversation(275px, 205px, 0, 0);
+				display: block;
+				margin-top: 40px;
+			}
+			@for $i from 1 through 4 {
+				.img#{$i} {
+					background-position: 0 (-210*$i)+210+px;
+				}
+			}
+
+			&:first-child {
+				.info_txt {
+					font-size: 18px;
+				}
+			}
+		}
+		.info_txt {
+			padding: 16px 0 0;
+			font-size: 16px;
+			line-height: 23px;
+			.green {
+				color: #1dcc52;
+			}
+			.desc {
+				margin-top: 6px;
+				font-size: 12px;
+				line-height: 17px;
+				color: #5f6062;
+			}
+		}
+	}
+	.paging {
+		@include absolute(left 0 right 0 top 15px);
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+
+		button {
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			margin: 0 2px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			border-radius: 50% 50%;
+			font-size: 0;
+			line-height: 0;
+			color: transparent;
+
+			&.on {
+				border-color: #fff;
+				background-color: #fff;
+			}
+		}
+	}
+	.btn_start {
+		display: block;
+		width: 112px;
+		height: 34px;
+		margin: 11px auto 0;
+		line-height: 34px;
+		background: #1dcc52;
+		font-size: 13px;
+		color: #fff;
+	}
+	.btn_area2 {
+		@include absolute(left 0 right 0 bottom 0);
+		z-index: 10;
+		width: 100%;
+		height: 40px;
+		background-color: #eff1f2;
+		border-radius: 0 0 3px 3px;
+		line-height: 40px;
+		text-align: right;
+
+		.btn_cls {
+			padding-right: 15px;
+			font-size: 12px;
+			color: #828282;
+
+			&:before {
+				@extend %sprite_conv_infolayer;
+				@include spriteConversation(17px, 17px, -60px, -840px);
+				display: inline-block;
+				margin: 12px 5px 0 0;
+				vertical-align: top;
+				content: '';
+			}
+		}
+	}
+}
+.ly_confirm, .ly_alert {
+	@extend %alert;
+}
+@media screen and (max-height: 481px) {
+	.ly_wrap {
+		@include absolute(all);
+	}
+}
+/* 오늘의회화_댓글조회_레이어 */
+.ly_user_comment { position: relative; display: inline-block; width: 275px; height: 409px; border-radius: 3px; background-color: #80afe8; letter-spacing: -0.05em; }
+.ly_user_comment .user_comment_box .img1 { background-image: url(../img/sp_conv_infolayer2.png); background-repeat: no-repeat; background-size: 195px 112px; -webkit-background-size: 195px 112px; }
+.ly_user_comment .user_comment_box { position: relative; height: 258px; }
+.ly_user_comment .user_comment_box .user_comment_tit { padding: 27px 0 16px; font-size: 17px; color: #fff; font-weight: bold; }
+.ly_user_comment .user_comment_box > p { font-size: 14px; color: #fff; }
+.ly_user_comment .user_comment_box > p > em { color: #fffe88; }
+.ly_user_comment .user_comment_box .user_comment_txt1 { line-height: 19px; }
+.ly_user_comment .user_comment_box .user_comment_txt2 { margin-top: 6px; }
+.ly_user_comment .user_comment_box .img1 { position: absolute; left: 50%; bottom: 0; display: block; width: 195px; height: 112px; margin-left: -97px; background-position: 0 0; }
+.ly_user_comment .user_comment_list { display: table; height: 101px; width: 100%; text-align: left; background: #fff; font-size: 12px; line-height: 17px; color: #5f6062; }
+.ly_user_comment .user_comment_list > ul { display: table-cell; padding: 0 25px 0 18px; vertical-align: middle; }
+.ly_user_comment .user_comment_list > ul li { text-indent: -7px; padding-left: 7px; margin-top: 3px; }
+.ly_user_comment .user_comment_list > ul li:before { width: 3px; height: 1px; display: inline-block; margin: 9px 5px 0 0; vertical-align: top; content: ''; background: #5f6062; }
+.ly_user_comment .user_comment_list > ul li:first-child { margin-top: 0; }
+.ly_user_comment .btn_area3 { overflow: hidden; position: absolute; right: 0; bottom: 0; left: 0; z-index: 10; width: 100%; height: 50px; background-color: #eff1f2; border-radius: 0 0 3px 3px; }
+.ly_user_comment .btn_area3 > a { display: block; float: left; width: 137px; line-height: 50px; font-size: 16px; color: #000; text-align: center; }
+.ly_user_comment .btn_area3 > a:first-child { border-right: 1px solid #fff; }
+/* 오늘의회화_댓글조회_안내레이어 */
+.ly_alert_info { position: relative; display: inline-block; width: 275px; padding-bottom: 50px; border-radius: 3px; background-color: #fff; }
+.ly_alert_info .ly_alert_tit { padding: 27px 0 13px 0; font-size: 17px; color: #000; font-weight: bold; }
+.ly_alert_info .ly_alert_txt { padding-bottom: 24px; font-size: 14px; color: #3b414d; line-height: 17px; }
+.ly_alert_info .btn_area1 { overflow: hidden; position: absolute; right: 0; bottom: 0; left: 0; z-index: 10; width: 100%; height: 50px; background-color: #eff1f2; border-radius: 0 0 3px 3px; }
+.ly_alert_info .btn_area1 > a { display: block; line-height: 50px; font-size: 16px; color: #000; text-align: center; }

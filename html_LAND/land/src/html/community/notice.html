@@ -1,0 +1,378 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+
+<title>네이버 :: 부동산 매물관리센터</title>
+<link type="text/css" rel="stylesheet" href="http://landad.naver.com/css/land_salereg_admin.css">
+<link type="text/css" rel="stylesheet" href="/css/land_salereg_ext.css?ver=09.09.29">
+<script type="text/javascript" src="/js/ajaxui/jindo2.all.js"></script>
+<script type="text/javascript" src="/js/ajaxui/jindo2.all_component.js"></script>
+<script type="text/javascript" src="/js/ajaxui/jindo2_nf.js"></script>
+<script type="text/javascript" src="/js/ajaxui/layermanager.js"></script>
+<script type="text/javascript" src="/js/ajaxui/timer.js"></script>
+<script type="text/javascript" src="/js/ajaxui/Calendar.js"></script>
+<script type="text/javascript" src="/js/ajaxui/DatePicker.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/center_common.js"></script>
+<script type="text/javascript" src="/js/event_common.js"></script>
+<script type="text/javascript" src="/js/lcslog.js"></script>
+
+
+	<!-- standard javascript library -->
+	<script type="text/javascript" src="/js/lib/nclktag.js"></script>
+	<script type="text/javascript" src="/js/lib/clickcr.js"></script>
+	
+
+
+<script type="text/javascript">
+	var ccsrv="cc.naver.com";
+	var g_query = "";
+	var nclk_evt = 3;
+	
+	// 이벤트 Listener 함수 호출
+	nclk_do();
+	// lcs호출
+	lcs_do();
+
+
+
+	var _today = "2011.01.04";
+	var server_url = "http://landad.naver.com";
+
+	function isPromotion(){
+		return false;
+	}
+
+	function isPrivate(){
+		return true;
+	}
+
+	function isRealtor(){
+		return false;
+	}
+	
+	function getServerUrl(){
+		return server_url;
+	}
+
+	
+
+</script>
+
+<style type="text/css">
+.wordwrap
+{
+     word-wrap:break-word;
+     word-break:break-all;
+     -moz-binding: url('/css/wordwrap.xml#wordwrap');
+     overflow: hidden;
+}
+</style>
+<script type="text/javascript">
+	nsc = "landad.home";
+	addInit(toggleMenu , "menu1");
+</script>
+<script type="text/javascript" language="javascript" src="/js/clipboard/flash.js"></script>
+<script type="text/javascript" language="javascript" src="/js/clipboard/clipboard.js"></script>
+
+<script type="text/javascript">
+nsc = "landad.notice";
+addInit(toggleMenu , "menu1");
+addInit(clipboardinit);
+var addressCopy;
+function clipboardinit() {
+	addressCopy = new nhn.Clipboard('/swf/clipboard.swf');
+	addressCopy.setData($('addressCopy'), window.location.href );
+	addressCopy.attach('copy', function(oEvent) {
+		alert('현재 주소가 클립보드에 저장되었습니다 Ctrl + V 를 눌러보세요.');
+	});
+	addressCopy.attach('failure', function(oEvent) {
+		alert('현재 주소를 클립보드에 저장하지 못했습니다');
+	});
+};
+
+function searchFormSubmit(){
+	$('searchForm').submit();
+}
+</script>
+
+<style type="text/css">
+			#addressCopy { cursor:pointer; _cursor:hand; }
+</style>
+</head>
+<body>
+<div id="wrap">
+	
+	
+
+
+
+
+
+	<script type="text/javascript">
+	var ismenu = false;
+	function mouse_out() {
+		if(!ismenu) {
+			var obj = document.getElementById("pmenu");
+			obj.className='more_menu more_out';
+		}
+	}
+	</script>
+<!-- 
+	<script language="javascript">document.domain = "naver.com";</script>
+ -->
+	<div id="header">
+<!-- 
+		<div class="gnb">
+			<iframe title="GNB" id="gnb_box" name="gnb_new" src='https://nid.naver.com/gnbs/?tmpl=215' width=960 height=22 border=0 frameborder=0 scrolling=no marginheight=0 marginwidth=0></iframe>
+		</div>
+ -->
+		<div class="gnb NE=a:GNB"> 
+			<ul> 
+			<li><a href="http://mktg.naver.com/marketing_center.html" class="NPI=a:home">광고</a></li> 
+			<li><a href="http://searchad.naver.com/" class="NPI=a:sa">키워드광고</a></li> 
+			<li><a href="http://displayad.naver.com/" class="NPI=a:da">디스플레이광고</a></li> 
+			<li><a href="http://join.shopping.naver.com/" class="NPI=a:shop">지식쇼핑입점</a></li> 
+			<li id="pmenu" class="more_menu"><a href="#" class="more NPI=a:more" onmouseover="ismenu=true;this.parentNode.className='more_menu more_over'" onmouseout="ismenu=false;setTimeout('mouse_out()',500);">더보기</a> 
+				<ul id="mmenu" onmouseover="ismenu=true;this.parentNode.className='more_menu more_over'" onmouseout="ismenu=false;mouse_out()"> 
+				<li><a href="https://submit.naver.com/" class="NPI=a:sub">검색등록</a></li> 
+				<li><a href="http://localshop.naver.com/" class="NPI=a:la">지역정보광고</a></li> 
+				<li><a href="http://crossmedia.naver.com/" class="NPI=a:cm">크로스미디어</a></li> 
+				<li><a href="/" class="NPI=a:rea">부동산매물광고</a></li> <!-- 090526 추가 -->
+				<li><a href="http://adpost.naver.com" class="NPI=a:adp">애드포스트</a></li>
+				<li><a href=" https://admin.checkout.naver.com/" class="NPI=a:checkout">체크아웃</a></li>
+				</ul> 
+			</li> 
+			</ul> 
+		</div>
+		<h1 class="NE=a:STA">
+		<a href="http://www.naver.com/" class="NPI=a:naverlogo"><img src="http://img.land.naver.com/static/center/090605/naver.gif" width="85" height="25" alt="NAVER" border="0"></a> 
+		<a href="/" class="NPI=a:landad"><img src="http://img.land.naver.com/static/center/090605/landadmin.gif" width="188" height="25" alt="부동산 매물관리센터" border="0" class="lnbtitle"></a>
+		 
+		</h1>
+		<div class="nav_beta NE=a:LNB">
+			<h2 class="dnone">상단 메뉴</h2>
+			<ul>
+			<li><a href="/" class="NPI=a:home"><img src="http://img.land.naver.com/static/center/090605/lnb1.gif" hiddenSrc="http://img.land.naver.com/static/center/090605/lnb1_on.gif" width="99" height="23" alt="매물관리센터 홈" id="menu1"></a></li>
+			<li><a href="/goodsinfo/goodsInfo.nhn" class="NPI=a:goodsinfo"><img src="http://img.land.naver.com/static/center/090605/lnb8.gif" hiddenSrc="http://img.land.naver.com/static/center/090605/lnb8_on.gif" width="86" height="23" alt="광고상품안내"  id="menu2"></a></li>
+			<li><a href="/regmgt/regList.nhn" onClick="loginRelsMemberCheckAndGo(this.getAttribute('href'));return false;" class="NPI=a:regmgt"><img src="http://img.land.naver.com/static/center/090605/lnb3.gif" hiddenSrc="http://img.land.naver.com/static/center/090605/lnb3_on.gif" width="69" height="23" alt="등록/관리"  id="menu3"></a></li>
+			<li><a href="/accountinfo/paymentList.nhn" onClick="loginRelsMemberCheckAndGo(this.getAttribute('href'));return false;" class="NPI=a:accountinfo"><img src="http://img.land.naver.com/static/center/090605/lnb4.gif" hiddenSrc="http://img.land.naver.com/static/center/090605/lnb4_on.gif" width="62" height="23" alt="계정관리"  id="menu4"></a></li>
+			
+			<li><a href="/guide/articleRegOrder.nhn" class="NPI=a:guide"><img src="http://img.land.naver.com/static/center/090605/lnb7.gif" hiddenSrc="http://img.land.naver.com/static/center/090605/lnb7_on.gif" width="103" height="23" alt="매물등록 가이드"  id="menu6"></a></li>
+			</ul>
+			
+			
+			
+			<a href="http://land.naver.com" target="_blank" class="btn_landhome NPI=a:land"><img src="http://img.land.naver.com/static/center/090605/lnb_landhome.gif" width="92" height="40" alt="부동산 홈"></a>
+			
+			
+		</div>
+		
+		<div class="location_info" id="location_info">
+			<p class="location NE=a:nvg">
+				
+						
+						
+						
+						
+							<a href="/" class="NPI=a:navi">홈</a> > 
+						
+						
+				
+						
+						
+							공지사항
+						
+						
+						
+						
+				
+			</p>
+			
+			
+			
+			<dl class="user_logout NE=a:lgi_off">
+				<dt><a href="javascript:loginPopupAndRefresh();" class="NPI=a:login">로그인</a></dt>
+				<dd>로그인을 하시면 서비스 이용이 가능합니다.</dd>
+			</dl>				
+			
+		</div>
+		
+	</div>
+
+	
+	<div id="container">
+		<div class="snb NE=a:lmn">
+			<div class="sub_nav">
+				<h2><img src="http://img.land.naver.com/static/center/090605/h_subnav5.gif" width="178" height="40" alt="공지사항"></h2>
+				<ul>
+				<li>
+					<a href="/home/noticeList.nhn" class="NPI=a:notice"><img src="http://img.land.naver.com/static/center/090605/snb5_1.gif" width="50" height="11" alt="공지사항"></a>
+				</li>
+				</ul>
+			</div>
+			
+
+
+
+<script language="javascript">
+var OPS_WIDTH = 970;
+var OPS_HEIGHT_DEFAULT = 600; // 기본 세로사이즈
+var OPS_HEIGHT_RESIZE = 500; // 변경 세로사이즈
+var OPS_HEIGHT = (screen.availHeight > OPS_HEIGHT_DEFAULT) ? OPS_HEIGHT_DEFAULT : OPS_HEIGHT_RESIZE;
+function openOPS(sUrl, sTitle, isCenter){
+	var sPosition = "";
+	isCenter = isCenter || true;
+
+	var nWidth = OPS_WIDTH;
+	var nHeight = OPS_HEIGHT;
+
+	if(isCenter){
+		nLeftPosition = (screen.availWidth - nWidth) / 2;
+		nTopPosition = (screen.availHeight - nHeight) / 2;
+		sPosition = "left=" + nLeftPosition + ", top=" + nTopPosition + ",";
+	}
+
+	var options = sPosition + " toolbar=no, scrollbars=no, location=no, status=yes, menubar=no, resizable=no, width=" + nWidth + ", height=" + nHeight;
+	var pop = window.open(sUrl, sTitle, options);
+	pop.focus();
+}
+</script>
+			<div id="common_snb_footer" class="NE=a:lmn">
+				<a href="/regmgt/regForm.nhn" class="btn_salereg NPI=a:register" onClick="loginRelsMemberCheckAndAlert(this.getAttribute('href'));return false;"><img src="http://img.land.naver.com/static/center/090605/btn_salereg.gif" width="162" height="47" alt="매물등록 하기"></a>
+				<img src="http://img.land.naver.com/static/center/090605/img_favor.gif" alt="네이버 회원을 위한 무료혜택" width="162" height="147" border="0" usemap="#detail_view"> 
+				<map name="detail_view"> 
+					<area shape="rect" coords="10,89,58,108" href="http://rsun.kr/naverevent02/main/" alt="상세보기" target="_blank" class="NPI=a:banner"> 
+				</map>
+				<div class="ad_wrap">
+					<img src="http://img.land.naver.com/static/center/090605/txt_ad_phone2_1.gif" width="162" height="69" alt="전화문의 : 1588-0332">
+				</div>
+				<ul class="qna">
+				<li><a href="/guide/faq.nhn" class="NPI=a:qna"><img src="http://img.land.naver.com/static/center/090605/menu_qna1_2.gif" width="89" height="84" alt="자주묻는 질문"></a></li>
+				<li><a href="/home/qnaList.nhn" onClick="loginRelsMemberCheckAndAlert(this.getAttribute('href'));return false;" class="NPI=a:faq"><img src="http://img.land.naver.com/static/center/090605/menu_qna2_2.gif" width="73" height="84" alt="1:1문의"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content NE=a:dtl">
+			<h3><img src="http://img.land.naver.com/static/center/090605/h3_notice.gif" width="56" height="16" alt="공지사항"></h3>
+			<!-- 글보기 -->
+			<dl class="notice_view">
+			<dt>2011년 01월 신용카드 무이자 행사 안내</dt>
+			<dd class="count">조회 21</dd>
+			<dd class="info">10.12.31 <span class="time">15:23</span> <span id="addressCopy" class="NPI=a:copy"><img src="http://img.land.naver.com/static/center/090605/btn_urlcopy.gif" width="40" height="15" alt="주소복사"></span></dd>
+			
+			<dd class="article tx_l">
+				<div id="cont_area" style="width:650px;">
+					
+				</div>
+			</dd>
+			</dl>
+			<!-- //글보기 -->
+			<div class="btn_option">
+				<a href="/home/noticeList.nhn?search_type=&search=" class="NPI=a:list"><img src="http://img.land.naver.com/static/center/090605/btn_list2.gif" width="35" height="20" alt="목록"></a>
+			</div>
+			<table border="1" cellpadding="0" cellspacing="0" summary="공지글 리스트" class="tbl_list_type6">
+			<caption>공지글 리스트</caption>
+			<colgroup>
+			<col width="38"><col width="561"><col width="70"><col width="70">
+			</colgroup>
+			<thead>
+			<tr>
+				<th>글구분</th>
+				<th>글제목</th>
+				<th>작성일</th>
+				<th>조회</th>
+			</tr>
+			</thead>
+			<tbody>
+			
+			<tr class="first">
+				<td class="divide">이전</td>
+				<td class="title"><a href="/home/noticeView.nhn?noti_mttr_seq=1873&tpprt_exps_yn=Y&search_type=&search=" class="NPI=a:prev,i:1873">서비스 개편에 따른 이용 제한 안내</a>
+				
+				<img src="http://img.land.naver.com/static/center/090605/ico_new.gif" width="10" height="9" alt="new">
+				
+				</td>
+				<td class="date">10.08.02</td>
+				<td class="count">1789</td>
+			</tr>
+			
+			<tr class="now">
+				<td class="divide"><img src="http://img.land.naver.com/static/center/090605/ico_now.gif" width="5" height="2" alt="현재"></td>
+				<td class="title"><a href="/home/noticeView.nhn?noti_mttr_seq=2477&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:now,i:1873">2011년 01월 신용카드 무이자 행사 안내</a>
+				
+				
+				<img src="http://img.land.naver.com/static/center/090605/ico_new.gif" width="10" height="9" alt="new">
+				
+				</td>
+				<td class="date">10.12.31</td>
+				<td class="count">21</td>
+			</tr>
+			
+			<tr>
+				<td class="divide">다음</td>
+				<td class="title"><a href="/home/noticeView.nhn?noti_mttr_seq=2476&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:next,i:1873">네이버 부동산 충전금 지급 기준 변경 안내</a>
+				
+				</td>
+				<td class="date">10.12.27</td>
+				<td class="count">56</td>
+			</tr>
+			
+			</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var ifr = document.createElement('iframe');
+		ifr.src = "/home/iframeNoticeContent.nhn?noti_mttr_seq=2477";
+		ifr.id="cont_ifr";
+		ifr.width="650";
+		ifr.frameBorder="0";
+		ifr.scrolling="no";
+		$('cont_area').appendChild(ifr);
+		addEvent(ifr , "load" , initFrame );
+		function initFrame(){
+			resize();
+		}
+	
+		function resize(){
+			var objBody = $('cont_ifr').contentWindow.document.body;
+			$('cont_ifr').height = objBody.scrollHeight; 
+		}
+	</script>
+
+	
+
+
+	<div id="footer" class="NE=a:fot">
+		<ul>
+		<li class="first"><a href="/guide/faq.nhn" class="NPI=a:help">매물등록 도움말</a></li>
+		<li><a href="/home/termOfUseRltr.nhn" class="NPI=a:service">이용약관</a></li>
+		<li><a href="/home/articleMgtPolicy.nhn" class="NPI=a:manage">매물 운영원칙</a></li>
+		<li><a href="http://www.nbp-corp.com/rules/privacy.html" target="_blank" class="NPI=a:privacy"><strong>개인정보취급방침</strong></a></li>
+		<li><a href="http://land.naver.com/index/disclaimer.nhn" target="_blank" class="NPI=a:limit">책임의 한계와 법적고지</a></li>
+		<li><a href="http://inoti.naver.com/inoti/main.nhn" target="_blank" class="NPI=a:stop">게시중단요청서비스</a></li>
+		<li><a href="http://help.naver.com/main.jsp" target="_blank" class="NPI=a:helpdesk">고객센터</a></li>
+		</ul>
+		<p>네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며, 네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다.</p>
+		<address>
+		Copyright &copy;
+		<a href="http://www.nbp-corp.com" target="_blank" class="NPI=a:nbpcorp">NHN Business Platform Corp.</a>
+		All Rights Reserved.
+		</address>
+	</div>
+
+	
+</div>
+</body>
+</html>

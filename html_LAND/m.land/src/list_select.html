@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>단지선택</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_header">
+		<!--header_obj-->
+		<div class="header_obj">
+			<header id="header">
+				<h1 class="gnb_h1">
+					<div class="btn_mod">
+						<a href="#" class="on">부동산</a>
+						<a href="#">원룸</a>
+					</div>
+				</h1>
+				<a href="#" class="gnb naver"><span>NAVER</span></a>
+				<a href="#" class="btn_prev_ver"><span>이전 버전으로 가기</span></a>
+				<a href="#" class="gnb s_btn" id="searchBtn"><span>검색</span></a>
+				<div class="sch_form_wrap">
+					<div class="input_area">
+						<input type="search" placeholder="지역명, 또는 단지명">
+						<button type="button" class="btn_txt_del"><span>삭제</span></button>
+						<button type="button" class="btn_txt_sch"><span>부동산검색</span></button>
+					</div>
+					<button type="button" class="btn_total_sch">통합검색</button>
+				</div>
+				<button type="button" class="btn_b_side"><span>확장메뉴</span></button>
+			</header>
+			<!-- [D] 스크롤 발생시 scrolled 클래스 추가 -->
+			<!-- [D] 단지선택 메뉴 노출시 btnv2 클래스 추가 -->
+			<div class="location btnv2 scrolled">
+				<ol class="addr" style="width:1000px;">
+					<li><a href="#">서울시</a></li>
+					<li><a href="#">강남구</a></li>
+					<li><a href="#">신사동</a></li>
+					<li><a href="#">단지전체</a></li>
+				</ol>
+				<div class="location_btn_group" style="display:none">
+					<a href="#" class="btn_sch v2"><span>일이삼사오육칠팔구</span></a>
+					<a href="#" class="btn_sch"><span>지역검색</span></a>
+				</div>
+				<!-- 닫기버튼 -->
+				<a href="#" class="lnb_btn_clse"><span>닫기</span></a>
+			</div>
+		</div>
+		<!--//header_obj-->
+	</div>
+	<div class="loc_obj wrapper">
+		<div class="complex_select_box">
+			<div class="h_top">
+				<a href="#" class="location_map_view">
+					<h2><em>지도아이콘</em>창포동2가 지도로 보기</h2>
+				</a>
+			</div>
+			<!--div class="h_top">
+				<h2>단지선택</h2>
+				<a href="#" class="prev"><em>뒤로</em></a>
+			</div-->
+			<div class="complex_list_box">
+				<ul>
+					<li>
+						<a href="#">
+							<strong>느티마을경남,선경</strong>
+							<div class="btn_box">
+								<span class="type">아파트</span>
+								<button type="button">매매<span>239</span></button>/<button type="button">전세<span>32</span></button>/<button type="button">월세<span>67</span></button>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<strong>느티마을경남,선경</strong>
+							<div class="btn_box">
+								<span class="type">아파트</span>
+								<button type="button">매매<span>239</span></button>/<button type="button">전세<span>32</span></button>/<button type="button">월세<span>67</span></button>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<strong>느티마을경남,선경</strong>
+							<div class="btn_box">
+								<span class="type">아파트</span>
+								<button type="button">매매<span>239</span></button>/<button type="button">전세<span>32</span></button>/<button type="button">월세<span>67</span></button>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

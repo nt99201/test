@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>영단어장</title>
+<link rel="stylesheet" type="text/css" href="css/conversation.css" />
+</head>
+<!-- [D] 언어스킨 lang 속성 부여. ISO 639-1 Language Codes 기준
+    한국어 : ko
+    영어 : en
+    중국어 : zh
+    일본어 : ja
+    베트남 : vi
+    태국 : th
+-->
+<!-- [D] 퀴즈 페이지 quiz 추가 -->
+<body class="quiz">
+<div id="wrap">
+    <div id="header">
+        <div class="gnb">
+            <h1><a href="#"><span class="blind">오늘의 회화 퀴즈</span></a></h1>
+            <a href="#" class="btn_cls"><span class="blind">닫기</span></a>
+        </div>
+    </div>
+    <div id="content">
+        <!-- [D] 펼침/닫힘 메뉴나 텍스트입력 등과 같이 전체 레이아웃의 높이값에 영향을 주는 경우에
+                해당 영역 컨텐츠의 높이값을 재산정해야 합니다.
+        -->
+        <div class="conversation_group" id="slider">
+            <div class="conv_swipe_wrap _scroller" style="width:1400px">
+                <div class="conv_swipe_item">
+                    <!-- 플리킹 영역 (퀴즈 - 단어 배열하여 문장만들기) -->
+                    <!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 45px(header영역 높이값) -->
+                    <div class="conversation_wrap">
+                    <!-- [D] type1 클래스는 마크업 확인용 클래스입니다. 개발시엔 삭제해주세요. -->
+                    <div class="quiz_area type1">
+                        <div class="paging"><strong>1</strong> / 5</div>
+                        <div class="quiz_wrap">
+                            <div class="quiz_content">
+                                <div class="question">그 애가 오는 건 늘 좋아요.</div>
+                                <!-- [D] 정답시 right, 오답시 wrong 추가 -->
+                                <div class="answer"><span class="txt">It's always nice to</span> <a href="#" class="btn_del"><span class="blind">삭제</span></a></div>
+                            </div>
+                        </div>
+                        <ul class="lst_sample">
+                            <!-- [D] 단어를 불러오고 나서 a태그의 높이가 55px 이상일때 lst_sample 에 type2 추가
+                                     모든 로직이 끝나고 마지막에 visibility:visible 를 추가하여 단어를 보인다.
+                            -->
+                            <li class="on"><a href="#" style="visibility:visible">AAAAAAAAAAAAAAAAAAAAAA</a></li>
+                            <li class="on"><a href="#" style="visibility:visible">always</a></li>
+                            <li><a href="#" style="visibility:visible">have</a></li>
+                            <li><a href="#" style="visibility:visible">her</a></li>
+                            <li><a href="#" style="visibility:visible">over</a></li>
+                            <li><a href="#" style="visibility:visible">It's</a></li>
+                            <li><a href="#" style="visibility:visible">nice</a></li>
+                            <li><a href="#" style="visibility:visible">to</a></li>
+                        </ul>
+                        <!-- 정답 확인 레이어 -->
+                        <!-- [D] 오답 아이콘의 아래로 10px 떨어지도록 top값 조절 -->
+                        <div class="ly_wrong" style="display:none">
+                            <div class="txt_wrap">
+                                Is there something we can do to help her?
+                            </div>
+                            <span class="pop_arrow"></span>
+                        </div>
+                        <!-- //정답 확인 레이어 -->
+                        <!-- 발음 다시 듣기 버튼 -->
+                        <div class="listen_btn_wrap">
+                            <a href="#" class="btn_listen">문장듣기<span class="ico"></span></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="conv_swipe_item">
+                    <!-- 플리킹 영역 (퀴즈 - 빈칸 단어선택) -->
+                    <!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 45px(header영역 높이값) -->
+                    <div class="conversation_wrap">
+                    <!-- [D] type2 클래스는 마크업 확인용 클래스입니다. 개발시엔 삭제해주세요. -->
+                    <div class="quiz_area type2">
+                        <div class="paging"><strong>2</strong> / 5</div>
+                        <div class="quiz_wrap">
+                            <div class="quiz_content">
+                                <div class="question">몸이 안 좋아요.</div>
+                                <!-- [D] input의 길이는 보기중에 가장 긴 단어의 길이를 기준.
+                                         보기가 선택되면 input에 on 추가.
+                                -->
+                                <!-- [D] 정답시 right, 오답시 wrong 추가 -->
+                                <div class="answer"><span class="txt">I <input class="blank" style="width:100px;" readonly="readonly" disabled="disabled"> sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick. sick.</span></div>
+                            </div>
+                        </div>
+                        <ul class="lst_sample">
+                            <!-- [D] 단어를 불러오고 나서 a태그의 높이가 55px 이상일때 lst_sample 에 type2 추가
+                                     모든 로직이 끝나고 마지막에 visibility:visible 를 추가하여 단어를 보인다.
+                            -->
+                            <li class="on"><a href="#" style="visibility:visible">AAAAAAAAAAAAAAAAAAAAAA</a></li>
+                            <li class="on"><a href="#" style="visibility:visible">always</a></li>
+                            <li><a href="#" style="visibility:visible">have</a></li>
+                            <li><a href="#" style="visibility:visible">her</a></li>
+                            <li><a href="#" style="visibility:visible">over</a></li>
+                            <li><a href="#" style="visibility:visible">It's</a></li>
+                            <li><a href="#" style="visibility:visible">nice</a></li>
+                            <li><a href="#" style="visibility:visible">to</a></li>
+                        </ul>
+                        <!-- 정답 확인 레이어 -->
+                        <!-- [D] 오답 아이콘의 아래로 10px 떨어지도록 top값 조절 -->
+                        <div class="ly_wrong" style="display:none">
+                            <div class="txt_wrap">
+                                Is there something we can do to help her?
+                            </div>
+                            <span class="pop_arrow"></span>
+                        </div>
+                        <!-- //정답 확인 레이어 -->
+                        <!-- 발음 다시 듣기 버튼 -->
+                        <div class="listen_btn_wrap">
+                            <a href="#" class="btn_listen">문장듣기<span class="ico"></span></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="conv_swipe_item">
+                    <!-- 플리킹 영역 (퀴즈 - 듣고 받아적기) -->
+                    <!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 45px(header영역 높이값) -->
+                    <div class="conversation_wrap">
+                    <!-- [D] type3 클래스는 마크업 확인용 클래스입니다. 개발시엔 삭제해주세요. -->
+                    <div class="quiz_area type3">
+                        <div class="paging"><strong>3</strong> / 5</div>
+                        <div class="quiz_wrap">
+                            <div class="quiz_content">
+                                <div class="btn_listen_wrap">
+                                    <a href="#" class="btn_listen"><span class="blind">문장 듣기</span></a>
+                                    <!-- <a href="#" class="btn_slow"><span class="blind">느리게 듣기</span></a> -->
+                                </div>
+                                <!-- [D] 정답시 right, 오답시 wrong 추가 -->
+                                <!-- [D] 듣고 말하기 정답/오답 피드백의 top값은 고정입니다. 정답/오답 위치 : top:-16px; 오답 레이어 위치 : top:262px; -->
+                                <div class="answer input_quiz">
+                                    <textarea class="input_txt" placeholder="문장을 듣고 받아 적어 보세요."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 정답 확인 레이어 -->
+                        <!-- [D] 오답 아이콘의 아래로 10px 떨어지도록 top값 조절 -->
+                        <div class="ly_wrong" style="display:none">
+                            <div class="txt_wrap">
+                                Is there something we can do to help her?
+                            </div>
+                            <span class="pop_arrow"></span>
+                        </div>
+                        <!-- //정답 확인 레이어 -->
+                        <!-- 발음 다시 듣기 버튼 -->
+                        <div class="listen_btn_wrap">
+                            <a href="#" class="btn_listen">문장듣기<span class="ico"></span></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="conv_swipe_item">
+                    <!-- 플리킹 영역 (퀴즈 - 빈칸 단어입력) -->
+                    <!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 45px(header영역 높이값) -->
+                    <div class="conversation_wrap">
+                    <!-- [D] type4 클래스는 마크업 확인용 클래스입니다. 개발시엔 삭제해주세요. -->
+                    <div class="quiz_area type4">
+                        <div class="paging"><strong>4</strong> / 5</div>
+                        <div class="quiz_wrap">
+                            <div class="quiz_content">
+                                <div class="question">우리가 도울 수 있는 방법이 있을까요?</div>
+                                <!-- [D] input의 길이는 보기중에 가장 긴 단어의 길이를 기준.
+                                         작성시 작성input에 on 추가.
+                                -->
+                                <!-- [D] 정답시 right, 오답시 wrong 추가 -->
+                                <div class="answer"><span class="txt">Is there <input class="blank" style="width:100px;"> we can do <input class="blank" style="width:100px;"> <input class="blank" style="width:100px;"> her?</span></div>
+                            </div>
+                        </div>
+                        <!-- 정답 확인 레이어 -->
+                        <!-- [D] 오답 아이콘의 아래로 10px 떨어지도록 top값 조절 -->
+                        <div class="ly_wrong" style="display:none">
+                            <div class="txt_wrap">
+                                Is there something we can do to help her?
+                            </div>
+                            <span class="pop_arrow"></span>
+                        </div>
+                        <!-- //정답 확인 레이어 -->
+                        <!-- 발음 다시 듣기 버튼 -->
+                        <!-- [D] 정/오답 피드백 나올때만 display:block -->
+                        <div class="listen_btn_wrap">
+                            <a href="#" class="btn_listen">문장듣기<span class="ico"></span></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="conv_swipe_item">
+                    <!-- 플리킹 영역 (퀴즈 - 결과) -->
+                    <!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 45px(header영역 높이값) -->
+                    <div class="conversation_wrap">
+                    <!-- [D] 퀴즈 결과 페이지 : result 추가 -->
+                    <div class="quiz_area result">
+                        <div class="score_wrap s100">
+                            <div class="score">
+                                <span class="img_score"></span>
+                                <span class="score_comment">
+                                    <strong>100점, 매우 훌륭하네요!</strong>
+                                    상위 1% 입니다.
+                                </span>
+                            </div>
+                            <div class="score_bar_wrap">
+                                <div class="bar_wrap">
+                                    <!-- [D] 화면이 로딩 될때
+                                             평균 점수를 width값(%)으로 반환
+                                             transition: transform 1s ease, width 0.5s ease 0s
+                                             인라인 스타일로 추가
+                                    -->
+                                    <div class="everage_bar" style=""></div>
+                                    <!-- [D] 화면이 로딩 될때
+                                             내 점수를 width값(%)으로 반환
+                                             transition: transform 1s ease, width 1s ease 1s
+                                             인라인 스타일로 추가
+                                    -->
+                                    <div class="myscore" style=""><span class="marker"></span></div>
+                                </div>
+                                <p class="score_ment">다른 이용자의 평균 점수는 <span>50점</span> 입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_area">
+                        <a href="#" class="btn_review">다시 풀기</a>
+                        <a href="#" class="btn_banner">
+                            잘 안들리시나요? <span class="g">리스닝에서 받아적기 연습</span><span class="ico_arrow"></span>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- [D] 퀴즈의 갯수만큼 해당 버튼과 오답률의 리스트를 생성하여
+                 플리킹시 노출/비노출 처리 -->
+        <ul class="btn_wrap">
+            <!-- [D] 문제화면일때 확인버튼을 노출, right_rate 비노출
+                     문제를 풀고 나면 확인버튼을 비노출, right_rate 노출
+            -->
+            <li class="btn_set">
+                <a href="#" class="btn_link">확인</a>
+                <p class="right_rate" style="display:none;">이 문제의 정답률은 <span class="right">74%</span>, 오답률은 <span class="wrong">26%</span> 입니다.</p>
+            </li>
+            <li class="btn_set" style="display:none">
+                <!-- [D] 마크업 확인용 숫자입니다. 실제 구현시에는 "확인"만 들어가면 됩니다.  -->
+                <a href="#" class="btn_link">확인2</a>
+                <p class="right_rate" style="display:none;">이 문제의 정답률은 <span class="right">75%</span>, 오답률은 <span class="wrong">26%</span> 입니다.</p>
+            </li>
+            <li class="btn_set" style="display:none">
+                <a href="#" class="btn_link">확인3</a>
+                <p class="right_rate" style="display:none;">이 문제의 정답률은 <span class="right">76%</span>, 오답률은 <span class="wrong">26%</span> 입니다.</p>
+            </li>
+            <li class="btn_set" style="display:none">
+                <a href="#" class="btn_link">확인4</a>
+                <p class="right_rate" style="display:none;">이 문제의 정답률은 <span class="right">77%</span>, 오답률은 <span class="wrong">26%</span> 입니다.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 퀴즈 닫기 레이어 -->
+<!-- [D] 레이어 노출시 #wrap 에 position:fixed,
+         레이어 비노출시 #wrap position:relative
+ -->
+<div class="ly_wrap" style="display:block;">
+    <div class="ly_container">
+        <div class="ly_content">
+            <div class="ly_confirm">
+                <div class="txt_inner">
+                    <span class="c_red">퀴즈를 완수하지 않았습니다.</span>
+                    종료하시겠습니까?
+                </div>
+                <div class="btn_area">
+                    <a href="#">취소</a>
+                    <a href="#">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dimmed"></div>
+</div>
+
+<!-- 로그인 레이어 -->
+<!-- [D] 레이어 노출시 #wrap 에 position:fixed,
+         레이어 비노출시 #wrap position:relative
+ -->
+<div class="ly_wrap" style="display:block;">
+    <div class="ly_container">
+        <div class="ly_content">
+            <div class="ly_confirm">
+                <div class="txt_inner">
+                    <span class="c_red">로그인이 필요한 서비스입니다.</span>
+                    로그인하시겠습니까?
+                </div>
+                <div class="btn_area">
+                    <a href="#">취소</a>
+                    <a href="#">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dimmed"></div>
+</div>
+
+<!-- alert 레이어 -->
+<!-- [D] 레이어 노출시 #wrap 에 position:fixed,
+         레이어 비노출시 #wrap position:relative
+ -->
+<div class="ly_wrap" style="display:block;">
+    <div class="ly_container">
+        <div class="ly_content">
+            <div class="ly_alert">
+                <div class="txt_inner">
+                    리뷰 내용을 입력해주세요.
+                </div>
+                <div class="btn_area">
+                    <a href="#">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dimmed"></div>
+</div>
+
+<!-- 로그인 유도 레이어 -->
+<!-- [D] 레이어 노출시 #wrap 에 position:fixed,
+         레이어 비노출시 #wrap position:relative
+ -->
+<div class="ly_wrap" style="display:block;">
+    <div class="ly_container">
+        <div class="ly_content">
+            <div class="ly_confirm">
+                <div class="txt_inner">
+                    로그인 후 퀴즈를 풀면, <br>
+                    학습현황에서 날짜별로 <br>
+                    결과를 확인할 수 있습니다.
+                </div>
+                <div class="btn_area">
+                    <a href="#">취소</a>
+                    <a href="#">로그인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dimmed"></div>
+</div>
+
+<!-- [D] 마크업 확인용. 개발시 삭제 -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/iScroll.js"></script>
+<script type="text/javascript" src="js/highcharts.src.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript">
+    window.mySwipe = new Swipe(document.getElementById('slider'), {
+        transitionEnd: function(index, elem) {
+
+            $(".btn_set").hide().eq(index).show();
+        }
+    });
+</script>
+<!-- //[D] 마크업 확인용. 개발시 삭제 -->
+</body>
+</html>

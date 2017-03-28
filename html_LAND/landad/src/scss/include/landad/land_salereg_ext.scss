@@ -1,0 +1,79 @@
+@import "../../common/_variable";
+@import "../../common/_mixin";
+@import "../../common/_common";
+
+/* NHN WebStandard Team (http://html.nhndesign.com/) author : MJ,Yoon */
+
+.layer_direct_find {position:absolute; height:251px; width:410px;#{$ie6-hack}height:253px; background:#fff; border:1px solid #777; font-size:12px; z-index:2;}
+.layer_direct_find .scroll {height:214px;#{$ie6-hack}height:215px; border-bottom:1px solid #c8c7c2; overflow-y:auto; scrollbar-face-color:#eaeaea; scrollbar-track-color:#f7f7f7; scrollbar-3dlight-color:#e2e2e2; scrollbar-arrow-color:#8c8c8c; scrollbar-shadow-color:#eaeaea; scrollbar-highlight-color:#eaeaea; scrollbar-darkshadow-color:#e2e2e2;}
+.layer_direct_find .depth1 {margin:12px 12px 0 11px; padding-bottom:3px;}
+.layer_direct_find .depth1 li {height:21px;}
+.layer_direct_find .depth1 li a {color:#666;}
+.layer_direct_find .depth1 li a strong {color:#333;}
+.layer_direct_find .nav_tree {padding:12px 12px 9px 11px;}
+.layer_direct_find .nav_tree ul.depth2 li {padding-bottom:7px;}
+.layer_direct_find .nav_tree ul.depth2 li a{color:#258102;}
+.layer_direct_find .nav_tree ul.depth3 {padding:7px 0 2px 0;}
+.layer_direct_find .nav_tree ul.depth3 li {height:18px; padding:0;}
+.layer_direct_find .nav_tree ul.depth3 li a{color:#666;}
+.layer_direct_find .nav_tree ul.depth3 li a strong {color:#333;}
+.layer_direct_find .nav_tree ul li{ list-style:none; white-space:nowrap;}
+.layer_direct_find .nav_tree ul li ul{display:none;}
+.layer_direct_find .nav_tree ul li ul li{display:none;}
+.layer_direct_find .nav_tree ul li.nav_tree_on ul{display:block;}
+.layer_direct_find .nav_tree ul li.nav_tree_on ul li{display:block;}
+.layer_direct_find .nav_tree ul li.nav_tree_off ul{display:none;}
+.layer_direct_find .nav_tree ul li.nav_tree_off ul li{display:none;}
+.layer_direct_find .both_open .depth1 {background:url(#{$imgUrl-center}/bg_line_dot5.gif) repeat-x left bottom;}
+.layer_direct_find .result_none {width:380px; margin:0 12px; padding-top:100px; text-align:center; color:#666;}
+.layer_direct_find .result_none strong {color:#258102;}
+.layer_direct_find .btn_close {width:408px;#{$ie6-hack}width:100%; padding:5px 0; background:#f7f7f7; border:1px solid #fdfdfd; text-align:center;}
+
+.layer_sale_info {clear:both; position:absolute; z-index:10; width:252px;#{$ie6-hack}width:265px; padding:0 0 0 13px; background:#f6f6f6 url(#{$imgUrl-center}/bg_map_layer.gif) repeat-x; border:1px solid #7d7d7d; text-align:left}
+.layer_sale_info h3 {clear:both; margin:2px 5px 0px -3px; padding:8px 0 0 2px; font-size:14px;line-height:1.3;}
+.layer_sale_info h3 .num {position:relative; display:block; float:left; width:18px; height:20px; top:-2px; margin-right:5px; padding:1px 0 0 0; color:#fff; font-family:tahoma; font-size:11px; font-weight:bold; text-align:center; letter-spacing:-1px}
+.layer_sale_info h3 .cate1 {background:url(#{$imgUrl-center}/bg_housing_cate1.gif) no-repeat;}
+.layer_sale_info h3 .cate2 {background:url(#{$imgUrl-center}/bg_housing_cate2.gif) no-repeat;}
+.layer_sale_info h3 .cate3 {background:url(#{$imgUrl-center}/bg_housing_cate3.gif) no-repeat;}
+.layer_sale_info h3 .cate4 {background:url(#{$imgUrl-center}/bg_housing_cate4.gif) no-repeat;}
+.layer_sale_info h3 .cate5 {background:url(#{$imgUrl-center}/bg_housing_cate5.gif) no-repeat;}
+.layer_sale_info h3 div {color:#000; width:205px;#{$ie6-hack}width:215px; font-size:14px;overflow:hidden; float:left; margin:0; padding:0 0 6px 0; color:#333333; word-wrap:break-word; word-break:break-all; -moz-binding: url('/css/wordwrap.xml#wordwrap'); white-space:normal;}
+.layer_sale_info h3 div:hover, .layer_sale_info h3 div:active, .layer_sale_info h3 div:focus {text-decoration:none;}
+.layer_sale_info .separator {height:10px; clear:both; margin:0 10px 0px -3px; background:url(#{$imgUrl-center}/bg_line_map_layer.gif) repeat-x left top}
+.layer_sale_info .thumb {display:block; float:left; margin-right:10px; border:2px solid #d0d0d0;}
+
+.layer_sale_info dl {float:left; width:240px; margin:4px 0 0 3px; padding:0;}
+.layer_sale_info dt {float:left; width:54px; margin:0; padding:3px 0 6px 0; color:#333333; font-size:12px; font-weight:bold;line-height:1}
+.layer_sale_info dt.view {visibility:hidden;}
+.layer_sale_info dd {overflow:hidden; float:left; width:185px; margin:0; padding:1px 0 6px 0; color:#333333; font-size:12px; line-height:14px; word-wrap:break-word; word-break:break-all; -moz-binding: url('/css/wordwrap.xml#wordwrap'); white-space:normal;}
+
+.layer_sale_info dd.num a {padding-right:2px; color:#ff7200; font-weight:bold; text-decoration:underline; letter-spacing:-1px;}
+.layer_sale_info dd.view1 {width:56px; padding-top:1px; }
+.layer_sale_info dd.view2{width:97px; padding-top:1px; }
+.layer_sale_info .close {position:absolute; top:11px; right:12px;}
+.layer_sale_info .bg_edge {position:absolute;width:13px; height:14px;}
+.no_img {width:220px;#{$ie6-hack}width:233px;}
+
+#maparea_wrap {position:relative; width:958px; height:298px;}
+
+
+
+.dsc_wrap{margin:15px 0 0;padding:12px 15px 9px;border:1px solid #DEDEDE;background:#F7F7F7}
+.dsc_wrap h4{margin:0 0 5px;padding:0;background:none;color:#444}
+.dsc_wrap li{line-height:18px;color:#444;letter-spacing:-1px}
+.payment_s{margin:15px 0 0;padding:12px 15px 20px;border:1px solid #F1F1F1;background:#FAFAFA}
+.payment_s strong{color:#F5433D}
+.payment_s h4{margin:0 0 15px;padding:0;background:none;color:#444;text-align:center}
+.payment_s img{position:relative;top:-2px}
+.payment_s table{border:none}
+.payment_s caption{display:none}
+.payment_s table strong{font-weight:normal}
+.payment_s th,.payment_s td{border:none;line-height:20px;color:#606060;letter-spacing:-1px}
+.payment_s img{vertical-align:middle}
+.payment_s .line{padding:0 0 0 20px;border-left:1px solid #D4D4D4}
+.ly_detail_view{position:absolute;z-index:100;width:190px;padding:7px 9px;border:1px solid #888;background:#FFF;font-size:11px;line-height:16px;color:#666;letter-spacing:-1px;text-align:left}
+.ly_detail_view strong{display:block;margin:0 0 1px;line-height:18px;color:#333}
+.ly_detail_view span{display:block;position:absolute;width:9px;height:5px;margin:-12px 0 0 92px;background:url(#{$imgUrl-center}/bg_t_arrow.gif) no-repeat 0 0}
+
+
+

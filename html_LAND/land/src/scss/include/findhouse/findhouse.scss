@@ -1,0 +1,501 @@
+@import "../../common/_variable";
+@import "../../common/_mixin";
+@import "../../common/_common";
+
+/* NTS Commerce UI Development Team KTH 120125 */
+
+/* common */
+.input_chk,.input_rdo{position:relative;width:13px;height:13px;margin-top:-1px;#{$ie6-hack}margin:0;vertical-align:middle}
+.label{margin-left:1px;padding-left:2px;vertical-align:middle}
+.label2{margin:0 13px 0 1px;padding-left:2px;vertical-align:middle}
+.input_txt{height:14px;padding:3px 3px 0 0;border:1px solid;border-color:#c5c5c5 #e9e9e9 #e9e9e9 #c5c5c5;color:#222;text-align:right;vertical-align:middle}
+.input_txt.v2{padding:3px 0 0 3px;text-align:left}
+.blind{display:none}
+
+/* Layout */
+#container{margin-top:15px}
+
+/* Layout - Spot */
+.title_area{position:relative;height:25px;padding-left:1px}
+.title_area h2{width:103px;height:15px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;font-size:0;text-indent:-9999px}
+.title_area h2.comp{width:97px;height:13px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -236px -214px;font-size:0;text-indent:-9999px}
+.title_area p{position:absolute;top:1px;right:1px;width:196px;height:15px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;font-size:0;text-indent:-9999px}
+.title_area p.loca_step{background-position:-229px 0}
+.title_area p.loca_step2{background-position:-229px -20px}
+.title_area p.loca_step3{background-position:-229px -40px}
+.spot_wrap{position:relative;width:980px;margin:0 0 25px;border-bottom:1px solid #e7e8ea}
+.spot{position:relative;width:978px;border:1px solid #a3a5a6;border-top:none;background:#f7f8f9;zoom:1}
+.spot:after{display:block;clear:both;content:''}
+.map{float:left;position:relative;z-index:10;width:700px;background:#fff}
+.step{position:relative;width:684px;#{$ie6-hack}width:683px;height:22px;margin-left:-1px;padding:8px 0 0 17px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -312px}
+.step h3{height:14px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;text-indent:-9999px}
+.step h3.step_title{width:90px;background-position:-106px -19px;font-size:0}
+.step p{position:absolute;top:10px;right:9px;font-size:11px;color:#d2d3d4;letter-spacing:-1px}
+.step p span{font-weight:bold;color:#8bb3f7}
+.step .btn{top:5px;right:5px}
+.step .btn span{display:inline-block;vertical-align:top}
+.step_on{height:23px;background-position:0 -276px}
+.step_on h3.step_title{background-position:-106px 0}
+.step_on h3.step_title2{width:103px;background-position:-106px -38px}
+.step_on .btn .btn_requestview{background-position:0 -179px}
+.type_area{position:relative;z-index:40;height:27px;padding:15px 0 0 17px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -347px;zoom:1}
+.type_area:after{display:block;clear:both;content:''}
+.type_area h3{float:left;padding-right:10px;font-size:12px;color:#565f76;letter-spacing:-1px}
+.type_area h3.bar{padding-left:19px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -699px -195px}
+.type_area ul{float:left;position:relative}
+.type_area ul li{float:left;position:relative}
+.type_area ul li label{color:#35373f;letter-spacing:-1px}
+.type_area ul li.w1{width:62px}
+.type_area ul li.w2{width:74px}
+.type_area ul li.w3{width:64px}
+.type_area ul li.w4{width:53px}
+.type_area ul li.w5{width:51px}
+.type_area ul li.w6{width:58px}
+.type_area ul li.w8{width:52px}
+.type_area ul li.w9{width:52px}
+.type_area ul li.w10{width:45px}
+.type_area ul li.on{font-weight:bold}
+
+._trad_rlet_area ul li.on{font-weight:bold}
+
+.choice_area{display:none;position:absolute;top:0;left:-1px;width:697px;border:2px solid #6d96de}
+.cline{height:38px}
+.ly_tip{display:none;position:absolute;top:3px;left:705px;width:258px;height:108px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -66px}
+.ly_tip dl{padding:14px 0 0 27px}
+.ly_tip dl dt{padding-bottom:8px;font-weight:bold;color:#647389}
+.ly_tip dl dd{line-height:20px;color:#3a404c;letter-spacing:-1px}
+.ly_tip dl dd span{display:inline-block;width:16px;height:18px;margin-right:7px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -451px 2px;font-family:tahoma;font-size:10px;font-weight:bold;color:#797d81;text-align:center}
+.ly_tip dl dd.on{font-weight:bold;color:#4174ce}
+.ly_tip dl dd.on span{background-position:-430px 2px;color:#4174ce}
+.type_on .choice_area{display:block}
+.type_on .ly_tip{display:block;height:162px;background-position:0 -486px}
+.type_on .ly_tip em{display:block;padding:1px 0 5px 23px;font-weight:normal;line-height:17px}
+.type_on h3{color:#4174ce}
+
+.location{position:relative;z-index:30;background:#FFF}
+.location:after{display:block;clear:both;content:''}
+:root .loc_view .sel{margin:10px 0 0}
+.loc_view{overflow:hidden;position:relative;height:32px;padding-left:14px;border:1px solid #bcc0cc;background:url(#{$imgUrl-service}/findhouse/bg_locview.gif) repeat-x}
+.loc_view .bar{display:block;overflow:hidden;float:left;width:19px;height:32px;margin:0 12px 0 0;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -612px -521px;line-height:999px;vertical-align:top}
+.loc_view .sel{position:relative;display:inline-block;float:left;margin:9px 0 0}
+:root .loc_view .sel{margin:7px 0 0}
+.loc_view .w{width:91px}
+.loc_view .w2{width:130px}
+.loc_view .w3{width:100px}
+.loc_view .w4{width:250px}
+.selectbox-noscript *{display:none}
+.selectbox-noscript .selectbox-source{display:inline;position:relative;top:-2px;#{$ie7-hack}top:-3px;left:0}
+.selectbox-noscript .selectbox-source *{display:block}
+.selectbox-source{position:absolute;left:-9999px}
+.selectbox-focused{font-weight:bold}
+.selectbox-focused .selectbox-box{}
+.selectbox-disabled .selectbox-box{}
+.selectbox-box{float:left;padding:1px 8px 0 0;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 100% -486px;cursor:pointer}
+:root .selectbox-box{background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 100% -484px}
+.selectbox-label{font-weight:bold;color:#2d3340}
+.selectbox-layer{display:none;overflow:hidden;overflow-y:auto;position:absolute;z-index:100;width:160px;height:200px;margin:10px 0 0 -5px;#{$ie7-hack}margin:10px 0 0 -5px;border:1px solid #777;background:#FFF}
+:root .selectbox-layer{margin:10px 0 0 -5px}
+.selectbox-list ul{margin:0;padding:0;background:#FFF;list-style:none}
+.selectbox-list ul li{display:block;padding:5px 0 4px 3px;color:#333;text-align:left !important;cursor:pointer;zoom:1}
+.selectbox-list ul li.selectbox-item-selected{font-weight:bold;color:#000}
+.selectbox-list ul li.selectbox-item-over{background:#F3F3F3 !important}
+
+.location .loc_list{overflow:hidden;position:relative;z-index:10;width:699px;height:246px}
+.location .loc_list .list,.location .loc_list .list2,.location .loc_list .list3{scrollbar-face-color:#FFF;scrollbar-track-color:#F2F3F3;scrollbar-arrow-color:#8991A8;scrollbar-highlight-color:#FFF;scrollbar-3dlight-color:#E1E2E6;scrollbar-shadow-color:#FFF;scrollbar-darkshadow-color:#E1E2E6}
+.location .loc_list .list{overflow:hidden;float:left;position:relative;width:185px;height:241px;padding:6px 0 0;border-right:1px solid #BCBCBC;background:url(#{$imgUrl-service}/findhouse/bg_map_dot.gif) repeat-y 92px 0}
+.location .loc_list .list ul{overflow:hidden;position:relative;width:188px}
+.location .loc_list .list li{overflow:hidden;float:left;height:23px;margin:0 1px 3px 0;padding:0 7px}
+.location .loc_list .list li a{display:block;overflow:hidden;width:70px;height:19px;padding:4px 0 0 8px;line-height:16px;#{$ie7-hack}line-height:14px;#{$ie6-hack}line-height:16px;color:#3E3E3E;text-decoration:none}
+:root .location .loc_list .list li a{line-height:15px}
+.location .loc_list .list li a.selected,.location .loc_list .list li a:hover{background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;font-weight:bold;letter-spacing:-1px}
+.location .loc_list .list li a:hover{background-position:-526px -34px;color:#3E3E3E}
+.location .loc_list .list li a.selected{background-position:-609px -34px;color:#4174CE !important}
+
+.location .loc_list .list2{overflow:hidden;overflow-y:scroll;float:left;position:relative;width:201px;height:241px;padding:6px 0 0;border-right:1px solid #BCBCBC;background:url(#{$imgUrl-service}/findhouse/bg_map_dot.gif) repeat-y 92px 0}
+.location .loc_list .list2 ul{overflow:hidden;float:left;position:relative;width:92px !important}
+.location .loc_list .list2 ul.right{float:right;margin-right:-1px}
+.location .loc_list .list2 li{overflow:hidden;position:relative;width:74px;#{$ie7-hack}width:78px;margin:0 1px 3px 0;padding:0 7px;vertical-align:top;zoom:1}
+:root .location .loc_list .list2 li{width:75px}
+:root .location .loc_list .list2 li{margin-right:0}
+.location .loc_list .list2 li a{display:block;overflow:hidden;width:70px;height:18px;padding:5px 0 0 8px;line-height:16px;#{$ie7-hack}line-height:14px;#{$ie6-hack}line-height:16px;color:#3E3E3E;text-decoration:none}
+:root .location .loc_list .list2 li a{line-height:15px !important}
+.location .loc_list .list2 li a.multi{height:36px;line-height:16px}
+.location .loc_list .list2 li a.selected,.location .loc_list .list2 li a:hover{background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;font-weight:bold;letter-spacing:-1px}
+.location .loc_list .list2 li a:hover{background-position:-526px -34px;color:#3E3E3E}
+.location .loc_list .list2 li a.selected{background-position:-609px -34px !important;color:#4174CE !important}
+.location .loc_list .list2 li a.multi:hover{background-position:-526px -62px}
+.location .loc_list .list2 li a.selected.multi{background-position:-609px -62px !important}
+
+.location .loc_list .list3{overflow:hidden;overflow-y:scroll;float:right;position:relative;width:311px;height:175px;border-bottom:1px solid #BCBCBC;background:url(#{$imgUrl-service}/findhouse/bg_map_dot2.gif) repeat-y 98px 0}
+.location .loc_list .list3 ul{overflow:hidden;float:left;position:relative;width:99px;padding:6px 0 0}
+.location .loc_list .list3 ul.right{float:right;margin-right:-3px}
+.location .loc_list .list3 li{overflow:hidden;margin:0 1px 3px 0;padding:0 7px}
+.location .loc_list .list3 li a{display:block;overflow:hidden;width:76px;height:18px;padding:5px 0 0 8px;line-height:16px;#{$ie7-hack}line-height:14px;#{$ie6-hack}line-height:16px;color:#3E3E3E;text-decoration:none}
+:root .location .loc_list .list3 li a{line-height:15px}
+.location .loc_list .list3 li a.multi{height:36px;line-height:16px}
+.location .loc_list .list3 li a.selected,.location .loc_list .list3 li a:hover{background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;font-weight:bold;letter-spacing:-1px}
+.location .loc_list .list3 li a:hover{background-position:-526px -108px;color:#3E3E3E}
+.location .loc_list .list3 li a.selected{background-position:-615px -108px !important;color:#4174CE}
+.location .loc_list .list3 li a.multi:hover{background-position:-526px -134px}
+.location .loc_list .list3 li a.selected.multi{background-position:-615px -134px !important}
+.location .loc_list .list3 .none{width:295px;height:169px;background:#FFF}
+.location .loc_list .list3 .none li{display:inline;overflow:hidden;float:left;width:112px;height:15px;margin:72px 0 0 92px;padding:0;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -503px 0;line-height:999px;vertical-align:top}
+
+.location .loc_list .sel_view{float:right;position:relative;width:311px;height:70px;background:#F7F8F9}
+.location .loc_list .sel_view p.txt{position:absolute;top:0;left:0;width:175px;margin:20px 0 0 16px;line-height:16px;color:#565657;letter-spacing:-1px}
+.location .loc_list .sel_view p.txt em{color:#4174CE}
+.location .loc_list .sel_view p.btn2{position:absolute;top:0;left:0;width:125px;height:37px;margin:17px 0 0 169px}
+.location .loc_list .sel_view p.btn2 a{display:block;overflow:hidden;width:125px;height:37px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -425px -179px;line-height:999px;cursor:default}
+.location .loc_list .sel_view p.btn2 a.view{background-position:-555px -179px;cursor:pointer}
+.choice_area_t,.choice_area_l,.choice_area_r,.choice_area_b{display:none}
+.loc_on{z-index:50}
+.loc_on .choice_area_t{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:701px;border-top:2px solid #6d96de}
+.loc_on .choice_area_l{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:2px;height:278px;border-left:2px solid #6d96de}
+.loc_on .choice_area_r{display:block;position:absolute;top:-1px;right:-1px;z-index:20;width:2px;height:278px;border-right:2px solid #6d96de}
+.loc_on .choice_area_b{display:block;position:absolute;left:-1px;bottom:-1px;#{$ie7-hack}bottom:-13px;z-index:20;width:701px;border-top:2px solid #6d96de}
+.loc_on .ly_tip{display:block;top:1px}
+
+.location .loc_select{overflow:hidden;position:relative;z-index:10;height:34px;padding:11px 0 0 16px;border-right:1px solid #adb1b8;background:#fbfbfd}
+.location .loc_select h3{float:left;width:126px;padding-top:5px;font-size:12px;font-weight:bold;color:#2d3240;letter-spacing:-1px}
+.location .loc_select ul{float:left}
+.location .loc_select ul li{float:left;padding-top:5px}
+.location .loc_select ul li.on label{font-weight:bold}
+.location .loc_select ul li.w1{width:94px}
+.location .loc_select ul li.w2{width:177px;padding-top:3px}
+.location .loc_select ul li.w2 label{display:inline-block;width:52px}
+.location .loc_select ul li.w3{width:84px}
+.location .loc_select ul li.w4{width:84px}
+.location .loc_select ul li label{color:#35373f;letter-spacing:-1px;vertical-align:middle}
+.location .loc_select ul li input{vertical-align:middle}
+.location .loc_select ul li select{height:19px;margin-top:-2px;color:#7f7f7f;vertical-align:middle}
+:root .location .loc_select ul li select{margin-top:0}
+
+.location .loc_map{border-top:1px solid #adb1b8;border-right:1px solid #adb1b8;border-bottom:1px solid #8c919f}
+
+.ly_wish{display:none;position:absolute;top:273px;left:705px;width:258px;padding:16px 0 13px;background:url(#{$imgUrl-service}/findhouse/bg_lybox_btm.gif) no-repeat 0 100%}
+.ly_wish .bg_top{position:absolute;top:0;left:0;width:258px;height:6px;background:url(#{$imgUrl-service}/findhouse/bg_lybox_top.gif) no-repeat}
+.ly_wish .bg_arrow{position:absolute;top:50%;left:0;width:12px;height:13px;margin-top:-7px;background:url(#{$imgUrl-service}/findhouse/bg_lybox_arrow.gif) no-repeat}
+.ly_wish h3{padding:0 7px 0 25px;font-size:12px;font-weight:bold;line-height:16px;color:#4174ce;letter-spacing:-1px}
+.ly_wish p{padding:7px 7px 0 25px;line-height:16px;color:#3a404c}
+.locmap,.locmap_on{display:inline-block;position:relative}
+.locmap_on .choice_area_t{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:701px;border-top:2px solid #6d96de}
+.locmap_on .choice_area_l{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:2px;height:100%;border-left:2px solid #6d96de}
+.locmap_on .choice_area_r{display:block;position:absolute;top:-1px;right:-1px;z-index:20;width:2px;height:100%;border-right:2px solid #6d96de}
+.locmap_on .choice_area_b{display:block;position:absolute;left:-1px;bottom:0;z-index:20;width:701px;border-top:2px solid #6d96de;font-size:0;line-height:0}
+.locmap_on .loc_select h3{color:#4174ce}
+.locmap_on .ly_wish{display:block}
+.map_bar{position:relative;z-index:30;height:6px;margin-bottom:-2px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 100% -475px}
+.map_bar a{display:block;position:absolute;top:1px;left:317px;width:66px;height:12px}
+
+.terms_choice{position:relative;height:22px;padding:12px 0 0 15px;background:#fff}
+.terms_choice h3{font-size:12px;font-weight:bold;color:#4174ce;letter-spacing:-1px}
+.terms_choice p{position:absolute;top:13px;right:11px;font-size:11px;color:#999;letter-spacing:-1px}
+.terms_choice p span{font-weight:bold;color:#628bcf}
+.terms_area{position:relative;margin-top:14px;background:#fff}
+.table{position:relative;width:100%;border-top:1px solid #dadada;border-bottom:1px solid #dadada}
+.table caption{display:none}
+.table tbody th{width:97px;padding:11px 0 8px 13px;border-top:1px solid #ededed;border-right:1px solid #ededed;background:#f9f9f9;line-height:17px;color:#444;letter-spacing:-1px;text-align:left;vertical-align:top}
+.table tbody th.pl15{padding-left:15px}
+.table tbody th span{font-size:11px;color:#628bcf}
+.table tbody td{padding:9px 0;border-top:1px solid #ededed;color:#222}
+.table tbody tr:first-child th,.table tbody tr:first-child td{border-top:none}
+.table tbody td .al_l{position:relative;padding:0 0 0 20px}
+.table tbody td .al_l span{display:inline-block;padding-top:1px;vertical-align:middle}
+.table tbody td select{height:19px;color:#222;vertical-align:middle}
+.table tbody td .t{color:#989898}
+.table tbody td .t3{color:#666;letter-spacing:-1px}
+.table tbody td .t4{padding:8px 10px 0 0;font-size:11px;color:#acacac;text-align:right}
+.table tbody td .t5{font-size:11px;color:#999;letter-spacing:-1px}
+.table tbody td .pinfo_area{overflow:hidden;overflow-y:auto;width:535px;height:82px;padding:10px;border-top:1px solid #c5c5c5;border-right:1px solid #e9e9e9;border-left:1px solid #c5c5c5;border-bottom:1px solid #e9e9e9;line-height:18px;color:#888;scrollbar-face-color:#FFF;scrollbar-track-color:#f4f4f4;scrollbar-arrow-color:#b4b4b4;scrollbar-highlight-color:#FFF;scrollbar-3dlight-color:#ddd;scrollbar-shadow-color:#FFF;scrollbar-darkshadow-color:#ddd}
+.table tbody td .pinfo_area p{margin:0 0 6px}
+.ul_type:after{display:block;clear:both;content:''}
+.ul_type li{float:left;padding:1px 15px 0 0;color:#444}
+.ul_type li.on label{color:#222}
+.ul_type li select{margin-top:-1px}
+.ul_type2:after{display:block;clear:both;content:''}
+.ul_type2 li{float:left;width:210px}
+.ul_type2 li.right{padding-left:14px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -700px -31px}
+.ul_type2 li.right2{width:187px;margin-left:-5px;padding-left:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -700px -31px}
+.ul_type2 li.right3{width:136px;padding-left:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -700px -31px}
+.ly_terms{position:absolute;top:9px;left:32px;line-height:17px;color:#888}
+.tarea_terms{width:535px;height:94px;padding:10px;border-top:1px solid #c5c5c5;border-right:1px solid #e9e9e9;border-left:1px solid #c5c5c5;border-bottom:1px solid #e9e9e9;color:#888;scrollbar-face-color:#FFF;scrollbar-track-color:#f4f4f4;scrollbar-arrow-color:#b4b4b4;scrollbar-highlight-color:#FFF;scrollbar-3dlight-color:#ddd;scrollbar-shadow-color:#FFF;scrollbar-darkshadow-color:#ddd}
+.tarea_on{margin:12px -1px -1px;border:2px solid #6d96de}
+.tarea_on .ly_select_terms{width:277px!important}
+.tarea_on .choice_area_t{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:701px;border-top:2px solid #6d96de}
+.tarea_on .choice_area_l{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:2px;height:100%;#{$ie6-hack}height:468px;border-left:2px solid #6d96de}
+.tarea_on .choice_area_r{display:block;position:absolute;top:-1px;right:-1px;z-index:20;width:2px;height:100%;#{$ie6-hack}height:468px;border-right:2px solid #6d96de}
+.tarea_on .choice_area_b{display:block;position:absolute;#{$ie6-hack}top:466px;left:-1px;bottom:-1px;z-index:20;width:701px;border-top:2px solid #6d96de;font-size:0}
+.tarea_on .ly_tip{display:block}
+.ly_select_terms{position:absolute;top:34px;left:700px;width:278px}
+.ly_select_terms h3{display:none}
+.ly_select_terms ul{border-top:1px solid #dbddde}
+.ly_select_terms ul li{height:26px;padding:10px 0 0 16px;border-top:1px solid #fff;border-bottom:1px solid #e8e9ea;line-height:16px;color:#3b3b3b}
+.ly_select_terms ul li.wide{height:54px;line-height:22px}
+.ly_select_terms ul li span{display:inline-block;width:91px}
+.ly_select_terms ul li span.right{width:154px;padding-left:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -699px -60px}
+.cinfo_area{position:relative;margin-top:1px;background:#fff}
+.cinfo_on{border:2px solid #6d96de;margin:0px -1px -1px -1px;}
+.cinfo_on .ly_select_terms{width:277px!important}
+.cinfo_on .choice_area_t{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:701px;border-top:2px solid #6d96de}
+.cinfo_on .choice_area_l{display:block;position:absolute;top:-1px;left:-1px;z-index:20;width:2px;height:100%;border-left:2px solid #6d96de}
+.cinfo_on .choice_area_r{display:block;position:absolute;top:-1px;right:-1px;z-index:20;width:2px;height:100%;border-right:2px solid #6d96de}
+.cinfo_on .choice_area_b{display:block;position:absolute;left:-1px;bottom:-1px;#{$ie7-hack}bottom:-13px;z-index:20;width:701px;border-top:2px solid #6d96de}
+.cinfo_on .table tbody th{padding-top:15px}
+.cinfo_on .table tbody td{padding:13px 0}
+.cinfo_on .table tbody td .al_l{padding:0 0 0 15px}
+
+.aside{float:right;position:relative;width:278px}
+.aside:after{display:block;clear:both;content:''}
+.aside .blank{height:37px;background:url(#{$imgUrl-service}/findhouse/bg_locview.gif) repeat-x}
+.aside .header{position:relative;top:0;right:0;z-index:20;width:264px;#{$ie6-hack}width:263px;height:23px;padding:8px 0 0 15px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -422px -240px}
+.aside .header h3{width:56px;height:14px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -18px;font-size:0;text-indent:-9999px}
+.aside .header .temp{position:absolute;top:10px;right:9px;padding-right:11px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 100% -217px;font-size:11px;color:#e2e5ec;letter-spacing:-1px}
+:root .aside .header .temp{background-position:100% -216px}
+.aside .header .temp a{color:#e2e5ec}
+.ly_temp{display:none;position:absolute;top:31px;right:0;z-index:10;width:258px;height:330px;padding:0 10px;border:1px solid #646569;background:#fff}
+.ly_temp .cont{height:55px;margin:0 -10px;padding:7px 10px 0;border-bottom:1px solid #e6e6e6;background:#f9fafc;font-size:11px;line-height:15px;color:#707070;letter-spacing:-1px}
+.ly_temp .cont span{display:inline-block;margin-top:2px;color:#8f8f8f}
+.ly_temp .cont em{color:#4174ce}
+.ly_temp .save_list{padding-top:5px}
+.ly_temp .save_list li{position:relative;padding:9px 6px 7px;border-top:1px solid #e6e6e6}
+.ly_temp .save_list li:first-child{border-top:none}
+.ly_temp .save_list li .list_cont{display:block;overflow:hidden;width:246px;font-size:12px;font-weight:normal;line-height:14px;color:#3e3e3e}
+.ly_temp .save_list li p{margin-top:4px;line-height:14px;color:#939393}
+.ly_temp .arrow{position:absolute;top:-6px;left:213px;width:9px;height:6px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -430px -40px}
+.ly_temp .btn_close{position:absolute;top:10px;left:261px;cursor:pointer}
+.ly_temp .btn_close span{display:block;width:10px;height:9px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -476px -48px;text-indent:-9999px}
+.bt_del{display:inline-block;position:absolute;top:9px;left:239px;width:14px;height:13px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -430px -21px;}
+.aside .article{position:relative;height:27px;padding:16px 0 0 16px;background:url(#{$imgUrl-service}/findhouse/dot01.gif) repeat-x 0 100%}
+.aside .article p{overflow:hidden;width:180px;font-weight:bold;line-height:14px;color:#4a4a4a;letter-spacing:-1px}
+.aside .article span{position:absolute;top:16px;left:198px;width:66px;padding-left:9px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -699px -178px;line-height:14px;font-weight:bold;color:#4a4a4a}
+.aside .article2{padding:19px 15px 0;}
+.aside .article2 h3{height:26px;font-size:12px;font-weight:bold;color:#3b3b3b;letter-spacing:-1px}
+.aside .article2 h4{height:19px;font-size:12px;font-weight:bold;color:#73787f;letter-spacing:-1px}
+.aside .article2 .direct{margin-top:-6px;line-height:18px;color:#4e4e4e}
+.aside .article2 .direct .btn_close{display:inline-block;overflow:hidden;width:12px;height:12px;margin:-1px 0 0 -4px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -469px 3px;line-height:999px;vertical-align:middle}
+.aside .article2 .direct .btn_detailview{display:inline-block;overflow:hidden;width:67px;height:18px;margin:-1px 0 0 -1px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -338px -214px;line-height:999px;vertical-align:middle}
+.aside .article2 .complex{overflow-x:hidden;overflow-y:auto;position:relative;height:318px;padding-top:10px;border:1px solid #d8dbe0}
+.aside .article2 .complex li{position:relative;padding-left:15px;line-height:26px;height:26px}
+.aside .article2 .complex li:hover{background:#f5f5f5}
+.aside .article2 .complex li .label{margin-left:6px;color:#222}
+.aside .article2 .complex_choice{border-top:1px solid #d8dbe0;padding-top:12px}
+.aside .article2 .complex_choice li{position:relative;padding-left:22px;margin-bottom:15px;zoom:1}
+.aside .article2 .complex_choice li label{display:block;line-height:18px;padding:0;margin:0;zoom:1}
+.aside .article2 .complex_choice li .input_chk{position:absolute;top:4px;left:2px;}
+.aside .article2 .complex_choice li .lk_dtview{display:inline-block;font-size:11px;color:#909299;font-weight:bold;text-decoration:underline;margin-top:7px;letter-spacing:-1px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 100% -567px;padding-right:6px;line-height: 12px;}
+.aside .article2 .dsc_choice{}
+.aside .article2 .dsc_choice li{margin-bottom:18px;padding-left:10px;background:url(#{$imgUrl-service}/findhouse/dot02.gif) no-repeat 0 6px;line-height:18px;color:#34363d;zoom:1}
+.aside .article2 .dsc_choice li strong{color:#4a7cda}
+.aside .article3{padding:17px 0 0 16px;background:url(#{$imgUrl-service}/findhouse/dot01.gif) repeat-x}
+.aside .article3 ul{overflow:hidden}
+.aside .article3 ul li{float:left;width:114px;height:23px;color:#3b3b3b}
+.aside .article3 ul li.right{float:left;width:130px;padding-left:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -699px -62px}
+.aside .article3 ul li.merge{clear:both;width:100%}
+.aside .article3 ul li span{letter-spacing:-1px}
+.aside .article3 .hopedeal_terms{overflow:hidden;overflow-y:auto;clear:both;position:relative;width:222px;height:93px;margin-top:6px;padding:11px 11px;border:1px solid #d3d3d3;background:#fdfdfd;line-height:20px;color:#666;letter-spacing:-1px;scrollbar-face-color:#FFF;scrollbar-track-color:#f4f4f4;scrollbar-arrow-color:#b4b4b4;scrollbar-highlight-color:#FFF;scrollbar-3dlight-color:#ddd;scrollbar-shadow-color:#FFF;scrollbar-darkshadow-color:#ddd}
+.content_finish{padding-left:247px;border-top:2px solid #4f5566}
+.content_finish .finish_area{position:relative;width:597px;padding:77px 0 90px}
+.content_finish .finish_area h2{height:23px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -688px;text-indent:-9999px}
+.content_finish .finish_area ul{position:relative;height:104px;margin-top:26px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -737px}
+.content_finish .finish_area ul li{display:none}
+.content_finish .finish_area ul li.view{display:block;text-indent:-9999px}
+.content_finish .finish_area ul li.view a{position:absolute;top:67px;left:241px;width:110px;height:13px;text-indent:-9999px}
+.content_finish .finish_area ul li.view a.l2{top:90px;left:93px}
+.content_finish .finish_area p{margin-top:36px;padding-top:24px;border-top:1px solid #eeeef0;text-align:center}
+.content_finish .finish_area p a{display:inline-block;cursor:pointer}
+.content_finish .finish_area p a span{display:block;width:123px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -263px -486px;text-indent:-9999px}
+.content_finish .finish_area p a span.findhome{width:133px;margin-left:5px;background-position:-399px -605px}
+
+.btn_area{position:relative;min-height:30px;#{$ie6-hack}height:30px;text-align:center}
+.btn_area span{display:inline-block;margin-left:1px}
+.btn_area .fl_r{position:absolute;top:0;right:0}
+.btn_area .fl_r span{display:inline-block}
+.btn_area2{position:relative;left:-1px;bottom:-1px;padding:27px 0 24px;border-left:1px solid #c5c6c7;border-bottom:1px solid #b7b8b9;text-align:center}
+.btn_area2 span{display:inline-block}
+.btn_cncl{display:block;width:79px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -155px -179px;text-indent:-9999px}
+.btn_tmpsave{display:block;width:79px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -239px -179px;text-indent:-9999px}
+.btn_termschoice{display:block;width:133px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -206px;text-indent:-9999px}
+.btn_prevstep{display:block;width:98px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -322px -179px;text-indent:-9999px}
+.btn_nextstep{display:block;width:98px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -241px;text-indent:-9999px}
+.btn_nextstep0{display:block;width:98px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -206px -241px;text-indent:-9999px}
+.btn_mailmodify{display:inline-block;width:76px;height:21px;vertical-align:middle}
+.btn_mailmodify span{display:block !important;width:76px;height:21px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -155px -214px;text-indent:-9999px}
+.btn_request{display:block;width:98px;height:30px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -103px -241px;text-indent:-9999px}
+.btn_requestview{display:block;width:73px;height:22px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -78px -179px;text-indent:-9999px}
+.btn_reset{display:block;width:61px;height:21px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -309px -241px;text-indent:-9999px}
+.mgt3{margin-top:3px}
+.mgt6{margin-top:6px}
+.mgt8{margin-top:8px}
+.mgt9{margin-top:9px}
+.mgt10{margin-top:10px}
+.mgt11{margin-top:11px}
+.mgt12{margin-top:12px}
+.mgt13{margin-top:13px}
+.mgt14{margin-top:14px}
+.mgt40{margin-top:40px}
+.mgt56{margin-top:56px}
+.mgt155{margin-top:155px}
+.mgt183{margin-top:183px}
+.guide_clientinfo{overflow:hidden;height:30px;margin:30px 0;padding:20px 0 20px 27px;border:1px solid #e8e8e8;background:#fbfbfb}
+.guide_clientinfo dt{float:left;width:101px;height:29px;margin-right:18px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -653px;text-indent:-9999px}
+.guide_clientinfo dd{float:left;width:420px;height:29px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -119px -653px;text-indent:-9999px}
+
+/* main */
+.main{overflow:hidden;margin-top:-5px!important;background:url(#{$imgUrl-service}/findhouse/bg_main.gif) repeat-y 100% 0;zoom:1}
+.main .bar{height:21px;background:#fff}
+.main_spot_wrap{border:1px solid #d2d5d9}
+.main_spot{position:relative;height:342px;border:6px solid #e2e5e9;background:url(#{$imgUrl-service}/findhouse/bg_main_spot.gif) repeat-x;#{$ie7-hack}zoom:1}
+.main_spot:after{display:block;clear:both;content:''}
+.main_spot .ly_open{overflow:hidden;position:absolute;top:-7px;left:-7px;width:77px;height:81px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -321px -78px;line-height:999px}
+.spot_cont{float:left;width:415px;margin-top:49px;padding-left:60px}
+.spot_cont dt{display:block;overflow:hidden;width:296px;height:72px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat 0 -524px;line-height:999px;vertical-align:top}
+.spot_cont dd{display:block;overflow:hidden;width:347px;height:46px;margin:30px 0 0;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat 0 -601px;line-height:999px;font-size:1px;vertical-align:top}
+.spot_cont dd.btn{width:auto;height:44px;margin:49px 0 0;background:none;line-height:normal}
+.spot_cont dd.btn a{display:inline-block;overflow:hidden;width:148px;height:44px;margin-right:3px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat;line-height:999px;vertical-align:top}
+.spot_cont dd.btn a.btn_rq{background-position:0 -179px}
+.spot_cont dd.btn a.btn_my{background-position:-153px -179px}
+.main_spot .vod{float:left;width:434px;margin-top:50px}
+#content{float:left;width:676px;padding:9px 24px 75px 0}
+.qa_area{position:relative;margin-bottom:41px;padding-bottom:39px;border-bottom:2px solid #dedede;#{$ie7-hack}zoom:1}
+.h_m{display:block;overflow:hidden;width:83px;#{$ie6-hack}font-size:0;height:15px;margin-left:2px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat 0 -228px;line-height:999px}
+.qa_area .qa{margin:12px 0 0 4px}
+.qa_area .qa dt{position:relative;margin-bottom:7px;padding-left:28px;font-weight:bold;line-height:21px;color:#212121;#{$ie7-hack}zoom:1}
+.qa_area .qa dt a{color:#212121}
+.qa_area .qa dt span{overflow:hidden;position:absolute;top:0;left:0;width:21px;height:21px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat 0 -249px;line-height:999px}
+.qa_area .qa dd{position:relative;padding-left:28px;line-height:18px;color:#6a6a6a;#{$ie7-hack}zoom:1}
+.qa_area .qa dd a{color:#6a6a6a}
+.qa_area .qa dd span{overflow:hidden;position:absolute;top:0;left:0;width:21px;height:21px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -26px -249px;line-height:999px}
+.qa_area .more{overflow:hidden;position:absolute;top:6px;right:0;width:36px;height:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -161px -249px;line-height:999px}
+.q_list{margin:13px 0 0 4px;padding:9px 0 0 6px;border-top:1px dotted #f3f3f3}
+.q_list li{position:relative;margin-top:7px;padding-left:21px;line-height:14px;color:#212121;#{$ie7-hack}zoom:1}
+.q_list li a{line-height:14px;color:#212121}
+.q_list li span{overflow:hidden;position:absolute;top:0;left:0;width:13px;height:14px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -52px -249px;line-height:999px}
+.h_m2{display:block;overflow:hidden;width:356px;height:15px;margin-left:2px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat 0 -275px;font-size:1px;line-height:999px}
+.service_step{display:block;position:relative;width:673px;height:500px;margin:14px 0 0 3px}
+.service_step_img{position:absolute;top:0;left:0;z-index:10;width:673px;height:500px;background:url(#{$imgUrl-service}/findhouse/sp_find_main2.png) no-repeat}
+.service_step_cont{overflow:auto;width:100%;height:500px}
+.aside_main{float:left;width:280px;}
+.login{position:relative;border:1px solid #c4c9cd;background:#f7f8fa;zoom:1}
+.login .login_head{padding:17px 0 0 15px;line-height:14px;color:#252627}
+.login .login_cont{width:248px;margin:7px auto 0;padding:9px 0 13px;border-top:1px solid #dcdcdc;font-size:11px;line-height:15px;color:#848689;letter-spacing:-1px}
+.login .user{padding:11px 0 0 15px;line-height:14px;color:#252627}
+.login .user_count{padding:7px 0 13px 15px;border-bottom:1px solid #c4c9cd;line-height:14px;color:#707070;letter-spacing:-1px}
+.login .user_count a{font-weight:bold;color:#390;text-decoration:underline}
+.login .btn_reload{overflow:hidden;position:absolute;top:32px;right:10px;width:17px;height:14px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -258px -249px;line-height:999px;font-size:0;vertical-align:middle}
+.login .btn_login{overflow:hidden;position:absolute;top:13px;right:15px;width:48px;height:18px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -280px -249px;line-height:999px}
+.login .btn_logout{overflow:hidden;position:absolute;top:8px;right:10px;width:51px;height:18px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -202px -249px;line-height:999px}
+.login .user_list .tab{overflow:hidden;margin-top:-1px;zoom:1}
+.login .user_list .tab li{float:left;position:relative;width:93px;height:36px;zoom:1}
+.login .user_list .tab li a{display:block;width:93px;height:36px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat;line-height:36px;text-align:center;font-weight:bold;color:#878d93;text-decoration:none}
+.login .user_list .tab li a.on{color:#34363d}
+.login .user_list .tab li a.before{color:#b5b7ba}
+.login .user_list .tab .t1 a{background-position:0 -404px}
+.login .user_list .tab .t1 a.on{background-position:0 -367px}
+.login .user_list .tab .t2 a{background-position:-93px -404px}
+.login .user_list .tab .t2 a.on{margin-left:-1px;padding-right:1px;background-position:-92px -367px}
+.login .user_list .tab .t3{width:92px}
+.login .user_list .tab .t3 a{width:92px;background-position:-186px -404px}
+.login .user_list .tab .t3 a.on{margin-left:-1px;padding-right:1px;background-position:-185px -367px}
+.login .user_list .tab .t4{width:139px}
+.login .user_list .tab .t4 a{width:139px;background-position:0 -483px}
+.login .user_list .tab .t4 a.on{background-position:0 -446px}
+.login .user_list .tab .t5{width:139px}
+.login .user_list .tab .t5 a{width:139px;background-position:-139px -483px}
+.login .user_list .tab .t5 a.on{margin-left:-1px;padding-left:1px;background-position:-138px -446px}
+.login .request_list dl{overflow:hidden;width:246px;margin:0 auto;padding:15px 0 4px;border-bottom:1px solid #f3f3f3;zoom:1}
+.login .request_list dt{float:left;clear:both;width:52px;line-height:16px;color:#777;letter-spacing:-1px}
+.login .request_list dd{float:left;width:185px;margin-bottom:6px;padding-left:9px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -397px -189px;line-height:16px;color:#333}
+.login .request_list .nodata{width:246px;margin:0 auto;padding:33px 0 22px;border-bottom:1px solid #f3f3f3;line-height:16px;color:#777;letter-spacing:-1px;text-align:center}
+.login .btn_box{padding:12px 0 16px;text-align:center}
+.login .btn_propel{display:inline-block;overflow:hidden;width:55px;height:18px;margin:2px 0 4px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -306px -202px;line-height:999px}
+.login .btn_confirm{display:inline-block;overflow:hidden;width:55px;height:18px;margin:2px 0 4px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -306px -179px;line-height:999px}
+.login .btn_myfind{display:inline-block;overflow:hidden;width:116px;height:29px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat 0 -147px;line-height:999px;vertical-align:top}
+.login .btn_findrequest{display:inline-block;overflow:hidden;width:120px;height:29px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -121px -147px;line-height:999px;vertical-align:top}
+
+.aside_ban{border:1px solid #c8c8c8;border-top:none}
+.aside_ban img{vertical-align:top}
+.notice{position:relative;width:243px;margin:23px 0 0 19px}
+.notice dt{display:block;overflow:hidden;width:42px;height:12px;margin-bottom:9px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -114px -249px;line-height:999px}
+.notice dd{padding-left:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -394px -170px;line-height:20px}
+.notice dd a{color:#444}
+.notice dd.more{position:absolute;top:1px;right:0;padding:0;background:none}
+.notice dd.more a{display:block;overflow:hidden;width:36px;height:10px;background:url(#{$imgUrl-service}/findhouse/sp_find_main.png) no-repeat -161px -249px;line-height:999px}
+
+/* 2012-05-31 추가 */
+.sub{float:none!important;width:100%!important;padding:0 0 50px!important}
+.new_title{position:relative;height:31px;z-index:10}
+.new_title h2{overflow:hidden;display:inline-block;#{$ie6-hack}font-size:0;width:115px;height:17px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -263px -605px;line-height:999px;vertical-align:top}
+.new_title .fr{position:absolute;top:5px;right:6px}
+.new_title .temp_rq{font-weight:bold;color:#656a70;text-decoration:none!important;letter-spacing:-1px;}
+.new_title .temp_rq span{color:#4a7cda}
+.new_title .temp_rq .ico_ar{display:inline-block;width:13px;height:14px;margin-left:5px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -537px -846px;vertical-align:middle;margin-top:-2px;#{$ie7-hack}margin-top:0}
+.new_title .temp_rq .ar_top{background-position:-560px -846px}
+.step_bar{display:block;position:relative;border:1px solid;border-color:#788296 #788296 #545b69 #788296;padding-left:12px;height:31px;background:url(#{$imgUrl-service}/findhouse/bg_step.png) repeat-x}
+.step_bar h3{position:relative;display:inline-block;#{$ie6-hack}font-size:0;margin-top:8px;overflow:hidden;line-height:999px;vertical-align:top;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat}
+.step_bar .rq_terms{width:110px;height:15px;background-position:-263px -565px}
+.step_bar .client_info{width:75px;height:15px;background-position:-263px -585px}
+.step_bar .btn_view{position:absolute;top:-1px;right:-1px;display:inline-block;width:108px;height:33px;overflow:hidden;vertical-align:top;line-height:999px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -393px -565px;}
+.stitle{position:relative;display:block;height:24px;padding-top:31px}
+.stitle h3{display:inline-block;#{$ie7-hack}display:inline;overflow:hidden;margin:-1px 5px 0 0;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;line-height:999px;vertical-align:middle;zoom:1}
+.stitle .h_type{width:100px;height:15px;background-position:0 -846px}
+.stitle .h_area{width:56px;height:14px;background-position:-105px -846px}
+.stitle .h_entryinfo{width:47px;height:13px;background-position:-166px -846px}
+.stitle span{font-size:11px;color:#adafb6;letter-spacing:-1px}
+.stitle em{position:absolute;top:34px;right:0;font-size:11px;color:#6480e8;}
+.dot{display:inline-block;width:5px;height:5px;line-height:999px;overflow:hidden;vertical-align:middle;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -483px -34px;margin-top:-2px}
+.dsc_area {margin:17px 0 17px 13px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat 0 -865px;width:636px;height:53px}
+.dsc_area li{display:none}
+.table2{width:100%;border:1px solid #c7ccd6}
+.table2 caption{display:none}
+.table2 th{padding:15px 0 12px;border-top:1px solid #ebedf0;border-right:1px solid #f6f6f9;border-left:1px solid #e5e7ed;background:#fbfbfd;line-height:16px;color:#2d3340;letter-spacing:-1px;text-align:left;vertical-align:top}
+.table2 th div{padding-left:15px}
+.table2 th div.pt{color:#6480e8}
+.table2 td{min-height:21px;padding:12px 0;border-top:1px solid #ededed;color:#222}
+.table2 tr:first-child th,.table2 tr:first-child td{border-top:none}
+.table2 th:first-child{border-left:none}
+.table2 td .al_l{position:relative;padding:0 0 0 17px;zoom:1}
+.table2 td .al_l:after{display:block;clear:both;content:''}
+.table2 td select{height:19px;color:#222;vertical-align:middle}
+.table2 td .input_txt{height:16px!important}
+.table2 td .t{color:#6c6f7c;letter-spacing:-1px}
+.table2 td .t2{color:#616477;letter-spacing:-1px}
+.table2 td .t3{color:#5976be;letter-spacing:-1px}
+.table2 td .t4{color:#989898}
+.table2 td .t5{color:#3c3e49;letter-spacing:-1px}
+.table2 td .t6{padding:8px 16px 0 0;font-family:tahoma;font-size:11px;color:#a8a8a8;text-align:right}
+.table2 td .t7{font-size:11px;line-height:18px;color:#a8a8a8;letter-spacing:-1px}
+.table2 td .t8{color:#6480e8;margin-top: 0px;margin-right: 4px;margin-bottom: 0px;margin-left: 3px;}
+.table2 td .bar{margin:0 18px;color:#d0d3d7}
+.table2 td .tarea1{width:97.5%;height:83px;margin-top:5px;padding:5px 0 0 5px;line-height:16px}
+.table2 td .tarea1.v2{height:130px}
+.table2 td .w46{display:inline-block;width:46px}
+.table2 td .w60{display:inline-block;width:60px}
+.table2 td .w70{display:inline-block;width:70px}
+.table2 td .w120{display:inline-block;width:120px}
+.table2 td select{position:relative;margin-top:-1px}
+.table2 tr.basic th,.table2 tr.basic td{border-top:1px solid #dcdfe6}
+.table2 td .t_l{float:left;width:50px;line-height:20px;color:#6c6f7c;letter-spacing:-1px}
+.table2 td .tx_l{float:left;line-height:20px}
+.table2 td .tx_l2{float:left;margin-right:8px;line-height:20px}
+.table2 td .tx_l .bar{margin:0 0 0 -4px;color:#e6e6e6}
+.type_list{zoom:1}
+.type_list:after{display:block;clear:both;content:''}
+.type_list li{float:left;position:relative}
+.type_list li.w1{width:69px}
+.type_list li.w2{width:81px}
+.type_list li.w3{width:69px}
+.type_list li.w4{width:61px}
+.type_list li.w5{width:61px}
+.type_list li.w6{width:61px}
+.ly_hope{position:absolute;top:13px;left:25px;line-height:17px;color:#b6b8bd;letter-spacing:-1px}
+.table2 td .pinfo_area{overflow:hidden;overflow-y:auto;width:96%;height:82px;padding:10px;border:1px solid #ced2d8;line-height:20px;color:#888}
+.table2 td .pinfo_area p{margin:0 0 6px}
+.btn_sum{display:inline-block;overflow:hidden;width:65px;height:21px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat -391px -486px;line-height:999px;vertical-align:top}
+.btn_group{position:relative;margin-top:30px;text-align:center;zoom:1}
+.btn_group .fl{position:absolute;top:0;left:0}
+.btn_group a{display:inline-block;overflow:hidden;margin-right:4px;background:url(#{$imgUrl-service}/findhouse/sp_find_con.png) no-repeat;line-height:999px;vertical-align:top}
+.btn_group .btn_request2{width:124px;height:39px;background-position:-263px -521px}
+.btn_group .btn_cncl2{width:124px;height:39px;background-position:-392px -521px}
+.btn_group .btn_tmpsave2{width:86px;height:39px;background-position:-521px -521px}
+.map_wrap{position:absolute;top:-9999px;left:-9999px;border:1px solid #bcc0cc;border-top:none;zoom:1;visibility:hidden;}
+.map_wrap:after{display:block;clear:both;content:''}

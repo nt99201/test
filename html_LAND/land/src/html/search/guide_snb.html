@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>좌측 검색 조건 - 전체탭</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+<script type="text/javascript" src="js/jindo.all.js"></script>
+<script type="text/javascript" src="js/jindo_component.debug.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="snb">
+
+			<p style="padding:0 5px 5px 5px;">전체(매물)</p>
+			<!-- 검색조건 -->
+			<ul class="optiontab">
+			<li class="t1 on"><a href="#" class="t1"><span>매물</span></a></li><!-- [D] 선택된 탭에 on 클래스 사용 -->
+			<li class="t2"><a href="#" class="t2"><span>단지</span></a></li>
+			<li class="t3"><a href="#" class="t3"><span>분양</span></a></li>
+			</ul>
+			<div class="section_option">
+				<div class="opt_area line">
+					<h3>거래종류</h3>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio" checked="checked"><label for="type1_radio1" class="on">전체</label></div> 
+					<div class="col"><input type="radio" name="radio1" id="type1_radio2" class="btn_radio"><label for="type1_radio2">매매</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio3" class="btn_radio"><label for="type1_radio3">월세</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio4" class="btn_radio"><label for="type1_radio4">전세</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio5" class="btn_radio"><label for="type1_radio5">단기임대</label></div>
+				</div>
+				<div class="opt_area line">
+					<h3>가격</h3>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio2" class="btn_radio"><label for="type2_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio3" class="btn_radio"><label for="type2_radio3">1천만미만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio4" class="btn_radio"><label for="type2_radio4">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio5" class="btn_radio"><label for="type2_radio5">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio6" class="btn_radio"><label for="type2_radio6">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio7" class="btn_radio"><label for="type2_radio7">1~3억</label></div>
+					<div class="col dirt"><input type="radio" name="radio2" id="type2_radio1" class="btn_radio" checked="checked"><label for="type2_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소가격" style="width:43px;" > <span class="crit1">만원</span>
+						<span class="tooltip" style="left:6px;"><em>2억4천만원</em></span>
+						<span class="bet">~</span>
+						<input type="text" class="text" title="최대가격" style="width:43px; margin-left:-1px;" > <span class="crit1">만원</span>
+						<span class="tooltip" style="left:98px;"><em>5억2천4백3십5만원</em></span>
+					</div>
+				</div>
+				<div class="opt_area last">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a></h3>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"><label for="type3_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"><label for="type3_radio3" title="66㎡=21.8평&#13;66㎡=21.8평">66㎡ 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"><label for="type3_radio4" title="66㎡=21.8평&#13;66㎡=21.8평">66~99㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"><label for="type3_radio5" title="66㎡=21.8평&#13;66㎡=21.8평">99~132㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"><label for="type3_radio6" title="66㎡=21.8평&#13;66㎡=21.8평">132~165㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"><label for="type3_radio7" title="66㎡=21.8평&#13;66㎡=21.8평">165~198㎡</label></div>
+					<div class="col dirt2"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"><label for="type3_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소면적" style="width:51px;"><span class="crit2">㎡</span> <span class="bet">~</span>
+						<span class="tooltip" style="left:22px;"><em>25.8평</em></span>
+						<input type="text" class="text" title="최대면적" style="width:51px;" ><span class="crit2">㎡</span>
+						<span class="tooltip" style="left:110px;"><em>25.8평</em></span>
+					</div>
+				</div>
+				<div class="calc">
+					<h4>평형 계산기</h4>
+					<input type="text" class="calc_text" title="면적" style="width:34px;">
+					<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+					<div class="selectbox-noscript select_crit" id="select_pyeong_unit">
+						<select class="selectbox-source">
+							<option class="selectbox-default">선택</option>
+					   		<option value="0">평</option>
+					   		<option value="1">㎡</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+					   	<div class="selectbox-layer">
+					   		<div class="selectbox-list"></div>
+					   	</div>
+					</div>
+					<script type="text/javascript">
+                    var sbxPyeongUnit = new jindo.SelectBox($("select_pyeong_unit"),{
+                                 nWidth : null, //가로 사이즈, null시 자동
+                                 nHeight : 100, //목록의 최대 높이. 그 이상시 스크롤 생김
+                                 bUseLayerPosition : false
+                    });
+					sbxPyeongUnit.setSelectedIndex(1);
+					if(sbxPyeongUnit.isLayerOpened) {
+						sbxPyeongUnit.getLayerManager().hideOut();
+					}
+          			</script>                        
+
+					<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+					<p class="result"><strong>175.5</strong> ㎡</p>
+					<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+				</div>
+				<div class="apply_tooltip" style="top:27px;"> <!-- [D] 선택된 요소의 위치에 따라 top의 값이 입력되어야 합니다. -->
+					<p>아래 <strong>'매물옵션 적용'</strong> 버튼을 클릭해주세요</p>					
+				</div>
+				<div class="btn_area">
+					<a href="#"><img src="img/btn_apply_option1.gif" alt="매물옵션 적용" width="105" height="30" ></a>
+				</div>
+			</div>
+			<!-- //검색조건 -->
+			
+			<p style="padding:20px 5px 5px 5px;">전체(단지)</p>
+			<!-- 검색조건 -->
+			<ul class="optiontab">
+			<li class="t1"><a href="#" class="t1"><span>매물</span></a></li><!-- [D] 선택된 탭에 on 클래스 사용 -->
+			<li class="t2 on"><a href="#" class="t2"><span>단지</span></a></li>
+			<li class="t3"><a href="#" class="t3"><span>분양</span></a></li>
+			</ul>
+			<div class="section_option">
+				<div class="opt_area line">
+					<h3>역세권</h3>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio"><label for="type4_radio1">전체</label></div> 
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"><label for="type4_radio2">100m 이내</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"><label for="type4_radio3">300m 이내</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"><label for="type4_radio4">500m 이내</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"><label for="type4_radio5">1km 이내</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio" checked="checked"><label for="type4_radio6" class="on">1.5km 이내</label></div>
+				</div>
+				<div class="opt_area line">
+					<h3>입주일</h3>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio1" class="btn_radio"><label for="type5_radio1">전체</label></div> 
+					<div class="col"><input type="radio" name="radio5" id="type5_radio2" class="btn_radio"><label for="type5_radio2">1년 이내</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio3" class="btn_radio"><label for="type5_radio3">2년 이내</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio4" class="btn_radio"><label for="type5_radio4">3년 이내</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio5" class="btn_radio"><label for="type5_radio5">5년 이내</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio6" class="btn_radio" checked="checked"><label for="type5_radio6" class="on">10년 이내</label></div>
+				</div>
+				<div class="opt_area last">
+					<h3>세대주</h3>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio1" class="btn_radio"><label for="type6_radio1">전체</label></div> 
+					<div class="col"><input type="radio" name="radio6" id="type6_radio2" class="btn_radio"><label for="type6_radio2">300 이상</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio3" class="btn_radio"><label for="type6_radio3">500 이상</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio4" class="btn_radio"><label for="type6_radio4">1,000 이상</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio5" class="btn_radio"><label for="type6_radio5">1,500 이상</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio6" class="btn_radio" checked="checked"><label for="type6_radio6" class="on">2,000 이상</label></div>
+				</div>
+				<div class="apply_tooltip" style="top:27px;"> <!-- [D] 선택된 요소의 위치에 따라 top의 값이 입력되어야 합니다. -->
+					<p>아래 <strong>'단지옵션 적용'</strong> 버튼을 클릭해주세요</p>					
+				</div>
+				<div class="btn_area">
+					<a href="#"><img src="img/btn_apply_option2.gif" alt="단지옵션 적용" width="105" height="30" ></a>
+				</div>
+			</div>
+			<!-- //검색조건 -->
+			
+			<p style="padding:20px 5px 5px 5px;">전체(분양)</p>
+			<!-- 검색조건 -->
+			<ul class="optiontab">
+			<li class="t1"><a href="#" class="t1"><span>매물</span></a></li><!-- [D] 선택된 탭에 on 클래스 사용 -->
+			<li class="t2"><a href="#" class="t2"><span>단지</span></a></li>
+			<li class="t3 on"><a href="#" class="t3"><span>분양</span></a></li>
+			</ul>
+			<div class="section_option">
+				<div class="opt_area line">
+					<h3>입주예정일</h3>
+					<div class="col"><input type="radio" name="radio7" id="type7_radio1" class="btn_radio" checked="checked"><label for="type7_radio1" class="on">전체</label></div> 
+					<div class="col"><input type="radio" name="radio7" id="type7_radio2" class="btn_radio"><label for="type7_radio2">2년 이내</label></div>
+					<div class="col"><input type="radio" name="radio7" id="type7_radio3" class="btn_radio"><label for="type7_radio3">3년 이내</label></div>
+					<div class="col"><input type="radio" name="radio7" id="type7_radio4" class="btn_radio"><label for="type7_radio4">5년 이내</label></div>
+				</div>
+				<div class="opt_area line">
+					<h3>진행단계</h3>
+					<div class="col"><input type="radio" name="radio8" id="type8_radio1" class="btn_radio" checked="checked"><label for="type8_radio1" class="on">전체</label></div> 
+					<div class="col"><input type="radio" name="radio8" id="type8_radio2" class="btn_radio"><label for="type8_radio2">2년 이내</label></div>
+					<div class="col"><input type="radio" name="radio8" id="type8_radio3" class="btn_radio"><label for="type8_radio3">3년 이내</label></div>
+					<div class="col"><input type="radio" name="radio8" id="type8_radio4" class="btn_radio"><label for="type8_radio4">5년 이내</label></div>
+				</div>
+				<div class="opt_area last">
+					<h3>분양가</h3>
+					<div class="col"><input type="radio" name="radio9" id="type9_radio2" class="btn_radio"><label for="type9_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio9" id="type9_radio3" class="btn_radio"><label for="type9_radio3">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio9" id="type9_radio4" class="btn_radio"><label for="type9_radio4">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio9" id="type9_radio5" class="btn_radio"><label for="type9_radio5">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio9" id="type9_radio6" class="btn_radio"><label for="type9_radio6">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio9" id="type9_radio7" class="btn_radio"><label for="type9_radio7">1~3억</label></div>
+					<div class="col dirt"><input type="radio" name="radio9" id="type9_radio1" class="btn_radio" checked="checked"><label for="type9_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소가격" style="width:43px;"> <span class="crit1">만원</span>
+						<span class="tooltip" style="left:6px;"><em>2억4천만원</em></span>
+						<span class="bet">~</span>
+						<input type="text" class="text" title="최대가격" style="width:43px; margin-left:-1px;" > <span class="crit1">만원</span>
+						<span class="tooltip" style="left:98px;"><em>5억2천4백3십5만원</em></span>
+					</div>
+				</div>
+				<div class="apply_tooltip" style="top:27px;"> <!-- [D] 선택된 요소의 위치에 따라 top의 값이 입력되어야 합니다. -->
+					<p>아래 <strong>'분양옵션 적용'</strong> 버튼을 클릭해주세요</p>					
+				</div>
+				<div class="btn_area">
+					<a href="#"><img src="img/btn_apply_option3.gif" alt="분양옵션 적용" width="105" height="30" ></a>
+				</div>
+			</div>
+			<!-- //검색조건 -->
+			
+			<p style="padding:20px 5px 5px 5px;">전체(매물만)</p>
+			<!-- 검색조건 -->
+			<p class="optiontab2"><span>매물</span></p>
+			<div class="section_option">
+				<div class="opt_area line">
+					<h3>거래종류</h3>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio" checked="checked"><label for="type1_radio1" class="on">전체</label></div> 
+					<div class="col"><input type="radio" name="radio1" id="type1_radio2" class="btn_radio"><label for="type1_radio2">매매</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio3" class="btn_radio"><label for="type1_radio3">월세</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio4" class="btn_radio"><label for="type1_radio4">전세</label></div>
+				</div>
+				<div class="opt_area line">
+					<h3>가격</h3>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio2" class="btn_radio"><label for="type2_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio3" class="btn_radio"><label for="type2_radio3">1천만미만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio4" class="btn_radio"><label for="type2_radio4">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio5" class="btn_radio"><label for="type2_radio5">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio6" class="btn_radio"><label for="type2_radio6">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio7" class="btn_radio"><label for="type2_radio7">1~3억</label></div>
+					<div class="col dirt"><input type="radio" name="radio2" id="type2_radio1" class="btn_radio" checked="checked"><label for="type2_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소가격" style="width:43px;"> <span class="crit1">만원</span>
+						<span class="tooltip" style="left:6px;"><em>2억4천만원</em></span>
+						<span class="bet">~</span>
+						<input type="text" class="text" title="최대가격" style="width:43px; margin-left:-1px;" > <span class="crit1">만원</span>
+						<span class="tooltip" style="left:98px;"><em>5억2천4백3십5만원</em></span>
+					</div>
+				</div>
+				<div class="opt_area last">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a></h3>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"><label for="type3_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"><label for="type3_radio3" title="66㎡=21.8평&#13;66㎡=21.8평">66㎡ 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"><label for="type3_radio4" title="66㎡=21.8평&#13;66㎡=21.8평">66~99㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"><label for="type3_radio5" title="66㎡=21.8평&#13;66㎡=21.8평">99~132㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"><label for="type3_radio6" title="66㎡=21.8평&#13;66㎡=21.8평">132~165㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"><label for="type3_radio7" title="66㎡=21.8평&#13;66㎡=21.8평">165~198㎡</label></div>
+					<div class="col dirt2"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"><label for="type3_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소면적" style="width:51px;"><span class="crit2">㎡</span> <span class="bet">~</span>
+						<span class="tooltip" style="left:22px;"><em>25.8평</em></span>
+						<input type="text" class="text" title="최대면적" style="width:51px;" ><span class="crit2">㎡</span>
+						<span class="tooltip" style="left:110px;"><em>25.8평</em></span>
+					</div>
+				</div>
+				<div class="calc">
+					<h4>평형 계산기</h4>
+					<input type="text" class="calc_text" title="면적" style="width:34px;">
+					<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+					<div class="select_crit">
+						<select class="selectbox-source blind">
+					   		<option value="1" class="selectbox-default">평</option>
+					   		<option value="2">㎡</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label">평</div>
+						</div>
+					   	<div class="selectbox-layer">
+					   		<div class="selectbox-list">
+					   			<ul>
+								<li class="selectbox-item selectbox-item-selected">평</li>
+								<li class="selectbox-item selectbox-item-over">㎡ </li>
+								</ul>
+							</div>
+					   	</div>
+					</div>
+					<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+					<p class="result"><strong>175.5</strong> ㎡</p>
+					<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+				</div>
+				<div class="apply_tooltip" style="top:27px;"> <!-- [D] 선택된 요소의 위치에 따라 top의 값이 입력되어야 합니다. -->
+					<p>아래 <strong>'매물옵션 적용'</strong> 버튼을 클릭해주세요</p>					
+				</div>
+				<div class="btn_area">
+					<a href="#"><img src="img/btn_apply_option1.gif" alt="매물옵션 적용" width="105" height="30" ></a>
+				</div>
+			</div>
+			<!-- //검색조건 -->
+			
+		</div>
+	</div>
+</body>
+</html>

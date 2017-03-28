@@ -1,0 +1,410 @@
+@charset "UTF-8";
+
+/* 학습현황 영역 */
+.status_area{
+  border-top:9px solid #ececec;
+  background-color:#fff;
+}
+.status_control{
+  @include relative;
+
+  height:53px;
+  line-height:53px;
+  font-size:17px;
+  color:#000;
+  font-weight:bold;
+  text-align:center;
+
+  a{
+    @include absolute(top 50%);
+
+    display:block;
+    width:30px;
+    height:27px;
+    margin-top:-14px;
+    border:1px solid #cacaca;
+
+    .ico_arrow{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(9px, 13px, -31px, -130px);
+
+      display:inline-block;
+      margin-top:7px;
+      vertical-align:top;
+    }
+
+    &.btn_prev{
+      left:10px;
+    }
+    &.btn_next{
+      right:10px;
+
+      .ico_arrow{
+        background-position:-41px -130px;
+      }
+    }
+
+    &.disabled{
+      border-color:#eaeaea;
+
+      .ico_arrow{
+        opacity:0.28;
+      }
+    }
+  }
+}
+// 달력
+.calendar_status{
+  padding: 0 6px;
+  border-top:1px solid #e5e5e5;
+  background-image:url('../img/bg_calendar.gif');
+  background-repeat:repeat-x;
+  background-size:1px 306px;
+
+  table{
+    width:100%;
+    table-layout:fixed;
+
+    th{
+      height:30px;
+      border-bottom:1px solid #f2f2f2;
+      font-size:13px;
+      color:#aaa;
+      text-align:center;
+    }
+    td{
+      @include relative;
+
+      width:14.28%;
+      border-bottom:1px solid #f2f2f2;
+      font-size:19px;
+      text-align:center;
+      vertical-align:middle;
+
+      > a{
+        display:block;
+        width:100%;
+        height:34px;
+        line-height:34px;
+        padding-bottom:20px;
+        color:#444;
+        &.on{
+          color:#ff5151;
+
+          .complete{
+            width:6px;
+            height:6px;
+            margin-left:-3px;
+            border-radius:3px;
+            background-color:#ff5151;
+          }
+        }
+        .complete{
+          @include absolute(left 50% top 35px);
+
+          display:block;
+          width:4px;
+          height:4px;
+          margin-left:-2px;
+          border-radius:2px;
+          background-color:#93accc;
+        }
+      }
+      > span{
+        display:block;
+        color:#ddd;
+        height:34px;
+        line-height:34px;
+        padding-bottom:20px;
+      }
+    }
+
+    .monthly_status{
+      display:none;
+    }
+  }
+  &.month{
+    .weekly_status{
+      display:none;
+    }
+    .monthly_status{
+      display:table-row-group;
+    }
+  }
+
+  .btn_more{
+    display:block;
+    margin:0 -6px;
+    height:33px;
+    background-color:#f9f9f9;
+    text-align:center;
+
+    .ico_arrow{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(16px, 8px, -30px, -150px);
+
+      display:inline-block;
+      margin-top:13px;
+      vertical-align:top;
+    }
+
+    &.on{
+      .ico_arrow{
+        background-position:-30px -160px;
+      }
+    }
+  }
+}
+
+//복습 결과
+.review_area{
+  border-top:9px solid #ececec;
+  padding:0 15px 15px;
+  background-color:#fff;
+
+  .section_tit{
+    @extend %clear;
+
+    height:40px;
+    line-height:40px;
+    padding-top:2px;
+    border-bottom:1px solid #f2f2f2;
+
+    .h_tit{
+      float:left;
+      font-size:15px;
+      color:#444;
+      font-weight:normal;
+    }
+
+    .btn_link{
+      float:right;
+      padding:0 5px;
+      font-size:13px;
+      color:#666;
+    }
+  }
+
+  .review_none{
+    padding:31px 0;
+    line-height:20px;
+    font-size:15px;
+    color:#444;
+    text-align:center;
+    .btn_login{
+      color:#03c73c;
+      text-decoration:underline;
+    }
+    .g{
+      color:#03c73c;
+    }
+  }
+}
+
+.score_wrap{
+  text-align:center;
+
+  .score{
+    padding:32px 0 32px;
+  }
+
+  .img_score{
+    @extend %sprite_conversation_img;
+
+    display:inline-block;
+    width:115px;
+    height:115px;
+  }
+  .score_comment{
+    display:block;
+    font-size:14px;
+
+    strong{
+      display:block;
+      margin:10px 0 7px;
+      font-size:18px;
+    }
+  }
+  $scoreImg:(
+    s100: -140px 0,
+    s50: -140px -120px,
+    s0: -140px -240px
+  );
+
+  @each $key, $value in $scoreImg{
+    &.#{$key}{
+      .img_score{
+        background-position: $value;
+      }
+    }
+  }
+
+  $scoreColor:(
+    s100: #379eff,
+    s50: #af7159,
+    s0: #f74d4e
+  );
+
+  @each $key, $value in $scoreColor{
+    &.#{$key}{
+      .score_comment{
+        color: $value;
+      }
+    }
+  }
+
+  $scoreMarker:(
+    s100: -30px -170px,
+    s50: -30px -200px,
+    s0: -30px -230px
+  );
+
+  @each $key, $value in $scoreMarker{
+    &.#{$key}{
+      .marker{
+        background-position: $value;
+      }
+    }
+  }
+
+  .btn_link{
+    margin:20px 0  0;
+    display:inline-block;
+    font-size:13px;
+    color:#666;
+    text-decoration:underline;
+  }
+}
+
+//스코어 바
+.score_bar_wrap{
+  @include relative;
+
+  padding:0 16px;
+  text-align:center;
+
+  .bar_wrap{
+    @include relative;
+    @extend %clear;
+
+    width:100%;
+    height:6px;
+    background-color:#ddd;
+
+    .everage_bar{
+      float:left;
+      height:6px;
+      background-color:#a8a8a8;
+      width:0%;
+    }
+    .myscore{
+      @include absolute(all);
+      margin-top:-19px;
+      width:0%;
+
+      .marker{
+        @extend %sprite_conversation_img;
+
+        float:right;
+        width:20px;
+        height:25px;
+        margin-right:-10px;
+      }
+    }
+  }
+
+  .score_ment{
+    margin-top:10px;
+    padding-bottom:18px;
+    font-size:13px;
+    color:#aaa;
+    span{
+      color:#777;
+    }
+  }
+}
+
+// 복습하기 버튼
+.btn_review{
+  display:block;
+  height:46px;
+  line-height:46px;
+  border-width:1px;
+  border-style:solid;
+  border-color:#ccc;
+  font-size:15px;
+  color:#000;
+  text-align:center;
+
+  // 주간복습 퀴즈 풀기
+  &.type2{
+    border-color:#5791df;
+    color:#5791df;
+  }
+
+  // 주간복습 퀴즈 풀기
+  &.type3{
+    border-color:#7a95b8;
+    color:#6582a7;
+  }
+
+  // 주간복습 퀴즈 풀기
+  &.type4{
+    border-color:#03c73c;
+    color:#03c73c;
+  }
+
+  .green{
+    color:#03c73c;
+  }
+  .red{
+    color:#ff4747;
+  }
+}
+
+//최근 학습 기록
+.record_area{
+  border-top:9px solid #ececec;
+  padding:0 9px 12px 5px;
+  background-color:#fff;
+
+  .section_tit{
+    @extend %clear;
+
+    height:40px;
+    line-height:40px;
+    padding:4px 6px 0 10px;
+
+    .h_tit{
+      float:left;
+      font-size:15px;
+      color:#444;
+      font-weight:normal;
+    }
+    .chart_info{
+      @extend %clear;
+
+      float:right;
+      dt{
+        float:left;
+        width:6px;
+        height:6px;
+        margin:17px 3px 0 10px;
+        border-radius:3px;
+        background-color:#a8a8a8;
+
+        &.g{
+          background-color:#03c73c;
+        }
+      }
+      dd{
+        float:left;
+        font-size:12px;
+        color:#aaa;
+      }
+    }
+  }
+  .record_chart{
+    height:226px;
+  }
+}

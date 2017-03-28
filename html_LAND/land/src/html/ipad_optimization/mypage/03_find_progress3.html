@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>진행_상세&amp;추천_내용없음 :: 마이페이지 맞춤매물</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_mypage.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- skip to content -->
+	<a href="#content" class="skip">본문 바로가기</a>
+	<!-- //skip to content -->
+
+	<!-- header -->
+	<div id="header">
+		
+	</div>
+	<!-- //header -->
+
+	<div id="container">
+		<div class="snb">
+			<h2><img src="http://static.land.naver.net/static/service/20120214/mypage/h2_mypage.gif" width="179" height="75" alt="My 페이지"></h2>
+			<ul class="nav">
+			<!-- [D] 선택된 리스트에 대하여 이미지 파일명 뒤에 _on 추가 -->
+			<li><a href="#"><img src="img/snb6_on.gif" width="178" height="35" alt="맞춤매물" id="sub_menu6"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb.gif" width="178" height="35" alt="관심매물·단지·분양" id="sub_menu1"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb5.gif" width="178" height="35" alt="" id="sub_menu5"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb2.gif" width="178" height="35" alt="분양 일정 알림" id="sub_menu4"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb4.gif" width="178" height="35" alt="부동산회원 탈퇴" id="sub_menu3"></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<h3><span class="h_find">맞춤매물</span></h3>
+			<div class="menu_guide2">
+				<p><strong>의뢰하신 조건에 따라 중개업소에서 추천한 맞춤매물을 확인하실 수 있습니다.</strong></p>
+				<ul>
+				<li>맞춤매물 서비스는 진행중 의뢰 (의뢰상태: 의뢰확인중, 추천중) 건을 기준으로 <em>3건</em>까지 이용하실 수 있습니다.</li>
+				<li>진행 중 의뢰 건은 의뢰기간이 종료되면 <em>자동으로 종료된의뢰 탭</em>으로 이동합니다.</li>
+				<li><em>진행중 의뢰</em> 리스트에서 <em>의뢰취소</em> 버튼을 클릭하시면 의뢰 기간이 만료되기 전 의뢰를 종료하실 수 있습니다.<br><em>종료된 의뢰</em>는 자동으로 종료된 의뢰 탭으로 이동합니다.</li>
+				</ul>
+			</div>
+			<ul class="tab_menu">
+			<!-- [D] 선택된 탭에서 li class="on" -->
+			<li class="on"><a href="#" class="m">진행중 의뢰</a></li>
+			<li><a href="#" class="m2">종료된 의뢰</a></li>
+			</ul>
+
+			<table cellspacing="0" border="1" summary="매물리스트" class="table_v">
+			<caption>매물리스트</caption>
+			<colgroup>
+			<col width="70"><col width="258"><col width="110"><col width="41"><col width="84"><col width="70"><col width="68"><col width="74">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col">의뢰번호</th>
+			<th scope="col">의뢰내용</th>
+			<th scope="col">의뢰기간</th>
+			<th scope="col">잔여일</th>
+			<th scope="col">추천매물건수<br>(미확인/전체)</th>
+			<th scope="col">의뢰상태</th>
+			<th scope="col">의뢰관리</th>
+			<th scope="col">&nbsp;</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.12.01~12.12.08</td>
+			<td class="remain"><strong>6</strong>일</td>
+			<td class="recommend"><strong>7</strong>/23</td>
+			<td><span class="btn_rq_confirm">의뢰확인중</span></td>
+			<td class="manage"><a href="#">의뢰취소</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+
+			<!-- [D] 내용열린 상태 : class="selected" -->
+			<tr class="selected">
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.12.01~12.12.08</td>
+			<td class="remain"><strong>6</strong>일</td>
+			<td class="recommend"><strong>7</strong>/23</td>
+			<td><span class="btn_sale_propel">매물추진중</span></td>
+			<td class="manage"><a href="#">의뢰취소</a></td>
+			<!-- [D] 클릭시 내용닫기이미지가 내용열기로 바뀜 : class="btn_ct_open" -->
+			<td><a href="#" class="btn_ct_close">내용열기</a></td>
+			</tr>
+			<tr>
+			<!-- [D] 실제내용영역 td에 클래스 삽입 class="cont_td" -->
+			<td colspan="8" class="cont_td">
+				<div class="cont_area">
+					<div class="sec">
+						<h4 class="h_essential">의뢰 필수조건</h4>
+						<table cellspacing="0" border="1" summary="의뢰 필수조건" class="table_s">
+						<caption>의뢰 필수조건</caption>
+						<colgroup>
+						<col width="86"><col width="">
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row"><div>거래종류</div></th>
+						<td>
+							<!-- [D] 툴팁들어가기 위해 div에 posr클래스 삽입하고 툴팁소스 넣었음 -->
+							<div class="posr">
+								<strong>아파트,오피스텔</strong>
+								<div class="ly_overtext"><span></span>아파트, 오피스텔, 빌라, 재개발</div>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row"><div>매물종류</div></th>
+						<td><div><strong>매매</strong></div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div>지역</div></th>
+						<td class="nopd">
+							<div class="overflow2">성남시 분당구 정자동 성남시 분당구 정자동 성남시 분당구 정자동<br><a href="#" class="btn_mapview">지도보기</a></div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row"><div>선택단지</div></th>
+						<td class="nopd">
+							<div class="overflow">금광아크존, 닛시빌라트<br>대성아트빌, 대원칸타빌<br>금광아크존, 닛시빌라트<br>대성아트빌, 대원칸타빌</div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row"><div>가격</div></th>
+						<td>
+							<!-- [D] 툴팁들어가기 위해 div에 posr클래스 삽입하고 툴팁소스 넣었음 -->
+							<div class="posr">
+								<strong>오억칠천만원~육억원</strong>
+								<div class="ly_overtext"><span></span>오억칠천만원~육억원</div>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row"><div>면적</div></th>
+						<td><div class="ls"><strong>86㎡~100㎡</strong></div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div>입주희망일</div></th>
+						<td><div class="ls">2012년 01월 입주</div></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="sec2">
+						<h4 class="h_add">의뢰 추가조건</h4>
+						<p class="t_num">의뢰가 전달된 중개업소 수 <strong>5</strong></p>
+						<table cellspacing="0" border="1" summary="의뢰 추가조건" class="table_s table_s2">
+						<caption></caption>
+						<colgroup>
+						<col width="87"><col width="165"><col width="86"><col width="164">
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row"><div>총세대 수</div></th>
+						<td><div>300~500세대</div></td>
+						<th scope="row"><div>준공년도</div></th>
+						<td><div>5년이내</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div>총 수</div></th>
+						<td><div>중층이상</div></td>
+						<th scope="row"><div>구조(원룸)</div></th>
+						<td><div>상관없음</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div>방 수</div></th>
+						<td><div>3</div></td>
+						<th scope="row"><div>욕실 수</div></th>
+						<td><div>2</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div>전세끼고매매</div></th>
+						<td><div>불가능</div></td>
+						<th scope="row"><div>융자금유무</div></th>
+						<td><div>상관없음</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div>희망거래조건</div></th>
+						<td colspan="3" class="nopd">
+							<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 확인매물 찾기를 발견하고 의뢰를 신청하게 되었습니다. 노부모님과 어린 남자아이들이
+있어 1층 매물을 원하며, 입주일을 5년 이내로 선택하였으나, 노부모님과 어린 남자아이들이 있어 1층 매물을 원하며, 입주일을 5년 이내로 선택하였으나</div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row"><div>검수추가사항</div></th>
+						<td colspan="3" class="nopd">
+							<div class="overflow">아파트 매물에 대해 의뢰하였으나, 해당하는 매물이 없을 경우 동일한 가격 / 평형의 주택 매물도 추가합니다. 아파트 매물에 대해 의뢰하였으나, 해당하는 매물이 없을 경우 동일한 가격 / 평형의 주택 매물도 추가합니다. 아파트 매물에 대해 의뢰하였으나, 해당하는 매물이 없을 경우 동일한 가격 / 평형의 주택 매물도 추가합니다.</div>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</td>
+			</tr>
+
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.12.01~12.12.08</td>
+			<td class="remain"><strong>6</strong>일</td>
+			<td class="recommend"><strong>7</strong>/23</td>
+			<td><span class="btn_rq_confirm">의뢰확인중</span></td>
+			<td class="manage"><a href="#">의뢰취소</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+			</tbody>
+			</table>
+
+			<h4 class="type2"><span class="h_rc_info">추천정보</span></h4>
+			<table cellspacing="0" border="1" summary="추천정보 리스트" class="table_v2">
+			<caption>추천정보 리스트</caption>
+			<colgroup>
+			<col width="28"><col width="22"><col width="24"><col width="78"><col width="164"><col width="80"><col width="86"><col width="44"><col width="56"><col width="72"><col width="121">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col"><label for="all_chk" class="blind">전체선택</label><input type="checkbox" name="" id="all_chk" class="input_chk"></th>
+			<th scope="col"><span class="ic_star">관심</span></th>
+			<th scope="col"><span class="ic_n">new</span></th>
+			<th scope="col">거래 / 매물종류</th>
+			<!-- [D] 클릭시 리스트정렬되면서 화살표위로바뀜 a class="up" -->
+			<th scope="col"><a href="#" class="down">매물명</a></th>
+			<th scope="col"><a href="#" class="up">면적(㎡)</a></th>
+			<th scope="col"><a href="#" class="down">매물가 (만원)</a></th>
+			<th scope="col">동</th>
+			<th scope="col">층</th>
+			<th scope="col"><a href="#" class="down">추천일</a></th>
+			<th scope="col">연락처</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td colspan="11" class="nodata">추천된 맞춤매물이 없습니다.</td>
+			</tr>
+			</tbody>
+			</table>
+
+			<div class="report_guide_wrap">
+				<div class="report_guide">
+					<div class="guide_txt">
+						<h4>매물 추천 알림 안내</h4>
+						<p>등록하신 아래의 연락처와 메일 주소로 의뢰 진행 상태 및 매물 추천 알림을 보내드리고 있습니다.<br>연락처 및 SMS/메일 알림 수신 여부는 아래에서 수정하실 수 있습니다.<br>단, 의뢰상태가 <strong>의뢰확인 중 일때</strong>는 네이버 부동산에서 의뢰 확인 전화를 드릴 수도 있으므로, 연락처 변경이 불가할 수 있습니다.</p>
+					</div>
+					<div class="guide_cont">
+						<strong>추천알림</strong> <em>|</em> 연락처 010-0114-0114 <a href="#" class="btn_hpchange">연락처 변경</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						메일 ohmyjihyun@naver.com <a href="#" class="btn_mailchange">수신여부 변경</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

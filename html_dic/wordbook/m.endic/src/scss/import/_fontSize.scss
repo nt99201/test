@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+#content {
+	@for $i from 1 through 5 {
+		@if $i != 3 {
+			&.fs#{$i} {
+				// 옵션 예시
+				.option_btn_wrap .ly_option_wrap .option_font .ft {
+					font-size: (18-(3-$i))+px;
+				}
+				.option_btn_wrap .option_btn_lst a {
+					font-size: (15-(3-$i))+px;
+				}
+				// 리딩 페이지 상단
+				.reading_top .txt_area {
+					.txt_origin {
+						font-size: (21-(3-$i))+px;
+						line-height: (25-(3-$i))+px;
+					}
+					.txt_trans {
+						font-size: (14-(3-$i))+px;
+						line-height: (20-(3-$i))+px;
+					}
+				}
+				// 리딩 페이지 목록
+				.reading_lst li .txt_wrap {
+					.txt_origin {
+						font-size: (17-(3-$i))+px;
+						line-height: (23-(3-$i))+px;
+					}
+					.txt_trans {
+						font-size: (14-(3-$i))+px;
+						line-height: (20-(3-$i))+px;
+					}
+				}
+				// 학습정보
+				.keyword_lst > li .txt_wrap {
+					.txt_origin {
+						font-size: (18-(3-$i))+px;
+						line-height: (24-(3-$i))+px;
+					}
+					.txt_trans {
+						font-size: (14-(3-$i))+px;
+						line-height: (18-(3-$i))+px;
+					}
+				}
+				.keyword_lst > li .example_lst > li{
+					.txt_origin{
+						font-size: (17-(3-$i))+px;
+						line-height: (21-(3-$i))+px;
+					}
+					.txt_trans {
+						font-size: (14-(3-$i))+px;
+						line-height: (18-(3-$i))+px;
+					}
+				}
+				// 댓글
+				.u_cbox .u_cbox_name {
+					font-size: (16-(3-$i))+px;
+					line-height: (22-(3-$i))+px;
+				}
+				.u_cbox .u_cbox_comment .u_cbox_text_wrap {
+					font-size: (16-(3-$i))+px;
+					line-height: (20-(3-$i))+px;
+				}
+			}
+		}
+	}
+}

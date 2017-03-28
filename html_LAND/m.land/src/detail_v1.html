@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>list_page</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_detail">
+		<!--detail-->
+		<div class="detail">
+			<div class="h_loc agnt_datail">
+<!--            한줄일 경우 <h1 class="sngl">-->
+                <h2>서초구 양재동 주변</h2>
+                <p class="sub_info">
+                	<strong>매매<em>29</em>건</strong>/
+                	<strong>전세<em>21</em>건</strong>/
+                	<strong>월세<em>35</em>건</strong>
+                </p>
+                <a href="" class="prev"><em>뒤로</em></a>
+                <!--        관심매물 활성화 시 class="alarm on" -->
+				<button type="button" class="alarm"><span>매물알림 체크</span></button>
+<!--			알림서비스 안내 팝업-->
+				<div class="ly_pop_alarm" style="display:">
+					<strong>알림서비스 안내</strong>
+					<p class="txt">더 싼 매물이 등록되면<br>알림으로 알려드립니다.</p>
+					<div class="chk_box"><input type="checkbox" id="chk_open" checked><label for="chk_open">다시 보지 않기</label></div>
+					<button type="button" class="btn_clse"><span>닫기</span></button>
+				</div>
+<!--			//알림서비스 안내 팝업-->
+                <!--        관심매물 활성화 시 class="like on" -->
+				<button type="button" class="like"><span>관심매물 체크</span></button>
+            </div>
+
+            <div class="tab_menu">
+            	<a href="#" class="btn_tab on">단지정보</a><a href="#" class="btn_tab">매물</a>
+            </div>
+
+            <div class="aprt_blck_info">
+            	<div class="thumb no_img">
+					<span class="no_img_area"><span>이미지 없음</span></span>
+				</div>
+				<div class="obj_info">
+					<p class="tw_name">느티나무공무원 3단지</p>
+					<p class="price_range"><em>451,000~556,000</em>만원</p>
+					<p class="frst_info">
+						<span class="complex_type">아파트</span><span>861세대</span><span>총16동</span><span>1995.09</span>
+					</p>
+					<p class="scnd_info">158.87m<sup>2</sup> ~ 158.87m<sup>2</sup></p>
+
+				</div>
+            </div>
+        <div class="place_limit">
+					<p>본 단지는 <span class="place_highlight">전매제한 단지</span>로, 일반 분양권은 전매제한 종료 이후 거래가 가능 합니다. 전매제한 분양권을 매매할 경우 주택법에 따라 처벌될 수 있으므로 전매제한 종료 이후 거래하시기 바랍니다. <span class="place_refer">( 각 면적별 거래가능일은 단지정보 참조 )</span></p>
+				</div>
+            <div class="spec">
+				<ul class="pdt_tbl">
+					<li>
+						<div class="info_box">
+							<strong>매물종류</strong>
+							<p>아파트</p>
+						</div>
+						<div class="info_box">
+							<strong>총세대수</strong>
+							<p>344세대</p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>총동수</strong>
+							<p>6개동</p>
+						</div>
+						<div class="info_box">
+							<strong>준공년월</strong>
+							<p>2014년 10월</p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>건설사명</strong>
+							<p>(주)동양고속건설</p>
+						</div>
+						<div class="info_box">
+							<strong>총주차대수</strong>
+							<p>1.51대</p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>난방방식</strong>
+							<p>열병합</p>
+						</div>
+						<div class="info_box">
+							<strong>용적율</strong>
+							<p>347%</p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>건폐율</strong>
+							<p>49%</p>
+						</div>
+						<div class="info_box">
+							<strong>최고층</strong>
+							<p>18층</p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>최처층</strong>
+							<p>3층</p>
+						</div>
+						<div class="info_box">
+							<strong>면적</strong>
+                    		<p>103m<sup>2</sup>, 103m<sup>2</sup>, 103m<sup>2</sup></p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>관리사무소</strong>
+                    		<p><a href="tel:0317170253" class="dir_call">031-717-0253</a></p>
+						</div>
+					</li>
+                </ul>
+			</div>
+			<div class="spec">
+				<div class="h_wrap">
+					<h3>시세정보</h3>
+				</div>
+				<div class="sld_itm_wrap">
+<!--				sld_itm_box-->
+					<div class="sld_itm_view">
+						<div class="sld_itm_box">
+
+							<div class="sld_itm">
+								<table>
+									<caption>한국감정원 매매가<span><em>2014.10.10</em> 기준</span></caption>
+									<thead>
+									<tr>
+										<th>면적(m<sup>2</sup>)</th>
+										<th>하위평균가</th>
+										<th>일반평균가</th>
+										<th>상위평균가</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="sld_itm">
+								<table>
+									<caption>한국감정원 전세가<span><em>2015.03.10</em> 기준</span></caption>
+									<thead>
+									<tr>
+										<th>면적(m<sup>2</sup>)</th>
+										<th>하위평균가</th>
+										<th>일반평균가</th>
+										<th>상위평균가</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="sld_itm">
+								<table>
+									<caption>한국감정원 매매가<span><em>2014.10.10</em> 기준</span></caption>
+									<thead>
+									<tr>
+										<th>면적(m<sup>2</sup>)</th>
+										<th>하위평균가</th>
+										<th>일반평균가</th>
+										<th>상위평균가</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="sld_itm">
+								<table>
+									<caption>한국감정원 매매가<span><em>2014.10.10</em> 기준</span></caption>
+									<thead>
+									<tr>
+										<th>면적(m<sup>2</sup>)</th>
+										<th>하위평균가</th>
+										<th>일반평균가</th>
+										<th>상위평균가</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									<tr>
+										<td>103</td>
+										<td>64,000</td>
+										<td>64,000</td>
+										<td>64,000</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+<!--				//sld_itm_box-->
+
+					<div class="bullet"><a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a></div>
+				</div>
+			</div>
+
+			<div class="spec">
+				<div class="h_wrap">
+					<h3>관리비</h3>
+					<p class="data_srce2">아파트아이제공 연평균기준</p>
+				</div>
+				<div class="cst_tit">
+					<strong>
+						<select name="" id="">
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						</select>
+					</strong>
+					<button type="button" class="btn_prev on"><span>이전내용보기</span></button>
+					<button type="button" class="btn_next"><span>다음내용보기</span></button>
+				</div>
+				<ul class="pdt_tbl" style="display:">
+					<li>
+						<div class="info_box">
+							<strong class="btn_slt">
+								<select name="" id="">
+								  <option value="">2015년 6월</option>
+								  <option value="">2015년 7월</option>
+								  <option value="">2015년 8월</option>
+								  <option value="">2015년 9월</option>
+								  <option value="">2015년 10월</option>
+								</select>
+							</strong>
+							<p>206.510원<button type="button" class="btn_detail">상세내역</button></p>
+						</div>
+						<div class="info_box">
+							<strong>연평균</strong>
+							<p>247,172원</p>
+						</div>
+					</li>
+					<li>
+						<div class="info_box">
+							<strong>하절기평균 (6~8월)</strong>
+							<p>110,456원</p>
+						</div>
+						<div class="info_box">
+							<strong>동절기평균 (6~8월)</strong>
+							<p>11,456원</p>
+						</div>
+					</li>
+				</ul>
+				<p class="no_data" >등록된 관리비 정보가 없습니다.</p>
+			</div>
+
+			<div class="spec">
+				<div class="h_wrap">
+					<h3>평면도</h3>
+				</div>
+				<div class="plan_img_wrap">
+					<strong>
+						<span>면적</span>
+						<select name="" id="">
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						  <option value="">154m²</option>
+						</select>
+					</strong>
+					<div class="pg_area"><em>1</em>/16</div>
+					<div class="plan_img_box" style="display:none">
+						<div class="plan_img"><img src="im/g_plan.png" alt=""></div>
+						<button type="button" class="btn_prev"><span>이전내용보기</span></button>
+						<button type="button" class="btn_next on"><span>다음내용보기</span></button>
+					</div>
+					<p class="no_data">등록된 평면도 정보가 없습니다.</p>
+					<p class="deal_date">거래 가능일 <span>2016.06.01</span></p>
+				</div>
+			</div>
+
+			<div class="spec">
+				<div class="h_wrap">
+					<h3>사진</h3>
+				</div>
+				<div class="pic_sld">
+					<ul>
+						<li><a href="#"><img src="im/@detail_img.jpg" alt=""></a></li>
+						<li><a href="#"><img src="im/@detail_img.jpg" alt=""></a></li>
+						<li><a href="#"><img src="im/@detail_img.jpg" alt=""></a></li>
+						<li><a href="#"><img src="im/@detail_img.jpg" alt=""></a></li>
+						<li><a href="#"><img src="im/@detail_img.jpg" alt=""></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="spec">
+				<div class="h_wrap">
+					<h3>위치</h3>
+					<p class="addr_txt"><em>서울시 서초구 서초동 1338-20</em> <span>새주소</span></p>
+				</div>
+				<div class="loc_info">
+					<div class="d_map">
+						<div class="map_img"><img src="im/tmpMap.png" alt=""></div>
+						<button type="button"  class="btn_map_more"><span class="spm">지도 크게보기</span></button>
+
+						<!--[D] 지도 크게 보기 선택시-->
+						<div class="control_zoom" style="display:none;">
+							<button type="button"  class="btn_zoomin"><span class="spm">확대</span></button>
+							<button type="button"  class="btn_zoomout"><span class="spm">축소</span></button>
+						</div>
+						<div class="control_reset" style="display:none;">
+							<button type="button"  class="btn_reset"><span class="spm">초기화</span></button>
+						</div>
+						<div class="control_exit" style="display:none;">
+							<button type="button"  class="btn_exit"><span class="spm">닫기</span></button>
+						</div>
+
+						<div class="loc_pin" style="left:120px;top:50px;"><span class="hide">현재위치</span></div>
+					</div>
+					<ul class="d_map_menu">
+						<li class="btn_load_view disable"><a href="#">거리뷰</a></li>
+						<li class="btn_nr_fclty"><a href="#">주변시설</a></li>
+						<li class="btn_navigation"><a href="#">내비게이션</a></li>
+					</ul>
+                </div>
+			</div>
+
+			<div class="spec traff">
+				<div class="h_wrap">
+					<h3>주변 대중교통</h3>
+				</div>
+				<dl class="pdt_tbl2 subwayLine">
+                    <dt>지하철</dt>
+                    <dd><span class="subway s1">1</span><p>서울역</p></dd>
+                    <dd><span class="subway s4">4</span><p>서울역</p></dd>
+                    <dd><span class="subway s2">2</span><p>강남역</p></dd>
+                    <dd><span class="subway s5">5</span><p>봉화산역(서울의료원)</p></dd>
+                    <dd><span class="subway s2">2</span><p>강남역</p></dd>
+
+                </dl>
+                <dl class="pdt_tbl2 busLine">
+                    <dt>버스</dt>
+                    <dd><span class="bus bus1">마을</span><p>마포 07, 서대문03, 서대문 04</p></dd>
+                    <dd><span class="bus bus4">직행</span><p>3000</p></dd>
+                    <dd><span class="bus bus2">간선</span><p>8100, 8101,8100, 8101,8100, 8101,8100, 8101</p></dd>
+                </dl>
+			</div>
+
+			<div class="spec community">
+					<div class="h_wrap">
+							<h3>커뮤니티</h3>
+							<a href="#"><span class="u_hc">글쓰기</span></a>
+					</div>
+					<div class="comment_box">
+							<ul>
+									<li>
+										<a href="#" class="comm_list_style">
+											<span class="ico_comm_qna"><span class="u_hc">이야기</span></span>
+											<h4 class="txt_title">내부자제는 좋은가요? 사진상으론 좀 그래 보이는데요... 알려주세요!!</h4>
+											<dl>
+													<dt class="u_hc">아이디</dt>
+													<dd class="ico_bar">alal****</dd>
+													<dt class="u_hc">날짜</dt>
+													<dd class="ico_bar">2016.01.25</dd>
+													<dt class="u_hc">답변 댓글수</dt>
+													<dd class="qna_comm">답변 2</dd>
+											</dl>
+											<dl>
+												<dt class="u_hc">좋아요</dt>
+												<!-- [D] 추천한 좋아요는 on 클래스 추가 -->
+												<dd class="like_cnt">125</dd>
+												<dt class="u_hc">댓글</dt>
+												<dd class="comment_cnt">29</dd>
+											</dl>
+										</a>
+									</li>
+									<li>
+											<a href="#" class="comm_list_style">
+												<span class="ico_comm_qna"><span class="u_hc">Q&amp;A</span></span>
+												<h4 class="txt_title">레미안대치팰리스 입주현황등</h4>
+												<dl>
+														<dt class="u_hc">아이디</dt>
+														<dd class="ico_bar">alal****</dd>
+														<dt class="u_hc">날짜</dt>
+														<dd class="ico_bar">2016.01.25</dd>
+														<dt class="u_hc">답변 댓글수</dt>
+														<dd class="qna_comm">답변 2</dd>
+												</dl>
+												<dl>
+													<dt class="u_hc">좋아요</dt>
+													<dd class="like_cnt">125</dd>
+													<dt class="u_hc">댓글</dt>
+													<dd class="comment_cnt">0</dd>
+												</dl>
+											</a>
+									</li>
+									<li>
+											<a href="#" class="comm_list_style">
+												<span class="ico_comm_qna"><span class="u_hc">Q&amp;A</span></span>
+												<h4 class="txt_title">레미안대치팰리스 입주현황등</h4>
+												<dl>
+														<dt class="u_hc">아이디</dt>
+														<dd class="ico_bar">alal****</dd>
+														<dt class="u_hc">날짜</dt>
+														<dd class="ico_bar">2016.01.25</dd>
+														<dt class="u_hc">답변 댓글수</dt>
+														<dd class="qna_comm">답변 2</dd>
+												</dl>
+												<dl>
+													<dt class="u_hc">좋아요</dt>
+													<dd class="like_cnt">125</dd>
+													<dt class="u_hc">댓글</dt>
+													<dd class="comment_cnt">29</dd>
+												</dl>
+											</a>
+									</li>
+							</ul>
+							<div class="more_article_box">
+								<a href="#">전체글 더보기</a>
+							</div>
+					</div>
+			</div>
+
+			<div class="ad_cont_wrap">
+				<div class="ad_cont">
+					<h4 class="ad_title">책 좋아하는 당신이 궁금한 이야기</h4>
+					<div class="ad_dsc">
+						<a href="#" class="thumb"><img src="http://dev.ui.naver.com/tmp/?115x80_default_y_FFB4B4_50" width="115" height="80" alt="임시 이미지"></a>
+						<a href="#">
+							<strong>쌀밥, 냉장하면 칼로리가<br>줄어든다고? 진짜?</strong>
+							<p>'네이버 책문화'가<br>네이버 홈 화면에 추가됩니다.</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<footer role="contentinfo" class="footer">
+				<p id="u_ftlkw" class="u_ftlkw">
+					<a id="loginLink"
+						href="https://nid.naver.com/nidlogin.login?svctype=262144&url=http%3A%2F%2Fm.land.naver.com%2Findex.nhn"
+						class="u_ftlk" >로그인</a>
+					<a href="http://land.naver.com/?mobile"  class="u_ftlk"
+					>PC버전</a>
+					<a href="http://m.naver.com/services.html?f=svc.land" id="gnbFooterTotalServiceButton"  class="u_ftlk">전체서비스</a>
+					<a href="http://m.naver.com/services.html?f=svc.land" id="gnbFooterTotalServiceButton"  class="u_ftlk">원룸 홈</a>
+				</p>
+
+				<p class="u_cr">
+					<span class="u_cri"><a href="http://m.help.naver.com/serviceMain.nhn?falias=mo_land_web&type=faq" class="u_cra">부동산도움말</a></span>
+					<span class="u_cri u_cri_v1"><a href="https://m.help.naver.com/support/issue/report.nhn?serviceNo=5608" class="u_cra">문제신고</a></span>
+					<span class="u_cri u_cri_v2">&copy; <a href="http://www.navercorp.com/ko/index.nhn"  class="u_cra u_cra_v1">NAVER Corp.</a></span>
+				</p>
+				<div class="u_sca">
+					<a href="#" class="u_sc"><span class="u_ics"></span><em>네이버앱의</em><strong>부동산</strong> 홈화면에 바로가기 추가<span class="u_ica"></span></a>
+				</div>
+			</footer>
+
+		</div>
+		<!--//detail-->
+	</div>
+</div>
+</body>
+</html>

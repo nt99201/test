@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>단지상세-매물탭</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_detail">
+		<!--detail-->
+		<div class="detail">
+			<div class="h_loc agnt_datail">
+			<!--한줄일 경우 <h1 class="sngl">-->
+                <h2>서초구 양재동 주변</h2>
+                <p class="sub_info">
+                	<strong>매매<em>26</em>건</strong>/
+                	<strong>전세<em>16</em>건</strong>/
+                	<strong>월세<em>5</em>건</strong>
+                </p>
+                <a href="" class="prev"><em>뒤로</em></a>
+                <!--        관심매물 활성화 시 class="alarm on" -->
+				<button type="button" class="alarm"><span>매물알림 체크</span></button>
+                <!--        관심매물 활성화 시 class="like on" -->
+				<button type="button" class="like"><span>관심매물 체크</span></button>
+            </div>
+
+            <div class="tab_menu">
+            	<a href="#" class="btn_tab on">매물</a><a href="#" class="btn_tab">단지정보</a>
+            </div>
+
+            <div class="view_mode2">
+                <!-- [D] 셀렉트 박스 추가 -->
+								<!-- [D] 셀렉트박스 활성화시 active 클래스 추가 -->
+                <div class="align1 active">
+                   	<select name="" id="">
+                   	<option value="">거래전체</option>
+										<option value="">낮은가격순</option>
+										<option value="">높은가격순</option>
+										<option value="">좁은면적순</option>
+										</select>
+                </div>
+                 <div class="align1">
+                   	<select name="" id="">
+                   	<option value="">면적(m²)</option>
+										<option value="">낮은가격순</option>
+										<option value="">높은가격순</option>
+										<option value="">좁은면적순</option>
+										</select>
+                </div>
+                 <div class="align1">
+                   	<select name="" id="">
+                   	<option value="">동</option>
+										<option value="">낮은가격순</option>
+										<option value="">높은가격순</option>
+										<option value="">좁은면적순</option>
+										</select>
+                </div>
+								<div class="align1 v2">
+									 <select name="" id="">
+									 <option value="">랭킹순</option>
+									 <option value="">낮은가격순</option>
+									 <option value="">높은가격순</option>
+									 <option value="">좁은면적순</option>
+									 </select>
+							 </div>
+            </div>
+
+            <div class="pdt_page">
+            	<p class="no_data" style="display:none">등록된 매물이 없습니다.</p>
+           		<p class="pdt_num_txt" style="display:block">92Bm²,105동에 해당하는 매물은 총<em>239</em>개의 매물이 있습니다.</p>
+			<!--pdt_lst-->
+				<div class="pdt_lst" style="display:">
+					<ul class="v1_type">
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place">현장</span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type1">월세</span><span class="price"><strong>162,000</strong><strong>440</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/1000005층</span></p>
+										<p class="fifth_info deal_complt">확인매물<span>15.00.00</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_mbr_certify">회원인증</span>
+										<img src="im/@list_img.jpg" alt="">
+										<span class="i_play"></span>
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type2">전세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp off" disalbed="disabled">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb">
+										<span class="i_mbr_certify">회원인증</span>
+										<span class="no_img"><span>이미지 없음</span></span>
+									</div>
+									<div class="obj_info">
+										<p class="tw_name"><span class="i_mbr_certify">회원인증</span>삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp off">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li class="chked">
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place"></span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place"></span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+										<p class="frth_info"><span  class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place"></span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--//pdt_lst-->
+				</div>
+
+		</div>
+		<!--//detail-->
+	</div>
+</div>
+
+<!-- 동별 매물 팝업 -->
+<div class="pop_other_content">
+	<div class="ly_other_list">
+		<h2>느티나무 공무원 3단지</h2>
+		<button type="button" class="btn_clse">닫기</button>
+		<div class="other_list_box">
+			<ul>
+				<li>
+					<h3>101동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">117</span></button>
+						<button type="button">전세<span class="pdt_num">70</span></button>
+						<button type="button">월세<span class="pdt_num">56</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>102동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">75</span></button>
+						<button type="button">전세<span class="pdt_num">51</span></button>
+						<button type="button">월세<span class="pdt_num">7</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>103동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">999+</span></button>
+						<button type="button">전세<span class="pdt_num">16</span></button>
+						<button type="button">월세<span class="pdt_num">5</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>104동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">117</span></button>
+						<button type="button">전세<span class="pdt_num">70</span></button>
+						<button type="button">월세<span class="pdt_num">56</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>105동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">75</span></button>
+						<button type="button">전세<span class="pdt_num">51</span></button>
+						<button type="button">월세<span class="pdt_num">7</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>106동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">32</span></button>
+						<button type="button">전세<span class="pdt_num">16</span></button>
+						<button type="button">월세<span class="pdt_num">5</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>107동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">32</span></button>
+						<button type="button">전세<span class="pdt_num">16</span></button>
+						<button type="button">월세<span class="pdt_num">5</span></button>
+					</div>
+				</li>
+				<li>
+					<h3>108동</h3>
+					<div class="thrth_info">
+						<button type="button">매매<span class="pdt_num">32</span></button>
+						<button type="button">전세<span class="pdt_num">16</span></button>
+						<button type="button">월세<span class="pdt_num">5</span></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--//동별 매물 팝업-->
+
+</html>

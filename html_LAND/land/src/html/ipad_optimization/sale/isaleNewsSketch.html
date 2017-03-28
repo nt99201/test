@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_isale.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="sale_container">
+		<!-- content -->
+		<div id="content">
+			<h2><img src="img/h_sale_news.gif" width="252" height="15" alt="현장소식 - 최신뉴스, 현장스케치 등 생생한 정보를 확인하세요."></h2>
+			<!-- [D] 첫번째 탭을 제외한 탭 선택시 class="tab_news news2" 변경 -->
+			<div class="tab_news news4">
+				<a href="#" class="frst"><span>전체</span></a>
+				<a href="#"><span>분양뉴스</span></a>
+				<a href="#"><span>분양동향</span></a>
+				<a href="#"><span>분양현장</span></a>
+			</div>
+			<div class="section_info">
+				<h3><img src="img/h_sale_scene.gif" width="54" height="13" alt="현장스케치"></h3>
+				<div class="scene_nav">
+					<a href="#" class="selected">분양현장</a>
+					<span class="bar">|</span>
+					<a href="#">사이버 견본주택</a>
+					<span class="bar">|</span>
+					<a href="#">e-카달로그</a>
+					<span class="bar">|</span>
+					<a href="#">입주탐방</a>
+					<span class="bar">|</span>
+					<a href="#">입대 아파트 특집</a>
+				</div>
+				<div class="lst_scene">
+					<ul>
+					<li>
+						<div class="thmb">
+							<a href="#">
+								<img src="img/@uploadfile_201103145992804.jpg" width="154" height="111" alt="">
+								<span class="mask"></span>
+							</a>
+						</div>
+						<div class="info">
+							<a href="#">서천휴먼시아1단지</a>
+							<p title="경기도 용인시 기흥구 서천동">경기도 용인시 기흥구 ...</p>
+						</div>
+					</li>
+					<li>
+						<div class="thmb">
+							<a href="#">
+								<img src="img/@uploadfile_201107283758589.jpg" width="154" height="111" alt="">
+								<span class="mask"></span>
+							</a>
+						</div>
+						<div class="info">
+							<a href="#">청계천두산위브더제니스</a>
+							<p title="서울시 중구 흥인동">서울시 중구 흥인동</p>
+						</div>
+					</li>
+					<li>
+						<div class="thmb">
+							<a href="#">
+								<img src="img/img_no_end_plane.gif" width="154" height="111" alt="">
+								<span class="mask"></span>
+							</a>
+						</div>
+						<div class="info">
+							<a href="#">청담역푸르지오시티</a>
+							<p title="서울시 강남구 삼성동">서울시 강남구 삼성동</p>
+						</div>
+					</li>
+					<li>
+						<div class="thmb">
+							<a href="#" >
+								<img src="img/@uploadfile_201112015362825.jpg" width="154" height="111" alt="">
+								<span class="mask"></span>
+							</a>
+						</div>
+						<div class="info">
+							<a href="#">백련산힐스테이트1차(7구역)</a>
+							<p title="서울시 은평구 응암동">서울시 은평구 응암동</p>
+						</div>
+					</li>
+					</ul>
+				</div>
+				<div class="scene_sort">
+					<a href="#" class="sort1_desc_on"><span>등록순</span></a>
+					<a href="#" class="sort2_desc"><span>조회순</span></a>
+				</div>
+				<div class="sale_search">
+					<div id="cortarLike" class="jselectbox-applied area">
+						<select class="jselectbox-source" style="width:94px;overflow-x:hidden">
+							<option selected="selected" value="_">전체</option>
+							<option value="1100000000">서울시</option>
+							<option value="4100000000">경기도</option>
+							<option value="2800000000">인천시</option>
+							<option value="2600000000">부산시</option>
+							<option value="3000000000">대전시</option>
+							<option value="2700000000">대구시</option>
+							<option value="3100000000">울산시</option>
+							<option value="2900000000">광주시</option>
+							<option value="4200000000">강원도</option>
+							<option value="4300000000">충청북도</option>
+							<option value="4400000000">충청남도</option>
+							<option value="4700000000">경상북도</option>
+							<option value="4800000000">경상남도</option>
+							<option value="4500000000">전라북도</option>
+							<option value="4600000000">전라남도</option>
+							<option value="5000000000">제주도</option>
+						</select>
+						<div class="jselectbox-box" style="width:94px;overflow-x:hidden">
+							<div unselectable="on" class="jselectbox-label">전체</div>
+						</div>
+					</div>
+				</div>
+				<table cellspacing="0" border="1" summary="분양단지" class="tbl_sale">
+				<caption>분양단지</caption>
+				<colgroup>
+				<col width="315"><col width="87"><col width="99"><col width="85"><col width="94">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">단지명</th>
+				<th scope="col">시공사</th>
+				<th scope="col">출처</th>
+				<th scope="col">등록일</th>
+				<th scope="col">조회수</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="frst">
+				<td class="place scene">
+					<a href="#">래미안금호하이리버</a> &nbsp;
+					<p>서울시 성동구 금호동2가 1021-2</p>
+				</td>
+				<td>삼성물산(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2012.01.03&nbsp;</td>
+				<td class="num">209</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">수원SK스카이뷰</a> &nbsp;
+					<p>경기도 수원시 장안구 정자동 600-2번지 일원</p>
+				</td>
+				<td>에스케이건설(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2012.01.02&nbsp;</td>
+				<td class="num">208</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">이수힐스테이트</a> &nbsp;
+					<p>서울시 동작구 동작동 58-1</p>
+				</td>
+				<td>현대건설(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.23&nbsp;</td>
+				<td class="num">544</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">잠실아이파크</a> &nbsp;
+					<p>서울시 송파구 잠실동 194</p>
+				</td>
+				<td>현대산업개발(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.20&nbsp;</td>
+				<td class="num">380</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">상록리슈빌(A5-2블럭)</a> &nbsp;
+					<p>경기도 남양주시 별내면 별내신도시 A5-2블럭</p>
+				</td>
+				<td>공무원연금공단&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.19&nbsp;</td>
+				<td class="num">233</td>
+				</tr>
+
+				<tr>
+				<td class="place scene">
+					<a href="#">텐즈힐(왕십리2구역)</a> &nbsp;
+					<p>서울시 성동구 상왕십리동 12-37</p>
+				</td>
+				<td>삼성물산(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.13&nbsp;</td>
+				<td class="num">389</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">호반메트로큐브(C1블럭)</a> &nbsp;
+					<p>경기도 수원시 영통구 이의동 광교택지개발지구 C1블럭</p>
+				</td>
+				<td>(주)호반건설&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.12&nbsp;</td>
+				<td class="num">289</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">판교역푸르지오시티</a> &nbsp;
+					<p>경기도 성남시 분당구 삼평동 653</p>
+				</td>
+				<td>(주)대우건설&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.08&nbsp;</td>
+				<td class="num">383</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">백련산힐스테이트1차(7구역)</a> &nbsp;
+					<p>서울시 은평구 응암동 242번지</p>
+				</td>
+				<td>현대건설(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.12.02&nbsp;</td>
+				<td class="num">305</td>
+				</tr>
+				<tr>
+				<td class="place scene">
+					<a href="#">신대림벽산블루밍</a> &nbsp;
+					<p>서울시 영등포구 대림동 929-56</p>
+				</td>
+				<td>벽산건설(주)&nbsp;</td>
+				<td>닥터아파트&nbsp;</td>
+				<td class="num">2011.11.30&nbsp;</td>
+				<td class="num">305</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="btn_area2"><a href="#" class="btn_alliance"><img src="img/btn_alliance.gif" width="65" height="18" alt="제휴안내"></a></div>
+				<div class="paginate">
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#" class="next_end">끝</a>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- aside -->
+		<div id="aside_area" class="aside">
+			<div id="da_280240" name="da_280240" class="ad">
+				<iframe src="about:blank" width="280" height="240" title="광고 영역" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" id="f280240" name="f280240" align="middle" class="wafudyxqcpqoqqsnpsql"></iframe>
+			</div>
+			<div class="btn_banner">
+				<a href="#"><img src="img/btn_banner.gif" width="280" height="70" title="분양정보 신규등록" alt="등록되지 않은 분양정보를 등록해주세요."></a>
+			</div>
+			<div id="aside_weekly_schedule" class="calendar_section">
+				<h3>주간 분양 일정</h3>
+				<div id="weekly_isale_schedule_date_area" class="date">
+					<span class="year">
+						<em class="no2">2</em><em class="no0">0</em><em class="no1">1</em><em class="no2">2</em>
+					</span>
+					<span class="month">
+						<em class="no0">1</em><em class="no1">1</em>
+					</span>
+					<span class="day">
+						<em class="no1">5</em><em class="no5">0</em>
+					</span>
+					<span class="bar">-</span>
+					<span class="month">
+						<em class="no0">0</em><em class="no1">1</em>
+					</span>
+					<span class="day">
+						<em class="no2">2</em><em class="no1">1</em>
+					</span>
+					<!-- [D] 이전, 다음 날짜 없을 시 class : _off 추가 -->
+					<a href="#" class="btn_prev"><span>이전</span></a>
+					<a href="#" class="btn_next"><span>다음</span></a>
+				</div>
+				<div class="sale_lst">
+					<div id="weekly_schedule_tab" class="tab_group">
+						<a href="#" idx="0" class="_notice tab"><span>전체</span><em>(72)</em></a>
+						<a href="#" idx="1" class="_notice tab2"><span>공고</span><em>(1)</em></a>
+						<a href="#" idx="2" class="_notice tab3"><span>접수</span><em>(41)</em></a>
+						<a href="#" idx="3" class="_notice tab4"><span>발표</span><em>(17)</em></a>
+						<a href="#" idx="4" class="_notice tab5"><span>계약</span><em>(13)</em></a>
+					</div>
+					<div>
+						<div id="isaleAsideScrollList" class="scroll">
+							<div style="width:100%;">
+								<dl id="weekly_schedule_list_area" class="week_lst">
+								<dt><strong>15일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date2.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									</ul>
+								</dd>
+								<dt><strong>16일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date_on.gif" width="22" height="13" alt="공고"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="남양주별내 A11-1블럭(국민임대)">남양주별내 A11-1블럭(국민임대)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="오페라코오롱하늘채">오페라코오롱하늘채</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="양산 수근에이스타운">양산 수근에이스타운</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서울강남A2블럭">서울강남A2블럭</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서울강남A1블럭">서울강남A1블럭</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="범일동 봄여름가을겨울">범일동 봄여름가을겨울</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서면타크빌">서면타크빌</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="성당래미안e편한세상">성당래미안e편한세상</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="고운하이츠2차">고운하이츠2차</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									</ul>
+								</dd>
+								<dt><strong>17일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="광양남해오네뜨">광양남해오네뜨</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="남양주별내 A11-1블럭(국민임대)">남양주별내 A11-1블럭(국민임대)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="경주외동(국민임대)">경주외동(국민임대)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="첨단2지구 호반베르디움(A4블럭)">첨단2지구 호반베르디움(A4블럭)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="삼도동 아산프라자">삼도동 아산프라자</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="첨단2지구 호반베르디움(A8블럭)">첨단2지구 호반베르디움(A8블럭)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서면타크빌">서면타크빌</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="양산 수근에이스타운">양산 수근에이스타운</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서울강남A2블럭">서울강남A2블럭</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="첨단2지구 호반베르디움(A4블럭)">첨단2지구 호반베르디움(A4블럭)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="첨단2지구 호반베르디움(A8블럭)">첨단2지구 호반베르디움(A8블럭)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서울강남A1블럭">서울강남A1블럭</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="범일동 봄여름가을겨울">범일동 봄여름가을겨울</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="오페라코오롱하늘채">오페라코오롱하늘채</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="성당래미안e편한세상">성당래미안e편한세상</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="고운하이츠2차">고운하이츠2차</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									</ul>
+								</dd>
+								<dt><strong>18일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="경주외동(국민임대)">경주외동(국민임대)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="광양남해오네뜨">광양남해오네뜨</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="삼도동 아산프라자">삼도동 아산프라자</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서면타크빌">서면타크빌</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="남양주별내 A11-1블럭(국민임대)">남양주별내 A11-1블럭(국민임대)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="첨단2지구 호반베르디움(A8블럭)">첨단2지구 호반베르디움(A8블럭)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="첨단2지구 호반베르디움(A4블럭)">첨단2지구 호반베르디움(A4블럭)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서울강남A2블럭">서울강남A2블럭</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서울강남A1블럭">서울강남A1블럭</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="신정이펜하우스3단지">신정이펜하우스3단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="천왕이펜하우스2단지">천왕이펜하우스2단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="신정이펜하우스2단지">신정이펜하우스2단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="세곡리엔파크4단지">세곡리엔파크4단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="천왕이펜하우스6단지">천왕이펜하우스6단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="고덕리엔파크1단지">고덕리엔파크1단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="고덕리엔파크2단지">고덕리엔파크2단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="고덕리엔파크3단지">고덕리엔파크3단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="신정이펜하우스4단지">신정이펜하우스4단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="선광로즈웰(7블럭)">선광로즈웰(7블럭)</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="대미임대아파트1">대미임대아파트1</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="은평뉴타운마고정11단지">은평뉴타운마고정11단지</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="서초네이처힐2단지(우면2지구)">서초네이처힐2단지(우면2지구)</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="성당래미안e편한세상">성당래미안e편한세상</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="고운하이츠2차">고운하이츠2차</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									</ul>
+								</dd>
+								<dt><strong>19일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="서면타크빌">서면타크빌</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="광양남해오네뜨">광양남해오네뜨</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="남양주별내 A11-1블럭(국민임대)">남양주별내 A11-1블럭(국민임대)</a></li>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="삼도동 아산프라자">삼도동 아산프라자</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="오페라코오롱하늘채">오페라코오롱하늘채</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="하남미사 A15블럭">하남미사 A15블럭</a></li>
+									<li><img src="img/ico_date3_on.gif" width="22" height="13" alt="발표"><a href="#" title="하남미사 A9블럭">하남미사 A9블럭</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="오페라코오롱하늘채">오페라코오롱하늘채</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									</ul>
+								</dd>
+								<dt><strong>20일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									</ul>
+								</dd>
+								<dt><strong>21일</strong></dt>
+								<dd><ul>
+									<li><img src="img/ico_date2_on.gif" width="22" height="13" alt="접수"><a href="#" title="분당엠코헤리츠(상가)">분당엠코헤리츠(상가)</a></li>
+									<li><img src="img/ico_date4_on.gif" width="22" height="13" alt="계약"><a href="#" title="검단 HIGH VIWE">검단 HIGH VIWE</a></li>
+									</ul>
+								</dd>
+								</dl>
+							</div>
+						</div>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+				</div>
+			</div>
+			<div id="favorite_area" class="aside_section">
+				<h3>경기도 인기 분양단지</h3>
+				<ol class="popular_lst">
+				<li class="no1"><a href="#">별내면 남양주별내 A11-1블럭(국민임대)</a>
+					<span class="num"><em>1,144</em>세대</span></li>
+				<li class="no2"><a href="#">약대동 두산위브2단지</a>
+					<span class="num"><em>1,223</em>세대</span></li>
+				<li class="no3"><a href="#">약대동 두산위브2단지</a>
+					<span class="num"><em>1,223</em>세대</span></li>
+				<li class="no4"><a href="#">약대동 두산위브2단지</a>
+					<span class="num"><em>1,223</em>세대</span></li>
+				<li class="no5"><a href="#">별내면 상록리슈빌(A5-2블럭)</a>
+					<span class="num"><em>627</em>세대</span></li>
+				</ol>
+				<div class="btn_nav">
+					<a href="#" value="1100000000" class="btn_prev"><span>이전</span></a>
+					<a href="#" value="2800000000" class="btn_next"><span>다음</span></a>
+				</div>
+			</div>
+			<div class="aside_section">
+				<h3>분양 특집</h3>
+				<div class="focus_area">
+					<div class="thmb">
+						<a href="#">
+							<img src="img/@1325728424994.jpg" width="83" height="63" alt="">
+							<span class="mask"></span></a>
+					</div>
+					<h4>
+						<a href="#" title="성신여대 역 프렌드리 201 분양">성신여대 역 ‘프렌드리..</a>
+					</h4>
+					<p>4호선 성신여대입구역 도보3분 거리실투자금 4,000만원...</p>
+				</div>
+				<ul class="focus_lst">
+				<li><a href="#" title="인천 간석오거리역 솔리채 분양">인천 간석오거리역 ‘솔리채‘ 분양</a></li>
+				<li><a href="#" title="김해의 새로운 랜드마크, 김해 부원역 푸르지오 분양">김해의 새로운 랜드마크, 김해 부원역 ...</a></li>
+				<li><a href="#" title="조원 광교">조원 광교 "임광그대가" 파격 분양중</a></li>
+				</ul>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+		</div>
+		<!-- //aside -->
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+<div id="pvframe" style="display:none"></div>
+</body>
+</html>

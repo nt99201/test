@@ -1,0 +1,417 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>부동산 커뮤니티 마크업 가이드 :: UIO 템플릿</title>
+
+<link type="text/css" rel="stylesheet" href="css/shCore.css">
+<link type="text/css" rel="stylesheet" href="css/shThemeDefault.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushCss.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.config.tagName = 'xmp';
+	SyntaxHighlighter.config.clipboardSwf = 'js/clipboard.swf';
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript">
+var prevLayerName = "cont1";
+function LayerSH(LayerName)
+{
+	if ( prevLayerName != LayerName )
+	{
+		document.all[prevLayerName].style.display = "none";
+		document.all[LayerName].style.display = "";
+
+		prevLayerName = LayerName;
+	}
+	else
+	{
+		if ( document.all[LayerName].style.display == "none" )
+			document.all[LayerName].style.display = "";
+		else
+			document.all[LayerName].style.display = "";
+	}
+}
+</script>
+</head>
+<body>
+		<div class="guide_title">
+			<h2 class="num04">UIO 코드템플릿</h2>
+			<span class="desc">UIO 단위의 마크업을 확인할 수 있습니다</span> </div>
+		<div class="content_inner">
+			<div id="guide_quickmenu"> <a href="#" onClick="javascript:LayerSH('cont1');">TITLE</a> | <a href="#" onClick="javascript:LayerSH('cont2');">TABLE</a> | <a href="#" onClick="javascript:LayerSH('cont3');">LIST</a> | <a href="#" onClick="javascript:LayerSH('cont4');">CATEGORY</a> | <a href="#" onClick="javascript:LayerSH('cont5');">LAYER</a></div>
+			<!-- 타이틀 -->
+			<div id="cont1" class="uio_wrap">
+				<h3 class="h_tit">H2</h3>
+				<div class="uio_img"><img src="img/tit1.gif" width="163" height="38"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+						<h2 class="h_t"><img src="../img/community/h2_cnt4.gif" width="74" height="15" alt="부동산 지식iN"></h2>
+					</xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.h_t{height:25px;padding:10px 0 0 7px;border-bottom:1px solid #dfdfdf}</xmp>
+				</div>
+				
+				<h3 class="h_tit">H3</h3>
+				<div class="uio_img"><img src="img/tit2.gif" width="166" height="34"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+						<h3 class="cnt_tit"><img src="../img/community/h_cnt5.gif" width="68" height="12" alt="부동산 지식iN"></h3>
+					</xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.cnt_tit{padding:11px 0 10px}
+</xmp>
+				</div>
+				
+			</div>
+			<!-- 테이블 -->
+			<div id="cont2" class="uio_wrap" style="display:none;">
+				<h3 class="h_tit">TABLE type1</h3>
+				<div class="uio_img"><img src="img/table1.gif" width="672" height="89"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<table cellspacing="0" border="1" class="tb" summary="직설화법 현재동사변화">
+<caption>직설화법 현재동사변화</caption>
+<colgroup>
+<col width="140">
+<col width="162">
+<col width="163">
+<col>
+</colgroup>
+<tbody>
+<tr class="mline">
+<th class="first tc" scope="row" rowspan="2"><span class="th_type"><span class="blind">직설화법 현재동사변화</span></span></th>
+<td><p>j'aime</p></td>
+<td><p>tu aimes</p></td>
+<td><p>il/elle aime</p></td>
+</tr>
+<tr>
+<td><p>nous aimons</p></td>
+<td><p>vous aimez</p></td>
+<td><p>ils/elles aiment</p></td>
+</tr>
+</tbody>
+</table></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.tb{width:100%;*width:auto;margin-bottom:37px;margin-left:1px;border:none;border-top:1px solid #b2b2b2;border-bottom:1px solid #b2b2b2}
+.tb th{padding:12px 0 10px;border:none;border-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;font-family:'굴림', gulim, sans-serif;font-size:13px;font-weight:normal;text-align:left;vertical-align:middle}
+.tb td{padding:7px 0 9px;border:none;border-left:1px solid #e0e0e0;font-family:arial, sans-serif;font-size:14px;line-height:16px;vertical-align:top}
+.tb .first,.tb .first2{border-left:none}
+.tb .mline .first{border-bottom:none}
+.tb .mline td{border-bottom:1px solid #e0e0e0}
+.tb p{margin:0 18px;word-break:keep-all;word-wrap:break-word}
+.tb .s{margin:0;color:#777;font-size:13px}
+.tb .th_type{display:inline-block;width:102px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) 0 -99px no-repeat}
+.tb .th_type2{display:inline-block;width:19px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) 0 -110px no-repeat}
+.tb .th_type3{display:inline-block;width:20px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -19px -110px no-repeat}
+.tb .th_type4{display:inline-block;width:19px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -59px -110px no-repeat}
+.tb .th_type5{display:inline-block;width:39px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -40px -110px no-repeat}
+.tb .th_type6{display:inline-block;width:39px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -79px -110px no-repeat}
+.tb .th_type7{display:inline-block;width:47px;height:11px;margin:0 17px 0 18px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) 0 -121px no-repeat}</xmp>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div id="cont3" class="uio_wrap" style="display:none;">
+				<h3 class="h_tit">LIST type1</h3>
+				<div class="uio_img"><img src="img/list1.gif" width="372" height="228"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<ul class="lst">
+<li><em>1.</em><strong>사랑하다</strong>, 좋아하다 <a href="#" class="ms">[~qn]</a>
+<p><span class="fra"><strong>aimer</strong> ses voisins</span> 이웃을 사랑하다 <button type="button" title="예문보기" class="ex_open"><span class="blind">예문보기</span></button></p>
+</li>
+<li><em>2.</em><strong>좋아하다</strong>, 애호하다 <a href="#" class="ms">[~qc]</a>
+<p><span class="fra"><strong>aimer</strong> ses voisins</span> 이웃을 사랑하다 <button type="button" title="예문보기" class="ex_close"><span class="blind">예문보기</span></button></p>
+</li>
+<li><em>3.</em><strong>원하다</strong>, 바라다 <span class="synonym">(=desirer, souhaiter)</span> <a href="#" class="ms">[~que + sub]</a>
+<p><span class="fra"><strong>aimer</strong> ses voisins</span> 이웃을 사랑하다</p>
+</li>
+<li><em>4.</em>(주어는 동식물)
+<p><span class="fra"><strong>aimer</strong> ses voisins</span> 이웃을 사랑하다</p>
+</li>
+</ul></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.lst{padding:0 0 19px 15px}
+.lst.notit{padding-left:0}
+.lst li{margin-bottom:18px;color:#000;font-family:'굴림', gulim, sans-serif;font-size:13px}
+.lst li span.fra{font-size:14px}
+.lst li em{padding-right:10px;color:#333;font-family:Arial, sans-serif;font-size:15px;font-weight:bold;vertical-align:middle}
+.lst .equal{display:inline-block;width:8px;height:10px;margin:0 -2px 0 2px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_bu.gif) 0 -238px}
+.lst .unequal{display:inline-block;width:14px;height:10px;margin:0 -2px 0 2px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_bu.gif) 0 -268px}
+.lst li .ms{display:inline-block;margin:-1px 0 1px 1px;color:#999;font-family:Arial, sans-serif;font-size:14px}
+.lst li .ms2{color:#999}
+.lst p strong.fra{font-style:italic}
+.lst p .fra strong{font-style:italic}
+.lst p{margin:3px 0 0 21px;color:#444;font-size:12px}
+.lst p span.fra{padding:0 4px 0 2px;font-size:13px}
+.lst p.depth{margin-left:0}
+.lst .ex_open{width:54px;height:18px;margin:-2px 0 0 7px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -97px -194px no-repeat;text-align:left;vertical-align:middle}
+.lst .ex_open_hover{width:54px;height:18px;margin:-2px 0 0 7px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -97px -212px no-repeat;text-align:left;vertical-align:middle}
+.lst .ex_close{width:54px;height:18px;margin:-2px 0 0 7px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -151px -194px no-repeat;vertical-align:middle}
+.lst .ex_close_hover{width:54px;height:18px;margin:-2px 0 0 7px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -151px -212px no-repeat;vertical-align:middle}
+.lst .synonym{color:#000;font-family:Arial, sans-serif;font-size:14px;vertical-align:top}
+.lst ul{padding:11px 0 0 25px}
+.lst ul li p{margin-top:8px}
+</xmp>
+				</div>
+				
+				<h3 class="h_tit">LIST type2</h3>
+				<div class="uio_img"><img src="img/list2.gif" width="442" height="251"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<ul class="lst2">
+<li><a href="#" class="fra"><span class="pointcor"><strong>aimer</strong> à croire(penser) que</span> + ind.</a>  …하기를 바라다
+<p><span class="fra"><strong>aimer</strong> à croire que vous viendrez.</span> 나는 당신이 오기를 바랍니다</p></li>
+<li><a href="#" class="fra"><span class="pointcor"><strong>aimer</strong> à croire(penser) que</span> + ind.</a>  …하기를 바라다
+<p><span class="fra"><strong>aimer</strong> à croire que vous viendrez.</span> 나는 당신이 오기를 바랍니다</p></li>
+<li><a href="#" class="fra"><span class="pointcor"><strong>aimer</strong> à croire(penser) que</span> + ind.</a>  …하기를 바라다
+<p><span class="fra"><strong>aimer</strong> à croire que vous viendrez.</span> 나는 당신이 오기를 바랍니다</p></li>
+<li><a href="#" class="fra"><span class="pointcor"><strong>aimer</strong> à croire(penser) que</span> + ind.</a>  …하기를 바라다
+<p><span class="fra"><strong>aimer</strong> à croire que vous viendrez.</span> 나는 당신이 오기를 바랍니다</p></li>
+<li><a href="#" class="fra"><span class="pointcor"><strong>aimer</strong> à croire(penser) que</span> + ind.</a>  …하기를 바라다
+<p><span class="fra"><strong>aimer</strong> à croire que vous viendrez.</span> 나는 당신이 오기를 바랍니다</p></li>
+</ul></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.lst2{margin-bottom:-3px;padding:16px 0 0 15px}
+.lst2 li{margin-bottom:22px;color:#000;font-family:'굴림', gulim, sans-serif;font-size:13px;line-height:20px}
+.lst2 li a{color:#000}
+.lst2 li .fra{display:inline-block;margin:-1px 0 1px;font-size:14px}
+.lst2 li .fra strong{font-style:italic}
+.lst2 li i{font-weight:bold}
+.lst2 li .source{display:inline-block;margin:-2px 0 2px;padding-left:4px;color:#999;font-size:12px;letter-spacing:-1px}
+.lst2 li p{margin-top:-4px;line-height:19px;zoom:1}
+.lst2 li p i{font-style:normal}
+.lst2 li p em{padding-right:4px;font-family:Arial, sans-serif;font-size:13px;font-weight:bold}
+.lst2 .on{display:inline-block}
+.lst2 .pos{margin-left:-4px;color:#777}
+.lst2 .ps{display:inline-block;margin:-1px 0 1px;padding-left:4px;font-family:Arial, sans-serif}
+</xmp>
+				</div>
+				
+				<h3 class="h_tit">LIST type3</h3>
+				<div class="uio_img"><img src="img/list3.gif" width="416" height="261"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<ul class="lst3">
+<li><a href="#" class="fra">aller</a>
+<span class="ps">[ale]</span><button type="button" class="btn_add" title="단어장 저장"><span class="blind">단어장 저장</span></button>
+<span class="cjg">(1인칭단수 → <a href="#" class="fra"><strong>vais</strong></a> )
+	<a href="#" class="more3">활용형보기</a></span>
+<p><span class="pos">[자동사]</span></p>
+<ul>
+<li><em>1.</em>9주희(九柱戱)용 기둥, 핀</li>
+<li><em>2.</em>(구어) 다리</li>
+</ul>
+</li>
+</ul></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.lst3{margin:22px 0 0;padding-left:16px}
+.lst3 li{margin:-4px 0 23px;color:#000;font-family:'굴림', gulim, sans-serif;font-size:13px;line-height:20px}
+.lst3 .txt_inline,.lst3 .txt_inline li{display:inline}
+.lst3 ul{margin:0}
+.lst3 ul li{margin:0;line-height:20px}
+.lst3 a{font-size:15px}
+.lst3 .ps{padding-left:2px;font-family:arial}
+.lst3 .pos{display:inline-block;margin:-1px 0 0 -2px;padding:0 4px 0 0;color:#777;font-size:13px}
+.lst3 em{padding-right:6px;font-family:arial;font-weight:bold}
+.lst3 p{padding:3px 0 0;line-height:20px}
+.lst3 .cjg a{font-size:13px}
+.lst3 .cjg a:hover{text-decoration:none}
+.lst3 a:hover sup{text-decoration:none}
+.lst3 sup{position:relative;top:4px;*top:1px;left:2px;font-family:arial,sans-serif;font-size:11px}
+.lst3 .ch{padding-left:6px;color:#777;font-size:15px}
+</xmp>
+				</div>
+				
+				
+			</div>
+			<!-- 카테고리 -->
+			<div id="cont4" class="uio_wrap" style="display:none;">
+				<h3 class="h_tit">탭메뉴</h3>
+				<div class="uio_img"><img src="img/cate1.gif" width="568" height="69"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<ul class="tab">
+<li><a href="#" class="sec_on" title="뜻"><span class="blind">뜻</span></a></li>
+<li><a href="#" class="sec2" title="숙어"><span class="blind">숙어</span></a></li>
+<li><a href="#" class="sec3" title="예문"><span class="blind">예문</span></a></li>
+<li class="all"><a href="#" title="전체검색결과 보기"><span class="blind">전체검색결과 보기</span></a></li>
+</ul></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.tab{overflow:hidden;height:33px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/bg_tab.gif) 0 0 repeat-x;zoom:1}
+.tab li{float:left}
+.tab a{display:inline-block;height:33px}
+.tab .sec{width:58px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) 0 -33px no-repeat}
+.tab .sec_on{width:58px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) 0 0 no-repeat}
+.tab .sec2{width:64px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) -58px 0 no-repeat}
+.tab .sec2_on{width:64px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) -58px -33px no-repeat}
+.tab .sec3{width:64px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) -122px 0 no-repeat}
+.tab .sec3_on{width:64px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) -122px -66px no-repeat}
+.tab .all a{width:109px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_tab.gif) -186px 0 no-repeat}</xmp>
+				</div>
+				
+				<h3 class="h_tit">선택보기</h3>
+				<div class="uio_img"><img src="img/cate2.gif" width="637" height="40"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<div class="sorting">
+<input type="radio" class="check" checked="checked" id="all"><label for="all" class="sort_on"><span class="blind">전체</span></label>
+<input type="radio" class="check" id="word"><label for="word" class="sort2"><span class="blind">단어</span></label>
+<input type="radio" class="check" id="idiom"><label for="idiom" class="sort3"><span class="blind">숙어</span></label>
+<input type="radio" class="check" id="ex_stc"><label for="ex_stc" class="sort4"><span class="blind">예문</span></label>
+<input type="radio" class="check" id="cont_txt"><label for="cont_txt" class="sort5"><span class="blind">본문</span></label>
+</div></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.sorting{margin-bottom:-3px;padding:11px 0 11px 12px;border-bottom:1px solid #e0e0e0}
+.sorting label{display:inline-block;width:24px;height:13px;margin:-1px 13px 1px 2px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) no-repeat;vertical-align:middle}
+.sorting .sort{background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) 0 -71px no-repeat}
+.sorting .sort_on{background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) 0 -85px no-repeat}
+.sorting .sort2{width:22px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -25px -71px no-repeat}
+.sorting .sort2_on{width:22px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -25px -85px no-repeat}
+.sorting .sort3{width:23px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -48px -71px no-repeat}
+.sorting .sort3_on{width:23px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -48px -85px no-repeat}
+.sorting .sort4{width:24px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -72px -71px no-repeat}
+.sorting .sort4_on{width:24px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -72px -85px no-repeat}
+.sorting .sort5{background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -96px -71px no-repeat}
+.sorting .sort5_on{background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_h.gif) -96px -85px no-repeat}</xmp>
+				</div>
+				
+				<h3 class="h_tit">검색결과 보기</h3>
+				<div class="uio_img"><img src="img/cate3.gif" width="404" height="61"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<div class="nav_sec">
+<a class="all" href="#">'<strong class="fra">aimer</strong>'의 전체 검색결과 보기</a>
+<a href="#">단어</a><em>(7)</em> <span class="bar">|</span> 
+<a href="#">숙어</a><em>(7)</em> <span class="bar">|</span> 
+<a href="#">예문</a><em>(100)</em>
+</div></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.section2 .nav_sec{margin:-12px 0 19px}
+.section2 .nav_sec a{color:#000}
+.section2 .nav_sec .all{margin-right:12px;color:#0000de;text-decoration:underline}
+.section2 .nav_sec .all strong{font-family:'돋움', dotum , sans-serif;font-size:14px}
+.section2 .nav_sec .all strong.fra{font-family:Arial, sans-serif;font-size:14px}
+.section2 .nav_sec em{display:inline-block;margin:-1px 0 1px;padding-left:2px;color:#777;font-family:tahoma;font-size:11px;vertical-align:bottom;_vertical-align:baseline}
+.section2 .nav_sec .bar{padding:0 2px 0 5px;color:#d9d9d9;font-size:12px}</xmp>
+				</div>		
+			</div>
+			<!-- 레이어 -->
+			<div id="cont5" class="uio_wrap" style="display:none;">
+				<h3 class="h_tit">보조사전</h3>
+				<div class="uio_img"><img src="img/layer1.gif" width="376" height="253"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<div class="layer_dic" style="top:329px; left:223px;">
+<div class="layer_dic_inner">
+<dl>
+<dt>
+	<a href="#" class="fra">toucher</a>
+	<span>[agie]</span>
+</dt>
+<dd>
+	<p><span class="pos">[여성명사]</span></p>
+	<ul>
+	<li><em>1.</em>9주희(九柱戱)용 기둥, 핀</li>
+	<li><em>2.</em>(구어) 다리</li>
+	</ul>
+	<p><span class="pos">[여성명사]</span></p>
+	<ul>
+	<li><em>1.</em>9주희(九柱戱)용 기둥, 핀</li>
+	<li><em>2.</em>(구어) 다리</li>
+	</ul>
+</dd>
+</dl>
+<p class="more_layer"><a href="#">더보기</a></p>
+</div>
+</div></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.layer_dic{position:absolute}
+.layer_dic_inner{position:relative;width:298px;_height:128px;min-height:128px;border:1px solid #6789c5;background:#fff}
+.layer_dic dl{margin:12px 16px 26px}
+.layer_dic dt{padding:0 0 11px 1px;border-bottom:1px solid #e2ecf5}
+.layer_dic dt a{font-size:14px;font-weight:bold}
+.layer_dic dt span{display:inline-block;margin:-1px 0 1px 2px;color:#333;font-family:Arial, sans-serif;font-size:13px}
+.layer_dic dd{padding-top:9px}
+.layer_dic dd em{padding-right:6px;padding-left:2px;font-family:arial;font-weight:bold}
+.layer_dic dd p{padding:3px 0 0;line-height:20px}
+.layer_dic dd .pos{display:inline-block;margin:-1px 0 0 -2px;padding:0 4px 0 1px;color:#777;font-family:'굴림',gulim, sans-serif;font-size:12px}
+.layer_dic dd ul{padding-top:2px}
+.layer_dic dd li{margin-bottom:5px;font-family:'굴림',gulim, sans-serif}
+.layer_dic .more_layer{position:absolute;right:8px;bottom:8px}
+.layer_dic .more_layer a{display:inline-block;padding-right:6px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_bu.gif) 100% -28px no-repeat;*background-position:100% -27px;font-family:'굴림',gulim, sans-serif}</xmp>
+				</div>
+				
+				<h3 class="h_tit">단어장 저장</h3>
+				<div class="uio_img"><img src="img/layer2.gif" width="208" height="190"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<div class="layer_save" style="top:95px; left:513px;">
+<p>'비즈니스 단어장'에<br>
+	저장된 단어입니다.</p>
+<ul>
+<li><a href="#">감정과 관련된 형용사</a></li>
+<li><a href="#">동사모음 단어장</a></li>
+<li class="saved"><a href="#">비즈니스 단어장</a></li>
+<li><a href="#">요일, 달, 계절</a></li>
+</ul>
+</div></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.layer_save{position:absolute;width:165px;border:1px solid #888;background:#fff}
+.layer_save p{margin:6px 8px 3px 9px;padding-bottom:4px;border-bottom:1px solid #efefef;color:#999;line-height:16px}
+.layer_save.complete{width:137px}
+.layer_save.complete p{margin-top:7px;padding-bottom:3px;border-bottom:none;color:#444;letter-spacing:-1px}
+.layer_save ul{padding-bottom:3px;*padding-bottom:1px}
+.layer_save ul li{margin:0 2px -1px;color:#444;zoom:1}
+.layer_save ul li.saved a{color:#999}
+.layer_save ul a{display:block;padding:4px 0 3px 7px;color:#444}
+.layer_save ul a:hover{background:#ebf3f6;text-decoration:none}</xmp>
+				</div>
+				
+				<h3 class="h_tit">단어장 추가</h3>
+				<div class="uio_img"><img src="img/layer3.gif" width="294" height="178"></div>
+				<div class="uio_txt">
+					<h4 class="h_stit">HTML</h4>
+					<xmp class="brush: html">
+<div class="layer_add" style="top:150px; left:700px;">
+<strong>프랑스어단어장 추가</strong>
+<p>추가할 단어장 이름을 지어주세요.</p>
+<label for="name">단어장 이름</label>
+<input type="text" class="text" id="name">
+<div class="btn_area">
+	<button class="confirm" title="확인"><span class="blind">확인</span></button>
+	<button class="cancel" title="취소"><span class="blind">취소</span></button>
+	<button class="close" title="닫기"><span class="blind">닫기</span></button>
+</div>
+</div></xmp>
+					<h4 class="h_stit">CSS</h4>
+					<xmp class="brush: css">.layer_add{position:absolute;width:279px;height:156px;border:1px solid #888;background:#fff;color:#333}
+.layer_add strong{display:block;padding:17px 0 16px 18px;letter-spacing:-1px}
+.layer_add p{padding:0 0 6px 18px;letter-spacing:-1px}
+.layer_add label{margin:-1px 0 1px;padding:0 0 0 18px;color:#777;font-size:12px}
+.layer_add .text{height:16px;border-top:1px solid #adadad;border-right:1px solid #ddd;border-bottom:1px solid #ddd;border-left:1px solid #adadad}
+.layer_add .btn_area{margin:19px 19px 0;padding:10px 0 0;border-top:1px solid #e5e5e5;text-align:center}
+.layer_add .btn_area .confirm{width:45px;height:26px;margin-right:5px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -69px 0 no-repeat}
+.layer_add .btn_area .cancel{width:45px;height:26px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -114px 0 no-repeat}
+.layer_add .btn_area .close{position:absolute;top:4px;right:4px;width:27px;height:27px;background:url(http://svn-ns.nhncorp.com/view/N_dic/france/branches/RB-1.0/img/spr_btn.gif) -165px -144px no-repeat}</xmp>
+				</div>		
+			</div>
+
+		</div>
+</body>
+</html>

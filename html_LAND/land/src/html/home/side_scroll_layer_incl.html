@@ -1,0 +1,67 @@
+	<div class="mysales" style="top:115px;right:-89px">
+		<div class="bg_mysales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<dl class="sale_num">
+				<dt>관심매물</dt>
+				<dd><a href="/mypage/interestArticle.nhn">0개</a></dd>
+				<dt>관심단지</dt>
+				<dd><a href="/mypage/interestComplex.nhn">0개</a></dd>
+				</dl>
+				<!-- 로그아웃시
+				<p class="login">로그인을 해주세요</p>
+				<a href="#"><img src="http://static.land.naver.net/static/service/20160712/sale/btn_mypopup_login.gif" width="59" height="17" alt="로그인" style="margin-bottom:2px"></a>
+				-->
+			</div>
+		</div>
+		<div class="bg_mysales_b"></div>
+		<div class="bg_mysales_t">
+			<div>
+				<h3 class="type2">최근본매물</h3>
+				<div class="cont">
+					<!-- [D] 비활성시 btn_up, 활성시 btn_up_on -->
+					<span class="updown btn_up" style="display:block"><a href="#"><img src="img/btn_mypopup_upon.gif" width="57" height="10" alt="위로"></a></span>
+					<!-- If exist housing user seen -->
+					<p class="result_none" style="display:none">최근본 단지가 없습니다</p>
+					<!-- If not exist housing user seen -->
+					<div id="horizon_rollingmask" class="maskarea" style="display:block;height:218px">
+						<!-- [D] 첫번째 li에 frst 클래스 추가 -->
+						<ul class="housing">
+						<li class="frst"><a href="http://land.naver.com/article/articleList.nhn?rletNo=8928" title="LG개포자이">효자촌<br>삼성아파트<br><em>72.73㎡ <span>|</span><br>[매]712,440</em></a></li>
+						<li><a href="http://land.naver.com/article/articleList.nhn?rletNo=100674" title="김포쌍용예가">김포쌍용예가<br><em>72.73㎡ <span>|</span><br>[매]712,440</em></a></li>
+						<li><a href="http://land.naver.com/article/articleList.nhn?rletNo=12325" title="대우메종리브르">대우메종리브르<br><em>72.73㎡ <span>|</span><br>[매]712,440</em></a></li>
+						<li><a href="http://land.naver.com/article/articleList.nhn?rletNo=8928" title="LG개포자이">효자촌<br>삼성아파트<br><em>72.73㎡ <span>|</span><br>[매]712,440</em></a></li>
+						</ul>
+					</div>
+					<span class="updown btn_down" style="display:block;"><a href="#"><img src="img/btn_mypopup_down.gif" width="57" height="10" alt="아래로"></a></span>
+				</div>
+			</div>
+			<div style="display:none">
+				<h3 class="type3">최근검색어</h3>
+				<div class="cont"><span class="updown btn_up" style="display:none"><img src="img/btn_mypopup_up.gif" width="57" height="10" alt="위로"></span>
+					<p class="result_none" style="display:none">최근 검색어가 없습니다</p>
+					<div id="horizon_rollingmask1" class="maskarea" style="display:none;height:123px">
+						<ul class="housing">
+						<!-- [D] 첫번째 li에 frst 클래스 추가 -->
+						<li class="frst"><a href="#" title="여의도 오피스텔 월세">여의도 오피스텔 월세</a></li>
+						<li><a href="#" title="수내동">수내동</a></li>
+						<li><a href="#" title="경기도">경기도</a></li>
+						</ul>
+					</div>
+					<span class="updown btn_down" style="display:none;"><img src="img/btn_mypopup_down.gif" width="57" height="10" alt="아래로"></span> </div>
+			</div>
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+				<legend class="blind">평형계산</legend>
+					<input type="text" title="값 입력" maxlength="5" class="input_text" style="padding-right:1px;cursor:text">
+					<a href="#"><img src="img/btn_calculate.gif" width="61" height="18" alt="계산" class="input_btn"></a>
+					<input type="text" title="값 입력" maxlength="5" class="input_text" style="padding-right:1px;cursor:text">
+					<ul id="cal_list" class="cal_list" style="display:none;">
+					<li>&nbsp;</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_mysales_b"></div>
+	</div>

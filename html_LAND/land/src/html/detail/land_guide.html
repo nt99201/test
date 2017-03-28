@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>네이버 부동산 100% 활용법 :: 네이버 부동산</title>
+<link rel="stylesheet" href="../../css/land_article.css" type="text/css">
+
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<img src="../p_120125_find/img/@header.gif" width="980" height="116" alt="해더 임시 이미지">
+	</div>
+	<!-- //header -->
+	<!--하위 컨텐츠 및 Aside Component 영역 List Container -->
+	<div id="container" class="land_guide">
+		<div class="aside">
+			<div class="guide_tit">
+				<h2 class="blind">알고 쓰면 더욱 쉽다! 네이버 부동산 100% 활용법</h2>
+				<ul>
+				<li class=""><a href="#" class="menu"><span>확인매물 활용법</span></a></li>
+				<li class="selected"><a href="#" class="menu2"><span>현장확인매물 활용법</span></a></li>
+				<li class=""><a href="#" class="menu3"><span>부동산 지도 활용법</span></a></li>
+				<li class=""><a href="#" class="menu4"><span>분양 활용법</span></a></li>
+				<li class=""><a href="#" class="menu5"><span>커뮤니티 활용법</span></a></li>
+				</ul>
+			</div>
+			<div class="guide_banner">
+				<a href="#"><img src="http://static.land.naver.net/static/service/20120215/guide/banner_guide.gif" width="185" height="160" alt="집주인에게 확인된 매물안내 자세히 보기"></a>
+			</div>
+		</div>
+		<div id="content">
+			<h3><img src="img/tit_land_guide2.gif" width="125" height="16" alt="현장확인매물 활용법"></h3>
+			<dl class="lst_guide">
+			<dt class="selected"><a href="#"><strong>부동산 지도위 마커, 색깔은 왜 다르죠?</strong></a></dt>
+			<dd class="selected">
+				<p>현재 보는 지역과 <strong>주변 지역</strong>을 명확히 구분하여 보여주기 위해 보는 지역(동)의 단지는 녹색으로, 주변 지역(동)은 청녹색으로 표시되며 지도를 옮기면 해당 지역(동)의 중심은 다시 녹색으로, 주변 지역(동)은 청녹색으로 보여집니다.</p>
+				<div></div>
+			</dd>
+			<dt><a href="#"><strong>축척, 늘리거나 줄여보면?</strong></a></dt>
+			<dd></dd>
+			<dt><a href="#"><strong>지도, 옮겨 보셨나요?</strong></a></dt>
+			<dd></dd>
+			<dt><a href="#"><strong>매물종류 선택, 간단하게?</strong></a></dt>
+			<dd></dd>
+			<dt><a href="#"><strong>단지별 등록된 매물은 몇 개?</strong></a></dt>
+			<dd></dd>
+			<dt><a href="#"><strong>여러 단지를 모아, 그룹 마커?</strong></a></dt>
+			<dd></dd>
+			</dl>
+			<div class="paginate">
+				<a href="#" class="pre_end" onClick="nhn.stb.behavior.selectPageNavigationValue('1'); return false;">처음</a>
+				<a href="#" class="pre" onClick="nhn.stb.behavior.selectPageNavigationValue('1'); return false;">이전</a>
+				<strong>1</strong> <a href="#" onClick="nhn.stb.behavior.selectPageNavigationValue('2'); return false;">2</a>
+				<a href="#" onClick="nhn.stb.behavior.selectPageNavigationValue('3'); return false;">3</a>
+				<a href="#" class="next" onClick="nhn.stb.behavior.selectPageNavigationValue('2'); return false;">다음</a>
+				<a href="#" class="next_end" onClick="nhn.stb.behavior.selectPageNavigationValue('3'); return false;">끝</a>
+			</div>
+		</div>
+	</div>
+	<div id="mySalesLayer" class="my_sales" style="top: 1519px; right: -89px;">
+		<div id="mySalesUserInfolayer" class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="#" onClick="nhn.stb.behavior.authenticatePopup(); return false;"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_my_popup_login.gif" alt="로그인" style="margin-bottom: 2px;" width="59" height="17"></a> </div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+		<div id="mySalesComplexLayer" class="bg_my_sales_t">
+			<h3 class="type2">최근본단지</h3>
+			<div class="cont">
+				<!-- 비활성시 btn_up, 활성시 btn_up_on -->
+				<span class="updown btn_up" style="display: none;"><a href="#"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_my_popup_up_on.gif" alt="위로" width="57" height="10"></a></span>
+				<!-- If exist housing user seen -->
+				<p style="display: none;" class="result_none">최근본 단지가 없습니다</p>
+				<!-- If not exist housing user seen -->
+				<div id="horizon_rollingmask" class="maskarea" style="display: block; height: 82px;">
+					<ul class="housing">
+						<li class=""><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'}); return false;">삼풍</a></li>
+						<li class=""><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'}); return false;">강남구청역SK허브블루</a></li>
+						<li class="first"><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'}); return false;">삼풍</a></li>
+						<li class=""><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'}); return false;">강남구청역SK허브블루</a></li>
+					</ul>
+				</div>
+				<span class="updown btn_down" style="display: none;"><a href="#"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_my_popup_down_on.gif" alt="아래로" width="57" height="10"></a></span> </div>
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+					<legend>평형계산</legend>
+					<input class="input_text" title="값 입력" maxlength="5" type="text">
+					<a href="#" onClick="return false;"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_calculate.gif" alt="계산" class="input_btn" width="61" height="18"></a>
+					<input class="input_text" title="값 입력" maxlength="5" type="text">
+					<ul class="cal_list" style="display: none;">
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<img src="../p_120125_find/img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

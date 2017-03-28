@@ -1,0 +1,257 @@
+@import "../common/_variable";
+@import "../common/_mixin";
+
+.crd_box{
+	padding-top:10px;
+	&:before{height:10px;}
+}
+.spot_box {
+	ul{
+		padding:0 0 0 10px;
+	}
+	li{
+ 		width: 25%;
+ 		height:115px;
+ 		a {
+			margin-right:10px;
+ 		}
+ 	}
+ 	.sp_home {
+        margin-bottom:27px;
+    }
+}
+.lst_big_thumb{
+	li{
+		.txt_area{
+			left:13px;
+			bottom:13px;
+			font-size:19px;
+			line-height:23px;
+		}
+	}
+}
+.lst_small_thumb{
+	li{
+		.txt_area{
+            margin-top:7px;
+            font-size:16px;
+        }
+
+		.keyword_txt_area{
+            font-size:17px;
+
+			em{
+				display:inline;
+				margin-right:3px;
+                color:#3b73c8;
+            }
+
+		}
+	}
+}
+.lst_rank_thumb{
+	li{
+		width:16.8%;
+		padding:0 2px 2px 0;
+		&:first-child{
+			.thumb{
+				padding-top:50.5%;
+			}
+		}
+	}
+}
+.lst_txt_wrap{
+	 li{
+		padding-right:35px;
+		a{
+			font-size:17px;
+		}
+	}
+}
+.lst_rank_txt_wrap{
+	li{
+		padding-right:35px;
+		em{
+			font-size:24px;
+		}
+		a{
+			font-size:17px;
+		}
+	}
+}
+
+/* 분양정보 */
+.sale_area{
+
+    ul{
+
+        li{
+            width:25%;
+            padding:0 10px 11px 0;
+
+			a .txt_area .price{
+				font-size:16px;
+				letter-spacing:-1px;
+			}
+        }
+    }
+}
+/* 관심단지, 관심매물 - 2015-08-28 황선수 */
+.cont_tab_wrap{
+	position:relative;
+	width:100%;
+
+	&:before{
+		position:absolute;
+		z-index:100;
+		top:0;
+		bottom:-8px;
+		left:50%;
+		width:10px;
+		background:#e4e8e9;
+		margin-left:-5px;
+		content:'';
+	}
+
+	&.crd_box_one:before{content:none}
+
+	&:after{
+		display:block;
+		clear:both;
+		content:'';
+	}
+
+	&.crd_box_one{
+		.crd_box{
+			float:none;
+			width:100%;
+		}
+	}
+	.crd_tab{
+		display:none;
+	}
+	.cont_tab_box{
+		display:block;
+		float:left;
+		width:50%;
+
+		&:last-child{
+			.tit_area{
+				margin:0 15px 0 20px;
+			}
+			&:after{
+				display:none;
+			}
+		}
+		.tit_area{
+            display:block;
+        }
+	}
+	.lst_sale_wrap{
+		margin:15px 0 0 5px;
+
+		.lst_sale{
+			.item{
+				margin-left:15px;
+			}
+		}
+	}
+	.btn_more{
+		top:15px;
+		right:20px;
+	}
+}
+.lst_small_thumb{
+
+	li{
+
+		.txt_area{
+			  margin-right:5px;
+			  font-size:17px;
+			  letter-spacing:-1px;
+		}
+	}
+}
+
+.pop_open_wrap{
+	width:250px;
+	height:305px;
+	background:url(#{$imgUrl-mobile}/pop_open_land.png) no-repeat 0 0;
+	background-size:250px 305px;
+	margin:-152px 0 0 -125px;
+
+	a{
+		left:71px;
+		bottom:144px;
+		width:106px;
+		height:29px;
+	}
+
+	button{
+		width:43px;
+		height:43px;
+	}
+}
+
+.talk_banner_sec{
+	position:relative;
+	padding-top:10px;
+
+	&:before{
+        height: 10px;
+    }
+
+}
+
+.pop_new_wrap{
+	width:363px;
+	height:304px;
+	margin:-152px 0 0 -181px;
+
+	&.ios{
+		background:url(#{$imgUrl-mobile}/pop_new_ios_land.png) no-repeat 0 0;
+		background-size:363px 304px;
+	}
+
+	&.and{
+		background:url(#{$imgUrl-mobile}/pop_new_and_land.png) no-repeat 0 0;
+		background-size:363px 304px;
+	}
+
+	.btn_detail, .btn_ios{
+		top:123px;
+		width:107px;
+		height:29px;
+	}
+
+	.btn_detail{
+		left:70px;
+	}
+
+	.btn_ios{
+		left:181px;
+	}
+}
+
+/* theme_item */
+.theme_box.theme_box2 {
+    h3 {
+        line-height:42px;
+    }
+    .txt_box .txt_area {
+        > span {
+            line-height:42px;
+        }
+    }
+}
+
+.theme_item_list > ul > li {
+  width: 25%;
+}
+.theme_item_list2.theme_item_list > ul > li {
+  width: 50%;
+  float: left;
+}
+.theme_item_list2.theme_item_list > ul > li > a {
+  margin: 0 5px;
+}

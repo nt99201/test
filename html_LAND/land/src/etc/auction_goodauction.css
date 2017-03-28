@@ -1,0 +1,1385 @@
+@charset "UTF-8";
+/* 경매상세 - goodauction 관리 페이지 */
+
+/* NHN Services WebStandardization Team LKJ 100421 */
+
+#container,#container2{overflow:hidden;position:relative;width:980px;margin:0 auto;padding-bottom:55px}
+#container {background:url(../img/auction/bg_container.gif) repeat-y}
+
+#content,#content2{float:left;position:relative}
+#content {width:680px}
+#content2 {width:980px}
+
+.aside {float:right;position:relative;width:280px}
+
+/* 공통 */
+/*.scroll{scrollbar-face-color:#ffffff; scrollbar-track-color:#f4f4f4; scrollbar-arrow-color:#909090; scrollbar-shadow-color:#ffffff; scrollbar-highlight-color:#ffffff; scrollbar-darkshadow-color:#d7d7d7;}	*/
+.scroll_w{scrollbar-face-color:#ffffff; scrollbar-track-color:#f4f4f4; scrollbar-arrow-color:#909090; scrollbar-shadow-color:#ffffff; scrollbar-highlight-color:#ffffff; scrollbar-darkshadow-color:#d7d7d7}
+.scroll{scrollbar-arrow-color:#8c8c8c;scrollbar-track-color:#f7f7f7;scrollbar-face-color:#eaeaea;scrollbar-3dlight-color:#e2e2e2;scrollbar-darkshadow-color:#e2e2e2;scrollbar-highlight-color:#eaeaea;scrollbar-shadow-color:#eaeaea}
+
+/* Paginate */
+.paginate{text-align:center}
+.paginate a,
+.paginate strong{_position:relative;display:inline-block;margin-right:-6px;padding:3px 10px 2px 9px;color:#333;text-decoration:none !important;line-height:normal;font-weight:bold;background:#fff url(http://static.naver.com/common/paginate/line_pg4.gif) no-repeat 0 4px}
+.paginate strong{color:#ff8400 !important}
+.paginate a:hover,
+.paginate a:active,
+.paginate a:focus{background-color:#f7f7f7}
+.paginate a.pre,
+.paginate a.pre_end,
+.paginate a.next,
+.paginate a.next_end{font-family:"돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;font-size:12px;font-weight:normal}
+.paginate a.pre{padding:4px 10px 2px 17px;background:url(http://static.naver.com/common/paginate/bu_pg4_l1.gif) no-repeat 100% 5px !important}
+.paginate a.pre_end{padding:4px 10px 2px 16px;background:url(http://static.naver.com/common/paginate/bu_pg4_l2.gif) no-repeat 100% 5px !important}
+.paginate a.next{padding:4px 18px 2px 11px;background:url(http://static.naver.com/common/paginate/bu_pg4_r1.gif) no-repeat 0 5px !important}
+.paginate a.next_end {padding:4px 16px 2px 9px;background:url(http://static.naver.com/common/paginate/bu_pg4_r2.gif) no-repeat 0 5px !important}
+
+/* Select Box */
+.selectbox-naked *{display:none;}
+.selectbox-naked input,
+.selectbox-naked select{display:inline;}
+.selectbox-naked select *{display:block;}
+.selectbox-applied {position:relative;}
+.selectbox-applied select{display:none;}
+/*.selectbox-applied .selectbox-box{letter-spacing:-1px}- > letter-spacing:0px로 수정 : 지혜 수정 2010_07_06*/
+.selectbox-applied .selectbox-box{height:18px; _height:20px;  cursor:pointer; _cursor:hand; border:1px solid #bbb; background:#fff url(http://img.land.naver.com/imgland/sale/2009/bg_select_arw.gif) right 50% no-repeat; color:#606060; letter-spacing:0; font-size:12px;}
+.selectbox-applied .selectbox-label{overflow:hidden; margin:2px 0 0 6px;padding-top:1px;letter-spacing:0;font-size:12px !important}
+.selectbox-applied .selectbox-layer{overflow:hidden; position:absolute; z-index:99999; border:1px solid #bbb; margin-top:-1px;}
+.selectbox-applied .selectbox-list{overflow-y:auto; overflow-x:hidden; width:100%; list-style:none; scrollbar-face-color:#ffffff; scrollbar-track-color:#f7f7f7; scrollbar-3dlight-color:#e3e3e3; scrollbar-arrow-color:#8d8d8d; scrollbar-shadow-color:#fff; scrollbar-highlight-color:#fff; scrollbar-darkshadow-color:#e3e3e3;letter-spacing:0}
+/*.selectbox-applied .selectbox-list li : font-size:11->12px 수정   김쥐수정 2010_07_08*/
+.selectbox-applied .selectbox-list li{width:100%; cursor:pointer; _cursor:hand; padding:3px 0 2px 0; _padding:4px 0 1px 0; background:#fff; color:#606060; font-size:12px; text-indent:4px;letter-spacing:0}
+.selectbox-applied .selectbox-list li.selectbox-item-hovered {background-color:#f3f3f3; color:#333;}
+.selectbox_dim {position:absolute; left:0; top:0; background:#FFF; width:100%; height:20px; filter:alpha(opacity=50); opacity:0.6; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);}
+
+/*
+.selectbox-applied .selectbox-label{overflow:hidden;margin:2px 0 0 6px;font-size:12px}
+.selectbox-applied .selectbox-layer{overflow:hidden;position:absolute;z-index:99999;border:1px solid #bbb;margin-top:-1px}
+.selectbox-applied .selectbox-list{overflow-y:auto;list-style:none;scrollbar-face-color:#fff;scrollbar-track-color:#f7f7f7;scrollbar-3dlight-color:#e3e3e3;scrollbar-arrow-color:#8d8d8d;scrollbar-shadow-color:#fff;scrollbar-highlight-color:#fff;scrollbar-darkshadow-color:#e3e3e3}
+.selectbox-applied .selectbox-list li{width:100%;cursor:pointer;_cursor:hand;padding:3px 0 2px 0;_padding:4px 0 1px 0;background:#fff;color:#606060;font-size:12px;text-indent:4px}
+.selectbox-applied .selectbox-list li.selectbox-item-hovered{background-color:#f3f3f3;color:#333}
+.selectbox_dim{position:absolute;left:0;top:0;background:#FFF;width:100%;height:20px;filter:alpha(opacity=50);opacity:.6;-ms-filter:"alpha(opacity=60)";filter:alpha(opacity=60)}
+
+/* 페이지제목 */
+/*.h_page{position:relative;padding:5px 0 0 6px}  김쥐작업 2010_07_07    */
+.h_page{position:relative;padding:10px 4px 0 7px;}
+.h_line{padding-bottom:9px;border-bottom:1px solid #ededef;}
+
+/* 컨텐츠제목 */
+.h_content_area{margin-top:30px}
+/*.h_content_area h3{margin-left:20px}*/
+.h_content_area p{margin:10px 0 0 0px}
+
+/* 탭 */
+.tab_type1{overflow:hidden;padding-left:1px;_padding-left:2px;background:url(../img/auction/bg_tab_type1.gif) repeat-x 0 100%;zoom:1}
+.tab_type1 li{float:left;position:relative;margin-left:-1px;padding-left:1px;background:url(../img/auction/line_tab_type1.gif) no-repeat}
+.tab_type1 li img{vertical-align:top}
+.tab_type1 li.on{z-index:10;padding-left:0;border-left:1px solid #828282;background:none}
+.tab_type2{overflow:hidden}
+.tab_type2 li{float:left;position:relative;margin-left:-1px}
+.tab_type2 li img{vertical-align:top}
+
+/* 초보자경매입문 */
+.tab_newbie{margin-top:10px}
+
+/* 동영상교육 */
+/*.lecture_mov_area{overflow:hidden;margin-top:18px;border-top:1px solid #f7f7f7;border-bottom:1px solid #cacaca} 2010_07_21 지혜수정
+.lecture_mov_area .mov_player{float:left;width:394px;height:304px;padding:19px 0 0 19px;border:1px solid #eee;border-top:1px solid #f7f7f7}  ->>색상변경
+.lecture_mov_area .mov_lst_area{float:left;width:264px;height:323px;border:1px solid #eee;border-top:1px solid #f7f7f7;border-left:0}  ->>색상변경*/
+.lecture_mov_area{overflow:hidden;margin-top:18px;}
+.lecture_mov_area .mov_player{float:left;width:394px;height:304px;padding:19px 0 0 19px;border:1px solid #eee;border-top:2px solid #eee}
+.lecture_mov_area .mov_lst_area{float:left;width:264px;height:323px;border:1px solid #eee;border-top:2px solid #eee;border-left:0}
+.lecture_mov_area .mov_lst_area .scroll_w{overflow:auto;overflow-y:scroll;width:252px;height:307px;margin:7px 0 0 7px;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb;border-right:1px solid #ebebeb}
+/*.lecture_mov_area .mov_lst_area .scroll{overflow:auto;overflow-y:scroll;width:251px;height:307px;margin:7px 0 0 7px;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb}*/
+.lst_mov{width:235px}
+.lst_mov li{border-bottom:1px solid #ebebeb}
+.lst_mov li div{padding:15px 18px 11px 18px;border:1px solid #fff;border-width:1px 0;background:#fbfbfb;letter-spacing:-1px}
+.lst_mov li div a{color:#426c96}
+.lst_mov li div span{display:block;margin-left:20px;color:#464646}
+/*.lst_mov li div span.author{margin-top:10px;}  김쥐수정 2010_07_08*/
+.lst_mov li div span.author{margin-top:7px;font-color:#333333;}
+/*.lst_mov li div span.view{margin-top:5px;color:#959595;font-size:11px}   김쥐수정 2010_07_08*/
+.lst_mov li div span.view{margin-top:4px;color:#999999;font-size:11px}
+.lst_mov li.on div{padding:15px 16px 11px 16px;border:2px solid #e3f3f7;background:#eff9fb}
+.lst_mov li.last{border-bottom:0}
+.lst_mov .num {letter-spacing:0}
+.section_summary{margin-top:20px}
+.section_summary h4{position:relative;padding:14px 18px 13px 18px;border:1px solid #e5e5e5;font-size:14px;letter-spacing:-1px;color:#426c96}
+/*.section_summary h4 .rgt{position:absolute;right:20px;top:15px;font-size:11px;color:#919191;font-weight:normal;letter-spacing:-1px}   김쥐수정 2010_07_08*/
+.section_summary h4 .rgt{position:absolute;right:20px;top:15px;font-family:Tahoma;font-size:11px;color:#999999;font-weight:normal;letter-spacing:-1px}
+.section_summary h4 em{letter-spacing:0;color:#464646}
+.section_summary h4 .date{letter-spacing:0}
+.section_summary h4 .bar{margin:0 5px;color:#e7e7e7}
+.desc_area{overflow:hidden;margin-top:20px}
+.desc_area .teacher{float:right;position:relative;width:158px;margin-left:20px;padding:10px;border:1px solid #e5e5e5}
+.desc_area .teacher .name{color:#959595;line-height:16px;border:0;letter-spacing:-1px}
+.desc_area .teacher .name td{height:56px;border:0}
+.desc_area .teacher .name strong{display:block;color:#464646}
+.desc_area .teacher .thmb{float:left;margin-right:10px}
+.desc_area .teacher .desc{clear:both;margin-top:3px;padding-top:3px;border-top:1px solid #f9f9f9;font-size:11px;color:#959595;line-height:16px;letter-spacing:-1px}
+.desc_area .note{margin-left:20px;color:#333;line-height:24px}
+
+/* Aside common */
+.aside_content {width:240px;margin:0 auto}
+h2.h_aside{position:relative;padding:3px 40px 3px 0;font-size:12px;color:#426c96;letter-spacing:-1px}
+h2.h_aside .btn_more{display:block;position:absolute;right:-4px;top:0;padding:4px}
+h2.h_aside img{vertical-align:top}
+h2.h_aside a{color:#426c96}
+h2.h_aside .btn_issue{display:inline-block;margin-top:1px}
+h2.h_aside .ico_issue{margin-right:4px}
+.lst_news1 li{margin-bottom:6px;line-height:14px;color:#464646;letter-spacing:-1px}
+.lst_news1 li a{color:#464646}
+.lst_news1 li em{color:#426c96}
+.lst_news2 li{margin-bottom:4px;padding-left:12px;background:url(../img/auction/sprite_bu.gif) no-repeat 1px 3px;line-height:14px}
+.lst_news2 li a{color:#464646}
+
+/* 가장많이본뉴스 */
+.section_favornews{margin-top:29px;padding-bottom:17px;border-bottom:1px solid #e1e1e1}
+.section_favornews .h_aside{margin-bottom:12px}
+.section_favornews .lst_news1{margin-top:16px}
+
+/* 이슈 */
+.section_issue{margin-top:22px;padding-bottom:19px;border-bottom:1px solid #e1e1e1}
+.section_issue .lst_news2{margin-top:11px}
+
+/* 우리동네뉴스 */
+.section_homenews{margin-top:23px}
+.section_homenews .tab_local {position:relative;margin-top:19px}
+.section_homenews .tab_local a{color:#898989;font-weight:bold;letter-spacing:-1px}
+.section_homenews .tab_local a.on{color:#426c96}
+.section_homenews .tab_local .bar{color:#d7d7d7}
+.section_homenews .tab_local .btn_nav{overflow:hidden;position:absolute;right:-2px;top:-4px}
+.section_homenews .tab_local .btn_nav a{display:block;float:left;height:18px;background:url(../img/auction/sprite_btn.gif) no-repeat}
+.section_homenews .tab_local .btn_nav a.btn_prev{width:15px;background-position:2px 2px}
+.section_homenews .tab_local .btn_nav a.btn_next{width:14px;background-position:-13px 2px}
+.section_homenews .tab_local .btn_nav a span{position:absolute;left:-9999px;z-index:-1}
+.section_homenews .lst_news1{margin-top:18px}
+.section_homenews .lst_news1 li{margin-bottom:7px}
+
+/* 카페리스트 */
+.lst_cafe{font-family:굴림;line-height:14px}
+.lst_cafe li{margin-bottom:21px}
+.lst_cafe .name{;color:#0000cc;font-size:13px;text-decoration:underline}
+.lst_cafe .desc{margin-top:7px}
+.lst_cafe .admin{margin:4px 0 5px;color:#777}
+.lst_cafe .url{color:#218d44}
+.lst_cafe .cafe_srch{color:#777}
+.lst_cafe .dot{margin:0 5px 0 6px;background:url(../img/auction/sprite_bu.gif) no-repeat 1px -31px}
+.lst_cafe .bar{margin:0 1px 0 11px;color:#d9d9d8}
+
+/* 초보자 카페 */
+.section_newbiecafe .lst_cafe{margin:33px 0 25px;padding:0 5px 29px 5px;border-bottom:1px solid #eaeaea}
+
+/* 모의경매참여 */
+.auction_area{margin-top:19px;}
+.join_info{position:relative;margin-bottom:20px;border:1px solid #e5e5e5;background:#fefefe;_height:1%}
+.join_info ul{margin:19px 20px 18px 17px;}
+.join_info ul li{margin-bottom:6px;padding-left:11px;background:url(/img/auction/sprite_bu.gif) no-repeat 3px -62px;line-height:14px;}
+.join_info .jo_tit{color:#777;font-weight:bold;font-family:돋움;letter-spacing:-1px;}
+.join_info .jo_lie{padding-left:5px;padding-right:3px;color:#999;font-size:9px;}
+.join_info .btn_last_winner{position:absolute;top:50%;right:20px;margin-top:-20px}
+.auction_area .thmb{float:right}
+.auction_area .thmb img{border:1px solid #dcdde0}
+.auction_area .tbl_goodsinfo{width:425px;border:0;border-top:1px solid #d0d2d6;border-collapse:collapse}
+.auction_area .tbl_goodsinfo th,.auction_area .tbl_goodsinfo td{height:17px;padding:5px 0;border:0;line-height:14px}
+.auction_area .tbl_goodsinfo th{width:108px;background:#f9f9f9;border:1px solid #ededed;border-width:0 1px 1px 0;color:#555;font-weight:normal;text-align:left;}
+.auction_area .tbl_goodsinfo td{border-bottom:1px solid #ededed;color:#333}
+.auction_area .tbl_goodsinfo .lft_pd10{padding-left:10px}
+.auction_area .tbl_goodsinfo .btn_detail{vertical-align:middle;font-size:1px}
+.auction_area .tbl_goodsinfo .btn_detail img{vertical-align:middle}
+.join_auction{clear:boht;position:relative;width:657px;height:50px;margin-top:19px;padding:30px 0 0 23px;background:url(../img/auction/bg_joinauction.jpg) no-repeat;}
+.join_auction .input_txt{width:18px;height:22px;margin-top:1px;margin-right:1px;text-align:center;border:1px solid #9a9a9a;border-color:#9a9a9a #d8d8d8 #d8d8d8 #9a9a9a;color:#ff6000;font-size:18px;font-weight:bold;font-family:Tahoma;}
+.join_auction .unit{position:relative;top:2px;font-size:18px;color:#ff6000;font-family:Tahoma;font-weight:bold;vertical-align:top}
+.join_auction .won{position:relative;top:6px;padding-left:3px;font-size:16px;color:#999;font-family:돋움;font-weight:bold;vertical-align:top}
+.join_auction label{position:relative;top:5px;margin-right:15px;vertical-align:top}
+.join_auction .btn_submit{position:absolute;top:50%;right:21px;margin-top:-18px}
+.auction_area .lst_note{margin:10px 0 0 5px}
+.lst_note li{padding-left:8px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -97px;color:#999}
+
+/* 경매절차안내 */
+.section_flowguide{margin-top:20px;}
+.chart_area{float:left;width:360px;height:795px;background:url(../img/auction/01_img_flowchart.gif) no-repeat}
+.chart_area ol{padding-left:30px;}
+.chart_area ol li{padding-bottom:15px;*padding-bottom:11px;}
+.chart_area ol p{visibility:hidden;position:absolute;z-index:-1;width:1px;height:1px}
+.chart_area ol a{display:block;width:131px;height:35px;border:2px solid #dde6eb;}
+.chart_area ol a.on{border-color:#a7bcc9}
+.chart_area ol a span{position:absolute;left:-9999px;z-index:-1;}
+.process_area{float:right;width:305px;border-bottom:1px solid #cacacc}
+.process_area h3{padding:10px 0 11px 14px;border:1px solid #e3e3e3}
+.process{position:relative;border:1px solid #eee;border-top:0;font-family:돋움;font-size:12px;letter-spacing:1;line-height:18px;padding-left:19px;}
+.process_area .process .scroll{position:relative;overflow:hidden;overflow-y:auto;height:744px;padding:18px 20px 20px 0}
+.process_area .process .scroll_w {position:relative;overflow:hidden;overflow-y:auto;height:744px;padding:18px 20px 20px 0}
+.process p{font-family:돋움;font-size:12px;color:#333;letter-spacing:0;line-height:18px;display:inline;}
+.process img{display:inline;padding:0 3px 0 3px}
+.process .info_section{float:left;position:relative;padding-top:0px;font-family:돋움;font-size:12px;letter-spacing:0;line-height:18px;}
+.process .info_section h4{margin-top:18px;margin-bottom:5px;color:#426c96;font-size:12px;letter-spacing:-1px;}
+.process .info_section h5{margin:20px 0 2px;color:#555;font-size:12px;letter-spacing:-1px}
+.process .info_section p{color:#555}
+.process .info_section .info{font-family:돋움;font-size:12px;line-height:18px;color:#333}
+.process .info_section .info_line{padding-bottom:15px;border-bottom:1px solid #ededed;}
+.process .info_section .info strong{letter-spacing:-2px}
+.process .info_section .info a img{position:relative;margin:-1px 0 1px;*margin:0;vertical-align:middle}
+.process .layer{position:absolute;top:0;left:0px;z-index:-1;width:236px;padding:10px 10px 11px 9px;border:1px solid #d5d5d5;background-color:#fff}
+.process .info_section ul{margin-top:0px;}
+.process .info_section ul li{color:#555;font-size:12px;letter-spacing:-1px;line-height:17px}
+.process .info_section .btn_nav{overflow:hidden;position:absolute;top:-3px;right:0}
+.process .info_section .btn_nav a{display:block;float:left;height:18px;background:url(../img/auction/sprite_btn.gif) no-repeat}
+.process .info_section .btn_nav a.btn_prev{width:15px;background-position:2px 2px}
+.process .info_section .btn_nav a.btn_next{width:14px;background-position:-13px 2px}
+.process .info_section .btn_nav a span{position:absolute;left:-9999px;z-index:50}
+
+/* 경매상담 */
+.section_consult .kin_search{overflow:hidden;position:relative;width:658px;margin-top:20px;padding:7px 0 10px 20px;border:1px solid #e5e5e5;background-color:#fdfdfd}
+.section_consult .kin_search p{float:left;margin:7px 10px 0 0}
+.section_consult .kin_search .search{float:left}
+.section_consult .kin_search .search input{vertical-align:middle}
+.section_consult .kin_search .search .input_txt{width:280px;height:15px;*margin:1px 3px 0 0;margin-right:3px;padding:3px 0 0 4px;border:1px solid #9a9a9a;border-color:#9a9a9a #d8d8d8 #d8d8d8 #9a9a9a;color:#333;font-size:12px}
+.section_consult .kin_search .btn_kin{position:absolute;top:15px;right:14px;padding-right:8px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -128px;color:#426c96;letter-spacing:-1px;text-decoration:underline}
+.section_consult .tbl_consult{width:680px;margin-top:20px;table-layout:fixed;border-collapse:collapse}
+.section_consult .tbl_consult th{padding:9px 0 20px;background:url(../img/auction/bg_consult_th.gif) no-repeat;color:#555;font-weight:normal;line-height:14px;text-align:center}
+.section_consult .tbl_consult th.first{background-position:-1px 0}
+.section_consult .tbl_consult th a{padding-right:8px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -156px;color:#555}
+.section_consult .tbl_consult th a:hover{text-decoration:none}
+.section_consult .tbl_consult th.on a{background-position:100% -196px;color:#298b04}
+.section_consult .tbl_consult td{padding:7px 0 6px;border-bottom:1px solid #f3f3f3;color:#848484;font-size:11px;line-height:18px;text-align:center}
+.section_consult .tbl_consult td.title{padding:8px 15px 6px 5px;font-size:12px;letter-spacing:-1px;text-align:left;white-space:normal;word-wrap:break-word}
+.section_consult .tbl_consult td.title a{color:#303030;font-weight:bold;white-space:normal;word-wrap:break-word}
+.section_consult .tbl_consult td.field{padding:8px 0 6px;color:#a3a3a3;letter-spacing:-1px}
+.section_consult .tbl_consult td.field a{color:#a3a3a3}
+.section_consult .tbl_consult td.questioner{padding:7px 1px 7px 38px;color:#986c49;text-align:left}
+.section_consult .tbl_consult td.questioner a{color:#986c49}
+.section_consult .tbl_consult td.num{padding:7px 1px 7px 18px;color:#848484;text-align:left}
+.section_consult .tbl_consult td.num2{padding:7px 1px 7px 9px;color:#848484;text-align:left}
+.section_consult .paginate{margin:15px 0 50px}
+
+/* 경매용어 */
+.section_dictionary{margin-top:20px}
+.section_dictionary .search_area{position:relative;padding:7px 0 10px;border:1px solid #e3e3e3}
+.section_dictionary .search_area label{display:inline-block;margin:3px 8px 0 20px;vertical-align:middle}
+.section_dictionary .search_area legend{display:none}
+.section_dictionary .search_area input{margin:0 0 0 2px;vertical-align:middle}
+.section_dictionary .search_area .input_txt{width:146px;height:15px;*margin-top:1px;padding:3px 0 0 4px;border:1px solid #9a9a9a;border-color:#9a9a9a #d8d8d8 #d8d8d8 #9a9a9a;color:#333;font-size:12px}
+.section_dictionary .search_area .search_result{display:inline-block;position:relative;top:1px;_top:9px;margin-left:1px;color:#777;background:none;}
+.section_dictionary .search_area .search_result strong{color:#333}
+.section_dictionary .search_area .search_term{position:absolute;top:14px;right:13px;color:#777}
+.section_dictionary .search_area .search_term a{color:#426c96;text-decoration:underline}
+.section_dictionary .sort_area{margin-top:-1px;padding:15px 0 14px 13px;border:1px solid #e3e3e3}
+.section_dictionary .sort_area a{display:inline-block;padding:0 7px;color:#555}
+.section_dictionary .sort_area a strong{color:#32546f}
+.section_dictionary .sort_area .bar{display:inline-block;color:#dcdcdc;font-size:10px}
+.section_dictionary .list_area .list{line-height:16px}
+.section_dictionary .list_area .list dt{margin-top:25px;padding:0 0 0 15px;background:url(../img/auction/sprite_bu.gif) no-repeat 5px -63px;color:#555555;font-weight:bold}
+.section_dictionary .list_area .list dd{margin-top:10px;padding:0 0 22px 15px;border-bottom:1px solid #eaeaea;color:#555555}
+.section_dictionary .paginate{margin:25px 0 37px}
+
+/* 경매물건조회 - 물건상세조회 */
+.detail_section{margin-top:22px;line-height:14px}
+/*범태 10.07.16 원하는 조건 브이표 간격 좁히기 8=>6*/
+.detail_section .desc_detail{padding-left:17px;background:url(../img/auction/bu_arr.gif) no-repeat 5px 3px;color:#606060}
+/*.detail_section .desc_detail{padding-left:19px;background:url(../img/auction/bu_arr.gif) no-repeat 5px 3px;color:#606060}*/
+.detail_section .btn_area{margin:-11px 0 6px;text-align:right}
+.detail_section .tbl_search{width:100%;border:0;border:1px solid #ddd;border-bottom:0;table-layout:fixed;border-spacing:0}
+.detail_section .tbl_search caption{display:none}
+.detail_section .tbl_search th,.detail_section .tbl_search td{border:0;border-bottom:1px solid #e3e3e3}
+.detail_section .tbl_search th{background:#f9f8f9 url(../img/auction/p_tbl_search.gif) no-repeat;vertical-align:top;}
+.detail_section .tbl_search .type1{background-position:0 0}
+.detail_section .tbl_search .type2{background-position:-90px 0}
+.detail_section .tbl_search .type3{background-position:-180px 0}
+.detail_section .tbl_search th span{position:relative;z-index:-1}
+/*범태 10.07.08 물건상세조회 - 상세조건 ? 간격 6px로 좁히기 위해*/
+.detail_section .tbl_search th a{display:inline-block;position:relative;width:14px;height:14px;top:11px;left:-13px;text-decoration:none;cursor:pointer}
+/*.detail_section .tbl_search th a{display:inline-block;width:14px;height:14px;margin-top:12px;text-decoration:none;cursor:pointer}*/
+.detail_section .tbl_search th .question{display:inline-block;position:static;z-index:0;width:14px;height:14px;background:url(../img/auction/btn_question.gif) no-repeat}
+.detail_section .tbl_search th .question em{position:relative;z-index:-1}
+.detail_section .tbl_search td{padding:7px 0 7px 10px;background-color:#fefefe}
+.detail_section .tbl_search td .sale_type{position:relative;margin-top:-1px;padding-bottom:4px}
+.detail_section .tbl_search td .sale_type ul{overflow:hidden;width:492px}
+.detail_section .tbl_search td .sale_type .list{display:none}
+.detail_section .tbl_search td .sale_type .list_on{display:block}
+.detail_section .tbl_search td .sale_type ul li{float:left;width:82px;margin-top:5px}
+.detail_section .tbl_search td .sale_type ul li.all{width:100%}
+.detail_section .tbl_search td .sale_type ul li label{color:#666;cursor:pointer}
+.detail_section .tbl_search td .sale_type ul li label.on{font-weight:bold;letter-spacing:-1px}
+/*범태 10.07.01*/
+.detail_section .tbl_search td .sale_type ul li .input_chk{margin:-1px 3px 1px 0;vertical-align:middle}
+/*.detail_section .tbl_search td .sale_type ul li .input_chk{position:relative;*margin:-1px 3px 1px 0;vertical-align:middle}*/
+.detail_section .tbl_search td .value_section{position:relative;z-index:10;width:100%;height:20px}
+.detail_section .tbl_search td .clear{margin-top:6px;z-index:5;}
+/*범태 10.07.15 2px더내려달라함*/
+.detail_section .tbl_search td .value_section .p_value{float:left;width:78px;margin:5px 0 0 0;color:#606060}
+/*.detail_section .tbl_search td .value_section .p_value{float:left;width:78px;margin:3px 0 0 0;color:#606060}*/
+.detail_section .tbl_search td .value_section .p_value2{_display:inline;float:left;margin:4px 7px 0 6px;color:#606060}
+.detail_section .tbl_search td .value_section .p_value3{_display:inline;float:left;margin:4px 4px 0;color:#606060}
+.detail_section .tbl_search td .value_section .btn_apply{_display:inline;float:left;margin:0 20px 0 7px}
+.detail_section .tbl_search td .area_section{position:relative;width:100%;height:20px}
+.detail_section .tbl_search td .area_section .selectbox-box{margin-right:6px}
+/*범태 10.07.15 자간-75로 줄이라 함*/
+.detail_section .tbl_search td a.btn_view{display:inline-block;position:absolute;right:9px;bottom:1px;padding-left:17px;letter-spacing:-1px;background:url(../img/auction/bu_btn.gif) no-repeat 0 0;color:#333}
+/*.detail_section .tbl_search td a.btn_view{display:inline-block;position:absolute;right:8px;bottom:7px;padding-left:17px;background:url(../img/auction/bu_btn.gif) no-repeat 0 0;color:#333}*/
+.detail_section .tbl_search td a.on{background-position:0 -30px}
+.detail_section .tbl_search td .value_section a.btn_view{bottom:3px}
+.detail_section .tbl_search td .area_section a.btn_view{bottom:2px}
+.detail_section .tbl_search td.map{padding:0}
+.detail_section .tbl_search td.map .map_area{position:relative;}
+.detail_section .tbl_search td.map .address_list{float:left;padding:4px 6px 7px 9px;border-left:1px solid #ddd}
+.detail_section .tbl_search td.map .address_list .scroll{overflow:auto;width:103px;height:330px}
+.detail_section .tbl_search td.map .address_list .list{width:75px;margin-top:-7px}
+.detail_section .tbl_search td.map .address_list .list li{width:75px;margin-top:11px}
+.detail_section .tbl_search td.map .address_list .list li a{color:#505050;letter-spacing:-1px}
+.detail_section .tbl_search td.map .address_list .list li a em{color:#929292;font-size:11px;letter-spacing:0}
+.detail_section .layer_value{position:absolute;top:-8px;left:-10px;z-index:100;width:587px;border:1px solid #777;background-color:#fff;color:#333}
+.detail_section .layer_value h4{font-size:12px}
+.detail_section .layer_value .free_section{margin:14px 15px 0}
+.detail_section .layer_value .pay_section{margin:16px 15px 0;padding-top:19px;border-top:1px solid #ddd}
+.detail_section .layer_value .pay_section h4{color:#f26522}
+.detail_section .layer_value .pay_section .p_value2{margin:4px 6px 0 4px !important}
+.detail_section .layer_value .tbl_layer{width:100%;margin-top:10px;border:0;table-layout:fixed}
+.detail_section .layer_value .tbl_layer th,.detail_section .layer_value .tbl_layer td{border:0}
+.detail_section .layer_value .tbl_layer th{background:none;vertical-align:middle;text-align:left;}
+.detail_section .layer_value .tbl_layer td{padding:3px 0 4px}
+.detail_section .layer_value .input_txt{float:left;height:15px;margin-right:3px;padding:3px 0 0 4px;border:1px solid #9a9a9a;border-color:#9a9a9a #d8d8d8 #d8d8d8 #9a9a9a;color:#333;font-size:12px}
+.detail_section .layer_value .txt{float:left;margin:4px 0 0;color:#606060}
+.detail_section .layer_value .txt_num{margin:4px 3px 0 6px}
+.detail_section .layer_value .txt_auction{margin:4px 3px 0 6px}
+.detail_section .layer_value .txt_unit{float:left;margin:2px 0 0 -2px;color:#606060}
+.detail_section .layer_value .layer_btm{margin-top:26px;border-top:1px solid #c8c7c2}
+.detail_section .layer_value .layer_btm .btn_area{margin:1px;padding:5px 0 3px;background-color:#f7f7f7;text-align:center}
+.detail_section .layer_value .btn_close{overflow:hidden;position:absolute;top:6px;right:6px;width:11px;height:11px;padding:4px;background:url(../img/auction/btn_close2.gif) no-repeat 4px 4px}
+.detail_section .layer_value .btn_close span{line-height:100px}
+.detail_section .result_section{margin-top:26px;line-height:14px}
+.detail_section .result_section h3 .p_type{margin-left:9px;color:#333;font-size:13px}
+.detail_section .result_section h3 img{margin:2px 0 -2px}
+.detail_section .result_section h3 span{color:#666;font-size:12px}
+.detail_section .result_section .tab_section{overflow:hidden;width:100%;margin:-17px 0 7px}
+.detail_section .result_section .tab_section .tab{float:right}
+.detail_section .result_section .tab_section li{float:left;height:18px;margin-right:2px;}
+.detail_section .result_section .tab_section li a{display:block;width:100%;height:100%;background:url(../img/auction/tab_sort.gif) no-repeat;text-decoration:none}
+.detail_section .result_section .tab_section li a span{position:relative;z-index:-1}
+.detail_section .result_section .tab_section li.t1{width:65px;margin-right:0;}
+.detail_section .result_section .tab_section li.t1 a{background-position:0 0;}
+.detail_section .result_section .tab_section li.t1 a.up{background-position:0 -30px;}
+.detail_section .result_section .tab_section li.t1 a.down{background-position:0 -60px;}
+.detail_section .result_section .tab_section li.t2{width:63px}
+.detail_section .result_section .tab_section li.t2 a{background-position:-65px 0;}
+.detail_section .result_section .tab_section li.t2 a.up{background-position:-65px -31px;}
+.detail_section .result_section .tab_section li.t2 a.down{background-position:-65px -60px;}
+.detail_section .result_section .tab_section li.t3{width:72px}
+.detail_section .result_section .tab_section li.t3 a{background-position:-130px 0;}
+.detail_section .result_section .tab_section li.t3 a.up{background-position:-130px -31px;}
+.detail_section .result_section .tab_section li.t3 a.down{background-position:-130px -60px;}
+.detail_section .result_section .tab_section li.t4{width:64px}
+.detail_section .result_section .tab_section li.t4 a{background-position:-204px 0;}
+.detail_section .result_section .tab_section li.t4 a.up{background-position:-204px -31px;}
+.detail_section .result_section .tab_section li.t4 a.down{background-position:-204px -60px;}
+.detail_section .result_section .tab_section li.t5{width:63px}
+.detail_section .result_section .tab_section li.t5 a{background-position:-270px 0;}
+.detail_section .result_section .tab_section li.t5 a.up{background-position:-270px -31px;}
+.detail_section .result_section .tab_section li.t5 a.down{background-position:-270px -60px;}
+.detail_section .result_section .tab_section li.t6{width:50px;margin-right:0;}
+.detail_section .result_section .tab_section li.t6 a{background-position:-335px 0;}
+.detail_section .result_section .tab_section li.t6 a.up{background-position:-335px -31px;}
+.detail_section .result_section .tab_section li.t6 a.down{background-position:-335px -60px;}
+.detail_section .result_section .btn_area{margin:-1px 0 0;padding:5px 0 6px 10px;border:1px solid #e3e3e3;background-color:#f9f8f9;text-align:left}
+.detail_section .result_section .btn_area a{display:inline-block;width:54px;height:20px;margin-right:1px;background:url(../img/auction/btn_menu.gif) no-repeat;text-decoration:none}
+.detail_section .result_section .btn_area a span{position:relative;z-index:-1}
+.detail_section .result_section .btn_area a.btn_all{background-position:0 0}
+.detail_section .result_section .btn_area a.btn_cancel{background-position:0 -30px}
+.detail_section .result_section .btn_area a.btn_view{width:73px;background-position:0 -60px}
+.detail_section .result_section .btn_area a.btn_print{background-position:0 -90px}
+.detail_section .result_section .paginate{margin-top:27px}
+.detail_section .tbl_result{width:100%;border:0;border:0;table-layout:fixed;border-spacing:0}
+.detail_section .tbl_result caption{display:none}
+.detail_section .tbl_result th,.detail_section .tbl_result td{border:0}
+/*범태 10.07.15 th위치 2px 아래로 변경 요청*/
+.detail_section .tbl_result th{padding:8px 0 4px 0;border-bottom:1px solid #e9e9e9;background-color:#fdfdfd;color:#999;font-size:11px;font-weight:normal;letter-spacing:-1px;text-align:center}
+/*.detail_section .tbl_result th{padding:6px 0;border-bottom:1px solid #e9e9e9;background-color:#fdfdfd;color:#999;font-size:11px;font-weight:normal;letter-spacing:-1px;text-align:center}*/
+.detail_section .tbl_result td{padding:8px 0;border-bottom:1px solid #f6f6f6;color:#333;line-height:16px;text-align:center}
+.detail_section .tbl_result td p img{margin-bottom:3px;}
+.detail_section .tbl_result .input_chk{text-align:left}
+.detail_section .tbl_result .input_chk input{margin-left:10px;*margin-left:6px}
+.detail_section .tbl_result .area{text-align:left}
+.detail_section .tbl_result .area a{color:#0033ac;text-decoration:underline}
+/*범태 10.07.15 라인컬러 변경 요청 #666=>#777*/
+.detail_section .tbl_result .area p{color:#777777}
+.detail_section .tbl_result .area p span{font-family:gulim}
+.detail_section .tbl_result .area p span em{font-family:dotum}
+.detail_section .tbl_result .area p .bar{color:#d9d9d9}
+.detail_section .tbl_result .price{font-family:tahoma;text-align:right}
+.detail_section .tbl_result .price .num_type1{margin-top:-2px;}
+.detail_section .tbl_result .num{text-align:left}
+.detail_section .tbl_result .num_type1{color:#333}
+.detail_section .tbl_result .num_type2{color:#2a62c5}
+.detail_section .tbl_result .num_type3{color:#ff6000;}
+.detail_section .select_section{overflow:hidden;width:678px;margin-top:9px;padding-bottom:10px;border:1px solid #e3e3e3;color:#333}
+/*범태 10.07.15  */
+.detail_section .select_section .fl_select{float:left;width:79px;padding:6px 0 1px 10px;*padding:15px 0 1px 10px}
+/*.detail_section .select_section .fl_select{float:left;width:92px;padding-left:10px}*/
+.detail_section .select_section .fl_select h3{margin:9px 0 6px;font-size:12px}
+.detail_section .select_section .fl_select .btn_all{margin-top:4px;padding:2px 0 1px 0;color:#555;font-size:11px;letter-spacing:-1px;text-decoration:underline;}
+.detail_section .select_section .select_list{float:left;width:568px;margin:9px 0 1px 0;padding:6px 0 1px 0;background:url(../img/auction/bg_select_line.gif) no-repeat;letter-spacing:-1px}
+/*범태 10.07.08 간격 10px로 뛰우기 위해 변경 margin-top:5px=>6px */
+.detail_section .select_section .select_list dt{float:left;width:54px;margin:6px 0 0 0;padding:0 0 0 10px;font-weight:bold;color:#555555;font-size:12px}
+.detail_section .select_section .select_list dd{float:left;width:505px;margin:6px 0 0 -3px;padding:0;color:#555555;font-size:12px}
+.detail_section .select_section .select_list dt.first{margin:0;}
+.detail_section .select_section .select_list dd.first{margin:0 0 0 -3px;}
+/*.detail_section .select_section .select_list dt{float:left;width:54px;margin-top:5px;padding-left:23px;font-weight:bold}
+.detail_section .select_section .select_list dd{float:left;width:473px;margin-top:5px;color:#555;}*/
+.detail_section .select_section .select_list dd .num{letter-spacing:0}
+.detail_section .select_section .select_list dd .txt{margin-right:2px;}
+.detail_section .select_section .select_list dd a{overflow:hidden;display:inline-block;width:14px;height:13px;margin:0 1px 0 4px;background:url(../img/auction/btn_delete2.gif) no-repeat 0 0;vertical-align:middle;}
+.detail_section .select_section .select_list dd a:hover{background-position:0 -30px;}
+.detail_section .select_section .select_list dd a span{display:inline-block;text-indent:-100px;}
+.auction_marker{position:absolute;width:295px;height:149px;background:url(../img/auction/bg_mapmarker.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/auction/bg_mapmarker.png', sizingMethod='crop');text-align:left}
+.auction_marker .bg_rgt{position:absolute;top:0;right:-5px;width:5px;height:149px;background:url(../img/auction/bg_mapmarker_r.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/auction/bg_mapmarker_r.png', sizingMethod='crop');}
+.auction_marker dl{width:269px;margin:10px 0 0 15px;color:#333}
+.auction_marker dl dt{margin-bottom:9px;padding-bottom:8px;}
+.auction_marker dl dt em{color:#929292}
+.auction_marker dl dt .btn_auction{display:inline-block;margin-left:7px;color:#30678d;font-size:11px;text-decoration:underline}
+.auction_marker dl dd{margin-top:5px;color:#555}
+.auction_marker dl dd strong{display:inline-block;width:69px;color:#333}
+.auction_marker dl dd .num{letter-spacing:0}
+.auction_marker .btn_photo{position:absolute;top:64px;right:14px}
+.auction_marker .btn_photo img{border:2px solid #d0d0d0;vertical-align:top}
+.auction_marker .btn_clse{display:block;position:absolute;top:8px;right:8px;padding:3px}
+/*.auction_detail{background:none !important}
+.auction_detail #content{width:100%}*/
+.detail_section h4.h_detail{color:#fff;background:url(../img/auction/sprite_detail.gif) no-repeat}
+.detail_section h4.h_detail span{position:relative;z-index:-1;font-size:12px;letter-spacing:-1px}
+.detail_section h4.present{margin-top:31px;background-position:0 0}
+.detail_section h4.hirer{margin-top:32px;background-position:0 -30px}
+.detail_section h4.register{margin-top:30px;background-position:0 -60px}
+.detail_section h4.bid{margin-top:31px;background-position:0 -90px}
+.detail_section .spot_detail{position:relative;width:960px;height:31px;padding:12px 0 0 20px;background:url(../img/auction/bg_spot_detail.gif) no-repeat}
+.detail_section .content .spot_detail{width:750px;margin-top:26px;background-position:0 -50px}
+.detail_section .spot_detail h3{float:left;margin-right:46px;color:#333;font-size:16px;line-height:18px}
+.detail_section .spot_detail p{float:left;margin-top:-1px}
+.detail_section .spot_detail p strong{color:#555;font-size:14px}
+.detail_section .spot_detail p .btn_law{margin:0 5px 0 4px}
+.detail_section .spot_detail p .btn_law img{vertical-align:-4px}
+.detail_section .spot_detail p .btn_list{padding-right:10px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -128px;color:#426c96;font-weight:bold;text-decoration:underline;vertical-align:2px}
+.detail_section .spot_detail .btn_area{position:absolute;top:11px;right:16px;margin:0}
+.detail_section .spot_detail .btn_area a{display:inline-block;height:20px;margin-left:1px;background:url(../img/auction/btn_menu.gif) no-repeat;font-size:11px;text-decoration:none}
+.detail_section .spot_detail .btn_area .btn_print{width:54px;background-position:0 -90px}
+.detail_section .spot_detail .btn_area .btn_interest{width:75px;background-position:0 -120px}
+.detail_section .spot_detail .btn_area a span{position:relative;z-index:-1}
+.detail_section .content_wrap{overflow:hidden;width:100%;margin-top:10px}
+.detail_section .content_wrap .content{float:left;width:770px}
+.detail_section .content_wrap .num_area{overflow:hidden;width:768px;border:1px solid #e3e3e3;background-color:#fefefe}
+.detail_section .content_wrap .num_area p{float:left;width:69px;height:36px;padding-top:5px;background-color:#f9f9f9;color:#555;line-height:15px;text-align:center}
+.detail_section .content_wrap .num_area ul{float:left}
+.detail_section .content_wrap .num_area ul li{float:left;width:50px;height:41px;margin-right:-1px;border:1px solid #e3e3e3;border-width:0 1px}
+.detail_section .content_wrap .num_area ul li a{display:block;overflow:hidden;width:100%;height:100%;color:#555;text-align:center}
+.detail_section .content_wrap .num_area ul li a strong{display:block;margin-top:6px}
+.detail_section .content_wrap .num_area ul li a span{display:block;overflow:hidden;height:13px;margin-top:1px;background:url(../img/auction/ico_bid.gif) no-repeat 13px 0;color:#f26522;text-indent:-100px;cursor:pointer;}
+.detail_section .content_wrap .num_area ul li.on a{width:48px;height:39px;border:1px solid #d8f0f4;background-color:#eff9fb}
+.detail_section .content_wrap .num_area ul li.on a strong{margin-top:5px}
+.detail_section .sale_info{position:relative;margin-top:5px;border:1px solid #d8f0f4;background-color:#eff9fb}
+.detail_section .sale_info p{margin:9px 0 8px 9px;color:#555}
+.detail_section .sale_info p em{color:#111}
+.detail_section .sale_info p .bar{margin:0 4px;color:#6dbddb}
+.detail_section .sale_info .hit_area{position:absolute;top:5px;right:15px}
+/*범태 10.07.15 조회수 2px 내림*/
+.detail_section .sale_info .hit_area .hit{float:left;margin:5px 9px 0 0;color:#636363;font-size:11px}
+/*.detail_section .sale_info .hit_area .hit{float:left;margin:3px 9px 0 0;color:#636363;font-size:11px}*/
+.detail_section .sale_info .hit_area .hit strong{color:#333}
+.detail_section .sale_info .hit_area .hit .today{color:#333}
+.detail_section .sale_info .hit_area .hit .today strong{color:#0054a6}
+.detail_section .sale_info .hit_area .btn_hit{float:left;width:73px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -150px;text-decoration:none}
+.detail_section .sale_info .hit_area .btn_hit span{position:relative;z-index:-1}
+.detail_section .section_tbl{overflow:hidden;width:770px;margin-top:10px}
+.detail_section .tbl_auctioninfo{width:770px;margin-left:-1px;border:0;border-top:1px solid #d0d2d6;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+.detail_section .tbl_auctioninfo th,.detail_section .tbl_auctioninfo td{padding:7px 0 6px 10px;border:0;border:1px solid #ededef;border-width:0 0 1px 1px;background:none;text-align:left}
+.detail_section .tbl_auctioninfo th{background-color:#f9f9f9;color:#555;font-weight:normal;text-align:left;}
+/*.detail_section .tbl_auctioninfo th{background-color:#f9f9f9;color:#555;font-weight:normal}*/
+/*범태 10.07.15 th 2px 내림*/
+.detail_section .tbl_auctioninfo thead th{padding:9px 0 6px;text-align:center}
+/*.detail_section .tbl_auctioninfo thead th{padding:7px 0 8px;text-align:center}*/
+.detail_section .tbl_auctioninfo td{color:#323232}
+.detail_section .tbl_center td{padding:7px 0 6px;text-align:center}
+.detail_section .tbl_auctioninfo td .c_type{color:#f4720a}
+.detail_section .tbl_auctioninfo td p{margin-left:63px;color:#555;line-height:20px}
+.detail_section .tbl_auctioninfo td p .c_type{color:#f26522}
+.detail_section .tbl_auctioninfo td p.p_bid{background:url(../img/auction/ico_bid.gif) no-repeat 0 4px;color:#f26522}
+.detail_section .tbl_auctioninfo td p .ico_bid{position:relative;z-index:-1;}
+.detail_section .tbl_auctioninfo td p.price{margin:-6px 0 -8px 31px;color:#323232;line-height:28px}
+.detail_section .tbl_auctioninfo td p.area{margin:0 0 3px 9px;color:#323232;line-height:22px}
+.detail_section .tbl_auctioninfo td p.area img{margin-left:2px;vertical-align:middle}
+.detail_section .tbl_auctioninfo td p.reference{margin:3px 0 3px 9px;color:#323232;line-height:22px}
+.detail_section .tbl_auctioninfo td p.hirer{margin:-3px 0 0 9px;color:#323232;line-height:15px;text-align:left}
+.detail_section .tbl_auctioninfo td .photo_area{overflow:hidden;width:675px;margin-top:3px}
+.detail_section .tbl_auctioninfo td .photo_list{overflow:hidden;width:693px;background:url(../img/auction/bg_photo_line.gif) no-repeat}
+.detail_section .tbl_auctioninfo td .photo_list li{float:left;margin-right:19px}
+.detail_section .tbl_auctioninfo td.price{padding:7px 9px 6px 0;text-align:right}
+.detail_section .tbl_info strong{margin-right:5px}
+.detail_section .tbl_info em{margin-right:28px}
+.detail_section .tbl_info a{color:#426c96;text-decoration:underline}
+.detail_section .desc_hirer{margin:-14px 0 -1px 77px;padding-left:15px;background:url(../img/auction/bg_bar.gif) no-repeat 0 1px;color:#323232}
+.detail_section .desc_hirer em{margin-right:8px}
+.detail_section .sale_deatil{width:341px;margin:0 0 7px 20px;border:0;table-layout:fixed;border-spacing:0}
+.detail_section .sale_deatil th,.detail_section .sale_deatil td{padding:0;border:0;color:#555;text-align:center}
+/*범태 10.07.15 th 2px 내림*/
+.detail_section .sale_deatil th{padding:9px 0 6px;background:url(../img/auction/bg_tbl_th.gif) no-repeat 50% 0}
+/*.detail_section .sale_deatil th{padding:9px 0 8px;background:url(../img/auction/bg_tbl_th.gif) no-repeat 50% 0}*/
+.detail_section .sale_deatil th.frst{background-position:0 0}
+.detail_section .sale_deatil th.last{padding-right:14px;background-position:100% 0;text-align:right}
+.detail_section .sale_deatil td{padding:6px 0 0}
+.detail_section .sale_deatil td.price{padding:6px 7px 0 0}
+.detail_section .sale_deatil tr.last td{color:#0072bc;padding:6px 0 0;border:none}
+.detail_section .sale_deatil tr.last td.price{color:#0072bc;padding:6px 7px 0 0}
+.detail_section .sale_deatil td.result{padding-right:13px;text-align:right}
+.detail_section .sponsor_area{overflow:hidden;width:100%;margin-top:26px}
+/*2010_07_14  지혜수정
+.detail_section .sponsor_area .info{float:left;width:579px;color:#707070;line-height:20px}
+.detail_section .sponsor_area .sponsor{float:left;width:190px;margin-top:4px;border-left:1px solid #cdcdcd;text-align:center;}
+*/
+.detail_section .sponsor_area .info{float:left;width:543px;color:#707070;line-height:20px;}
+.detail_section .sponsor_area .sponsor{float:right;margin-top:4px;padding-left:17px;border-left:1px solid #cdcdcd;text-align:right;}
+.detail_section .sponsor_area .sponsor p{margin:0 0 8px;color:#636363;font-size:11px}
+.detail_section .banner_area{overflow:hidden;width:770px;margin-top:19px}
+.detail_section .banner_area a.banner_list {margin-right:12px}
+.detail_section .content_wrap .aside{width:190px}
+.detail_section .auction_data{_overflow:hidden;width:188px;padding-bottom:28px;border:1px solid #e3e3e3;background-color:#fefefe}
+.detail_section .auction_data dl{width:158px;margin:-13px 0 0 15px}
+.detail_section .auction_data dl dt{margin:27px 0 14px;padding-bottom:3px;border-bottom:1px solid #f0f0f0;color:#555;font-weight:bold}
+.detail_section .auction_data dl dd{margin-top:8px;padding-left:8px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -30px}
+.detail_section .auction_data dl dd a{color:#323232}
+.detail_section .auction_data dl dd .ico_area img{margin:-1px 0 0;vertical-align:middle}
+.detail_section .auction_data dl dd .ly_area{display:none;position:relative}
+.detail_section .auction_data dl dd .ly_on{display:block}
+.detail_section .auction_data dl dd .ly_area .ly{overflow:hidden;position:absolute;top:0;left:-138px;width:248px;height:138px;border:1px solid #777;background-color:#fff;text-align:center}
+.detail_section .auction_data dl dd .ly_area .ly p{margin:45px 0 13px;color:#333}
+.detail_section .auction_data dl dd .ly_area .ly .btn_view{display:inline-block;width:63px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -180px;text-decoration:none}
+.detail_section .auction_data dl dd .ly_area .ly .btn_view span{position:relative;z-index:-1}
+.detail_section .auction_data dl dd .ly_area .ly button{display:inline-block;overflow:hidden;position:absolute;top:6px;right:6px;width:19px;height:19px;border:0;background:url(../img/auction/btn_close2.gif) no-repeat 4px 4px;text-indent:-100px;cursor:pointer}
+.detail_section .select_auction{margin-top:10px;border:1px solid #b7b7b7;background-color:#ededed}
+.detail_section .select_auction .select{margin:1px;padding-bottom:8px;background-color:#fff}
+.detail_section .select_auction h4{padding:8px 0 8px 10px;background:url(../img/auction/bg_h_select.gif) repeat-x;color:#333;font-size:12px}
+.detail_section .select_auction p{margin:5px 0 0 11px;padding-bottom:5px;color:#636363;font-size:11px}
+.detail_section .select_auction p strong{color:#333}
+.detail_section .select_auction p .now{color:#0054a6}
+.detail_section .select_auction .scroll_area{padding-top:25px;background:url(../img/auction/bg_tbl_select.gif) no-repeat}
+.detail_section .select_auction .scroll{overflow:auto;width:181px;height:286px}
+.detail_section .select_auction .tbl_select{width:164px;border:0;table-layout:fixed;*border-collapse:collapse;border-spacing:0}
+.detail_section .select_auction .tbl_select thead,.detail_section .select_auction .tbl_select th{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.detail_section .select_auction .tbl_select td{padding:4px 0;border:0;border-bottom:1px solid #ededed;font-size:11px;line-height:12px;text-align:center}
+.detail_section .select_auction .tbl_select td input{width:13px;height:13px}
+.detail_section .select_auction .tbl_select .num,.detail_section .select_auction .tbl_select .type{text-align:left}
+.detail_section .select_auction .tbl_select .select td{background-color:#eff9fb}
+.detail_section .section_payment{position:relative;overflow:hidden;}
+.detail_section .section_payment .ly_payment{display:none;position:absolute;top:31px;left:0;z-index:10;width:770px;height:597px;}
+.detail_section .section_payment .ly_on{display:block;}
+.detail_section .section_payment .ly_payment .ly_bg{width:770px;height:597px;background:url(../img/auction/bg_mask.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/auction/bg_mask.png', sizingMethod='crop');}
+.detail_section .section_payment .ly_payment a{overflow:hidden;position:absolute;top:317px;left:342px;width:103px;height:39px;background:url(../img/auction/btn_payment.gif) no-repeat;}
+.detail_section .section_payment .ly_payment a span{line-height:100px;}
+.detail_section .section_payment .ly_payment .free_read{overflow:hidden;position:absolute;top:317px;left:342px;width:103px;height:39px;background:url(../img/auction/btn_access.gif) no-repeat;}
+.detail_section .section_payment .ly_payment .free_read2{overflow:hidden;position:absolute;top:317px;left:342px;width:103px;height:39px;background:url(../img/auction/btn_access_1.gif) no-repeat;}
+.detail_section .section_payment .ly_payment .login{overflow:hidden;position:absolute;top:317px;left:332px;width:123px;height:39px;background:url(../img/auction/btn_login.gif) no-repeat;}
+
+/* 물건조회 - 일정별조회 */
+.detail_section .section_schedule{border:1px solid #e3e3e3}
+.detail_section .section_schedule .search_area{position:relative;padding:10px 0 7px 20px;background-color:#fefefe}
+.detail_section .section_schedule .search_area strong{float:left;width:28px;margin-top:4px;background:url(../img/auction/p_search.gif) no-repeat}
+.detail_section .section_schedule .search_area strong span{position:relative;z-index:-1}
+.detail_section .section_schedule .search_area .txt_law{background-position:0 0}
+.detail_section .section_schedule .search_area .txt_calendar{background-position:0 -30px}
+.detail_section .section_schedule .search_area .txt_year{float:left;margin:4px 8px 0 0;color:#606060}
+.detail_section .section_schedule .search_area .txt_month{float:left;margin:4px 8px 0 0;color:#606060}
+.detail_section .section_schedule .search_area .btn_print{overflow:hidden;position:absolute;top:10px;right:11px;width:63px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -210px;text-decoration:none}
+.detail_section .section_schedule .search_area .btn_print span{line-height:100px}
+.detail_section .section_schedule .today_area p{padding:9px 0 8px 19px;border:1px solid #e3e3e3;border-width:1px 0 1px}
+.detail_section .section_schedule .today_area p strong{color:#426c96}
+.detail_section .section_schedule .today_area p .date{color:#333}
+.detail_section .section_schedule .today_area p .bar{color:#d7d7d7}
+.detail_section .section_schedule .today_area ul{overflow:hidden;width:652px;margin:6px 0 13px 20px}
+.detail_section .section_schedule .today_area ul li{float:left;width:163px;margin-top:7px}
+.detail_section .section_schedule .today_area ul li a{color:#333}
+.detail_section .section_schedule .today_area ul li img{margin:-1px 0 1px;vertical-align:middle}
+.detail_section .section_schedule .today_area ul .select{font-weight:bold}
+.detail_section .tbl_schedule{width:681px;margin:10px 0 0 -1px;border:0;border-bottom:1px solid #d0d2d6;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+.detail_section .tbl_schedule th,.detail_section .tbl_schedule td{border:0;background:none;text-align:left}
+.detail_section .tbl_schedule th{padding:7px 0;border-top:1px solid #d0d2d6;border-left:1px solid #ededef;background-color:#f9f9f9;color:#333;font-weight:bold;text-align:center}
+.detail_section .tbl_schedule td{padding:5px 0 17px;border:1px solid #ededef;vertical-align:top;border-width:1px 0 0 1px}
+.detail_section .tbl_schedule .date td{padding:7px 0;color:#426c96;font-weight:bold;text-align:center}
+.detail_section .tbl_schedule td ul{margin:0 0 0 11px}
+.detail_section .tbl_schedule td ul li{margin-top:4px}
+.detail_section .tbl_schedule td ul li a{color:#333}
+.detail_section .tbl_schedule td ul li .time{margin-top:4px;padding-left:11px;background:url(../img/auction/bu_time.gif) no-repeat 0 1px;color:#0072bc}
+.detail_section .tbl_schedule td ul li .time span{letter-spacing:-1px}
+.detail_section .tbl_schedule td .term_time .p_date{margin:18px 0 9px;padding:6px 0 5px 9px;background-color:#ededef;color:#333;font-weight:bold}
+.detail_section .h_schedule{color:#333;font-size:13px;font-size:13px}
+.detail_section .h_schedule em{color:#666;font-size:12px}
+.detail_section .tbl_schedule2{width:680px;margin:10px 0 0;border:1px solid #e3e3e3;table-layout:fixed;border-collapse:collapse;border-spacing:0;border-width:1px 1px 0 1px}
+.detail_section .tbl_schedule2 th,.detail_section .tbl_schedule2 td{border:0;border-bottom:1px solid #e3e3e3}
+.detail_section .tbl_schedule2 th{background-color:#f9f8f9}
+.detail_section .tbl_schedule2 th span{display:inline-block;margin-left:9px;background:url(../img/auction/p_schedule.gif) no-repeat}
+.detail_section .tbl_schedule2 th span em{position:relative;z-index:-1;font-size:10px;letter-spacing:-1px}
+.detail_section .tbl_schedule2 th .txt_num{width:53px;background-position:0 0}
+.detail_section .tbl_schedule2 th .txt_num2{width:64px;background-position:0 -30px}
+.detail_section .tbl_schedule2 td{padding:10px 0}
+.detail_section .tbl_schedule2 td a{display:inline-block;margin:0 21px 0 9px;color:#666}
+.detail_section .tbl_schedule2 td a.all{color:#333}
+.detail_section .tbl_schedule2 td a em{color:#929292;font-size:11px}
+.detail_section .tbl_schedule2 td .select{color:#333;font-weight:bold}
+.detail_section .tbl_schedule2 td .select em{font-weight:normal}
+.detail_section .tbl_schedule2 .tbl_type{border:0;border-spacing:0}
+.detail_section .tbl_schedule2 .tbl_type th,.detail_section .tbl_schedule2 .tbl_type td{border:0}
+.detail_section .tbl_schedule2 .tbl_type td{padding:3px 0}
+.detail_section .approval_info{position:relative;padding:14px 0 12px 19px;border:1px solid #e5e5e5;background-color:#fdfdfd}
+.detail_section .approval_info p{color:#898989;letter-spacing:-1px}
+.detail_section .approval_info a{position:absolute;top:7px;right:14px}
+.detail_section .lst_free{overflow:hidden;width:680px;margin-bottom:63px}
+.detail_section .lst_free ul{width:714px;margin-top:-1px}
+.detail_section .lst_free ul li{float:left;width:177px;margin-top:21px;background:url(../img/auction/ico_free.gif) no-repeat}
+.detail_section .lst_free .thmb img{border:1px solid #e6e6e6;}
+.detail_section .lst_free h3{margin-top:7px;font-size:12px}
+.detail_section .lst_free h3 a{color:#32546f}
+.detail_section .lst_free .info{margin-top:3px}
+.detail_section .lst_free .info li{float:none;margin:0;color:#777;line-height:17px}
+.detail_section .lst_free .info li em{color:#333}
+.detail_section .lst_free .info li.price{background-position:0 2px}
+.detail_section .lst_free .info li.price2{background-position:0 -28px}
+.detail_section .lst_free .info li span{overflow:hidden;visibility:hidden;display:inline-block;width:12px;height:14px;vertical-align:middle;}
+.detail_section .lst_free .info li.date{margin-top:6px;background:url(../img/auction/bg_bar3.gif) no-repeat 49px 5px;letter-spacing:-1px;}
+.detail_section .lst_free .info li.date em{margin-left:6px;letter-spacing:0;color:#777;}
+.detail_section .stats_search{overflow:hidden;width:100%;background:url(../img/auction/bg_stats_search.gif) repeat-x}
+.detail_section .stats_search .tab{float:left;width:680px}
+.detail_section .stats_search .tab li{float:left;width:110px;height:32px;margin-right:-1px;background:url(../img/auction/bg_tab_stats.gif) no-repeat;text-align:center}
+.detail_section .stats_search .tab li a{display:block;width:110px;height:22px;padding-top:10px;color:#575757;text-decoration:none}
+.detail_section .stats_search .tab li .sub{display:none;position:absolute;top:46px;left:16px;width:326px}
+.detail_section .stats_search .tab li .type2{left:-93px}
+.detail_section .stats_search .tab li .sub li{width:auto;margin-right:9px;padding-left:10px;background:url(../img/auction/bg_bar2.gif) no-repeat 0 1px}
+.detail_section .stats_search .tab li .sub li.frst{padding:0;background:none}
+.detail_section .stats_search .tab li .sub li a{display:inline;width:auto;height:auto;color:#929292;font-weight:normal}
+.detail_section .stats_search .tab li .sub li a:hover{text-decoration:underline}
+.detail_section .stats_search .tab li .sub li.on a{color:#32546f;font-weight:bold}
+.detail_section .stats_search .tab li.on .sub{display:block}
+.detail_section .stats_search .tab li.on{position:relative;background-position:0 -50px}
+.detail_section .stats_search .tab li.on a{color:#393939;font-weight:bold}
+.detail_section .stats_search .desc_stats{position:relative;top:-23px;margin:0 9px 0 0;color:#929292;text-align:right}
+.detail_section .stats_search .search_date{overflow:hidden;position:relative;width:678px;margin-top:-14px;padding:9px 0 8px;border:1px solid #bcbcbc;border-top:0}
+.detail_section .stats_search .search_date .search{float:right;padding-right:93px}
+.detail_section .stats_search .search_date span{float:left;margin-top:4px;color:#606060}
+.detail_section .stats_search .search_date .txt_year{margin-right:8px}
+.detail_section .stats_search .search_date .txt_month{margin-right:5px}
+.detail_section .stats_search .search_date .txt_day{margin-right:8px}
+.detail_section .stats_search .search_date .btn_print{display:block;overflow:hidden;position:absolute;top:10px;right:10px;width:73px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -240px}
+.detail_section .stats_search .search_date .btn_print span{float:none;margin:0;line-height:100px}
+.detail_section .section_data{margin-top:19px;border:1px solid #e3e3e3}
+.detail_section .section_data p{_width:668px;padding:9px 0 8px 10px;border-bottom:1px solid #e3e3e3;background-color:#f9f9f9;color:#333}
+.detail_section .section_data .area_list{overflow:hidden;width:679px;margin-left:-1px;background:url(../img/auction/bg_area_line.gif) repeat-x}
+.detail_section .section_data .area_list li{float:left;border-bottom:1px solid #e3e3e3;border-left:1px solid #e3e3e3;background-color:#fff}
+.detail_section .section_data .area_list li a{display:block;width:36px;padding:9px 0 5px 0;color:#333;text-align:center;}
+.detail_section .section_data .area_list li.all a{width:44px;}
+.detail_section .section_data .area_list li.on{border-bottom:0}
+.detail_section .section_data .area_list li.on a{padding:9px 0 6px 0;color:#0072bc;font-weight:bold}
+.detail_section .section_data .area_list li.off a{color:#929292}
+.detail_section .section_data .sub_list{padding-bottom:18px}
+.detail_section .section_data .sub_list ul{overflow:hidden;width:600px;margin:7px 0 0 10px}
+.detail_section .section_data .sub_list ul li{float:left;width:67px;margin-top:12px;padding-left:8px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -234px}
+.detail_section .data_type2 .area_list li a{width:auto;padding:9px 11px 5px 11px}
+.detail_section .data_type2 .area_list li.on a{padding:9px 11px 6px 11px}
+.detail_section .data_type2 .sub_list ul{width:620px}
+.detail_section .data_type2 .sub_list ul li{width:147px}
+.detail_section .data_type3 .area_list li a{width:auto;padding:9px 9px 5px 10px}
+.detail_section .data_type3 .area_list li.on a{padding:9px 9px 6px 10px}
+.detail_section .data_type3 .sub_list ul{width:620px}
+.detail_section .data_type3 .sub_list ul li{width:147px}
+.detail_section .section_data .sub_list ul li a{color:#929292}
+.detail_section .section_data .sub_list ul li.select a{color:#333;font-weight:bold}
+.detail_section .section_data .sub_list .desc_law{padding:22px 0 5px;border:0;background:none;color:#777;line-height:16px;text-align:center}
+.detail_section .h_area{margin:20px 0 0 10px;color:#333;font-size:12px}
+.detail_section .h_area em{font-weight:normal}
+.detail_section .data_chart{overflow:hidden;width:678px;border:1px solid #e3e3e3}
+.detail_section .data_chart .type{float:left;position:relative;width:340px;height:199px;padding-top:20px;border-top:1px solid #e3e3e3;border-right:1px solid #e3e3e3}
+.detail_section .data_chart .type2{float:left;position:relative;width:337px;height:199px;padding-top:20px;border-top:1px solid #e3e3e3}
+.detail_section .data_chart .chart{position:absolute;top:38px;right:24px}
+.detail_section .data_chart .data{width:117px;margin-left:26px;padding-top:24px;background:url(../img/auction/bg_stats.gif) no-repeat}
+.detail_section .data_chart .type2 .data{padding-top:38px;background-position:-120px 0}
+.detail_section .tbl_chart{width:100%;*margin-top:-3px;border:0;table-layout:fixed;border-spacing:0}
+.detail_section .tbl_chart thead{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.detail_section .tbl_chart th,.detail_section .tbl_chart td{padding:3px 0 1px;border:0;border-top:1px solid #f6f6f6;color:#333;}
+.detail_section .tbl_chart .frst th,.detail_section .tbl_chart .frst td{border-top:0}
+.detail_section .tbl_chart th{padding-left:20px;font-weight:normal}
+.detail_section .tbl_chart td{padding-right:14px;text-align:right}
+.detail_section .tbl_chart tfoot th,.detail_section .tbl_chart tfoot td{border-top:1px solid #cecece;font-weight:bold;}
+.detail_section .tbl_chart tfoot th{padding-left:6px;}
+.detail_section .data_chart .ico{background:url(../img/auction/bu_stats.gif) no-repeat}
+.detail_section .data_chart .chart1{background-position:8px 5px}
+.detail_section .data_chart .chart2{background-position:8px -25px}
+.detail_section .data_chart .chart3{background-position:8px -55px}
+.detail_section .data_chart .chart4{background-position:8px -85px}
+.detail_section .data_chart .chart5{background-position:8px -115px}
+.detail_section .data_chart .chart6{background-position:8px -145px}
+.detail_section .data_chart .chart7{background-position:8px -175px}
+.detail_section .data_chart p{padding:0 0 0 16px}
+.detail_section .data_chart p em{display:inline-block;width:45px;text-align:right}
+.detail_section .data_chart p.chart1{background-position:4px -27px}
+.detail_section .tbl_data{width:681px;margin:30px 0 0 -1px;border:0;border-top:1px solid #d0d2d6;border-bottom:1px solid #d0d2d6;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+.detail_section .tbl_data th,.detail_section .tbl_data td{border:1px solid #ededef;border-width:0 0 1px 1px}
+.detail_section .tbl_data th{padding:8px 0 6px;background-color:#f9f9f9;color:#555;font-weight:normal;text-align:center}
+.detail_section .tbl_data .sub th{font-size:11px}
+.detail_section .tbl_data td{padding:6px 3px 8px 0;color:#555;text-align:right}
+.detail_section .tbl_data td.type{padding-left:9px;text-align:left}
+.detail_section .tbl_data td.total{text-align:center}
+.detail_section .tbl_data .no_data td{color:#b7b7b7}
+.detail_section .tbl_data .last td{border-bottom:0}
+.detail_section .tbl_data tfoot td{border-top:1px solid #d0d2d6;border-bottom:1px solid #d0d2d6}
+.detail_section .type_list{margin-top:10px;border:1px solid #e3e3e3}
+.detail_section .type_list ul{overflow:hidden;width:650px;padding:9px 0 18px 20px}
+.detail_section .type_list ul li{float:left;width:122px;margin-top:10px;padding-left:8px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -234px}
+.detail_section .type_list ul li a{color:#929292}
+.detail_section .type_list ul li.select a{color:#32546f;font-weight:bold}
+.detail_section .h_law_view{margin:29px 0 0 10px;color:#333;font-size:12px}
+.detail_section .data_chart{margin-top:8px;border:1px solid #e3e3e3;border-top:0}
+.detail_section .data_chart .data_area{position:relative;height:219px;border-top:1px solid #e3e3e3}
+.detail_section .data_chart h4{height:24px;margin:10px 0 0 10px;background:url(../img/auction/p_rate.gif) no-repeat}
+.detail_section .data_chart h4 span{position:relative;z-index:-1;font-size:12px}
+.detail_section .data_chart .h_data{background-position:0 0}
+.detail_section .data_chart .h_data2{background-position:0 -30px}
+.detail_section .data_chart .data_area .chart{top:53px;right:73px}
+.real_section .btn_time{margin:-26px 0 10px;text-align:right}
+.real_section .btn_time a{display:inline-block;width:84px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -270px;text-decoration:none}
+.real_section .btn_time a span{position:relative;z-index:-1;letter-spacing:-1px}
+.real_section .law_section .law_list{float:left;width:134px}
+.real_section .law_section .law_list dl{width:115px}
+.real_section .law_section .law_list dl dt{margin-top:33px;color:#333;line-height:18px}
+.real_section .law_section .law_list dl dt.today{margin-top:23px;padding-bottom:8px;border-bottom:1px solid #d4d4d4;line-height:15px}
+.real_section .law_section .law_list dl dd{position:relative;margin-top:10px}
+.real_section .law_section .law_list dl dd a{color:#333}
+/*범태 10.07.15 이미지 좌측으로 7px이동*/
+.real_section .law_section .law_list dl dd img{position:absolute;top:-1px;right:13px}
+/*.real_section .law_section .law_list dl dd img{position:absolute;top:-1px;right:6px}*/
+.real_section .law_section .law_list dl dd p{margin-top:4px;padding-left:13px;background:url(../img/auction/sprite_bu.gif) no-repeat 6px -278px;color:#0090eb}
+.real_section .law_section .law_detail{float:left;width:530px;margin-top:30px;padding-left:15px;border-left:1px solid #f3f3f3}
+/*범태 10.07.15 입찰장소등 아래로 3px이동*/
+.real_section .law_section .law_info{padding:15px 10px 11px;border:1px solid #d7d7d7}
+/*.real_section .law_section .law_info{padding:15px 10px 14px;border:1px solid #d7d7d7}*/
+.real_section .law_section .law_info h3{padding:0 0 8px 9px;border-bottom:1px solid #ebebeb;color:#333;font-size:16px;letter-spacing:-1px}
+/*범태 10.07.15 입찰장소등 아래로 3px이동*/
+.real_section .law_section .law_info dl{overflow:hidden;width:508px;margin:0 0 0 9px;color:#333;padding:3px 0 0 0;}
+/*.real_section .law_section .law_info dl{overflow:hidden;width:508px;margin:0 0 0 9px;color:#333}*/
+.real_section .law_section .law_info dl dt{float:left;width:63px;margin-top:8px}
+.real_section .law_section .law_info dl dd{float:left;width:208px;margin-top:8px}
+.real_section .law_section .law_info dl dd.type{width:170px}
+.real_section .law_section h4{margin-top:25px;background:url(../img/auction/h_realtime.gif) no-repeat;font-size:12px}
+.real_section .law_section h4 span{position:relative;z-index:-1}
+.real_section .law_section .h_now{background-position:0 0}
+/*.real_section .law_section .h_sale{background-position:0 -30px}  지혜 작업  2010_07_06*/
+.real_section .law_section .h_sale{background-position:0 -30px;text-align:right;}
+.real_section .law_section .real_section{line-height:14px}
+.real_section .law_section .real_section .report{margin:-13px 0 7px 89px;color:#f26522}
+.real_section .law_section .result_area{border:1px solid #dbd3ca;background-color:#fffdf8}
+.real_section .law_section .result_area p{margin:34px 0 30px;color:#323232;text-align:center}
+.real_section .tbl_area{overflow:hidden;width:530px}
+.real_section .tbl_sale{width:531px;margin:9px 0 0 -1px;border:0;border-top:1px solid #d0d2d6;border-bottom:1px solid #d0d2d6;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+.real_section .tbl_sale th,.real_section .tbl_sale td{border:1px solid #ededef;border-width:0 0 1px 1px}
+.real_section .tbl_sale th{padding:9px 0 6px;background-color:#f9f9f9;color:#555;font-weight:normal;letter-spacing:-1px;text-align:center}
+.real_section .tbl_sale td{padding:5px 7px 4px;color:#323232;line-height:18px}
+.real_section .tbl_sale td.type,.real_section .tbl_sale td.success{padding:5px 0 4px;text-align:center}
+.real_section .tbl_sale .success td{background-color:#eff9fb}
+.real_section .tbl_sale .success .success,.real_section .tbl_sale .success .result{color:#f26522}
+.report_section .btn_print{margin:-27px 0 -4px;text-align:right}
+.report_section .btn_print a{display:inline-block;width:54px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -90px;text-decoration:none}
+.report_section .btn_print a span{position:relative;z-index:-1}
+.report_section h3{margin-top:50px;color:#333;font-size:12px}
+.report_section .tbl_report{width:681px;margin:9px 0 0 -1px;border:0;border-top:1px solid #d0d2d6;table-layout:fixed;border-spacing:0}
+.report_section .tbl_report th,.report_section .tbl_report td{border:1px solid #ededef;text-align:center;border-width:0 0 1px 1px}
+.report_section .tbl_report th{padding:8px 0 5px;background-color:#f9f9f9;color:#555;font-weight:normal}
+.report_section .tbl_report td{padding:5px 0 4px;border-left:0;color:#323232;line-height:18px}
+.report_section .tbl_report td a{color:#323232;}
+.report_section .desc_info{position:relative;margin-top:20px;border:1px solid #e2e2e2}
+.report_section .desc_info p{margin:17px 0 14px 19px;color:#707070;line-height:17px}
+.report_section .desc_info .logo{position:absolute;top:17px;right:20px;padding:5px 0 5px 20px;border-left:1px solid #f5f5f5}
+.report_section .desc_info .logo img{vertical-align:top}
+
+/* 경매홈 */
+.spot_home{width:634px;height:222px;padding:20px 23px 0;background:url(../img/auction/bg_home_spot.gif) no-repeat}
+.spot_home h2{background:url(../img/auction/h_home.gif) no-repeat;font-size:12px}
+.spot_home h2 span{position:relative;z-index:-1}
+.spot_home .h_type{background-position:0 0}
+.spot_home .h_area{background-position:0 -30px}
+.spot_home .btn_search{overflow:hidden;position:absolute;top:204px;left:304px;width:71px;height:26px;margin:0 auto;background:url(../img/auction/btn_spot_search.gif) no-repeat}
+.spot_home .btn_search span{line-height:100px}
+.spot_home .btn_search2{display:inline-block;position:absolute;top:3px;right:0;padding-right:7px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -308px;color:#777;font-size:11px;letter-spacing:-2px}
+.spot_home .auction_type{overflow:hidden;float:left;position:relative;width:299px;background:url(../img/auction/bg_spot_type.gif) no-repeat 0 19px}
+.spot_home .auction_type ul{width:311px}
+.spot_home .auction_type ul li{float:left;width:103px;margin-top:23px}
+.spot_home .auction_type ul li.frst{width:105px}
+.spot_home .auction_type ul li .input_chk{float:left;width:13px;height:13px;margin-right:4px}
+.spot_home .auction_type ul li label{float:left;width:64px;height:16px;background:url(../img/auction/bg_type_list.gif) no-repeat;cursor:pointer}
+.spot_home .auction_type ul li label span{position:relative;z-index:-1}
+.spot_home .auction_type ul li .type1{background-position:0 -1px}
+.spot_home .auction_type ul li .type2{background-position:-105px -1px}
+.spot_home .auction_type ul li .type3{background-position:-208px -1px}
+.spot_home .auction_type ul li .type4{background-position:0 -40px}
+.spot_home .auction_type ul li .type5{background-position:-105px -40px}
+.spot_home .auction_type ul li .type6{background-position:-208px -40px}
+.spot_home .auction_type ul li .type7{background-position:0 -79px}
+.spot_home .auction_type ul li .type8{background-position:-105px -79px}
+.spot_home .auction_type ul li .type9{background-position:-208px -79px}
+.spot_home .auction_type ul li .type10{background-position:0 -118px}
+.spot_home .auction_type ul li .type11{background-position:-105px -118px}
+.spot_home .auction_type ul li .type12{background-position:-208px -118px}
+.spot_home .auction_type ul li.on .type1{background-position:0 -151px}
+.spot_home .auction_type ul li.on .type2{background-position:-105px -151px}
+.spot_home .auction_type ul li.on .type3{background-position:-208px -151px}
+.spot_home .auction_type ul li.on .type4{background-position:0 -190px}
+.spot_home .auction_type ul li.on .type5{background-position:-105px -190px}
+.spot_home .auction_type ul li.on .type6{background-position:-208px -190px}
+.spot_home .auction_type ul li.on .type7{background-position:0 -229px}
+.spot_home .auction_type ul li.on .type8{background-position:-105px -229px}
+.spot_home .auction_type ul li.on .type9{background-position:-208px -229px}
+.spot_home .auction_type ul li.on .type10{background-position:0 -268px}
+.spot_home .auction_type ul li.on .type11{background-position:-105px -268px}
+.spot_home .auction_type ul li.on .type12{background-position:-208px -268px}
+.spot_home .auction_area{float:right;position:relative;width:314px;margin:0}
+.spot_home .auction_area .map_area{width:314px;height:157px;margin-top:7px;background:url(../img/auction/bg_spot_area.gif) no-repeat}
+.spot_home .auction_area .map{float:left;width:171px;_width:170px;padding:1px 0 0 1px}
+.spot_home .auction_area .area{float:left;width:142px}
+.spot_home .auction_area .area a{display:block;overflow:hidden;float:left;width:48px;height:26px;margin-right:-1px;text-indent:-100px}
+.spot_home .auction_area .area .on{background:url(../img/auction/bg_area_list.gif) no-repeat}
+.spot_home .auction_area .area .area1{background-position:0 0}
+.spot_home .auction_area .area .area2{background-position:-51px 0}
+.spot_home .auction_area .area .area3{background-position:-102px 0}
+.spot_home .auction_area .area .area4{background-position:0 -27px}
+.spot_home .auction_area .area .area5{background-position:-51px -27px}
+.spot_home .auction_area .area .area6{background-position:-102px -27px}
+.spot_home .auction_area .area .area7{background-position:0 -57px}
+.spot_home .auction_area .area .area8{background-position:-51px -57px}
+.spot_home .auction_area .area .area9{background-position:-102px -57px}
+.spot_home .auction_area .area .area10{background-position:0 -81px}
+.spot_home .auction_area .area .area11{background-position:-51px -81px}
+.spot_home .auction_area .area .area12{background-position:-102px -81px}
+.spot_home .auction_area .area .area13{background-position:0 -108px}
+.spot_home .auction_area .area .area14{background-position:-51px -108px}
+.spot_home .auction_area .area .area15{background-position:-102px -108px}
+.spot_home .auction_area .area .area16{background-position:0 -135px}
+.spot_home .auction_area .area .area17{background-position:-51px -135px}
+.auction_list{overflow:hidden;width:100%;margin-top:28px;padding-bottom:30px;border-bottom:2px solid #dcdcdc;line-height:14px}
+.auction_list .btn_more{display:inline-block;position:absolute;top:15px;right:0;padding-right:7px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -366px;color:#9b9b9b;font-size:11px;letter-spacing:-2px}
+.auction_list .auction_newbie{float:left;width:315px}
+.auction_list h3,.auction_list h4{background:url(../img/auction/h_home.gif) no-repeat;font-size:12px;letter-spacing:-1px}
+.auction_list h3 span,.auction_list h4 span{position:relative;z-index:-1}
+.auction_list h3{padding-bottom:4px;border-bottom:1px solid #bababa}
+.auction_list h3 span em{font-size:11px}
+.auction_list h4{margin-top:15px}
+.auction_list .h_newbie{background-position:0 -60px}
+.auction_list .h_video{background-position:0 -90px}
+.auction_list .h_sham{background-position:0 -120px}
+.auction_list .h_member{background-position:0 -150px}
+.auction_list .h_free{background-position:0 -180px}
+.auction_list .h_stats{background-position:0 -210px}
+.auction_list .video_area{overflow:hidden;position:relative;width:100%}
+.auction_list .video_area .thmb{float:left;position:relative;width:128px;margin-top:8px}
+.auction_list .video_area .thmb img{vertical-align:top}
+.auction_list .video_area .thmb .thmb_border{position:absolute;top:0;left:0;width:111px;height:81px;border:1px solid #000;opacity:0.2;filter:alpha(opacity=20);cursor:hand;cursor:pointer}
+.auction_list .video_area .thmb h5{margin-top:5px;font-size:12px}
+.auction_list .video_area .thmb h5 a{color:#333}
+.auction_list .video_area .thmb p{margin-top:2px;color:#333}
+.auction_list .video_area .video_list{float:left;width:187px}
+.auction_list .video_area .video_list li{margin-top:7px;padding-left:6px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -335px}
+.auction_list .video_area .video_list li a{color:#333}
+.auction_list .sham_area{overflow:hidden;position:relative;width:100%;margin-top:32px}
+.auction_list .sham_area .sham{overflow:hidden;width:300px;height:160px;margin-top:8px;padding-left:15px;background:url(../img/auction/bg_sham.gif) no-repeat}
+.auction_list .sham_area .p_sham{margin-top:12px;background:url(../img/auction/p_sham.gif) no-repeat}
+.auction_list .sham_area .p_sham span{position:relative;z-index:-1;font-size:11px;letter-spacing:-1px}
+.auction_list .sham_area .sham_info{overflow:hidden;width:288px;margin-top:8px}
+.auction_list .sham_area .sham_info .thmb{float:left;position:relative;width:123px}
+.auction_list .sham_area .sham_info .thmb img{vertical-align:top}
+.auction_list .sham_area .sham_info .thmb .thmb_border{position:absolute;top:0;left:0;width:108px;height:74px;border:1px solid #000;opacity:0.2;filter:alpha(opacity=20);cursor:hand;cursor:pointer}
+.auction_list .sham_area .sham_info dl{float:left;width:165px;margin-top:-4px}
+.auction_list .sham_area .sham_info dl dt{float:left;width:59px;margin-top:7px;color:#777}
+.auction_list .sham_area .sham_info dl dd{float:left;width:106px;margin-top:7px;color:#333}
+.auction_list .sham_area .bid_area{position:relative;margin-top:23px}
+.auction_list .sham_area .bid_area p span{display:inline-block;overflow:hidden;height:14px;background:url(../img/auction/p_home.gif) no-repeat;line-height:100px;vertical-align:middle}
+.auction_list .sham_area .bid_area p .p_lowest{width:67px;background-position:0 1px}
+.auction_list .sham_area .bid_area p .p_won{width:10px;background-position:0 -29px}
+.auction_list .sham_area .bid_area p em{display:inline-block;color:#ff6000;font-family:tahoma;font-weight:bold}
+.auction_list .sham_area .bid_area .btn_bid{overflow:hidden;position:absolute;top:-6px;right:11px;width:80px;height:27px;background:url(../img/auction/btn_bid.gif) no-repeat;text-decoration:none}
+.auction_list .sham_area .bid_area .btn_bid span{line-height:100px}
+.auction_list .auction_member{float:right;width:319px}
+.auction_list .auction_free{overflow:hidden;position:relative;width:100%}
+.auction_list .free_list{overflow:hidden;position:relative;width:100%;margin-top:8px}
+.auction_list .free_list ul{margin-left:30px}
+.auction_list .free_list ul li{float:left;width:120px;margin-right:18px}
+.auction_list .free_list ul li dl{position:relative}
+.auction_list .free_list ul li dl dt{text-align:center}
+.auction_list .free_list ul li dl dt a{display:block;position:absolute;top:66px;left:0;z-index:2;width:100%;height:16px;_height:22px;padding-top:6px;color:#fff;font-weight:bold}
+.auction_list .free_list .bg_txt{display:block;position:absolute;top:66px;left:0;z-index:1;width:100%;height:22px;background-color:#000;opacity:0.5;filter:alpha(opacity=50)}
+.auction_list .free_list ul li dl dd{margin-top:5px}
+.auction_list .free_list ul li dl dd.img{margin:0}
+.auction_list .free_list ul li dl dd p{margin-top:2px;padding-top:1px;background:url(../img/auction/ico_free.gif) no-repeat;color:#464646}
+.auction_list .free_list ul li dl dd .price{background-position:4px 0}
+.auction_list .free_list ul li dl dd .price2{background-position:4px -30px}
+.auction_list .free_list ul li dl dd p span{display:inline-block;visibility:hidden;overflow:hidden;width:14px;height:14px;vertical-align:middle}
+.auction_list .free_list ul li dl dd p em{display:inline-block;width:103px;text-align:right}
+.auction_list .free_list .btn{overflow:hidden;position:absolute;top:29px;width:16px;height:32px;background:url(../img/auction/btn_free.gif) no-repeat}
+.auction_list .free_list .btn span{line-height:100px}
+.auction_list .free_list .prev_off{left:0;background-position:0 0}
+.auction_list .free_list .prev{left:0;background-position:0 -50px}
+.auction_list .free_list .prev:hover{background-position:0 -100px}
+.auction_list .free_list .next_off{right:0;background-position:-30px 0}
+.auction_list .free_list .next{right:0;background-position:-30px -50px}
+.auction_list .free_list .next:hover{background-position:-30px -100px}
+.auction_list .auction_stats{overflow:hidden;position:relative;width:100%;margin-top:23px}
+.auction_list .auction_stats .date{margin:-14px 0 8px 43px;color:#777}
+.auction_list .auction_stats .tab_stats{height:26px;background:url(../img/auction/tab_home.gif) no-repeat}
+.auction_list .auction_stats .stats1{background-position:0 0}
+.auction_list .auction_stats .stats2{background-position:0 -30px}
+.auction_list .auction_stats .tab_stats li{float:left}
+.auction_list .auction_stats .tab_stats li a{display:inline-block;width:159px;height:26px;text-decoration:none}
+.auction_list .auction_stats .tab_stats li a span{position:relative;z-index:-1}
+.auction_list .auction_stats .stats_info{overflow:hidden;position:relative;width:100%}
+.auction_list .auction_stats .stats_info ul{overflow:hidden;width:212px;margin-top:19px}
+.auction_list .auction_stats .stats_info ul li{float:left;width:84px;margin:0 11px 0 0;padding:3px 0 2px 11px;border-bottom:1px solid #f6f6f6;background:url(../img/auction/bu_stats.gif) no-repeat;color:#333}
+.auction_list .auction_stats .stats_info ul .stat1{background-position:0 6px}
+.auction_list .auction_stats .stats_info ul .stat2{background-position:0 -114px}
+.auction_list .auction_stats .stats_info ul .stat3{background-position:0 -24px}
+.auction_list .auction_stats .stats_info ul .stat4{background-position:0 -144px}
+.auction_list .auction_stats .stats_info ul .stat5{background-position:0 -54px}
+.auction_list .auction_stats .stats_info ul .stat6{background-position:0 -174px}
+.auction_list .auction_stats .stats_info ul .stat7{border-bottom:0;background-position:0 -84px}
+.auction_list .auction_stats .stats_info ul li em{display:inline-block;width:54px;color:#777;text-align:right}
+.auction_list .auction_stats .stats_info .total{width:202px;height:25px;margin-top:11px;background:url(../img/auction/bg_stats_total.gif) no-repeat;color:#333}
+.auction_list .auction_stats .stats_info .total strong{display:inline-block;margin:6px 0 0 8px}
+.auction_list .auction_stats .stats_info .total span{display:inline-block;width:83px;text-align:right}
+.auction_list .auction_stats .stats_info .total span em{font-weight:bold}
+.auction_list .auction_stats .stats_info .graph{position:absolute;top:21px;right:0}
+.auction_info{overflow:hidden;width:100%;margin-top:30px;line-height:14px}
+.auction_info .btn_more{display:inline-block;position:absolute;top:6px;right:0;padding-right:7px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -366px;color:#9b9b9b;font-size:11px;letter-spacing:-2px}
+.auction_info .auction_news .btn_more{top:1px}
+.auction_info .auction_question{float:left;position:relative;width:314px}
+.auction_info .tab_question{height:26px;background:url(../img/auction/tab_home.gif) no-repeat}
+.auction_info .question1{background-position:0 -60px}
+.auction_info .question2{background-position:0 -90px}
+.auction_info .question3{background-position:0 -120px}
+.auction_info .tab_question li{float:left}
+.auction_info .tab_question li a{display:inline-block;height:26px;text-decoration:none}
+.auction_info .tab_question .tab1 a{width:94px}
+.auction_info .tab_question .tab2 a{width:84px}
+.auction_info .tab_question .tab3 a{width:69px}
+.auction_info .tab_question li a span{position:relative;z-index:-1}
+.auction_info .quesition_list{display:none;overflow:hidden;width:100%}
+.auction_info .list_on{display:block}
+.auction_info .quesition_list ul{margin-top:14px}
+.auction_info .quesition_list ul.type2{margin-top:8px;padding-top:4px;background:url(../img/auction/line_dot.gif) repeat-x}
+.auction_info .quesition_list ul li{margin-top:6px;padding:1px 0 0 19px;background:url(/img/auction/ico_question.gif) no-repeat 0 0;}
+.auction_info .quesition_list ul li a{color:#333}
+.auction_info .quesition_list ul.type3{margin-top:15px}
+.auction_info .quesition_list ul.type3 li{margin-top:7px;padding:0;background:none}
+.auction_info .quesition_list ul.type3 li .cate{color:#426c96}
+.auction_info .auction_news{float:right;position:relative;width:317px;margin-top:5px}
+.auction_info .auction_news h3{height:15px;background:url(../img/auction/h_home.gif) no-repeat 0 -240px;font-size:12px;letter-spacing:-1px}
+.auction_info .auction_news h3 span{position:relative;z-index:-1}
+.auction_info .auction_news .headline{margin-top:16px}
+.auction_info .auction_news .headline h4{font-size:14px}
+.auction_info .auction_news .headline h4 a{color:#333}
+.auction_info .auction_news .headline p{margin-top:7px;color:#333;line-height:16px}
+.auction_info .auction_news ul{margin-top:11px}
+.auction_info .auction_news ul li{margin-top:7px;padding-left:6px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -335px}
+.auction_info .auction_news ul li a{color:#333}
+
+/* 법원공지안내 */
+.section_law .tbl_law{width:680px;margin-top:9px;table-layout:fixed;border-collapse:collapse}
+/*.section_law .tbl_law th{padding:9px 0 8px;background:url(../img/auction/bg_consult_th.gif) no-repeat;color:#555;font-weight:normal;line-height:14px;text-align:center}   김쥐작업 2010_07_07*/
+.section_law .tbl_law th{background-color:#f9f9f9;border:1px solid #d5d5d5;border-left:none;border-right:none;text-align:center;padding:9px 0 6px 0;color:#555;font-weight:normal;margin-bottom:15px;}
+.section_law .tbl_law th.first{background-position:-1px 0}
+.section_law .tbl_law td{padding:3px 0 3px 0;border-bottom:1px solid #f3f3f3;color:#848484;font-size:11px;line-height:18px;text-align:center}
+.section_law .tbl_law td.title{font-family:gulim, '굴림';font-size:13px;text-align:left;white-space:normal;word-wrap:break-word}
+.section_law .tbl_law td.title a{color:#333;white-space:normal;word-wrap:break-word}
+/*.section_law .tbl_law td.num{color:#777;font-family:tahoma;font-size:11px;}  김쥐작업 2010_07_07*/
+.section_law .tbl_law td.num{color:#777;font-family:tahoma;font-size:11px;border-bottom:1px dotted #dcdee2;}
+.section_law .paginate{margin:47px 0 50px}
+.section_law .btn_area{position:relative;margin:-18px 0 7px;text-align:right}
+.section_law .btn_area .btn_list{display:inline-block;width:54px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -360px;text-decoration:none;vertical-align:top;}
+.section_law .btn_area .btn_list span{position:relative;z-index:-1}
+.section_law .law_view{line-height:14px}
+/*지혜작업 2010_07_08 .section_law .law_header h3{padding:12px 0 11px;background:url(/img/auction/bg_law_view.gif) repeat-x;font-size:14px;letter-spacing:-1px;line-height:18px;text-align:center;*background:url(/img/auction/bg_law_view.gif) repeat-x;}*/
+.section_law .law_header h3{padding:12px 0 11px;font-size:14px;letter-spacing:-1px;line-height:18px;text-align:center;}
+.section_law .law_header .date{padding:7px 6px 11px 0;border-bottom:1px solid #ededef;color:#888;font-size:11px;letter-spacing:-1px;text-align:right}
+.section_law .law_header .date em{font-family:tahoma;letter-spacing:0}
+.section_law .law_body{padding:15px 15px 35px 15px;border-bottom:1px solid #d4d4d4;color:#333;font-family:gulim, '굴림';font-size:13px;line-height:22px}
+.section_law .law_view .btn_area{margin-top:7px}
+
+/* 유료정보 이용안내 */
+.section_pay{line-height:14px}
+.section_pay h3{margin:23px 0 0 5px;color:#333;font-size:12px}
+.section_pay .bx_pay{margin:5px 0 29px;border:1px solid #e5e5e5;background-color:#fefefe;color:#333}
+.section_pay .bx_pay p{margin:17px 10px 19px 19px;line-height:18px}
+.section_pay .btn_area{margin:-19px 0 0;text-align:right}
+.section_pay .btn_area .btn_sample{display:inline-block;width:72px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -390px;text-decoration:none}
+.section_pay .btn_area .btn_sample span{position:relative;z-index:-1}
+.section_pay .pay_list{margin:19px 0 19px 20px}
+.section_pay .pay_list li{margin-top:8px;padding-left:9px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -426px;color:#333}
+.section_pay .tab_pay{overflow:hidden;width:100%;height:33px;margin-top:8px;background:url(../img/auction/tab_pay.gif) no-repeat}
+.section_pay .pay1{background-position:0 0}
+.section_pay .pay2{background-position:0 -50px}
+.section_pay .tab_pay li{float:left;width:116px}
+.section_pay .tab_pay li a{display:block;height:33px;text-decoration:none}
+.section_pay .tab_pay li a span{position:relative;z-index:-1}
+.section_pay .pay_info_on{display:block}
+.section_pay .pay_info_off{display:none}
+.section_pay .desc_pay{margin:-23px 0 29px;color:#999;font-size:11px;letter-spacing:-1px;text-align:right}
+.section_pay .desc_pay span{padding-left:14px;background:url(../img/auction/bu_btn.gif) no-repeat 0 0}
+.section_pay .pay_type{margin-top:20px}
+.section_pay .pay_type .tbl_pay{width:681px;margin:0 0 0 -1px;border:0;border-top:1px solid #d0d2d6;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+.section_pay .pay_type .tbl_pay th,.section_pay .pay_type .tbl_pay td{border:1px solid #ededef;color:#333;border-width:0 0 1px 1px}
+.section_pay .pay_type .tbl_pay th{padding:8px 0 5px;background-color:#f9f9f9;font-weight:normal;text-align:center}
+.section_pay .pay_type .tbl_pay td{padding:6px 0 7px 9px}
+/*.section_pay .pay_type .tbl_pay td.input{padding:5px 0 8px 10px}*/
+.section_pay .pay_type .tbl_pay td.input{padding:5px 0 8px 5px}		/* 수정 Hans*/
+.section_pay .pay_type .tbl_pay td.input .input_chk{width:13px;height:13px;margin-right:8px;vertical-align:middle}
+.section_pay .pay_type .tbl_pay td.input label{cursor:pointer}
+.section_pay .pay_type .tbl_pay td .btn{padding-right:16px;background:url(../img/auction/bu_btn.gif) no-repeat}
+.section_pay .pay_type .tbl_pay td .plus{background-position:100% 1px;color:#333}
+.section_pay .pay_type .tbl_pay td .minus{background-position:100% -29px;color:#426c96}
+.section_pay .pay_type .tbl_pay td ul{width:270px;margin:5px 0 3px 1px;padding:1px 0 6px;border-top:1px solid #ededef;background-color:#f8f8f8}
+.section_pay .pay_type .tbl_pay td .list_on{display:block}
+.section_pay .pay_type .tbl_pay td .list_off{display:none}
+.section_pay .pay_type .tbl_pay td ul li{margin:4px 0 0 9px;color:#555}
+.section_pay .pay_type .tbl_center td{padding-left:0;text-align:center}
+.section_pay .payment{margin-top:29px}
+.section_pay .payment .tbl_pay{width:681px;margin-left:-1px;border:0;border-top:1px solid #d0d2d6;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+.section_pay .payment .tbl_pay th,.section_pay .payment .tbl_pay td{border:1px solid #ededef;color:#555;border-width:0 0 1px 1px}
+/*.section_pay .payment .tbl_pay th{padding:8px 0 5px 17px;background-color:#f9f9f9;font-weight:normal}  김쥐수정 2010_07_08*/
+.section_pay .payment .tbl_pay th{padding:8px 0 5px 17px;background-color:#f9f9f9;font-weight:normal;text-align:left;}
+.section_pay .payment .tbl_pay td{padding:8px 0 5px 10px}
+.section_pay .payment .tbl_pay td .input_rdo{width:13px;height:13px;margin:-1px 3px 1px 0;vertical-align:middle}
+.section_pay .payment .tbl_pay td label{margin-right:10px;cursor:pointer}
+.section_pay .btn_area2{margin-top:20px;text-align:center}
+/*.section_pay .btn_area2 .btn_pay{display:inline-block;width:69px;height:21px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -420px;text-decoration:none}  배경삭제 김쥐작업 2010_07_08*/
+.section_pay .btn_area2 .btn_pay{display:inline-block;width:69px;height:21px;text-decoration:none}
+.section_pay .btn_area2 .btn_pay span{position:relative;z-index:-1}
+.section_pay .bx_agree{height:230px;margin-top:6px;border:1px solid #e5e5e5;line-height:18px;overflow-y:scroll}
+.section_pay .bx_agree .scroll{padding:17px 19px}
+.section_pay .bx_agree2{height:181px;margin-top:6px;border:1px solid #e5e5e5;line-height:18px;overflow-y:scroll}
+.section_pay .bx_agree2 .scroll{padding:17px 19px;}
+.section_pay .desc_agree{margin:8px 0 38px;}
+.section_pay .desc_agree .input_chk{width:13px;height:13px;margin:-1px 7px 1px 0;vertical-align:middle;}
+.section_pay .desc_agree label{cursor:pointer;}
+.section_pay .btn_agree{margin-top:-7px;text-align:center;}
+/*.section_pay .btn_agree a{display:inline-block;width:45px;height:21px;background:url(../img/auction/btn_menu.gif) no-repeat;text-decoration:none;}  배경삭제 김쥐작업 2010_07_08*/
+.section_pay .btn_agree a{display:inline-block;width:57px;height:21px;text-decoration:none;}
+/*.section_pay .btn_agree a.agreebtn추가   김쥐작업 2010_07_08*/
+.section_pay .btn_agree a.agreebtn{width:60px;height:29px;text-decoration:none;}
+.section_pay .btn_agree a span{position:relative;z-index:-1;}
+.section_pay .btn_agree .btn_confirm{background-position:0 -540px;}
+.section_pay .btn_agree .btn_cancel{background-position:0 -570px;}
+
+/* aside */
+.aside h3{background:url(../img/auction/h_aside.gif) no-repeat;font-size:12px}
+.aside h3 span{position:relative;z-index:-1}
+.aside .h_term{background-position:0 0}
+.aside .h_result{background-position:0 -30px}
+.aside .h_calendar{background-position:0 -60px}
+.aside .h_book{background-position:0 -90px}
+.aside .h_notice{background-position:0 -120px}
+.aside .h_video{background-position:0 -150px}
+.aside .h_sham{background-position:0 -180px}
+.aside .btn_more{display:inline-block;position:absolute;top:0;right:0;padding-right:7px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -368px;color:#9b9b9b;font-size:11px;letter-spacing:-2px}
+.aside .login_section{position:relative;z-index:25;width:280px;padding:10px 0;background-color:#fff}
+.aside .login_section .login_area{width:280px;height:101px;background:url(../img/auction/bg_login.gif) no-repeat}
+.aside .login_section .login_area .user{overflow:hidden;position:relative;height:36px}
+.aside .login_section .login_area .user p{padding:15px 0 0 20px;color:#333}
+.aside .login_section .login_area .user .btn_login{overflow:hidden;position:absolute;top:9px;right:20px;width:42px;height:19px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -300px}
+.aside .login_section .login_area .user .btn_login span{line-height:100px}
+.aside .login_section .login_area .user .btn_logout{overflow:hidden;position:absolute;top:9px;right:99px;width:53px;height:19px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -330px}
+.aside .login_section .login_area .user .btn_logout span{line-height:100px}
+.aside .login_section .login_area .user .btn_logout_before{overflow:hidden;position:absolute;top:9px;right:11px;width:53px;height:19px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -330px}
+.aside .login_section .login_area .user .btn_logout_before span{line-height:100px}
+.aside .login_section .login_area .user .btn_leave{overflow:hidden;position:absolute;top:9px;right:11px;width:84px;height:19px;background:url(../img/member/btn_leave.gif) no-repeat 0 0}
+.aside .login_section .login_area .user .btn_leave span{line-height:100px}
+.aside .login_section .login_area .info{position:relative;width:100%}
+.aside .login_section .login_area .info p{width:141px;height:28px;padding:18px 0 0 21px;background:url(../img/auction/p_login.gif) no-repeat 21px 18px;font-size:11px;letter-spacing:-1px}
+.aside .login_section .login_area .info p span{position:relative;z-index:-1}
+/*.aside .login_section .login_area .info .btn_info{position:absolute;top:44px;right:11px;padding:1px 16px 1px 0;color:#777;letter-spacing:-1px}*/
+.aside .login_section .login_area .info .btn_info{position:absolute;top:2px;right:11px;padding:2px 16px 1px 0;background:url(/img/auction/btn_question.gif) no-repeat 100% 0;color:#777;letter-spacing:-1px}
+.aside .login_section .login_area .info .btn_infos{position:absolute;top:44px;right:11px;padding:2px 16px 1px 0;background:url(/img/auction/btn_question.gif) no-repeat 100% 0;color:#777;letter-spacing:-1px}
+.aside .login_section .login_area .info ul{padding:5px 0 0 19px}
+.aside .login_section .login_area .info ul li{position:relative;z-index:10;margin-top:2px;color:#333;line-height:14px;font-size:11px}
+.aside .login_section .login_area .info ul li .btn_num{color:#ff6000;font-family:tahoma;font-size:11px;font-weight:bold;text-decoration:underline}
+.aside .login_section .login_area .info ul li img{margin-top:-1px;vertical-align:middle}
+.aside .login_section .login_area .ly{display:none;position:absolute;top:18px;left:-19px;z-index:10;width:280px;height:102px;background:url(../img/auction/bg_log_ly.gif) no-repeat}
+.aside .login_section .login_area .ly_on{display:block}
+.aside .login_section .login_area .ly ul{margin:20px 0 0 16px;padding:0}
+.aside .login_section .login_area .ly ul li{margin-top:4px}
+.aside .login_section .login_area .ly ul li em{font-family:tahoma;font-size:11px}
+.aside .login_section .login_area .ly .btn_detail{position:absolute;top:74px;right:16px;padding-right:6px;background:url(../img/auction/sprite_bu.gif) no-repeat 100% -397px;color:#777;letter-spacing:-1px;text-decoration:underline}
+.aside .login_section .login_area .ly .btn_clse{overflow:hidden;position:absolute;top:10px;right:5px;width:18px;height:18px}
+.aside .login_section .login_area .ly .btn_clse span{line-height:100px}
+
+.aside .login_section .login_area_bfagree{width:280px;height:37px;background:url(../img/auction/bg_login_bfagree.gif) no-repeat}
+.aside .login_section .login_area_bfagree .user{overflow:hidden;position:relative;height:36px}
+.aside .login_section .login_area_bfagree .user p{padding:14px 0 0 20px;color:#333}
+.aside .login_section .login_area_bfagree .user .btn_logout{overflow:hidden;position:absolute;top:9px;right:20px;width:53px;height:19px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -330px}
+.aside .login_section .login_area_bfagree .user .btn_logout span{line-height:100px}
+.aside .login_section .login_area_bfagree .user .btn_info{position:absolute;top:13px;right:105px;padding:1px 16px 1px 0;color:#777;letter-spacing:-1px}
+
+.aside .section_search{margin-top:20px;padding-bottom:18px;border-bottom:1px solid #d6d6d6}
+.aside .section_search .tab_search{height:28px;background:url(../img/auction/tab_aside.gif) no-repeat}
+.aside .section_search .tab_search li{float:left}
+.aside .section_search .tab_search li a{display:inline-block;height:28px;text-decoration:none}
+.aside .section_search .tab_search li a span{position:relative;z-index:-1}
+.aside .section_search .search1{background-position:0 0}
+.aside .section_search .search1 .tab1 a{width:122px}
+.aside .section_search .search1 .tab2 a{width:118px}
+.aside .section_search .search2{background-position:0 -30px}
+.aside .section_search .search2 .tab1 a{width:118px}
+.aside .section_search .search2 .tab2 a{width:122px}
+/*.aside .section_search .search_area{overflow:hidden;width:100%;margin-top:8px}*/
+.aside .section_search .search_area{width:100%;height:23px;margin-top:8px}	/* 수정 Hans*/
+.aside .section_search .search_area .p_num{float:left;margin:5px 5px 0 0}
+.aside .section_search .search_area input{float:left;vertical-align:middle}
+.aside .section_search .search_area .input_txt{width:93px;height:16px;margin-right:4px;_margin-right:1px;padding:3px 0 0 4px;border:1px solid #9a9a9a;border-color:#9a9a9a #d8d8d8 #d8d8d8 #9a9a9a;color:#333}
+.aside .section_term{margin-top:20px;padding-bottom:18px;border-bottom:1px solid #d6d6d6;line-height:14px}
+.aside .section_term .term_list{margin-top:-15px;color:#11599d;text-align:right}
+.aside .section_term .term_list a{color:#426c96;font-size:11px;text-decoration:underline}
+.aside .section_term .term_search{margin-top:7px}
+.aside .section_term .term_search input{vertical-align:middle}
+.aside .section_term .term_search .input_txt{width:192px;height:16px;margin-right:0;padding:3px 0 0 4px;border:1px solid #9a9a9a;border-color:#9a9a9a #d8d8d8 #d8d8d8 #9a9a9a;color:#333}
+.aside .section_result{margin-top:20px;padding-bottom:18px;border-bottom:1px solid #d6d6d6}
+.aside .section_result .btn_area{margin-top:10px}
+.aside .section_result .btn_area a{display:inline-block;width:118px;height:32px;background:url(../img/auction/btn_result.gif) no-repeat;text-decoration:none}
+.aside .section_result .btn_area a span{position:relative;z-index:-1}
+.aside .section_result .btn_area .btn_result{background-position:0 0}
+.aside .section_result .btn_area .btn_result2{background-position:-122px 0}
+.aside .section_result .btn_area .btn_result:hover{background-position:0 -40px}
+.aside .section_result .btn_area .btn_result2:hover{background-position:-122px -40px}
+.aside .section_calendar{position:relative;margin-top:20px;padding-bottom:18px;border-bottom:1px solid #d6d6d6;line-height:14px}
+.aside .section_calendar .calendar_area{margin-top:8px;border:1px solid #e6e6e6;background-color:#fff}
+.aside .section_calendar .date{padding:6px 0 8px;border-bottom:1px solid #e6e6e6;background:url(../img/auction/bg_date.gif) repeat-x;text-align:center}
+.aside .section_calendar .date a{display:inline-block;vertical-align:middle}
+.aside .section_calendar .date a span{overflow:hidden;float:left;position:relative;z-index:-1;width:14px;height:13px}
+.aside .section_calendar .date .btn{width:14px;height:13px;background:url(../img/auction/btn_date.gif) no-repeat}
+.aside .section_calendar .date .prev{margin-right:10px;background-position:0 0}
+.aside .section_calendar .date .next{margin-right:6px;background-position:-14px 0}
+.aside .section_calendar .date .dot{display:inline-block;padding-right:3px;background:url(../img/auction/sprite_num.gif) no-repeat 100% 10px;vertical-align:middle}
+.aside .section_calendar .date .day{display:inline-block;margin:0 8px 0 0;vertical-align:middle}
+.aside .section_calendar .date .num{display:block;overflow:hidden;width:16px;height:11px;margin-top:1px;background:url(../img/auction/sprite_num.gif) no-repeat;text-indent:-300px}
+.aside .section_calendar .date .num_2009{width:34px;background-position:0 -960px}
+.aside .section_calendar .date .num_2010{width:34px;background-position:0 -990px}
+.aside .section_calendar .date .num_2011{width:34px;background-position:0 -1020px}
+.aside .section_calendar .date .num_2012{width:34px;background-position:0 -1050px}
+.aside .section_calendar .date .num_2013{width:34px;background-position:0 -1080px}
+.aside .section_calendar .date .num_1{background-position:0 -30px}
+.aside .section_calendar .date .num_2{background-position:0 -60px}
+.aside .section_calendar .date .num_3{background-position:0 -90px}
+.aside .section_calendar .date .num_4{background-position:0 -120px}
+.aside .section_calendar .date .num_5{background-position:0 -150px}
+.aside .section_calendar .date .num_6{background-position:0 -180px}
+.aside .section_calendar .date .num_7{background-position:0 -210px}
+.aside .section_calendar .date .num_8{background-position:0 -240px}
+.aside .section_calendar .date .num_9{background-position:0 -270px}
+.aside .section_calendar .date .num_10{background-position:0 -300px}
+.aside .section_calendar .date .num_11{background-position:0 -330px}
+.aside .section_calendar .date .num_12{background-position:0 -360px}
+.aside .section_calendar .date .num_13{background-position:0 -390px}
+.aside .section_calendar .date .num_14{background-position:0 -420px}
+.aside .section_calendar .date .num_15{background-position:0 -450px}
+.aside .section_calendar .date .num_16{background-position:0 -480px}
+.aside .section_calendar .date .num_17{background-position:0 -510px}
+.aside .section_calendar .date .num_18{background-position:0 -540px}
+.aside .section_calendar .date .num_19{background-position:0 -570px}
+.aside .section_calendar .date .num_20{background-position:0 -600px}
+.aside .section_calendar .date .num_21{background-position:0 -630px}
+.aside .section_calendar .date .num_22{background-position:0 -660px}
+.aside .section_calendar .date .num_23{background-position:0 -690px}
+.aside .section_calendar .date .num_24{background-position:0 -720px}
+.aside .section_calendar .date .num_25{background-position:0 -750px}
+.aside .section_calendar .date .num_26{background-position:0 -780px}
+.aside .section_calendar .date .num_27{background-position:0 -810px}
+.aside .section_calendar .date .num_28{background-position:0 -840px}
+.aside .section_calendar .date .num_29{background-position:0 -870px}
+.aside .section_calendar .date .num_30{background-position:0 -900px}
+.aside .section_calendar .date .num_31{background-position:0 -930px}
+.aside .section_calendar .calendar_list{padding-bottom:10px}
+.aside .section_calendar .calendar_list ul{overflow:hidden;width:100%;margin:4px 0 0 10px}
+.aside .section_calendar .calendar_list ul li{float:left;width:103px;margin-top:7px;padding-left:5px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -335px}
+.aside .section_calendar .calendar_list ul li a{color:#555;letter-spacing:-1px}
+.aside .section_book{position:relative;margin-top:20px;padding-bottom:20px;border-bottom:1px solid #d6d6d6}
+.aside .section_book .book_area{overflow:hidden;width:239px;margin:9px 0 0 1px}
+.aside .section_book .book_area .thmb{float:left;padding-top:4px;background:url(../img/auction/bg_book.gif) no-repeat}
+.aside .section_book .book_area .thmb img{vertical-align:top}
+.aside .section_book .book_area .info{float:right;width:166px}
+.aside .section_book .book_area .info h4{margin-top:2px;font-size:12px}
+.aside .section_book .book_area .info h4 a{color:#333}
+.aside .section_book .book_area .info p{margin-top:7px;color:#333;line-height:16px}
+.aside .section_book .btn_area{position:absolute;top:98px;right:0}
+.aside .section_book .btn_area .btn{display:inline-block;width:14px;height:13px;background:url(../img/auction/btn_date.gif) no-repeat}
+.aside .section_book .btn_area .btn span{overflow:hidden;float:left;position:relative;z-index:-1;width:14px;height:13px}
+.aside .section_book .btn_area .prev{background-position:0 0}
+.aside .section_book .btn_area .next{background-position:-14px 0}
+.aside .section_notice{position:relative;margin-top:20px;line-height:14px}
+.aside .section_notice .notice_list{margin-top:12px}
+.aside .section_notice .notice_list li{margin-top:7px;padding-left:5px;background:url(../img/auction/sprite_bu.gif) no-repeat 0 -335px}
+.aside .section_notice .notice_list li a{color:#333}
+.aside .section_video{position:relative;margin-top:23px;padding-bottom:18px;border-bottom:1px solid #d6d6d6}
+.aside .section_video .video_area{overflow:hidden;width:100%;margin-top:8px}
+.aside .section_video .thmb{float:left;width:125px;}
+/*추가 kjh .play  20100810*/
+.aside .section_video .thmb .play{display:block;position:absolute;left:0;top:22px;width:113px;height:83px;background:url(/beginner/movie/ico_play.png) no-repeat;_background:none;text-indent:-9000px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/beginner/movie/ico_play.png', sizingMethod='crop');cursor:pointer}
+.aside .section_video .info{float:left;width:115px;line-height:14px}
+.aside .section_video .info h4{margin-top:4px;font-size:12px}
+.aside .section_video .info h4 a{color:#333}
+.aside .section_video .info p{margin-top:7px}
+.aside .section_video .btn_area{position:absolute;top:92px;right:0;}
+.aside .section_video .btn_area .btn{display:inline-block;width:14px;height:13px;background:url(../img/auction/btn_date.gif) no-repeat;}
+.aside .section_video .btn_area .btn span{overflow:hidden;float:left;position:relative;z-index:-1;width:14px;height:13px}
+.aside .section_video .btn_area .prev{background-position:0 0}
+.aside .section_video .btn_area .next{background-position:-14px 0}
+.aside .section_sham{position:relative;margin-top:20px;padding-bottom:19px;border-bottom:1px solid #d6d6d6}
+.aside .section_sham .sham_area{overflow:hidden;position:relative;width:240px;height:27px;margin-top:10px;background:url(../img/auction/bg_aside_sham.gif) no-repeat}
+.aside .section_sham .sham_area p{margin:6px 0 0 8px;color:#555;line-height:14px}
+.aside .section_sham .sham_area p em{color:#ff6000;font-weight:bold}
+.aside .section_sham .btn_bid{overflow:hidden;position:absolute;top:0;right:0;width:80px;height:27px;background:url(../img/auction/btn_bid.gif) no-repeat;text-decoration:none}
+.aside .section_sham .btn_bid span{line-height:100px}
+.aside .section_question{position:relative;margin-top:17px}
+.aside .tab_question{width:192px;height:17px;background:url(../img/auction/tab_aside.gif) no-repeat}
+.aside .question1{background-position:0 -60px}
+.aside .question2{background-position:0 -90px}
+.aside .question3{background-position:0 -120px}
+.aside .tab_question li{float:left;height:17px}
+.aside .tab_question li a{display:block;height:17px;text-decoration:none}
+.aside .tab_question li a span{position:relative;z-index:-1}
+.aside .tab_question .tab1{width:81px}
+.aside .tab_question .tab2{width:76px}
+.aside .tab_question .tab3{width:35px}
+.aside .quesition_list{margin-top:11px}
+.aside .quesition_list ul li{margin-top:7px;padding:1px 0 0 20px;background:url(../img/auction/ico_question.gif) no-repeat;line-height:14px;position:relative}
+.aside .quesition_list ul li a{color:#333}
+.aside .section_question .btn_more{top:3px}
+.section_banner{margin-top:12px}
+
+/* pop */
+#pop_wrap{width:838px}
+#pop_header{overflow:hidden;position:relative;height:40px;border-bottom:1px solid #eeeeec;background-color:#f4f4f3}
+#pop_header h1{margin:11px 0 0 24px;font-size:14px;letter-spacing:-1px;line-height:18px}
+#pop_header button{display:block;overflow:hidden;position:absolute;top:8px;right:7px;width:23px;height:23px;border:0;background:url(../img/auction/btn_pop_clse.gif) no-repeat 2px 2px;text-indent:-100px;cursor:pointer}
+#pop_content{line-height:14px}
+
+#photo_wrap{width:100%;height:100%;}
+#photo_content{overflow:hidden;}
+#photo_content .section_info{overflow:hidden;margin:10px}
+#photo_content .section_law{height:64px;margin:8px 0 15px 0;border-left:1px solid #ddd;border-right:1px solid #ddd;background:url(../img/auction/bg_pop_law01.gif) repeat-x;}
+#photo_content .section_law h2{float:left;padding:17px 0 0 21px;font-size:12px;font-weight:normal}
+#photo_content .section_law h2 strong{display:block;font-size:18px;line-height:22px}
+#photo_content .section_law .area{float:right;padding:27px 20px 0 0;font-size:14px;color:#333;}
+#photo_content .mtab_auction{clear:both;width:100%;margin-bottom:10px}
+#photo_content .mtab_auction ul li{float:left;border:1px solid #eee;padding:5px 5px 3px 5px;}
+#photo_content .mtab_auction .on{background:#256cae;}
+#photo_content .mtab_auction .on a{color:white;}
+/*전자지도*/
+#photo_content .section_law .btn_list{position:absolute;top:45px;right:20px;vertical-align:top;}
+#photo_content .section_law .btn_list01{position:absolute;top:45px;right:30px;vertical-align:top;}
+#photo_content .section_law .btn_list a{display:inline-block;width:54px;height:20px;background:url(../img/auction/btn_menu.gif) no-repeat;text-decoration:none}
+#photo_content .section_law .btn_list a span{position:relative;z-index:-1}
+#photo_content .section_law .btn_list .btn_print{background-position:0 -90px}
+#photo_content .section_law .btn_list .btn_select{background-position:0 -450px}
+#photo_content .section_law .btn_list .btn_auto{background-position:0 -480px}
+#photo_content .section_law .btn_list p{margin:3px 3px 0 0;font-size:11px;color:#777;}
+
+#photo_content .view_area{clear:both;width:100%;}
+
+#photo_content .btn_menu_btm{clear:both;padding:7px 9px 7px 10px;height:20px;border:1px solid #e7e7e7;background-color:#f9f9f9;}
+#photo_content .btn_menu_btm .sponsor{float:left;color:#666;font-size:11px;text-align:left;padding-top:5px}
+#photo_content .btn_menu_btm .sponsor em{color:#4981b2}
+#photo_content .btn_menu_btm .btn_menu_btm_right{float:right;text-align:right;}
+
+#photo_content .section_info .btn{display:inline-block;height:21px;margin-right:1px;background:url(../img/auction/btn_pop_menu.gif) no-repeat;text-decoration:none}
+#photo_content .section_info .btn span{position:relative;z-index:-1}
+#photo_content .section_info .menu1{width:75px;background-position:0 0}
+#photo_content .section_info .menu2{width:101px;background-position:0 -30px}
+#photo_content .section_info .menu3{width:110px;background-position:0 -60px}
+#photo_content .section_info .menu4{width:110px;background-position:0 -90px}
+#photo_content .section_info .info_area .img{float:left;overflow:hidden;text-align:center;vertical-align:middle}
+#photo_content .section_info .info_area .list{}
+#photo_content .section_info .info_area .list .scroll{position:relative;overflow:auto;scrollbar-arrow-color:#8d8d8d;scrollbar-track-color:#f7f7f7;scrollbar-face-color:#fff;scrollbar-3dlight-color:#e3e3e3;scrollbar-darkshadow-color:#e3e3e3;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#e3e3e3;}
+#photo_content .section_info .info_area .list ul{margin-left:14px;}
+#photo_content .section_info .info_area .list ul li{position:relative;margin-top:15px;margin-right:5px;float:left}
+#photo_content .section_info .info_area .list ul li img{vertical-align:top}
+#photo_content .section_info .info_area .list ul li .img_bdr{display:none;position:absolute;top:0;left:-1px;width:111px;height:71px;border:3px solid #393939;}
+#photo_content .section_info .info_area .list ul li.on .img_bdr{display:block;}
+#photo_content .section_info .info_area .list ul li p{width:115px;margin-top:5px;text-align:right}
+#photo_content .section_info .info_area .list ul li .input_chk{width:13px;height:13px;margin:-1px 0 1px 2px;vertical-align:middle}
+#photo_content .section_info .info_area .list ul li label{cursor:pointer}
+#photo_content .section_info .sample_area{margin:14px 0 0 0;padding:13px 0 0 21px;}
+#photo_content .section_info .sample_area .desc_sample{width:117px;color:#777;line-height:14px;letter-spacing:-1px;}
+#photo_content .section_info .sample_area .sample{margin-top:8px;}
+#photo_content .section_info .sample_area .sample p{width:107px;padding:2px 0 2px 6px;background-color:#e6e6e9;color:#8f8f8f;font-size:11px;letter-spacing:-1px}
+#photo_content .section_info .sample_area .sample .sample_list{width:117px}
+#photo_content .section_info .sample_area .sample .sample_list img{margin:2px -2px 0 0;vertical-align:top}
+#photo_content .include_area{margin:25px 0;}
+#photo_content .map_area .section_map{float:left;width:100%;height:100%}
+#photo_content .map_area .section_map .map_header{position:relative;background-color:#f3f3f3;border-left:1px solid #dfdfdf;border-right:1px solid #dfdfdf;line-height:14px;}
+#photo_content .map_area .section_map .map_header a{display:inline-block;background:url(../img/auction/ico_pop.gif) no-repeat;color:#515151;}
+#photo_content .map_area .section_map .map_header p{padding:8px 0 7px 9px;border-bottom:1px solid #c5c5c5;}
+#photo_content .map_area .section_map .map_header p a{padding-right:15px;background-position:100% 0;color:#555;}
+#photo_content .map_area .section_map .map_header p a em{color:#ff0000;font-weight:bold;}
+
+#photo_content .map_area .section_map .map_header .menu{position:absolute;top:7px;right:13px;}
+#photo_content .map_area .section_map .map_header .menu a{font-size:11px;letter-spacing:-1px;}
+#photo_content .map_area .section_map .map_header .menu .bar{color:#dadada;font-size:10px;}
+#photo_content .map_area .section_map .map_header .menu .btn_distance{padding-left:17px;background-position:0 -30px;}
+#photo_content .map_area .section_map .map_header .menu .btn_print{padding-left:12px;background-position:0 -58px;}
+#photo_content .map_area .section_map .map_header .menu .btn_reset{padding-left:9px;background-position:0 -88px;}
+/* 물건상세조회 */
+.map .auction_markers{float:left;width:295px;height:149px;position:relative;background:#FAFAFA;text-align:left}
+.map .auction_markers .bg_rgt{position:absolute;top:0;right:-5px;height:149px;background:#FAFAFA;}
+.map .auction_markers dl{padding:0 0 15px 0px;width:295px;color:#333;background:#FFFFFF;}
+.map .auction_markers dl dt{padding:10px 0 9px 15px;border-bottom:1px solid #F0F0F0;background:#FAFAFA;}
+.map .auction_markers dl dt em{color:#929292}
+.map .auction_markers dl dt .btn_auction{display:inline-block;margin-left:7px;color:#30678d;font-size:11px;text-decoration:underline}
+.map .auction_markers dl dd{padding-left:15px;margin-top:5px;color:#555 background:#FFFFFF;}
+.map .auction_markers dl dd strong{display:inline-block;width:69px;color:#333}
+.map .auction_markers dl dd .num{letter-spacing:0}
+.map .auction_markers .btn_photo{position:absolute;top:64px;right:14px}
+.map .auction_markers .btn_photo img{border:2px solid #d0d0d0;vertical-align:top}
+.map .auction_markers .btn_clse{position:absolute;top:8px;right:8px;padding:3px;cursor:hand;}
+
+
+#pop_content .info{float:left;width:155px;}
+#pop_content .info .thmb{padding:15px 0 18px 20px;border-bottom:1px solid #e4e4e4;}
+#pop_content .info .thmb img{vertical-align:top;}
+#pop_content .info .thmb ul{margin-top:9px;}
+#pop_content .info .thmb ul li{margin-top:2px;color:#555;}
+#pop_content .info .thmb ul li em{margin-left:3px;}
+#pop_content .info dl{width:117px;margin:19px 0 0 19px;color:#555;}
+#pop_content .info dl dt{margin-bottom:11px;font-weight:bold;}
+#pop_content .info dl dd{margin-top:5px;padding-left:7px;background:url(../img/auction/bu_star.gif) no-repeat 0 5px;line-height:16px;letter-spacing:-1px;}
+#pop_footer{padding:11px 0 32px;background:url(../img/auction/bg_pop_footer.gif) repeat-x;text-align:center}
+#pop_footer .btn_clse{display:inline-block;width:40px;height:23px;background:url(../img/auction/btn_menu.gif) no-repeat 0 -510px;text-decoration:none}
+#pop_footer .btn_clse span{position:relative;z-index:-1}
+
+/*범태 10.06.29 조회된 결과값이 없습니다.*/
+#no_result {text-align:center;padding:100px 0 97px 0;border-bottom:1px solid #D5D5D5;}
+#no_result span{background:url(../img/auction/ex_mark.gif) no-repeat 0 0;font-size:12px;font-weight:bold;color:#555;padding-left:17px;padding-top:1px}
+
+/*won 10.07.13 전자지도 거리재기 infobox */
+#map_view_dist {float:left;position:absolute;width:110px;vertical-align:top;padding:0;margin:0;}
+#map_view_dist ul {list-style:none;padding:0;margin:0;float:left;}
+#map_view_dist li.infobox {position:relative;display:inline;list-style:none;float:left;padding:5px;border:1px solid #f70000;font-family:'돋움';color:#333333;font-size:11px;letter-spacing:-1px;background:#FFFFFF;}
+#map_view_dist li.infobox .txtred {font-family:Tahoma;color:#ff0000;font-size:11px;letter-spacing:-1px;font-weight:bold;}
+#map_view_dist li.closebox {position:absolute;display:inline;list-style:none;vertical-align:top;cursor:hand}
+
+
+/* Loading bar */
+.layer_loadingbar{ position:absolute; overflow:visible;}
+.layer_loadingbar *{ margin:0; padding:0; line-height:normal; font-size:12px; font-family:돋움, Dotum, 굴림, Gulim, AppleGothic, Sans-serif;}
+.layer_loadingbar img{ border:none;}
+.layer_loadingbar .loading_txt {position:relative; width:100%;padding-bottom:7px;font-weight:normal;letter-spacing:-1px;color:#555;}
+
+/* pagnavi */
+.pagnavi{padding:18px 0;text-align:center}
+.pagnavi a,.pagnavi strong{display:inline-block;position:relative;padding:4px 8px 4px 7px;border:1px solid #fff;color:#000;font:bold 13px/normal Verdana;text-decoration:none}
+.pagnavi strong{color:#f23219}
+.pagnavi .pre{margin-right:4px;padding:6px 6px 5px 16px;_padding-bottom:6px;background:url(/img/icon/bu_srch.gif) no-repeat 5px 8px}
+.pagnavi .next{margin-left:4px;padding:6px 16px 5px 6px;_padding-bottom:6px;background:url(/img/icon/bu_srch.gif) no-repeat 100% 8px}
+.pagnavi .pre_end{margin-right:4px;padding:6px 6px 5px 16px;_padding-bottom:6px;background:url(/img/icon/bu_srch.gif) no-repeat 2px -52px}
+.pagnavi .next_end{margin-left:4px;*margin-left:0;padding:6px 16px 5px 6px;_padding-bottom:6px;background:url(/img/icon/bu_srch.gif) no-repeat 100% -52px}
+.pagnavi .pre,.pagnavi .next,.pagnavi .pre_end,.pagnavi .next_end{position:relative;_top:2px;color:#ccc;font-family:'굴림',Gulim;font-size:12px;font-weight:normal}
+.pagnavi .pre:hover{border:1px solid #e9e9e9;background:url(/img/icon/bu_srch.gif) no-repeat 5px -22px}
+.pagnavi .next:hover{border:1px solid #e9e9e9;background:url(/img/icon/bu_srch.gif) no-repeat 100% -22px}
+.pagnavi .pre_end:hover{border:1px solid #e9e9e9;background:url(/img/icon/bu_srch.gif) no-repeat 2px -82px}
+.pagnavi .next_end:hover{border:1px solid #e9e9e9;background:url(/img/icon/bu_srch.gif) no-repeat 100% -82px}
+.pagnavi a.pre,.pagnavi a.next,.pagnavi a.pre_end,.pagnavi a.next_end{color:#565656}
+.pagnavi a:hover{border:1px solid #e9e9e9;background-color:#fff;color:#e85028;text-decoration:none}

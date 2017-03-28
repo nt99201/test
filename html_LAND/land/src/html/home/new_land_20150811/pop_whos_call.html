@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>후스콜 콜카드</title>
+    <link rel="stylesheet" type="text/css" href="../../css/land_home.css">
+</head>
+<body>
+<div class="pop_cont_wrap whos_call" style="margin:0 0 0 -410px;">
+	<div class="pop_cont_head">
+		<h1 class="hide">후스콜 콜카드</h1>
+		<p class="hide">전화 한 통에서도 고객을 놓치지 않는 신개념 마케팅</p>
+		<ul class="hide">
+			<li>전화가 걸려오면 중개사의 정보가 한 눈에!</li>
+			<li>통화가 끝나면 중개사 정보 더 보기 안내!</li>
+			<li>안내배너를 누르면 고객이 원하는 추가 정보 제공</li>
+		</ul>
+	</div>
+	<h2 class="hide">후스콜 콜카드 가입정보</h2>
+	<div class="apply_form_wrap">
+		<dl class="apply_info">
+			<dt>연동할 전화번호</dt>
+			<dd><span class="guide_txt">연동할 전화번호를 입력해주세요</span><input type="text"></dd>
+			<dt>Gmail 주소</dt>
+			<dd><span class="guide_txt">Gmail 주소를 입력해주세요</span><input type="text"></dd>
+		</dl>
+		<p class="pop_notice"><span class="ic_notice"></span><span class="txt">후스콜 로그인을 위해 본인의 구글 계정(Gmail 주소)을 입력해주세요. 구글 계정 확인은 본인 안드로이드폰의 &lt;설정&gt; 메뉴 중 &lt;계정&gt;에서 확인하실 수 있습니다.</span></p>
+	</div>
+	<div class="agreement_wrap">
+<!--	활설화 시에 checked 추가-->
+		<p class="agree_all_sec"><input type="checkbox" id="agree_all" class="checked"><label for="agree_all"><span class="chk_box"></span>아래 후스콜 이용 약관에 모두 동의 합니다.</label></p>
+		<ul class="agree_lst">
+			<li><input type="checkbox" id="agree_lst1"><label for="agree_lst1"><span class="chk_box"></span>이용약관<em>&#40;필수&#41;</em></label><a href="#" class="btn_detail">내용보기</a></li>
+			<li><input type="checkbox" id="agree_lst2"><label for="agree_lst2"><span class="chk_box"></span>네이버 개인정보 수집/이용 동의<em>&#40;필수&#41;</em></label>
+				<p>네이버 부동산 중개사님들의 후스콜 콜카드 생성 및 연동을 위해 연동 전화번호 및 Gmail 주소를 수집하며, 해당 서비스 이용기간 동안 보관합니다.</p>
+			</li>
+			<li class="last"><input type="checkbox" id="agree_lst3"><label for="agree_lst3"><span class="chk_box"></span>네이버-후스콜간 개인정보 제공 동의<em>&#40;필수&#41;</em></label><a href="#" class="btn_detail">내용보기</a>
+				<p>후스콜 콜카드 생성 및 고객 노출, 이용자 식별, 통계, 계정연동 및 CS등을 위해 전화번호, Gmail 주소, 프로필사진, 중개업소 주소, 페이지 주소를 후스콜(GOGOLOOK Co., Ltd)에 제공하며, 해당 서비스 이용기간 동안 보관합니다.<br>개인정보 제공 이후에는 '후스콜 개인정보취급방침'이 적용됩니다.</p>
+			</li>
+		</ul>
+		<a href="#" class="btn_join">후스콜 콜카드 가입하기</a>
+	</div>
+	<button type="button" class="btn_clse">닫기</button>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".apply_info dd").click(function(){
+        $(this).children('.guide_txt').hide();
+    });
+});
+</script>
+</body>
+</html>

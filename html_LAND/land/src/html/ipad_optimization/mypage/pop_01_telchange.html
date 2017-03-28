@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>연락처 변경하기 :: 부동산 마이페이지</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_mypage_popup.css">
+</head>
+
+<!-- [D] Document Size : 527*175 -->
+<body>
+<div id="pop_wrap" class="w527">
+	<!-- header -->
+	<div id="pop_header">
+		<h1>연락처 변경하기</h1>
+	</div>
+	<!-- //header -->
+
+	<div id="pop_container">
+		<div id="pop_content">
+			<div class="tel_area">
+				<ul>
+				<li>
+					<label for="hp">휴대폰</label>
+					<select id="hp" class="select" style="width:50px">
+						<option>010</option>
+						<option>011</option>
+						<option>016</option>
+						<option>017</option>
+						<option>018</option>
+						<option>019</option>
+					</select>
+					<span>-</span>
+					<input type="text" title="휴대폰 두번째자리" class="input_txt" style="width:40px">
+					<span>-</span>
+					<input type="text" title="휴대폰 세번째자리" class="input_txt" style="width:40px">
+				</li>
+				<li class="right">
+					<label for="tp">집전화</label>
+					<select id="tp" class="select" style="width:50px">
+						<option>02</option>
+					</select>
+					<span>-</span>
+					<input type="text" title="집전화 두번째자리" class="input_txt" style="width:40px">
+					<span>-</span>
+					<input type="text" title="집전화 세번째자리" class="input_txt" style="width:40px">
+				</li>
+				</ul>
+				<p>
+					<span>추천알림 수신여부</span>
+					<input type="radio" name="" id="receive" class="input_rdo"><label for="receive" class="label">수신함</label>
+					<input type="radio" name="" id="receive2" class="input_rdo"><label for="receive2" class="label">수신하지 않음</label>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="pop_footer">
+		<a href="#" class="btn_save">저장</a>
+		<a href="#" class="btn_cancel">취소</a>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

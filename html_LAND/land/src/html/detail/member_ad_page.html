@@ -1,0 +1,629 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<title>예스공인중개사무소 :: 내집마련의 시작, 네이버 부동산</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="stylesheet" type="text/css" href="../../css/land_realtor.css">
+<!-- [테스트 코드] -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){ anchor_remove() }
+
+function anchor_remove(){
+	var el = $('dd.area span.lst a');
+	var el_size = $(el).size();
+	var el_wrap = $('dd.area span.lst');
+
+	do{
+		if( $(el_wrap).height() > 42 ){
+			$(el[(el_size-2)]).remove();
+			el_size -= 1;
+		}else{
+			break;
+		}
+	}while(1);
+
+	/* 마지막 a의 ,(콤마) 없애기 */
+	$(el[(el_size-2)]).text( $(el[(el_size-2)]).text().replace(',', '') );
+}
+</script>
+<!-- //테스트 코드 -->
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+
+	</div>
+
+	<div id="container" class="member_page">
+		<!-- 일반 회원 -->
+		<div class="member_ad_area">
+			<div class="con normal">
+				<div class="tit">
+					<h2>예스공인중개사사무소</h2>
+				</div>
+				<div class="info_area" >
+					<table border="0" cellspacing="0">
+					<caption class="blind">중개업소 정보</caption>
+					<tbody>
+					<tr>
+					<th scope="row">주소</th>
+					<td>서울 강남구 대치동 은마아파트 상가 102호</td>
+					</tr>
+					<tr>
+					<th scope="row">전화번호</th>
+					<td>02-451-5900</td>
+					</tr>
+					<tr>
+					<th scope="row">대표</th>
+					<td>김복숙</td>
+					</tr>
+					<tr>
+					<th scope="row">홈페이지</th>
+					<td><a href="#">http://bok7589.kmswb.kr/</a></td>
+					</tr>
+					<tr>
+					<tr>
+					<th scope="row">톡톡</th>
+					<td><a href="#" class="btn_biztalk"><span class="blind">1:1 톡</span></a></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="map">
+				<div class="map_print"><img src="img/@member_ad_map.gif" width="278" height="228" alt="임시 회원 광고 맵"></div>
+				<a href="#" class="map_btn zoomin">확대</a>
+				<a href="#" class="map_btn zoomout">축소</a>
+				<a href="#" class="map_btn map_zoom">지도확대</a>
+			</div>
+		</div>
+		<!-- //일반 회원 -->
+
+		<!-- 유료 회원 -->
+		<div class="member_ad_area">
+			<div class="con">
+				<div class="tit">
+					<h2>예스공인중개사사무소</h2>
+				</div>
+				<div class="photo">
+					<img src="img/@tmp_member.gif" width="250" height="117" alt="임시 회원 이미지" class="member_img">
+				</div>
+				<div class="info_area" >
+					<table border="0" cellspacing="0">
+					<caption class="blind">중개업소 정보</caption>
+					<tbody>
+					<tr>
+					<th scope="row">주소</th>
+					<td>서울 강남구 대치동 은마아파트 상가 102호 2줄 테스트 2줄 테스트 2줄 테스트 2줄 테스트</td>
+					</tr>
+					<tr>
+					<th scope="row">전화번호</th>
+					<td>02-451-5900</td>
+					</tr>
+					<tr>
+					<th scope="row">대표</th>
+					<td>김복숙</td>
+					</tr>
+					<tr>
+					<th scope="row">약력</th>
+					<td>대청, 대치, 개포자이, 은마아파트</td>
+					</tr>
+					<tr>
+					<th scope="row">홈페이지</th>
+					<td><a href="#">http://bok7589.kmswb.kr/</a></td>
+					</tr>
+					<tr>
+					<th scope="row">톡톡</th>
+					<td><a href="#" class="btn_biztalk"><span class="blind">1:1 톡</span></a></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="map">
+				<div class="map_print"><img src="img/@member_ad_map.gif" width="278" height="218" alt="임시 회원 광고 맵"></div>
+				<a href="#" class="map_btn map_zoom">지도확대</a>
+			</div>
+		</div>
+		<!-- //유료 회원 -->
+
+		<div id="content">
+			<div id="depth4Content" class="sale_info">
+				<h3 class="ti">
+					<strong tabindex="0">은마공인중개사사무소</strong>에서 등록한 매물 수<em>(602건)</em>
+					<ul class="a_sort">
+					<li><a href="#" class="rk">랭킹순
+						<span class="layer">
+							<strong class="tit">랭킹순</strong>
+							<span class="tx"><em>매물 정보의 진정성을 점수화하여 높은 순으로 정렬</em>
+							매물 정보의 진정성은 네이버 부동산의 내부<br>정책에 따라 산정됩니다.</span>
+						</span>
+						</a><span class="bar">|</span>
+					</li>
+					<li><a href="#" class="on">일자순</a><span class="bar">|</span></li>
+					<li><a href="#" class="asc">면적순</a><span class="bar">|</span></li>
+					<li><a href="#">가격순</a></li>
+					</ul>
+				</h3>
+				<!-- width:680px -->
+				<table border="0" cellspacing="0" summary="등록 매물 리스트" class="sale_list">
+				<caption class="blind">등록 매물</caption>
+				<colgroup>
+				<col style="width:40px">
+				<col style="width:50px">
+				<col style="width:92px">
+				<col style="width:70px">
+				<col style="width:50px">
+				<col style="width:123px">
+				<col style="width:61px">
+				<col style="width:88px">
+				<col style="">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">&nbsp;
+					<div class="selectbox-applied" style="z-index:20; position:absolute; left:5px; margin-top:-17px;  *margin-top:-4px;">
+						<select class="selectbox-source">
+							<option>전체</option>
+							<option>서울</option>
+							<option>경기</option>
+							<option>인천</option>
+						</select>
+						<div class="selectbox-box" style="width:48px;">
+							<div class="selectbox-label">전체</div>
+						</div>
+						<div class="selectbox-layer" style="display:none;width:48px;">
+							<ul class="selectbox-list">
+							<li>서울</li>
+							<li>경기</li>
+							<li>인천</li>
+							</ul>
+						</div>
+					</div>
+				</th>
+				<th scope="col">&nbsp;
+					<div class="selectbox-applied applied2" style="z-index:20; position:absolute; left:59px; margin-top:-17px; *margin-top:-4px;">
+						<select class="selectbox-source">
+							<option>전체</option>
+							<option>서울</option>
+							<option>경기</option>
+							<option>인천</option>
+						</select>
+						<div class="selectbox-box" style="width:62px;">
+							<div class="selectbox-label">전체</div>
+						</div>
+						<div class="selectbox-layer" style="display:none;width:62px;">
+							<ul class="selectbox-list">
+							<li>서울</li>
+							<li>경기</li>
+							<li>인천</li>
+							</ul>
+						</div>
+					</div>
+				</th>
+				<th scope="col">&nbsp;<span class="blind">지역</span></th>
+				<th scope="col">&nbsp;<span class="blind">확인일자</span></th>
+				<th scope="col">&nbsp;<span class="blind">현장확인 사진</span></th>
+				<th scope="col">매물명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">층</th>
+				<th scope="col">매물가(만원)</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_thmb">
+						<div class="thmb">
+							<div class="thmb_area">
+								<a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td class="align_l name">
+					<div class="inner">
+						<span class="ico_site">현장확인</span>
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">191/153</div></td>
+				<td class="num"><div class="inner"><span>30/34</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>10,000/100</strong></div></td>
+				</tr>
+				<tr>
+				<td colspan="4" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt">대곡초배정되고 올수리된집, 입주가능하고전망 대곡초배정되고 올수리된집, 입주가능하고전망</span>
+						<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+					</div>
+				</td>
+				</tr>
+				<tr class="evennum">
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">재건축</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_thmb">
+						<div class="thmb">
+							<div class="thmb_area">
+								<a href="#"><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+								<!-- [D] 1개 : width:66px, 2개 : 124px, 3개 : 182px, 4개 : 240px, 5개 : 298px -->
+								<div class="ly_thmb" style="width:298px">
+									<ul>
+									<li><a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+									<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+									<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+									<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+									<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+									</ul>
+									<p class="ly_num">5<em>/</em><strong>10</strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td class="align_l name">
+					<div class="inner">
+						<span class="ico_site">현장확인</span>
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>10,000/100</strong></div></td>
+				</tr>
+				<tr class="evennum">
+				<td colspan="4" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt"> 회기외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_thmb">
+						<div class="thmb">
+							<div class="thmb_area">
+								<a href="#"><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+								<p class="thmb_num"></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td class="align_l name">
+					<div class="inner">
+						<span class="ico_site">현장확인</span>
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr>
+				<td colspan="4" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt"> 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+					</div>
+				</td>
+				</tr>
+				<tr class="evennum">
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td class="align_l name" colspan="2">
+					<div class="inner">
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr class="evennum">
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<!-- [D] 말줄임 colspan="5" 일때 class="cs6" 추가 -->
+						<span title="조건좋은 급매물건" class="txt cs6">대곡초배정되고 올수리된집, 입주가능하고전망대곡초배정되고 올수리된집, 입주가능하고전망</span>
+						<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td class="align_l name" colspan="2">
+					<div class="inner">
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<!-- [D] 말줄임 colspan="5" 일때 class="cs6" 추가 -->
+						<span title="조건좋은 급매물건" class="txt cs6"> 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a">네이버 부동산</span>
+					</div>
+				</td>
+				</tr>
+				<tr class="evennum">
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td class="align_l name" colspan="2">
+					<div class="inner">
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr class="evennum">
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<!-- [D] 말줄임 colspan="5" 일때 class="cs6" 추가 -->
+						<span title="조건좋은 급매물건" class="txt cs6"> 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a">네이버 부동산</span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+					</div>
+				</td>
+				<td class="align_l name" colspan="2">
+					<div class="inner">
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<!-- [D] 말줄임 colspan="5" 일때 class="cs6" 추가 -->
+						<span title="조건좋은 급매물건" class="txt cs6"> 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a">네이버 부동산</span>
+					</div>
+				</td>
+				</tr>
+				<tr class="evennum">
+				<td rowspan="2" class="sale_type2 bottomline">월세</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+				<td class="align_l name" colspan="2">
+					<div class="inner">
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr class="evennum">
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<span class="txt_a">한국공인중개사협회</span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="sale_type2">월세</td>
+				<td rowspan="2" class="sale_type2">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l"><span>서울시 강남구<br/>압구정동</span></td>
+				<td rowspan="2" class="sale_type3">12.08.08</td>
+				<td class="align_l name" colspan="2">
+					<div class="inner">
+						<a href="#">현대1차</a>
+						<a href="#" target="_blank"><img src="img/ico_new_browser2.gif" alt="새창열기"></a>
+					</div>
+				</td>
+				<td class="num"><div class="inner">62/57</div></td>
+				<td class="num"><div class="inner"><span>고/29</span></div></td>
+				<td class="num align_r"><div class="inner"><strong>62,000</strong></div></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="desc">
+					<div class="inner">
+						<span class="txt_a">새대한공인중개사협회</span>
+					</div>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="paginate" style="margin:7px 0 -3px 0;padding:0">
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">다음 </a>
+ 					<a href="#" class="next_end">끝 </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="aside member_aside_info">
+			<!-- [D] 기존 교통 정보 찾기 폼 동일하게 적용 -->
+			<div class="bx_com ts">
+				<h4 class="t_end t_traffic"><span>교통정보</span></h4>
+				<div class="traffic_dsc">
+					<h5><span class="ic_hot">HOT</span> <strong>분당선 도곡역 도보 7분</strong></h5>
+					<ul class="normal">
+					<li class="info info_v2"><span class="dot"></span>경기도 성남시 분당구 정자동 11
+						<!-- [D] layer open class btn_adr_on add -->
+						<a href="#" class="btn_m btn_adr btn_adr_on">
+							<span class="blind">도로명</span>
+							<span class="ly_tx">
+								<em>경기도 성남시 분당구 불정로 6길 (정자동 그린팩토리)</em>
+							</span>
+						</a>
+					</li>
+					<li class="info"><span class="dot"></span>입주일자: 2003.05</li>
+					<li class="info"><span class="dot"></span>건설사: 현대산업개발(주)</li>
+					<li class="info"><span class="dot"></span>총 307세대 / 총 2개동/ 총 34층</li>
+					<li class="info"><span class="dot"></span>면적 : 104㎡ .191A㎡. 19BA㎡. 195㎡. 201㎡</li>
+					</ul>
+				</div>
+				<div class="traffic_srch">
+					<h5>빠른길 찾기</h5>
+					<p class="input">
+						<input type="text" id="path_input" class="_inputArea" value="출발지" title="출발지 입력">
+						<span>→</span>
+						<strong title="타워팰리스3차">타워팰리스3차</strong>
+						<a class="srch" href="#">찾기</a>
+					</p>
+					<!-- [D]빠른길 찾기 레이어 활성화시 style="display: block -->
+					<div class="ly_traffic_srch" style="display: ">
+						<div class="ts_top">
+							<h5>출발지검색</h5><input type="text" id="ly_path_input" value="출발지" title="출발지 입력"><a href="#"><span>검색</span></a>
+						</div>
+						<div class="ts_con scroll">
+							<div class="ts_con_top">출발지 검색 결과<strong>0건</strong></div>
+							<ul class="ts_lst">
+							<li><span><input type="checkbox" id="ts1"></span><label for="ts1"><em>광교상록</em> (경기도 수원시 영통구 이의동 하동 116-2)</label></li>
+							<li><span><input type="checkbox" id="ts2"></span><label for="ts2"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts3"></span><label for="ts3"><em>KT</em> (경기도 성남시 분당구 정자동 206)</label></li>
+							<li><span><input type="checkbox" id="ts4"></span><label for="ts4"><em>토다이 분당점 </em> (경기도 성남시 분당구 정자동 174-1 더샵스타파크 지하1층)</label></li>
+							<li><span><input type="checkbox" id="ts5"></span><label for="ts5"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts6"></span><label for="ts6"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts7"></span><label for="ts7"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							</ul>
+							<!-- [D]내용없을 시 style="block" -->
+							<span class="nodata" style="display: ">원하시는 출발지를 검색하세요.</span>
+						</div>
+						<a href="#" class="btn_close"><span class="blind">레이어닫기</span></a>
+					</div>
+				</div>
+				<div class="traffic">
+					<h5>주변 대중교통 <span class="means">(지하철, 버스)</span></h5>
+
+					<div class="subway_area">
+						<p class="subway">
+							<span class="s3"></span><a href="#" title="수도권3호선" class="_subway">3호선(구파발)</a>
+						</p>
+						<p class="subway">
+							<span class="s100"></span><a href="#" title="분당선" class="_subway">분당선(정자)</a>
+						</p>
+						<p class="subway">
+							<span class="s109"></span><a href="#" title="신분당선" class="_subway" id="733">신분당선(정자)</a>
+						</p>
+					</div>
+
+					<ul>
+					<li>
+						<em title="마을버스" class="bus3">마을버스</em>
+						<a href="#">강남05</a> , <a href="#">강남09</a> , <a href="#">강남02</a>
+					</li>
+					<li>
+						<em title="일반" class="bus1">일반</em>
+						<a href="#">917</a> , <a href="#">11-3</a>
+					</li>
+					<li>
+						<em title="공항버스" class="bus5">공항버스</em>
+						<a href="#">6009</a>
+					</li>
+					<li>
+						<em title="직행좌석" class="bus4">직행좌석</em>
+						<a href="#">9414</a>
+					</li>
+					<li>
+						<em title="간선" class="bus11">간선</em>
+						<a href="#">141</a> , <a href="#">402</a>  , <a href="#">406</a> , <a href="#">N37</a> , <a href="#">472</a>
+					</li>
+					<li>
+						<em title="지선" class="bus12">지선</em>
+						<a href="#">2413</a> , <a href="#">6411</a> , <a href="#">3012</a> , <a href="#">4319</a> , <a href="#">4432</a> , <a href="#">4434</a> , <a href="#">2415</a> , <a href="#">3219</a> ,<a href="#">4433</a>
+					</li>
+					</ul>
+				</div>
+				<div class="photo">
+					<h4>갤러리</h4>
+					<ul class="plist">
+					<li class="first"><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="임시 푸터 이미지">
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>중,고교 단어 페이지</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+</head>
+<body class="">
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<!-- 페이지 타이틀 영역 -->
+<div class="top_tab_area">
+</div>
+<!-- 20160823 접근성 tab 타이틀
+    [D] 전체 html의 tab 영역이 현재 비어있으니 해당 tab 영역을 클릭시
+        아래의 타이틀도 같이 변경부탁드립니다.
+ -->
+<div class="t_content">
+	<h3 class="hc">오늘의 단어</h3>
+	<!-- //20160823 접근성 tab 타이틀 -->
+	<div class="book_bg2">
+	    <ul class="book_ul">
+	    <li>
+	        <a href="#" class="link_bock_lk">
+	            <div class="link_bock">
+					중1<span class="br">미래앤컬쳐 최인철</span>
+					<span class="rgt_txt">
+						<span class="gay_txt">학습중</span>
+						<span class="rgt_arr"><span class="hc">더보기</span></span>
+					</span>
+				</div>
+	        </a>
+	    </li>
+	    <li>
+	        <a href="#" class="link_bock_lk">
+	            <div class="link_bock">
+					중2<span class="br">비유와상징</span>
+					<span class="rgt_txt">
+						<span class="gay_txt">학습하기</span>
+						<span class="rgt_arr"><span class="hc">더보기</span></span>
+					</span>
+				</div>
+	        </a>
+	    </li>
+	    <li>
+	        <a href="#" class="link_bock_lk">
+	            <div class="link_bock">
+					중3
+					<span class="rgt_txt">
+						<span class="gay_txt">학습중</span>
+						<span class="rgt_arr"><span class="hc">더보기</span></span>
+					</span>
+				</div>
+	        </a>
+	    </li>
+	    <li>
+	        <a href="#" class="link_bock_lk">
+	            <div class="link_bock">
+					고교공통<span class="br">두산동아 이병민</span>
+					<span class="rgt_txt">
+						<span class="gay_txt">학습하기</span>
+						<span class="rgt_arr"><span class="hc">더보기</span></span>
+					</span>
+				</div>
+	        </a>
+	    </li>
+	    <li>
+	        <a href="#" class="link_bock_lk">
+	            <div class="link_bock">
+					고교1
+					<span class="rgt_txt">
+						<span class="gay_txt">학습하기</span>
+						<span class="rgt_arr"><span class="hc">더보기</span></span>
+					</span>
+				</div>
+	        </a>
+	    </li>
+	    <li class="unbd">
+	        <a href="#" class="link_bock_lk">
+	            <div class="link_bock">
+					고교2
+					<span class="rgt_txt">
+						<span class="gay_txt">학습하기</span>
+						<span class="rgt_arr"><span class="hc">더보기</span></span>
+					</span>
+				</div>
+	        </a>
+	    </li>
+	    </ul>
+	</div>
+</div>
+<hr />
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver2"></div>
+
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/header_studword.html', sel:'.top_tab_area', callback: function(){
+            $($('.tab_link').get(0)).toggleClass("on");
+        }},
+        {path:'include/footer.html', sel:'.__ver2'},
+        {path:'include/common_ham_menu.html', sel:'.sidenav'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>맞춤매물신청하기_단지선택 :: 맞춤매물</title>
+<link rel="stylesheet" type="text/css" href="../../css/findhouse.css">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		
+	</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="content" class="sub">
+			<div class="new_title">
+				<h2>맞춤매물 신청하기</h2>
+				<div class="fr">
+					<a href="#" class="temp_rq">임시 저장 된 신청 <span>5건</span><span class="ico_ar"></span></a>
+				</div>
+				<!-- [D] 임시 저장된 신청 레이어 : display:block / none으로 화면 열고닫음 -->
+				<div class="ly_temp" style="display:block">
+					<span class="arrow"></span>
+					<p class="cont">임시저장된 내용을 불러와서 의뢰할 수 있습니다.<br>(<span>최대<strong>5</strong>개</span>까지 저장가능)</p>
+					<ul class="save_list">
+					<li>
+						<a href="#" class="list_cont">매수, 주택, 분당구 정자동, 삼억원~오억원</a>
+						<p>2012.01.27 <a href="#" class="bt_del"><span>삭제</span></a></p>
+					</li>
+					<li>
+						<a href="#" class="list_cont">월세,오피스텔,분당구 서현1동, 이억원~삼억</a>
+						<p>2012.01.27 <a href="#" class="bt_del"><span>삭제</span></a></p>
+					</li>
+					<li>
+						<a href="#" class="list_cont">매수, 주택, 분당구 정자동, 삼억원~오억원</a>
+						<p>2012.01.27 <a href="#" class="bt_del"><span>삭제</span></a></p>
+					</li>
+					<li>
+						<a href="#" class="list_cont">월세,오피스텔,분당구 서현1동, 이억원~삼억</a>
+						<p>2012.01.27 <a href="#" class="bt_del"><span>삭제</span></a></p>
+					</li>
+					<li>
+						<a href="#" class="list_cont">매수, 주택, 분당구 정자동, 삼억원~오억원</a>
+						<p>2012.01.27 <a href="#" class="bt_del"><span>삭제</span></a></p>
+					</li>
+					</ul>
+					<a href="#" class="btn_close"><span>닫기</span></a>
+				</div>
+			</div>
+
+			<div class="step_bar">
+				<h3 class="rq_terms">의뢰조건 선택, 입력</h3>
+				<a href="#" class="btn_view">의뢰방법 보기</a>
+			</div>
+
+			<!-- 매물, 거래종류 선택 -->
+			<div class="stitle">
+				<h3 class="h_type">매물, 거래종류 선택</h3>
+			</div>
+			<table cellspacing="0" border="0" summary="매물,거래종류 선택 테이블" class="table2">
+			<caption>매물,거래종류 선택 테이블</caption>
+			<colgroup>
+			<col width="105"><col>
+			</colgroup>
+			<tr>
+			<th scope="row"><div>매물종류</div></th>
+			<td>
+				<div class="al_l">
+					<ul class="type_list">
+					<li class="w1"><input type="checkbox" name="" id="mtype_apt" checked="checked" class="input_chk"><label for="mtype_apt" class="label">아파트</label></li>
+					<li class="w2"><input type="checkbox" name="" id="mtype_oft" checked="checked" class="input_chk"><label for="mtype_oft" class="label">오피스텔</label></li>
+					<li class="w3"><input type="checkbox" name="" id="mtype_parcel" class="input_chk"><label for="mtype_parcel" class="label">분양권</label></li>
+					<li class="w4"><input type="checkbox" name="" id="mtype_villa" class="input_chk"><label for="mtype_villa" class="label">빌라</label></li>
+					<li class="w5"><input type="checkbox" name="" id="mtype_house" class="input_chk"><label for="mtype_house" class="label">주택</label></li>
+					<li class="w6"><input type="checkbox" name="" id="mtype_oneroom" class="input_chk"><label for="mtype_oneroom" class="label">원룸</label></li>
+					</ul>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>거래종류</div></th>
+			<td>
+				<div class="al_l">
+					<ul class="type_list">
+					<li class="w1"><input type="checkbox" name="" id="dtype_deal" checked="checked" class="input_chk"><label for="dtype_deal" class="label2">매매</label></li>
+					<li class="w2"><input type="checkbox" name="" id="dtype_charter" class="input_chk"><label for="dtype_charter" class="label2">전세</label></li>
+					<li class="w3"><input type="checkbox" name="" id="dtype_rent" class="input_chk"><label for="dtype_rent" class="label2">월세</label></li>
+					</ul>
+				</div>
+			</td>
+			</tr>
+			</table>
+			<!-- //매물, 거래종류 선택 -->
+
+			<!-- 지역선택 -->
+			<div class="stitle">
+				<h3 class="h_area">지역선택</h3>
+				<span>시/군/구까지만 선택하셔도 의뢰를 진행할 수 있고, 읍/면/동, 반경, 영역, 단지 단위로 의뢰 지역을 선택할 수 있습니다.</span>
+			</div>
+			<!-- 도,시,동 선택 -->
+			<div class="loc_view">
+				<div id="loc_view" class="sel w selectbox-noscript">
+					<select title="지역 선택" class="selectbox-source">
+						<option value="1">서울시</option>
+						<option value="2">서울시1</option>
+						<option value="3">서울시2</option>
+						<option value="4">서울시3</option>
+						<option value="6">서울시4</option>
+						<option value="7">서울시5</option>
+						<option value="8">서울시6</option>
+						<option value="9">서울시7</option>
+						<option value="10">서울시8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<!-- [D] 셀렉트박스 다음 > 표시임, 마지막 셀렉트박스 다음에는 붙이지 않음 -->
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel w2 selectbox-noscript">
+					<select title="시/군/구 선택" class="selectbox-source">
+						<option value="1">고양시 일산동구</option>
+						<option value="2">시&frasl;군&frasl;구1</option>
+						<option value="3">시&frasl;군&frasl;구2</option>
+						<option value="4">시&frasl;군&frasl;구3</option>
+						<option value="6">시&frasl;군&frasl;구4</option>
+						<option value="7">시&frasl;군&frasl;구5</option>
+						<option value="8">시&frasl;군&frasl;구6</option>
+						<option value="9">시&frasl;군&frasl;구7</option>
+						<option value="10">시&frasl;군&frasl;구8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel w3 selectbox-noscript">
+					<select title="읍/면/동 선택" class="selectbox-source">
+						<option value="1">분당동동</option>
+						<option value="2">읍&frasl;면&frasl;동1</option>
+						<option value="3">읍&frasl;면&frasl;동2</option>
+						<option value="4">읍&frasl;면&frasl;동3</option>
+						<option value="6">읍&frasl;면&frasl;동4</option>
+						<option value="7">읍&frasl;면&frasl;동5</option>
+						<option value="8">읍&frasl;면&frasl;동6</option>
+						<option value="9">읍&frasl;면&frasl;동7</option>
+						<option value="10">읍&frasl;면&frasl;동8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel w4 selectbox-noscript">
+					<select title="단지" class="selectbox-source">
+						<option value="1">단지</option>
+						<option value="2">단지1</option>
+						<option value="3">단지2</option>
+						<option value="4">단지3</option>
+						<option value="6">단지4</option>
+						<option value="7">단지5</option>
+						<option value="8">단지6</option>
+						<option value="9">단지7</option>
+						<option value="10">단지8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //도,시,동 선택 -->
+			<!-- //지역선택 -->
+
+			<!-- 지역선택 -->
+			<div class="stitle">
+				<h3 class="h_area">지역선택</h3>
+				<span>시/군/구까지만 선택하셔도 의뢰를 진행할 수 있고, 읍/면/동, 반경, 영역, 단지 단위로 의뢰 지역을 선택할 수 있습니다.</span>
+			</div>
+			<!-- 도,시,동 선택 -->
+			<div class="loc_view">
+				<div id="loc_view" class="sel w selectbox-noscript">
+					<select title="지역 선택" class="selectbox-source">
+						<option value="1">서울시</option>
+						<option value="2">서울시1</option>
+						<option value="3">서울시2</option>
+						<option value="4">서울시3</option>
+						<option value="6">서울시4</option>
+						<option value="7">서울시5</option>
+						<option value="8">서울시6</option>
+						<option value="9">서울시7</option>
+						<option value="10">서울시8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<!-- [D] 셀렉트박스 다음 > 표시임, 마지막 셀렉트박스 다음에는 붙이지 않음 -->
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel w2 selectbox-noscript">
+					<select title="시/군/구 선택" class="selectbox-source">
+						<option value="1">시&frasl;군&frasl;구</option>
+						<option value="2">시&frasl;군&frasl;구1</option>
+						<option value="3">시&frasl;군&frasl;구2</option>
+						<option value="4">시&frasl;군&frasl;구3</option>
+						<option value="6">시&frasl;군&frasl;구4</option>
+						<option value="7">시&frasl;군&frasl;구5</option>
+						<option value="8">시&frasl;군&frasl;구6</option>
+						<option value="9">시&frasl;군&frasl;구7</option>
+						<option value="10">시&frasl;군&frasl;구8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel w3 selectbox-noscript">
+					<select title="읍/면/동 선택" class="selectbox-source">
+						<option value="1">읍&frasl;면&frasl;동</option>
+						<option value="2">읍&frasl;면&frasl;동1</option>
+						<option value="3">읍&frasl;면&frasl;동2</option>
+						<option value="4">읍&frasl;면&frasl;동3</option>
+						<option value="6">읍&frasl;면&frasl;동4</option>
+						<option value="7">읍&frasl;면&frasl;동5</option>
+						<option value="8">읍&frasl;면&frasl;동6</option>
+						<option value="9">읍&frasl;면&frasl;동7</option>
+						<option value="10">읍&frasl;면&frasl;동8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel w4 selectbox-noscript">
+					<select title="단지" class="selectbox-source">
+						<option value="1">단지</option>
+						<option value="2">단지1</option>
+						<option value="3">단지2</option>
+						<option value="4">단지3</option>
+						<option value="6">단지4</option>
+						<option value="7">단지5</option>
+						<option value="8">단지6</option>
+						<option value="9">단지7</option>
+						<option value="10">단지8</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label"></div>
+					</div>
+					<div class="selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //도,시,동 선택 -->
+			<div class="map_wrap" style="position:relative;visibility:visible;top:0;left:0">
+				<div class="map">
+					<div class="location">
+						<!-- 의뢰영역 선택방법 -->
+						<div class="loc_select">
+							<h3>의뢰영역 선택방법</h3>
+							<ul>
+							<li class="w1"><input type="radio" name="request" id="request" checked="checked" class="input_rdo"><label for="request" class="label">읍면동 선택</label></li>
+							<li class="w2"><input type="radio" name="request" id="request2" class="input_rdo"><label for="request2" class="label">반경선택</label>
+								<select title="반경선택" style="width:78px">
+									<option>100m 이내</option>
+									<option>200m 이내</option>
+									<option>300m 이내</option>
+									<option selected="selected">500m 이내</option>
+								</select>
+							</li>
+							<li class="w3"><input type="radio" name="request" id="request3" class="input_rdo"><label for="request3" class="label">영역지정</label></li>
+							<li class="w4"><input type="radio" name="request" id="request4" class="input_rdo"><label for="request4" class="label">단지선택</label></li>
+							</ul>
+						</div>
+						<!-- //의뢰영역 선택방법 -->
+
+						<!-- map -->
+						<div class="loc_map"><img src="img/@map.gif" alt="지도플래쉬"></div>
+						<!-- //map -->
+					</div>
+					<!-- [D] 맵 확대하기 -->
+					<div class="map_bar"><a href="#"><img src="img/map_bar_on.gif" width="66" height="12" alt="확대"></a></div>
+					<!-- [D] 맵 축소하기
+					<div class="map_bar"><a href="#"><img src="img/map_bar_off.gif" width="66" height="12" alt="확대"></a></div>
+					 -->
+				</div>
+				<!-- aside 영역 -->
+				<div class="aside">
+					<div class="article2">
+						<h3>선택된 단지</h3>
+						<ul class="complex_choice">
+						<li><input type="checkbox" name="" id="chk1" class="input_chk"><label for="chk1" class="label">경기도 고양시 일산동구 정발산동 햇빛마을 벽산아파트 1단지</label> <a href="#" class="lk_dtview">단지상세정보</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //aside 영역 -->
+			</div>
+			<!-- //지역선택 -->
+
+			<!-- 입력정보 -->
+			<div class="stitle">
+				<h3 class="h_entryinfo">입력정보</h3>
+				<em><b class="dot">*</b> 항목은 필수 입력정보입니다.</em>
+			</div>
+			<table cellspacing="0" border="0" summary="필수입력정보 테이블" class="table2">
+			<caption>필수입력정보 테이블</caption>
+			<colgroup>
+			<col width="105"><col>
+			</colgroup>
+			<tr>
+			<th scope="row"><div class="pt">면적 <b class="dot">*</b></div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<input type="text" title="면적입력 첫번째" class="input_txt" style="width:57px"> <span class="t4">~</span> <input type="text" title="면적입력 두번째" class="input_txt" style="width:57px"> 평
+					<span class="t8">(0㎡~0㎡)</span>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">가격 <b class="dot">*</b></div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<strong class="t w46">매매가</strong>
+					<input type="text" title="가격입력 첫번째" class="input_txt" style="width:58px"> <span class="t4">~</span> <input type="text" title="가격입력 두번째" class="input_txt" style="width:58px"> <span class="t2">만원</span> <span class="t3">(삼억이천만원~삼억오천만원)</span>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">시세</div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<strong class="t_l">매매</strong>
+					<p class="tx_l">정자동 (㎡ 당 시세) x 99㎡ ~ (㎡당 시세) X 132㎡ = <span class="t8"><strong>58,608~78,144</strong>만원</span><br>정자동  <span class="t8"><strong>592</strong>만원/㎡</span></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">시세</div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<strong class="t_l">매매</strong>
+					<p class="tx_l"><span class="tx_l2">공급(㎡), 시세(만원) :</span> <span class="tx_l2">108 <strong class="t8">75,500</strong> <span class="bar">|</span> 158 <strong class="t8">120,000</strong> <span class="bar">|</span> 177A <strong class="t8">135,000</strong><br>177B <strong class="t8">130,000</strong> <span class="bar">|</span> 207 <strong class="t8">162,500</strong> <span class="bar">|</span> 231A <strong class="t8">220,000</strong></span></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">시세</div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<strong class="t_l">매매</strong>
+					<p class="tx_l">정자동 (㎡ 당 시세) x 99㎡ ~ (㎡당 시세) X 132㎡ = <span class="t8"><strong>58,608~78,144</strong>만원</span><br>정자동  <span class="t8"><strong>592</strong>만원/㎡</span></p>
+				</div>
+				<div class="al_l">
+					<strong class="t_l">전세</strong>
+					<p class="tx_l">정자동 (㎡ 당 시세) x 99㎡ ~ (㎡당 시세) X 132㎡ = <span class="t8"><strong>58,608~78,144</strong>만원</span><br>정자동  <span class="t8"><strong>592</strong>만원/㎡</span></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">최근매물정보</div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<strong class="t_l">전세</strong>
+					<p class="tx_l">공급(㎡), 매물가(만원) :  빌라 70 <strong class="t8">75,500</strong> <span class="bar">|</span> 주택 158 <strong class="t8">120,000</strong> <span class="bar">|</span> 원룸 177A <strong class="t8">135,000</strong> <span class="bar">|</span> 분양권 177A <strong class="t8">135,000</strong></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">최근매물정보</div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<strong class="t_l">매매</strong>
+					<p class="tx_l">공급(㎡), 매물가(만원) :  빌라 70 <strong class="t8">75,500</strong> <span class="bar">|</span> 주택 158 <strong class="t8">120,000</strong> <span class="bar">|</span> 원룸 177A <strong class="t8">135,000</strong> <span class="bar">|</span> 분양권 177A <strong class="t8">135,000</strong></p>
+				</div>
+				<div class="al_l">
+					<strong class="t_l">전세</strong>
+					<p class="tx_l">공급(㎡), 매물가(만원) :  빌라 70 <strong class="t8">75,500</strong> <span class="bar">|</span> 주택 158 <strong class="t8">120,000</strong> <span class="bar">|</span> 원룸 177A <strong class="t8">135,000</strong> <span class="bar">|</span> 분양권 177A <strong class="t8">135,000</strong></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div class="pt">입주희망일 <b class="dot">*</b></div></th>
+			<td colspan="3">
+				<div class="al_l">
+					<input type="radio" name="movein_hope" id="movein_hope" checked="checked" class="input_rdo"><label for="movein_hope" class="label2">즉시입주</label>
+					<input type="radio" name="movein_hope" id="movein_hope2" class="input_rdo"><label for="movein_hope2" class="label2">1개월 이내</label>
+					<input type="radio" name="movein_hope" id="movein_hope3" class="input_rdo"><label for="movein_hope3" class="label2">2개월 이내</label>
+					<input type="radio" name="movein_hope" id="movein_hope4" class="input_rdo"><label for="movein_hope4" class="label2">3개월 이내</label>
+					<input type="radio" name="movein_hope" id="movein_hope5" class="input_rdo"><label for="movein_hope5" class="label2">4개월 이내</label>
+					<input type="radio" name="movein_hope" id="movein_hope6" class="input_rdo"><label for="movein_hope6" class="label2">5개월 이내</label>
+					<input type="radio" name="movein_hope" id="movein_hope7" class="input_rdo"><label for="movein_hope7" class="label2">6개월 이내</label>
+				</div>
+			</td>
+			</tr>
+			<tr class="basic">
+			<th scope="row"><div>단지,건물정보</div></th>
+			<td>
+				<div class="al_l">
+					<strong class="t w60">총세대수</strong>
+					<select title="총세대수선택" style="width:103px">
+						<option>전체</option>
+						<option>300세대 미만</option>
+						<option selected="selected">300~500세대</option>
+						<option>500~1,000세대</option>
+						<option>1,000세대 이상</option>
+					</select>&nbsp;&nbsp;&nbsp;&nbsp;
+					<strong class="t">준공년도</strong>
+					<select title="준공년도선택" style="width:81px">
+						<option>상관없음</option>
+						<option>1년</option>
+						<option>2년</option>
+						<option>3년</option>
+						<option>5년</option>
+						<option>10년</option>
+						<option>15년</option>
+					</select>
+					<span class="t5">이내</span>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>층, 구조</div></th>
+			<td>
+				<div class="al_l">
+					<strong class="t w60">층선택</strong>
+					<select title="층선택" style="width:103px">
+						<option selected="selected">상관없음</option>
+						<option>1~2층 제외</option>
+						<option>1층</option>
+						<option>중층이상</option>
+						<option>로얄층</option>
+						<option>최상층</option>
+						<option>직접입력</option>
+					</select>&nbsp;
+					<input type="text" title="층입력" class="input_txt" style="width:22px">
+					<span class="t5">층</span>
+					<em class="bar">|</em>
+					<strong class="t">방수</strong>&nbsp;&nbsp;
+					<input type="text" title="방수입력" class="input_txt" style="width:22px">
+					<span class="t5">개</span>&nbsp;&nbsp;&nbsp;
+					<strong class="t">욕실수</strong>&nbsp;&nbsp;
+					<input type="text" title="욕실수입력" class="input_txt" style="width:22px">
+					<span class="t5">개</span>&nbsp;&nbsp;&nbsp;
+					<strong class="t">원룸구조</strong>&nbsp;&nbsp;
+					<select title="층선택" style="width:81px">
+						<option selected="selected">상관없음</option>
+						<option>분리형</option>
+						<option>오픈형</option>
+					</select>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>옵션</div></th>
+			<td>
+				<div class="al_l">
+					<strong class="t">전세끼고매매</strong>&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="charter" id="charter" checked="checked" class="input_rdo"><label for="charter" class="label2">가능</label>
+					<input type="radio" name="charter" id="charter2" class="input_rdo"><label for="charter2" class="label2">불가능</label><em class="bar">|</em>
+					<strong class="t">융자금유무</strong>&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="loan" id="loan" checked="checked" class="input_rdo"><label for="loan" class="label2">상관없음</label>
+					<input type="radio" name="loan" id="loan2" class="input_rdo"><label for="loan2" class="label2">평균 시세가의 30%이하</label>
+					<input type="radio" name="loan" id="loan3" class="input_rdo"><label for="loan3" class="label2">없어야함</label>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>희망거래조건</div></th>
+			<td>
+				<div class="al_l">
+					<!-- [D] textarea클릭시 label레이어 style="display:none"해주세요 -->
+					<label for="textarea1" class="ly_hope">선택한 조건 외에 찾으시는 매물에 대해 희망하는 조건을 자세히 작성해 주시면 가장 적합한 매물을 찾는데 도움이 됩니다.<br><br>예) 남자 아이들이 있어서 꼭 1층 매물이어야 합니다.<br>예) 층간 소음이 없는 조용한 집을 찾습니다.</label>
+					<textarea cols="30" rows="5" id="textarea1" class="tarea1"></textarea>
+					<p class="t6"><strong>0</strong>/1000</p>
+				</div>
+			</td>
+			</tr>
+			</table>
+			<!-- //입력 정보 -->
+
+			<!-- 의뢰인 정보 -->
+			<div class="step_bar mgt56">
+				<h3 class="client_info">의뢰인 정보</h3>
+			</div>
+
+			<ul class="dsc_area">
+			<li>의뢰인의 연락처 및 이메일 정보는 네이버에서 의뢰 확인 전화를 드리거나, 의뢰 진행 상태/매물 추천 알림을 보내드리기 위해 사용합니다.</li>
+			<li>의뢰인의 <strong>연락처 및 이메일 정보는 중개업소에는 공개되지 않습니다.</strong></li>
+			<li><strong>개인정보 수집동의, 연락처</strong> (휴대폰이나 집 전화중 1개 이상), <strong>의뢰를 전달할 중개업소 수는 필수 입력 정보</strong>입니다.</li>
+			</ul>
+
+			<table cellspacing="0" border="0" summary="의뢰인 정보 입력 테이블" class="table2 mgt14">
+			<caption>의뢰인 정보 입력 테이블</caption>
+			<colgroup>
+			<col width="105"><col>
+			</colgroup>
+			<tr>
+			<th scope="row"><div>개인정보<br>수집동의</div></th>
+			<td>
+				<div class="al_l">
+					<div class="pinfo_area">
+						<p>개인정보 수집 및 이용에 대한 안내</p>
+						<p>- 수집 항목 : 휴대폰 번호, 전화번호, 메일 주소<br>- 수집 목적 : 맞춤매물 의뢰 사항 확인 및 결과 회신<br>- 이용 기간 : 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 파기합니다.</p>
+					</div>
+					<p class="mgt13"><input type="checkbox" name="" id="p_info" class="input_chk"><label for="p_info" class="label"> 위의 개인정보 수집 및 이용에 동의합니다. (동의 후에 의뢰를 진행할 수 있습니다)</label></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>연락처</div></th>
+			<td>
+				<div class="al_l">
+					<p>
+						<strong class="t">휴대폰</strong>&nbsp;&nbsp;
+						<select title="휴대폰 첫번째자리" style="width:68px">
+							<option>선택</option>
+							<option>010</option>
+							<option>011</option>
+							<option>016</option>
+							<option>017</option>
+							<option>018</option>
+							<option>019</option>
+						</select> <span class="t4">-</span>
+						<input type="text" title="휴대폰 두번째자리" class="input_txt" style="width:55px"> <span class="t4">-</span>
+						<input type="text" title="휴대폰 세번째자리" class="input_txt" style="width:55px">&nbsp;&nbsp;&nbsp;&nbsp;
+						<strong class="t">집전화</strong>&nbsp;&nbsp;
+						<select title="집전화 첫번째자리" style="width:68px">
+							<option>02</option>
+							<option>031</option>
+							<option>032</option>
+						</select> <span class="t4">-</span>
+						<input type="text" title="집전화 두번째자리" class="input_txt" style="width:55px"> <span class="t4">-</span>
+						<input type="text" title="집전화 세번째자리" class="input_txt" style="width:55px">
+					</p>
+					<p class="mgt12">
+						<strong class="t">추천알림 수신여부</strong>&nbsp;&nbsp;
+						<input type="radio" name="receive" id="receive" checked="checked" class="input_rdo"><label for="receive" class="label">수신함</label>&nbsp;&nbsp;
+						<input type="radio" name="receive" id="receive2" class="input_rdo"><label for="receive2" class="label">수신하지 않음</label>
+					</p>
+					<p class="mgt11"><span class="t7">연락처는 의뢰 조건에 맞는 매물이 없을 경우 네이버에서 의뢰 확인 전화를 드리기 위해 필요한 정보입니다.<br>휴대폰 번호를 입력하시면 의뢰 진행 상태 및 매물 추천에 대한 알림을 받으실 수 있습니다. </span></p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>메일주소</div></th>
+			<td>
+				<div class="al_l">
+					<p><input type="text" class="input_txt v2" style="width:265px">&nbsp;&nbsp;<span class="t7">메일로 의뢰 진행 상태에 대한 알림을 받아보실 수 있습니다.</span></p>
+					<p class="mgt10">
+						<strong class="t">추천알림 수신여부</strong>&nbsp;&nbsp;
+						<input type="radio" name="receive_b" id="receive3" checked="checked" class="input_rdo"><label for="receive3" class="label">수신함</label>&nbsp;&nbsp;
+						<input type="radio" name="receive_b" id="receive4" class="input_rdo"><label for="receive4" class="label">수신하지 않음</label>
+					</p>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><div>의뢰를 전달할<br>중개업소 수</div></th>
+			<td>
+				<div class="al_l">
+					<select title="추천옵션" style="width:61px">
+						<option>1개</option>
+						<option>2개</option>
+						<option>3개</option>
+						<option>4개</option>
+						<option selected="selected">5개</option>
+					</select>&nbsp;&nbsp;<span class="t7">의뢰하신 내용은 선택지역의 중개업소에 전달됩니다.</span>
+				</div>
+			</td>
+			</tr>
+			</table>
+			<!-- //의뢰인 정보 -->
+
+			<div class="btn_group">
+				<span class="fl"><a href="#" class="btn_tmpsave2">임시저장</a></span>
+				<a href="#" class="btn_request2">의뢰신청</a>
+				<a href="#" class="btn_cncl2">신청취소</a>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

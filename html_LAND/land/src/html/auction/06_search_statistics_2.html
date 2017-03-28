@@ -1,0 +1,548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/auction.css">
+<!-- selectbox - JS include -->
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/jindo2.all.js?cssquery=true&refresh=true&debug=true"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/htmlcomponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/lib.sale.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/boxmodel.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/simulateFocus.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.patch090224.js"></script>
+<!--// selectbox - JS include -->
+</head>
+<body>
+<div id="wrap">
+	<div id="container">
+		<div id="content">
+			<!-- 페이지제목 -->
+			<h2 class="h_page"><img src="img/auction/h_statistics.gif" width="86" height="16" alt="경매물건조회"></h2>
+			<!-- //페이지제목 -->
+			<!-- 탭 -->
+			<div class="tab_newbie">
+				<ul class="tab_type1">
+				<!-- [D] 선택된 탭 li에 on클래스 사용, 이미지명 _on 추가 -->
+				<li class="on"><a href="#"><img src="img/auction/tab_stats1_on.gif" width="94" height="33" alt="낙찰통계"></a></li>
+				<li><a href="#"><img src="img/auction/tab_stats2.gif" width="127" height="33" alt="실시간경매결과"></a></li>
+				<li><a href="#"><img src="img/auction/tab_stats3.gif" width="126" height="33" alt="경매결과리포트"></a></li>
+				</ul>
+			</div>
+			<!-- //탭 -->
+			<!-- 물건 상세조회 -->
+			<div class="detail_section">
+				<div class="stats_search">
+					<ul class="tab">
+					<li class="on"><a href="#">지역별통계검색</a>
+						<ul class="sub">
+						<li class="frst on"><a href="#">일일통계</a></li>
+						<li><a href="#">월간통계</a></li>
+						<li><a href="#">연간통계</a></li>
+						<li><a href="#">월별통계분석(연간)</a></li>
+						</ul>
+					</li>
+					<li><a href="#">법원별통계검색</a>
+						<ul class="sub">
+						<li class="frst"><a href="#">일일통계</a></li>
+						<li><a href="#">월간통계</a></li>
+						<li><a href="#">연간통계</a></li>
+						<li><a href="#">월별통계분석(연간)</a></li>
+						</ul>
+					</li>
+					</ul>
+					<p class="desc_stats">낙찰통계자료는 <strong>금일 이전일</strong>로 검색하시기 바랍니다.</p>
+					<div class="search_date">
+						<div class="search">
+							<div class="selectbox-naked" style="float:left;margin-right:2px">
+								<select class="selectbox-source" id="year">
+									<option value="">2010</option>
+								</select>
+								<div class="selectbox-box">
+									<div class="selectbox-label"></div>
+								</div>
+								<div id="selectbox-layer" class="selectbox-layer series_layer">
+									<ul class="selectbox-list"></ul>
+								</div>
+							</div>
+							<span class="txt_year">년</span>
+							<div class="selectbox-naked" style="float:left;margin-right:3px">
+								<select class="selectbox-source" id="month">
+									<option value="">3</option>
+								</select>
+								<div class="selectbox-box">
+									<div class="selectbox-label"></div>
+								</div>
+								<div id="selectbox-layer" class="selectbox-layer series_layer">
+									<ul class="selectbox-list"></ul>
+								</div>
+							</div>
+							<span class="txt_month">월</span>
+							<div class="selectbox-naked" style="float:left;margin-right:3px">
+								<select class="selectbox-source" id="day">
+									<option value="">17</option>
+								</select>
+								<div class="selectbox-box">
+									<div class="selectbox-label"></div>
+								</div>
+								<div id="selectbox-layer" class="selectbox-layer series_layer">
+									<ul class="selectbox-list"></ul>
+								</div>
+							</div>
+							<span class="txt_day">일</span>
+							<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_search3.gif" alt="검색">
+							<a href="#" class="btn_print"><span>낙찰통계인쇄</span></a>
+						</div>
+					</div>
+					<script type="text/javascript">
+					<!--
+						new Selectbox($('year'),{ width : "58", height : false });
+						new Selectbox($('month'),{ width : "42", height : false });
+						new Selectbox($('day'),{ width : "42", height : false });
+					//-->
+					</script>
+				</div>
+				<div class="section_data">
+					<p>2009년 03월 17일 <strong>일일 낙찰통계자료</strong></p>
+					<ul class="area_list">
+					<li class="all on"><a href="#">전국</a></li>
+					<li><a href="#">서울</a></li>
+					<li><a href="#">부산</a></li>
+					<li><a href="#">대구</a></li>
+					<li><a href="#">인천</a></li>
+					<li><a href="#">광주</a></li>
+					<li><a href="#">대전</a></li>
+					<li><a href="#">울산</a></li>
+					<li><a href="#">경기</a></li>
+					<li><a href="#">강원</a></li>
+					<li><a href="#">충북</a></li>
+					<li><a href="#">충남</a></li>
+					<li><a href="#">전북</a></li>
+					<li><a href="#">전남</a></li>
+					<li><a href="#">경북</a></li>
+					<li class="off"><a href="#">경남</a></li>
+					<li class="off"><a href="#">제주</a></li>
+					</ul>
+					<div class="sub_list">
+						<p class="desc_law">위 지법에 마우스를 올리시면 관할 지법이 나타납니다.<br>관할 지법을 클릭하시면 물건종류별로 낙찰통계현황을 보실 수 있습니다.</p>
+					</div>
+				</div>
+				<h3 class="h_area">서울특별시 강남구 <em>(검색기간 : 2010.04.27 ~ 2010.04.27 )</em></h3>
+				<div class="data_chart">
+					<div class="type">
+						<div class="chart">
+							<img src="img/auction/@tmp_chart.gif" width="141" height="141" alt="">
+						</div>
+						<div class="data">
+						<table cellspacing="0" border="1" class="tbl_chart" summary="경매물건 상세정보">
+						<thead>
+						<tr>
+						<th>전체</th>
+						<th>낙찰건율</th>
+						</tr>
+						</thead>
+						<tfoot>
+						<tr>
+						<th>총 합계</th>
+						<td>939건</td>
+						</tr>
+						</tfoot>
+						<tbody>
+						<tr class="frst">
+						<th class="ico chart1">진행</th>
+						<td>541건</td>
+						</tr>
+						<tr>
+						<th class="ico chart2">낙찰</th>
+						<td>293건</td>
+						</tr>
+						<tr>
+						<th class="ico chart3">변경</th>
+						<td>52건</td>
+						</tr>
+						<tr>
+						<th class="ico chart4">변경</th>
+						<td>4건</td>
+						</tr>
+						<tr>
+						<th class="ico chart5">취하</th>
+						<td>34건</td>
+						</tr>
+						<tr>
+						<th class="ico chart6">기각</th>
+						<td>0건</td>
+						</tr>
+						<tr>
+						<th class="ico chart7">기타</th>
+						<td>15건</td>
+						</tr>
+						</tbody>
+						</table>
+						</div>
+					</div>
+					<div class="type2">
+						<div class="chart">
+							<img src="img/auction/@tmp_chart2.gif" width="141" height="141" alt="">
+						</div>
+						<div class="data">
+							<p class="ico chart1">낙찰가율 <em>74.45%</em></p>
+						</div>
+					</div>
+				</div>
+				<table cellspacing="0" border="1" class="tbl_data" summary="경매물건 상세정보">
+				<col width="100"><col width="48"><col width="33"><col width="32"><col width="33"><col width="32"><col width="33"><col width="33"><col width="34"><col width="54"><col width="65"><col width="69"><col width="55"><col width="47">
+				<thead>
+				<tr>
+				<th rowspan="2">구분</th>
+				<th colspan="9">낙찰건율</th>
+				<th colspan="4">낙찰가율</th>
+				</tr>
+				<tr class="sub">
+				<th>총건수 </th>
+				<th>진행</th>
+				<th>낙찰</th>
+				<th>변경</th>
+				<th>정지</th>
+				<th>취하</th>
+				<th>기각</th>
+				<th>기타</th>
+				<th>낙찰건율</th>
+				<th>감정가합계</th>
+				<th>낙찰가합계</th>
+				<th>낙찰가율</th>
+				<th>경쟁률</th>
+				</tr>
+				</thead>
+				<tfoot>
+				<tr>
+				<td class="total">합계</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>36.71%</td>
+				<td>608,000,000</td>
+				<td>608,000,000</td>
+				<td>36.71%</td>
+				<td>6.40명</td>
+				</tr>
+				</tfoot>
+				<tbody>
+				<tr>
+				<td class="type">아파트</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>36.71%</td>
+				<td>608,000,000</td>
+				<td>608,000,000</td>
+				<td>36.71%</td>
+				<td>6.40명</td>
+				</tr>
+				<tr>
+				<td class="type">주택</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>36.71%</td>
+				<td>608,000,000</td>
+				<td>608,000,000</td>
+				<td>36.71%</td>
+				<td>6.40명</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">다가구(원룸등)</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">근린주택</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td class="type">근린상가</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>36.71%</td>
+				<td>608,000,000</td>
+				<td>608,000,000</td>
+				<td>36.71%</td>
+				<td>6.40명</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">근린시설</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td class="type">다세대(빌라)</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>14</td>
+				<td>36.71%</td>
+				<td>608,000,000</td>
+				<td>608,000,000</td>
+				<td>36.71%</td>
+				<td>6.40명</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">대지</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">농지</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">임야</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr class="no_data">
+				<td class="type">잡종지</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr class="last no_data">
+				<td class="type">목장용지</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			<!-- //물건 상세조회 -->
+		</div>
+		<div class="aside">
+			<!-- 배너 -->
+			<div class="banner_area">
+				<!-- [D] 배너크기 280px x flexible -->
+				<img src="img/auction/@tmp_aside_banner.gif" width="280" height="240" alt="" style="display:block">
+			</div>
+			<!-- //배너 -->
+			<!-- 가장많이본뉴스 -->
+			<div class="aside_content section_favornews">
+				<h2 class="h_aside">
+					<img src="img/auction/h2_favornews.gif" width="81" height="12" alt="가장 많이 본 뉴스">
+					<a href="#" class="btn_more"><img src="img/auction/btn_more.gif" width="36" height="10" alt="더보기"></a>
+				</h2>
+				<ul class="tab_type2">
+				<!-- [D] 선택된 탭 이미지명 _on 추가 -->
+				<li><a href="#"><img src="img/auction/tab_weeklynews_on.gif" width="122" height="28" alt="주간뉴스"></a></li>
+				<li><a href="#"><img src="img/auction/tab_monthlynews.gif" width="119" height="28" alt="월간뉴스"></a></li>
+				</ul>
+				<ul class="lst_news1">
+				<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기</strong></a></li>
+				<li><a href="#">올해 서울 아파트 값 5% 올랐다</a></li>
+				<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+				<li><a href="#">'한파주의보' 부동산 경매 시장</a></li>
+				<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+				<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기</strong></a></li>
+				<li><a href="#">올해 서울 아파트 값 5% 올랐다</a></li>
+				<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+				<li><a href="#">'한파주의보' 부동산 경매 시장</a></li>
+				<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+				</ul>
+			</div>
+			<!-- //가장많이본뉴스 -->
+			<!-- 이슈 -->
+			<div class="aside_content section_issue">
+				<h2 class="h_aside">
+					<img src="img/auction/h2_issue.gif" width="25" height="13" alt="이슈" class="ico_issue">
+					<a href="#" class="btn_issue">8.27 보금자리주택 개편</a>
+					<a href="#" class="btn_more"><img src="img/auction/btn_more.gif" width="36" height="10" alt="더보기"></a>
+				</h2>
+				<ul class="lst_news2">
+				<li><a href="#">투기지역 집살땐 보금자리 주택...</a></li>
+				<li><a href="#">보금자리 주택, 가격과 환경 변화에...</a></li>
+				<li><a href="#">보금자리 주택 세대주 5년 의무화...</a></li>
+				<li><a href="#">임신가구에도 보금자리 주택에...</a></li>
+				<li><a href="#">보금자리 주택 개편에 따른 변화는...</a></li>
+				</ul>
+			</div>
+			<!-- //이슈 -->
+			<!-- 가장많이본뉴스 -->
+			<div class="aside_content section_homenews">
+				<h2 class="h_aside">
+					<img src="img/auction/h2_homenews.gif" width="64" height="12" alt="우리동네 뉴스">
+					<a href="#" class="btn_more"><img src="img/auction/btn_more.gif" width="36" height="10" alt="더보기"></a>
+				</h2>
+				<p class="tab_local">
+					<!-- [D] 선택된 a에 on클래스 사용 -->
+					<a href="#" class="on">종합</a>
+					<span class="bar">|</span>
+					<a href="#">서울</a>
+					<span class="bar">|</span>
+					<a href="#">경기</a>
+					<span class="bar">|</span>
+					<a href="#">인천</a>
+					<span class="bar">|</span>
+					<a href="#">강원</a>
+					<span class="btn_nav">
+						<a href="#" class="btn_prev"><span>이전</span></a>
+						<a href="#" class="btn_next"><span>다음</span></a>
+					</span>
+				</p>
+				<ul class="lst_news1">
+				<li><em>[강남]</em> <a href="#">서울 아파트값 장기침체로</a></li>
+				<li><em>[성남]</em> <a href="#">판교, 동탄 편의시설 아직도</a></li>
+				<li><em>[구리]</em> <a href="#">원단 뉴타운 개발 '샵뜬다'</a></li>
+				<li><em>[남양주]</em> <a href="#">수도권 아파트 분양시장</a></li>
+				<li><em>[춘천]</em> <a href="#">춘천고속도로 개통으로 땅값</a></li>
+				<li><em>[강남]</em> <a href="#">서울 아파트값 장기침체로</a></li>
+				<li><em>[성남]</em> <a href="#">판교, 동탄 편의시설 아직도</a></li>
+				<li><em>[구리]</em> <a href="#">원단 뉴타운 개발 '샵뜬다'</a></li>
+				<li><em>[남양주]</em> <a href="#">수도권 아파트 분양시장</a></li>
+				<li><em>[춘천]</em> <a href="#">춘천고속도로 개통으로 땅값</a></li>
+				</ul>
+			</div>
+			<!-- //가장많이본뉴스 -->
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="footwrap">
+			<fieldset>
+				<legend class="blind">검색</legend>
+				<div class="sta_search_box">
+					<input type="text" title="검색" value="2억이하 아파트 전세" accesskey="s" class="sta_search_text">
+					<a href="#" class="btn_search">검색</a>
+					<a href="#" class="btn_search2">통합검색</a>
+				</div>
+			</fieldset>
+			<ul>
+			<li class="first"><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+            <li><a href="http://mktg.naver.com/privacy/privacy.html" target="_blank"><strong>개인정보 취급방침</strong></a></li>
+            <li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+            <li><a href="https://help.naver.com/support/service/main.nhn?serviceNo=746" target="_blank">부동산 고객센터</a></li>
+			</ul>
+			<p class="info">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며,<br>제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+			<address>
+				<a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="logo">NAVER</a> <em>Copyright ⓒ</em> <a href="http://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

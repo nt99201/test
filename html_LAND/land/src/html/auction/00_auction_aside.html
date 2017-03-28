@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/auction.css">
+<!-- selectbox - JS include -->
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/jindo2.all.js?cssquery=true&refresh=true&debug=true"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/htmlcomponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/lib.sale.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/boxmodel.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/simulateFocus.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.patch090224.js"></script>
+<!--// selectbox - JS include -->
+</head>
+<body>
+<div id="wrap">
+	<div id="container">
+		<div id="content">
+		</div>
+		<div class="aside">
+			<!-- 배너 -->
+			<div class="banner_area">
+				<!-- [D] 배너크기 280px x flexible -->
+				<img src="img/auction/@tmp_aside_banner.gif" width="280" height="240" alt="" style="display:block">
+			</div>
+			<!-- //배너 -->
+			<!-- 로그인 -->
+			<div class="login_section">
+				<div class="login_area">
+					<div class="user">
+						<p>로그인을 해주세요</p>
+						<a href="#" class="btn_login"><span>로그인</span></a>
+					</div>
+					<div class="info">
+						<p><span>로그인 하시면 관심경매 물건과 결제내역을 확인할 수 있습니다.</span></p>
+						<a href="#" class="btn_info">결재안내</a>
+					</div>
+				</div>
+			</div>
+			<!-- //로그인 -->
+			<!-- 로그아웃 -->
+			<div class="login_section">
+				<div class="login_area">
+					<div class="user">
+						<p><strong>tonneau님</strong></p>
+						<a href="#" class="btn_logout"><span>로그아웃</span></a>
+					</div>
+					<div class="info">
+						<p class="p_agree"><span>관심경매 물건과 결제내역을 확인하시려면 이용약관에 동의하셔야 합니다.</span></p>
+						<a href="#" class="btn_info">결재안내</a>
+					</div>
+				</div>
+			</div>
+			<!-- //로그아웃 -->
+			<!-- 로그아웃 -->
+			<div class="login_section">
+				<div class="login_area">
+					<div class="user">
+						<p><strong>tonneau님</strong></p>
+						<a href="#" class="btn_logout"><span>로그아웃</span></a>
+					</div>
+					<div class="info">
+						<ul>
+						<li><strong>관심경매물건</strong> <a href="#" class="btn_num">739</a> 건</li>
+						<li><strong>결제내역</strong> <a href="#" class="btn_num">739</a> 건 <a href="#"><img src="img/auction/btn_approval2.gif" width="52" height="19" alt="결재하기"></a>
+							<div class="ly ly_on">
+								<ul>
+								<li>서울지법 <em>(10.03.01~10.12.31)</em></li>
+								<li>서울/수도권 <em>(10.03.01~10.12.31)</em></li>
+								<li>강원도권 <em>(10.03.01~10.12.31)</em></li>
+								</ul>
+								<a href="#" class="btn_detail">자세히보기</a>
+								<a href="#" class="btn_clse"><span>닫기</span></a>
+							</div>
+						</li>
+						</ul>
+						<a href="#" class="btn_info">결재안내</a>
+					</div>
+				</div>
+			</div>
+			<!-- //로그아웃 -->
+			<!-- 사건번호/법원 조회 -->
+			<div class="aside_content section_search">
+				<ul class="tab_search search1">
+				<li class="tab1"><a href="#"><span>사건번호 조회</span></a></li>
+				<li class="tab2"><a href="#"><span>법원 조회</span></a></li>
+				</ul>
+				<div class="search_area">
+					<div class="selectbox-naked" style="float:left;margin:2px 13px 0 0">
+						<select class="selectbox-source" id="num">
+							<option value="">전체</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div id="selectbox-layer" class="selectbox-layer series_layer">
+							<ul class="selectbox-list"></ul>
+						</div>
+					</div>
+					<span class="p_num">타경</span>
+					<input type="text" class="input_txt">
+					<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_search.gif" alt="조회">
+				</div>
+				<script type="text/javascript">
+				<!--
+					new Selectbox($('num'),{ width : "57", height : false });
+
+				//-->
+				</script>
+			</div>
+			<!-- //사건번호/법원 조회 -->
+			<!-- 용어검색 -->
+			<div class="aside_content section_term">
+				<h3 class="h_term"><span>용어검색</span></h3>
+				<div class="term_list">
+					<a href="#">유치권</a>, <a href="#">권리분석</a>, <a href="#">지상권</a>, <a href="#">가간지</a>
+				</div>
+				<div class="term_search">
+					<input type="text" class="input_txt">
+					<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_search4.gif" alt="검색">
+				</div>
+			</div>
+			<!-- //용어검색 -->
+			<!-- 경매결과 -->
+			<div class="aside_content section_result">
+				<h3 class="h_result"><span>경매결과</span></h3>
+				<div class="btn_area">
+					<a href="#" class="btn_result"><span>실시간 경매 결과</span></a>
+					<a href="#" class="btn_result2"><span>경매 결과 리포트</span></a>
+				</div>
+			</div>
+			<!-- //경매결과 -->
+			<!-- 경매 캘린더 -->
+			<div class="aside_content section_calendar">
+				<h3 class="h_calendar"><span>경매 캘린더</span></h3>
+				<div class="calendar_area">
+					<div class="date">
+						<a href="#" class="btn prev"><span>이전</span></a>
+						<span class="dot"><span class="num num_2010">2010</span></span><span class="dot"><span class="num num_1">01</span></span><span class="day"><span class="num num_1">01</span></span>
+						<a href="#" class="btn next"><span>다음</span></a>
+					</div>
+					<div class="calendar_list">
+						<ul>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">광주본원 22계</a></li>
+						<li><a href="#">광주본원 22계</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //경매 캘린더 -->
+			<!-- 경매 관련서적 -->
+			<div class="aside_content section_book">
+				<h3 class="h_book"><span>경매 관련서적</span></h3>
+				<div class="book_area">
+					<div class="thmb">
+						<a href="#"><img src="img/auction/@tmp_book.gif" width="66" height="86" alt=""><span class="mask"></span></a>
+					</div>
+					<div class="info">
+						<h4><a href="#">유치권 법정지상권 공략 119</a></h4>
+						<p>부동산 경매 첫걸음을 위해서는 유치권 법정지상권을 공략하는 것이 무엇보다도 중요...</p>
+					</div>
+				</div>
+				<div class="btn_area">
+					<a href="#" class="btn prev"><span>이전</span></a>
+					<a href="#" class="btn next"><span>다음</span></a>
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //경매 관련서적 -->
+			<!-- 경매결과 -->
+			<div class="aside_content section_notice">
+				<h3 class="h_notice"><span>법원공지안내</span></h3>
+				<ul class="notice_list">
+				<li><a href="#">강제경매개시결정에 대한 이의신청은...</a></li>
+				<li><a href="#">강제경매개시결정에 대한 이의신청은...</a></li>
+				<li><a href="#">강제경매개시결정에 대한 이의신청은...</a></li>
+				</ul>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //경매결과 -->
+			<!-- 동영상 강의 -->
+			<div class="aside_content section_video">
+				<h3 class="h_video"><span>동영상 강의</span></h3>
+				<div class="video_area">
+					<div class="thmb">
+						<a href="#"><img src="img/auction/@tmp_video.gif" width="96" height="74" alt=""><span class="play"></span></a>
+					</div>
+					<div class="info">
+						<h4><a href="#">[핵심경매실무]</a></h4>
+						<p>판례에 의한 유치권 깨트리기-1</p>
+					</div>
+				</div>
+				<div class="btn_area">
+					<a href="#" class="btn prev"><span>이전</span></a>
+					<a href="#" class="btn next"><span>다음</span></a>
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //동영상 강의 -->
+			<!-- 모의경매 -->
+			<div class="aside_content section_sham">
+				<h3 class="h_sham"><span>모의경매</span></h3>
+				<div class="sham_area">
+					<p><strong>현재</strong> <em>51,999,000,000</em> 원</p>
+					<a href="#" class="btn_bid"><span>모의입찰하기</span></a>
+				</div>
+			</div>
+			<!-- //모의경매 -->
+			<!-- 부동산 지식 -->
+			<div class="aside_content section_question">
+				<ul class="tab_question question2">
+				<li class="tab1"><a href="#"><span>부동산 지식iN</span></a></li>
+				<li class="tab2"><a href="#"><span>실전상담사례</span></a></li>
+				<li class="tab3"><a href="#"><span>FAQ</span></a></li>
+				</ul>
+				<div class="quesition_list">
+					<ul>
+					<li><a href="#">부동산경매 입문하려고 하는 사람...</a></li>
+					<li><a href="#">부동산경매 입문하려고 하는 사람...</a></li>
+					<li><a href="#">부동산경매 입문하려고 하는 사람...</a></li>
+					<li><a href="#">부동산경매 입문하려고 하는 사람...</a></li>
+					<li><a href="#">부동산경매 입문하려고 하는 사람...</a></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //부동산 지식 -->
+			<!-- 배너 -->
+			<div class="aside_content section_banner">
+				<a href="#"><img src="img/auction/banner_goodauction.gif" width="240" height="41" alt="경매정보 자료제공 - 굿옥션"></a>
+			</div>
+			<!-- //배너 -->
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="footwrap">
+			<fieldset>
+				<legend class="blind">검색</legend>
+				<div class="sta_search_box">
+					<input type="text" title="검색" value="2억이하 아파트 전세" accesskey="s" class="sta_search_text">
+					<a href="#" class="btn_search">검색</a>
+					<a href="#" class="btn_search2">통합검색</a>
+				</div>
+			</fieldset>
+			<ul>
+			<li class="first"><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+            <li><a href="http://mktg.naver.com/privacy/privacy.html" target="_blank"><strong>개인정보 취급방침</strong></a></li>
+            <li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+            <li><a href="https://help.naver.com/support/service/main.nhn?serviceNo=746" target="_blank">부동산 고객센터</a></li>
+			</ul>
+			<p class="info">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며,<br>제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+			<address>
+				<a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="logo">NAVER</a> <em>Copyright ⓒ</em> <a href="http://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

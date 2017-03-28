@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<title>시세탭 - 시/도,구/군</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<div class="snb">
+			<!-- 맵 -->
+			<div class="map2"><img src="img/@200x200.gif" alt="" width="198" height="199" ></div>
+			<!-- //맵 -->
+			<!-- 연관검색어 -->
+			<div class="section_link">
+				<h3>연관검색어</h3>
+				<ul>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				</ul>
+			</div>
+			<!-- //연관검색어 -->
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!-- 지역선택 -->
+			<div class="section_local">
+				<div class="box">
+					<h3 class="blind">지역선택</h3>
+					<p class="locale"><strong>전국</strong></p>
+					<ul class="list_local">
+					<li><a href="#">서울시</a></li>
+					<li><a href="#">경기도</a></li>
+					<li><a href="#">인천시</a></li>
+					<li><a href="#">부산시</a></li>
+					<li><a href="#">대전시</a></li>
+					<li><a href="#">대구시</a></li>
+					<li><a href="#">울산시</a></li>
+					<li><a href="#">광주시</a></li>
+					<li><a href="#">강원도</a></li>
+					<li><a href="#">충청북도</a></li>
+					<li><a href="#">충청남도</a></li>
+					<li><a href="#">경상북도</a></li>
+					<li><a href="#">경상남도</a></li>
+					<li><a href="#">전라북도</a></li>
+					<li><a href="#">전라남도</a></li>
+					<li><a href="#">제주도</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //지역선택 -->
+			<!-- 결과그래프 -->
+			<div class="section_graph">
+				<img src="img/@730x138.gif" alt="" width="730" height="138" >
+			</div>
+			<!-- //결과그래프 -->
+			<!-- 시세 -->
+			<div class="section_collection">
+				<h3 class="line nonetop"><img src="img/h_collection_market.gif" alt="시세" width="25" height="15" > <span class="powered">국민은행 제공 <span class="bar">|</span> <span class="date">2010.02.01</span> 기준</span></h3>
+				<h4 class="h_market h_market_first"><strong>서울특별시</strong> <img src="img/h_market1.gif" alt="아파트 시세변동 추이" width="103" height="12" ></h4>
+				<div class="collection_graph intab_grapth">
+					<div class="graph_wrap">
+						<div class="graph"><img src="img/@330x188.gif" alt="" width="330" height="188" ></div>
+						<div class="graph"><img src="img/@330x188.gif" alt="" width="330" height="188" ></div>
+					</div>
+					<div class="grph_lgnd">
+						<ul class="legend">
+						<li class="blt1"><span><em>주황색</em></span> 상위평균가</li>
+						<li class="blt2"><span><em>남색</em></span> 일반평균가</li>
+						<li class="blt3"><span><em>하늘색</em></span> 하위평균가</li>
+						</ul>
+						<ul class="legend rgt">
+						<li class="blt1"><span><em>주황색</em></span> 상위평균가</li>
+						<li class="blt2"><span><em>남색</em></span> 일반평균가</li>
+						<li class="blt3"><span><em>하늘색</em></span> 하위평균가</li>
+						</ul>
+					</div>
+				</div>
+				<div class="grph_legend">
+					<ul>
+					<li><em>상위평균가</em> : 로얄층에 속하는 세대들의 평균적인 거래가격(일부 내부수리, 호가 등 제외)</li>
+					<li><em>일반병균가</em> : 로얄층, 거리는 층을 제외한 층에 속하는 세대들의 평균적인 거래가격</li>
+					<li class="last"><em>하위평균가</em> : 해당 변적/전용면적 내에서 가장 꺼리는 층에 속하는 세대들의 평균적인 거래가격</li>
+					</ul>
+				</div>
+				<h4 class="h_market"><strong>서울특별시</strong> <img src="img/h_market2.gif" alt="아파트 최근시세" width="78" height="12" ></h4>
+				<table class="market_table">
+				<caption class="blind">아파트 최근시세</caption>
+				<colgroup>
+				<col width="60">
+				<col width="76">
+				<col width="75">
+				<col width="76">
+				<col width="75">
+				<col width="60">
+				<col width="76">
+				<col width="75">
+				<col width="76">
+				<col>
+				</colgroup>
+				<thead>
+				<tr>
+				<th rowspan="2" class="bdnone">기준일</th>
+				<th colspan="2" class="bborder">매매(만원)</th>
+				<th colspan="2" class="bborder">전세(만원)</th>
+				<th rowspan="2" class="lborder">기준일</th>
+				<th colspan="2" class="bborder">매매(만원)</th>
+				<th colspan="2" class="bborder">전세(만원)</th>
+				</tr>
+				<tr class="last">
+				<th>면적단가</th>
+				<th class="bar">변동액</th>
+				<th>면적당가</th>
+				<th class="bar">변동액</th>
+				<th>면적단가</th>
+				<th class="bar">변동액</th>
+				<th>면적당가</th>
+				<th class="bar">변동액</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first"> <!-- [D] 첫번째 행에 first 클래스 사용 -->
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="down">2 <span>하락</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="down">2 <span>하락</span></em></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="down">2 <span>하락</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="down">2 <span>하락</span></em></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="zero">0 <span>유지</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="zero">0 <span>유지</span></em></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="zero">0 <span>유지</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="zero">0 <span>유지</span></em></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				<td><strong>286</strong></td>
+				<td class="bdnone"><em class="up">2 <span>상승</span></em></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="market_guide">
+					<h4 class="h_market"><strong>서울특별시</strong> <img src="img/h_market3.gif" alt="아파트 가격지수" width="78" height="12" > <span class="crit">2008.12 = 100.0 <img src="img/btn_market_guide.gif" alt="안내" width="14" height="14" ></span></h4>
+					<p class="guide_layer">국민은행에서 매월 조사/발표하는 지표로, 2008년 12월의 아파트 가격을 100으로 본 상대지표입니다. <a href="#"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9" ></a></p>
+				</div>
+				<div class="collection_graph intab_grapth">
+					<div class="graph_wrap">
+						<div class="graph"><img src="img/@330x188.gif" alt="" width="330" height="188" ></div>
+						<div class="graph"><img src="img/@330x188.gif" alt="" width="330" height="188" ></div>
+					</div>
+				</div>
+				<table class="market_table market_crit">
+				<caption class="blind">아파트 가격지수</caption>
+				<colgroup>
+				<col width="88">
+				<col width="138">
+				<col width="138">
+				<col width="88">
+				<col width="138">
+				<col>
+				</colgroup>
+				<thead>
+				<tr>
+				<th class="bdnone">기준일</th>
+				<th>매매</th>
+				<th class="bdnone">전세</th>
+				<th class="lborder">기준일</th>
+				<th>매매</th>
+				<th class="bdnone">전세</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first"> <!-- [D] 첫번째 행에 first 클래스 사용 -->
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				</tr>
+				<tr>
+				<td class="bdnone">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				<td class="lborder">2009.12</td>
+				<td><strong>1,029</strong></td>
+				<td class="bdnone"><strong>286</strong></td>
+				</tr>
+				</table>
+			</div>
+			<!-- //시세 -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- 우측플로팅 -->
+	<div class="my_sales">
+		<div class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="#"><img src="img/btn_my_popup_login.gif" width="59" height="17" alt="로그인" style="margin-bottom:2px;"></a>
+			</div>	
+		</div>			
+		<div class="bg_my_sales_b"></div>
+		<div class="bg_my_sales_t">
+			<h3 class="type2">최근본단지</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 본 단지가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span> 
+			</div>
+			<h3 class="type3">최근검색어</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 검색어가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span> 
+			</div>			
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+					<legend class="blind">평형계산</legend>
+					<input type="text" class="input_text" title="값 입력" value="11"><a href="#"><img src="img/btn_calculate.gif" alt="계산" width="61" height="18" class="input_btn"></a>
+					<input type="text" class="input_text" title="값 입력" value="11">
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+	<!-- //우측플로팅 -->
+	<!-- footer -->
+	<div id="footer">
+		<!-- 연관검색어 -->
+		<div class="foot_link">
+			<h3>연관검색어</h3>
+			<p>
+				<a href="#">정자동 아파트</a>, 
+				<a href="#">강남구 아파트</a>, 
+				<a href="#">정자동 오피스텔</a>, 
+				<a href="#">서울 3억 아파트</a>, 
+				<a href="#">정자동 아파트</a>, 
+				<a href="#">강남구 아파트</a>, 
+				<a href="#">정자동 오피스텔</a>, 
+				<a href="#">서울 3억 아파트</a>
+			</p>
+			<a href="#" class="btn_top">맨위로</a>
+		</div>
+		<!-- //연관검색어 -->
+		<img src="img/@img_footer.gif" alt="" width="960" height="184" >
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html> 
+
+

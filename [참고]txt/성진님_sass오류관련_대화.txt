@@ -1,0 +1,362 @@
+2017-03-16 14:27 염혜림 네~ :)
+2017-03-16 15:12 박성진 혜림님
+2017-03-16 15:12 염혜림 네~
+2017-03-16 15:12 박성진 중국어사전 배너 작업하신 것 중에서요
+2017-03-16 15:12 박성진 모바일에 
+2017-03-16 15:13 염혜림 네~
+2017-03-16 15:13 박성진 중국어로 번여한 배너는 없어도 됩니다.
+2017-03-16 15:13 박성진 개발에서 언어스킨 적용할거라서요~
+2017-03-16 15:13 염혜림 아 네~ 그부분은 삭제해서 다시 반영하겠습니다~
+2017-03-16 15:13 박성진 네
+2017-03-22 14:19 박성진 http://view.gitlab2.uit.nhncorp.com/RND/taskrunner/raw/master/doc/gulp.html
+2017-03-22 14:19 박성진 http://gitlab2.uit.nhncorp.com/RND/taskrunner/tree/develop
+2017-03-22 17:25 박성진 자리에 오셨나요?
+2017-03-22 17:26 염혜림 아 네~ 올라가고 있습니다~
+2017-03-22 17:26 박성진 올라 오실 필요는 없고요
+2017-03-22 17:26 박성진 npm install은 하셨어요?
+2017-03-22 17:26 염혜림 네~
+2017-03-22 17:27 박성진 설정 파일에서
+2017-03-22 17:27 박성진 scss 경로도 다 맞추셨고요?
+2017-03-22 17:28 염혜림 경로가 dict구조랑
+2017-03-22 17:28 염혜림 동일해서
+2017-03-22 17:28 염혜림 동일하게 가지고 왔습니다
+2017-03-22 17:28 박성진 제가 내려갈게요~
+2017-03-22 17:28 염혜림 아 네~
+2017-03-22 17:54 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ gulp compile-sass
+[17:53:36] Using gulpfile D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js
+[17:53:36] Starting 'compile-sass'...
+[17:53:36] 'compile-sass' errored after 7.65 ms
+[17:53:36] ReferenceError: sourcemaps is not defined
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js:34:9)
+    at module.exports (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\lib\runTask.js:34:7)
+    at Gulp.Orchestrator._runTask (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\index.js:273:3)
+    at Gulp.Orchestrator._runStep (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\index.js:214:10)
+    at Gulp.Orchestrator.start (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\index.js:134:8)
+    at C:\Users\NAVER.AD000\AppData\Roaming\npm\node_modules\gulp\bin\gulp.js:129:20
+    at nextTickCallbackWith0Args (node.js:420:9)
+    at process._tickCallback (node.js:349:13)
+    at Function.Module.runMain (module.js:443:11)
+    at startup (node.js:139:18)
+
+2017-03-22 17:57 박성진 npm install gulp-sourcemaps
+2017-03-22 17:57 박성진 이거 해보실래요?
+2017-03-22 17:58 염혜림 네~
+2017-03-22 17:59 박성진 무슨 메세지 없나요?
+2017-03-22 17:59 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/aud              io_clip)
+$ npm install gulp-sourcemaps
+npm WARN package.json m.endic@1.0.0 No description
+npm WARN package.json m.endic@1.0.0 No README data
+gulp-sourcemaps@2.4.1 node_modules\gulp-sourcemaps
+├── strip-bom@3.0.0
+├── detect-newline@2.1.0
+├── graceful-fs@4.1.11
+├── convert-source-map@1.4.0
+├── vinyl@1.2.0 (clone-stats@0.0.1, replace-ext@0.0.1, clone@1.0.2)
+├── source-map@0.5.6
+├── debug-fabulous@0.0.4 (object-assign@4.1.0, lazy-debug-legacy@0.0.1, debug@2.6.3)
+├── acorn@4.0.11
+├── through2@2.0.3 (xtend@4.0.1, readable-stream@2.2.6)
+└── css@2.2.1 (inherits@2.0.3, urix@0.1.0, source-map-resolve@0.3.1, source-map@0.1.43)
+
+2017-03-22 18:00 염혜림 이렇게 뜨긴 했는데.. 다시 gulp watch로 돌려도
+2017-03-22 18:00 염혜림 반응이 없어요..
+2017-03-22 18:00 박성진 다시 gulp compile-sass 해보세요
+2017-03-22 18:00 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ gulp compile-sass
+[18:00:42] Using gulpfile D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js
+[18:00:42] Starting 'compile-sass'...
+[18:00:42] 'compile-sass' errored after 7.61 ms
+[18:00:42] ReferenceError: sourcemaps is not defined
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js:34:9)
+    at module.exports (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\lib\runTask.js:34:7)
+    at Gulp.Orchestrator._runTask (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\index.js:273:3)
+    at Gulp.Orchestrator._runStep (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\index.js:214:10)
+    at Gulp.Orchestrator.start (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\node_modules\orchestrator\index.js:134:8)
+    at C:\Users\NAVER.AD000\AppData\Roaming\npm\node_modules\gulp\bin\gulp.js:129:20
+    at nextTickCallbackWith0Args (node.js:420:9)
+    at process._tickCallback (node.js:349:13)
+    at Function.Module.runMain (module.js:443:11)
+    at startup (node.js:139:18)
+
+2017-03-22 18:01 염혜림 .pipe(sourcemaps.init())
+2017-03-22 18:01 염혜림 요기서 아직 에러가 있는거 같아요~
+2017-03-22 18:01 박성진 node -v 
+2017-03-22 18:02 박성진 해보시래요?
+2017-03-22 18:02 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ node -v
+v4.5.0
+
+2017-03-22 18:02 염혜림 이렇게 뜨고 있어요~
+2017-03-22 18:02 박성진 node 업그레이드 해주세요
+2017-03-22 18:03 박성진 sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+2017-03-22 18:03 박성진 sudo는 빼고 해주세요
+2017-03-22 18:03 박성진 한줄씩이요~
+
+2017-03-22 18:03 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ npm install -g n
+npm ERR! Windows_NT 6.1.7601
+npm ERR! argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "n"
+npm ERR! node v4.5.0
+npm ERR! npm  v2.15.9
+npm ERR! code EBADPLATFORM
+
+npm ERR! notsup Unsupported
+npm ERR! notsup Not compatible with your operating system or architecture: n@2.1.5
+npm ERR! notsup Valid OS:    !win32
+npm ERR! notsup Valid Arch:  any
+npm ERR! notsup Actual OS:   win32
+npm ERR! notsup Actual Arch: x64
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     D:\APM\APM_Setup\htdocs\wordbook\m.endic\npm-debug.log
+
+2017-03-22 18:04 염혜림 npm install -g n
+2017-03-22 18:04 박성진 npm 어떻게 설치하셨어요?
+2017-03-22 18:04 염혜림 npm install
+2017-03-22 18:04 염혜림 으로 설치했습니다~
+2017-03-22 18:04 박성진 아
+2017-03-22 18:05 박성진 node를 업그레이드 하셔야 할거 같아요~
+2017-03-22 18:05 염혜림 C:\Users\NAVER.AD000\AppData\Roaming\WorksMobile\WorksMobileOne\temp\580042$369$이미지 1.png
+2017-03-22 18:06 염혜림 저 이미지의
+2017-03-22 18:07 염혜림 업데이트 대로 지금 적용한건데~
+2017-03-22 18:07 염혜림 sudo npm install -g n 이부분에서
+2017-03-22 18:07 염혜림 sudo 빼고   에러가 나는거 때문에 업데이트가 안되요~?
+2017-03-22 18:07 박성진 npm install -g n
+2017-03-22 18:07 박성진 이렇게 해보세요`
+2017-03-22 18:08 염혜림 에러가 동일합니다..
+2017-03-22 18:09 박성진 node 설치는 어떻게 하셨어요?
+2017-03-22 18:10 염혜림 node-v4.5.0-x64.msi
+2017-03-22 18:10 염혜림 이걸로 받아서 설치 했어요~
+2017-03-22 18:10 박성진 삭제하시고 다시 받으셔서 설치해보세요`
+2017-03-22 18:10 염혜림 네~
+2017-03-22 18:16 염혜림 node-v6.10.1-x64.msi 버젼으로 새로 설치 했습니다~
+2017-03-22 18:16 박성진 네 그럼
+2017-03-22 18:16 박성진 영단어장에서
+2017-03-22 18:16 박성진 npm install 해보세요~
+2017-03-22 18:17 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ npm install
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\browser-sync\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\node_modules\center-align\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\node_modules\right-align\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\node_modules\center-align\node_modules\align-text\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\node_modules\right-align\node_modules\align-text\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\node_modules\center-align\node_modules\align-text\node_modules\kind-of\package.json'
+npm WARN enoent ENOENT: no such file or directory, open 'D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp.spritesmith\node_modules\spritesmith\node_modules\pixelsmith\node_modules\ndarray-fill\node_modules\cwise\node_modules\uglify-js\node_modules\yargs\node_modules\cliui\node_modules\right-align\node_modules\align-text\node_modules\kind-of\package.json'
+npm WARN m.endic@1.0.0 No description
+
+2017-03-22 18:17 염혜림 이렇게 나와요~
+2017-03-22 18:18 박성진 pull 받으신 저장소 삭제하시고
+2017-03-22 18:18 박성진 다시 받으셔서 세팅해보세요`
+2017-03-22 18:18 염혜림 네~
+2017-03-22 18:18 박성진 뭔가 꼬인듯 싶네요~
+2017-03-22 18:25 염혜림 C:\Users\NAVER.AD000\AppData\Roaming\WorksMobile\WorksMobileOne\temp\580042$393$이미지 1.png
+2017-03-22 18:25 염혜림 이렇게 떠요~ ㅠ.ㅠ
+2017-03-22 18:25 염혜림 재부팅하고 다시 삭제하고 있는데도
+2017-03-22 18:25 염혜림 동일한 메세지가 나옵니다..
+2017-03-22 18:26 박성진 ?
+2017-03-22 18:26 박성진 아까 clean 해보세요`
+2017-03-22 18:27 염혜림 다행히 이름 바꾸기로 해서 폴더명 바꿔져서 다시 받았습니다~
+2017-03-22 18:27 박성진 네
+2017-03-22 18:36 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ gulp watch
+[18:35:46] Using gulpfile D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js
+[18:35:46] Starting 'browserSync'...
+[18:35:46] Finished 'browserSync' after 98 ms
+[18:35:46] Starting 'watch'...
+[18:35:46] Finished 'watch' after 59 ms
+[BS] Access URLs:
+ -------------------------------------
+       Local: http://localhost:3000
+    External: http://10.67.21.168:3000
+ -------------------------------------
+          UI: http://localhost:3001
+ UI External: http://10.67.21.168:3001
+ -------------------------------------
+[BS] Serving files from: ./src/
+[18:35:53] Starting 'compile-sass'...
+[18:35:53] 'compile-sass' errored after 7.68 ms
+[18:35:53] ReferenceError: sourcemaps is not defined
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js:34:9)
+    at module.exports (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\lib\runTask.js:34:7)
+    at Gulp.Orchestrator._runTask (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:273:3)
+    at Gulp.Orchestrator._runStep (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:214:10)
+    at Gulp.Orchestrator.start (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:134:8)
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\index.js:36:18)
+    at Gaze.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\glob-watcher\index.js:18:14)
+    at emitTwo (events.js:106:13)
+    at Gaze.emit (events.js:191:7)
+    at Gaze.emit (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gaze\lib\gaze.js:129:32)
+[18:35:56] Starting 'compile-sass'...
+[18:35:56] 'compile-sass' errored after 2.59 ms
+[18:35:56] ReferenceError: sourcemaps is not defined
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js:34:9)
+    at module.exports (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\lib\runTask.js:34:7)
+    at Gulp.Orchestrator._runTask (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:273:3)
+    at Gulp.Orchestrator._runStep (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:214:10)
+    at Gulp.Orchestrator.start (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:134:8)
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gulp\index.js:36:18)
+    at Gaze.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\glob-watcher\index.js:18:14)
+    at emitTwo (events.js:106:13)
+    at Gaze.emit (events.js:191:7)
+    at Gaze.emit (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\gaze\lib\gaze.js:129:32)
+
+2017-03-22 18:36 염혜림 gulp watch 를 돌리면 저렇게 나오고
+2017-03-22 18:36 염혜림 NAVER@E-AD00049667 MINGW64 /d/APM/APM_Setup/htdocs/wordbook/m.endic (feature/audio_clip)
+$ gulp compile-sass
+[18:35:10] Using gulpfile D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js
+[18:35:10] Starting 'compile-sass'...
+[18:35:10] 'compile-sass' errored after 8.81 ms
+[18:35:10] ReferenceError: sourcemaps is not defined
+    at Gulp.<anonymous> (D:\APM\APM_Setup\htdocs\wordbook\m.endic\gulpfile.js:34:9)
+    at module.exports (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\lib\runTask.js:34:7)
+    at Gulp.Orchestrator._runTask (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:273:3)
+    at Gulp.Orchestrator._runStep (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:214:10)
+    at Gulp.Orchestrator.start (D:\APM\APM_Setup\htdocs\wordbook\m.endic\node_modules\orchestrator\index.js:134:8)
+    at C:\Users\NAVER.AD000\AppData\Roaming\npm\node_modules\gulp\bin\gulp.js:129:20
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+    at Module.runMain (module.js:606:11)
+    at run (bootstrap_node.js:393:7)
+
+2017-03-22 18:36 염혜림  gulp compile-sass로 돌리면 위처럼 나옵니다~
+2017-03-22 18:40 박성진 taskrunner를
+2017-03-22 18:40 박성진 마스터에서 받아서 다시 해보실래요?
+2017-03-22 18:42 염혜림 gulpfile.js 부분은 dict/m.endic 받은 부분인데 taskrunner 마스터로 다시 받아도 될까요~?
+2017-03-22 18:51 박성진 그럼, 우선은
+2017-03-22 18:51 박성진 컴파일된 css 파일에 넣어주세요~
+2017-03-22 18:51 박성진 \\\
+2017-03-22 18:52 염혜림 네~ css로 수정한 부분 추가하겠습니다~
+2017-03-22 18:52 박성진 네~
+2017-03-22 18:52 염혜림 네~ 감사합니다~
+2017-03-22 18:53 염혜림 오늘의 회화 영문 버젼만
+2017-03-22 18:53 염혜림 sass로 돌아가는거죠~?
+2017-03-22 18:55 박성진 네 그런걸로 알고 있어요~
+2017-03-22 18:55 염혜림 네~
+2017-03-22 19:02 염혜림 혹시 컴파일된 css 파일 부분 업로드 때문에 기다리실까봐서요~ 내일 오전에 반영한 후 말씀드리겠습니다~ :)
+2017-03-22 19:02 박성진 네~~
+2017-03-22 19:03 박성진 스프라이트 스미스는 안쓰고
+2017-03-22 19:03 박성진  scss파일만 컴파일 한거 같은데요~
+2017-03-22 19:03 박성진 모바일 영어사전처럼 셋팅했는데
+2017-03-22 19:04 박성진 scss 안된건죠?
+2017-03-22 19:04 염혜림 네~
+2017-03-22 19:10 박성진 잘 되는데요~
+2017-03-22 19:11 염혜림 저는 자꾸 에러가 나요~ㅠ 
+2017-03-22 19:11 염혜림 차장님 파일들 보내주시면 제가 테스트 해볼께요~ㅠ
+2017-03-22 19:12 박성진 우선 css에 넣어주세요~
+2017-03-22 19:12 염혜림 네~
+2017-03-22 19:15 박성진 잠깐 내려갈게요~
+2017-03-22 19:15 염혜림 네~
+2017-03-22 19:34 박성진 혜림님
+2017-03-22 19:35 염혜림 네~
+2017-03-22 19:35 박성진 "gulp-sass": "3.0.0",
+2017-03-22 19:35 박성진 "devDependencies": {
+}
+2017-03-22 19:35 박성진 여기 사이에 넣어보시겠어요~
+2017-03-22 19:35 박성진 영어사전에서요~
+2017-03-22 19:37 염혜림 영어사전 gulpfile.js에 
+2017-03-22 19:37 염혜림 "devDependencies": {
+	"gulp-sass": "3.0.0";
+}
+2017-03-22 19:37 염혜림 라고 추가 했는데 
+2017-03-22 19:37 염혜림 C:\Users\NAVER.AD000\AppData\Roaming\WorksMobile\WorksMobileOne\temp\580042$442$2.png
+2017-03-22 19:37 염혜림 이렇게 나왔어요~
+2017-03-22 19:37 박성진 저거 하나만 넣은신거에요?
+2017-03-22 19:38 염혜림 C:\Users\NAVER.AD000\AppData\Roaming\WorksMobile\WorksMobileOne\temp\580042$445$3.png
+2017-03-22 19:38 염혜림 네~ 저렇게 추가했어요~
+2017-03-22 19:38 박성진 packge에 넣으셔야 하는데~
+2017-03-22 19:38 염혜림 아~ 다시 넣을께요~
+2017-03-22 19:40 염혜림 C:\Users\NAVER.AD000\AppData\Roaming\WorksMobile\WorksMobileOne\temp\580042$449$이미지 4.png
+2017-03-22 19:40 염혜림 이렇게 추가했는데 에러는 동일해요~ ㅠ
+2017-03-22 19:40 박성진 ; 빼주세요`
+2017-03-22 19:40 염혜림 아 네~
+2017-03-22 19:41 염혜림 똑같아요~ㅠ.ㅠ
+2017-03-22 19:41 박성진 npm install 해주시고요~
+2017-03-22 19:41 염혜림 네~
+2017-03-22 19:44 박성진 안되나요?
+2017-03-22 19:44 염혜림 Error: Cannot find module 'gulp-sourcemaps'
+
+2017-03-22 19:44 염혜림 라고 나오는데
+2017-03-22 19:44 염혜림 npm install gulp-sourcemaps
+
+2017-03-22 19:44 염혜림 로 새로 넣을까요~?
+2017-03-22 19:44 박성진 네 해보세요~
+2017-03-22 19:45 염혜림 Error: Cannot find module 'gulp-replace'
+
+2017-03-22 19:45 염혜림 이렇게 나와요~
+2017-03-22 19:45 박성진 그것도 install 해보세요~
+2017-03-22 19:49 박성진 안되나요?
+2017-03-22 19:50 염혜림 오~
+2017-03-22 19:50 염혜림 되는거 같아요~
+2017-03-22 19:50 염혜림 dict쪽에서는
+2017-03-22 19:51 염혜림 반응하고 있어요~
+2017-03-22 19:51 염혜림 그대로 wordbook쪽도 적용해 볼께요~
+2017-03-22 19:51 박성진 넵~
+2017-03-22 19:51 염혜림 네~ :)
+2017-03-22 19:51 박성진 안되면
+2017-03-22 19:51 박성진 css  파일에 직접하고 내일 다시 보죠~
+2017-03-22 19:52 염혜림 네~
+2017-03-22 19:52 염혜림 얼른 퇴근하세요~ 차장님~ 감사합니다~ㅠ.ㅠ
+2017-03-23 13:52 박성진 안녕하세요~
+2017-03-23 13:52 염혜림 네~ 안녕하세요~
+2017-03-23 13:52 박성진 문의 주신거 봤는데요
+2017-03-23 13:53 박성진 앞에 두 가지는 답변 드렸는데
+2017-03-23 13:53 염혜림 네~
+2017-03-23 13:53 박성진 마직막껀 무슨 내용인지 모르겠는데요~
+2017-03-23 15:57 염혜림 차장님~
+2017-03-23 15:57 염혜림 한베사전에서요~
+2017-03-23 15:57 염혜림 http://view.gitlab2.uit.nhncorp.com/dict/m.vnkr/raw/develop/package.json
+2017-03-23 15:57 박성진 네~
+2017-03-23 15:57 염혜림 develop
+2017-03-23 15:57 염혜림 에
+2017-03-23 15:57 염혜림 링크가 한베로 안되어 있는데요~
+2017-03-23 15:58 염혜림 그냥 반영하면 해도 되나요~? 경로가 영어쪽으로 되어 있어서요~
+2017-03-23 15:59 박성진 변경해 주세요~
+2017-03-23 15:59 박성진 별 문제가 없긴한데~
+2017-03-23 16:00 염혜림 http://view.ui.naver.com/dict/m.vnkr/master/layout.html
+
+http://gitlab2.uit.nhncorp.com/dict/m.vnkr.git
+2017-03-23 16:00 염혜림 이렇게 변경할께요~
+2017-03-23 18:15 염혜림 성진 차장님~ 진아님께서  lg optimus G Pro 에서 이미지가 right로 붙는다고 하셔서요,, 다른 안드로이드에서는 제대로 나오는데 
+2017-03-23 18:15 염혜림 저 모바일에서만 안나오시는거 같아요,, n모바일 같은 경우에는 저 기종이 없어서 확인이 안되는데
+2017-03-23 18:15 염혜림 혹시 확인 할 수 있는 방법이 있을까요?
+2017-03-23 18:21 박성진 저희도 장비가 없는데요`
+2017-03-23 18:21 박성진 이 장비 엄청 오래 된거 아니에요?
+2017-03-23 18:21 염혜림 2013년도 인거 같아요...
+2017-03-23 18:22 박성진 ㅡㅡ
+2017-03-23 18:22 염혜림 다른 안드로이드 케이스는 다 괜찮은데..
+2017-03-23 18:22 박성진 어느 페이지에서 그런거에요?
+2017-03-23 18:22 염혜림 http://view.ui.naver.com/dict/xdic/feature/audio_clip/00_layout.php?page=03_main.php
+2017-03-23 18:22 염혜림 이 부분이요..
+2017-03-23 18:23 박성진 배너 이미지가 우측으로 붙나요?
+2017-03-23 18:23 염혜림 네..
+2017-03-23 18:24 박성진 banner_card 
+2017-03-23 18:24 박성진 여기에는 block 주시고요
+2017-03-23 18:24 박성진 banner_inner
+2017-03-23 18:24 박성진 여기에는
+2017-03-23 18:24 박성진 width 320px 줘도 될거 같은데요~
+2017-03-23 18:24 박성진 요즘 이것 보다 작은 사이즈는 없잖아요~
+2017-03-23 18:25 염혜림 아~ 중국버젼꺼 그대로 쓴 부분이라~ 알겠습니다~
+2017-03-23 18:27 박성진 이런건 논이슈로 해도 될거 같읃네~
+2017-03-23 18:27 박성진 같은데~~ ;;
+2017-03-23 18:27 염혜림 수정해서 ftp에 반영하였습니다
+2017-03-23 18:27 박성진 네~
+2017-03-23 18:27 염혜림 아.. 진아님이...
+2017-03-23 18:28 염혜림 다른케이스에서는 문제가 없다고 말씀드렸는데..
+2017-03-23 18:28 염혜림 혜림님... 문제가 있는 케이스가 있으니까, 이거.. 수정하는게 맞지 않냐고 그러셔서...
+2017-03-23 18:28 염혜림 제가 더 이상 말씀드릴 수가 없어서..
+2017-03-23 18:28 박성진 네 우선 아까방식으로 처리해 주세요~
+2017-03-23 18:29 염혜림 수정해 드릴려고 하는데 저희쪽에서 기종이 없다고 말씀드렸거든요,, 확인 한번 더 해보겠다구..
+2017-03-23 18:29 염혜림 네~
+2017-03-23 18:29 박성진 네~

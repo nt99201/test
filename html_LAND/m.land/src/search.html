@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>search</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_search">
+		<!--search-->
+		<div class="scrh_page">
+			<div class="h_loc">
+				<span class="prev"><a href="#"><em>뒤로</em></a> </span>
+				<h2 class="hide">검색</h2>
+
+				<div class="scrh_box">
+					<form action="">
+						<fieldset class="hide">지역검색</fieldset>
+						<div class="scrh_inp"><input type="text" placeholder="장소 또는 주소를 입력하세요"></div>
+					   <button type="button" class="btn_clear"><span href="#">입력내용 삭제</span></button>
+					</form>
+
+				</div>
+			</div>
+
+			<div class="scrh_lst_wrap">
+				<!--[D] 최근 검색 리스트-->
+				<div class="scrh_lst" style="display:block">
+				<strong class="tit_lty_srch">최근검색</strong>
+
+				<!--[D] 검색 내역 없음-->
+				<p class="no_rcd_lst" style="display:;">최근 검색한 지역이<br>없습니다.</p>
+
+				<ul>
+					<li><a href="#">그린팩토리<button type="button" class="btn_lst_del"><span>삭제</span></button></a></li>
+					<li><a href="#">그린팩토리 카케어<button type="button" class="btn_lst_del"><span>삭제</span></button></a></li>
+					<li><a href="#">NAVER 그린팩토리<button type="button" class="btn_lst_del"><span>삭제</span></button></a></li>
+					<li><a href="#">NAVER 그린팩토리 주차장입구<button type="button" class="btn_lst_del"><span>삭제</span></button></a></li>
+					<li><a href="#">세계 그린팩토리 녹색기술전시회<button type="button" class="btn_lst_del"><span>삭제</span></button></a></li>
+				</ul>
+				</div>
+
+				<!--[D] 검색 자동완성 리스트-->
+				<div class="scrh_lst auto_cmplt" style="display:none;">
+
+				<ul>
+					<li><a href="#"><em class="key_word">그린팩토리</em></a></li>
+					<li><a href="#"><em class="key_word">그린팩토리</em> 카케어</a></li>
+					<li><a href="#">NAVER <em class="key_word">그린팩토리</em></a></li>
+					<li><a href="#">NAVER <em class="key_word">그린팩토리</em> 주차장입구</a></li>
+					<li><a href="#">세계 <em class="key_word">그린팩토리</em> 녹색기술전시회</a></li>
+				</ul>
+				</div>
+				<div class="w_disabled hide"></div>
+				<!--[D] 검색 결과 리스트-->
+				<div class="scrh_lst" style="display:;">
+				<strong class="tit_srch_rsult"><em class="key_word">'정자동'</em>검색결과</strong>
+				<ul>
+					<li><a href="#">경기도 성남시 분당구<em class="key_word">정자동</em></a></li>
+					<li><a href="#">경기도 수원시 장안구<em class="key_word">정자동</em></a></li>
+					<li><a href="#">울산광역시 북구<em class="key_word">정자동</em></a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<!--//search-->
+	</div>
+</div>
+</body>
+</html>

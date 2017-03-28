@@ -1,0 +1,1224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>좌측 검색 조건 - 탭내검색</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+</head>
+<body>
+	<div id="container">
+		<div class="snb">
+			
+			<p style="padding:0px 5px 5px 5px;">매물 (기본)</p>
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>매물종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio"> <label for="type1_radio1">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio" checked="checked"> <label for="type1_radio2" class="on">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand on"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+					<div class="fold2">
+						<div class="col1">
+							<!-- [D] 체크박스 Jindo component 사용했습니다. -->
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check1">
+							</span>
+							<label for="type1_check1" class="on">아파트</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check2">
+							</span>
+							<label for="type1_check2" class="on">주상복합</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">재건축</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">오피스텔</label>
+						</div>
+						<div class="wide first">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check5">
+							</span>
+							<label for="type1_check5">아파트 분양권</label>
+						</div>
+						<div class="wide">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check6">
+							</span>
+							<label for="type1_check6">주상복합 분양권</label>
+						</div>
+						<div class="wide line">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check7">
+							</span>
+							<label for="type1_check7">오피스텔 분양권</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">재개발</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">상가건물</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">원룸</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">상가주택</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">단독/다가구</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">상가점포</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">빌라/연립</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">공장/창고</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">사무실</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">토지/임야</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">빌딩/건물</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">전원/농가</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">숙박콘도</label>
+						</div>
+						<div class="btn_area">
+							<a href="#"><img src="img/btn_select_sale.gif" alt="매물종류 선택" width="96" height="24" ></a>
+						</div>
+					</div>
+				</div>
+				<h3>거래종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio2" id="type2_radio1" class="btn_radio" checked="checked"> <label for="type2_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio2" class="btn_radio"> <label for="type2_radio2">매매</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio3" class="btn_radio"> <label for="type2_radio3">월세</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio4" class="btn_radio"> <label for="type2_radio4">전세</label></div>
+				</div>
+				<h3>가격 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area" style="z-index:4">
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+					<div class="calc">
+						<h4>평형 계산기</h4>
+						<input type="text" class="calc_text" title="면적" style="width:34px;">
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">평</option>
+						   		<option value="2">㎡</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">평</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">평</li>
+									<li class="selectbox-item selectbox-item-over">㎡ </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+						<p class="result"><strong>175.5</strong> ㎡</p>
+						<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+					</div>
+				</div>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio" checked="checked"> <label for="type4_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"> <label for="type4_radio2" title="66㎡ = 20평"><em>66㎡ </em>이하</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"> <label for="type4_radio3" title="66㎡ = 20평&#13;99㎡ = 30평"><em>66~99㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"> <label for="type4_radio4" title="99㎡ = 30평&#13;132㎡ = 40평"><em>99~132㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"> <label for="type4_radio5" title="132㎡ = 40평&#13;165㎡ = 50평"><em>132~165㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio"> <label for="type4_radio6" title="165㎡ = 50평&#13;198㎡ = 60평"><em>165~198㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio7" class="btn_radio"> <label for="type4_radio7" title="198㎡ = 60평&#13;330㎡ = 100평"><em>198~330㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio8" class="btn_radio"> <label for="type4_radio8" title="330㎡ = 100평&#13;991㎡ = 300평"><em>330~991㎡</em></label></div>
+					<div class="wide pd5"><input type="radio" name="radio4" id="type4_radio11" class="btn_radio"> <label for="type4_radio11">직접입력</label> <span class="crit"><em>(㎡)</em></span></div>
+					<div class="direct">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:20px;"><em>25.8평</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:92px;"><em>25.8평</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:121px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>단지조건 <span class="multi">(복수선택가능)</span><a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area has_select">
+					<div class="wide2 wide2cost2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox" id="type1_check">
+						</span>
+						<label for="type1_check1">관리비</label>
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">10만원 미만</option>
+						   		<option value="2">10~20만원</option>
+								<option value="3">20~30만원</option>
+								<option value="4">30~40만원</option>
+								<option value="5">40~50만원</option>
+								<option value="6">50만원 이상</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">10만원 미만</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">10만원 미만</li>
+									<li class="selectbox-item selectbox-item-over">10~20만원</li>
+									<li class="selectbox-item selectbox-item">20~30만원</li>
+									<li class="selectbox-item selectbox-item">30~40만원</li>
+									<li class="selectbox-item selectbox-item">40~50만원</li>
+									<li class="selectbox-item selectbox-item">50만원 이상</li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">역세권</label>
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500m</option>
+						   		<option value="2">1000m</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">500m</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">500m</li>
+									<li class="selectbox-item selectbox-item-over">1000m </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">입주일</label>
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">3년</option>
+						   		<option value="2">5년</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">3년</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">3년</li>
+									<li class="selectbox-item selectbox-item-over">5년 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark radio-checked"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1" class="on">세대수</label>
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500세대</option>
+						   		<option value="2">1000세대</option>
+								<option value="2">2500세대</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">2500세대</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item">500세대</li>
+									<li class="selectbox-item selectbox-item-over">1000세대 </li>
+									<li class="selectbox-item selectbox-item-selected">2500세대 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이상</span>
+					</div>
+				</div>
+				<h3>매물확인일 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="wide"><input type="radio" name="radio5" id="type5_radio1" class="btn_radio" checked="checked"> <label for="type5_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio2" class="btn_radio"> <label for="type5_radio2">오늘</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio3" class="btn_radio"> <label for="type5_radio3">최근 1주</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio4" class="btn_radio"> <label for="type5_radio4">최근 1달</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio5" class="btn_radio"> <label for="type5_radio5">최근 2달</label></div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <span class="btn_calc disabled">전체삭제</span> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area">
+					<p class="none">속성을 선택하면 이곳에 표시됩니다.</p>
+				</div>
+			</div>
+			<!-- //검색속성 -->
+			
+			<p style="padding:20px 5px 5px 5px;">매물 (매물직접선택 닫힘/월세/속성선택)</p>
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>매물종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio" checked="checked"> <label for="type1_radio1" class="on">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio"> <label for="type1_radio2">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+				</div>
+				<h3>거래종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio2" id="type2_radio1" class="btn_radio"> <label for="type2_radio1">전체</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio2" class="btn_radio"> <label for="type2_radio2">매매</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio3" class="btn_radio" checked="checked"> <label for="type2_radio3" class="on">월세</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio4" class="btn_radio"> <label for="type2_radio4">전세</label></div>
+				</div>
+				<h3>가격 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area" style="z-index:4">
+					<h4>보증금</h4>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:105px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+					<h4 class="month">월세</h4>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio1" class="btn_radio" checked="checked"> <label for="type6_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio2" class="btn_radio"> <label for="type6_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio3" class="btn_radio"> <label for="type6_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio4" class="btn_radio"> <label for="type6_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio5" class="btn_radio"> <label for="type6_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio6" class="btn_radio"> <label for="type6_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio6" id="type6_radio7" class="btn_radio"> <label for="type6_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:240px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+					<div class="calc">
+						<h4>평형 계산기</h4>
+						<input type="text" class="calc_text" title="면적" style="width:34px;">
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">평</option>
+						   		<option value="2">㎡</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">평</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">평</li>
+									<li class="selectbox-item selectbox-item-over">㎡ </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+						<p class="result"><strong>175.5</strong> ㎡</p>
+						<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+					</div>
+				</div>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio" checked="checked"> <label for="type4_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"> <label for="type4_radio2" title="66㎡ = 20평"><em>66㎡ </em>이하</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"> <label for="type4_radio3" title="66㎡ = 20평&#13;99㎡ = 30평"><em>66~99㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"> <label for="type4_radio4" title="99㎡ = 30평&#13;132㎡ = 40평"><em>99~132㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"> <label for="type4_radio5" title="132㎡ = 40평&#13;165㎡ = 50평"><em>132~165㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio"> <label for="type4_radio6" title="165㎡ = 50평&#13;198㎡ = 60평"><em>165~198㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio7" class="btn_radio"> <label for="type4_radio7" title="198㎡ = 60평&#13;330㎡ = 100평"><em>198~330㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio8" class="btn_radio"> <label for="type4_radio8" title="330㎡ = 100평&#13;991㎡ = 300평"><em>330~991㎡</em></label></div>
+					<div class="wide pd5"><input type="radio" name="radio4" id="type4_radio11" class="btn_radio"> <label for="type4_radio11">직접입력</label> <span class="crit"><em>(㎡)</em></span></div>
+					<div class="direct">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:20px;"><em>25.8평</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:92px;"><em>25.8평</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:121px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>단지조건 <span class="multi">(복수선택가능)</span><a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area has_select">
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">역세권</label>
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">3년</option>
+						   		<option value="2">5년</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">3년</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">3년</li>
+									<li class="selectbox-item selectbox-item-over">5년 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">입주일</label>
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500m</option>
+						   		<option value="2">1000m</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">500m</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">500m</li>
+									<li class="selectbox-item selectbox-item-over">1000m </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark radio-checked"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1" class="on">세대수</label>
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500세대</option>
+						   		<option value="2">1000세대</option>
+								<option value="2">2500세대</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">2500세대</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item">500세대</li>
+									<li class="selectbox-item selectbox-item-over">1000세대 </li>
+									<li class="selectbox-item selectbox-item-selected">2500세대 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이상</span>
+					</div>
+				</div>
+				<h3>매물확인일 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="wide"><input type="radio" name="radio5" id="type5_radio1" class="btn_radio" checked="checked"> <label for="type5_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio2" class="btn_radio"> <label for="type5_radio2">오늘</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio3" class="btn_radio"> <label for="type5_radio3">최근 1주</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio4" class="btn_radio"> <label for="type5_radio4">최근 1달</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio5" class="btn_radio"> <label for="type5_radio5">최근 2달</label></div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area select_none">
+					<ul>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //검색속성 -->
+
+			<p style="padding:20px 5px 5px 5px;">매물 (모두 닫힌 상태)</p>
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>매물종류 <a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+				<h3>거래종류 <a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+				<h3>가격 <a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+				</div>
+				<h3>단지조건 <span class="multi">(복수선택가능)</span><a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+				<h3>매물확인일 <a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold.gif" alt="열기" width="7" height="5" ></a></h3>
+			</div>
+			<!-- //검색속성 -->
+			
+			<p style="padding:20px 5px 5px 5px;">단지 (기본)</p>
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>단지종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio"> <label for="type1_radio1">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio" checked="checked"> <label for="type1_radio2" class="on">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand on"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+					<div class="fold2">
+						<div class="col1">
+							<!-- [D] 체크박스 Jindo component 사용했습니다. -->
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check1">
+							</span>
+							<label for="type1_check1" class="on">아파트</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check2">
+							</span>
+							<label for="type1_check2" class="on">주상복합</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">재건축</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">오피스텔</label>
+						</div>
+						<div class="wide first">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check5">
+							</span>
+							<label for="type1_check5">아파트 분양권</label>
+						</div>
+						<div class="wide">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check6">
+							</span>
+							<label for="type1_check6">주상복합 분양권</label>
+						</div>
+						<div class="wide">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check7">
+							</span>
+							<label for="type1_check7">오피스텔 분양권</label>
+						</div>
+						<div class="btn_area">
+							<a href="#"><img src="img/btn_select_estate.gif" alt="단지종류 선택" width="96" height="24" ></a>
+						</div>
+					</div>
+				</div>
+				<h3>시세 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<ul class="market">
+					<li class="t1"><a href="#">매매가</a></li>
+					<li class="t2"><a href="#" class="on">전세가</a></li>
+					</ul>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:125px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>단지조건 <span class="multi">(복수선택가능)</span><a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area has_select">
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">역세권</label>
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">3년</option>
+						   		<option value="2">5년</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">3년</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">3년</li>
+									<li class="selectbox-item selectbox-item-over">5년 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">입주일</label>
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500m</option>
+						   		<option value="2">1000m</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">500m</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">500m</li>
+									<li class="selectbox-item selectbox-item-over">1000m </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark radio-checked"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1" class="on">세대수</label>
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500세대</option>
+						   		<option value="2">1000세대</option>
+								<option value="2">2500세대</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">2500세대</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item">500세대</li>
+									<li class="selectbox-item selectbox-item-over">1000세대 </li>
+									<li class="selectbox-item selectbox-item-selected">2500세대 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이상</span>
+					</div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area select_none">
+					<ul>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>매물종류 (아파트,주상복합,오피스텔,재개발,원룸) <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 검색속성 -->
+			
+			<p style="padding:20px 5px 5px 5px;">분양 (기본)</p>
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>진행단계 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio5" id="type5_radio2" class="btn_radio" checked="checked"> <label for="type5_radio2" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio3" class="btn_radio"> <label for="type5_radio3">분양계획</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio4" class="btn_radio"> <label for="type5_radio4">분양중</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio5" class="btn_radio"> <label for="type5_radio5">미분양</label></div>
+				</div>
+				<h3>분양종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio"> <label for="type1_radio1">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio" checked="checked"> <label for="type1_radio2" class="on">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand on"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+					<div class="fold2">
+						<div class="col1">
+							<!-- [D] 체크박스 Jindo component 사용했습니다. -->
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check1">
+							</span>
+							<label for="type1_check1" class="on">아파트</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check2">
+							</span>
+							<label for="type1_check2" class="on">주상복합</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">타운하우스</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">임대</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">오피스텔</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">기타</label>
+						</div>
+						<div class="btn_area">
+							<a href="#"><img src="img/btn_select_lots.gif" alt="분양종류 선택" width="96" height="24" ></a>
+						</div>
+					</div>
+				</div>
+				<h3>분양가 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area" style="z-index:4">
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+					<div class="calc">
+						<h4>평형 계산기</h4>
+						<input type="text" class="calc_text" title="면적" style="width:34px;">
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">평</option>
+						   		<option value="2">㎡</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">평</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">평</li>
+									<li class="selectbox-item selectbox-item-over">㎡ </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+						<p class="result"><strong>175.5</strong> ㎡</p>
+						<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+					</div>
+				</div>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio" checked="checked"> <label for="type4_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"> <label for="type4_radio2" title="66㎡ = 20평"><em>66㎡ </em>이하</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"> <label for="type4_radio3" title="66㎡ = 20평&#13;99㎡ = 30평"><em>66~99㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"> <label for="type4_radio4" title="99㎡ = 30평&#13;132㎡ = 40평"><em>99~132㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"> <label for="type4_radio5" title="132㎡ = 40평&#13;165㎡ = 50평"><em>132~165㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio"> <label for="type4_radio6" title="165㎡ = 50평&#13;198㎡ = 60평"><em>165~198㎡</em></label></div>
+					<div class="wide pd5"><input type="radio" name="radio4" id="type4_radio11" class="btn_radio"> <label for="type4_radio11">직접입력</label> <span class="crit"><em>(㎡)</em></span></div>
+					<div class="direct">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:20px;"><em>25.8평</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:92px;"><em>25.8평</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>단지조건 <span class="multi">(복수선택가능)</span><a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area has_select">
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">입주예정</label>
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">3년</option>
+						   		<option value="2">5년</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">3년</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">3년</li>
+									<li class="selectbox-item selectbox-item-over">5년 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark radio-checked"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1" class="on">세대수</label>
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500세대</option>
+						   		<option value="2">1000세대</option>
+								<option value="2">2500세대</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">2500세대</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item">500세대</li>
+									<li class="selectbox-item selectbox-item-over">1000세대 </li>
+									<li class="selectbox-item selectbox-item-selected">2500세대 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이상</span>
+					</div>
+				</div>
+				<h3>분양시기 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio5" id="type15_radio2" class="btn_radio" checked="checked"> <label for="type15_radio2" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type15_radio3" class="btn_radio"> <label for="type15_radio3">오늘</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type15_radio4" class="btn_radio"> <label for="type15_radio4">최근 1주</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type15_radio5" class="btn_radio"> <label for="type15_radio5">최근 2달</label></div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area select_none">
+					<ul>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>매물종류 (아파트,주상복합,오피스텔,재개발,원룸) <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 검색속성 -->
+			
+			<p style="padding:20px 5px 5px 5px;">경매 (기본)</p>
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>경매종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio"> <label for="type1_radio1">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio" checked="checked"> <label for="type1_radio2" class="on">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand on"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+					<div class="fold2">
+						<div class="col1">
+							<!-- [D] 체크박스 Jindo component 사용했습니다. -->
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check1">
+							</span>
+							<label for="type1_check1" class="on">아파트</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check2">
+							</span>
+							<label for="type1_check2" class="on">근린주택</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">오피스텔</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">근린상가</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">주택</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">근린시설</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">다가구</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">숙박시설</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">다세대</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">토지</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">과수원</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">대지</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">임야</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">농지</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">공장</label>
+						</div>
+						<div class="btn_area">
+							<a href="#"><img src="img/btn_select_auction.gif" alt="경매종류 선택" width="96" height="24" ></a>
+						</div>
+					</div>
+				</div>
+				<h3>경매가 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area" style="z-index:4">
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+					<div class="calc">
+						<h4>평형 계산기</h4>
+						<input type="text" class="calc_text" title="면적" style="width:34px;">
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">평</option>
+						   		<option value="2">㎡</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">평</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">평</li>
+									<li class="selectbox-item selectbox-item-over">㎡ </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+						<p class="result"><strong>175.5</strong> ㎡</p>
+						<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+					</div>
+				</div>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio" checked="checked"> <label for="type4_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"> <label for="type4_radio2" title="66㎡ = 20평"><em>66㎡ </em>이하</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"> <label for="type4_radio3" title="66㎡ = 20평&#13;99㎡ = 30평"><em>66~99㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"> <label for="type4_radio4" title="99㎡ = 30평&#13;132㎡ = 40평"><em>99~132㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"> <label for="type4_radio5" title="132㎡ = 40평&#13;165㎡ = 50평"><em>132~165㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio"> <label for="type4_radio6" title="165㎡ = 50평&#13;198㎡ = 60평"><em>165~198㎡</em></label></div>
+					<div class="wide pd5"><input type="radio" name="radio4" id="type4_radio11" class="btn_radio"> <label for="type4_radio11">직접입력</label> <span class="crit"><em>(㎡)</em></span></div>
+					<div class="direct">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:20px;"><em>25.8평</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:92px;"><em>25.8평</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>입찰일 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="wide"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">오늘</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">최근 1주</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">최근 1달</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">최근 2달</label></div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area select_none">
+					<ul>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>매물종류 (아파트,주상복합,오피스텔,재개발,원룸) <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 검색속성 -->
+
+		</div>
+	</div>
+</body>
+</html>

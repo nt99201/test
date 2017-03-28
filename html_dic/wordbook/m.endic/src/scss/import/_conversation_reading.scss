@@ -1,0 +1,535 @@
+@charset "UTF-8";
+
+/* 리딩 영역 */
+.reading_area{
+  padding-top:9px;
+}
+
+.reading_top{
+  @include relative;
+
+  padding:17px 9px 14px 14px;;
+  background-color:#93accc;
+  border-bottom:1px solid #87a4c7;
+  color:#fff;
+
+  .txt_area{
+    padding-right:35px;
+    font-family:$G-font-basic;
+
+    strong{
+        font-family:$G-font-helveticaNeue;
+    }
+    .txt_origin{  // 원문
+      display: block;
+      font-size:21px;
+      line-height:25px;
+    }
+    .txt_trans{  //번역
+      display:block;
+      margin:6px 0 20px;
+      font-size:14px;
+      line-height:20px;
+    }
+  }
+}
+
+//전체듣기 버튼세트
+.listen_all_wrap{
+  display:inline-block;
+  height:26px;
+  line-height:26px;
+  border:1px solid #c9d6e6;
+
+  .btn_all{
+    display:inline-block;
+    height:25px;
+    line-height:25px;
+    padding:1px 4px 0 7px;
+    font-size:13px;
+    color:#fff;
+    vertical-align:top;
+
+    .ico{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(15px, 12px, 0, -110px);
+
+      display:inline-block;
+      vertical-align:top;
+      margin:6px 0 0 6px;
+    }
+    &.on .ico{
+      background-position:-57px -130px;
+    }
+
+    &.loading .ico{
+      @extend %img_loading02;
+      @include relative;
+      @include spriteConversation(16px, 4px, 0, 0);
+
+      display:inline-block;
+      vertical-align:top;
+      margin:10px 0 0 5px;
+    }
+  }
+  .btn_repeat{
+    display:inline-block;
+    width:30px;
+    height:26px;
+    border-left:1px solid #b4c5db;
+    vertical-align:top;
+
+    .ico{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(15px, 14px, -20px, -110px);
+
+      display:block;
+      vertical-align:top;
+      margin:6px auto 0;
+    }
+
+    &.on .ico{
+      background-position:-57px -129px;
+    }
+    &.loading .ico{
+      @extend %img_loading02;
+      @include relative;
+      @include spriteConversation(16px, 4px, 0, 0);
+
+      display:inline-block;
+      vertical-align:top;
+      margin:11px 0 0 6px;
+    }
+  }
+}
+
+// 듣기 버튼 세트
+.listen_btn_wrap{
+  display:inline-block;
+  margin-top:3px;
+  border:1px solid #d2d8de;
+  line-height:0;
+  font-size:0;
+  vertical-align:top;
+
+  a{
+    display:inline-block;
+    width:18px;
+    height:15px;
+    padding:5px 0 0 6px;
+    background-color:#fff;
+    vertical-align:top;
+
+    .ico{
+    @extend %sprite_conversation_img;
+    @include spriteConversation(13px, 10px, -40px, -110px);
+
+    display:block;
+    vertical-align:top;
+    }
+    &.on{
+      background-color:#f1f3f5;
+    }
+    &.on.loading{
+      background-color:#fff;
+    }
+    &.on .ico{
+      background-position:-58px -150px;
+    }
+    &.loading .ico{
+      @extend %img_loading01;
+      @include relative;
+      @include spriteConversation(16px, 12px, -2px, 3px);
+
+      display:inline-block;
+      background-color:#fff;
+      vertical-align:top;
+    }
+  }
+  .btn_repeat{
+    height:16px;
+    padding:4px 0 0 6px;
+    border-left:1px solid #dfe4e8;
+    .ico{
+      @include spriteConversation(13px, 12px, -60px, -110px);
+    }
+    &.on .ico{
+      background-position:-58px -149px;
+    }
+    &.loading .ico{
+      background-position:-2px 4px;
+    }
+  }
+}
+
+// 해석보기 버튼
+.interpret_btn_wrap{
+  @extend %clear;
+  float:right;
+  border:{
+    width:0 0 0 1px;
+    style:solid;
+    color:#c9d6e6;
+  }
+
+  input[type='radio']{
+    display:none;
+
+    + label{
+      @include relative;
+
+      float:left;
+      border:{
+        width:1px 1px 1px 0;
+        style:solid;
+        color:#c9d6e6;
+      }
+      line-height:25px;
+      padding:1px 9px 0;
+      font-size:13px;
+    }
+
+    &.checked + label{
+      color:#fbff95;
+
+      &:after{
+        @include absolute(top -1px left -1px right -1px bottom -1px);
+        border:{
+          width:1px;
+          style:solid;
+          color:#fbff95;
+        }
+        content:'';
+      }
+    }
+  }
+}
+
+// 옵션메뉴 세트
+.option_btn_wrap{
+  @include absolute(right 0 top 14px);
+
+  .btn_option{
+    @extend %sprite_conversation_img;
+    @include spriteConversation(34px, 38px, -100px, -40px);
+
+    display:block;
+  }
+  .ly_option_wrap{
+    @include absolute(right 15px top 33px);
+
+    border:1px solid #ccc;
+    background-color:#fff;
+    white-space:nowrap;
+
+    .option_font{
+      padding:11px 12px;
+      text-align:center;
+    }
+    .option_font a{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(26px, 26px, 0, -50px);
+
+      display:inline-block;
+      vertical-align:top;
+
+      &.ft_big{
+        background-position:-30px -50px;
+      }
+      &.disabled{
+        background-position-y:-80px;
+      }
+    }
+    .option_font .ft{
+      display:inline-block;
+      width:52px;
+      line-height:26px;
+      font-size:18px;
+      color:#444;
+      vertical-align: top;
+    }
+  }
+  .option_btn_lst{
+    padding:10px 0;
+    border-top:1px solid #ccc;
+    a{
+      display:block;
+      padding:7px 11px;
+      font-size:15px;
+      color:#000;
+    }
+  }
+}
+
+//리딩 본문 영역
+.reading_lst_wrap{
+  background-color:#fff;
+
+  .source{
+    margin-top:-3px;
+    padding:9px 14px 18px;
+    font-size:12px;
+    text-align:right;
+    color:#bbb;
+
+    .btn_source{
+      color:#005FC3;
+    }
+  }
+}
+
+//리딩 본문 목록
+.reading_lst li{
+  overflow:hidden;
+  padding:10px 15px 12px;
+  border-top:1px solid #ededed;
+
+  &:first-child{
+    border-top:none;
+    padding-top:16px;
+  }
+
+  .img_thumb{
+    @extend %sprite_conversation_img;
+
+    $thumb:(
+      man1: -260px 0,
+      man2: -260px -40px,
+      man3: -260px -80px,
+      woman1:-300px 0,
+      woman2:-300px -40px,
+      woman3:-300px -80px,
+      mchild1:-260px -120px,
+      mchild2:-260px -160px,
+      wchild1:-300px -120px,
+      wchild2:-300px -160px,
+      a:0 0,
+      b:-40px 0,
+      c:-80px 0
+    );
+
+    @each $key, $value in $thumb{
+      &.#{$key}{
+        background-position: $value;
+      }
+    }
+
+    float:left;
+    width:33px;
+    height:33px;
+    margin:2px 11px 0 0;
+  }
+
+  .txt_wrap{
+    overflow:hidden;
+    font-family:$G-font-helveticaNeue;
+
+    strong{
+        font-family:$G-font-helveticaNeue;
+    }
+
+    .txt_origin{ //원문
+      font-size:17px;
+      line-height:23px;
+      color:#000;
+    }
+
+    .txt_trans{  //번역
+      margin:2px 0 0;
+      font-size:14px;
+      line-height:20px;
+      color:#222;
+    }
+  }
+}
+
+//학습정보
+.keyword_area{
+  padding-top:9px;
+  background-color:#f1f1f1;
+
+  .keyword_wrap{
+    background-color:#fff;
+  }
+
+  .section_tit{
+    @extend %clear;
+
+    height:40px;
+    line-height:40px;
+    padding:0 10px 0 15px;
+    border-bottom:1px solid #e5e5e5;
+
+    .h_tit{
+      float:left;
+      font-size:15px;
+      color:#222;
+    }
+    .btn_example{
+      float:right;
+      padding:0 5px;
+      font-size:13px;
+      color:#999;
+    }
+  }
+}
+
+
+
+// 학습정보,관련단어 리스트
+.keyword_lst{
+  background-color:#fff;
+}
+
+.keyword_lst > li{
+  border-top:1px solid #e5e5e5;
+
+  &:first-child{
+    border-top:none;
+  }
+
+  .txt_wrap{
+    padding:14px 15px 16px;
+
+    strong{
+        font-family:$G-font-helveticaNeue;
+    }
+
+    .txt_origin{  //원문
+      font-size:18px;
+      line-height:24px;
+      color:#000;
+      font-weight:normal;
+    }
+    .txt_trans{  //번역
+      display:block;
+      margin-top:3px;
+      font-size:14px;
+      line-height:18px;
+      color:#000;
+    }
+  }
+
+  .example_lst{
+    @include relative;
+
+    padding:0 15px;
+    border-top:1px solid #e1e2e3;
+    background-color:#f5f5f6;
+
+    > li{
+      padding:13px 0 15px;
+      border-top:1px solid #e1e2e3;
+
+      &:first-child{
+        border-top:none;
+      }
+
+      .txt_origin{  //원문
+        font-size:17px;
+        line-height:21px;
+        color:#5f5f5f;
+      }
+
+      .txt_trans{  //번역
+        display:block;
+        margin-top:5px;
+        font-size:14px;
+        line-height:18px;
+        color:#5f5f5f;
+      }
+    }
+
+    &:after{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(10px, 6px, -90px, -130px);
+      @include absolute(top -6px left 25px);
+
+      display:block;
+      content:'';
+    }
+  }
+}
+
+//관련단어
+
+.relation_word .tit{
+  height:33px;
+  line-height:33px;
+  padding:0 15px;
+  background-color:#e0e0e0;
+  font-size:13px;
+  color:#222;
+  font-weight:normal;
+}
+
+// 오늘의 의견왕을 만나보세요
+.best_reply_area{
+  background-color:#ececec;
+  padding:9px 0 0;
+  margin:0 0 -8px;
+
+  .section_tit{
+    @extend %clear;
+
+    height:40px;
+    line-height:40px;
+    padding:0 10px 0 15px;
+    background-color:#fff;
+    border-bottom:1px solid #e5e5e5;
+
+    .h_tit{
+      float:left;
+      font-size:14px;
+      color:#666;
+      font-weight:normal;
+    }
+    .btn_more{
+      float:right;
+      padding:0 5px;
+      font-size:13px;
+      color:#999;
+    }
+  }
+  .best_reply{
+    background-color:#fff;
+    padding-top:11px;
+  }
+}
+.best_reply_area + .banner_area{
+  @include relative;
+}
+
+//공지사항
+.notice_area{
+  @include relative;
+  @include ellipsis(1);
+
+  height:42px;
+  line-height:42px;
+  margin-top:9px;
+  padding:0 45px 0 15px;
+  background-color:#626262;
+  color:#fff;
+
+  a{
+    font-size:14px;
+    color:#fff;
+  }
+
+  .ico{
+    display:inline-block;
+    line-height:1;
+    margin-right:3px;
+    padding:3px 5px 2px;
+    border:1px solid #868686;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+  }
+  .btn_cls{
+    @include absolute(right 15px top 13px);
+    @extend %sprite_conversation_img;
+    @include spriteConversation(15px, 15px, 0, -310px);
+  }
+}

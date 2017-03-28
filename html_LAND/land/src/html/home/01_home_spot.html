@@ -1,0 +1,2445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>spot 영역 모음</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_home.css">
+
+</head>
+
+<body>
+<!-- 기본 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<div class="article cast">
+					<div class="header">
+						<h2>부동산 캐스트</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<p class="date">
+						<a href="#" class="prev">이전 날짜 기사 보기</a>
+						<!-- [D] span 태그는 붙여서 출력시켜 주세요. -->
+						<span class="no2011">2011.</span><span class="no2">02.</span><span class="l_no20">20</span>
+						<a href="#" class="next">다음 날짜 기사 보기</a>
+					</p>
+					<a href="#" class="l_spot">
+						<img src="img/@thum4.gif" width="94" height="70" alt="" class="thmb"><span class="mask"></span>
+						<em class="mark">[Q&amp;A]</em>
+						<span class="tit"><strong>일이삼사오육칠팔구십일</strong></span>
+						<span class="con">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</span>
+					</a>
+					<ul>
+					<li><a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십</a></li>
+					<li><a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십</a></li>
+					<li><a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //기본 -->
+<!-- 맵 리스트 및 부동산 인기검색 활성 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="map">지도로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:block">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<!-- [D] "지역을 선택해주세요." 출력시 ul에 none 클래스 추가 -->
+					<div class="list3">
+						<ul class="none">
+						<li>지역을 선택해주세요.</li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<div class="article cast">
+					<div class="header">
+						<h2>부동산 캐스트</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<p class="date">
+						<a href="#" class="prev">이전 날짜 기사 보기</a>
+						<!-- [D] span 태그는 붙여서 출력시켜 주세요. -->
+						<span class="no2011">2011.</span><span class="no2">02.</span><span class="l_no20">20</span>
+						<a href="#" class="next">다음 날짜 기사 보기</a>
+					</p>
+					<p class="con">
+						<a href="#" class="img"><img src="img/@thum4.gif" width="94" height="70" alt=""><span></span></a>
+						<em>[Q&amp;A]</em><br>
+						<a href="#" class="tit"><strong>서울시에 50만원 이..</strong></a><br>
+						<a href="#" class="con">일산 신도시 북동쪽에 접 시청으로부터 서쪽으로..</a>
+					</p>
+					<ul>
+					<li><em>[Q&amp;A]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+					<li><em>[분양]</em> <a href="#">부동산 침체, 세금이 안걷힌다</a></li>
+					<li><em>[칼럼]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<!-- [D] 활성화 : hot_on 클래스 추가 -->
+			<div class="hot hot_on">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="new">NEW</span></em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span>변화없음</span></em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span><strong>1</strong>/2</span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //맵 리스트 및 부동산 인기검색 활성 -->
+<!-- 맵 리스트 및 부동산 인기검색 활성(확인매물보기) -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="map">지도로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:block">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt"><strong><em>&lsquo;강남구&rsquo;</em> 매물건수</strong><br>
+							매매 <small>2311</small> <span class="bar">|</span> 전세 <small>2323</small> <span class="bar">|</span> 월세 <small>2323</small></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#" class="view">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<div class="article cast">
+					<div class="header">
+						<h2>부동산 캐스트</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<p class="date">
+						<a href="#" class="prev">이전 날짜 기사 보기</a>
+						<!-- [D] span 태그는 붙여서 출력시켜 주세요. -->
+						<span class="no2011">2011.</span><span class="no2">02.</span><span class="l_no20">20</span>
+						<a href="#" class="next">다음 날짜 기사 보기</a>
+					</p>
+					<p class="con">
+						<a href="#" class="img"><img src="img/@thum4.gif" width="94" height="70" alt=""><span></span></a>
+						<em>[Q&amp;A]</em><br>
+						<a href="#" class="tit"><strong>서울시에 50만원 이..</strong></a><br>
+						<a href="#" class="con">일산 신도시 북동쪽에 접 시청으로부터 서쪽으로..</a>
+					</p>
+					<ul>
+					<li><em>[Q&amp;A]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+					<li><em>[분양]</em> <a href="#">부동산 침체, 세금이 안걷힌다</a></li>
+					<li><em>[칼럼]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<!-- [D] 활성화 : hot_on 클래스 추가 -->
+			<div class="hot hot_on">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span><strong>1</strong>/2</span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //맵 리스트 및 부동산 인기검색 활성(확인매물보기) -->
+<!-- Today 경매물건 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:block">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today 경매물건 article -->
+				<div class="article auction">
+					<div class="header">
+						<h2>TODAY 경매물건</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<a href="#" class="l_spot">
+						<img src="img/@thum4.gif" width="94" height="70" alt="" class="thmb"><span class="mask"></span>
+						<span class="tit"><strong>근린시설</strong></span>
+						<span class="con loc">서울시 성동구 성수동2가..</span>
+						<span class="price">
+							<strong>감정가</strong> <span>|</span> 750,000,000,000원<br>
+							<strong>입찰가</strong> <span>|</span> 250,000,000원
+						</span>
+					</a>
+					<ul>
+					<li><em>[무료동영상]</em> <a href="#">임차인의 유치권 행사</a></li>
+					<li><em>[경매지식iN]</em> <a href="#">경매로 진행되는 상황 자세히...</a></li>
+					<li><em>[경매캘린더]</em> <a href="#">이번달 진행 경매 일정 보기</a></li>
+					<li><em>[무료동영상]</em> <a href="#">임차인의 유치권 행사</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today 경매물건 article -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today 경매물건 -->
+<!-- Today 경매물건2 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today 경매물건 -->
+				<div class="article auction">
+					<div class="header">
+						<h2>TODAY 경매물건</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<a href="#" class="l_spot">
+						<img src="img/@thum4.gif" width="94" height="70" alt="" class="thmb"><span class="mask"></span>
+						<em class="mark">[초보자경매입문]</em>
+						<span class="tit"><strong>01.경매란 무엇인가?</strong></span>
+						<span class="con">일산 신도시 북동쪽에 접 시청으로부터 서쪽으로..</span>
+					</a>
+					<ul>
+					<li><em>[무료동영상]</em> <a href="#">임차인의 유치권 행사</a></li>
+					<li><em>[경매지식iN]</em> <a href="#">경매로 진행되는 상황 자세히...</a></li>
+					<li><em>[경매캘린더]</em> <a href="#">이번달 진행 경매 일정 보기</a></li>
+					<li><em>[무료동영상]</em> <a href="#">임차인의 유치권 행사</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today 경매물건 -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today 경매물건2 -->
+<!-- Today 분양단지 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today 분양단지 -->
+				<div class="article land">
+					<div class="header">
+						<h2>TODAY 분양단지</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<a href="#" class="l_spot">
+						<img src="img/@thum4.gif" width="94" height="70" alt="" class="thmb"><span class="mask"></span>
+						<span class="tit"><strong>신정하우스 2단지</strong></span>
+						<span class="con loc">경기도 수원시 이의동 480</span>
+						<span class="price">
+							<strong>규모</strong> <span>|</span> 22개동 총 1820가구<br>
+							<strong>분양시기</strong> <span>|</span> 2011.01.25
+						</span>
+					</a>
+					<ul>
+					<li><em>[분양단지]</em> <a href="#">1월2주차 분양동향</a></li>
+					<li><em>[분양현장정보]</em> <a href="#">광교신도시 분양현장에 가다</a></li>
+					<li><em>[분양캘린더]</em> <a href="#">이번주 분양 경매 일정 보기</a></li>
+					<li><em>[분양단지]</em> <a href="#">1월2주차 분양동향</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today 분양단지 -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today 분양단지 -->
+<!-- Today 이슈 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today 이슈 -->
+				<div class="article issue">
+					<div class="header">
+						<h2>TODAY 이슈</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<a href="#" class="l_spot">
+						<img src="img/@thum4.gif" width="94" height="70" alt="" class="thmb"><span class="mask"></span>
+						<span class="tit"><strong>경전철 활성화 발표</strong></span>
+						<span class="con">지난달 전국적으로 분양한 아파트와 준공 아파트들을 량이 동반 감소..</span>
+						<span class="ref">매일경제매일경제매일</span>
+					</a>
+					<ul>
+					<li><em>[분양단지]</em> <a href="#">1월2주차 분양동향</a></li>
+					<li><em>[분양현장정보]</em> <a href="#">광교신도시 분양현장에 가다</a></li>
+					<li><em>[분양캘린더]</em> <a href="#">이번주 분양 경매 일정 보기</a></li>
+					<li><em>[분양단지]</em> <a href="#">일이삼사오육칠팔구십일이삼사</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today 이슈 -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today 이슈 -->
+<!-- Today 이슈2 -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today 이슈2 -->
+				<div class="article issue">
+					<div class="header">
+						<h2>TODAY 이슈</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<a href="#" class="l_spot">
+						<span class="tit"><strong>경전철 활성화 발표로 활성</strong></span>
+						<span class="con">지난달 전국적으로 분양한 아파트와 준공 아파트들을 물량이 동반 감소했다. 국토 해양부는 지난달 전국에서 분양된 공동...</span>
+						<span class="ref">매일경제</span>
+					</a>
+					<ul>
+					<li><em>[분양단지]</em> <a href="#">1월2주차 분양동향</a></li>
+					<li><em>[분양현장정보]</em> <a href="#">광교신도시 분양현장에 가다</a></li>
+					<li><em>[분양캘린더]</em> <a href="#">이번주 분양 경매 일정 보기</a></li>
+					<li><em>[분양단지]</em> <a href="#">1월2주차 분양동향</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today 이슈2 -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today 이슈2 -->
+<!-- Today TIP! -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today TIP! -->
+				<div class="article tip">
+					<div class="header">
+						<h2>TODAY TIP!</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<p class="con con2">
+						<a href="#" class="tit"><strong>매물확인은 어떻게 하나요?</strong></a><br>
+						<span class="tip"></span>
+						<a href="#" class="con">매도자, 임대의뢰인에게 &#39;의뢰여부&#39;를 전화나 서류로 확인하고, 등기등본으로 확인합니다.</a>
+					</p>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today TIP! -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today TIP! -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Today TIP! -->
+<div class="spot_wrap">
+	<div class="spot">
+		<div class="map">
+			<div class="map_top">
+				<ul class="cate">
+				<li class="m"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">빌라</a></li>
+				<li class="m5"><a href="#">주택</a></li>
+				<li class="m6"><a href="#">토지</a></li>
+				<li class="m7"><a href="#">원룸</a></li>
+				<li class="m8"><a href="#">상가</a></li>
+				<li class="m9"><a href="#">사무실</a></li>
+				<li class="m10"><a href="#">공장</a></li>
+				<li class="m11"><a href="#">재개발</a></li>
+				<li class="m12"><a href="#">건물</a></li>
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#">매매</a></li>
+				<li class="m15"><a href="#">전세</a></li>
+				<li class="m16"><a href="#">월세</a></li>
+				</ul>
+				<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+				<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+			</div>
+			<!-- 맵 출력 영역 -->
+			<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+			<!-- //맵 출력 영역 -->
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w selectbox-noscript">
+						<select title="지역 선택" class="selectbox-source">
+							<option value="1">서울시</option>
+							<option value="2">서울시1</option>
+							<option value="3">서울시2</option>
+							<option value="4">서울시3</option>
+							<option value="6">서울시4</option>
+							<option value="7">서울시5</option>
+							<option value="8">서울시6</option>
+							<option value="9">서울시7</option>
+							<option value="10">서울시8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2 selectbox-noscript">
+						<select title="시/군/구 선택" class="selectbox-source">
+							<option value="1">시&frasl;군&frasl;구</option>
+							<option value="2">시&frasl;군&frasl;구1</option>
+							<option value="3">시&frasl;군&frasl;구2</option>
+							<option value="4">시&frasl;군&frasl;구3</option>
+							<option value="6">시&frasl;군&frasl;구4</option>
+							<option value="7">시&frasl;군&frasl;구5</option>
+							<option value="8">시&frasl;군&frasl;구6</option>
+							<option value="9">시&frasl;군&frasl;구7</option>
+							<option value="10">시&frasl;군&frasl;구8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w selectbox-noscript">
+						<select title="읍/면/동 선택" class="selectbox-source">
+							<option value="1">읍&frasl;면&frasl;동</option>
+							<option value="2">읍&frasl;면&frasl;동1</option>
+							<option value="3">읍&frasl;면&frasl;동2</option>
+							<option value="4">읍&frasl;면&frasl;동3</option>
+							<option value="6">읍&frasl;면&frasl;동4</option>
+							<option value="7">읍&frasl;면&frasl;동5</option>
+							<option value="8">읍&frasl;면&frasl;동6</option>
+							<option value="9">읍&frasl;면&frasl;동7</option>
+							<option value="10">읍&frasl;면&frasl;동8</option>
+					   </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div class="selectbox-layer">
+							<div class="selectbox-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<div class="list_wrap" style="display:block" id="recentComplexList">
+						<ol>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+						</ol>
+						<button type="button" class="all_del">전체기록 삭제</button>
+					</div>
+				</div>
+				<!-- [D] display:none/block toggle -->
+				<div class="loc_list" style="display:none">
+					<div class="list">
+						<ul>
+						<li><a href="#" class="selected">서울시</a></li>
+						<li><a href="#">경기도</a></li>
+						<li><a href="#">인천시</a></li>
+						<li><a href="#">부산시</a></li>
+						<li><a href="#">대전시</a></li>
+						<li><a href="#">대구시</a></li>
+						<li><a href="#">울산시</a></li>
+						<li><a href="#">광주시</a></li>
+						<li><a href="#">강원도</a></li>
+						<li><a href="#">충청북도</a></li>
+						<li><a href="#">충청남도</a></li>
+						<li><a href="#">경상북도</a></li>
+						<li><a href="#">경상남도</a></li>
+						<li><a href="#">전라북도</a></li>
+						<li><a href="#">전라남도</a></li>
+						<li><a href="#">제주도</a></li>
+						</ul>
+					</div>
+					<!-- [D] 두줄 클래스 : multi -->
+					<div class="list2">
+						<ul>
+						<li><a href="#">가평군</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+						<li><a href="#">광진구</a></li>
+						<li><a href="#">구로구</a></li>
+						<li><a href="#">금천구</a></li>
+						<li><a href="#">노원구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+						<li><a href="#">영등포구</a></li>
+						<li><a href="#">도봉구</a></li>
+						<li><a href="#">동대문구</a></li>
+						<li><a href="#">동작구</a></li>
+						<li><a href="#">마포구</a></li>
+						<li><a href="#">서대문구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">서초구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성동구</a></li>
+						<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+						<li><a href="#">성북구</a></li>
+						<li><a href="#">양천구</a></li>
+						<li><a href="#">영등포구</a></li>
+						</ul>
+					</div>
+					<div class="list3">
+						<ul>
+						<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+						<li><a href="#">수서동 <span>(49)</span></a></li>
+						<li><a href="#">자곡동 <span>(49)</span></a></li>
+						<li><a href="#">논현동 <span>(49)</span></a></li>
+						<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+						<li><a href="#">청담동 <span>(49)</span></a></li>
+						<li><a href="#">대치동 <span>(49)</span></a></li>
+						<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+						<li><a href="#">도곡동 <span>(49)</span></a></li>
+						<li><a href="#">역삼동 <span>(49)</span></a></li>
+						<li><a href="#">삼성동 <span>(49)</span></a></li>
+						<li><a href="#">율현동 <span>(49)</span></a></li>
+						</ul>
+					</div>
+					<div class="sel_view">
+						<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+						<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+						<p class="btn"><a href="#">확인 매물 보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="article_wrap">
+				<!-- Today TIP! -->
+				<div class="article tip">
+					<div class="header">
+						<h2>TODAY TIP!</h2>
+						<p>
+							<span><strong>1</strong>/5</span>
+							<a href="#" class="prev">이전 페이지 보기</a>
+							<a href="#" class="next">다음 페이지 보기</a>
+						</p>
+					</div>
+					<p class="con con3">
+						<a href="#" class="img" title="아이가 있어서 1층 집을 찾아요! 내가 원하는 조건에 딱 맞는 집. 네이버가 추천해드립니다."><img src="img/banner2.gif" width="246" height="153" alt=""></a>
+					</p>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<!-- //Today 분양단지 -->
+			</div>
+			<div class="hot">
+				<h2><span>부동산 인기검색</span></h2>
+				<ol>
+				<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+				<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+				</ol>
+				<a href="#" class="btn_more">더 많은 목록 보기</a>
+				<p class="btn">
+					<a href="#" class="prev">이전 리스트 페이지 보기</a>
+					<span>1/<strong>2</strong></span>
+					<a href="#" class="next">다음 리스트 페이지 보기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Today TIP! -->
+</body>
+</html>

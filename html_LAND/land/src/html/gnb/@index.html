@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>원네이버 GNB</title>
+<style>
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,AppleGothic,sans-serif;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+body{position:relative;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.u_hc{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc,.u_skip{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+#ct{clear:both;width:100%}
+#ct:after{display:block;clear:both;height:1px;margin-top:-1px;content:''}
+
+/* Index */
+body{padding:0 14px;background-color:#fff;word-wrap:break-word;word-break:break-all}
+header{padding:1em 4em .9em .1em;border-bottom:3px solid #222}
+.hd_h1{font-size:1.2em}
+.hd_svc{display:block;position:absolute;top:0;right:4px;width:3em;padding:.8em 24px .7em .6em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;font-size:.86em;line-height:1.1em;color:#666}
+.hd_wr{white-space:nowrap}
+.sec_h{clear:both;margin-top:2em;padding:0 .1em .4em;border-bottom:1px solid #000;font-size:1em}
+.sec_h2{clear:both;padding:1em .1em .4em 1em;border-bottom:1px dotted #888;font-size:1em;background:#e7e7e7}
+.sec_h2::before{display:inline-block;margin-right:.25em;border:2px solid transparent;border-left-color:#000;vertical-align:3px;content:''}
+.sec_n{position:relative}
+.sec_n:after{position:absolute;top:-5px;left:-5px;z-index:-1;width:100%;height:100%;padding:5px;background-color:#eeeff1;content:'';-webkit-box-shadow:0px 0px 5px rgba(0,0,0,.7)}
+.sec_n .sec_h{color:#900}
+.sec_n li:last-child{border-bottom:0}
+.sec_wp{padding:0 10px 10px;border:dotted #888;border-width:0 1px 1px}
+ul{font-size:.9em}
+li{border-bottom:1px solid #dfdfdf}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;_zoom:1}
+li a:hover,li a:focus{background-color:#e7e7e7}
+.lidv{margin-top:1px;border-top:1px solid #dfdfdf}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+li.n a{color:#900}
+li.nt a{color:#a5ac4a}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline-block;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{color:#aaa}
+.ft_a{display:inline-block;padding:2px 2px 5px;color:#16d;letter-spacing:-1px;text-decoration:underline}
+.elarea{position:absolute;top:0;left:0;width:200px;height:45px;opacity:0}
+</style>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+document.createElement("section");
+document.createElement("nav");
+document.createElement("article");
+document.createElement("aside");
+document.createElement("hgroup");
+document.createElement("header");
+document.createElement("footer");
+</script>
+<![endif]-->
+</head>
+<body>
+
+<header role="banner">
+	<h1 class="hd_h1">GNB 개편 :: 마크업 산출물</h1>
+</header>
+
+<div id="ct">
+	<section role="main">
+
+		<h1 class="u_vc">마크업</h1>
+
+		<h3 class="sec_h">ONE NAVER GNB</h3>
+		<ul>
+		<li><a href="gnb_one.html" target="_blank">샘플<span></span></a></li>
+		<li><a href="../home/01_home.html" target="_blank">홈<span></span></a></li>
+		<li><a href="../detail/00_article_home.html" target="_blank">매물<span></span></a></li>
+		<li><a href="../sale/isale_index_v2.html" target="_blank">분양<span></span></a></li>
+		<li><a href="../news/news.html" target="_blank">뉴스<span></span></a></li>
+		<li><a href="../community/00_home.html" target="_blank">커뮤니티<span></span></a></li>
+		<li><a href="../auction/00_auction.html" target="_blank">경매<span></span></a></li>
+		<li><a href="../mypage/04_interest_article.html" target="_blank">MY페이지 (관심매물)<span></span></a></li>
+		<li><a href="../find/00_main_login.html" target="_blank">맞춤매물<span></span></a></li>
+		<li><a href="../land_cast/01_default.html" target="_blank">부동산캐스트<span></span></a></li>
+		<li><a href="../search/search1_1.html" target="_blank">검색<span></span></a></li>
+		<li><a href="../tool/00_layout.html" target="_blank">부동산영업툴<span></span></a></li>
+		</ul>
+
+	</section>
+</div>
+
+<footer>NAVER 부동산</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#ct li").each(function(){
+        var pageUrl = $(this).find("a").attr("href");
+        var pageUrlReplace = pageUrl.replace("?d="," - type");
+        $(this).find("span").text(" :: "+pageUrlReplace);
+    });
+});
+</script>
+</body>
+</html>

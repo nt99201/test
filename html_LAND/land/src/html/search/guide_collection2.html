@@ -1,0 +1,1034 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<title>상황별 단지,매물,분양 컬렉션</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			
+			<p style="padding:0 5px 5px 5px;">단지(전국)</p>
+			<!-- 단지 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_estate.gif" alt="단지" width="24" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">단지정보</caption>
+				<colgroup>
+				<col width="58">
+				<col width="132">
+				<col>
+				<col width="73">
+				<col width="73">
+				<col width="73">
+				<col width="55">
+				<col width="93">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">단지명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">입주</th>
+				<th scope="col">세대수</th>
+				<th scope="col">동수</th>
+				<th scope="col">매매/전세/월세</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">아파트 분양권</td>
+				<td class="tl">부천시 소사구 송내동</td>
+				<td><a href="#" class="underline">서울숲푸르지오</a></td>
+				<td class="num" title="">-</td>
+				<td class="num">2009.02</td>
+				<td class="num">98세대</td>
+				<td class="num">0개동</td>
+				<td class="num">-</td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">광명시 철산동</td>
+				<td><a href="#" class="underline">서울숲힐스테이트</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">82~198</a></td>
+				<td class="num">2009.11</td>
+				<td class="num">2072세대</td>
+				<td class="num">17개동</td>
+				<td class="num"><a href="#" class="underline">90</a> / <a href="#" class="underline">215</a> / <a href="#" class="underline">21</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">광명시 하안동</td>
+				<td><a href="#" class="underline">e-편한세상센트레벨 (하안본1단지)</a></td>
+				<td class="num" title="최소 84㎡ = 12.4평&#13최대 176㎡ = 17.8평"><a href="#">84~176</a></td>
+				<td class="num">2010.01</td>
+				<td class="num">2815세대</td>
+				<td class="num">27개동</td>
+				<td class="num"><a href="#" class="underline">94</a> / <a href="#" class="underline">235</a> / <a href="#" class="underline">22</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">의왕시 내손동</td>
+				<td><a href="#" class="underline">포일자이(포일주공)</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 204㎡ = 17.8평"><a href="#">82~204</a></td>
+				<td class="num">2009.11</td>
+				<td class="num">2540세대</td>
+				<td class="num">38개동</td>
+				<td class="num"><a href="#" class="underline">321</a> / <a href="#" class="underline">429</a> / <a href="#" class="underline">72</a></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">아파트</td>
+				<td class="tl">용인시 수지구 상현동</td>
+				<td><a href="#" class="underline">광교힐스테이트</a></td>
+				<td class="num" title="최소 127㎡ = 12.4평&#13최대 279㎡ = 17.8평"><a href="#">127~279</a></td>
+				<td class="num">2009.10</td>
+				<td class="num">860세대</td>
+				<td class="num">16개동</td>
+				<td class="num"><a href="#" class="underline">29</a> / <a href="#" class="underline">146</a> / <a href="#" class="underline">61</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">단지 더보기</a>
+				</div>
+			</div>
+			<!-- //단지 -->
+			
+			<p style="padding:20px 5px 5px 5px;">매물(전국)</p>
+			<!-- 매물 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_sale.gif" alt="매물" width="25" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">매물정보</caption>
+				<colgroup>
+				<col width="31">
+				<col width="62">
+				<col width="98">
+				<col>
+				<col width="77">
+				<col width="89">
+				<col width="53">
+				<col width="53">
+				<col width="107">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">거래</th>
+				<th scope="col">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">매물명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">매물가(만원)</th>
+				<th scope="col">동</th>
+				<th scope="col">층</th>
+				<th scope="col">연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">시흥시 정왕동</div></td>
+				<td><a href="#" class="underline">영남3차</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">79/59</a></td>
+				<td class="num">
+					<strong><a href="#">15,500</a></strong>
+					<!-- 
+					<div class="rate_layer">
+						<div class="layer">
+							<p class="tit"><strong>최근 변동 내역</strong></p>
+							<ul class="rate_list">
+							<li>
+								<span class="date">10.01.21</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">20</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.29</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.24</span>
+								<span class="rate"><strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">2,000</strong> / <strong class="minus"><img src="img/ico_sale_minus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							</ul>
+							<p class="record">최초등록가 : <strong>128,000</strong></p>
+						</div>
+					</div>
+					-->
+				</td>
+				<td class="num">309</td>
+				<td class="num">고/</td>
+				<td class="num">신우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">시흥시 정왕동</div></td>
+				<td><a href="#" class="underline">아주</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">89/60</a></td>
+				<td class="num"><strong><a href="#">12,500</a></strong></td>
+				<td class="num">102</td>
+				<td class="num">중/</td>
+				<td class="num">신우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">시흥시 정왕동</div></td>
+				<td><a href="#" class="underline">요진</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">76/59</a></td>
+				<td class="num"><strong><a href="#">15,500</a></strong></td>
+				<td class="num">105</td>
+				<td class="num">중/</td>
+				<td class="num">청우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">고양시 일산동구 백석동</div></td>
+				<td><a href="#" class="underline">흰돌청구2단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">83/59</a></td>
+				<td class="num"><strong><a href="#">19,500</a></strong></td>
+				<td class="num">202</td>
+				<td class="num">2/21</td>
+				<td class="num">부동산마트 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">의왕시 내손동</div></td>
+				<td><a href="#" class="underline">포일자이(포일주공)</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">148/121</a></td>
+				<td class="num"><strong><a href="#">88,000</a></strong></td>
+				<td class="num">103</td>
+				<td class="num">중/</td>
+				<td class="num">평촌자이공인중... <span class="newline">02-5816-2579</span></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<p class="info">* 네이버 부동산이 집주인(의뢰인)에게 확인한 매물입니다. <img src="img/ico_confirm.gif" alt="확인매물" width="50" height="17" ></p>
+					<a href="#" class="btn_more">매물 더보기</a>
+				</div>
+			</div>
+			<!-- //매물 -->
+			
+			<p style="padding:20px 5px 5px 5px;">단지(시/도)</p>
+			<!-- 단지 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_estate.gif" alt="단지" width="24" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">단지정보</caption>
+				<colgroup>
+				<col width="60">
+				<col width="91">
+				<col>
+				<col width="75">
+				<col width="74">
+				<col width="76">
+				<col width="59">
+				<col width="86">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">단지명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">입주</th>
+				<th scope="col">세대수</th>
+				<th scope="col">동수</th>
+				<th scope="col">매매/전세/월세</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">서구 연희동</td>
+				<td><a href="#" class="underline">한국3차</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">79~109</a></td>
+				<td class="num">1995.02</td>
+				<td class="num">2072세대</td>
+				<td class="num">1</td>
+				<td class="num"><a href="#" class="underline">0</a> / <a href="#" class="underline">0</a> / <a href="#" class="underline">0</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">남동구 구월동</td>
+				<td><a href="#" class="underline">구월힐스테이트/롯데캐슬골드</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">62~165</a></td>
+				<td class="num">2007.08</td>
+				<td class="num">2540세대</td>
+				<td class="num">60</td>
+				<td class="num"><a href="#" class="underline">33</a> / <a href="#" class="underline">28</a> / <a href="#" class="underline">11</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">서구 신현동</td>
+				<td><a href="#" class="underline">신현주공(e-편한하늘채)</a></td>
+				<td class="num" title="최소 84㎡ = 12.4평&#13최대 176㎡ = 17.8평"><a href="#">84~176</a></td>
+				<td class="num">2010.01</td>
+				<td class="num">2815세대</td>
+				<td class="num">27</td>
+				<td class="num"><a href="#" class="underline">94</a> / <a href="#" class="underline">235</a> / <a href="#" class="underline">22</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td class="tl">남구 주안동</td>
+				<td><a href="#" class="underline">관교한신休플러스(아시아드시티)</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 204㎡ = 17.8평"><a href="#">82~204</a></td>
+				<td class="num">2009.11</td>
+				<td class="num">2540세대</td>
+				<td class="num">38</td>
+				<td class="num"><a href="#" class="underline">321</a> / <a href="#" class="underline">429</a> / <a href="#" class="underline">72</a></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">아파트 분양권</td>
+				<td class="tl">부평구 부개동</td>
+				<td><a href="#" class="underline">푸르지오</a></td>
+				<td class="num" title="최소 127㎡ = 12.4평&#13최대 279㎡ = 17.8평"><a href="#">127~279</a></td>
+				<td class="num">2009.10</td>
+				<td class="num">860세대</td>
+				<td class="num">16</td>
+				<td class="num"><a href="#" class="underline">29</a> / <a href="#" class="underline">146</a> / <a href="#" class="underline">61</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">단지 더보기</a>
+				</div>
+			</div>
+			<!-- //단지 -->
+			
+			<p style="padding:20px 5px 5px 5px;">매물(시/도)</p>
+			<!-- 매물 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_sale.gif" alt="매물" width="25" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">매물정보</caption>
+				<colgroup>
+				<col width="31">
+				<col width="62">
+				<col width="93">
+				<col>
+				<col width="73">
+				<col width="89">
+				<col width="53">
+				<col width="53">
+				<col width="107">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">거래</th>
+				<th scope="col">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">매물명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">매물가(만원)</th>
+				<th scope="col">동</th>
+				<th scope="col">층</th>
+				<th scope="col">연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">시흥시 정왕동</div></td>
+				<td><a href="#" class="underline">영남3차</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">79/59</a></td>
+				<td class="num">
+					<strong><a href="#">15,500</a></strong>
+					<!-- 
+					<div class="rate_layer">
+						<div class="layer">
+							<p class="tit"><strong>최근 변동 내역</strong></p>
+							<ul class="rate_list">
+							<li>
+								<span class="date">10.01.21</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">20</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.29</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.24</span>
+								<span class="rate"><strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">2,000</strong> / <strong class="minus"><img src="img/ico_sale_minus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							</ul>
+							<p class="record">최초등록가 : <strong>128,000</strong></p>
+						</div>
+					</div>
+					-->
+				</td>
+				<td class="num">309</td>
+				<td class="num">고/</td>
+				<td class="num">신우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">시흥시 정왕동</div></td>
+				<td><a href="#" class="underline">아주</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">89/60</a></td>
+				<td class="num"><strong><a href="#">12,500</a></strong></td>
+				<td class="num">102</td>
+				<td class="num">중/</td>
+				<td class="num">신우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">시흥시 정왕동</div></td>
+				<td><a href="#" class="underline">요진</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">76/59</a></td>
+				<td class="num"><strong><a href="#">15,500</a></strong></td>
+				<td class="num">105</td>
+				<td class="num">중/</td>
+				<td class="num">청우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">고양시 일산동구 백석동</div></td>
+				<td><a href="#" class="underline">흰돌청구2단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">83/59</a></td>
+				<td class="num"><strong><a href="#">19,500</a></strong></td>
+				<td class="num">202</td>
+				<td class="num">2/21</td>
+				<td class="num">부동산마트 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td class="tl"><div class="pd10">의왕시 내손동</div></td>
+				<td><a href="#" class="underline">포일자이(포일주공)</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">148/121</a></td>
+				<td class="num"><strong><a href="#">88,000</a></strong></td>
+				<td class="num">103</td>
+				<td class="num">중/</td>
+				<td class="num">평촌자이공인중... <span class="newline">02-5816-2579</span></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<p class="info">* 네이버 부동산이 집주인(의뢰인)에게 확인한 매물입니다. <img src="img/ico_confirm.gif" alt="확인매물" width="50" height="17" ></p>
+					<a href="#" class="btn_more">매물 더보기</a>
+				</div>
+			</div>
+			<!-- //매물 -->
+			
+			<p style="padding:20px 5px 5px 5px;">단지(구)</p>
+			<!-- 단지 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_estate.gif" alt="단지" width="24" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">단지정보</caption>
+				<colgroup>
+				<col width="58">
+				<col width="71">
+				<col>
+				<col width="83">
+				<col width="81">
+				<col width="76">
+				<col width="59">
+				<col width="86">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">단지명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">입주</th>
+				<th scope="col">세대수</th>
+				<th scope="col">동수</th>
+				<th scope="col">매매/전세/월세</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">아파트</td>
+				<td>남대문로3가</td>
+				<td><a href="#" class="underline">관교한신休플러스(아시아드시티)</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">65~148</a></td>
+				<td class="num">2009.10</td>
+				<td class="num">1509</td>
+				<td class="num">18</td>
+				<td class="num"><a href="#" class="underline">59</a> / <a href="#" class="underline">22</a> / <a href="#" class="underline">7</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td>주안동</td>
+				<td><a href="#" class="underline">더월드스테이트</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">89~158</a></td>
+				<td class="num">2008.05</td>
+				<td class="num">3160세대</td>
+				<td class="num">37</td>
+				<td class="num"><a href="#" class="underline">30</a> / <a href="#" class="underline">10</a> / <a href="#" class="underline">6</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td>신현동</td>
+				<td><a href="#" class="underline">신현주공(e-편한하늘채)</a></td>
+				<td class="num" title="최소 84㎡ = 12.4평&#13최대 176㎡ = 17.8평"><a href="#">84~176</a></td>
+				<td class="num">2010.01</td>
+				<td class="num">2815세대</td>
+				<td class="num">27</td>
+				<td class="num"><a href="#" class="underline">94</a> / <a href="#" class="underline">235</a> / <a href="#" class="underline">22</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td>주안동</td>
+				<td><a href="#" class="underline">관교한신休플러스(아시아드시티)</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 204㎡ = 17.8평"><a href="#">82~204</a></td>
+				<td class="num">2009.11</td>
+				<td class="num">2540세대</td>
+				<td class="num">38</td>
+				<td class="num"><a href="#" class="underline">321</a> / <a href="#" class="underline">429</a> / <a href="#" class="underline">72</a></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">아파트 분양권</td>
+				<td>부개동</td>
+				<td><a href="#" class="underline">푸르지오</a></td>
+				<td class="num" title="최소 127㎡ = 12.4평&#13최대 279㎡ = 17.8평"><a href="#">127~279</a></td>
+				<td class="num">2009.10</td>
+				<td class="num">860세대</td>
+				<td class="num">16</td>
+				<td class="num"><a href="#" class="underline">29</a> / <a href="#" class="underline">146</a> / <a href="#" class="underline">61</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">단지 더보기</a>
+				</div>
+			</div>
+			<!-- //단지 -->
+			
+			<p style="padding:20px 5px 5px 5px;">매물(구)</p>
+			<!-- 매물 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_sale.gif" alt="매물" width="25" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">매물정보</caption>
+				<colgroup>
+				<col width="31">
+				<col width="62">
+				<col width="87">
+				<col>
+				<col width="73">
+				<col width="89">
+				<col width="53">
+				<col width="53">
+				<col width="96">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">거래</th>
+				<th scope="col">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">매물명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">매물가(만원)</th>
+				<th scope="col">동</th>
+				<th scope="col">층</th>
+				<th scope="col">연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">전세</td>
+				<td>아파트</td>
+				<td>남대문로3가</td>
+				<td><a href="#" class="underline">관교한신休플러스(아시티)</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">92/73</a></td>
+				<td class="num">
+					<strong><a href="#">25,000</a></strong>
+					<!-- 
+					<div class="rate_layer">
+						<div class="layer">
+							<p class="tit"><strong>최근 변동 내역</strong></p>
+							<ul class="rate_list">
+							<li>
+								<span class="date">10.01.21</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">20</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.29</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.24</span>
+								<span class="rate"><strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">2,000</strong> / <strong class="minus"><img src="img/ico_sale_minus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							</ul>
+							<p class="record">최초등록가 : <strong>128,000</strong></p>
+						</div>
+					</div>
+					-->
+				</td>
+				<td class="num">406</td>
+				<td class="num">고/</td>
+				<td class="num">114독일공인중... <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">전세</td>
+				<td>아파트</td>
+				<td>별양동</td>
+				<td><a href="#" class="underline">주공4단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">102/82</a></td>
+				<td class="num"><strong><a href="#">23,000</a></strong></td>
+				<td class="num">409</td>
+				<td class="num">중/</td>
+				<td class="num">대림공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td>정왕동</td>
+				<td><a href="#" class="underline">요진</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">76/59</a></td>
+				<td class="num"><strong><a href="#">15,500</a></strong></td>
+				<td class="num">105</td>
+				<td class="num">중/</td>
+				<td class="num">청우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td>백석동</td>
+				<td><a href="#" class="underline">흰돌청구2단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">83/59</a></td>
+				<td class="num"><strong><a href="#">19,500</a></strong></td>
+				<td class="num">202</td>
+				<td class="num">2/21</td>
+				<td class="num">부동산마트 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td>내손동</td>
+				<td><a href="#" class="underline">포일자이(포일주공)</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">148/121</a></td>
+				<td class="num"><strong><a href="#">88,000</a></strong></td>
+				<td class="num">103</td>
+				<td class="num">중/</td>
+				<td class="num">평촌자이공인중... <span class="newline">02-5816-2579</span></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<p class="info">* 네이버 부동산이 집주인(의뢰인)에게 확인한 매물입니다. <img src="img/ico_confirm.gif" alt="확인매물" width="50" height="17" ></p>
+					<a href="#" class="btn_more">매물 더보기</a>
+				</div>
+			</div>
+			<!-- //매물 -->
+			
+			<p style="padding:20px 5px 5px 5px;">단지(동)</p>
+			<!-- 단지 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_estate.gif" alt="단지" width="24" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">단지정보</caption>
+				<colgroup>
+				<col width="58">
+				<col>
+				<col width="100">
+				<col width="95">
+				<col width="85">
+				<col width="69">
+				<col width="109">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">매물종류</th>
+				<th scope="col">단지명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">입주</th>
+				<th scope="col">세대수</th>
+				<th scope="col">동수</th>
+				<th scope="col">매매/전세/월세</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">아파트</td>
+				<td><a href="#" class="underline">관교한신休플러스(아시아드시티)</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">65~148</a></td>
+				<td class="num">2009.10</td>
+				<td class="num">1509</td>
+				<td class="num">18</td>
+				<td class="num"><a href="#" class="underline">59</a> / <a href="#" class="underline">22</a> / <a href="#" class="underline">7</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td><a href="#" class="underline">더월드스테이트</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 198㎡ = 17.8평"><a href="#">89~158</a></td>
+				<td class="num">2008.05</td>
+				<td class="num">3160세대</td>
+				<td class="num">37</td>
+				<td class="num"><a href="#" class="underline">30</a> / <a href="#" class="underline">10</a> / <a href="#" class="underline">6</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td><a href="#" class="underline">신현주공(e-편한하늘채)</a></td>
+				<td class="num" title="최소 84㎡ = 12.4평&#13최대 176㎡ = 17.8평"><a href="#">84~176</a></td>
+				<td class="num">2010.01</td>
+				<td class="num">2815세대</td>
+				<td class="num">27</td>
+				<td class="num"><a href="#" class="underline">94</a> / <a href="#" class="underline">235</a> / <a href="#" class="underline">22</a></td>
+				</tr>
+				<tr>
+				<td class="tl">아파트</td>
+				<td><a href="#" class="underline">관교한신休플러스(아시아드시티)</a></td>
+				<td class="num" title="최소 82㎡ = 12.4평&#13최대 204㎡ = 17.8평"><a href="#">82~204</a></td>
+				<td class="num">2009.11</td>
+				<td class="num">2540세대</td>
+				<td class="num">38</td>
+				<td class="num"><a href="#" class="underline">321</a> / <a href="#" class="underline">429</a> / <a href="#" class="underline">72</a></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">아파트</td>
+				<td><a href="#" class="underline">푸르지오</a></td>
+				<td class="num" title="최소 127㎡ = 12.4평&#13최대 279㎡ = 17.8평"><a href="#">127~279</a></td>
+				<td class="num">2009.10</td>
+				<td class="num">860세대</td>
+				<td class="num">16</td>
+				<td class="num"><a href="#" class="underline">29</a> / <a href="#" class="underline">146</a> / <a href="#" class="underline">61</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">단지 더보기</a>
+				</div>
+			</div>
+			<!-- //단지 -->
+			
+			<p style="padding:20px 5px 5px 5px;">매물(동)</p>
+			<!-- 매물 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_sale.gif" alt="매물" width="25" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">매물정보</caption>
+				<colgroup>
+				<col width="31">
+				<col width="105">
+				<col>
+				<col width="73">
+				<col width="98">
+				<col width="60">
+				<col width="60">
+				<col width="110">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="tl">거래</th>
+				<th scope="col">매물종류</th>
+				<th scope="col">매물명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">매물가(만원)</th>
+				<th scope="col">동</th>
+				<th scope="col">층</th>
+				<th scope="col">연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl">전세</td>
+				<td>아파트</td>
+				<td><a href="#" class="underline">주공9단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">59/54</a></td>
+				<td class="num">
+					<strong><a href="#">16,000</a></strong>
+					<!-- 
+					<div class="rate_layer">
+						<div class="layer">
+							<p class="tit"><strong>최근 변동 내역</strong></p>
+							<ul class="rate_list">
+							<li>
+								<span class="date">10.01.21</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">20</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.29</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.24</span>
+								<span class="rate"><strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">2,000</strong> / <strong class="minus"><img src="img/ico_sale_minus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							</ul>
+							<p class="record">최초등록가 : <strong>128,000</strong></p>
+						</div>
+					</div>
+					-->
+				</td>
+				<td class="num">916</td>
+				<td class="num">중/</td>
+				<td class="num">동신공인중사.. <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">전세</td>
+				<td>아파트</td>
+				<td><a href="#" class="underline">주공8단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">89/73</a></td>
+				<td class="num"><strong><a href="#">24,000</a></strong></td>
+				<td class="num">802</td>
+				<td class="num">고/</td>
+				<td class="num">동신공인중개사.. <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td><a href="#" class="underline">요진</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">76/59</a></td>
+				<td class="num"><strong><a href="#">15,500</a></strong></td>
+				<td class="num">105</td>
+				<td class="num">중/</td>
+				<td class="num">청우공인중개사 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td><a href="#" class="underline">흰돌청구2단지</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">83/59</a></td>
+				<td class="num"><strong><a href="#">19,500</a></strong></td>
+				<td class="num">202</td>
+				<td class="num">2/21</td>
+				<td class="num">부동산마트 <span class="newline">02-5816-2579</span></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="tl">매매</td>
+				<td>아파트</td>
+				<td><a href="#" class="underline">포일자이(포일주공)</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평"><a href="#">148/121</a></td>
+				<td class="num"><strong><a href="#">88,000</a></strong></td>
+				<td class="num">103</td>
+				<td class="num">중/</td>
+				<td class="num">평촌자이공인중... <span class="newline">02-5816-2579</span></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<p class="info">* 네이버 부동산이 집주인(의뢰인)에게 확인한 매물입니다. <img src="img/ico_confirm.gif" alt="확인매물" width="50" height="17" ></p>
+					<a href="#" class="btn_more">매물 더보기</a>
+				</div>
+			</div>
+			<!-- //매물 -->
+			
+			<p style="padding:20px 5px 5px 5px;">프리미엄/포커스 매물</p>
+			<!-- 프리미엄/포커스매물 -->
+			<div class="section_sale">
+				<div class="sale_top">
+					<h3><img src="img/h_sale_premium.gif" alt="프리미엄,포커스 확인매물" width="150" height="15" > (34,567건)</h3>
+					<!-- [D] 모든 정렬탭이 같은 형태로 클래스 적용됩니다.
+						 on : 내림차순on, asc_on : 오름차순on, asc : 오름차순off, 클래스없음 : 내림차순off -->
+					<ul class="tab_sort">
+					<li class="t1"><a href="#" class="on"><span>확인매물일자순</span></a></li> <!-- [D] 내림차순 on -->
+					<li class="t2"><a href="#"><span>지역순</span></a></li> <!-- [D] 내림차순 off -->
+					<li class="t3"><a href="#" class="asc_on"><span>매물명순</span></a></li> <!-- [D] 오름차순 on -->
+					<li class="t4"><a href="#" class="asc"><span>면적순</span></a></li> <!-- [D] 오름차순 off -->
+					<li class="t5"><a href="#"><span>가격순</span></a></li>
+					</ul>					
+				</div>
+				<table class="sale_table">
+				<caption class="blind">프리미엄, 포커스 확인매물</caption>
+				<colgroup>
+				<col width="32">
+				<col width="64">
+				<col width="77">
+				<col>
+				<col width="74">
+				<col width="86">
+				<col width="46">
+				<col width="49">
+				<col width="114">
+				</colgroup>
+				<thead>
+				<tr>
+				<th class="tl"><span class="col1">거래</span></th>
+				<th>매물종류</th>
+				<th>소재지</th>
+				<th class="tl"><span class="col4">매물명</span></th>
+				<th>면적(㎡)</th>
+				<th>매물가(만원)</th>
+				<th>동</th>
+				<th>층</th>
+				<th>연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td rowspan="2" class="tl"><div class="col3">용산구 한강로2가</div></td>
+				<td class="tl bdnone"><div class="col4"><a href="#">래미안2차</a> <a href="#" class="btn_new_browser"><img src="img/ico_new_browser.gif" alt="새창열기"></a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">115/84</a></td>
+				<td class="num bdnone"><a href="#"><strong>57,000</strong></a></td>
+				<td class="num bdnone">109</td>
+				<td class="num bdnone">고/</td>
+				<td rowspan="2" class="agent">참마음공인중개.. <em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>확인한지 1개월 이내인 매물 </span><em>10.01.20</em> <img src="img/ico_sale_state_pregist.gif" alt="개인등록매물" width="42" height="17"> <img src="img/ico_sale_state_picture.gif" alt="사진등록매물" width="13" height="11" class="ico_pict"> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td rowspan="2" class="tl"><div class="col3">영등포구 문래동6가</div></td>
+				<td class="tl bdnone"><div class="col4"><a href="#">삼성래미안</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">76/59</a></td>
+				<td class="num bdnone"><a href="#"><strong>35,500</strong></a></td>
+				<td class="num bdnone">116</td>
+				<td class="num bdnone">고/</td>
+				<td rowspan="2" class="agent">부동산세상공인..<em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type2"><span>확인한지 1개월 이상된 매물 </span><em>10.01.20</em> <img src="img/ico_sale_state_auction.gif" alt="경매" width="42" height="17"> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">주상복합</td>
+				<td rowspan="2" class="tl"><div class="col3">송파구 잠실동</div></td>
+				<td class="tl bdnone"><div class="col4"><a href="#">삼성래미안유니빌</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type3"><span>거래가 완료된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td rowspan="2" class="tl"><div class="col3">용산구 한강로2가</div></td>
+				<td class="tl bdnone"><div class="col4"><a href="#">삼성래미안</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot direct layer_open"> <!-- [D] 레이어가 열리면 layer_open 추가 -->
+					<div class="anc_loc">
+						<img src="img/ico_sale_state_direct.gif" width="42" height="17" alt="직거래">
+						<span class="txt">직거래 시 유의 사항을 확인하시기 바랍니다.</span>
+						<img src="img/btn_question.gif" width="14" height="14" alt="" class="btn_layer">
+						<div class="layer">
+							<div class="arw"><img src="http://img.land.naver.com/static/service/20091029/sale/bu_layer_arw.gif" alt="" width="9" height="6"></div>
+							<h4>직거래 시 유의사항</h4>
+							<p>직거래는 개인 간의 거래로 리스크가 높습니다.<br>
+								최근 광고비, 서류 대행비 등을 요청하는 사기<br>
+								피해도 발생하고 있습니다.<br>
+								직거래 시에는 반드시  위험요소를 확인하신 후<br>
+								신중하게  선택하시기 바랍니다. </p>
+							<div class="btn_close"><img src="img/btn_layer_close3.gif" alt="닫기" width="10" height="9"></div>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr class="bar"> <!-- [D] 5번째 마다 구분선을 위해 클래스로  bar추가 -->
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td rowspan="2" class="tl"><div class="col3">영등포구 문래동6가</div></td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr class="bar">
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				</table>
+			</div>
+			<!-- //프리미엄/포커스매물 -->
+			
+			<p style="padding:20px 5px 5px 5px;">분양</p>
+			<!-- 분양 -->
+			<div class="section_collection">
+				<h3><img src="img/h_collection_lots.gif" alt="분양" width="25" height="15" > (34,567건)</h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">분양정보</caption>
+				<colgroup>
+				<col width="100">
+				<col>
+				<col width="68">
+				<col width="125">
+				<col width="71">
+				<col width="61">
+				<col width="61">
+				<col width="100">
+				<col width="57">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">소재지</th>
+				<th scope="col">사업명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">분양가(만원)</th>
+				<th scope="col">세대수/일반</th>
+				<th scope="col">분양시기</th>
+				<th scope="col">분양종류</th>
+				<th scope="col">시공사</th>
+				<th scope="col">진행단계</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl lh16">충청남도 아산시 신창면 남성리 598-18</td>
+				<td class="tl"><a href="#" class="underline">코아루에듀파크</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평"><a href="#">109~152</a></td>
+				<!-- [D] 개행위해 ~ 앞뒤 space와 nbsp 아래처럼 넣어주세요 -->
+				<td class="num"><strong><a href="#">113,637 ~&nbsp;145,662</a></strong></td>
+				<td class="num">700/700</td>
+				<td class="num">2006.06</td>
+				<td>오피스텔 분양권</td>
+				<td class="num">한국토지신탁 <span class="newline">02-5816-2579</span></td>
+				<td>미분양</td>
+				</tr>
+				<tr>
+				<td class="tl lh16">충청남도 당진군 신평면 금천리 295-2</td>
+				<td class="tl"><a href="#" class="underline">리가</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평"><a href="#">109~158</a></td>
+				<td class="num"><strong><a href="#">1,119,442 ~&nbsp;1,130,102</a></strong></td>
+				<td class="num">593/593</td>
+				<td class="num">2007.11</td>
+				<td>아파트</td>
+				<td class="num">LIG건설 <span class="newline">02-5816-2579</span></td>
+				<td>미분양</td>
+				</tr>
+				<tr class="last">
+				<td class="tl lh16"><span class="newline">서울시 중구</span> 운남동 영종하늘 도시 A59블록</td>
+				<td class="tl"><a href="#" class="underline">길음뉴타운 푸르지오</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평"><a href="#">41~59</a></td>
+				<td class="num"><strong><a href="#">59,000 ~&nbsp;83,000</a></strong></td>
+				<td class="num">45/158</td>
+				<td class="num">2010.01</td>
+				<td>아파트</td>
+				<td class="num">현대건설 <span class="bar">|</span> 동부건설 <span class="newline">02-5816-2579<br> 02-5816-2579</span></td>
+				<td>분양중</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">분양 더보기</a>
+				</div>
+			</div>
+			<!-- //분양 -->
+
+
+		</div>	
+	</div>
+</body>
+</html>

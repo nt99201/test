@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>종료된 의뢰 :: 마이페이지 맞춤매물</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_mypage.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- skip to content -->
+	<a href="#content" class="skip">본문 바로가기</a>
+	<!-- //skip to content -->
+
+	<!-- header -->
+	<div id="header">
+		
+	</div>
+	<!-- //header -->
+
+	<div id="container">
+		<div class="snb">
+			<h2><img src="http://static.land.naver.net/static/service/20120214/mypage/h2_mypage.gif" width="179" height="75" alt="My 페이지"></h2>
+			<ul class="nav">
+			<!-- [D] 선택된 리스트에 대하여 이미지 파일명 뒤에 _on 추가 -->
+			<li><a href="#"><img src="img/snb6_on.gif" width="178" height="35" alt="맞춤매물" id="sub_menu6"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb.gif" width="178" height="35" alt="관심매물·단지·분양" id="sub_menu1"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb5.gif" width="178" height="35" alt="" id="sub_menu5"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb2.gif" width="178" height="35" alt="분양 일정 알림" id="sub_menu4"></a></li>
+			<li><a href="#"><img src="http://static.land.naver.net/static/service/20120215/isale/snb4.gif" width="178" height="35" alt="부동산회원 탈퇴" id="sub_menu3"></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<h3><span class="h_find">맞춤매물</span></h3>
+			<div class="menu_guide2">
+				<p><strong>의뢰하신 조건에 따라 중개업소에서 추천한 맞춤매물을 확인하실 수 있습니다.</strong></p>
+				<ul>
+				<li>맞춤매물 서비스는 진행중 의뢰 (의뢰상태: 의뢰확인중, 추천중) 건을 기준으로 <em>3건</em>까지 이용하실 수 있습니다.</li>
+				<li>진행 중 의뢰 건은 의뢰기간이 종료되면 <em>자동으로 종료된의뢰 탭</em>으로 이동합니다.</li>
+				<li><em>진행중 의뢰</em> 리스트에서 <em>의뢰취소</em> 버튼을 클릭하시면 의뢰 기간이 만료되기 전 의뢰를 종료하실 수 있습니다.<br><em>종료된 의뢰</em>는 자동으로 종료된 의뢰 탭으로 이동합니다.</li>
+				</ul>
+			</div>
+			<ul class="tab_menu">
+			<!-- [D] 선택된 탭에서 li class="on" -->
+			<li><a href="#" class="m">진행중 의뢰</a></li>
+			<li class="on"><a href="#" class="m2">종료된 의뢰</a></li>
+			</ul>
+
+			<table cellspacing="0" border="1" summary="매물리스트" class="table_v">
+			<caption>매물리스트</caption>
+			<colgroup>
+			<col width="70"><col width=""><col width="84"><col width="79"><col width="70"><col width="110"><col width="74">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col">의뢰번호</th>
+			<th scope="col">의뢰내용</th>
+			<th scope="col">의뢰기간</th>
+			<th scope="col">추천매물건수</th>
+			<th scope="col">의뢰상태</th>
+			<th scope="col">의뢰관리</th>
+			<th scope="col">&nbsp;</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.01~12.08</td>
+			<td class="recommend">-</td>
+			<td><span class="btn_rq_end">의뢰종료</span></td>
+			<td class="manage"><a href="#">내용수정</a>&nbsp;&nbsp;<a href="#">재의뢰</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.01~12.08</td>
+			<td class="recommend">23</td>
+			<td><span class="btn_rq_end">의뢰종료</span></td>
+			<td class="manage"><a href="#">내용수정</a>&nbsp;&nbsp;<a href="#">재의뢰</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.01~12.08</td>
+			<td class="recommend">83</td>
+			<td><span class="btn_rq_end">의뢰종료</span></td>
+			<td class="manage"><a href="#">내용수정</a>&nbsp;&nbsp;<a href="#">재의뢰</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.01~12.08</td>
+			<td class="recommend">83</td>
+			<td><span class="btn_rq_end">의뢰종료</span></td>
+			<td class="manage"><a href="#">내용수정</a>&nbsp;&nbsp;<a href="#">재의뢰</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+			<tr>
+			<td class="num">1235467890</td>
+			<!-- [D] 한줄넘어갈시 말줄임, 숫자나 영문은 자간줄임 없게하기위해 span태그로 감싼다 -->
+			<td class="info"><div><a href="#">아파트, 오피스텔, 매매, 정자동, <span>86㎡~100㎡</span></a></div></td>
+			<td class="period">12.01~12.08</td>
+			<td class="recommend">83</td>
+			<td><span class="btn_rq_end">의뢰종료</span></td>
+			<td class="manage"><a href="#">내용수정</a>&nbsp;&nbsp;<a href="#">재의뢰</a></td>
+			<!-- [D] 클릭시 내용열기이미지가 내용닫기로 바뀜 : class="btn_ct_close" -->
+			<td><a href="#" class="btn_ct_open">내용열기</a></td>
+			</tr>
+			</tbody>
+			</table>
+
+			<!-- pagenate -->
+			<div class="paginate3">
+				<a href="#" class="pre">이전페이지</a> <strong>1</strong> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a> <a href="#" class="next">다음페이지</a>
+			</div>
+			<!-- //pagenate -->
+
+			<h4 class="type2"><span class="h_rc_info">추천정보</span></h4>
+			<div class="list_head">
+				<a href="#" class="btn_compare">비교하기</a><a href="#" class="btn_delete">삭제하기</a>
+				<span class="right">소재지 <strong>&#39;강남구 신사동&#39;,&#39;강남구 압구정동&#39;</strong>&nbsp;&nbsp;&nbsp;전체 <strong class="total">23</strong>건 (미확인 <strong>7</strong>건, 관심 <strong>10</strong>건)</span>
+			</div>
+
+			<table cellspacing="0" border="1" summary="추천정보 리스트" class="table_v2">
+			<caption>추천정보 리스트</caption>
+			<colgroup>
+			<col width="28"><col width="22"><col width="24"><col width="78"><col width="164"><col width="80"><col width="86"><col width="44"><col width="56"><col width="72"><col width="121">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col"><label for="all_chk" class="blind">전체선택</label><input type="checkbox" name="" id="all_chk" class="input_chk"></th>
+			<th scope="col"><span class="ic_star">관심</span></th>
+			<th scope="col"><span class="ic_n">new</span></th>
+			<th scope="col">거래 / 매물종류</th>
+			<!-- [D] 클릭시 리스트정렬되면서 화살표위로바뀜 a class="up" -->
+			<th scope="col"><a href="#" class="down">매물명</a></th>
+			<th scope="col"><a href="#" class="up">면적(㎡)</a></th>
+			<th scope="col"><a href="#" class="down">매물가 (만원)</a></th>
+			<th scope="col">동</th>
+			<th scope="col">층</th>
+			<th scope="col"><a href="#" class="down">추천일</a></th>
+			<th scope="col">연락처</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- [D] 홀수 라인에서는 tr에 배경색을 위해 class="odd" 삽입 -->
+			<tr class="odd">
+			<td rowspan="2"><label for="chk" class="blind">체크</label><input type="checkbox" name="" id="chk" class="input_chk"></td>
+			<td rowspan="2">
+				<span class="ic_star2">관심</span>
+				<div class="ly_interest">
+					<span>선택하신 추천매물을 관심목록에 추가했습니다.<br>추천정보 &gt; 관심목록에서 확인하실 수 있습니다.
+					<a href="#" class="btn_ly_close">닫기</a></span>
+				</div>
+			</td>
+			<td rowspan="2"><span class="ic_n">new</span></td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>105B</strong>/83</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">고/5</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">한미공인중개사사무소<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<!-- [D] 점선 줄도 같은 배경 라인이라  class="dotted odd" -->
+			<tr class="dotted odd">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l">깨끗함중간층</td>
+			</tr>
+
+			<tr>
+			<td rowspan="2"><label for="chk2" class="blind">체크</label><input type="checkbox" name="" id="chk2" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2"><span class="ic_n">new</span></td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>154</strong>/119</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">-/24</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">베스트공인중개사<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+			</tr>
+
+			<tr class="odd">
+			<td rowspan="2"><label for="chk3" class="blind">체크</label><input type="checkbox" name="" id="chk3" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>105B</strong>/83</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">고/5</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">한미공인중개사사무소<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted odd">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l">깨끗함중간층</td>
+			</tr>
+
+			<tr>
+			<td rowspan="2"><label for="chk4" class="blind">체크</label><input type="checkbox" name="" id="chk4" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>154</strong>/119</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">-/24</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">베스트공인중개사<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+			</tr>
+
+			<tr class="odd">
+			<td rowspan="2"><label for="chk5" class="blind">체크</label><input type="checkbox" name="" id="chk5" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>105B</strong>/83</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">고/5</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">한미공인중개사사무소<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted odd">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l">깨끗함중간층</td>
+			</tr>
+
+			<tr>
+			<td rowspan="2"><label for="chk6" class="blind">체크</label><input type="checkbox" name="" id="chk6" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2"><span class="ic_n">new</span></td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>154</strong>/119</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">-/24</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">베스트공인중개사<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+			</tr>
+
+			<tr class="odd">
+			<td rowspan="2"><label for="chk7" class="blind">체크</label><input type="checkbox" name="" id="chk7" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>105B</strong>/83</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">고/5</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">한미공인중개사사무소<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted odd">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l">깨끗함중간층</td>
+			</tr>
+
+			<tr>
+			<td rowspan="2"><label for="chk8" class="blind">체크</label><input type="checkbox" name="" id="chk8" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>154</strong>/119</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">-/24</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">베스트공인중개사<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+			</tr>
+
+			<tr class="odd">
+			<td rowspan="2"><label for="chk9" class="blind">체크</label><input type="checkbox" name="" id="chk9" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>105B</strong>/83</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">고/5</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">한미공인중개사사무소<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted odd">
+			<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+			<td colspan="5" class="al_l">깨끗함중간층</td>
+			</tr>
+
+			<tr>
+			<td rowspan="2"><label for="chk10" class="blind">체크</label><input type="checkbox" name="" id="chk10" class="input_chk"></td>
+			<td rowspan="2"><span class="ic_star2">관심</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">매매<br>아파트</td>
+			<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+			<td class="al_l"><strong>154</strong>/119</td>
+			<td><strong>79,000</strong></td>
+			<td class="t">104</td>
+			<td class="t">-/24</td>
+			<td class="t">12.01.08</td>
+			<td rowspan="2" class="contact">베스트공인중개사<br><span>02-459-8000</span><br><a href="#" class="btn_brokerage">중개업소정보</a></td>
+			</tr>
+			<tr class="dotted">
+			<td class="al_l"><span class="t_mark2"><em>거래완료</em>12.02.13</span></td>
+			<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+			</tr>
+			</tbody>
+			</table>
+
+			<!-- pagenate -->
+			<div class="paginate3">
+				<a href="#" class="pre">이전페이지</a> <strong>1</strong> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a> <a href="#" class="next">다음페이지</a>
+			</div>
+			<!-- //pagenate -->
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

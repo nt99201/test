@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>검색 결과 :: 부동산 캐스트</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/land_cast.css">
+<style type="text/css">
+/* 임시 코드 (개발 적용 안함) */
+#header .lnb_sub{height:43px !important}
+.layer_mobile_wrap{display:none !important}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<? include "http://svn.nhndesign.com/svnview/N_finance/land/branches/p_110531_home/header_incl.html" ?>
+	<div id="container">
+		<div id="snb">
+			<div class="date">
+				<span class="no_t no2011">2011</span><br>
+				<span class="no_m no3">03</span>
+				<span class="no_m slash">/</span>
+				<span class="no_m no22">22</span><br>
+				<span class="no_b tue">Tuesday</span>
+			</div>
+			<h2><img src="img/snb_tit.gif" width="124" height="57" alt="부동산 캐스트 부동산에 관련된 육인한 정보들을 소개합니다."></h2>
+			<ul>
+			<li class="nav"><a href="#" class="on"><span>전체 보기</span></a></li>
+			<li class="nav2"><a href="#"><span>월별로 보기</span></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div class="con_top">
+				<h3><img src="img/h_srch_result.gif" width="54" height="15" alt="검색 결과"></h3>
+				<form action="">
+				<fieldset>
+				<legend>전체 캐스트 검색 폼</legend>
+					<input type="text" title="검색어 입력" value="아파트" class="input">
+					<input type="image" src="img/btn_srch.gif" alt="검색">
+				</fieldset>
+				</form>
+			</div>
+			<div class="srch_result_list">
+				<p class="none"><strong>&ldquo;아파트&rdquo;에 대한 검색결과 없습니다.</strong></p>
+			</div>
+		</div>
+	</div>
+	<? include "http://svn.nhndesign.com/svnview/N_finance/land/branches/p_110531_home/footer_incl.html" ?>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>지도</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+<script type="text/javascript" src="js/jindo.all.js"></script>
+<script type="text/javascript" src="js/jindo_component.debug.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="snb">
+
+			<!-- 맵 -->
+			<div class="map">
+				<img src="img/@200x200.gif" alt="" width="198" height="199" style="display:block">
+				<!-- [D] 7글자 이상인 경우 newline 클래스 추가 -->
+				<div class="ly_map_tooltip" style="left:10px;top:10px">
+					<table cellspacing="0" class="tbl_tooltip">
+					<tr>
+					<td class="bg_tl">LG개포자이</td>
+					<td class="bg_tr"></td>
+					</tr>
+					<tr>
+					<td class="bg_bl"></td>
+					<td class="bg_br"></td>
+					</tr>
+					</table>
+				</div>
+			</div>
+			<div class="map_control has_nosibling">
+				<ul class="map_selector">
+				<li class="select_basic">
+					<ul>
+					<!-- [D] 활성화시 a 요소에 on class가 붙습니다. -->
+					<li class="select_normal"><a href="#" class="on">일반</a></li>
+					<li class="select_satellite"><a href="#">위성</a>
+						<!-- [D] show class가 추가되면 노출됩니다. -->
+						<div class="lay_default lay_satellite show">
+							<ul>
+							<!-- [D] input과 label에 동일한 id 지정 부탁 드립니다. -->
+							<li><input type="checkbox" class="ip_check" id="ip_check3"> <label for="ip_check3">겹쳐보기</label></li>
+							</ul>
+						</div>
+					</li>
+					</ul>
+				</li>
+				</ul>
+				<ul class="map_btn">
+				<li class="plus"><a href="#"><img src="http://static.naver.com/maps2/blank.gif" width="20" height="20" alt="확대"></a></li>
+				<li class="minus"><a href="#"><img src="http://static.naver.com/maps2/blank.gif" width="20" height="20" alt="축소"></a></li>
+				<li class="enlarge"><a href="#">크게보기</a></li>
+				</ul>
+			</div>
+			<!-- //맵 -->
+			
+		</div>
+	</div>
+</body>
+</html>

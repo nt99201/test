@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>list_page</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body style="height:100%;background-color:#e4e8e9">
+<div>
+	<!--list_page-->
+	<div class="list_page_v1">
+		<div class="h_loc alarm_set">
+			<h2>부동산 매물 알림</h2>
+			<p class="sub_info"><em>26</em>개의 매물 알림이 있습니다.</p>
+<!--			<button type="button" class="btn_lst_edit comp">완료</button>-->
+			<button type="button" class="btn_lst_edit">편집</button>
+			<a href="" class="prev"><em>뒤로</em></a>
+		</div>
+		<div class="pdt_set_wrap">
+			<div class="set_info_box">
+				<h3>매물알림 설정<button type="button" class="btn_detail"><span>도움말보기</span></button></h3>
+<!--			도움말 보기 팝업-->
+				<div class="ly_detail_box" style="display:none">
+					<strong>매물알림 도움말</strong>
+					<ul class="txt_lst">
+						<li>알림 조건은 최대 30개까지 등록할 수 있습니다.</li>
+						<li>등록된 알림 조건은 30일이 경과하면 알림이 OFF로 상태가 변경됩니다.</li>
+						<li>한번에 많은 알림이 발생할 경우 일부 알림이 순간적으로 전송되지 않을 수 있습니다.</li>
+					</ul>
+					<button type="button" class="btn_clse"><span>닫기</span></button>
+				</div>
+<!--			//도움말 보기 팝업-->
+				<p class="set_info_tit">알림은 네이버앱에서 받을수 있습니다.</p>
+				<p class="set_info_txt">알림이 수신되고 있지 않다면 네이버앱 설정에서 푸쉬 알림받기를 확인해주세요.</p>
+
+				<button type="button" class="btn_set on">ON</button>
+			</div>
+			<div class="set_info_box v2">
+				<h3>에티켓시간 설정</h3>
+				<p class="set_info_txt"><em>오후 11:00 ~ 오전 08:00</em> 동안에는 알림을 받지 않습니다.</p>
+
+				<button type="button" class="btn_set on">ON</button>
+			</div>
+			<ul class="set_lst">
+				<li>
+					<div class="info_box v2">
+						<p class="tw_name">오천공인중개사</p>
+						<p class="frst_info">경기 성남시 분당구 금곡동 143</p>
+						<p class="thrd_info"><span class="pdt_total">총 매물 <em>2</em>개</span><span class="pdt_new"><em>2</em>개의 새로운 매물</span><span class="time_txt">35분전</span></p>
+						<button type="button" class="btn_set on">ON</button>
+					</div>
+				</li>
+				<li>
+					<div class="info_box">
+						<p class="tw_name">삼성힐스테이트 1단지 705동<button type="button" class="btn_view_fltr"><span>필터조건보기</span></button></p>
+						<p class="frst_info"><span class="pdt_type_tit">오피스텔</span> 59/44m² (33.2평)</p>
+						<p class="scnd_info">전제<strong>24,000</strong>만원</p>
+						<p class="thrd_info"><span class="pdt_total">총 매물 <em>2</em>개</span><span class="pdt_new"><em>2</em>개의 새로운 매물</span><span class="time_txt">35분전</span></p>
+						<button type="button" class="btn_set on">ON</button>
+					</div>
+				</li>
+<!--			off 버튼 클릭시 class="off" 추가-->
+				<li class="off">
+					<div class="info_box">
+						<a href="#">
+						<p class="tw_name">삼성 힐스테이트<button type="button" class="btn_view_fltr"><span>필터조건보기</span></button></p>
+						<p class="frst_info"><span class="pdt_type_tit">오피스텔</span> 59/44m² (33.2평)</p>
+						<p class="scnd_info">매매<strong>36,500</strong>만원</p>
+						<p class="thrd_info"><span class="pdt_total">총 매물 <em>2</em>개</span><span class="pdt_new"><em>2</em>개의 새로운 매물</span><span class="time_txt">35분전</span></p>
+						</a>
+						<button type="button" class="btn_set">OFF</button>
+					</div>
+				</li>
+<!--			편집기능 활성화시에 선택버튼 클릭시 class="on" 추가-->
+				<li class="on">
+					<div class="edit_area"><button type="button" class="on"><span>선택됨</span></button></div>
+					<div class="info_box">
+						<p class="tw_name">삼성 힐스테이트<button type="button" class="btn_view_fltr"><span>필터조건보기</span></button></p>
+						<p class="frst_info"><span class="pdt_type_tit">오피스텔</span> 59/44m² (33.2평)</p>
+						<p class="scnd_info">매매<strong>36,500</strong>만원</p>
+						<p class="thrd_info"><span class="pdt_total">총 <em>2</em>개의 매물이 있습니다.</span><span class="time_txt">2015.02.04</span></p>
+						<button type="button" class="btn_set on">ON</button>
+					</div>
+				</li>
+<!--			편집기능 활성화시에 선택버튼 해제시 class="off" 추가-->
+				<li>
+					<div class="edit_area"><button type="button" class="off"><span>선택해제됨</span></button></div>
+					<div class="info_box">
+						<p class="tw_name">삼성힐스테이트 1단지 705동<button type="button" class="btn_view_fltr"><span>필터조건보기</span></button></p>
+						<p class="frst_info"><span class="pdt_type_tit">오피스텔</span> 59/44m² (33.2평)</p>
+						<p class="scnd_info">전제<strong>24,000</strong>만원</p>
+						<p class="thrd_info"><span class="pdt_total">총 매물 <em>2</em>개</span><span class="pdt_new"><em>2</em>개의 새로운 매물</span><span class="time_txt">35분전</span></p>
+						<button type="button" class="btn_set on">ON</button>
+					</div>
+				</li>
+			</ul>
+			<div class="btn_set_area"><button type="button" class="btn_selct_all">전체선택</button><button type="button" class="btn_del">삭제</button></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

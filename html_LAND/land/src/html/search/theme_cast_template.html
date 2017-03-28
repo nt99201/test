@@ -1,0 +1,587 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>검색 페이지 컨텐츠 모음</title>
+<link rel="stylesheet" type="text/css" href="../../css/search_content_template.css">
+<style type="text/css">
+#content{overflow:hidden;position:relative;width:740px}
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			<!-- 추천매물 -->
+			<div class="recommend">
+				<h3>추천매물</h3>
+				<h4>[파크센터]</h4>
+				<p class="img"><img src="img/@tmp_img.gif" width="219" height="160" alt="파크센터"></p>
+				<div class="info">
+					<h5>기본 정보</h5>
+					<table border="1" cellspacing="0" summary="건물 매매 시세, 월세 시세, 입주일자 등">
+					<colgroup>
+					<col width="102"><col width="*"><col width="60"><col width="*">
+					</colgroup>
+					<tr>
+					<th scope="row">127㎡ 매매 시세</th>
+					<td colspan="3">6,9000만원 ~ 72,000만원</td>
+					</tr>
+					<tr>
+					<th scope="row">127㎡ 월세 시세</th>
+					<td colspan="3">13000/250만원 ~ 3000/280만원</td>
+					</tr>
+					<tr>
+					<th scope="row">입주일자</th>
+					<td colspan="3">20007.06</td>
+					</tr>
+					<tr>
+					<th scope="row">총세대수</th>
+					<td>246세대</td>
+					<th scope="row" class="w">총동수</th>
+					<td>2개동</td>
+					</tr>
+					<tr class="btm">
+					<th scope="row">면적정보(㎡)</th>
+					<td colspan="3">127,202,226,291,495</td>
+					</tr>
+					</table>
+				</div>
+				<div class="ground_plan">
+					<h5>평면도</h5>
+					<p><img src="img/@plan_ground.gif" width="173" height="144" alt="평면도"></p>
+				</div>
+				<div class="pic">
+					<h4>매물 사진</h4>
+					<ul>
+					<li class="frst"><a href="#"><img src="img/@tmp_pic.gif" alt="매물 사진 1" width="131" height="84"><span></span></a></li>
+					<li><a href="#"><img src="img/@tmp_pic.gif" width="131" height="84" alt="매물 사진 2"><span></span></a></li>
+					<li><a href="#"><img src="img/@tmp_pic.gif" width="131" height="84" alt="매물 사진 3"><span></span></a></li>
+					<li><a href="#"><img src="img/@tmp_pic.gif" width="131" height="84" alt="매물 사진 4"><span></span></a></li>
+					<li><a href="#"><img src="img/@tmp_pic.gif" width="131" height="84" alt="매물 사진 5"><span></span></a></li>
+					</ul>
+				</div>
+				<p class="more"><a href="#">매물 목록보기</a></p>
+			</div>
+			<!-- //추천매물 -->
+			
+			<!-- 부동산 Q&A -->
+			<div class="qna">
+				<h3>부동산 Q&amp;A</h3>
+				<ul>
+				<li><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<em>| ysc***** 2011.05.22</em>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다 복비가 비싼것 같아요.<br>
+					전체 7천만원의 수수료는 얼마인가요?</a></p>
+				</li>
+				<li><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<em>| ysc***** 2011.05.22</em>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다 복비가 비싼것 같아요.<br>
+					전체 7천만원의 수수료는 얼마인가요?</a></p>
+				</li>
+				</ul>
+				<p class="more"><a href="#">부동산 Q&amp;A 더보기</a></p>
+			</div>
+			<!-- //부동산 Q&A -->
+			
+			<!-- 부동산 Q&A 2 -->
+			<div class="qna2">
+				<h3>부동산 Q&amp;A</h3>
+				<ul>
+				<!-- [D] 첫 리스트 li에 class="spot" 추가 -->
+				<li class="spot"><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다  복비가 비싼것 같아요. 전체 7천만원의 수수료는 얼마인가요?<br>
+					복비가 비싼것 같아요. 전체 7천만원의 수수료는 얼마인가요?</a></p>
+					<em>ysc***** 2011.05.22</em>
+				</li>
+				<li><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<em>| ysc***** 2011.05.22</em>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다 복비가 비싼것 같아요.<br>
+					전체 7천만원의 수수료는 얼마인가요?</a></p>
+				</li>
+				<li><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<em>| ysc***** 2011.05.22</em>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다 복비가 비싼것 같아요.<br>
+					전체 7천만원의 수수료는 얼마인가요?</a></p>
+				</li>
+				<li><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<em>| ysc***** 2011.05.22</em>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다 복비가 비싼것 같아요.<br>
+					전체 7천만원의 수수료는 얼마인가요?</a></p>
+				</li>
+				<li><span class="q">Question : </span>
+					<h4><a href="#">오피스텔 계약시 복비 가격과 복비 지금시기?</a></h4>
+					<em>| ysc***** 2011.05.22</em>
+					<p><a href="#">오피스텔이나 원룸을 구하다가 좀 안전할 것 같아서 오피스텔을 계약했는데 원룸보다 복비가 비싼것 같아요.<br>
+					전체 7천만원의 수수료는 얼마인가요?</a></p>
+				</li>
+				</ul>
+				<p class="more"><a href="#">부동산 Q&amp;A 더보기</a></p>
+			</div>
+			<!-- //부동산 Q&A 2 -->
+			
+			<!-- 우리동네 이야기 -->
+			<div class="story">
+				<h3>우리동네 이야기</h3>
+				<ul>
+				<!-- [D] 첫번째 리스트에 class="spot" 추가 -->
+				<li class="spot">
+					<a href="#" class="img"><img src="img/@tmp_pic2.gif" width="217" height="148" alt="최초의 타운타우스 항동 그린빌라의 봄 사진"></a>
+					<h4><a href="#">최초의 타운타우스 항동 그린빌라의 봄</a> <span>2011.05.05</span></h4>
+					<p class="con"><a href="#">얼마전에 목련과 벗꽃이 장관이었는데 회사일이 바빠서 사진 한장 찍을 여유가 없었네요. 오늘은 점심먹고 동네 한 바퀴 산책하면서 폰으로 몇 컷 담아 올립니다. 스크롤이 꽤 되니 천천히 감상하세요. 5월이되니 집 밖이 바로 산 속입니다. 어버이날이라 오늘따라 거리에 사람이 없네요. 오른쪽 위에 조금 보이는 건물이 아마 유한대학 도서관일 겁니다. 단지가 서울과 부천의 경계에 있습니다. 경인로 타시다가 경기도 경계선에 있는 유한대학 고개가 나오는데 그 뒤가 항동...</a></p>
+					<p class="more"><a href="#">상세보기</a></p>
+				</li>
+				<!-- [D] 사진만 있는 첫번째 리스트 요소에 class="frst img" 추가, 나머지는 img 만-->
+				<li class="frst img"><a href="#"><img src="img/@tmp_pic3.gif" width="128" height="83" alt="뭐시기 사진"></a></li>
+				<li class="img"><a href="#"><img src="img/@tmp_pic3.gif" width="128" height="83" alt="뭐시기 사진"></a></li>
+				<li class="img"><a href="#"><img src="img/@tmp_pic3.gif" width="128" height="83" alt="뭐시기 사진"></a></li>
+				<li class="img"><a href="#" class="img"><img src="img/@tmp_pic3.gif" width="128" height="83" alt="뭐시기 사진"></a></li>
+				<li class="img"><a href="#" class="img"><img src="img/@tmp_pic3.gif" width="128" height="83" alt="뭐시기 사진"></a></li>
+				</ul>
+			</div>
+			<!-- //우리동네 이야기 -->
+			
+			<!-- 전세대란 스페셜 페이지 -->
+			<div class="special">
+				<h3 class="b_line">전세대란 스페셜 페이지</h3>
+				<div class="spot_news">
+					<!-- [D] 이미지 일 경우 : 이미지와 같이 있는 span의 width 값과 height 값은 인라인으로 수정(이미지 높이와 너비에서 2px 씩 뺀 값) 
+						 * 이미지가 아닐 경우 : span 적용 안해도 됨 -->
+					<div class="img"><a href="#"><img src="img/@tmp_pic4.gif" width="231" height="156" alt="부동산 사진"><span style="width:229px;height:154px"></span></a></div>
+					<h4><a href="#">하반기 최악의 전세대란 오나?</a></h4>
+					<p class="con"><a href="#">최근 서울 수도권 아파트 전셋값은 계속 오름세다. 계속되는 오름세에 전세매물은 시장에서 그 모습을 감춘지 오래다. 부르는게 값이고 전세 계약을 위해 울며 겨자먹기로 전셋값을 올려야 하는 서민들이 전세대란을 극복할 솔루션은 없을까?  부르는게 값이고 전세 계약을 위해 울며 겨자먹기로 전셋값을 올려야 하는 서민들이 전세대란을 극복할 솔루션은 없을까?  부르는게 값이고 전세 계약을 위해 울며 겨자먹기로 전셋값을 올려야 하는 서민들이 전세대란을 극복할 솔루션은 없을까...</a></p>
+					<p class="more"><a href="#">상세보기</a></p>
+				</div>
+			</div>
+			<!-- //전세대란 스페셜 페이지 -->
+			
+			<!-- 전세 지역별 전세 동향 -->
+			<div class="special">				
+				<h3>지역별 전세 동향</h3>
+				<div class="trend">
+					<div class="map"><img src="img/@tmp_pic6.gif" width="336" height="265" alt="지역별 전세 동향 지도"></div>				
+					<ul>
+					<li><a href="#"><img src="img/@tmp_pic5.gif" width="108" height="73" alt="누구님 사진"></a>
+						<a href="#"><strong>서울시 강남구 00 중개업소</strong></a><br>
+						<a href="#">아놔.. 물건 완전 없어요. 장난 아님!<br>아놔.. 물건 완전 없어요. 장난 아님! 아놔.. 물건 완전 없어요. 장난 아님!</a>
+					</li>
+					<li><a href="#"><img src="img/@tmp_pic5.gif" width="108" height="73" alt="누구님 사진"></a>
+						<a href="#"><strong>서울시 강남구 00 중개업소</strong></a><br>
+						<a href="#">아놔.. 물건 완전 없어요. 장난 아님!<br>아놔.. 물건 완전 없어요. 장난 아님! 아놔.. 물건 완전 없어요. 장난 아님!</a>
+					</li>
+					<li><a href="#"><img src="img/@tmp_pic5.gif" width="108" height="73" alt="누구님 사진"></a>
+						<a href="#"><strong>서울시 강남구 00 중개업소</strong></a><br>
+						<a href="#">아놔.. 물건 완전 없어요. 장난 아님!<br>아놔.. 물건 완전 없어요. 장난 아님! 아놔.. 물건 완전 없어요. 장난 아님!</a>
+					</li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<!-- //전세 지역별 전세 동향 -->
+			
+			<!-- 전세대란 타파! 테마 매물 보기 -->
+			<div class="special">								
+				<h3>전세대란 타파! 테마 매물 보기</h3>
+				<ul class="sale_list">
+				<li><a href="#">지역별 20평대 아파트 전세 찾기</a></li>
+				<li><a href="#">신혼부부에게 추천! 빌라 전세 매물</a></li>
+				<li><a href="#">특수 학교 근처 전세 찾기</a></li>
+				<li><a href="#">아파트보다 저렴한 오피스텔 전세</a></li>
+				<li><a href="#">주요 신도시 전세 매물 찾기</a></li>
+				<li><a href="#">전세대신 내집마련! 2억 이하 아파트 매매</a></li>
+				</ul>
+			</div>
+			<!-- //전세대란 타파! 테마 매물 보기 -->
+			
+			<!-- 주요 뉴스 -->
+			<div class="special">										
+				<h3 class="b_line">주요 뉴스</h3>
+				<div class="news">
+					<ul>
+					<!-- [D] 이미지 가로 너비만 69px 높이값 자동일때는 height 삭제 -->
+					<li><div>
+							<a href="#" class="pic"><img src="img/@tmp_pic7.gif" width="69" height="34" alt="xxx 사진"></a>
+							<a href="#" class="tit"><strong>기는 집값....매수자 팔짱만 끼고</strong></a><br>
+							<a href="#" class="con">수도권 14주 연속 하락수도권 집값이 14주 연속 떨어졌다. 지난 한주간 수도권에서는 서울 서호와 종로구, 경기 군포·산본신도시·평택 등 총 5곳만이 매매가가 소폭 올랐고 47곳은 보합....</a>
+							<em><strong>해럴드경제</strong> <span>|</span> 2011.07.08</em>
+						</div>
+						<ul>
+						<li><a href="#">수도권 전지역 매마가 하락세</a> <em><strong>해럴드경제</strong> <span>|</span> 2011.07.08</em></li>
+						</ul>
+					</li>	
+					<li><div>
+							<a href="#" class="pic"><img src="img/@tmp_pic8.gif" width="69" height="67" alt="xxx 사진"></a>
+							<a href="#" class="tit"><strong>기는 집값....매수자 팔짱만 끼고</strong></a><br>
+							<a href="#" class="con">수도권 14주 연속 하락수도권 집값이 14주 연속 떨어졌다. 지난 한주간 수도권에서는 서울 서호와 종로구, 경기 군포·산본신도시·평택 등 총 5곳만이 매매가가 소폭 올랐고 47곳은 보합....</a>
+							<em><strong>해럴드경제</strong> <span>|</span> 2011.07.08</em>
+						</div>
+						<ul>
+						<li><a href="#">수도권 전지역 매마가 하락세</a> <em><strong>해럴드경제</strong> <span>|</span> 2011.07.08</em></li>
+						</ul>
+					</li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<!-- //주요 뉴스 -->
+			
+			<!-- 전문가 칼럼 -->
+			<div class="special">														
+				<h3 class="b_line">전문가 칼럼</h3>
+				<div class="expert">
+					<div class="lst">
+						<ul>
+						<li><a href="#"><img src="img/@tmp_pic5.gif" width="108" height="73" alt="누구님 사진"></a>
+							<a href="#"><strong>아파트 소형서 중대형으로 갈아타...</strong></a><br>
+							<a href="#">올해들어 서울을 포함한 수도권에서 중소형 아파트 거주자들의 중대형 '갈아타기'가 한결 수월해진 것으로 나타났다.중소형...</a><br>
+							<em>칼럼리스트 <span>|</span> 이영진</em>
+						</li>
+						<li><a href="#"><img src="img/@tmp_pic5.gif" width="108" height="73" alt="누구님 사진"></a>
+							<a href="#"><strong>아파트 소형서 중대형으로 갈아타...</strong></a><br>
+							<a href="#">올해들어 서울을 포함한 수도권에서 중소형 아파트 거주자들의 중대형 '갈아타기'가 한결 수월해진 것으로 나타났다.중소형...</a><br>
+							<em>칼럼리스트 <span>|</span> 이영진</em>
+						</li>
+						</ul>
+						<p class="more"><a href="#">더보기</a></p>
+					</div>
+								
+					<div class="poll">
+						<h5>ISSUE &amp; POLL</h5>
+						<dl>
+						<dt><span class="q">질문 : </span> 보금자리주택 임대전환, 어떻게 생각하십니까?<br>
+							<em><strong>진행중</strong> <span>|</span> 2011-06-17 ~</em></dt>
+						<dd>
+							<ul>
+							<li><strong class="a">A</strong> 돈을 주고 집을 사서 하우스푸어가 된다</li>
+							<li><strong class="b">B</strong> 평생 월세로 산다</li>
+							</ul>
+						</dd>
+						</dl>
+						<p class="btn_poll"><a href="#">투표하기</a></p>
+						<p class="more"><a href="#">더보기</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- //전문가 칼럼 -->
+			
+			<!-- 지역정보 -->
+			<div class="area_info">
+				<h3><img src="img/h_collection_localinfo.gif" width="50" height="15" alt="지역정보"></h3>
+				<div class="hotarea">
+					<h4><a href="#">[택지지구] 고양시 풍동지구 경의선 복선전철 수혜지인 풍동지구</a></h4>
+					<div class="text">
+						<span class="thumb"><img src="img/@189x127.jpg" width="189" height="127" alt="썸네일 이미지"></span>
+						<div class="desc">
+							<a href="#">
+							글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.
+							<br><br>
+							글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.
+							<br><br>
+							글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.
+							<br><br>
+							글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.
+							</a>
+						</div>
+					</div>
+					<table cellspacing="0" border="1" summary="위치, 사업면적, 사업기간 등">
+					<colgroup>
+					<col width="88"><col width="244"><col width="141"><col>
+					</colgroup>
+					<tbody>
+					<tr class="first">
+					<th scope="row"><span>위치</span></th>
+					<td>서울시 강남구 도곡동 527</td>
+					<th scope="row"><span>수용인구/수용호수</span></th>
+					<td>2만 3천 49인 / 7천6백83호</td>
+					</tr>
+					<tr>
+					<th scope="row"><span>사업면적</span></th>
+					<td>108,108㎡</td>
+					<th scope="row"><span>공동주택</span></th>
+					<td>4천4백88가구</td>
+					</tr>
+					<tr>
+					<th scope="row"><span>사업기간</span></th>
+					<td>2010.10.18 ~ 2014.12.31</td>
+					<th scope="row"><span>공원녹지/학교</span></th>
+					<td>4만2천83평(16.01%)/2만2천9백43평(8.73%)</td>
+					</tr>
+					<tr>
+					<th scope="row"><span>주택규모</span></th>
+					<td>총 7천6백83가구 (단독주택 195가구)</td>
+					<th scope="row"><span>특징</span></th>
+					<td>일산신도시 생활권에 속함</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //지역정보 -->
+			
+			<!-- 부동산뉴스 -->
+			<div class="land_news">
+				<h3><img src="img/h_collection_news.gif" width="67" height="15" alt="부동산 뉴스"> (34,567건)</h3>
+				<ul>
+				<li><div class="thumb"><a href="#"><img src="img/@100x74.jpg" width="100" height="74" alt="썸네일 이미지"></a></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.</div>
+					</div>
+				</li>
+				<li><div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.</div>
+					</div>
+				</li>
+				<li><div class="thumb"><a href="#"><img src="img/@100x74.jpg" width="100" height="74" alt="썸네일 이미지"></a></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다"고 평가했다.</div>
+					</div>
+				</li>
+				</ul>
+				<p><a href="#">부동산 뉴스 더보기</a></p>
+			</div>
+			<!-- //부동산뉴스 -->
+						
+			<!-- 용어사전 -->
+			<div class="land_news">
+				<h3><img src="img/h_collection_dict.gif" width="50" height="15" alt="용어사전"> (34,567건)</h3>
+				<ul>
+				<li><div class="title">
+						<span class="dict">경제용어</span>
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+					</div>
+				</li>
+				<li><div class="title">
+						<span class="dict">시사용어</span>
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+					</div>
+				</li>
+				<li><div class="title">
+						<span class="dict">고전용어</span>
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것"이라고 말했다. 윤 장관은 "인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+					</div>
+				</li>
+				</ul>
+				<p><a href="#" class="btn_more">용어사전 더보기</a></p>
+			</div>
+			<!-- //용어사전 -->
+			
+			<!-- 매물 강조형 -->
+			<div class="monthly_rent_wrap">
+				<h3>구로구 10평대 월세 아파트 정보</h3>
+				<div class="monthly_rent">
+					<div class="col">
+						<p class="img"><img src="img/@tmp_house.gif" width="103" height="70" alt="아파트 사진"><span></span></p>
+						<p class="img fr"><img src="img/@tmp_house2.gif" width="103" height="70" alt="아파트 내부 사진"><span></span></p>
+						<table border="1" cellspacing="0">
+						<caption>아파트 정보</caption>
+						<col width="72"><col width="*">
+						<tbody>
+						<tr>
+						<th scope="row"><span>단지명</span></th>
+						<td><span>구로구 구로동<br><strong>구로 두산위브</strong></span></td>
+						</tr>
+						<tr>
+						<th scope="row"><span>공급면적</span></th>
+						<td><span><strong>52.68㎡</strong></span></td>
+						</tr>
+						<tr>
+						<th scope="row"><span>전용면적</span></th>
+						<td><span>36.88㎡</span></td>
+						</tr>
+						<tr class="btm">
+						<th scope="row"><span>월세가</span></th>
+						<td><span><em>5,000/60 만원</em></span></td>
+						</tr>
+						</tbody>
+						</table>
+						<p class="view"><a href="#">매물 상세보기</a></p>
+					</div>
+					<div class="col">
+						<p class="img"><img src="img/@tmp_house.gif" width="103" height="70" alt="아파트 사진"><span></span></p>
+						<p class="img fr"><img src="img/@tmp_house2.gif" width="103" height="70" alt="아파트 내부 사진"><span></span></p>
+						<table border="1" cellspacing="0">
+						<caption>아파트 정보</caption>
+						<col width="72"><col width="*">
+						<tbody>
+						<tr>
+						<th scope="row"><span>단지명</span></th>
+						<td><span>구로구 구로동<br><strong>구로 두산위브</strong></span></td>
+						</tr>
+						<tr>
+						<th scope="row"><span>공급면적</span></th>
+						<td><span><strong>52.68㎡</strong></span></td>
+						</tr>
+						<tr>
+						<th scope="row"><span>전용면적</span></th>
+						<td><span>36.88㎡</span></td>
+						</tr>
+						<tr class="btm">
+						<th scope="row"><span>월세가</span></th>
+						<td><span><em>5,000/60 만원</em></span></td>
+						</tr>
+						</tbody>
+						</table>
+						<p class="view"><a href="#">매물 상세보기</a></p>
+					</div>
+					<div class="col">
+						<p class="img"><img src="img/@tmp_house.gif" width="103" height="70" alt="아파트 사진"><span></span></p>
+						<p class="img fr"><img src="img/@tmp_house2.gif" width="103" height="70" alt="아파트 내부 사진"><span></span></p>
+						<table border="1" cellspacing="0">
+						<caption>아파트 정보</caption>
+						<col width="72"><col width="*">
+						<tbody>
+						<tr>
+						<th scope="row"><span>단지명</span></th>
+						<td><span>구로구 구로동<br><strong>구로 두산위브</strong></span></td>
+						</tr>
+						<tr>
+						<th scope="row"><span>공급면적</span></th>
+						<td><span><strong>52.68㎡</strong></span></td>
+						</tr>
+						<tr>
+						<th scope="row"><span>전용면적</span></th>
+						<td><span>36.88㎡</span></td>
+						</tr>
+						<tr class="btm">
+						<th scope="row"><span>월세가</span></th>
+						<td><span><em>5,000/60 만원</em></span></td>
+						</tr>
+						</tbody>
+						</table>
+						<p class="view"><a href="#">매물 상세보기</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- //매물 강조형 -->
+			
+			<!-- 설명형 -->
+			<div class="dsc_type_wrap">
+				<h3>태풍올 때 집관리 이렇게 해보세요.</h3>
+				<div class="dsc_type">
+					<p class="img"><img src="img/@tmp_dsc_type.gif" width="128" height="92" alt="무슨 무슨 사진"><span></span></p>
+					<h4>호우, 태풍이 올 때 집 관리는 어떻게 해야 좋을까? <cite>(출처:재난안전대책본부)</cite></h4>
+					<dl>
+					<dt>태풍예보 시에는</dt>
+					<dd>- 가정의 하수구나 집주변의 배수구를 점검하고 막힌 곳을 뚫어야 합니다.<br>
+						- 날아갈 위험이 있는 지붕, 간판 등을 단단히 고정합니다.</dd>
+					<dt>태풍의 영향권에 있을 때에는</dt>
+					<dd>- 가정의 하수구나 집 주변의 배수구를 점검하고 막힌 곳을 뚫어야 합니다.<br>
+						- 날아갈 위험이 있는 지붕, 간판 등을 단단히 고정합니다.<br>
+						- 가정의 하수구나 집주변의 배수구를 점검하고 막힌 곳을 뚫어야 합니다.<br>
+						- 날아갈 위험이 있는 지붕, 간판 등을 단단히 고정합니다.</dd>
+					<dt>태풍이 지나간 후에는</dt>
+					<dd>- 파손된 상하수도나 도로가 있다면 시.군.구청이나 읍.면.동 사무소에 연락하세요.<br>
+						- 침수된 집안은 가스가 차 있을 수 있으니 환기시킨 후 들어가시고<br>
+						　전기, 가스, 수도 시설은 손대지 마시고 전문 업체에 연락하여 사용합니다.</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- //설명형 -->
+			
+			<!-- 표형 -->
+			<div class="tbl_type">
+				<h3>경기도 온천 관광지 5選 및 부동산 정보</h3>
+				<table border="1" cellspacing="0">
+				<caption>부동산 정보</caption>
+				<col width="103"><col width="*">
+				<thead>
+				<tr>
+				<th scope="col">전원주택</th>
+				<th scope="col">온천 관광지</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="ac"><a href="#">포천시</a></td>
+				<td><div class="ma">
+						<p class="img"><img src="img/@tbl_pic.gif" width="106" height="81" alt="XX 사진"><span></span></p>
+						<div>
+							<p class="tit"><strong>일동 용암천</strong> <small>(경기 포천시 일동면 수입리 69번지 / 031-536-4600)</small></p>
+							<p class="dsc">국내 치고의 유황성분(8.9ppm)이 함유된 유황천으로 <br>요금은 일반이 6,000원 소인 및 경로는 5,000원이다.</p>
+							<p class="dsc">영업시간 : 평일 0700~19:30, 공휴일 06:30~19:30</p>
+							<p class="post"><strong>관련 포스트</strong> <a href="#">[경기도 온천] 일동 용암천 - 국내 최고의 유황성분의 온천</a></p>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td class="ac"><a href="#">이천시</a></td>
+				<td><div class="ma">
+						<p class="img"><img src="img/@tbl_pic.gif" width="106" height="81" alt="XX 사진"><span></span></p>
+						<div>
+							<p class="tit"><strong>일동 용암천</strong> <small>(경기 포천시 일동면 수입리 69번지 / 031-536-4600)</small></p>
+							<p class="dsc">국내 치고의 유황성분(8.9ppm)이 함유된 유황천으로 <br>요금은 일반이 6,000원 소인 및 경로는 5,000원이다.</p>
+							<p class="dsc">영업시간 : 평일 0700~19:30, 공휴일 06:30~19:30</p>
+							<p class="post"><strong>관련 포스트</strong> <a href="#">[경기도 온천] 일동 용암천 - 국내 최고의 유황성분의 온천</a></p>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td class="ac"><a href="#">화성시</a></td>
+				<td><div class="ma">
+						<p class="img"><img src="img/@tbl_pic.gif" width="106" height="81" alt="XX 사진"><span></span></p>
+						<div>
+							<p class="tit"><a href="#"><strong>일동 용암천</strong></a> <small>(경기 포천시 일동면 수입리 69번지 / 031-536-4600)</small></p>
+							<p class="dsc">국내 치고의 유황성분(8.9ppm)이 함유된 유황천으로 <br>요금은 일반이 6,000원 소인 및 경로는 5,000원이다.</p>
+							<p class="dsc">영업시간 : 평일 0700~19:30, 공휴일 06:30~19:30</p>
+							<p class="post"><strong>관련 포스트</strong> <a href="#">[경기도 온천] 일동 용암천 - 국내 최고의 유황성분의 온천</a></p>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td class="ac"><a href="#">김포시</a></td>
+				<td><div class="ma">
+						<p class="img"><img src="img/@tbl_pic.gif" width="106" height="81" alt="XX 사진"><span></span></p>
+						<div>
+							<p class="tit"><a href="#"><strong>일동 용암천</strong></a> <small>(경기 포천시 일동면 수입리 69번지 / 031-536-4600)</small></p>
+							<p class="dsc">국내 치고의 유황성분(8.9ppm)이 함유된 유황천으로 <br>요금은 일반이 6,000원 소인 및 경로는 5,000원이다.</p>
+							<p class="dsc">영업시간 : 평일 0700~19:30, 공휴일 06:30~19:30</p>
+							<p class="post"><strong>관련 포스트</strong> <a href="#">[경기도 온천] 일동 용암천 - 국내 최고의 유황성분의 온천</a></p>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td class="ac"><a href="#">양평군</a></td>
+				<td><div class="ma">
+						<p class="img"><img src="img/@tbl_pic.gif" width="106" height="81" alt="XX 사진"><span></span></p>
+						<div>
+							<p class="tit"><a href="#"><strong>일동 용암천</strong></a> <small>(경기 포천시 일동면 수입리 69번지 / 031-536-4600)</small></p>
+							<p class="dsc">국내 치고의 유황성분(8.9ppm)이 함유된 유황천으로 <br>요금은 일반이 6,000원 소인 및 경로는 5,000원이다.</p>
+							<p class="dsc">영업시간 : 평일 0700~19:30, 공휴일 06:30~19:30</p>
+							<p class="post"><strong>관련 포스트</strong> <a href="#">[경기도 온천] 일동 용암천 - 국내 최고의 유황성분의 온천</a></p>
+						</div>
+					</div>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			<!-- //표형 -->
+			
+			<!-- 현재 위치 출력 -->
+			<div class="c_loc">
+				<div class="c_loc_inner">
+					<p>전국 &gt; 서울특별시 &gt; 영등포구 &gt; <strong>여의도동</strong></p>
+				</div>
+			</div>
+			<!-- //현재 위치 출력 -->
+		</div>	
+	</div>
+</body>
+</html>

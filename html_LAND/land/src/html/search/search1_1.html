@@ -1,0 +1,825 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>전체탭 - 전국</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+<script type="text/javascript" src="../js/jindo.all.js"></script>
+<script type="text/javascript" src="./js/jindo_component.debug.js"></script>
+</head>
+<body onload="getGNB();">
+<div id="wrap">
+
+	<div id="u_skip">
+		<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+		<a href="#container"><span>하위 메뉴로 바로가기</span></a>
+		<a href="#content"><span>본문으로 바로가기</span></a>
+	</div>
+
+	<!-- 원네이버 GNB -->
+	<div id="header" class="header_one">
+		<div class="gnb_wrap">
+			<div class="inner_wrap">
+				<div class="item_area">
+					<h1 class="logo_area">
+						<a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+						<a class="logo_land" href="http://land.naver.com"><i class="icon">부동산</i></a>
+					</h1>
+					<div class="inner_gnb_search">
+						<h2 class="blind">검색영역</h2>
+						<fieldset>
+							<legend>부동산 검색</legend>
+							<input type="text" title="검색" class="search_input" placeholder="지역명 또는 단지명">
+							<a href="#" onclick="" class="search_button type_inside"><i class="icon">검색</i></a>
+							<a href="#" onclick="" class="search_button type_integration"><i class="icon">통합검색</i></a>
+						</fieldset>
+					</div>
+				</div>
+				<div class="gnb_area">
+					<div id="gnb">
+						<script type="text/javascript">
+						var nsc = "naver.service";
+						var gnb_service = "static.nid.naver.com";
+						var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+						var gnb_template = "gnb_utf8";
+						var gnb_one_naver = 1;
+						</script>
+						<script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lnb" class="nav_wrap">
+			<h2 class="blind">메인메뉴</h2>
+			<div class="inner_wrap">
+				<!-- [D] 활성화 클래스 on -->
+				<ul class="nav_list">
+				<li class="menu main_home"><a href="#">부동산 홈</a></li>
+				<li class="menu main_article"><a href="#">매물</a></li>
+				<li class="menu main_isale"><a href="#">분양</a></li>
+				<li class="menu main_news"><a href="#">뉴스</a></li>
+				<li class="menu main_community"><a href="#">커뮤니티</a></li>
+				<li class="menu main_auction"><a href="#">경매</a></li>
+				<li class="menu main_mypage"><a href="#">MY페이지</a></li>
+				</ul>
+				<div class="button_area">
+					<a class="type_admin" href="http://landad.naver.com">부동산관리센터</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //원네이버 GNB -->
+
+	<!-- 검색탭 -->
+	<div class="section_tab">
+		<h2>'<strong>전국</strong>'의 '<strong>래미안</strong>' 검색 결과입니다.</h2>
+		<ul class="searchtab">
+		<li class="on"><a href="#" class="t1"><span>전체</span></a></li><!-- [D] 선택된 탭은 on 클래스 사용 -->
+		<li><a href="#" class="t5"><span>매물</span></a></li>
+		<li><a href="#" class="t4"><span>시세</span></a></li>
+		<li><a href="#" class="t6"><span>분양</span></a></li>
+		<li><a href="#" class="t3"><span>단지</span></a></li>
+		<li><a href="#" class="t2"><span>지역정보</span></a></li>
+		</ul>
+		<div class="rank">
+			<ol class="ranklist">
+			<li class="rank1"><a href="#">서울 아파트 전세</a> <em class="up">351</em><span>상승</span></li>
+			</ol>
+		</div>
+		<div class="ranklayer" style="display:none;">
+			<h3><a href="#">부동산 인기 검색어 <img src="img/btn_rankmore.gif" alt="" width="3" height="6" ></a></h3>
+			<ol class="ranklist">
+			<li class="rank1"><a href="#">서울 아파트 전세</a> <em class="new"><img src="img/ico_new.gif" alt="NEW" width="22" height="5" ></em></li>
+			<li class="rank2"><a href="#">판교 분양</a> <em class="up">351</em><span>상승</span></li>
+			<li class="rank3"><a href="#">세곡동 분양</a> <em class="up">51</em><span>상승</span></li>
+			<li class="rank4"><a href="#">서울 아파트 전세</a> <em class="up">1</em><span>상승</span></li>
+			<li class="rank5"><a href="#">서울 아파트 전세</a> <em class="up">31</em><span>상승</span></li>
+			<li class="rank6"><a href="#">서울 아파트 전세</a> <em class="up">35</em><span>상승</span></li>
+			<li class="rank7"><a href="#">판교 분양</a> <em class="up">5</em><span>상승</span></li>
+			<li class="rank8"><a href="#">세곡동 분양</a> <em class="up">351</em><span>상승</span></li>
+			<li class="rank9"><a href="#">세곡동 분양</a> <em class="up">999</em><span>상승</span></li>
+			<li class="rank10"><a href="#">세곡동 분양</a> <em class="up">31</em><span>상승</span></li>
+			</ol>
+		</div>
+	</div>
+	<!-- //검색탭 -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="snb">
+			<!-- 맵 -->
+			<div class="map"><img src="img/@200x200.gif" alt="" width="198" height="199" ></div>
+			<!-- //맵 -->
+			<!-- 검색조건 -->
+			<ul class="optiontab">
+			<li class="t1 on"><a href="#" class="t1"><span>매물</span></a></li><!-- [D] 선택된 탭에 on 클래스 사용 -->
+			<li class="t2"><a href="#" class="t2"><span>단지</span></a></li>
+			<li class="t3"><a href="#" class="t3"><span>분양</span></a></li>
+			</ul>
+			<div class="section_option">
+				<div class="opt_area line">
+					<h3>거래종류</h3>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio" checked="checked"><label for="type1_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio2" class="btn_radio"><label for="type1_radio2">매매</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio3" class="btn_radio"><label for="type1_radio3">월세</label></div>
+					<div class="col"><input type="radio" name="radio1" id="type1_radio4" class="btn_radio"><label for="type1_radio4">전세</label></div>
+				</div>
+				<div class="opt_area line">
+					<h3>가격</h3>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio2" class="btn_radio"><label for="type2_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio3" class="btn_radio"><label for="type2_radio3">1천만미만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio4" class="btn_radio"><label for="type2_radio4">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio5" class="btn_radio"><label for="type2_radio5">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio6" class="btn_radio"><label for="type2_radio6">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio7" class="btn_radio"><label for="type2_radio7">1~3억</label></div>
+					<div class="col dirt"><input type="radio" name="radio2" id="type2_radio1" class="btn_radio" checked="checked"><label for="type2_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소가격" style="width:43px;" > <span class="crit1">만원</span>
+						<span class="tooltip" style="left:6px;"><em>2억4천만원</em></span>
+						<span class="bet">~</span>
+						<input type="text" class="text" title="최대가격" style="width:43px; margin-left:-1px;" > <span class="crit1">만원</span>
+						<span class="tooltip" style="left:98px;"><em>5억2천4백3십5만원</em></span>
+					</div>
+				</div>
+				<div class="opt_area last">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a></h3>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"><label for="type3_radio2">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"><label for="type3_radio3" title="66㎡=21.8평&#13;66㎡=21.8평">66㎡ 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"><label for="type3_radio4" title="66㎡=21.8평&#13;66㎡=21.8평">66~99㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"><label for="type3_radio5" title="66㎡=21.8평&#13;66㎡=21.8평">99~132㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"><label for="type3_radio6" title="66㎡=21.8평&#13;66㎡=21.8평">132~165㎡</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"><label for="type3_radio7" title="66㎡=21.8평&#13;66㎡=21.8평">165~198㎡</label></div>
+					<div class="col dirt2"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"><label for="type3_radio1" class="on">직접입력</label></div>
+					<div class="direct">
+						<input type="text" class="text" title="최소면적" style="width:51px;"><span class="crit2">㎡</span> <span class="bet">~</span>
+						<span class="tooltip" style="left:22px;"><em>25.8평</em></span>
+						<input type="text" class="text" title="최대면적" style="width:51px;" ><span class="crit2">㎡</span>
+						<span class="tooltip" style="left:110px;"><em>25.8평</em></span>
+					</div>
+				</div>
+				<div class="calc">
+					<h4>평형 계산기</h4>
+					<input type="text" class="calc_text" title="면적" style="width:34px;">
+					<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+					<div class="selectbox-noscript select_crit" id="select_pyeong_unit">
+						<select class="selectbox-source">
+							<option class="selectbox-default">선택</option>
+					   		<option value="0">평</option>
+					   		<option value="1">㎡</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+					   	<div class="selectbox-layer">
+					   		<div class="selectbox-list"></div>
+					   	</div>
+					</div>
+					<script type="text/javascript">
+                    var sbxPyeongUnit = new jindo.SelectBox($("select_pyeong_unit"),{
+                                 nWidth : null, //가로 사이즈, null시 자동
+                                 nHeight : 100, //목록의 최대 높이. 그 이상시 스크롤 생김
+                                 bUseLayerPosition : false
+                    });
+					sbxPyeongUnit.setSelectedIndex(1);
+					if(sbxPyeongUnit.isLayerOpened) {
+						sbxPyeongUnit.getLayerManager().hideOut();
+					}
+          			</script>
+
+					<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+					<p class="result"><strong>175.5</strong> ㎡</p>
+					<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+				</div>
+				<div class="apply_tooltip" style="top:27px;"> <!-- [D] 선택된 요소의 위치에 따라 top의 값이 입력되어야 합니다. -->
+					<p>아래 <strong>'매물옵션 적용'</strong> 버튼을 클릭해주세요</p>
+				</div>
+				<div class="btn_area">
+					<a href="#"><img src="img/btn_apply_option1.gif" alt="매물옵션 적용" width="105" height="30" ></a>
+				</div>
+			</div>
+			<!-- //검색조건 -->
+			<!-- 연관검색어 -->
+			<div class="section_link">
+				<h3>연관검색어</h3>
+				<ul>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				</ul>
+			</div>
+			<!-- //연관검색어 -->
+			<!-- 배너 -->
+			<div class="snb_banner">
+				<a href="#"><img src="img/banner_search.jpg" width="200" height="40" alt="검색옵션 이용방법 자세히 보기"></a>
+			</div>
+			<!-- //배너 -->
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!-- 지역선택 -->
+			<div class="section_local">
+				<div class="box">
+					<h3 class="blind">지역선택</h3>
+					<p class="locale"><strong>전국</strong></p>
+					<ul class="list_local">
+					<li><a href="#">서울시</a></li>
+					<li><a href="#">경기도</a></li>
+					<li><a href="#">인천시</a></li>
+					<li><a href="#">부산시</a></li>
+					<li><a href="#">대전시</a></li>
+					<li><a href="#">대구시</a></li>
+					<li><a href="#">울산시</a></li>
+					<li><a href="#">광주시</a></li>
+					<li><a href="#">강원도</a></li>
+					<li><a href="#">충청북도</a></li>
+					<li><a href="#">충청남도</a></li>
+					<li><a href="#">경상북도</a></li>
+					<li><a href="#">경상남도</a></li>
+					<li><a href="#">전라북도</a></li>
+					<li><a href="#">전라남도</a></li>
+					<li><a href="#">제주도</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //지역선택 -->
+			<!-- 결과그래프 -->
+			<div class="section_graph">
+				<img src="img/@730x138.gif" alt="" width="730" height="138" >
+			</div>
+			<!-- //결과그래프 -->
+			<!-- 단지 -->
+			<div class="section_collection">
+				<h3>단지<em>(7건)</em></h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">단지정보</caption>
+				<colgroup>
+				<col width="54">
+				<col width="150">
+				<col>
+				<col width="70">
+				<col width="60">
+				<col width="50">
+				<col width="51">
+				<col width="92">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">매물종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col">단지명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">입주</th>
+				<th scope="col">세대수</th>
+				<th scope="col">동수</th>
+				<th scope="col">매매/전세/월세</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="">아파트</td>
+				<td class="tl lh16">서울시 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">길음 뉴타운 2단지 푸르지오</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41~59</td>
+				<td class="num">2008.04</td>
+				<td class="num">4,424</td>
+				<td class="num">128</td>
+				<td class="num"><a href="#" class="underline">160</a>/<a href="#" class="underline">264</a>/<a href="#" class="underline">74</a></td>
+				</tr>
+				<tr>
+				<td class="">아파트</td>
+				<td class="tl lh16">서울시 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">길음 뉴타운 2단지 푸르지오</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41~59</td>
+				<td class="num">2008.04</td>
+				<td class="num">4,424</td>
+				<td class="num">128</td>
+				<td class="num"><a href="#" class="underline">32</a>/<a href="#" class="underline">22</a>/<a href="#" class="underline">55</a></td>
+				</tr>
+				<tr>
+				<td class="">아파트</td>
+				<td class="tl lh16">서울시 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">길음 뉴타운 2단지 푸르지오</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41~59</td>
+				<td class="num">2008.04</td>
+				<td class="num">150</td>
+				<td class="num">56</td>
+				<td class="num"><a href="#" class="underline">32</a>/<a href="#" class="underline">22</a>/<a href="#" class="underline">55</a></td>
+				</tr>
+				<tr>
+				<td class="">아파트</td>
+				<td class="tl lh16">서울시 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">길음 뉴타운 2단지 푸르지오</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41~59</td>
+				<td class="num">2008.04</td>
+				<td class="num">150</td>
+				<td class="num">56</td>
+				<td class="num"><a href="#" class="underline">32</a>/<a href="#" class="underline">22</a>/<a href="#" class="underline">55</a></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td class="">아파트</td>
+				<td class="tl lh16">서울시 성동구 하왕십리동</td>
+				<td class="tl lh16"><a href="#" class="underline">삼성 래미안 이스트팰리스</a></td>
+				<td class="num" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41~59</td>
+				<td class="num">2008.04</td>
+				<td class="num">150</td>
+				<td class="num">56</td>
+				<td class="num"><a href="#" class="underline">32</a>/<a href="#" class="underline">22</a>/<a href="#" class="underline">55</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">단지 더보기</a>
+				</div>
+			</div>
+			<!-- //단지 -->
+			<!-- 매물 -->
+			<div class="section_collection">
+				<h3>매물<em>(7건)</em></h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">매물정보</caption>
+				<colgroup>
+				<col width="40">
+				<col width="69">
+				<col width="140">
+				<col>
+				<col width="100">
+				<col width="46">
+				<col width="74">
+				<col width="133">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">거래</th>
+				<th scope="col">매물종류</th>
+				<th scope="col" class="tl"><span style="margin-left:20px;">소재지</span></th>
+				<th scope="col">매물명</th>
+				<th scope="col">공급/전용면적(㎡)</th>
+				<th scope="col">층</th>
+				<th scope="col" class="tr">매물가(만원)</th>
+				<th scope="col">연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="">매매</td>
+				<td>아파트</td>
+				<td class="tl lh16"><span class="newline">서울시</span> 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">아이파크분당3</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평">165/140</td>
+				<td class="num">14/15</td>
+				<td class="tr">
+					<strong>10,000/100</strong>
+					<!-- <div class="rate_layer">
+						<div class="layer">
+							<p class="tit"><strong>최근 변동 내역</strong></p>
+							<ul class="rate_list">
+							<li>
+								<span class="date">10.01.21</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">20</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.29</span>
+								<span class="rate"><strong>0</strong> / <strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							<li>
+								<span class="date">09.12.24</span>
+								<span class="rate"><strong class="plus"><img src="img/ico_sale_plus.gif" width="9" height="11" alt="">2,000</strong> / <strong class="minus"><img src="img/ico_sale_minus.gif" width="9" height="11" alt="">30</strong></span>
+							</li>
+							</ul>
+							<p class="record">최초등록가 : <strong>128,000</strong></p>
+						</div>
+					</div> -->
+				</td>
+				<td class="tl contact">신광공인중개사 <span class="tel">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td>매매</td>
+				<td>아파트</td>
+				<td class="tl lh16"><span class="newline">서울시</span> 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">아이파크분당3</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평">165/140</td>
+				<td class="num">14/15</td>
+				<td class="tr"><strong>98,000</strong></td>
+				<td class="tl contact">신광공인중개사 <span class="tel">02-5816-2579</span></td>
+				</tr>
+				<tr>
+				<td>매매</td>
+				<td>아파트</td>
+				<td class="tl lh16"><span class="newline">서울시</span> 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">아이파크분당3</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평">165/140</td>
+				<td class="num">저/15</td>
+				<td class="tr"><strong>120,000</strong></td>
+				<td class="tl contact">신광공인중개사 <span class="tel">02-5816-2579</span></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td>매매</td>
+				<td>아파트</td>
+				<td class="tl lh16"><span class="newline">서울시</span> 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">아이파크분당3</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평">165/140</td>
+				<td class="num">고/15</td>
+				<td class="tr"><strong>120,000</strong></td>
+				<td class="tl contact">신광공인중개사 <span class="tel">02-5816-2579</span></td>
+				</tr>
+				<tr class="last"> <!-- [D] 마지막 목록에 last 클래스 사용 -->
+				<td>매매</td>
+				<td>아파트</td>
+				<td class="tl lh16"><span class="newline">서울시</span> 성북구 반포동</td>
+				<td class="tl lh16"><a href="#" class="underline">아이파크분당3</a></td>
+				<td class="num" title="공급 165㎡ = 50.0평&#13;전용 140㎡ = 42.4평">165/140</td>
+				<td class="num">고/15</td>
+				<td class="tr"><strong>120,000</strong></td>
+				<td class="tl contact">신광공인중개사 <span class="tel">02-5816-2579</span></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">매물 더보기</a>
+				</div>
+			</div>
+			<!-- //매물 -->
+			<!-- 분양 -->
+			<div class="section_collection">
+				<h3>분양<em>(34,567건)</em></h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">분양정보</caption>
+				<colgroup>
+				<col width="97">
+				<col width="119">
+				<col width="47">
+				<col width="139">
+				<col width="68">
+				<col width="52">
+				<col width="59">
+				<col width="92">
+				<col width="55">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">소재지</th>
+				<th scope="col">사업명</th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col">분양가(만원)</th>
+				<th scope="col">세대수/일반</th>
+				<th scope="col">분양시기</th>
+				<th scope="col">분양종류</th>
+				<th scope="col">시공사</th>
+				<th scope="col">진행단계</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="tl lh16"><span class="newline">서울시 중구</span> 운남동 영종하늘 도시 A59블록</td>
+				<td class="tl lh16"><a href="#" class="underline">길음뉴타운 푸르지오 오피스텔</a></td>
+				<!-- [D] 면적이 3줄로 표시되도록 br로 줄바꿈 -->
+				<td class="num lh12" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">189<br>~<br>282</td>
+				<!-- [D] 개행위해 공백과 nbsp 구분 적용 해주세요 -->
+				<td class="num"><strong>9,959,000</strong> ~&nbsp;<strong>9,983,000</strong></td>
+				<td class="num">2445/2158</td>
+				<td class="num">2010.01</td>
+				<td>아파트</td>
+				<td class="num"><span class="dt">삼성물산</span> <span class="newline">02-5816-2579</span></td>
+				<td>분양중</td>
+				</tr>
+				<tr>
+				<td class="tl lh16"><span class="newline">서울시 중구</span> 운남동 영종하늘 도시 A59블록</td>
+				<td class="tl lh16"><a href="#" class="underline">길음뉴타운 푸르지오</a></td>
+				<td class="num lh12" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41<br>~<br>159</td>
+				<td class="num"><strong>5,000</strong> ~&nbsp;<strong>8,000</strong></td>
+				<td class="num">425/158</td>
+				<!-- [D] 숫자 아닌경우 span.dt 추가 -->
+				<td class="num">2010<span class="dt">상반기</span></td>
+				<td>주상복합</td>
+				<td class="num"><span class="dt">삼성물산</span> <span class="newline">02-5816-2579</span></td>
+				<td>분양중</td>
+				</tr>
+				<tr class="last">
+				<td class="tl lh16"><span class="newline">서울시 중구</span> 운남동 영종하늘 도시 A59블록</td>
+				<td class="tl lh16"><a href="#" class="underline">길음뉴타운 푸르지오</a></td>
+				<td class="num lh12" title="최소 41㎡ = 12.4평&#13최대 59㎡ = 17.8평">41<br>~<br>59</td>
+				<td class="num"><strong>59,000</strong> ~&nbsp;<strong>83,000</strong></td>
+				<td class="num">45/158</td>
+				<td class="num">2010.01</td>
+				<td>아파트</td>
+				<td class="num"><span class="dt">삼성물산, 현대건설</span> <span class="newline">02-5816-2579<br>02-5816-2579</span></td>
+				<td>분양중</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">분양 더보기</a>
+				</div>
+			</div>
+			<!-- //분양 -->
+			<!-- 경매 -->
+			<div class="section_collection auction_collection last_collection">
+				<h3>경매<em>(34,567건)</em></h3>
+				<table class="collection_table" summary="">
+				<caption class="blind">경매정보</caption>
+				<colgroup>
+				<col width="74">
+				<col width="68">
+				<col>
+				<col width="118">
+				<col width="81">
+				<col width="66">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">사건번호</th>
+				<th scope="col">경매종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col"><span class="newline">감정평가액(원)</span>최저경매가(원)</th>
+				<th scope="col">결과/유찰횟수</th>
+				<th scope="col">일찰일자</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td>진행/<span class="num">22</span></td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td>진행/<span class="num">22</span></td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td>진행/<span class="num">22</span></td>
+				<td class="num">2010.01</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="more_info">
+					<a href="#" class="btn_more">경매 더보기</a>
+				</div>
+                <div class="ad_area_srch">
+                    <a href=""><img src="img/ad_oneroom730x140.png" alt=""/></a>
+                </div>
+			</div>
+			<!-- //경매 -->
+			<!-- 부동산뉴스 -->
+			<div class="section_base first_base">
+				<h3><img src="img/h_collection_news.gif" alt="부동산 뉴스" width="67" height="15" > (34,567건)</h3>
+				<ul class="list_base">
+				<li>
+					<div class="thumb"><a href="#"><img src="img/@100x74.jpg" alt="썸네일 이미지" width="100" height="74" ></a></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><a href="#"><img src="img/@100x74.jpg" alt="썸네일 이미지" width="100" height="74" ></a></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+					</div>
+				</li>
+				</ul>
+				<div class="more_info">
+					<a href="#" class="btn_more">부동산 뉴스 더보기</a>
+				</div>
+			</div>
+			<!-- //부동산뉴스 -->
+			<!-- 지식iN -->
+			<div class="section_base">
+				<h3><img src="img/h_collection_kin.gif" alt="지식iN" width="41" height="15" > (34,567건) <span class="addment">지식iN 서비스 내&gt; 지식Q&amp;A&gt; 경제&gt; 부동산 검색 결과 입니다.</span></h3>
+				<ul class="list_base">
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+						<div class="kininfo"><a href="#">부동산</a> <span class="bar">|</span> 답변수 1 <span class="dot">&nbsp;&nbsp;</span> 추천수 4575 <span class="dot">&nbsp;&nbsp;</span> 조회수 4575</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+						<div class="kininfo"><a href="#">부동산</a> <span class="bar">|</span> 답변수 1 <span class="dot">&nbsp;&nbsp;</span> 추천수 4575 <span class="dot">&nbsp;&nbsp;</span> 조회수 4575</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+						<div class="kininfo"><a href="#">부동산</a> <span class="bar">|</span> 답변수 1 <span class="dot">&nbsp;&nbsp;</span> 추천수 4575 <span class="dot">&nbsp;&nbsp;</span> 조회수 4575</div>
+					</div>
+				</li>
+				</ul>
+				<div class="more_info">
+					<a href="#" class="btn_more">지식iN 더보기</a>
+				</div>
+			</div>
+			<!-- //지식iN -->
+			<!-- 블로그 -->
+			<div class="section_base">
+				<h3><img src="img/h_collection_blog.gif" alt="블로그" width="38" height="15" > (34,567건) <span class="addment">블로그 서비스 내 &gt; 경제/금융 &gt; 부동산 검색 결과 입니다.</span></h3>
+				<ul class="list_base">
+				<li>
+					<div class="thumb"><img src="img/@100x67.jpg" alt="썸네일 이미지" width="101" height="67" ></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+						<div class="urlinfo"><a href="#" class="url">http://www.yesbedesign.com/182</a> 블로그명 : <a href="#">블로그블로그</a></div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+						<div class="urlinfo"><a href="#" class="url">http://www.yesbedesign.com/182</a> 블로그명 : <a href="#">블로그블로그</a></div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+						<div class="urlinfo"><a href="#" class="url">http://www.yesbedesign.com/182</a> 블로그명 : <a href="#">블로그블로그</a></div>
+					</div>
+				</li>
+				</ul>
+				<div class="more_info">
+					<a href="#" class="btn_more">블로그 더보기</a>
+				</div>
+			</div>
+			<!-- //블로그 -->
+			<!-- 카페 -->
+			<div class="section_base">
+				<h3><img src="img/h_collection_cafe.gif" alt="카페" width="25" height="15" > (34,567건) <span class="addment">카페 서비스 내 &gt; 경제/금융 &gt; 부동산 검색 결과 입니다.</span></h3>
+				<ul class="list_base">
+				<li>
+					<div class="thumb"><img src="img/@100x67.jpg" alt="썸네일 이미지" width="101" height="67" ></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+						<div class="urlinfo"><a href="#" class="url">http://www.yesbedesign.com/182</a> 까페명 : <a href="#">까페명까페명</a></div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+						<div class="urlinfo"><a href="#" class="url">http://www.yesbedesign.com/182</a> 까페명 : <a href="#">까페명까페명</a></div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">2010.01.12 (화)</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+						<div class="urlinfo"><a href="#" class="url">http://www.yesbedesign.com/182</a> 까페명 : <a href="#">까페명까페명</a></div>
+					</div>
+				</li>
+				</ul>
+				<div class="more_info">
+					<a href="#" class="btn_more">카페 더보기</a>
+				</div>
+			</div>
+			<!-- //카페 -->
+			<!-- 용어사전 -->
+			<div class="section_base">
+				<h3><img src="img/h_collection_dict.gif" alt="용어사전" width="50" height="15" > (34,567건)</h3>
+				<ul class="list_base">
+				<li>
+					<div class="title">
+						<span class="dict">경제용어</span>
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<span class="dict">시사용어</span>
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<span class="dict">고전용어</span>
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있다.</div>
+					</div>
+				</li>
+				</ul>
+				<div class="more_info">
+					<a href="#" class="btn_more">용어사전 더보기</a>
+				</div>
+			</div>
+			<!-- //용어사전 -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- 우측플로팅 -->
+	<div class="my_sales">
+		<div class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="#"><img src="img/btn_my_popup_login.gif" width="59" height="17" alt="로그인" style="margin-bottom:2px;"></a>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+		<div class="bg_my_sales_t">
+			<h3 class="type2">최근본단지</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 본 단지가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span>
+			</div>
+			<h3 class="type3">최근검색어</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 검색어가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span>
+			</div>
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+					<legend class="blind">평형계산</legend>
+					<input type="text" class="input_text" title="값 입력" value="11"><a href="#"><img src="img/btn_calculate.gif" alt="계산" width="61" height="18" class="input_btn"></a>
+					<input type="text" class="input_text" title="값 입력" value="11">
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+	<!-- //우측플로팅 -->
+	<!-- footer -->
+	<div id="footer">
+		<!-- 연관검색어 -->
+		<div class="foot_link">
+			<h3>연관검색어</h3>
+			<p>
+				<a href="#">정자동 아파트</a>,
+				<a href="#">강남구 아파트</a>,
+				<a href="#">정자동 오피스텔</a>,
+				<a href="#">서울 3억 아파트</a>,
+				<a href="#">정자동 아파트</a>,
+				<a href="#">강남구 아파트</a>,
+				<a href="#">정자동 오피스텔</a>,
+				<a href="#">서울 3억 아파트</a>
+			</p>
+			<a href="#" class="btn_top">맨위로</a>
+		</div>
+		<!-- //연관검색어 -->
+		<div class="footwrap">
+			<form method="get" action="#">
+			<fieldset>
+			<legend class="blind">검색</legend>
+				<div class="sta_search_box">
+					<input type="text" title="검색" name="" value="래미안" class="sta_search_text">
+					<input src="img/btn_srch.gif" alt="검색" type="image" class="btn_search">
+					<a href="#" target="_blank" class="btn_search"><img src="img/btn_union_srch.gif" width="55" height="25" alt="통합검색"></a>
+				</div>
+			</fieldset>
+			</form>
+			<ul>
+				<li class="first"><a href="http://rd.naver.com/i:1000013390/c:32101?http://help.naver.com/svc_index.asp?CID1=CATE20030924000230&amp;CID2=CATE20030924000233&amp;CName2=%EB%B6%80%EB%8F%99%EC%82%B0" target="_blank">부동산 도움말</a> </li>
+				<li><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+				<li><a href="http://www.nbp-corp.com/rules/privacy.html" target="_blank"><strong>개인정보취급방침 </strong></a></li>
+				<li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+				<li><a href="http://rd.naver.com/i:1000013391/c:24344?http://help.naver.com/claim_main.asp" target="_blank">게시중단요청서비스</a></li>
+				<li><a href="http://rd.naver.com/i:1000013392/c:44155?http://help.naver.com/main.asp" target="_blank">고객센터</a></li>
+			</ul>
+			<p class="info"> 네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며, <br>
+				네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다. </p>
+			<address>
+			<a href="http://www.nbp-corp.com/" target="_blank" class="logo"><img src="http://static.naver.com/common/footer/logo_nhn.gif" alt="NHN" height="15" width="62"></a> <em>Copyright ⓒ</em> <a href="http://www.nbp-corp.com/" target="_blank">NHN BUSINESS PLATFORM Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>
+

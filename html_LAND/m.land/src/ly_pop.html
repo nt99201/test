@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>layer_pop</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body style="width:100%;height:100%;background-color:rgba(0,0,0,.5)">
+<div>
+	<!--content start-->
+	<div id="dom_layer_pop">
+		<div class="pop_content">
+
+			<div class="ly_area_slct" style="top:0;left:0;">
+				<h2>지역선택</h2>
+				<div class="area_lst">
+				<ul>
+			<!--	클릭시 <a href="#" class="on">-->
+					<li><a href="#" class="on"><span class="area_txt">수도권</span></a></li>
+					<li><a href="#"><span class="area_txt">부산</span></a></li>
+					<li><a href="#"><span class="area_txt">대구</span></a></li>
+					<li><a href="#"><span class="area_txt">광주</span></a></li>
+					<li><a href="#"><span class="area_txt">대전</span></a></li>
+				</ul>
+				</div>
+				<span class="btn_cancel"><button type="button">취소</button></span>
+			</div>
+
+			<div class="ly_sta_selc" style="left:0;top:300px;">
+				<a href="#" class="sta_tit">
+					<span class="subway s3">3</span>
+					<span class="subway s109">신분당</span>
+					<span class="txt">양재역 근처 매물 보기</span>
+				</a>
+			</div>
+
+			<div class="map_view" style="top:0;left:250px;">
+				<ul>
+					<li class="mode1">
+						<p><span>일반지도</span></p>
+					</li>
+					<li class="mode2 on">
+						<p><span>위성지도</span></p>
+					</li>
+				</ul>
+				<p class="etc_mode"><input type="checkbox" id="mode3"><label for="mode3">지적편집도</label></p>
+				<button type="button" class="btn_clse"><span></span></button>
+
+			</div>
+
+<!--		ly_chrg_box-->
+			<div class="ly_chrg_box" style="left:480px;top:0;">
+				<div class="h_wrap">
+					<h2><em>154m<sup>2</sup></em> 관리비 상세내역</h2>
+					<button type="button" class="btn_chk"><span>확인</span></button>
+				</div>
+				<div class="chg_lst_wrap">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">평균 총 관리비 (원)<span><em>2014.10.10</em>기준</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>평균 공용관리비</th>
+								<td>130,511</td>
+							</tr>
+							<tr>
+								<th>평균 개별관리비</th>
+								<td>119,510</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>평균 총 관리비 합계</th>
+								<td>250,024</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">평균 공용관리비 (원)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>일반관리비</th>
+								<td>43,950</td>
+							</tr>
+							<tr>
+								<th>청소비</th>
+								<td>17,360</td>
+							</tr>
+							<tr>
+								<th>소독비</th>
+								<td>360</td>
+							</tr>
+							<tr>
+								<th>승강기유지비</th>
+								<td>2,819</td>
+							</tr>
+							<tr>
+								<th>수선유지비</th>
+								<td>7,360</td>
+							</tr>
+							<tr>
+								<th>장기수선충당금</th>
+								<td>17,360</td>
+							</tr>
+							<tr>
+								<th>통신사전기</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th>경비기</th>
+								<td>17,360</td>
+							</tr>
+							<tr>
+								<th>보험료</th>
+								<td>3,360</td>
+							</tr>
+							<tr>
+								<th>위탁수수료</th>
+								<td>60</td>
+							</tr>
+							<tr>
+								<th>동대표운영비</th>
+								<td>1,253</td>
+							</tr>
+							<tr>
+								<th>공동전기료</th>
+								<td>134,253</td>
+							</tr>
+							<tr>
+								<th>공동수도료</th>
+								<td>-</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>평균 공동관리비 합계</th>
+								<td>250,024</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">평균 개별관리비 (원)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>과오납분</th>
+								<td>43,950</td>
+							</tr>
+							<tr>
+								<th>세대전기료</th>
+								<td>17,360</td>
+							</tr>
+							<tr>
+								<th>승강기전기</th>
+								<td>360</td>
+							</tr>
+							<tr>
+								<th>Tv수신료</th>
+								<td>2,819</td>
+							</tr>
+							<tr>
+								<th>세대수도료</th>
+								<td>7,360</td>
+							</tr>
+							<tr>
+								<th>하수도료</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th>세대난방비</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th>기본난방비</th>
+								<td>17,360</td>
+							</tr>
+							<tr>
+								<th>공동난방비</th>
+								<td>3,360</td>
+							</tr>
+							<tr>
+								<th>세태급탕비</th>
+								<td>60</td>
+							</tr>
+							<tr>
+								<th>생활폐기물수수료</th>
+								<td>1,253</td>
+							</tr>
+							<tr>
+								<th>주차충당금</th>
+								<td>134,253</td>
+							</tr>
+							<tr>
+								<th>공동수도료</th>
+								<td>-</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>평균 개별관리비 합계</th>
+								<td>250,024</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+<!--		ly_chrg_box-->
+
+			<!--		ly_chrg_box-->
+			<div class="ly_chrg_box" style="left:1030px;top:0;">
+				<div class="h_wrap">
+					<h2>매물 필터조건</h2>
+					<button type="button" class="btn_chk"><span>확인</span></button>
+				</div>
+				<div class="chg_lst_wrap filter_condition">
+					<table>
+						<tbody>
+							<tr>
+								<th>매물유형</th>
+								<td>아파트,오피스텔</td>
+							</tr>
+							<tr>
+								<th>면적</th>
+								<td>59/44m<sup>2</sup>(33평)</td>
+							</tr>
+							<tr>
+								<th>매매가</th>
+								<td>32,000 ~ 36,000만원</td>
+							</tr>
+							<tr>
+								<th>전세가</th>
+								<td>32,000 ~ 36,000만원</td>
+							</tr>
+							<tr>
+								<th>보증금</th>
+								<td>32,000 ~ 36,000만원</td>
+							</tr>
+							<tr>
+								<th>월세</th>
+								<td>10 ~ 100</td>
+							</tr>
+							<tr>
+								<th>관리비</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th>준공년도</th>
+								<td>5년이내</td>
+							</tr>
+							<tr>
+								<th>융자금</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th>방갯수</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th>욕실갯수</th>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<!--		ly_chrg_box-->
+
+			<div class="ly_agent_info" style="left:0;top:400px;">
+				<div class="agent_img">
+					<span class="in_img"><img src="http://upload2.inven.co.kr/upload/2015/03/31/bbs/i14057124407.jpg" alt=""></span>
+				</div>
+				<div class="agent_pf">
+					<strong class="agent_tit">엠코스타파크 공인중개사</strong>
+					<p class="agent_addr">경기 성남시 분당구 정자동 1경기 성남시 1경기 성남시 분당구 정자동 189-5</p>
+				</div>
+<!--				버튼 비활성화시 class="off" disabled="disabled" 추가-->
+				<button type="button" class="agent_phone off" disabled="disabled"><span>010 8959 4424</span></button>
+				<button type="button" class="talk off" disabled="disabled">1:1 채팅하기</button>
+				<button type="button" class="modoo">modoo 사이트가기</button>
+				<button type="button" class="btn_clse">닫기</button>
+			</div>
+
+			<div class="ly_pdt_alarm" style="left:0;top:700px;">
+				<p class="info_txt"><strong class="price_tit">가격알림</strong>다음의 매물보다 <em>더 싼 신규매물</em>이<br>주변에 등록되면 알려드릴까요?</p>
+				<div class="info_box">
+					<p class="addr">서울시 서초구 양재동</p>
+					<p class="tw_name">한솔로이젠트 1동</p>
+					<p class="frst_info"><span class="pdt_type_tit">주상복합</span> 111.15m² (33평)</p>
+					<p class="scnd_info">월세<strong>15,000/180</strong>만원</p>
+				</div>
+				<button type="button" class="btn_no">아니요</button><button type="button" class="btn_yes">예</button>
+			</div>
+
+			<div class="ly_pdt_alarm" style="left:0;top:1000px;">
+				<p class="info_txt"><strong class="price_tit">신규 매물 알림</strong>다음과 <em>비슷한 조건의 신규 매물</em>이<br>주변에 등록되면 알려드릴까요?</p>
+				<div class="info_box new_info_box">
+					<p class="tw_name">서초구 양재동 주면</p>
+					<p class="frst_info"><span class="pdt_type_tit">아파트, 오피스텔, 분양권</span></p>
+					<p class="scnd_info">매매가<strong>5,000~</strong>만원</p>
+					<p class="scnd_info">전세가<strong>1,000~</strong>만원</p>
+				</div>
+				<button type="button" class="btn_no">아니요</button><button type="button" class="btn_yes">예</button>
+			</div>
+
+			<div class="ly_pdt_alarm" style="left:0;top:1310px;">
+				<p class="info_txt"><strong class="price_tit">신규 매물 알림</strong>다음과 <em>비슷한 조건의 신규 매물</em>이<br>주변에 등록되면 알려드릴까요?</p>
+				<div class="info_box new_info_box2">
+					<p class="addr">서울시 강남구 도곡동</p>
+					<p class="tw_name">SK리더스뷰</p>
+					<p class="frst_info"><span class="pdt_type_tit">오피스텔</span></p>
+					<div class="new_info_tab">
+						<ul>
+							<li class="pdt_type1 on"><button type="button" class="btn_pdt">매물</button></li>
+							<li class="pdt_type2"><button type="button" class="btn_pdt">단지</button></li>
+							<li class="pdt_type3"><button type="button" class="btn_pdt">중개업소</button></li>
+						</ul>
+					</div>
+				</div>
+				<button type="button" class="btn_no">아니요</button><button type="button" class="btn_yes">예</button>
+			</div>
+
+			<div class="ly_pdt_alarm interest_alarm" style="left:0;top:1630px;">
+				<p class="info_txt"><strong class="price_tit">관심단지 등록 완료</strong>관심단지로 등록되었습니다.<br>알림 아이콘을 선택하여 <em>알림을 설정</em>해 보세요.<br>신규 매물이 등록되면 알려드립니다.</p>
+				<button type="button" class="btn_ok"><span>확인</span></button>
+			</div>
+
+			<div class="ly_pdt_alarm cancel_alarm" style="left:0;top:1840px;">
+				<p class="info_txt">알람을 해제하시겠습니까?</p>
+				<button type="button" class="btn_no">아니요</button><button type="button" class="btn_yes">예</button>
+			</div>
+
+			<div class="ly_pdt_alarm new_alarm" style="left:0;top:2040px;">
+				<p class="info_txt"><strong class="price_tit">신규 매물 알림</strong>이 중개사에 신규매물이<br>등록되면 알려드릴까요?</p>
+				<button type="button" class="btn_no">아니요</button><button type="button" class="btn_yes">예</button>
+			</div>
+
+			<div class="ly_pdt_alarm delete_alarm" style="left:0;top:2240px;">
+				<p class="info_txt">해당 알림 조건을<br>삭제하시겠습니까?</p>
+				<button type="button" class="btn_no">아니요</button><button type="button" class="btn_yes">예</button>
+			</div>
+
+			<div class="ly_alarm_error" style="left:780px;top:0;">
+				<p class="info_txt">매물 알림 조건은<br><em>최대 30개</em>까지 등록 할 수 있습니다.</p>
+				<p class="info_txt">매물 알림 페이지에서<br>기존의 조건을 삭제하고 다시<br>시도해 보세요.</p>
+				<button type="button" class="btn_ok"><span>확인</span></button>
+			</div>
+
+			<div class="ly_like" style="left:950px;top:600px">
+				<p class="like_txt">알림이 설정되었습니다.<br>알림은 네이버앱에서 받을수 있습니다.</p>
+			</div>
+
+			<!-- [D] 레이어 노출시 left:50%; top:127px; margin-left:-90px; 고정 -->
+			<div class="ly_guide_tab" style="left:800px;top:700px">
+				<strong class="hide">TIP</strong>
+				<p class="hide">매물, 단지, 중개업소 중 원하는 유형을 선택해서 볼 수 있습니다.</p>
+				<button type="button" class="btn_guide_close">닫기</button>
+			</div>
+			<!-- [D] 레이어 노출시  left: 8px, bottom:51px 고정 -->
+			<div class="ly_guide_filter" style="left:800px;top:800px">
+				<strong class="hide">TIP</strong>
+				<p class="hide">필터설증을 통해 나에게 딱 맞는 매물만 찾을 수 있습니다.</p>
+				<button type="button" class="btn_guide_close">닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 디자인 검수용 적용시 삭제 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('.new_info_tab>ul button').click(function(){
+$(this).parent().addClass('on');
+return false; });
+});
+</script>
+<!-- //디자인 검수용 적용시 삭제 -->
+</body>
+</html>

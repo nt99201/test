@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>레이아웃 :: 부동산 영업툴</title>
+<link rel="stylesheet" type="text/css" href="../../css/tool.css">
+</head>
+<body onload="getGNB();">
+<div id="wrap">
+	<!-- skip to content -->
+	<div id="u_skip">
+		<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+		<a href="#content"><span>본문으로 바로가기</span></a>
+	</div>
+	<!-- //skip to content -->
+
+	<!-- 원네이버 GNB -->
+	<div id="header" class="header_one">
+		<div class="gnb_wrap">
+			<div class="inner_wrap">
+				<div class="item_area">
+					<h1 class="logo_area">
+						<a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+						<a class="logo_land" href="#"><i class="icon">부동산</i></a>
+						<a class="logo_land_tool" href="#"><i class="icon">영업툴</i></a>
+						<a class="logo_land_small" href="http://land.naver.com"><i class="icon">부동산</i></a>
+					</h1>
+				</div>
+				<div class="gnb_area">
+					<div id="gnb">
+						<script type="text/javascript">
+						var nsc = "naver.service";
+						var gnb_service = "static.nid.naver.com";
+						var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+						var gnb_template = "gnb_utf8";
+						var gnb_one_naver = 1;
+						</script>
+						<script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lnb" class="nav_wrap">
+			<h2 class="blind">메인메뉴</h2>
+			<div class="inner_wrap">
+				<!-- [D] 활성화 클래스 on -->
+				<ul class="nav_list">
+				<li class="menu main_tool1 on"><a href="#">중개업소 업무대행</a></li>
+				<li class="menu main_tool2"><a href="#">회원관리</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="desc_wrap">
+			<div class="inner_wrap">
+				<p class="text">
+					<span class="description">업소명<span class="bar">ㅣ</span><strong>현대솔로몬공인중개사사무소</strong></span>
+					<span class="description">업소ID<span class="bar">ㅣ</span><strong>hyundaisolomon</strong></span>
+					<span class="description">상품<span class="bar">ㅣ</span><strong>프리미엄 6건/포커스 99건/구동 99건/현장확인 99건/모바일 99건</strong></span>
+				</p>
+				<div class="button_area">
+					<a href="#" class="type_agency">중개업소 선택</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //원네이버 GNB -->
+
+	<div id="container">
+		<!-- content -->
+		<div id="content">
+
+			<p style="height:100px">content</p>
+
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- [D] snb 있을 경우 class="con_snb" -->
+	<div id="container" class="con_snb">
+		<div class="snb">
+			<div class="snb_nav">
+				<h2 class="snb_h">중개업소 업무대행</h2>
+				<ul class="nav">
+				<li>
+					<a href="#" class="snb_n">영업권 관리</a>
+					<ul>
+					<li class="selected"><a href="#" class="snb_n2">영업권 관리</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="snb_n3">상품신청 대행</a>
+					<ul>
+					<li><a href="#" class="snb_n4">PC상품</a></li>
+					<li><a href="#" class="snb_n5">모바일상품</a></li>
+					</ul>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+
+			<p style="height:100px">content</p>
+
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<ul>
+		<li class="first"><a href="#">매물등록 도움말</a></li>
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#">매물 운영원칙</a></li>
+		<li><a href="#" target="_blank"><strong>개인정보취급방침</strong></a></li>
+		<li><a href="#" target="_blank">책임의 한계와 법적고지</a></li>
+		<li><a href="#" target="_blank">게시중단요청서비스</a></li>
+		<li><a href="#" target="_blank">고객센터</a></li>
+		</ul>
+		<p>네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며, 네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다.</p>
+		<address>
+			Copyright &copy;
+			<a href="#" target="_blank">NAVER BUSINESS PLATFORM Corp.</a>
+			All Rights Reserved.
+		</address>
+	</div>
+	<!-- //footer -->
+</div>
+
+<!-- 마크업 확인용 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".header_one .menu").click(function(){
+		$(this).parent().parent().find(".menu").removeClass("on");
+		$(this).addClass("on");
+	});
+</script>
+<!-- // 마크업 확인용 -->
+
+</body>
+</html>

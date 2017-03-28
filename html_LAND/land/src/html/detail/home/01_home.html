@@ -1,0 +1,538 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_home.css">
+</head>
+
+<body onload="getGNB();">
+
+<div id="wrap">
+
+	<div id="u_skip">
+		<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+		<a href="#container"><span>하위 메뉴로 바로가기</span></a>
+		<a href="#content"><span>본문으로 바로가기</span></a>
+	</div>
+
+	<!-- 원네이버 GNB -->
+	<div id="header" class="header_one">
+		<div class="gnb_wrap">
+			<div class="inner_wrap">
+				<div class="item_area">
+					<h1 class="logo_area">
+						<a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+						<a class="logo_land" href="http://land.naver.com"><i class="icon">부동산</i></a>
+					</h1>
+					<div class="inner_gnb_search">
+						<h2 class="blind">검색영역</h2>
+						<fieldset>
+							<legend>부동산 검색</legend>
+							<input type="text" title="검색" class="search_input" placeholder="지역명 또는 단지명">
+							<a href="#" onclick="" class="search_button type_inside"><i class="icon">검색</i></a>
+							<a href="#" onclick="" class="search_button type_integration"><i class="icon">통합검색</i></a>
+						</fieldset>
+					</div>
+				</div>
+				<div class="gnb_area">
+					<div id="gnb">
+						<script type="text/javascript">
+						var nsc = "naver.service";
+						var gnb_service = "static.nid.naver.com";
+						var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+						var gnb_template = "gnb_utf8";
+						var gnb_one_naver = 1;
+						</script>
+						<script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lnb" class="nav_wrap">
+			<h2 class="blind">메인메뉴</h2>
+			<div class="inner_wrap">
+				<!-- [D] 활성화 클래스 on -->
+				<ul class="nav_list">
+				<li class="menu main_home on"><a href="#">부동산 홈</a></li>
+				<li class="menu main_article"><a href="#">매물</a></li>
+				<li class="menu main_isale"><a href="#">분양</a></li>
+				<li class="menu main_news"><a href="#">뉴스</a></li>
+				<li class="menu main_community"><a href="#">커뮤니티</a></li>
+				<li class="menu main_auction"><a href="#">경매</a></li>
+				<li class="menu main_mypage"><a href="#">MY페이지</a></li>
+				</ul>
+				<div class="button_area">
+					<a class="type_admin" href="http://landad.naver.com">부동산관리센터</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //원네이버 GNB -->
+
+	<div id="container">
+		<div class="spot_wrap">
+			<div class="spot">
+				<div class="map">
+					<div class="map_top">
+						<ul class="cate">
+						<li class="m1"><a href="#" class="selected">아파트</a></li>
+						<li class="m2"><a href="#">오피스텔</a></li>
+						<li class="m3"><a href="#">분양권</a></li>
+						<li class="m4"><a href="#">빌라</a></li>
+						<li class="m5"><a href="#">주택</a></li>
+						<li class="m6"><a href="#">토지</a></li>
+						<li class="m7"><a href="#">원룸</a></li>
+						<li class="m8"><a href="#">상가</a></li>
+						<li class="m9"><a href="#">사무실</a></li>
+						<li class="m10"><a href="#">공장</a></li>
+						<li class="m11"><a href="#">재개발</a></li>
+						<li class="m12"><a href="#">건물</a></li>
+						<li class="m13"><a href="#" class="selected">전체</a></li>
+						<li class="m14"><a href="#">매매</a></li>
+						<li class="m15"><a href="#">전세</a></li>
+						<li class="m16"><a href="#">월세</a></li>
+						</ul>
+						<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+						<p class="btn"><a href="#" class="list">리스트로 보기</a></p>
+					</div>
+					<!-- 맵 출력 영역 -->
+					<div class="map_view"><img src="img/@map.gif" width="698" height="246" alt=""></div>
+					<!-- //맵 출력 영역 -->
+					<div class="location">
+						<div class="loc_view">
+							<div id="loc_view1" class="sel w selectbox-noscript">
+								<select title="지역 선택" class="selectbox-source">
+									<option value="1">서울시</option>
+									<option value="2">서울시1</option>
+									<option value="3">서울시2</option>
+									<option value="4">서울시3</option>
+									<option value="6">서울시4</option>
+									<option value="7">서울시5</option>
+									<option value="8">서울시6</option>
+									<option value="9">서울시7</option>
+									<option value="10">서울시8</option>
+							   </select>
+								<div class="selectbox-box">
+									<div class="selectbox-label"></div>
+								</div>
+								<div class="selectbox-layer">
+									<div class="selectbox-list"></div>
+								</div>
+							</div>
+							<!-- [D] 셀렉트박스 다음 > 표시임, 마지막 셀렉트박스 다음에는 붙이지 않음 -->
+							<span class="bar">&gt;</span>
+							<div id="loc_view2" class="sel w2 selectbox-noscript">
+								<select title="시/군/구 선택" class="selectbox-source">
+									<option value="1">시&frasl;군&frasl;구</option>
+									<option value="2">시&frasl;군&frasl;구1</option>
+									<option value="3">시&frasl;군&frasl;구2</option>
+									<option value="4">시&frasl;군&frasl;구3</option>
+									<option value="6">시&frasl;군&frasl;구4</option>
+									<option value="7">시&frasl;군&frasl;구5</option>
+									<option value="8">시&frasl;군&frasl;구6</option>
+									<option value="9">시&frasl;군&frasl;구7</option>
+									<option value="10">시&frasl;군&frasl;구8</option>
+							   </select>
+								<div class="selectbox-box">
+									<div class="selectbox-label"></div>
+								</div>
+								<div class="selectbox-layer">
+									<div class="selectbox-list"></div>
+								</div>
+							</div>
+							<span class="bar">&gt;</span>
+							<div id="loc_view3" class="sel w selectbox-noscript">
+								<select title="읍/면/동 선택" class="selectbox-source">
+									<option value="1">읍&frasl;면&frasl;동</option>
+									<option value="2">읍&frasl;면&frasl;동1</option>
+									<option value="3">읍&frasl;면&frasl;동2</option>
+									<option value="4">읍&frasl;면&frasl;동3</option>
+									<option value="6">읍&frasl;면&frasl;동4</option>
+									<option value="7">읍&frasl;면&frasl;동5</option>
+									<option value="8">읍&frasl;면&frasl;동6</option>
+									<option value="9">읍&frasl;면&frasl;동7</option>
+									<option value="10">읍&frasl;면&frasl;동8</option>
+							   </select>
+								<div class="selectbox-box">
+									<div class="selectbox-label"></div>
+								</div>
+								<div class="selectbox-layer">
+									<div class="selectbox-list"></div>
+								</div>
+							</div>
+						</div>
+						<div class="lastest">
+							<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+							<div class="list_wrap" style="display:block" id="recentComplexList">
+								<ol>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+								</ol>
+								<button type="button" class="all_del">전체기록 삭제</button>
+							</div>
+						</div>
+						<!-- [D] display:none/block toggle -->
+						<div class="loc_list" style="display:block">
+							<div class="list">
+								<ul>
+								<li><a href="#" class="selected">서울시</a></li>
+								<li><a href="#">경기도</a></li>
+								<li><a href="#">인천시</a></li>
+								<li><a href="#">부산시</a></li>
+								<li><a href="#">대전시</a></li>
+								<li><a href="#">대구시</a></li>
+								<li><a href="#">울산시</a></li>
+								<li><a href="#">광주시</a></li>
+								<li><a href="#">강원도</a></li>
+								<li><a href="#">충청북도</a></li>
+								<li><a href="#">충청남도</a></li>
+								<li><a href="#">경상북도</a></li>
+								<li><a href="#">경상남도</a></li>
+								<li><a href="#">전라북도</a></li>
+								<li><a href="#">전라남도</a></li>
+								<li><a href="#">제주도</a></li>
+								</ul>
+							</div>
+							<!-- [D] 두줄 클래스 : multi -->
+							<div class="list2">
+								<ul>
+								<li><a href="#">가평군</a></li>
+								<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+								<li><a href="#">광진구</a></li>
+								<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+								<li><a href="#" class="multi selected">고양시<br>일산서구</a></li>
+								<li><a href="#">광진구</a></li>
+								<li><a href="#">구로구</a></li>
+								<li><a href="#">금천구</a></li>
+								<li><a href="#">노원구</a></li>
+								<li><a href="#">도봉구</a></li>
+								<li><a href="#">동대문구</a></li>
+								<li><a href="#">동작구</a></li>
+								<li><a href="#">마포구</a></li>
+								<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+								<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+								<li><a href="#">서대문구</a></li>
+								<li><a href="#">서초구</a></li>
+								</ul>
+								<!-- [D] 두번째 ul에 right 클래스 추가 -->
+								<ul class="right">
+								<li><a href="#">성동구</a></li>
+								<li><a href="#">성북구</a></li>
+								<li><a href="#">양천구</a></li>
+								<li><a href="#" class="multi">고양시<br>덕양구</a></li>
+								<li><a href="#">영등포구</a></li>
+								<li><a href="#">도봉구</a></li>
+								<li><a href="#">동대문구</a></li>
+								<li><a href="#">동작구</a></li>
+								<li><a href="#">마포구</a></li>
+								<li><a href="#">서대문구</a></li>
+								<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+								<li><a href="#">서초구</a></li>
+								<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+								<li><a href="#">성동구</a></li>
+								<li><a href="#" class="multi">고양시<br>일산동구</a></li>
+								<li><a href="#">성북구</a></li>
+								<li><a href="#">양천구</a></li>
+								<li><a href="#">영등포구</a></li>
+								</ul>
+							</div>
+							<div class="list3">
+								<ul>
+								<li><a href="#" class="multi">영등포동8가  <span>(149)</span></a></li>
+								<li><a href="#">수서동 <span>(49)</span></a></li>
+								<li><a href="#">자곡동 <span>(49)</span></a></li>
+								<li><a href="#">논현동 <span>(49)</span></a></li>
+								<li><a href="#" class="multi">영등포동8가  <span>(429)</span></a></li>
+								</ul>
+								<ul>
+								<li><a href="#">청담동 <span>(49)</span></a></li>
+								<li><a href="#">대치동 <span>(49)</span></a></li>
+								<li><a href="#" class="selected">압구정동 <span>(49)</span></a></li>
+								<li><a href="#">도곡동 <span>(49)</span></a></li>
+								</ul>
+								<!-- [D] 마지막 ul에 right 클래스 추가 -->
+								<ul class="right">
+								<li><a href="#">역삼동 <span>(49)</span></a></li>
+								<li><a href="#">삼성동 <span>(49)</span></a></li>
+								<li><a href="#">율현동 <span>(49)</span></a></li>
+								</ul>
+							</div>
+							<div class="sel_view">
+								<p class="txt">확인 매물을 보실려면<br><strong>시/군/구를 선택하세요.</strong></p>
+								<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+								<p class="btn"><a href="#">확인 매물 보기</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="aside">
+					<div class="article_wrap">
+						<div class="article cast">
+							<div class="header">
+								<h2>부동산 캐스트</h2>
+								<p>
+									<span><strong>1</strong>/5</span>
+									<a href="#" class="prev">이전 페이지 보기</a>
+									<a href="#" class="next">다음 페이지 보기</a>
+								</p>
+							</div>
+							<p class="date">
+								<!-- [D] 활성화 클래스 : prev, next / 비활성 클래스 : prev_off, next_off -->
+								<a href="#" class="prev_off">이전 날짜 기사 보기</a>
+								<!-- [D] span 태그는 붙여서 출력시켜 주세요. -->
+								<span class="no2011">2011.</span><span class="no2">02.</span><span class="l_no20">20</span>
+								<a href="#" class="next">다음 날짜 기사 보기</a>
+							</p>
+							<p class="con">
+								<a href="#" class="img"><img src="img/@thum4.gif" width="94" height="70" alt="임시 이미지"><span></span></a>
+								<em>[Q&amp;A]</em><br>
+								<a href="#" class="tit"><strong>서울시에 50만원 이..</strong></a><br>
+								<a href="#" class="con">일산 신도시 북동쪽에 접 시청으로부터 서쪽으로..</a>
+							</p>
+							<ul>
+							<li><em>[Q&amp;A]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+							<li><em>[분양]</em> <a href="#">부동산 침체, 세금이 안걷힌다</a></li>
+							<li><em>[칼럼]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+							</ul>
+							<p class="more"><a href="#">더보기</a></p>
+						</div>
+					</div>
+					<div class="hot">
+						<h2><span>부동산 인기검색</span> <a href="#">더 많은 목록 보기</a></h2>
+						<ol>
+						<li class="no1"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+						<li class="no2"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+						<li class="no3"><a href="#">강남 재개발 아파트</a> <em><span class="up">상승</span> 669</em></li>
+						<li class="no4"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+						<li class="no5"><a href="#">강남 재개발 아파트</a> <em><span class="dn">하락</span> 669</em></li>
+						</ol>
+						<p class="btn">
+							<a href="#" class="prev">이전 리스트 페이지 보기</a>
+							<span>1/<strong>2</strong></span>
+							<a href="#" class="next">다음 리스트 페이지 보기</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="section_l">
+				<div class="news">
+					<h2>오늘의 뉴스</h2>
+					<h3><a href="#">서울 공공아파트 분양가 시세 급락</a></h3>
+					<p class="con"><a href="#">앞으로는 서울 시 내에서 분양 되는 공공아파트는 주변 시세보다 조금 가 앞으로는 서울시내에서 분양 공공아파트는 분양이 ...</a><span>매일경제</span></p>
+					<p class="con_sub"><a href="#">&#39;주택통계&#39; 공급만 있고 멸실은 없다</a> <span>뉴시스</span></p>
+					<ul>
+					<li><a href="#"><strong>전세자금 내일부터 대출, 금리 인하 시작</strong></a> <span>이데일리</span></li>
+					<li><a href="#">상암 DMC, 2014년까지 한국판 헐리우드 진출</a> <span>주간경향</span></li>
+					<li><a href="#">장기전세주택 올해 3525가구 공급하다</a> <span>머니투데이</span></li>
+					<li><a href="#">장기전세주택 올해 3525가구 공급하다</a> <span>머니투데이</span></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<div class="special">
+					<h2>분양 특집</h2>
+					<!-- [D] 마우스 오버시 over 클래스 추가 / 아웃시 클래스 제거 (ie6 대응) -->
+					<small>AD - 아래 분양 정보는 광고입니다.</small>
+					<p>
+						<a href="#" class="img"><img src="img/@thum.gif" width="127" height="92" alt="임시 이미지"><span></span></a>
+						<a href="#" class="tit"><strong>메이저급 한강신도시 3천만원으로</strong></a><br>
+						<em>자료제공 <span class="bar">|</span> 경기도시공사</em><br>
+						<a href="#" class="con">앞으로는 서울 시 내에서 분양 되는 공공아파 25%정도 낮은 가격에 공급된다. 다가와 앞으로는 서울시에서 분양 공공...</a>
+					</p>
+					<ul>
+					<li><a href="#">전세자금 내일부터 대출, 금리 인하 시작</a> <span>이데일리</span></li>
+					<li><a href="#">상암 DMC, 2014년까지 한국판 헐리우드 진출</a> <span>주간경향</span></li>
+					<li><a href="#">장기전세주택 올해 3525가구 공급하다</a> <span>동아일보</span></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<div class="trend">
+					<h2>분양 동향</h2>
+					<ul>
+					<li><em>[주간_6월21일]</em> <a href="#">용산 오피스텔 모델하우스 오픈,관심 뜨거</a></li>
+					<li><em>[주간_6월14일]</em> <a href="#">오피스텔 대박 흥행조짐.. 과연 돈될까?</a></li>
+					<li><em>[주간_6월]</em> <a href="#">오피스텔 대박 흥행조짐.. 과연 돈될까?</a></li>
+					<li><em>[주간_5월]</em> <a href="#">용산 오피스텔 모델하우스 오픈,관심 뜨거워</a></li>
+					<li><em>[주간_5월14일]</em> <a href="#">피스텔 대박 흥행조짐.. 과연 돈될까?</a></li>
+					<li><em>[주간_6월]</em> <a href="#">오피스텔 대박 흥행조짐.. 과연 돈될까?</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<div class="section_c">
+				<div class="answer">
+					<h2>전문가 답변</h2>
+					<p class="q"><em>질문</em> <a href="#"><strong><span>[전세]</span> 계약 후 집주인이 전세를 끼고 매매 할 경우 필수 조건은?</strong></a></p>
+					<p class="a"><em>답변</em> <a href="#"><span>[최병수공인중개사사무소]</span> 구비한 상태에서 전세주택이 매매 될 경우 임차서 전택이 매매될 경우 임차인은 임대인의 경우에는...</a></p>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<div class="kin">
+					<h2>새로올라온 지식iN</h2>
+					<ul>
+					<li><em>[매매]</em> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+					<li><em>[부동산]</em> <a href="#">부동산 침체, 세금이 안걷힌다</a></li>
+					<li><em>[부동산]</em> <a href="#">부동산 침체, 세금이 안걷힌다</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<h2>전문가 칼럼</h2>
+					<p>
+						<a href="#" class="img"><img src="img/@thum2.gif" width="74" height="55" alt="임시 이미지"><span></span></a>
+						<a href="#" class="tit"><strong>전세가구의 투자 특성과 전세 시장의 안정조건</strong></a><br>
+						<em>장인석 <span class="bar">|</span> 착한부동산연구소</em><br>
+						<a href="#" class="con">구비한 상태에서 전세 주택이 매매 될 경우 임차서 전택이 매매를 구비한 상태에서 전세 주택이..</a>
+					</p>
+					<ul>
+					<li><em>서정렬</em> <span class="bar">|</span> <a href="#">자동연장 전세, 이사 때 복비는 누가?</a></li>
+					<li><em>방지현</em> <span class="bar">|</span> <a href="#">부동산 침체, 세금이 안걷힌다</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<div class="poll">
+					<h2>ISSUE&amp;POLL</h2>
+					<div class="bx">
+						<h3>Q.부동산 전세 유지될 수 있을까?</h3>
+						<dl>
+						<dt class="yes">YES</dt>
+						<dd class="yes"><em><span style="width:72.35%"></span></em> <strong>72.35%</strong></dd>
+						<dt class="no">NO</dt>
+						<dd class="no"><em><span style="width:27.65%"></span></em> <strong>27.65%</strong></dd>
+						</dl>
+						<p><a href="#"><img src="img/btn_poll2.gif" width="79" height="24" alt="토론 참여하기"></a></p>
+					</div>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+			<div class="section_r">
+				<div class="ad"><img src="img/@ad.gif" width="280" height="240" alt="임시 광고 이미지"></div>
+				<div class="today">
+					<h2>&lsquo;마산시 창원합포구&rsquo; <span>확인매물</span></h2>
+					<div class="tab">
+						<p class="btn prev"><a href="#">이전 보기</a></p>
+						<!-- [D] 선택된 li에 selected 클래스 추가하고 a 태그에 sel 클래스 추가(ie6 대응) -->
+						<ul>
+						<li class="tab1 selected"><a href="#" class="sel">주택</a></li>
+						<li class="tab2"><a href="#">빌라</a></li>
+						<li class="tab3"><a href="#">원룸</a></li>
+						<li class="tab4"><a href="#">상가</a></li>
+						<li class="tab5"><a href="#">토지</a></li>
+						<li class="tab6"><a href="#">건물</a></li>
+						<li class="tab7"><a href="#">아파트</a></li>
+						<li class="tab8"><a href="#">오피스텔</a></li>
+						<li class="tab9"><a href="#">분양권</a></li>
+						<li class="tab10"><a href="#">사무실</a></li>
+						<li class="tab11"><a href="#">공장</a></li>
+						<li class="tab12"><a href="#">재개발</a></li>
+						</ul>
+						<p class="btn next"><a href="#">다음 보기</a></p>
+					</div>
+					<p class="con">
+						<a href="#" class="img"><img src="img/@thum3.gif" width="72" height="67" alt="임시이미지"><span></span></a>
+						<em>[아파트매매] <span>거래완료</span></em><br>
+						<a href="#"><strong>효자촌 동아 힐스테이트</strong></a><br>
+						<a href="#" class="con"><span class="tit">경기도 성남시 분당구 서현동</span><br>160/133.3㎡ <span>|</span> 50.000만원</a>
+					</p>
+				</div>
+				<div class="theme">
+					<h2 class="theme">테마 매물</h2>
+					<div class="select">
+						<div id="theme_select" class="selectbox">
+							<select title="테마매물 선택" class="selectbox-source">
+							<option value="1">한강변이 보이는 30평대 아파트</option>
+							<option value="2">한강이 보이는 30평대 아파트</option>
+							<option value="3">지하철역 500M 이내 아파트</option>
+							<option value="4">신혼부부를 위한 원룸/빌트인 오피스텔</option>
+							<option value="5">시세보다 저렴한 토지</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div class="selectbox-layer theme-selectbox-layer">
+								<div class="selectbox-list"></div>
+							</div>
+						</div>
+					</div>
+					<ul class="list">
+					<li><a href="#" class="tit"><strong>효자촌 동아 힐스테이트</strong></a> <em>분당구 서현동</em><br>
+						160/133.3㎡ <span>|</span> 50.000만원</li>
+					<li><a href="#" class="tit"><strong>효자촌 동아 힐스테이트</strong></a> <em>분당구 서현동</em><br>
+						160/133.3㎡ <span>|</span> 50.000만원</li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+				<div class="notice">
+					<h2>공지사항</h2>
+					<ul>
+					<li><a href="#">전세자금 내일부터 대출, 금리 인하</a></li>
+					<li><a href="#">상암 DMC, 2014년까지 헐리우드 진출</a></li>
+					<li><a href="#">장기전세주택 올해 3525가구 공급하다</a></li>
+					</ul>
+					<p class="more"><a href="#">더보기</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<? include "side_scroll_layer_incl.html" ?>
+	<? include "footer_incl.html" ?>
+</div>
+<!-- 네이버 부동산 앱 플로팅 배너 -->
+<!-- [D] IE6 대응을 위해 .land_app_wrap 높이값을 브라우져 화면 높이값 만큼 인라인 행태로 입력 -->
+<div class="land_app_wrap" style="display:none">
+	<div class="dimmed"></div>
+	<div class="banner">
+		<h2 class="blind">실시간 매물정보가 내 손아에 쏙! 네이버 부동산 앱</h2>
+		<a href="#" class="inst">설치방법 : URL 문자전송</a>
+		<div class="blind">
+			<p><strong>아이폰용</strong> 출시 / 안드로이드용 앱은 2012년 상반기 출시 예정</p>
+			<h3>이 동네 맘에 드는데?</h3>
+			<p>현재 내 위치를 기반으로 단지별 매물정보와 거리뷰를 통해 실제 사진도 체크!</p>
+			<h3>이집 햇볕은 잘 들려나?!</h3>
+			<p>증강현실 카메라로 집의 일조량 체크는 물론, 가까운 단지 및 중개업소 정보를 확인!</p>
+			<h3>여기 걸어서 몇분 거리지?</h3>
+			<p>거리재기 기능을 통해 관심있는 단지에서 지하철역까지 도보로 얼마나 걸릴지도 확인!</p>
+		</div>
+		<a href="#" class="more">더보기</a>
+		<p class="close"><input type="checkbox" id="close"> <label for="close">다시 보지 않기</label></p>
+		<a href="#" class="close_x">부동산 앱 레이어 배너 닫기</a>
+	</div>
+</div>
+<!-- //네이버 부동산 앱 플로팅 배너 -->
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/external/jindo2.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.Component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.UIComponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.HTMLComponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.RolloverArea.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.RolloverClick.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.Timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.LayerManager.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.LayerPosition.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/source/jindo.SelectBox.js"></script>
+<script type="text/javascript">
+var oSelectBox = new jindo.SelectBox($("loc_view1"));
+var oSelectBox = new jindo.SelectBox($("loc_view2"));
+var oSelectBox = new jindo.SelectBox($("loc_view3"));
+var oSelectBox = new jindo.SelectBox($("theme_select"));
+</script>
+<!-- 마크업 확인용 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".header_one .nav_list .menu a").click(function(){
+		$(this).parent().parent().find(".menu a").removeClass("on");
+		$(this).addClass("on");
+	});
+</script>
+<!-- // 마크업 확인용 -->
+</body>
+</html>

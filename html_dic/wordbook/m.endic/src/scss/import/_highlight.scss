@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.highlight{
+  background:#fffd64 !important;
+}
+
+.ly_help_dic{
+  @include absolute(left 0 right 0);
+  @extend %clear;
+
+  padding:11px 45px 13px 15px;
+  background:rgba(46,54,62,0.97);
+  z-index:3100;
+
+  .txt_wrap + .txt_wrap{
+    margin-top:10px;
+  }
+  .txt_origin{
+    font-size:20px;
+    line-height:24px;
+    color:#fff;
+    font-weight:bold;
+  }
+  .txt_trans{
+    display:block;
+    margin-top:5px;
+    font-size:15px;
+    line-height:20px;
+    color:#888;
+  }
+  .btn_search_all{
+    display:inline-block;
+    float:right;
+    margin:7px -30px 0 0;
+    font-size:14px;
+    color:#c0c0c0;
+    text-align:right;
+
+    &:after{
+      @extend %sprite_conversation_img;
+      @include spriteConversation(4px, 7px, -100px, -120px);
+
+      display:inline-block;
+      margin:5px 0 0 5px;
+      vertical-align:top;
+      content:'';
+
+    }
+  }
+  .btn_cls{
+    @extend %sprite_conversation_img;
+    @include spriteConversation(34px, 34px, -100px, -80px);
+    @include absolute(top 5px right 5px);
+
+    display:block;
+
+  }
+
+  .pop_arrow{
+    @extend %sprite_conversation_img;
+    @include spriteConversation(11px, 7px, -110px, -130px);
+    @include absolute(bottom -7px top auto);
+
+    display:block;
+
+    &.up{
+      @include absolute(bottom auto top -6px);
+
+      background-position:-110px -120px;
+    }
+  }
+}
+
+

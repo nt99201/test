@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>네이버 ::부동산 매물관리센터</title>
+<link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css">
+</head><body>
+<div id="wrap">
+
+	<!-- container -->
+	<!-- [D] 등록/관리 페이지 :'sub' 클래스 삽입 -->
+	<div id="container" class="sub">
+		<!-- content -->
+		<div class="content">
+			<h3 class="salereg_tit"><img src="img/h3_register.gif" width="56" height="16" alt="매물등록"></h3>
+			<p class="salereg_info">
+				철거가옥 매매, 입주권(특별분양) 관련 홍보성 매물 또는 중복매물 등은 <strong>경고없이 삭제</strong>됩니다.<br>
+				매물 등록/결제 후 노출 시까지 매도자 확인 기간이 <strong>1~3일 정도 소요</strong>됩니다.<br>
+				서비스 기간은 <strong>노출 시작일로부터 60일간</strong> 입니다.<br>
+				직거래로 등록하는 매물은 <strong>소유자가 법인일 경우 등록이 불가능</strong>하며, 본인 혹은 가족의 소유일 경우에만 서비스 가능합니다.<br>
+				중개업을 하는 고객님은 개인회원 매물 등록을 이용하실 수 없습니다.
+			</p>
+			<form action="" class="member_join">
+			<fieldset>
+			<legend>매물등록</legend>
+				<!-- 등록상품 종류 선택 -->
+				<h4 class="salereg_tit"><img src="img/h4_register1.gif" width="99" height="14" alt="등록상품 종류 선택"><p class="essentiality">* 표시된 항목은 필수입력사항입니다.</p></h4>
+				<table cellspacing="0" border="1" summary="등록상품 종류 선택" cellpadding="0" class="tbl_write">
+				<caption>등록상품 종류 선택</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">항목</th>
+				<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+				<th scope="row" class="point">상품종류<span class="must">*</span></th>
+				<td>
+					<ul class="goods_type">
+					<li>
+						<input type="radio" id="aw" checked="checked" title="상품종류"> <label for="aw">포커스 건당결제</label>
+					</li>
+					<li>
+						<input type="radio" id="ad" title="상품종류">
+						<label for="ad">일반</label>
+					</li>
+					</ul>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">노출매체<span class="must">*</span></th>
+				<td>
+					<input type="checkbox" title="네이버 부동산" checked="checked" disabled="disabled" class="input_radio first"> 네이버 부동산
+					<span style="display:none">
+						<input type="checkbox" id="af" class="input_radio" style="visibility:hidden"> <label for="af">네이트&amp;모네타 부동산</label>
+						<span><input type="checkbox" id="ag" class="input_radio" style="visibility:hidden"> <label for="ag">부동산114</label></span>
+					</span>
+					<br>
+					<p class="explan">* 직거래로 등록된 매물은 제휴사에 동시 노출되지 않습니다.</p>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">매물종류<span class="must">*</span></th>
+				<td>
+					<select title="매물종류">
+					<option selected="selected" value="A01">아파트</option>
+					<option value="A03">주상복합</option>
+					<option value="A02">오피스텔</option>
+					<option value="A04">재건축</option>
+					<option value="B01">아파트 분양권</option>
+					<option value="B03">주상복합 분양권</option>
+					<option value="B02">오피스텔 분양권</option>
+					<option value="F01">재개발</option>
+					<option value="C01">원룸</option>
+					<option value="C03">단독/다가구</option>
+					<option value="C02">빌라/연립</option>
+					<option value="D01">사무실</option>
+					<option value="D03">빌딩/건물</option>
+					<option value="E01">숙박/콘도</option>
+					<option value="D04">상가건물</option>
+					<option value="D05">상가주택</option>
+					<option value="D02">상가점포</option>
+					<option value="E02">공장/창고</option>
+					<option value="E03">토지/임야</option>
+					<option value="C04">전원/농가주택</option>
+					<option value="Z00">기타</option>
+					</select>
+					<span class="explan">&#39;아파트&#39; 유형의 세부유형 &#39;아파트&#39;로 서비스 됩니다.&nbsp;&nbsp;매물 등록 이후에는 매물종류<strong>수정이 불가능</strong>하오니, 정확히 확인해 주세요.</span>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //등록상품 종류 선택 -->
+				<!-- 위치/구조 -->
+				<h4 class="salereg_tit"><img src="img/h4_register2.gif" width="54" height="14" alt="위치/구조" style="z-index:-2"></h4>
+				<table cellspacing="0" border="1" summary="위치/구조" cellpadding="0" class="tbl_write">
+				<caption>위치/구조</caption>
+				<colgroup>
+				<col width="135"><col width="315"><col width="135"><col width="316">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">항목</th>
+				<th scope="col">내용</th>
+				<th scope="col">항목</th>
+				<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+				<th scope="row">소재지<span class="must">*</span></th>
+				<td colspan="3">
+					<select title="소재지(시/도)" class="sido" style="width:80px">
+					<option selected="selected" value="">시/도</option>
+					<option value="1100000000">서울시</option>
+					<option value="4100000000">경기도</option>
+					<option value="2800000000">인천시</option>
+					<option value="2600000000">부산시</option>
+					<option value="3000000000">대전시</option>
+					<option value="2700000000">대구시</option>
+					<option value="3100000000">울산시</option>
+					<option value="2900000000">광주시</option>
+					<option value="4200000000">강원도</option>
+					<option value="4300000000">충청북도</option>
+					<option value="4400000000">충청남도</option>
+					<option value="4700000000">경상북도</option>
+					<option value="4800000000">경상남도</option>
+					<option value="4500000000">전라북도</option>
+					<option value="4600000000">전라남도</option>
+					<option value="5000000000">제주도</option>
+					</select>
+					<select title="소재지(시/군/구)" class="gu" style="width:120px">
+					<option selected="selected" value="">시/군/구</option>
+					</select>
+					<select title="소재지(읍/면/동)" class="dong" style="width:100px">
+					<option selected="selected" value="">읍/면/동</option>
+					</select>
+					<div style="position:relative;top:0;left:312px;width:1px;height:1px;z-index:5">
+						<!-- [D] 읍면동, 단지 검색결과가 모두 노출될 경우 both_open 클래스 추가 -->
+						<div class="layer_direct_find" style="display:none">
+							<iframe frameborder="0" title="" style="position:absolute;z-index:-1;width:100%;height:100%"></iframe>
+							<div class="scroll"> </div>
+							<div class="btn_close">
+								<a href="#"><img src="img/btn_close_popup.gif" width="48" height="24" alt="닫기"></a>
+							</div>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">단지명<span class="must">*</span></th>
+				<td colspan="3">
+					<select title="단지명" class="complex">
+					<option selected="selected" value="">단지리스트</option>
+					</select>
+					<span style="display:none;color:#ff000a"></span>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">면적<span class="must">*</span></th>
+				<td colspan="3">공급면적
+					<select title="면적" style="width:80px">
+					<option selected="selected" value="">면적</option>
+					</select> ㎡ / 전용면적 <em>-㎡</em> / 전용율 <em>- %</em>
+					<span style="display:none;color:#ff000a"></span>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">주소<span class="must">*</span></th>
+				<td colspan="3">
+					<select title="주소(동)" style="width:80px">
+					<option selected="selected" value="">선택</option>
+					</select> 동
+					<span>
+						<span style="display:none">
+							<input type="text" title="주소(동)" class="input_text" style="width:65px;background:url(http://static.land.naver.net/static/center/20110527/txt_userinput.gif) no-repeat 7px 4px"> 동
+						</span>
+						<input type="text" title="주소(호)" class="input_text" style="width:65px"> 호
+						<p class="explan"><em>* 호정보는 확인용으로만 사용되며 서비스화면에 노출되지 않습니다.</em></p>
+					</span>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">층<span class="must">*</span></th>
+				<td colspan="3">
+					<input type="text" title="해당층" value="0" class="input_text" style="width:50px;ime-mode:disabled"> 층
+					<span style="display:none">/<input type="text" title="총층" class="input_text" style="width0:50px;background:url(http://static.land.naver.net/static/center/20110527/txt_totalfloor.gif) no-repeat 7px 4px;ime-mode:disabled"></span>
+					&nbsp;&nbsp;[<span>저</span>/<span>0</span>층]	&nbsp;
+					<input type="radio" id="floor1" checked="checked" title="층(입력방식)" class="input_radio first">
+					<label for="floor1">직접입력</label>
+					<input type="radio" id="floor2" title="층(입력방식)" class="input_radio first">
+					<label for="floor2">고/중/저</label>
+					<input type="radio" id="floor3" title="층(입력방식)" class="input_radio first">
+					<label for="floor3">미노출</label>
+					<input type="hidden" title="총층" value="0">
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">방향</th>
+				<td>
+					<select title="방향" style="width:80px">
+					<option selected="selected" value="">선택</option>
+					<option value="EE">동</option>
+					<option value="WW">서</option>
+					<option value="SS">남</option>
+					<option value="NN">북</option>
+					<option value="EN">북동</option>
+					<option value="ES">남동</option>
+					<option value="WN">북서</option>
+					<option value="WS">남서</option>
+					</select>
+				</td>
+				<th scope="row">현관구조</th>
+				<td>
+					<select title="현관구조" style="width:80px">
+					<option selected="selected" value="">선택</option>
+					<option value="10">계단식</option>
+					<option value="20">복도식</option>
+					<option value="30">복합식</option>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">방수</th>
+				<td><input type="text" title="방수 입력" class="input_text" style="width:50px;ime-mode:disabled"> 개</td>
+				<th scope="row">욕실수</th>
+				<td><input type="text" title="욕실수 입력" class="input_text" style="width:50px;ime-mode:disabled"> 개</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //위치/구조 -->
+				<!-- 가격 -->
+				<h4 class="salereg_tit"><img src="img/h4_register5.gif" width="24" height="14" alt="가격"></h4>
+				<table cellspacing="0" border="1" summary="가격" cellpadding="0" class="tbl_write">
+				<caption>가격</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">항목</th>
+				<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+				<th scope="row">거래종류<span class="must">*</span></th>
+				<td><input type="radio" id="ttc1" checked="checked" title="거래종류" alt="매매" class="input_radio first">
+					<label for="ttc1">매매</label>
+					<input type="radio" id="ttc2" title="거래종류" alt="전세" class="input_radio">
+					<label for="ttc2">전세</label>
+					<input type="radio" id="ttc3" title="거래종류" alt="월세" class="input_radio">
+					<label for="ttc3">월세</label>
+					<span style="display:none">
+						<input type="checkbox" id="aa" class="input_check" style="margin-left:30px">
+						<label for="aa">경매</label>
+					</span>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">매매가<span class="must">*</span></th>
+				<td><input type="text" title="매매가" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원
+					[금액:<em style="color:red"> - </em>원]
+					<em style="display:none;color:red"></em>
+					<span>( 최근시세 :상한가<em> -만원</em> / 하한가 <em>-만원</em> )</span>
+				</td>
+				</tr>
+				<tr style="display:none">
+				<th scope="row">전세가<span class="must">*</span></th>
+				<td><input type="text" title="전세가" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원
+					[금액:<em style="color:red"> - </em>원]
+					( 최근시세 :상한가 <em> -만원</em> / 하한가 <em>-만원</em> )
+				</td>
+				</tr>
+				<tr style="display:none">
+				<th scope="row">월세가<span class="must">*</span></th>
+				<td>보증금<input type="text" title="보증금" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원 /
+					월세가 <input type="text" title="월세가" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원
+					[금액:<em style="color:red"> - </em>원 / <em style="color:red">-</em>원]
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">융자금</th>
+				<td><input type="text" title="융자금" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원
+					[금액:<em style="color:red"> - </em>원]
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">기전세금(월세금)</th>
+				<td>전세(보증금)<input type="text" title="전세(보증금)" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원 /
+					월세가 <input type="text" title="월세가" class="input_text" style="width:60px;padding-right:5px;text-align:right;ime-mode:disabled"> 만원
+					[금액:<em style="color:red">- </em>원 / <em style="color:red">- </em>원]
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //가격 -->
+				<!-- 입주일 -->
+				<h4 class="salereg_tit"><img src="img/h4_register6.gif" width="34" height="14" alt="입주일"></h4>
+				<table cellspacing="0" border="1" summary="입주일" cellpadding="0" class="tbl_write">
+				<caption>입주일</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">항목</th>
+				<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+				<th scope="row">입주가능일</th>
+				<td><input type="radio" id="qq" checked="checked" title="입주가능일" class="input_radio">
+					<label for="qq">즉시입주</label>
+					<input type="radio" id="qs" title="입주가능일" class="input_radio">
+					<label for="qs">
+						<select disabled="disabled" title="입주가능일(개월이내)" style="width:50px">
+						<option selected="selected" value="">선택</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						</select> 개월 이내
+					</label>
+					<input type="radio" id="ss" title="입주가능일" class="input_radio">
+					<label for="ss">
+						<select disabled="disabled" title="입주가능일(년 이후)" style="width:50px">
+						<option selected="selected" value="">선택</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						</select> 년
+						<select disabled="disabled" title="입주가능일(월 이후)" style="width:50px">
+						<option selected="selected" value="">선택</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						</select> 월 이후
+					</label>
+					<input type="checkbox" id="sf" class="input_check"> <label for="sf">협의가능</label>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //입주일 -->
+				<!-- 상세정보 -->
+				<div class="layer_loading" style="display:none;position:absolute;top:30px;left:300px;width:250px;height:20;_height:20px;padding:25px 10px 25px 10px;border:1px solid #E7E7E9;background-color:#FBFBFB;z-index:10">
+					<p align="center" class="loading_txt">처리 중...</p>
+					<p align="center"><img src="img/load_b01_01.gif" width="150" height="13" alt="로딩중"></p>
+				</div>
+				<h4 class="salereg_tit"><img src="img/h4_register7.gif" width="47" height="14" alt="상세정보"></h4>
+				<table cellspacing="0" border="1" summary="상세정보" cellpadding="0" class="tbl_write">
+				<caption>상세정보</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">항목</th>
+				<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+				<th scope="row">매물특징</th>
+				<td><input type="text" title="매물특징" class="input_text" style="width:455px;background:url(http://static.land.naver.net/static/center/20110527/txt_salespecial.gif) no-repeat 7px 4px">
+					<br>
+					<p class="explan"><span style="font-size:11px;color:#f5433d;letter-spacing:-1px">* 직거래 매물은 리스트 노출용 매물 특징을 등록하실 수 없습니다.</span></p>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">상세설명</th>
+				<td><span>
+						<textarea cols="30" rows="5" title="상세설명" style="width:748px;height:80px;background:url(http://static.land.naver.net/static/center/20110527/txt_detailexplan_new.gif) no-repeat 7px 7px"></textarea>
+					</span>
+					<div class="btn_add">
+						<a href="#"><img src="img/btn_input_add.gif" width="75" height="20" alt="입력창 추가"></a>
+					</div>
+					<div class="btn_add" style="display:none">
+						<a href="#"><img src="img/btn_input_add.gif" width="75" height="20" alt="입력창 추가"></a>
+						<a href="#"><img src="img/btn_delete2.gif" width="42" height="20" alt="삭제"></a>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">매물사진</th>
+				<td><a href="#"><img src="img/btn_photo_open.gif" alt=""></a>
+					<span class="file"><strong>0KB</strong> / 5120KB</span>
+					<span class="explan">* 매물사진을 등록하시면 리스트 페이지에 아이콘이 추가되어 주목도가 높아집니다.</span>
+					<div style="position:relative;z-index:10;margin-top:5px">
+						<span style="font-size:11px;color:#f5433d;letter-spacing:-1px">
+							* 매물사진을 등록하시면 리스트 페이지에 아이콘이 추가되어 주목도가 높아지며, 네이버 통합이미지 검색에 노출되어 다양한 노출효과를 보실 수 있습니다.<br>
+							 단, 가이드에 적합하지 않은 사진은 관리자에 의해 삭제될 수 있으니, 가이드를 확인하신 후 사진 등록을 해주시길 바랍니다.&nbsp;&nbsp;
+							<a href="#" style="color:#3e75ac;text-decoration:underline">가이드보기</a>
+						</span>
+						<div style="display:none;position:absolute;top:34px;left:360px;z-index:10;width:403px;padding:0px 10px 7px;border:1px solid #888;background-color:#fff">
+							<h4 style="padding:5px 0px 5px 17px;background:url(http://static.land.naver.net/static/center/20110527/bg_h4.gif) no-repeat left 8px">이미지 등록 가이드</h4>
+							<div style="margin:0;padding:9px 0 9px 11px;background:#f4f4f4;font-family:돋움,Dotum;font-size:11px;color:#383838">
+								<p style="font-family:돋움,dotum;font-size:12px;line-height:18px;color:#444">매물과 전혀 관련없는 이미지, 홍보성 이미지는 등록을 금합니다.</p>
+								<p style="line-height:18px">1. 매물과 전혀 관련없는 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;ex) 캐릭터 이미지, 꽃, 사물 등</p>
+								<p style="line-height:18px">2. 음란성 이미지</p>
+								<p style="line-height:18px">3. 중개업소 간판, 직원사진, 약도, 명함</p>
+								<p style="line-height:18px">4. 상호명, 전화번호를 기입한 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;-단, 중개업소 회원님들께서 등록하신 이미지 내 중개업소 상호를<br>&nbsp;&nbsp;워터마크로 자동삽입해 드립니다. </p>
+							</div>
+							<a href="#" style="position:absolute;top:9px;right:9px"><img src="img/btn_close2.gif" width="15" height="14" alt="레이어닫기"></a>
+						</div>
+						<div style="display:none;position:absolute;top:-304px;left:60px;z-index:10;width:403px;padding:0px 10px 7px;border:1px solid #888;background-color:#fff">
+							<h4 style="padding:5px 0px 5px 17px;background:url(http://static.land.naver.net/static/center/20110527/bg_h4.gif) no-repeat left 8px">이미지 등록 가이드</h4>
+							<div style="margin:0;padding:9px 0 9px 11px;background:#f4f4f4;font-family:돋움,Dotum;font-size:11px;color:#383838">
+								<p style="font-family:돋움,dotum;font-size:12px;line-height:18px;color:#444">매물과 전혀 관련없는 이미지, 홍보성 이미지는 등록을 금합니다.</p>
+								<p style="line-height:18px">1. 매물과 전혀 관련없는 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;ex) 캐릭터 이미지, 꽃, 사물 등</p>
+								<p style="line-height:18px">2. 음란성 이미지</p>
+								<p style="line-height:18px">3. 중개업소 간판, 직원사진, 약도, 명함</p>
+								<p style="line-height:18px">4. 상호명, 전화번호를 기입한 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;-단, 중개업소 회원님들께서 등록하신 이미지 내 중개업소 상호를<br>&nbsp;&nbsp;워터마크로 자동삽입해 드립니다. </p>
+							</div>
+							<h4 style="padding:5px 0px 5px 17pxbackground:url(http://static.land.naver.net/static/center/20110527/bg_h4.gif) no-repeat left 8px;;color:#f5433d">이미지 등록 가이드를 읽으셨습니까?
+								<span style="padding:0px 0px 0px 15px">
+									<a href="#"><img src="img/btn_photo_open.gif" alt=""></a>
+								</span>
+							</h4>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">건물사진</th>
+				<td><a href="#"><img src="img/btn_photo_open.gif" alt=""></a>
+					<span class="file"><strong>0KB</strong> / 5120KB</span>
+					<span class="explan">* 건물 사진은 부동산 갤러리에 현장확인매물사진,매물사진보다 후순위로 노출됩니다.</span>
+					<div style="position:relative;z-index:10;margin-top:5px">
+						<span style="font-size:11px;color:#f5433d;letter-spacing:-1px">
+							*가이드에 적합하지 않은 사진은 관리자에 의해 삭제될 수 있으니, 가이드를 확인하신 후 사진 등록을 해주시길 바랍니다.&nbsp;&nbsp;
+							<a href="#" style="color:#3e75ac;text-decoration:underline">가이드보기</a>
+						</span>
+						<div style="display:none;position:absolute;top:34px;left:360px;z-index:10;width:403px;padding:0px 10px 7px;border:1px solid #888;background-color:#fff">
+							<h4 style="padding:5px 0px 5px 17px;background:url(http://static.land.naver.net/static/center/20110527/bg_h4.gif) no-repeat left 8px">이미지 등록 가이드</h4>
+							<div style="margin:0;padding:9px 0 9px 11px;background:#f4f4f4;font-family:돋움,Dotum;font-size:11px;color:#383838">
+								<p style="font-family:돋움,dotum;font-size:12px;line-height:18px;color:#444">매물과 전혀 관련없는 이미지, 홍보성 이미지는 등록을 금합니다.</p>
+								<p style="line-height:18px">1. 매물과 전혀 관련없는 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;ex) 캐릭터 이미지, 꽃, 사물 등</p>
+								<p style="line-height:18px">2. 음란성 이미지</p>
+								<p style="line-height:18px">3. 중개업소 간판, 직원사진, 약도, 명함</p>
+								<p style="line-height:18px">4. 상호명, 전화번호를 기입한 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;-단, 중개업소 회원님들께서 등록하신 이미지 내 중개업소 상호를<br>&nbsp;&nbsp;워터마크로 자동삽입해 드립니다. </p>
+							</div>
+							<a href="#" style="position:absolute;top:9px;right:9px"><img src="img/btn_close2.gif" width="15" height="14" alt="레이어닫기"></a>
+						</div>
+						<div style="display:none;position:absolute;top:-304px;left:60px;z-index:10;width:403px;padding:0px 10px 7px;border:1px solid #888;background-color:#fff">
+							<h4 style="padding:5px 0px 5px 17px;background:url(http://static.land.naver.net/static/center/20110527/bg_h4.gif) no-repeat left 8px">이미지 등록 가이드</h4>
+							<div style="margin:0;padding:9px 0 9px 11px;background:#f4f4f4;font-family:돋움,Dotum;font-size:11px;color:#383838">
+								<p style="font-family:돋움,dotum;font-size:12px;line-height:18px;color:#444">매물과 전혀 관련없는 이미지, 홍보성 이미지는 등록을 금합니다.</p>
+								<p style="line-height:18px">1. 매물과 전혀 관련없는 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;ex) 캐릭터 이미지, 꽃, 사물 등</p>
+								<p style="line-height:18px">2. 음란성 이미지</p>
+								<p style="line-height:18px">3. 중개업소 간판, 직원사진, 약도, 명함</p>
+								<p style="line-height:18px">4. 상호명, 전화번호를 기입한 이미지</p>
+								<p style="line-height:18px">&nbsp;&nbsp;-단, 중개업소 회원님들께서 등록하신 이미지 내 중개업소 상호를<br>&nbsp;&nbsp;워터마크로 자동삽입해 드립니다. </p>
+							</div>
+							<h4 style="padding:5px 0px 5px 17pxbackground:url(http://static.land.naver.net/static/center/20110527/bg_h4.gif) no-repeat left 8px;;color:#f5433d">이미지 등록 가이드를 읽으셨습니까?
+								<span style="padding:0px 0px 0px 15px">
+									<a href="#"><img src="img/btn_photo_open.gif" alt=""></a>
+								</span>
+							</h4>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">건물사진</th>
+				<td>
+					<span class="ra_bx">
+						<input type="radio" id="use" name="use_radio" class="input_radio first">
+						<label for="use">사용함</label>
+					</span>
+					<span class="ra_bx">
+						<input type="radio" id="no_use" name="use_radio"  class="input_radio first">
+						<label for="no_use">사용않함</label>
+					</span>
+					<span class="explan">
+						* 등록된<span class="pointer"> 건물의 사진은 (드레그 하여) 순서변경 및 노출선택</span>만 가능합니다.
+					</span>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">등록자 메모<span class="open_option">(비공개)</span></th>
+				<td><textarea cols="30" rows="5" title="등록자 메모" style="width:748px;height:80px;background:url(http://static.land.naver.net/static/center/20110527/txt_register_memo.gif) no-repeat 7px 7px"></textarea></td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //상세정보 -->
+				<!-- 중개의뢰인 정보 -->
+				<div>
+					<h4 class="salereg_tit"><img src="img/h4_register16.gif" width="113" height="14" alt="매도/임대 의뢰인 정보"></h4>
+					<p class="userinfo_notice">
+						매도/임대 의뢰인 정보를 <strong>정확하게 입력하시지 않으면 매물 등록이 취소</strong>될 수 있습니다.<br>
+						매도/임대 의뢰인 정보가 회원 정보와 일치하지 않을 경우, &quot;개인정보보호법&quot;에 의거하여 정보주체의 개인정보 수집,이용 동의 의사 확인을 위해 휴대폰 인증을 받으셔야 합니다.<br>
+						매도/임대 의뢰인은 등기부등본 상의 소유자이거나 소유자의 가족, 친척인 경우에만 인정됩니다. (단, 전세/월세에 한하여 세입자도 임대 의뢰인이 될 수 있습니다.)<br>
+						매물을 등록하시면 &#39;직거래&#39; 마크와 함께 고객님의 ID와 연락처가 직접 노출됩니다.
+					</p>
+					<table cellspacing="0" border="1" summary="매도/임대 의뢰인 정보" cellpadding="0" class="tbl_write">
+					<caption>매도/임대인 의뢰인 정보</caption>
+					<colgroup>
+					<col width="174"><col width="315"><col width="135"><col>
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first" style="display:none">
+					<th scope="row">홍보확인 방식<span class="must">*</span></th>
+					<td colspan="3">
+						<input type="radio" id="ww" checked="checked" title="홍보확인 방식" value="10" class="input_radio first" style="visibility:visible">
+						<label for="ww">전화 확인</label>
+						<input type="radio" id="wa" title="홍보확인 방식" value="20" class="input_radio" style="visibility:visible">
+						<label for="wa">홍보확인서 확인</label><em class="explan"><strong>(※ 매물 등록 완료 이후, 매물 정보가 기입된 홍보확인서 출력이 가능합니다.)</strong></em>
+					</td>
+					</tr>
+					<tr class="first">
+					<th scope="row">매도/임대 의뢰인 확인<span class="must">*</span></th>
+					<td colspan="3">
+						<input type="radio" id="ee" checked="checked" title="매도/임대 의뢰인 확인" alt="매도/임대 의뢰인이 본인입니다." class="input_radio first">
+						<label for="ee">매도/임대 의뢰인이 본인입니다.</label>
+						<input type="radio" id="ef" title="매도/임대 의뢰인 확인" alt="매도/임대 의뢰인이 본인이 아닙니다." class="input_radio">
+						<label for="ef">매도/임대 의뢰인이 본인이 아닙니다.</label>
+					</td>
+					</tr>
+					<!-- [D] 매도/임대 의뢰인이 본인일 경우 노출 -->
+					<tr>
+					<th scope="row">매도/임대 의뢰인명<span class="must">*</span></th>
+					<td>손형지</td>
+					<th scope="row" class="tel">의뢰인 연락처<span class="must">*</span></th>
+					<td>010 - **** - 1111 <a href="#" title="연락처 수정" class="btn_tel">연락처 수정</a></td>
+					</tr>
+					<!-- [D] 매도/임대 의뢰인이 본인이 아닐 경우 경우 노출 -->
+					<tr>
+					<th scope="row">매도/임대 의뢰인명<span class="must">*</span></th>
+					<td><input type="text" title="매도/임대 의뢰인명" value="홍길동" class="input_text" style="width:157px;visibility:visible"></td>
+					<th scope="row" class="tel">의뢰인 연락처<span class="must">*</span></th>
+					<td>
+						<select title="매도/임대인 연락처" style="width:50px;visibility:visible">
+						<option selected="selected" value="">선택</option>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+						<option value="02">02</option>
+						<option value="031">031</option>
+						<option value="032">032</option>
+						<option value="033">033</option>
+						<option value="041">041</option>
+						<option value="042">042</option>
+						<option value="043">043</option>
+						<option value="051">051</option>
+						<option value="052">052</option>
+						<option value="053">053</option>
+						<option value="054">054</option>
+						<option value="055">055</option>
+						<option value="061">061</option>
+						<option value="062">062</option>
+						<option value="063">063</option>
+						<option value="064">064</option>
+						<option value="070">070</option>
+						<option value="0502">0502</option>
+						<option value="0505">0505</option>
+						<option value="0506">0506</option>
+						<option value="080">080</option>
+						<option value="0303">0303</option>
+						<option value=" ">없음</option>
+						</select> -
+						<input type="text" title="의뢰인 연락처" class="input_text" style="visibility:visible;width:50px;ime-mode:disabled"> -
+						<input type="text" title="의뢰인 연락처" class="input_text" style="visibility:visible;width:50px;ime-mode:disabled">
+						 <a href="#" title="휴대폰 인증" class="btn_certify">휴대폰 인증</a>
+					</td>
+					</tr>
+					<tr style="display:none">
+					<th scope="row">매물홍보 확인서 다운</th>
+					<td colspan="3"><a href="#" style="visibility:hidden">
+						<img src="img/btn_pub_down.gif" width="140" height="20" alt="매물홍보 확인서 다운로드"></a>
+						<span class="explan"><em>* 왼쪽의 &#39;매물홍보 확인서&#39; 양식을 다운 받으시어 매물 정보 기재 후 팩스(Fax:<span>02-2046-9932</span>) 전송하여 주시면 됩니다. </em> </span>
+						<span class="explan">* 매물홍보 확인서의 모든 항목에 정보가 제대로 기재되지 않으면 매물 등록이 되지 않습니다.</span>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="checkbox"><input type="checkbox" id="ff" title="고객 동의" style="visibility:visible"> <label for="ff">상기 개인정보의 수집 및 네이버 제공에 대해서 당사자로부터 동의를 받았습니다.</label></p>
+				</div>
+				<!-- //중개의뢰인 정보 -->
+				<!-- 단지정보 -->
+				<div style="display:none">
+					<h4 class="salereg_tit"><img src="img/h4_register3.gif" width="48" height="14" alt="단지정보"></h4>
+					<table cellspacing="0" border="1" summary="단지정보" cellpadding="0" class="tbl_write">
+					<caption>단지정보</caption>
+					<colgroup>
+					<col width="135"><col width="315"><col width="135"><col width="316">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">총세대수</th>
+					<td>세대</td>
+					<th scope="row">해당공급면적  세대수</th>
+					<td>세대</td>
+					</tr>
+					<tr>
+					<th scope="row">총동수</th>
+					<td>동</td>
+					<th scope="row">주차대수</th>
+					<td>세대당 대</td>
+					</tr>
+					<tr>
+					<th scope="row">준공년월</th>
+					<td></td>
+					<th scope="row">건설사명</th>
+					<td></td>
+					</tr>
+					<tr>
+					<th scope="row">난방방식</th>
+					<td>-</td>
+					<th scope="row">난방연료</th>
+					<td>-</td>
+					</tr>
+					<tr>
+					<th scope="row">지하철 정보</th>
+					<td colspan="3"></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<!-- //단지정보 -->
+				<div class="btn_wrap">
+					<a href="#"><img src="img/btn_accounts.gif" alt="결제하기"></a>
+					<a href="#"><img src="img/btn_temporarysave.gif" alt="임시저장"></a>
+					<a href="#"><img src="img/btn_cancel.gif" width="67" height="29" alt="취소하기"></a>
+				</div>
+				<div class="btn_wrap" style="display:none">
+					<a href="#"><img src="img/btn_register.gif" width="82" height="29" alt="등록하기"></a>
+					<a href="#"><img src="img/btn_cancel.gif" width="67" height="29" alt="취소하기"></a>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer"><img src="img/@footer.png" width="960" height="64" alt="푸터 임시 이미지"> </div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

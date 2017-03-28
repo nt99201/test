@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>네이버 부동산 갤러리</title>
+<link type="text/css" rel="stylesheet" href="css/gallery2.css">
+<link rel="stylesheet" type="text/css" href="../../trunk/src/land_map/css/land_map.css">
+</head>
+<body>
+<!-- popup size 100% x 704 -->
+<div id="pop_wrap">
+	<!-- header -->
+	<div id="pop_header">
+		<h1 class="sp_gal">NAVER 부동산 갤러리</h1>
+		<a href="#" class="sp_gal btn_print"><span class="blind">인쇄</span></a>
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="pop_container">
+		<!-- content -->
+		<div id="content">
+			<div class="p_area">
+				<div class="bx_p">
+					<ul class="lst_tab">
+					<li class="frst selected"><a href="#">위치</a></li>
+					<li><a href="#">평면도</a></li>
+					<li><a href="#">현장확인</a></li>
+					<li><a href="#">매물사진</a></li>
+					<li><a href="#">단지사진</a></li>
+					<li><a href="#">단지시설</a></li>
+					<li><a href="#">주변/기타</a></li>
+					</ul>
+					<span class="p_num">(<strong>1</strong>/24)</span>
+					<div class="p_view">
+						<div class="rolling">
+							<ul class="lst_view">
+							<li class="selected"><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="ic_view">거리뷰</span><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li class="selected"><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="ic_movie">동영상</span><span class="ic_site">현장확인</span><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							<li><span class="l_mask"></span></li>
+							</ul>
+						</div>
+						<a href="#" class="btn_p btn_prev"><span class="ic">이전</span></a>
+						<a href="#" class="btn_p btn_next"><span class="ic">다음</span></a>
+					</div>
+					<div class="sc_section">
+						<div class="sc_area"><img src="img/@social.gif" width="286" height="15" alt=""></div>
+					</div>
+				</div>
+				<!-- [D] 지도 -->
+				<div class="map_section">
+					<div class="map_snb">
+						<h3>서울특별시 서초구 서초동 1315</h3>
+						<!-- [D] layer open class btn_adr_on add -->
+						<a href="#" class="btn_m btn_adr btn_adr_on">
+							<span class="blind">도로명</span>
+							<span class="ly_tx">
+								<em>경기도 성남시 분당구 불정로 6길 (정자동 그린팩토리)</em>
+							</span>
+						</a>
+						<a href="#" class="btn_m btn_map"><span class="blind">네이버지도</span></a>
+						<div class="sel_subject">
+							<ul>
+							<li><a href="#" class="spm spm_s_cadastral">지적편집도</a></li>
+							</ul>
+						</div>
+						<div class="sel_satellite">
+							<ul>
+							<li class="on"><a href="#" class="spm spm_s_default">일반</a></li>
+							<li>
+								<a href="#" class="spm spm_s_satellite">위성</a>
+								<div class="ly_ssel_satellite">
+									<p><input type="checkbox" class="input_chk" id="chk_hybrid"><label class="lb_chk" for="chk_hybrid">겹쳐보기</label></p>
+									<span class="spm spm_arrow_up"></span>
+									<span class="opac_line"></span>
+								</div>
+							</li>
+							</ul>
+						</div>
+					</div>
+					<div class="map_area">
+						<div class="map_view">
+							<img src="img/@map3.gif" width="100%" alt="" style="vertical-align:top">
+							<div class="map_ctrl">
+								<div class="mc_view"> 
+									<a href="#" title="항공뷰" class="spmc spmc_air">항공뷰</a>
+									<a href="#" title="거리뷰" class="spmc spmc_road">거리뷰</a>
+								</div>
+								<div class="mc_toolsin">
+									<a href="#" title="길이재기" class="spmc spmc_distance spmc_distance_on">길이재기</a>
+								</div>
+								<div class="mc_mouse">
+									<a href="#" title="휠적용" class="spmc spmc_whell">휠적용</a>
+								</div>
+								<div class="mc_zoom">
+									<a href="#" title="확대" class="spmc spmc_zoomin">확대</a>
+									<a href="#" title="축소" class="spmc spmc_zoomout">축소</a>
+								</div>
+							</div>
+							<div class="around_info">
+								<h3 class="blind">주변정보</h3>
+								<!-- 선택된 항목은 'on' className --> 
+								<!-- 두번째 항목은 사용자가 선택한 항목, className의 prefix가 변경. -->  
+								<div class="ai">  
+									<a class="spm spm_ais_transport" href="#">버스</a>   
+									<a class="spm spm_ais_hospital" href="#">병원</a>  
+									<a class="spm spm_ais_more" href="#">주변정보 더보기</a>   
+									<span class="ai_opac"></span>   
+								</div>   
+								<div class="aimore" style="display:none"> 
+									<div class="aimore_line">   
+										<span class="t"></span>
+										<span class="r"></span>
+										<span class="b"></span>
+										<span class="l"></span>  
+									</div>  
+									<ul>    
+									<!-- [D] : 활성화시 on 추가 -->    
+									<li class="bus on">     
+										<a class="spm spm_ai_bus" href="#">버스</a>   
+									</li>    
+									<!-- [D] : 선택레이어 열었을시 down 추가 -->   
+									<li class="hospital">     
+										<a class="spm spm_ai_hospital" href="#">병원.약국</a>     
+										<div class="ai_layer">      
+											<div class="ai_layer_scroll">      
+											<h4 class="blind">병원.약국 레이어</h4>       
+											<ul>        
+											<li><a href="#">전체</a></li>  
+											<li><a href="#">병원</a></li>    
+											<li><a href="#">약국</a></li>        
+											</ul>     
+										</div>   
+									</div>  
+								</li>    
+								<li class="mart">    
+									<a class="spm spm_ai_mart" href="#">마트.슈퍼</a>     
+								</li>   
+								<li class="school">    
+									<a class="spm spm_ai_school" href="#">교육시설</a>    
+									<div class="ai_layer">   
+										<div class="ai_layer_scroll">     
+											<h4 class="blind">교육시설 레이어</h4> 
+											<ul class="_menu">        
+											<li><a href="#">전체</a></li>   
+											<li><a href="#">학교</a></li>   
+											<li><a href="#">유치원·어린이</a></li> 
+											</ul>     
+										</div>    
+									</div>   
+								</li>   
+								<li class="government">     
+									<a class="spm spm_ai_government" href="#">관공서</a>     
+								</li>   
+								<!-- [D] : 선택레이어 열었을시 down 추가 -->     
+								<li class="security down on">     
+									<a class="spm spm_ai_security" href="#">치안시설</a>    
+									<div class="ai_layer">
+										<div class="ai_layer_scroll">     
+											<h4 class="blind">치안시설 레이어</h4>  
+											<ul>      
+											<li class="on"><a href="#">전체</a></li> 
+											<li><a href="#">CCTV</a></li>   
+											<li><a href="#">방범초소</a></li>  
+											<li><a href="#">경찰서·지구대·치안센터</a></li>
+											</ul>    
+										</div>  
+									</div>  
+								</li> 
+									</ul> 
+								</div>
+							</div>
+							<div class="map_search">
+								<div class="search_area">
+									<ul class="view_sale_cate">
+									<li><a href="#" class="cate1 cate1_on"><span class="ico"></span>단지</a></li>
+									<li><a href="#" class="cate2"><span class="ico"></span>중개업소</a></li>
+									<li><a href="#" class="cate3"><span class="ico"></span>확인매물</a></li>
+									</ul>
+								</div>
+								<span class="view_sale_cate_rtbg"></span>
+							</div>
+						</div>
+						<div class="btn_map">
+							<a href="#" class="btn_prev"><span class="blind">이전</span></a>
+							<a href="#" class="btn_next"><span class="blind">다음</span></a>
+						</div>
+						<span class="mask"></span>
+					</div>
+					<!-- 지도 범례 -->
+					<div class="ly_legend">
+						<div class="ly_mask"></div>
+						<div class="ly_inner">
+							<div class="tab_area">
+								<a href="#legend1" class="tab1"><span class="on">일반지도 범례</span></a>
+								<a href="#" class="tab2"><span>지적편집도 범례</span></a>
+							</div>
+							<div class="ly_cont">
+								<h3 id="legend1" class="blind">일반지도 범례</h3>
+								<ul class="sub_tab">
+								<li class="type1 type_on">
+									<a href="#">경계</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">국가경계</li>
+										<li class="col2">광역시</li>
+										<li class="col1">시도&middot;시군구경계</li>
+										<li class="col2">일반시</li>
+										<li class="col3">택지지구경계</li>
+										<li class="col3">문화거리</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type2">
+									<a href="#">도로</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">고속도로&middot;고속화도로</li>
+										<li class="col2">일반도로</li>
+										<li class="col1">국도</li>
+										<li class="col2">공사중도로</li>
+										<li class="col1">지방도</li>
+										<li class="col2">인터체인지</li>
+										<li class="col1">주요도로</li>
+										<li class="col2">교차로</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type3">
+									<a href="#">교통</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">서울1 (인천)</li>
+										<li class="col2">공항철도</li>
+										<li class="col1">분당선</li>
+										<li class="col2">광주1</li>
+										<li class="col1">부산1</li>
+										<li class="col2">대전1</li>
+										<li class="col1">대구1</li>
+										<li class="col2">중앙선</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type4">
+									<a href="#">등산</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">거리&middot;소요시간</li>
+										<li class="col2">매표소</li>
+										<li class="col1">주요등산로</li>
+										<li class="col2">등산안내소</li>
+										<li class="col1">보조등산로</li>
+										<li class="col2">대피소</li>
+										<li class="col1">옛길등산로</li>
+										<li class="col2">산장</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type5">
+									<a href="#">아파트</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">아파트세대수</li>
+										<li class="col1">아파트층&middot;호수 (18층,1호~4호)</li>
+										<li class="col1">아파트평형 (105.8m² = 32평)</li>
+										</ul>
+									</div>
+								</li>
+								</ul>
+								<h3 id="legend1" class="blind">지적편집도 범례</h3>
+								<ul class="sub_tab" style="display:none">
+								<li class="type6">
+									<a href="#">지번&middot;경계</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">대표지번</li>
+										<li class="col2">시군구경계</li>
+										<li class="col1">독립지번</li>
+										<li class="col2">법정동경계</li>
+										<li class="col1">지번</li>
+										<li class="col2">행정동경계</li>
+										<li class="col1">지적경계</li>
+										<li class="col2">읍면경계</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type7">
+									<a href="#">개발</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">택지개발지구</li>
+										<li class="col2">도시개발구역</li>
+										<li class="col1">신도시</li>
+										<li class="col2">경제자유구역</li>
+										<li class="col1">정비구역</li>
+										<li class="col2">재개발구역</li>
+										<li class="col1">보금자리개발지구</li>
+										<li class="col2">주택재개발</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type8">
+									<a href="#">용도</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">전용주거지역</li>
+										<li class="col2">공업지역</li>
+										<li class="col1">일반주거지역</li>
+										<li class="col2">녹지지역</li>
+										<li class="col1">준주거지역</li>
+										<li class="col2">관리지역</li>
+										<li class="col1">상업지역</li>
+										<li class="col2">농림지역</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type9">
+									<a href="#">도로&middot;철로</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">장기계획도로</li>
+										<li class="col2">예정철도</li>
+										<li class="col1">예정고속도로</li>
+										<li class="col2">공사중철도</li>
+										<li class="col1">공사중고속도로1</li>
+										<li class="col2">공사중지하철</li>
+										<li class="col1">공사중고속도로2</li>
+										<li class="col2">일반철도</li>
+										</ul>
+									</div>
+								</li>
+								</ul>
+								<a href="#" class="btn_more">더보기</a>
+							</div>
+							<div class="ly_btn">
+								<a href="#" class="btn_clse">닫기</a>
+							</div>
+						</div>
+					</div>
+					<!-- //지도 범례 -->
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="pop_footer"> </div>
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

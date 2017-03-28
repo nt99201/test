@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>list_map</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+<!--<div id="dom_list_map" style="bottom:0;left:0;width:100%;height:232px">-->
+	<div id="dom_list_map">
+		<div class="pdt_map_wrap">
+			<div class="pdt_map">
+				<!--pdt_lst-->
+				<div class="pdt_lst">
+					<div class="btn_all_view"><a href="#">매물 <span>59</span>개 전체보기</a></div>
+					<div class="scroll_box" id="scroll_box">
+						<div class="scroll_area">
+							<ul class="v1_type">
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<span class="i_sq_place">현장</span>
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">삼성힐스테이트1단지 409동</p>
+												<p class="frst_info"><span class="i_sq_full type1">월세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+												<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+												<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+												<p class="fifth_info">확인매물<span>15.00.00</span></p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<span class="i_sq_place"></span>
+												<img src="im/@list_img.jpg" alt="">
+												<span class="i_play"></span>
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">삼성힐스테이트1단지 409동</p>
+												<p class="frst_info"><span class="i_sq_full type2">전세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+												<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+												<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+												<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<span class="i_sq_place">현장</span>
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">삼성힐스테이트1단지 409동</p>
+												<p class="frst_info"><span class="i_sq_full type1">월세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+												<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+												<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+												<p class="fifth_info">확인매물<span>15.00.00</span></p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<span class="i_sq_place"></span>
+												<img src="im/@list_img.jpg" alt="">
+												<span class="i_play"></span>
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">삼성힐스테이트1단지 409동</p>
+												<p class="frst_info"><span class="i_sq_full type2">전세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+												<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+												<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+												<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<span class="i_sq_place">현장</span>
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">삼성힐스테이트1단지 409동</p>
+												<p class="frst_info"><span class="i_sq_full type1">월세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+												<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+												<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+												<p class="fifth_info">확인매물<span>15.00.00</span></p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<span class="i_sq_place"></span>
+												<img src="im/@list_img.jpg" alt="">
+												<span class="i_play"></span>
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">삼성힐스테이트1단지 409동</p>
+												<p class="frst_info"><span class="i_sq_full type2">전세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+												<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+												<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/ 44m<sup>2</sup>, 4/15층</span></p>
+												<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--//pdt_lst-->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

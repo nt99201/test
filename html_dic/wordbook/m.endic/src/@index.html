@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>wm.endic 마크업 산출물</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var loc = window.location,
+		domain = loc.origin,
+		filename = loc.pathname.split('/');
+		path = loc.pathname.replace(filename[filename.length-1], '');
+
+	if(domain === 'http://view.ui.naver.com'){
+		$('#download a').each(function(){
+			$(this).attr('href', '/www_util/svnutil/download.php?r_uri=' + path + $(this).attr('href'));
+		});
+	}else{
+		$('#download').remove();
+	}
+});	
+</script>
+<style type="text/css">
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+ul,ol{list-style:none}
+a{color:#000;text-decoration:none}
+a:hover{background-color:#EBF2FC}
+.u_vc{position:absolute;*left:-9999em;z-index:-1;font-size:4px;line-height:1px;color:transparent}
+
+body{position:relative;padding:0 14px;background-color:#fff;color:#000;word-wrap:break-word;-webkit-text-size-adjust:none}
+#ct{padding:0 0 30px 0}
+header{padding:1em .1em .9em .1em;border-bottom:3px solid #222}
+.hd_h1{font-size:1.2em}
+h1{position:relative;padding:2em .1em .4em}
+h1 span{position:absolute;right:0}
+.sec_h{clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1em}
+ul{font-size:.9em}
+li{border-bottom:1px solid #dfdfdf}
+li a{display:block;padding:.7em 31px .6em .1em;background:url(data:image/gif;base64,R0lGODlhEQAJAIABAJWVlf///yH5BAEAAAEALAAAAAARAAkAAAITBIKpa7efGpxyvmoRztt272RJAQA7) no-repeat 100% 50%;_zoom:1}
+li span{margin-left:.4em;font-size:.86em;color:#909090}
+footer{clear:both;margin:2.5em 0 4em;padding:6px 2px 2px;background:#f4f4f4;font-size:.86em;line-height:1.6em;color:#333;text-align:center}
+dt,dd{display:inline;color:#333}
+dt:after{display:inline;content:': '}
+dd:last-of-type{display:inline-block;color:#aaa}
+.ft_a{display:inline-block;padding:2px 2px 5px;color:#16d;letter-spacing:-1px;text-decoration:underline}
+</style>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+document.createElement("section");
+document.createElement("nav");
+document.createElement("article");
+document.createElement("aside");
+document.createElement("hgroup");
+document.createElement("header");
+document.createElement("footer");
+</script>
+<![endif]-->
+</head>
+<body>
+
+<header role="banner">
+	<h1 class="hd_h1">wm.endic 마크업 산출물 </h1>
+</header>
+
+<article id="ct">
+	<section>
+		<h1 class="u_vc">기타 정보</h1>
+
+		<h2 class="sec_h">파일 리스트 페이지 URL - QR Code</h2>
+		<img id="_im1" style="width:150px;height:150px">
+		<script type="text/javascript">
+		document.getElementById("_im1").src = 'http://chart.apis.google.com/chart?cht=qr&chs=150x150&chl='+encodeURIComponent(location.href);
+		</script>
+
+		<div id="download">
+			<h2 class="sec_h">파일 다운로드</h2>
+		<ul>
+		<li><a href="">전체</a></li>
+		<li><a href="css">css</a></li>
+		<li><a href="img">im</a></li>
+		<li><a href="scss">scss</a></li>
+		</ul>
+
+		</div>
+	</section>
+	<section role="main">
+		<h1 class="u_vc">마크업</h1>
+
+		<h2 class="sec_h">고급퀴즈</h2>
+		<ul>
+		<li><a href="endic_result2.html">오늘의 퀴즈 결과 페이지<span> / endic_result2.html</span></a></li>
+		<li><a href="endic_result_v3.html">오늘의 퀴즈 결과 페이지<span> / endic_result_v3.html</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">중급퀴즈</h2>
+		<ul>
+		<li><a href="endic_result_v2.html">오늘의 퀴즈 결과 페이지<span> / endic_result_v2.html</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">초급퀴즈</h2>
+		<ul>
+		<li><a href="endic_result.html">오늘의 퀴즈 결과 페이지<span> / endic_result.html</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">기타</h2>
+		<ul>
+		<li><a href="endic_pronun_pop.html">네이버영어사전<span> / endic_pronun_pop.html</span></a></li>
+		<li><a href="challenge_result1_layer.html">도전 퀴즈왕<span> / challenge_result1_layer.html</span></a></li>
+		<li><a href="challenge_quiz1_ng.html">도전 퀴즈왕<span> / challenge_quiz1_ng.html</span></a></li>
+		<li><a href="challenge_quiz1_ok.html">도전 퀴즈왕<span> / challenge_quiz1_ok.html</span></a></li>
+		<li><a href="challenge_quiz2.html">도전 퀴즈왕<span> / challenge_quiz2.html</span></a></li>
+		<li><a href="challenge_quiz2_ng.html">도전 퀴즈왕<span> / challenge_quiz2_ng.html</span></a></li>
+		<li><a href="challenge_quiz2_ok.html">도전 퀴즈왕<span> / challenge_quiz2_ok.html</span></a></li>
+		<li><a href="challenge_quiz3.html">도전 퀴즈왕<span> / challenge_quiz3.html</span></a></li>
+		<li><a href="challenge_quiz3_ng.html">도전 퀴즈왕<span> / challenge_quiz3_ng.html</span></a></li>
+		<li><a href="challenge_quiz3_ok.html">도전 퀴즈왕<span> / challenge_quiz3_ok.html</span></a></li>
+		<li><a href="challenge_quiz3_v2.html">도전 퀴즈왕<span> / challenge_quiz3_v2.html</span></a></li>
+		<li><a href="challenge_quiz3_v3.html">도전 퀴즈왕<span> / challenge_quiz3_v3.html</span></a></li>
+		<li><a href="challenge_ranking1.html">도전 퀴즈왕<span> / challenge_ranking1.html</span></a></li>
+		<li><a href="challenge_ranking2.html">도전 퀴즈왕<span> / challenge_ranking2.html</span></a></li>
+		<li><a href="challenge_result1.html">도전 퀴즈왕<span> / challenge_result1.html</span></a></li>
+		<li><a href="challenge_quiz1.html">도전 퀴즈왕<span> / challenge_quiz1.html</span></a></li>
+		<li><a href="challenge_result2.html">도전 퀴즈왕<span> / challenge_result2.html</span></a></li>
+		<li><a href="challenge_result3.html">도전 퀴즈왕<span> / challenge_result3.html</span></a></li>
+		<li><a href="challenge_result4.html">도전 퀴즈왕<span> / challenge_result4.html</span></a></li>
+		<li><a href="challenge_stage.html">도전 퀴즈왕<span> / challenge_stage.html</span></a></li>
+		<li><a href="challenge_stage_quiz1.html">도전 퀴즈왕<span> / challenge_stage_quiz1.html</span></a></li>
+		<li><a href="challenge_stage_quiz1_ng.html">도전 퀴즈왕<span> / challenge_stage_quiz1_ng.html</span></a></li>
+		<li><a href="challenge_stage_quiz2.html">도전 퀴즈왕<span> / challenge_stage_quiz2.html</span></a></li>
+		<li><a href="challenge_stage_quiz2_ok.html">도전 퀴즈왕<span> / challenge_stage_quiz2_ok.html</span></a></li>
+		<li><a href="challenge_stage_quiz3.html">도전 퀴즈왕<span> / challenge_stage_quiz3.html</span></a></li>
+		<li><a href="challenge.html">도전 퀴즈왕<span> / challenge.html</span></a></li>
+		<li><a href="challenge_boast.html">도전 퀴즈왕<span> / challenge_boast.html</span></a></li>
+		<li><a href="include/header_challenge.html">도전 퀴즈왕 헤더<span> / include/header_challenge.html</span></a></li>
+		<li><a href="endic_set3.html">설정 페이지<span> / endic_set3.html</span></a></li>
+		<li><a href="endic_set2.html">설정 페이지<span> / endic_set2.html</span></a></li>
+		<li><a href="endic_set.html">설정 페이지<span> / endic_set.html</span></a></li>
+		<li><a href="include/common_ham_menu.html">null<span> / include/common_ham_menu.html</span></a></li>
+		<li><a href="endic_tab5_v3_1.html">영단어장<span> / endic_tab5_v3_1.html</span></a></li>
+		<li><a href="endic_tab5_v3.html">영단어장<span> / endic_tab5_v3.html</span></a></li>
+		<li><a href="endic_tab5_v2.html">영단어장<span> / endic_tab5_v2.html</span></a></li>
+		<li><a href="endic_tab3_result.html">영단어장<span> / endic_tab3_result.html</span></a></li>
+		<li><a href="endic_tab3_quiz.html">영단어장<span> / endic_tab3_quiz.html</span></a></li>
+		<li><a href="new_conversation_list.html">영단어장<span> / new_conversation_list.html</span></a></li>
+		<li><a href="endic11.html">영단어장<span> / endic11.html</span></a></li>
+		<li><a href="new_conversation.html">영단어장<span> / new_conversation.html</span></a></li>
+		<li><a href="new_weekly_review.html">영단어장<span> / new_weekly_review.html</span></a></li>
+		<li><a href="endic_noti_v2.html">영단어장<span> / endic_noti_v2.html</span></a></li>
+		<li><a href="endic_noti8.html">영단어장<span> / endic_noti8.html</span></a></li>
+		<li><a href="endic_noti7.html">영단어장<span> / endic_noti7.html</span></a></li>
+		<li><a href="endic_noti6.html">영단어장<span> / endic_noti6.html</span></a></li>
+		<li><a href="endic_noti5.html">영단어장<span> / endic_noti5.html</span></a></li>
+		<li><a href="endic_boast.html">영단어장<span> / endic_boast.html</span></a></li>
+		<li><a href="endic_noti4.html">영단어장<span> / endic_noti4.html</span></a></li>
+		<li><a href="endic_noti3.html">영단어장<span> / endic_noti3.html</span></a></li>
+		<li><a href="endic13_quiz.html">영단어장<span> / endic13_quiz.html</span></a></li>
+		<li><a href="endic_noti2.html">영단어장<span> / endic_noti2.html</span></a></li>
+		<li><a href="endic_frst.html">영단어장<span> / endic_frst.html</span></a></li>
+		<li><a href="endic_noti.html">영단어장<span> / endic_noti.html</span></a></li>
+		<li><a href="endic_tab3.html">영단어장 - 오늘의 단어 엔트리<span> / endic_tab3.html</span></a></li>
+		<li><a href="include/header_gnb.html">영단어장(GNB)<span> / include/header_gnb.html</span></a></li>
+		<li><a href="endic_main.html">영단어장(메인)<span> / endic_main.html</span></a></li>
+		<li><a href="index_.php">영어단어장 :: 마크업 산출물<span> / index_.php</span></a></li>
+		<li><a href="endic_tab2.html">오늘의 단어<span> / endic_tab2.html</span></a></li>
+		<li><a href="endic_end.html">오늘의 단어 외우기 완료<span> / endic_end.html</span></a></li>
+		<li><a href="endic_end_comment.html">오늘의 단어 외우기 완료 + comment<span> / endic_end_comment.html</span></a></li>
+		<li><a href="endic_tab2_calendar.html">오늘의 단어(달력)<span> / endic_tab2_calendar.html</span></a></li>
+		<li><a href="endic_tab2_calendar2.html">오늘의 단어(달력)<span> / endic_tab2_calendar2.html</span></a></li>
+		<li><a href="endic_tab2_calendar3.html">오늘의 단어(달력)<span> / endic_tab2_calendar3.html</span></a></li>
+		<li><a href="endic_tab2_learn.html">오늘의 단어(외우기)<span> / endic_tab2_learn.html</span></a></li>
+		<li><a href="endic_tab5.html">오늘의 영어 페이지<span> / endic_tab5.html</span></a></li>
+		<li><a href="include/header_today_en.html">오늘의 영어 헤더<span> / include/header_today_en.html</span></a></li>
+		<li><a href="endic_tab2_quiz.html">오늘의 퀴즈<span> / endic_tab2_quiz.html</span></a></li>
+		<li><a href="endic_tab2_quiz3.html">오늘의 퀴즈<span> / endic_tab2_quiz3.html</span></a></li>
+		<li><a href="endic_tab2_quiz2.html">오늘의 퀴즈<span> / endic_tab2_quiz2.html</span></a></li>
+		<li><a href="endic_tab3_result_comment.html">오늘의 퀴즈 결과<span> / endic_tab3_result_comment.html</span></a></li>
+		<li><a href="endic_tab_event1.html">오늘의 회화 이벤트<span> / endic_tab_event1.html</span></a></li>
+		<li><a href="endic_tab_event2.html">오늘의 회화 이벤트<span> / endic_tab_event2.html</span></a></li>
+		<li><a href="endic_event_pop.html">이벤트<span> / endic_event_pop.html</span></a></li>
+		<li><a href="endic_event.html">이벤트<span> / endic_event.html</span></a></li>
+		<li><a href="endic7.html">이용약관<span> / endic7.html</span></a></li>
+		<li><a href="endic8.html">중,고교 단어 페이지<span> / endic8.html</span></a></li>
+		<li><a href="include/header_studword.html">중/고교 단어 헤더<span> / include/header_studword.html</span></a></li>
+		<li><a href="endic18.html">중고교/토익 - 고급퀴즈<span> / endic18.html</span></a></li>
+		<li><a href="endic14.html">중고교/토익 - 외우기<span> / endic14.html</span></a></li>
+		<li><a href="endic15.html">중고교/토익 - 외우기<span> / endic15.html</span></a></li>
+		<li><a href="endic17_v2.html">중고교/토익 - 중급퀴즈<span> / endic17_v2.html</span></a></li>
+		<li><a href="endic17.html">중고교/토익 - 중급퀴즈<span> / endic17.html</span></a></li>
+		<li><a href="endic16_v2.html">중고교/토익 - 초급퀴즈<span> / endic16_v2.html</span></a></li>
+		<li><a href="endic16_v3.html">중고교/토익 - 초급퀴즈<span> / endic16_v3.html</span></a></li>
+		<li><a href="endic16.html">중고교/토익 - 초급퀴즈<span> / endic16.html</span></a></li>
+		<li><a href="endic4.html">중고교단어<span> / endic4.html</span></a></li>
+		<li><a href="endic10.html">중고교단어<span> / endic10.html</span></a></li>
+		<li><a href="endic9.html">중고교단어<span> / endic9.html</span></a></li>
+		<li><a href="endic5.html">중고교단어<span> / endic5.html</span></a></li>
+		<li><a href="endic19.html">중고교단어<span> / endic19.html</span></a></li>
+		<li><a href="endic3.html">중고교단어<span> / endic3.html</span></a></li>
+		<li><a href="endic13.html">중고교단어<span> / endic13.html</span></a></li>
+		<li><a href="endic12.html">토익/시험 단어<span> / endic12.html</span></a></li>
+		<li><a href="include/footer.html">푸터영역<span> / include/footer.html</span></a></li>
+		<li><a href="endic_tab4.html">학습현황<span> / endic_tab4.html</span></a></li>
+		<li><a href="endic_tab4_v2.html">학습현황<span> / endic_tab4_v2.html</span></a></li>
+		<li><a href="endic_tab4_v3.html">학습현황<span> / endic_tab4_v3.html</span></a></li>
+		<li><a href="include/header_current_study.html">학습현황 헤더<span> / include/header_current_study.html</span></a></li>
+		</ul>
+
+		<h2 class="sec_h">Include files</h2>
+		<ul>
+		<li><a href="incl_best_reply_area.html">incl_best_reply_area.html<span> / incl_best_reply_area.html</span></a></li>
+		<li><a href="incl_comment_v1.html">incl_comment_v1.html<span> / incl_comment_v1.html</span></a></li>
+		<li><a href="incl_comment_w.html">incl_comment_w.html<span> / incl_comment_w.html</span></a></li>
+		<li><a href="incl_keyword_area.html">incl_keyword_area.html<span> / incl_keyword_area.html</span></a></li>
+		<li><a href="incl_reading_area.html">incl_reading_area.html<span> / incl_reading_area.html</span></a></li>
+		</ul>
+
+	</section>
+</article>
+</body>
+</html>

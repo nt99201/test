@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/auction.css">
+<!-- selectbox - JS include -->
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/jindo2.all.js?cssquery=true&refresh=true&debug=true"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/htmlcomponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/lib.sale.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/boxmodel.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/simulateFocus.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.patch090224.js"></script>
+<!--// selectbox - JS include -->
+</head>
+<body>
+<div id="wrap">
+	<div id="container">
+		<div id="content">
+			<!-- 페이지제목 -->
+			<h2 class="h_page"><img src="img/auction/h_search.gif" width="75" height="16" alt="경매물건조회"></h2>
+			<!-- //페이지제목 -->
+			<!-- 탭 -->
+			<div class="tab_newbie">
+				<ul class="tab_type1">
+				<!-- [D] 선택된 탭 li에 on클래스 사용, 이미지명 _on 추가 -->
+				<li class="on"><a href="#"><img src="img/auction/tab_search1_on.gif" width="118" height="33" alt="물건 상세조회"></a></li>
+				<li><a href="#"><img src="img/auction/tab_search2.gif" width="106" height="33" alt="일정별 조회"></a></li>
+				<li><a href="#"><img src="img/auction/tab_search3.gif" width="115" height="33" alt="무료조회물건"></a></li>
+				</ul>
+			</div>
+			<!-- //탭 -->
+			<!-- 물건 상세조회 -->
+			<div class="detail_section">
+				<p class="desc_detail">원하는 조건을 선택하시면, 하단 리스트에 바로 반영되어 확인하실 수 있습니다.</p>
+				<div class="btn_area">
+					<a href="#"><img src="img/auction/btn_reset.gif" width="59" height="12" alt="선택 초기화"></a>
+				</div>
+				<table cellspacing="0" border="1" summary="물건 상세조회" class="tbl_search">
+				<caption>물건 상세조회</caption>
+				<colgroup>
+				<col width="90px"><col>
+				</colgroup>
+				<tbody>
+				<tr>
+				<th scope="row" class="type1"><span>물건종류</span></th>
+				<td>
+					<div class="sale_type">
+						<ul>
+						<li class="all"><input type="checkbox" id="sale_type1" class="input_chk"><label for="sale_type1">전체보기</label></li>
+						<li><input type="checkbox" id="sale_type2" class="input_chk" checked="checked"><label for="sale_type2" class="on">아파트</label></li>
+						<li><input type="checkbox" id="sale_type3" class="input_chk"><label for="sale_type3">주택</label></li>
+						<li><input type="checkbox" id="sale_type4" class="input_chk"><label for="sale_type4">다가구</label></li>
+						<li><input type="checkbox" id="sale_type5" class="input_chk"><label for="sale_type5">빌라</label></li>
+						<li><input type="checkbox" id="sale_type6" class="input_chk"><label for="sale_type6">오피스텔</label></li>
+						<li><input type="checkbox" id="sale_type7" class="input_chk"><label for="sale_type7">사무실</label></li>
+						<li><input type="checkbox" id="sale_type8" class="input_chk"><label for="sale_type8">근린주택</label></li>
+						<li><input type="checkbox" id="sale_type9" class="input_chk"><label for="sale_type9">근린상가</label></li>
+						<li><input type="checkbox" id="sale_type10" class="input_chk"><label for="sale_type10">토지</label></li>
+						<li><input type="checkbox" id="sale_type11" class="input_chk"><label for="sale_type11">농지</label></li>
+						<li><input type="checkbox" id="sale_type12" class="input_chk"><label for="sale_type12">임야</label></li>
+						<li><input type="checkbox" id="sale_type13" class="input_chk"><label for="sale_type13">공장</label></li>
+						</ul>
+						<ul class="list_on">
+						<li><input type="checkbox" id="sale_type14" class="input_chk"><label for="sale_type14">아파트</label></li>
+						<li><input type="checkbox" id="sale_type15" class="input_chk"><label for="sale_type15">주택</label></li>
+						<li><input type="checkbox" id="sale_type16" class="input_chk"><label for="sale_type16">다가구</label></li>
+						<li><input type="checkbox" id="sale_type17" class="input_chk"><label for="sale_type17">빌라</label></li>
+						<li><input type="checkbox" id="sale_type18" class="input_chk"><label for="sale_type18">오피스텔</label></li>
+						<li><input type="checkbox" id="sale_type19" class="input_chk"><label for="sale_type19">사무실</label></li>
+						<li><input type="checkbox" id="sale_type20" class="input_chk"><label for="sale_type20">근린주택</label></li>
+						<li><input type="checkbox" id="sale_type21" class="input_chk"><label for="sale_type21">근린상가</label></li>
+						<li><input type="checkbox" id="sale_type22" class="input_chk"><label for="sale_type22">토지</label></li>
+						<li><input type="checkbox" id="sale_type23" class="input_chk"><label for="sale_type23">농지</label></li>
+						<li><input type="checkbox" id="sale_type24" class="input_chk"><label for="sale_type24">임야</label></li>
+						<li><input type="checkbox" id="sale_type25" class="input_chk"><label for="sale_type25">공장</label></li>
+						</ul>
+						<a href="#" class="btn_view on">전체닫기</a>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row" class="type2">
+					<span>상세조건</span>
+					<a href="#"><span class="question"><em>?</em></span></a>
+				</th>
+				<td>
+					<div class="value_section">
+						<strong class="p_value">감정가</strong>
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="value1">
+								<option value="">선택</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<span class="p_value2">~</span>
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="value2">
+								<option value="">선택</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_apply.gif" alt="적용" class="btn_apply">
+						<strong class="p_value">최저가</strong>
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="lowest1">
+								<option value="">선택</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<span class="p_value2">~</span>
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="lowest2">
+								<option value="">선택</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_apply.gif" alt="적용" class="btn_apply">
+						<a href="#" class="btn_view">더보기</a>
+						<div class="layer_value">
+							<a href="#" class="btn_close"><span>닫기</span></a>
+							<div class="free_section">
+								<h4>무료상세조건</h4>
+								<table cellspacing="0" border="1" summary="무료상세조건 리스트" class="tbl_layer">
+								<colgroup>
+								<col width="60px"><col width="196px"><col width="74px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th>감정가</th>
+								<td>
+									<div class="selectbox-naked" style="float:left;z-index:30;">
+										<select class="selectbox-source" id="layer_value1">
+											<option value="">선택</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+									<span class="p_value2">~</span>
+									<div class="selectbox-naked" style="float:left;z-index:30;">
+										<select class="selectbox-source" id="layer_value2">
+											<option value="">선택</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+								</td>
+								<th>최저입찰가</th>
+								<td>
+									<div class="selectbox-naked" style="float:left;z-index:30;">
+										<select class="selectbox-source" id="layer_lowest1">
+											<option value="">선택</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+									<span class="p_value2">~</span>
+									<div class="selectbox-naked" style="float:left;z-index:30;">
+										<select class="selectbox-source" id="layer_lowest2">
+											<option value="">선택</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+								</td>
+								</tr>
+								<tr>
+								<th>사건번호</th>
+								<td>
+									<div class="selectbox-naked" style="float:left;z-index:20;">
+										<select class="selectbox-source" id="layer_number">
+											<option value="">전체</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+									<span class="txt txt_num">타경</span>
+									<input type="text" class="input_txt" style="width:73px">
+								</td>
+								<th>법원</th>
+								<td>
+									<div class="selectbox-naked" style="float:left;z-index:20;margin-right:7px">
+										<select class="selectbox-source" id="layer_law1">
+											<option value="">법원전체</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+									<div class="selectbox-naked" style="float:left;z-index:20;">
+										<select class="selectbox-source" id="layer_law2">
+											<option value="">계</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+								</td>
+								</tr>
+								<tr>
+								<th>매각기일</th>
+								<td>
+									<input type="text" class="input_txt" style="width:58px">
+									<span class="p_value2">~</span>
+									<input type="text" class="input_txt" style="width:58px">
+								</td>
+								<th>물건현황</th>
+								<td>
+									<div class="selectbox-naked" style="float:left;z-index:10;">
+										<select class="selectbox-source" id="layer_auction">
+											<option value="">법원전체</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+									<span class="txt txt_auction">유찰</span>
+									<input type="text" class="input_txt" style="width:21px">
+									<span class="txt">회</span>
+									<span class="p_value3">~</span>
+									<input type="text" class="input_txt" style="width:21px">
+									<span class="txt">회</span>
+								</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+							<div class="pay_section">
+								<h4>유료상세조건</h4>
+								<table cellspacing="0" border="1" summary="유료상세조건 리스트" class="tbl_layer">
+								<colgroup>
+								<col width="60px"><col width="196px"><col width="59px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th>건물면적</th>
+								<td>
+									<input type="text" class="input_txt" style="width:48px">
+									<span class="txt_unit">㎡ </span>
+									<span class="p_value2">~</span>
+									<input type="text" class="input_txt" style="width:48px">
+									<span class="txt_unit">㎡ </span>
+								</td>
+								<th>특수물건</th>
+								<td>
+									<div class="selectbox-naked" style="float:left;">
+										<select class="selectbox-source" id="layer_special">
+											<option value="">설정안함(선택해제)</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label"></div>
+										</div>
+										<div id="selectbox-layer" class="selectbox-layer series_layer">
+											<ul class="selectbox-list"></ul>
+										</div>
+									</div>
+								</td>
+								</tr>
+								<tr>
+								<th>토지면적</th>
+								<td colspan="3">
+									<input type="text" class="input_txt" style="width:48px">
+									<span class="txt_unit">㎡ </span>
+									<span class="p_value2">~</span>
+									<input type="text" class="input_txt" style="width:48px">
+									<span class="txt_unit">㎡ </span>
+								</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+							<div class="layer_btm">
+								<div class="btn_area">
+									<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_layer_apply.gif" alt="적용">
+									<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_layer_cancel.gif" alt="취소">
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row" class="type3"><span>소재지</span></th>
+				<td>
+					<div class="area_section">
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="si">
+								<option value="">서울시(593)</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="gu">
+								<option value="">구/군</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<div class="selectbox-naked" style="float:left;">
+							<select class="selectbox-source" id="dong">
+								<option value="">읍/면/동</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label"></div>
+							</div>
+							<div id="selectbox-layer" class="selectbox-layer series_layer">
+								<ul class="selectbox-list"></ul>
+							</div>
+						</div>
+						<a href="#" class="btn_view on">지도닫기</a>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="2" class="map">
+					<div class="map_on">
+						<div class="map_area">
+							<img src="img/auction/@tmp_map.gif" width="559" height="341" alt="" style="vertical-align:top;">
+						</div>
+					</div>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				<script type="text/javascript">
+				<!--
+					new Selectbox($('value1'),{ width : "64", height : false });
+					new Selectbox($('value2'),{ width : "64", height : false });
+					new Selectbox($('lowest1'),{ width : "64", height : false });
+					new Selectbox($('lowest2'),{ width : "64", height : false });
+					new Selectbox($('si'),{ width : "120", height : false });
+					new Selectbox($('gu'),{ width : "86", height : false });
+					new Selectbox($('dong'),{ width : "99", height : false });
+					new Selectbox($('layer_value1'),{ width : "64", height : false });
+					new Selectbox($('layer_value2'),{ width : "64", height : false });
+					new Selectbox($('layer_lowest1'),{ width : "64", height : false });
+					new Selectbox($('layer_lowest2'),{ width : "64", height : false });
+					new Selectbox($('layer_number'),{ width : "64", height : false });
+					new Selectbox($('layer_law1'),{ width : "79", height : false });
+					new Selectbox($('layer_law2'),{ width : "84", height : false });
+					new Selectbox($('layer_auction'),{ width : "79", height : false });
+					new Selectbox($('layer_special'),{ width : "167", height : false });
+
+				//-->
+				</script>
+				<div class="select_section">
+					<div class="fl_select">
+						<h3>선택한 조건</h3>
+						<a href="#" class="btn_all">전체해제</a>
+					</div>
+					<dl class="select_list">
+					<dt>물건종류</dt>
+					<dd>
+						<a href="#"><span>삭제</span></a><span class="txt">아파트</span>
+						<a href="#"><span>삭제</span></a><span class="txt">근린주택</span>
+						<a href="#"><span>삭제</span></a><span class="txt">근린상가</span>
+						<a href="#"><span>삭제</span></a><span class="txt">주택</span>
+						<a href="#"><span>삭제</span></a><span class="txt">창고</span>
+					</dd>
+					<dt>소재지</dt>
+					<dd><a href="#"><span>삭제</span></a>서울특별시 강남구 논현동 242-21</dd>
+					<dt>감정가</dt>
+					<dd><a href="#"><span>삭제</span></a><span class="num">1억 ~ 2억</span></dd>
+					<dt>매각기일</dt>
+					<dd><a href="#"><span>삭제</span></a><span class="num">2010.03.11 ~ 2010.04.10</span></dd>
+					</dl>
+				</div>
+				<div class="result_section">
+					<h3>
+						<img src="img/auction/h_search_result.gif" width="93" height="13" alt="경매물건 조회결과">
+						<span>(총 12건)</span>
+					</h3>
+					<div class="tab_section">
+						<ul class="tab">
+						<li class="t1"><a href="#" class="up"><span>소재지순</span></a></li>
+						<li class="t2"><a href="#" class="down"><span>감정가순</span></a></li>
+						<li class="t3"><a href="#"><span>최저입찰가</span></a></li>
+						<li class="t4"><a href="#"><span>유찰횟수</span></a></li>
+						<li class="t5"><a href="#"><span>매각기일</span></a></li>
+						<li class="t6"><a href="#"><span>조회수</span></a></li>
+						</ul>
+					</div>
+					<div class="btn_area">
+						<a href="#" class="btn_all"><span>전체선택</span></a>
+						<a href="#" class="btn_cancel"><span>선택해제</span></a>
+						<a href="#" class="btn_view"><span>선택일괄보기</span></a>
+						<a href="#" class="btn_print"><span>인쇄하기</span></a>
+					</div>
+					<table cellspacing="0" border="1" summary="경매물건 조회결과" class="tbl_result">
+					<caption>경매물건 조회결과</caption>
+					<colgroup>
+					<col width="30px"><col width="50px"><col width="60px"><col width="214px"><col width="132px"><col width="62px"><col width="80px"><col width="52px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th class="input_chk"><input type="checkbox" title="전체선택"></th>
+					<th class="">사건번호<br>(물번)</th>
+					<th>물건종류</th>
+					<th>소재지</th>
+					<th>감정가(원)<br>최저입찰가(원)</th>
+					<th>물건상태</th>
+					<th>매각기일<br>(시간)</th>
+					<th>조회수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					<tr>
+					<td class="input_chk"><input type="checkbox"></td>
+					<td class="num">09-1932</td>
+					<td>아파트</td>
+					<td class="area">
+						<a href="#">서울특별시 강남구 청담동 101-1 대우로얄카운티 6차 1동 101호</a>
+						<p>
+							<span>건물 <em>163.47㎡</em></span>
+							<span class="bar">l</span>
+							<span>토지 <em>163.47㎡</em></span>
+						</p>
+					</td>
+					<td class="price">
+						<p class="num_type1"><strong>80,320,000,000</strong></p>
+						<p class="num_type2"><strong>24,320,000,000</strong></p>
+						<p class="num_type3"><strong>24,320,000,000</strong></p>
+					</td>
+					<td>
+						<p>낙찰</p>
+						<p class="num_type2">64%</p>
+						<p class="num_type3">70%</p>
+					</td>
+					<td class="date">2010.05.03<br>10:00</td>
+					<td class="count">105</td>
+					</tr>
+					</tbody>
+					</table>
+					<div class="btn_area">
+						<a href="#" class="btn_all"><span>전체선택</span></a>
+						<a href="#" class="btn_cancel"><span>선택해제</span></a>
+						<a href="#" class="btn_view"><span>선택일괄보기</span></a>
+						<a href="#" class="btn_print"><span>인쇄하기</span></a>
+					</div>
+					<div class="paginate">
+						<a href="#" class="pre_end">처음</a>
+						<a href="#" class="pre">이전</a>
+						<a href="#">1</a>
+						<strong>2</strong>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="next">다음</a>
+						<a href="#" class="next_end">맨끝</a>
+					</div>
+				</div>
+			</div>
+			<!-- //물건 상세조회 -->
+		</div>
+		<div class="aside">
+			<!-- 배너 -->
+			<div class="banner_area">
+				<!-- [D] 배너크기 280px x flexible -->
+				<img src="img/auction/@tmp_aside_banner.gif" width="280" height="240" alt="" style="display:block">
+			</div>
+			<!-- //배너 -->
+			<!-- 가장많이본뉴스 -->
+			<div class="aside_content section_favornews">
+				<h2 class="h_aside">
+					<img src="img/auction/h2_favornews.gif" width="81" height="12" alt="가장 많이 본 뉴스">
+					<a href="#" class="btn_more"><img src="img/auction/btn_more.gif" width="36" height="10" alt="더보기"></a>
+				</h2>
+				<ul class="tab_type2">
+				<!-- [D] 선택된 탭 이미지명 _on 추가 -->
+				<li><a href="#"><img src="img/auction/tab_weeklynews_on.gif" width="122" height="28" alt="주간뉴스"></a></li>
+				<li><a href="#"><img src="img/auction/tab_monthlynews.gif" width="119" height="28" alt="월간뉴스"></a></li>
+				</ul>
+				<ul class="lst_news1">
+				<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기</strong></a></li>
+				<li><a href="#">올해 서울 아파트 값 5% 올랐다</a></li>
+				<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+				<li><a href="#">'한파주의보' 부동산 경매 시장</a></li>
+				<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+				<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기</strong></a></li>
+				<li><a href="#">올해 서울 아파트 값 5% 올랐다</a></li>
+				<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+				<li><a href="#">'한파주의보' 부동산 경매 시장</a></li>
+				<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+				</ul>
+			</div>
+			<!-- //가장많이본뉴스 -->
+			<!-- 이슈 -->
+			<div class="aside_content section_issue">
+				<h2 class="h_aside">
+					<img src="img/auction/h2_issue.gif" width="25" height="13" alt="이슈" class="ico_issue">
+					<a href="#" class="btn_issue">8.27 보금자리주택 개편</a>
+					<a href="#" class="btn_more"><img src="img/auction/btn_more.gif" width="36" height="10" alt="더보기"></a>
+				</h2>
+				<ul class="lst_news2">
+				<li><a href="#">투기지역 집살땐 보금자리 주택...</a></li>
+				<li><a href="#">보금자리 주택, 가격과 환경 변화에...</a></li>
+				<li><a href="#">보금자리 주택 세대주 5년 의무화...</a></li>
+				<li><a href="#">임신가구에도 보금자리 주택에...</a></li>
+				<li><a href="#">보금자리 주택 개편에 따른 변화는...</a></li>
+				</ul>
+			</div>
+			<!-- //이슈 -->
+			<!-- 가장많이본뉴스 -->
+			<div class="aside_content section_homenews">
+				<h2 class="h_aside">
+					<img src="img/auction/h2_homenews.gif" width="64" height="12" alt="우리동네 뉴스">
+					<a href="#" class="btn_more"><img src="img/auction/btn_more.gif" width="36" height="10" alt="더보기"></a>
+				</h2>
+				<p class="tab_local">
+					<!-- [D] 선택된 a에 on클래스 사용 -->
+					<a href="#" class="on">종합</a>
+					<span class="bar">|</span>
+					<a href="#">서울</a>
+					<span class="bar">|</span>
+					<a href="#">경기</a>
+					<span class="bar">|</span>
+					<a href="#">인천</a>
+					<span class="bar">|</span>
+					<a href="#">강원</a>
+					<span class="btn_nav">
+						<a href="#" class="btn_prev"><span>이전</span></a>
+						<a href="#" class="btn_next"><span>다음</span></a>
+					</span>
+				</p>
+				<ul class="lst_news1">
+				<li><em>[강남]</em> <a href="#">서울 아파트값 장기침체로</a></li>
+				<li><em>[성남]</em> <a href="#">판교, 동탄 편의시설 아직도</a></li>
+				<li><em>[구리]</em> <a href="#">원단 뉴타운 개발 '샵뜬다'</a></li>
+				<li><em>[남양주]</em> <a href="#">수도권 아파트 분양시장</a></li>
+				<li><em>[춘천]</em> <a href="#">춘천고속도로 개통으로 땅값</a></li>
+				<li><em>[강남]</em> <a href="#">서울 아파트값 장기침체로</a></li>
+				<li><em>[성남]</em> <a href="#">판교, 동탄 편의시설 아직도</a></li>
+				<li><em>[구리]</em> <a href="#">원단 뉴타운 개발 '샵뜬다'</a></li>
+				<li><em>[남양주]</em> <a href="#">수도권 아파트 분양시장</a></li>
+				<li><em>[춘천]</em> <a href="#">춘천고속도로 개통으로 땅값</a></li>
+				</ul>
+			</div>
+			<!-- //가장많이본뉴스 -->
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="footwrap">
+			<fieldset>
+				<legend class="blind">검색</legend>
+				<div class="sta_search_box">
+					<input type="text" title="검색" value="2억이하 아파트 전세" accesskey="s" class="sta_search_text">
+					<a href="#" class="btn_search">검색</a>
+					<a href="#" class="btn_search2">통합검색</a>
+				</div>
+			</fieldset>
+			<ul>
+			<li class="first"><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+            <li><a href="http://mktg.naver.com/privacy/privacy.html" target="_blank"><strong>개인정보 취급방침</strong></a></li>
+            <li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+            <li><a href="https://help.naver.com/support/service/main.nhn?serviceNo=746" target="_blank">부동산 고객센터</a></li>
+			</ul>
+			<p class="info">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며,<br>제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+			<address>
+				<a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="logo">NAVER</a> <em>Copyright ⓒ</em> <a href="http://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

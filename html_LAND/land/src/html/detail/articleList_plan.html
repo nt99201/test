@@ -1,0 +1,1907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">  </div>
+	<!-- //header -->
+
+	<!-- 거래종류 / 매물카테고리 / 매물종류 -->
+	<div class="search">
+		<!-- 100830 부동산가이드 배너 -->
+		<div id="guidebanner_area"></div>
+		<!-- //100830 부동산가이드 배너 -->
+
+		<!-- 지도 상단 카테고리 -->
+		<div class="map_top">
+			<ul class="cate">
+			<div id="top_rlet_tp">
+				<li class="m1"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">주택</a></li>
+				<li class="m5"><a href="#">토지</a></li>
+				<li class="m6"><a href="#">원룸</a></li>
+				<li class="m7"><a href="#">상가</a></li>
+				<li class="m8"><a href="#">사무실</a></li>
+				<li class="m9"><a href="#">공장</a></li>
+				<li class="m10"><a href="#">재개발</a></li>
+				<li class="m11"><a href="#">건물</a></li>
+			</div>
+			<div id="top_trad_tp">
+				<li class="m12"><a href="#" class="selected">전체</a></li>
+				<li class="m13"><a href="#">매매</a></li>
+				<li class="m14"><a href="#">전세</a></li>
+				<li class="m15"><a href="#">월세</a></li>
+			</div>
+			</ul>
+		</div>
+		<!-- //지도 상단 카테고리 -->
+	</div>
+	<!-- //거래종류 / 매물카테고리 / 매물종류 -->
+
+	<div id="map" class="map_sub">
+		<!-- 위치 선택 -->
+		<div id="locationArea" class="location">
+			<div class="loc_view">
+				<div id="loc_view1" class="sel">
+					<select class="selectbox-source">
+					<option value="1100000000" selected="selected">서울시</option>
+					<option value="4100000000">경기도</option>
+					<option value="2800000000">인천시</option>
+					<option value="2600000000">부산시</option>
+					<option value="3000000000">대전시</option>
+					<option value="2700000000">대구시</option>
+					<option value="3100000000">울산시</option>
+					<option value="2900000000">광주시</option>
+					<option value="4200000000">강원도</option>
+					<option value="4300000000">충청북도</option>
+					<option value="4400000000">충청남도</option>
+					<option value="4700000000">경상북도</option>
+					<option value="4800000000">경상남도</option>
+					<option value="4500000000">전라북도</option>
+					<option value="4600000000">전라남도</option>
+					<option value="5000000000">제주도</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">서울시</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel">
+					<select class="selectbox-source">
+					<option value="1168000000" selected="selected">강남구</option>
+					<option value="1174000000">강동구</option>
+					<option value="1130500000">강북구</option>
+					<option value="1150000000">강서구</option>
+					<option value="1162000000">관악구</option>
+					<option value="1121500000">광진구</option>
+					<option value="1153000000">구로구</option>
+					<option value="1154500000">금천구</option>
+					<option value="1135000000">노원구</option>
+					<option value="1132000000">도봉구</option>
+					<option value="1123000000">동대문구</option>
+					<option value="1159000000">동작구</option>
+					<option value="1144000000">마포구</option>
+					<option value="1141000000">서대문구</option>
+					<option value="1165000000">서초구</option>
+					<option value="1120000000">성동구</option>
+					<option value="1129000000">성북구</option>
+					<option value="1171000000">송파구</option>
+					<option value="1147000000">양천구</option>
+					<option value="1156000000">영등포구</option>
+					<option value="1117000000">용산구</option>
+					<option value="1138000000">은평구</option>
+					<option value="1111000000">종로구</option>
+					<option value="1114000000">중구</option>
+					<option value="1126000000">중랑구</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">강남구</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel">
+					<select class="selectbox-source" style="position:absolute;top:-1000px;left:-1000px">
+					<option value="1168010300">개포동</option>
+					<option value="1168010800">논현동</option>
+					<option value="1168010600">대치동</option>
+					<option value="1168011800">도곡동</option>
+					<option value="1168010500">삼성동</option>
+					<option value="1168011100">세곡동</option>
+					<option value="1168011500">수서동</option>
+					<option value="1168010700">신사동</option>
+					<option value="1168011000">압구정동</option>
+					<option value="1168010100" selected="selected">역삼동</option>
+					<option value="1168011300">율현동</option>
+					<option value="1168011400">일원동</option>
+					<option value="1168011200">자곡동</option>
+					<option value="1168010400">청담동</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">역삼동</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel">
+					<select class="selectbox-source">
+					<option value="_" class="selectbox-default">단지</option>
+					<option value="26441">N-스위트</option>
+					<option value="19658">SK허브젠</option>
+					<option value="22025">강남역우정에쉐르</option>
+					<option value="787">개나리4차</option>
+					<option value="795">개나리5차</option>
+					<option value="798">개나리6차</option>
+					<option value="18213">개나리래미안</option>
+					<option value="17528">개나리푸르지오</option>
+					<option value="15905">갤러리빌</option>
+					<option value="102690">갤러리아트</option>
+					<option value="11071">갤러리하우스</option>
+					<option value="16456">거평빌라</option>
+					<option value="3314">경남</option>
+					<option value="23222">골든베르힐</option>
+					<option value="102534">공간쉐르빌</option>
+					<option value="104157">그린비</option>
+					<option value="9123">금호어울림</option>
+					<option value="16462">네스빌</option>
+					<option value="24263">노블스위트</option>
+					<option value="13518">뉴엠</option>
+					<option value="13813">대림e-편한세상</option>
+					<option value="977">대림역삼</option>
+					<option value="13118">대우디오빌플러스</option>
+					<option value="588">동부센트레빌</option>
+					<option value="24863">디오슈페리움</option>
+					<option value="25843">뜨라네(828-21)</option>
+					<option value="102136">뜨라네(828-76)</option>
+					<option value="837">래미안그레이튼(진달래2차)</option>
+					<option value="394">래미안그레이튼(진달래3차)</option>
+					<option value="22386">래미안펜타빌</option>
+					<option value="11739">로얄빌리지</option>
+					<option value="102724">로얄팰리스</option>
+					<option value="11087">명인갤러리1차</option>
+					<option value="22733">명인갤러리2차</option>
+					<option value="102702">베르사이유</option>
+					<option value="17816">베스젠빌</option>
+					<option value="101553">불루밍코트</option>
+					<option value="14386">브라운스톤역삼</option>
+					<option value="103616" selected="selected">블루밍하우스</option>
+					<option value="13814">삼성래미안역삼</option>
+					<option value="18779">상지리츠빌</option>
+					<option value="25941">상지리츠빌2차</option>
+					<option value="12739">선릉역우정에쉐르멤버스</option>
+					<option value="804">성보</option>
+					<option value="26275">성영</option>
+					<option value="11429">세방하이빌1차</option>
+					<option value="25650">세방하이빌2차</option>
+					<option value="15203">세종빌라트</option>
+					<option value="18991">쌍용플래티넘밸류</option>
+					<option value="102632">쎄비앙(101동)</option>
+					<option value="102899">쎄비앙(102동)</option>
+					<option value="104215">에벤에셀빌라트</option>
+					<option value="25264">역삼 프리마빌</option>
+					<option value="24081">역삼2차아이파크</option>
+					<option value="17805">역삼IPARK</option>
+					<option value="16464">역삼경일</option>
+					<option value="22647">역삼노블카운티</option>
+					<option value="102665">역삼동빌라</option>
+					<option value="3315">역삼디오빌</option>
+					<option value="22320">역삼롯데캐슬노블</option>
+					<option value="14197">역삼르비앙</option>
+					<option value="18566">역삼예명</option>
+					<option value="23999">역삼우성</option>
+					<option value="14295">역삼우정에쉐르1</option>
+					<option value="17795">역삼우정에쉐르2</option>
+					<option value="19457">역삼우정에쉐르3</option>
+					<option value="17527">역삼월드메르디앙</option>
+					<option value="100667">역삼이안애에이</option>
+					<option value="16459">역삼칼라</option>
+					<option value="14142">역삼푸르지오</option>
+					<option value="27333">역삼프라임</option>
+					<option value="10556">역삼하나빌</option>
+					<option value="100318">역삼하나빌</option>
+					<option value="9517">열성카이스빌</option>
+					<option value="100375">예지인</option>
+					<option value="14357">예지향</option>
+					<option value="13128">오투빌</option>
+					<option value="12828">우림루미아트1</option>
+					<option value="11803">우림루미아트2</option>
+					<option value="15206">우성빌라트</option>
+					<option value="821">은하수</option>
+					<option value="23089">정원</option>
+					<option value="25057">조이너스</option>
+					<option value="16461">주풍타워</option>
+					<option value="13174">진넥스빌2</option>
+					<option value="22783">천평대</option>
+					<option value="24373">탑펠리스</option>
+					<option value="101753">테라힐스</option>
+					<option value="10294">트레벨</option>
+					<option value="26849">파크앤스위트</option>
+					<option value="103695">포스틸빌라트</option>
+					<option value="102054">풍림지오빌</option>
+					<option value="24071">프리마빌</option>
+					<option value="24783">프리우스역삼</option>
+					<option value="12766">플래티늄</option>
+					<option value="104039">한솔</option>
+					<option value="3054">한스빌</option>
+					<option value="23094">한양럭스</option>
+					<option value="3055">한화진넥스빌</option>
+					<option value="3316">현대까르디에710</option>
+					<option value="104244">현대이스트빌</option>
+					<option value="13891">현대트라움</option>
+					<option value="102815">현대하이츠</option>
+					<option value="10331">휴먼터치빌</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">블루밍하우스</div>
+					</div>
+				</div>
+			</div>
+			<div class="lastest">
+				<p>최근 검색한 지역과 단지 <a href="#">보기</a></p>
+				<ol id="recentComplexList" style="display:none;height:28px">
+				<li><a href="#">역삼동 블루밍하우스</a></li>
+				</ol>
+			</div>
+		</div>
+		<!-- //위치 선택 -->
+
+		<!-- 지도 영역 -->
+		<div class="map_viewer">
+			<div class="map_area">
+				<div id="mapReal" class="map_real" style="padding:0;width:699px;height:340px"><img src="img/@map.gif" width="699" height="340" alt="지도 임시이미지"></div>
+				<div id="mapGuidePop" class="map_guide map_on" style="display:none"></div>
+				<div id="mapGuideHowto" class="map_guide" style="display:block">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="53" height="53" title="활용법 플래시">
+						<param name="movie" value="img/howto.swf">
+						<param name="quality" value="high">
+						<param name="wmode" value="transparent">
+						<param name="allowScriptAccess" value="always">
+						<object type="application/x-shockwave-flash" data="img/howto.swf" width="53" height="53">
+							<param name="quality" value="high">
+							<param name="wmode" value="transparent">
+							<param name="allowScriptAccess" value="always">
+						</object>
+					</object>
+				</div>
+			</div>
+			<!-- 매물정보 레이어, 중개업소정보 레이어 -->
+			<div id="sideListLayer" class="address_list">
+				<div class="backgroud_png"></div>
+				<div class="map_tab">
+					<ul class="lst_tab">
+						<li class="on" id="complexListTitle">
+							<a href="#" class="tab_a">단지</a>
+							<em class="sale_num">매매</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<!-- [D] 비공동 확인매물,중개업소 탭 bd_section 추가 -->
+							<div id="realtorListLayer" class="housing scroll bd_section">
+								<div class="housing_inner">
+									<!-- [D] 현장확인 매물 리스트 -->
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+									<!-- [D] 단순 매물 리스트 매물 -->
+									<ul class="lst_site lst_site_v2">
+									<li>
+										<a href="#">
+											<span class="tit">첫번째빌라</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="" id="siteListTitle">
+							<a href="#" class="tab_a">현장확인매물</a>
+							<em class="sale_num">매매 0건</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li id="realtorListTitle">
+							<a href="#" class="tab_a">중개업소</a>
+							<span class="sale_num">매매</span>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_layer"><span class="bg_btn_layer"></span><a href="#"><span class="blind">지역 리스트 크게보기</span></a></div>
+			</div>
+			<!-- //매물정보 레이어, 중개업소정보 레이어 -->
+		</div>
+		<!-- //지도 영역 -->
+
+		<div class="clear"></div>
+		<div id="map_bar" class="map_bar"><a href="#"><img src="img/btn_map_down.gif" title="지도확대" alt="지도확대"></a></div>
+	</div>
+
+	<!-- 하위 컨텐츠 및 Aside Component 영역 List Container -->
+	<a href="#" name="tabLocation"></a>
+	<div id="container">
+		<div id="content">
+
+			<div id="depth4Content" class="sale_info">
+				<h2 id="depth4Content_Title" class="NE=a:ttl" tabindex="0">[개포동]<span>개포LG자이
+					<a href="#" class="map street NPI=a:street" target="_blank">거리뷰</a>
+					<a href="#" class="map airplane NPI=a:flight" target="_blank">항공뷰</a></span>
+					<a class="btn NPI=a:mylist" href="javascript:nhn.article.sector.registerInterestComplex('8928');">관심단지등록</a><span class="bar">ㅣ</span><a href="#" class="btn NPI=a:cpxall">단지매물전체</a> <a href="#" class="view_all _address_move_link NPI=a:dongarticle" style="display:none;" title="매물보기"><span><strong></strong>매물보기</span></a>
+				</h2>
+				<!-- [D]
+						2글자 탭메뉴 - class="w66"
+						3글자 탭메뉴 - class="w70"
+						4글자 탭메뉴 - class="w76"
+						New 아이콘 + 4글자 탭메뉴 - class="w92", a태그 자식으로 앞쪽에 <span class="ico_newtab">New</span> 추가
+						현재 선택된 탭메뉴 - li 태그 class="on" 추가, a태그 자식으로 뒤쪽에 <span class="ico_opentab"></span> 추가
+				 -->
+				<ul class="tab_sale_detail">
+				<li class="w66"><a href="#">매물</a></li>
+				<li class="w66"><a href="#">시세</a></li>
+				<li class="w76"><a href="#">단지정보</a></li>
+				<li class="w70"><a href="#">평면도<span class="ico_opentab"></span></a></li>
+				<li class="w86 on"><a href="#"><span class="ico_newtab">New</span>동호수<span class="ico_opentab"></span></a></li>
+				<li class="w92"><a href="#"><span class="ico_newtab">New</span>인테리어</a></li>
+				<li class="w70"><a href="#">관리비</a></li>
+				<li class="w76"><a href="#">커뮤니티</a></li>
+				<li class="w66"><a href="#">대출</a></li>
+				</ul>
+
+				<div class="tab_article">
+					<div class="plan_area">
+						<div class="legend_area2">
+							<form>
+							<label for="sel01" class="label_dong">동선택</label>
+							<!-- 셀렉트 박스 자리 -->
+							<div id="sel01" class="jselectbox-applied filter">
+								<select class="jselectbox-source" style="width:66px;overflow-x:hidden">
+								<option value="">전체</option>
+								<option value="">211동</option>
+								<option value="">212동</option>
+								</select>
+								<div class="jselectbox-box" style="width:66px;overflow-x:hidden">
+									<div class="jselectbox-label">전체</div>
+								</div>
+							</div>
+							</form>
+							<ul class="lst_legend">
+							<li><span class="ico_detail"></span>매물이 위치한 층</li>
+							<li><span class="ico_piloti"></span>필로티 및 기타공간</li>
+							<!-- [D] 펼치기 class="on" 추가,  활성/비활성 <ul class="lst_extent2" style="display:block/none"> -->
+							<li class="tab_extent2 on"><a href="#">면적구분<span class="bg_extent"></span></a></li>
+							</ul>
+						</div>
+						<!-- [D]  구간별 컬러 - 구간별 마크업 css.jpg 파일 참조
+									class ico_lv1 ~ ico_lv12 / 각 class마다 _2 ~ _5까지 존재 -->
+						<ul class="lst_extent2" style="display:block">
+						<li><span class="extent_color ico_lv1"></span><span class="tahoma">150A</span>㎡</li>
+						<li><span class="extent_color ico_lv2"></span><span class="tahoma">150A</span>㎡</li>
+						<li><span class="extent_color ico_lv3"></span><span class="tahoma">150B</span>㎡</li>
+						<li><span class="extent_color ico_lv4"></span><span class="tahoma">152A</span>㎡</li>
+						<li><span class="extent_color ico_lv5"></span><span class="tahoma">153B</span>㎡</li>
+						<li><span class="extent_color ico_lv6"></span><span class="tahoma">176</span>㎡</li>
+						<li><span class="extent_color ico_lv7"></span><span class="tahoma">197</span>㎡</li>
+						<li><span class="extent_color ico_lv8"></span><span class="tahoma">198</span>㎡</li>
+						<li><span class="extent_color ico_lv9"></span><span class="tahoma">341SC-1A</span>㎡</li>
+						<li><span class="extent_color ico_lv10"></span><span class="tahoma">341SC-1A</span>㎡</li>
+						<li><span class="extent_color ico_lv11"></span><span class="tahoma">341SC-1A</span>㎡</li>
+						<li><span class="extent_color ico_lv12"></span><span class="tahoma">235SA-1A</span>㎡</li>
+						<li><span class="extent_color ico_lv12_2"></span><span class="tahoma">341SC-1A</span>㎡</li>
+						</ul>
+
+						<div class="elevation_area">
+							<!-- [D] 동, 호수 갯수에 맞춰 width값 제어해 주세요 -->
+							<div class="lst_plan" style="width:712px">
+								<table class="wrap_table">
+								<tr>
+								<td>
+									<div class="wrap_elevation_apt">
+										<table class="elevation_apt">
+										<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof3"><div></div></td>
+										</tr>
+										<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">2001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">2001</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">2001</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="bg_roof"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv4">1904</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1905</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv7_2">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1801</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv7_2">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1701</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv7_2">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv4_5">1601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1501</a>
+												<!-- 툴팁영역 -->
+												<!-- [D] div class="extenttootip_area" 요소 width 값의 절반을 margin-left:값 으로 제공해 주세요 -->
+												<div class="extenttootip_area" style="margin-left:-45px">
+													<p class="extent_tootip">
+														<!-- [D] 면적 아이콘 class ico_lv1 ~ ico_lv12 / 각 class마다 _2 ~ _5까지 존재 -->
+														<span class="extent_color ico_lv3"></span><span class="tahoma">341SC-1A</span>㎡
+														<em class="rgt"></em>
+													</p>
+													<i class="arr"></i>
+												</div>
+												<!-- //툴팁영역 -->
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv7_2">1501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1501</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv7_2">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv7_2">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1301</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1201</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1201</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv4">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1101</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1101</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1001</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1001</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">901</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">901</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">801</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">701</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">501</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_3">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_4">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area"><a href="#" class="color_lv12">301</a></div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_4">301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">301</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_4">201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">201</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<!-- [D] 맨 마지막 tr인 데크를 제외하고 실제 1층인 tr에 클래스 ground_floor 제공 -->
+										<tr class="ground_floor">
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<!-- [D] col 갯수에 맞춰서 colspan="n" 입력 -->
+										<td colspan="6" class="deck_area">
+											<span class="bg_deck_lft"></span>
+											<span class="bg_deck_rgt"></span>
+										</td>
+										</tr>
+										</table>
+										<div class="summary_plan">
+											<p>211동<span class="bg_planbar"></span>전체 : <a href="#">999</a>건</p>
+											<ul>
+											<li>(매매 :<a href="#">999</a><span class="bg_planbar2"></span></li>
+											<li>전세 :<a href="#">999</a><span class="bg_planbar2"></span></li>
+											<li>월세 :<a href="#">999</a>)</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="wrap_elevation_apt">
+										<table class="elevation_apt">
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1901</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1901</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1801</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1701</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1501</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1401</a>
+												<!-- 툴팁영역 -->
+												<!-- [D] div class="extenttootip_area" 요소 width 값의 절반을 margin-left:값 으로 제공해 주세요 -->
+												<div class="extenttootip_area" style="margin-left:-30px">
+													<p class="extent_tootip">
+														<!-- [D] 면적 아이콘 class ico_lv1 ~ ico_lv12 / 각 class마다 _2 ~ _5까지 존재 -->
+														<span class="extent_color ico_lv2"></span><span class="tahoma">150B</span>㎡
+														<em class="rgt"></em>
+													</p>
+													<i class="arr"></i>
+												</div>
+												<!-- //툴팁영역 -->
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1301</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv2">1201</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv2_5">1201</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1101</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1101</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1001</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">1001</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">901</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">901</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">801</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">701</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">501</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv12">401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv12">301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr class="ground_floor">
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td colspan="2" class="deck_area">
+											<span class="bg_deck_lft"></span>
+											<span class="bg_deck_rgt"></span>
+										</td>
+										</tr>
+										</table>
+										<div class="summary_plan">
+											<p>212동<span class="bg_planbar"></span>전체 : <a href="#">28</a>건</p>
+											<ul>
+											<li>(매매 :<a href="#">8</a><span class="bg_planbar2"></span></li>
+											<li>전세 :<a href="#">3</a><span class="bg_planbar2"></span></li>
+											<li>월세 :<a href="#">15</a>)</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="wrap_elevation_apt">
+										<table class="elevation_apt">
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1901</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1901</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1801</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1701</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1501</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1301</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1201</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1201</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1101</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1101</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">1001</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">1001</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">901</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">901</a>
+												<!-- 툴팁영역 -->
+												<!-- [D] div class="extenttootip_area" 요소 width 값의 절반을 margin-left:값 으로 제공해 주세요 -->
+												<div class="extenttootip_area" style="margin-left:-30px">
+													<p class="extent_tootip">
+														<!-- [D] 면적 아이콘 class ico_lv1 ~ ico_lv12 / 각 class마다 _2 ~ _5까지 존재 -->
+														<span class="extent_color ico_lv11_5"></span><span class="tahoma">150A</span>㎡
+														<em class="rgt"></em>
+													</p>
+													<i class="arr"></i>
+												</div>
+												<!-- //툴팁영역 -->
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">801</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">701</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv11">601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv11_5">601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv1_5">501</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv12">401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv12">301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr class="ground_floor">
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td colspan="2" class="deck_area">
+											<span class="bg_deck_lft"></span>
+											<span class="bg_deck_rgt"></span>
+										</td>
+										</tr>
+										</table>
+										<div class="summary_plan">
+											<p>213동<span class="bg_planbar"></span>전체 : <a href="#">28</a>건</p>
+											<ul>
+											<li>(매매 :<a href="#">2</a><span class="bg_planbar2"></span></li>
+											<li>전세 :<a href="#">3</a><span class="bg_planbar2"></span></li>
+											<li>월세 :<a href="#">15</a>)</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="hdn_maxValue" class="hidden"></div>
+
+
+
+		<!-- Aside Component List -->
+		<div id="depthAside" class="aside" style="display:block">
+
+			<!-- 중개업소 프로필 노출 영역 -->
+			<div class="bx_com">
+				<div class="mem_area">
+					<div class="thmb"><img src="img/@tmp_member2.gif" width="250" height="117" alt=""></div>
+					<h5 class="t_mem"><a href="#">로얄공인중개사사무소</a></h5>
+					<ul class="lst_mem">
+					<li><em>대표</em>  이현흥&nbsp;<span class="recom">한국공인중개사협회추천</span></li>
+					<li><em>전화</em>  02-575-0066 / 017-350-6050</li>
+					<li><a href="#">현장확인: <strong>40</strong></a><span class="and">|</span><a href="#">매물: <strong>10</strong></a><span class="and">|</span><a href="#">맞춤매물: <strong>3</strong></a></li>
+					</ul>
+					<div class="btn_group">
+						<a href="#" class="btn_v2"><span class="blind">위치보기</span></a>
+					</div>
+					<div class="premium_btn_page2">
+						<span class="pagenum"><strong>1</strong>/2</span>
+						<!-- [D] 활성화시 class="_on" 추가 -->
+						<a href="#" title="이전" class="btn_prev_on"><span>이전</span></a><a href="#" title="재생" class="btn_start_on" style="display: none"><span>재생</span></a><a href="#" title="멈춤" class="btn_stop_on"><span>멈춤</span></a><a href="#" title="다음" class="btn_next_on"><span>다음</span></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 교통정보 -->
+			<div class="bx_com ts">
+				<h4 class="t_end t_traffic"><span>교통정보</span></h4>
+				<div class="traffic_dsc">
+					<h5><span class="ic_hot">HOT</span> <strong>분당선 도곡역 도보 7분</strong></h5>
+					<ul class="normal">
+					<li class="info info_v2"><span class="dot"></span>경기도 성남시 분당구 정자동 11
+						<!-- [D] layer open class btn_adr_on add -->
+						<a href="#" class="btn_m btn_adr btn_adr_on">
+							<span class="blind">도로명</span>
+							<span class="ly_tx">
+								<em>경기도 성남시 분당구 불정로 6길 (정자동 그린팩토리)</em>
+							</span>
+						</a>
+					</li>
+					<li class="info"><span class="dot"></span>입주일자: 2003.05</li>
+					<li class="info"><span class="dot"></span>건설사: 현대산업개발(주)</li>
+					<li class="info"><span class="dot"></span>총 307세대 / 총 2개동/ 총 34층</li>
+					<li class="info"><span class="dot"></span>면적 : 104㎡ .191A㎡. 19BA㎡. 195㎡. 201㎡</li>
+					</ul>
+				</div>
+				<div class="traffic_srch">
+					<h5>빠른길 찾기</h5>
+					<p class="input">
+						<input type="text" id="path_input" class="_inputArea" value="출발지" title="출발지 입력">
+						<span>→</span>
+						<strong title="타워팰리스3차">타워팰리스3차</strong>
+						<a class="srch" href="#">찾기</a>
+					</p>
+					<!-- [D]빠른길 찾기 레이어 활성화시 style="display: block -->
+					<div class="ly_traffic_srch" style="display: ">
+						<div class="ts_top">
+							<h5>출발지검색</h5><input type="text" id="ly_path_input" value="출발지" title="출발지 입력"><a href="#"><span>검색</span></a>
+						</div>
+						<div class="ts_con scroll">
+							<div class="ts_con_top">출발지 검색 결과<strong>0건</strong></div>
+							<ul class="ts_lst">
+							<li><span><input type="checkbox" id="ts1"></span><label for="ts1"><em>광교상록</em> (경기도 수원시 영통구 이의동 하동 116-2)</label></li>
+							<li><span><input type="checkbox" id="ts2"></span><label for="ts2"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts3"></span><label for="ts3"><em>KT</em> (경기도 성남시 분당구 정자동 206)</label></li>
+							<li><span><input type="checkbox" id="ts4"></span><label for="ts4"><em>토다이 분당점 </em> (경기도 성남시 분당구 정자동 174-1 더샵스타파크 지하1층)</label></li>
+							<li><span><input type="checkbox" id="ts5"></span><label for="ts5"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts6"></span><label for="ts6"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts7"></span><label for="ts7"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							</ul>
+							<!-- [D]내용없을 시 style="block" -->
+							<span class="nodata" style="display: ">원하시는 출발지를 검색하세요.</span>
+						</div>
+						<a href="#" class="btn_close"><span class="blind">레이어닫기</span></a>
+					</div>
+				</div>
+				<div class="traffic">
+					<h5>주변 대중교통 <span class="means">(지하철, 버스)</span></h5>
+
+					<div class="subway_area">
+						<p class="subway">
+							<span class="s3"></span><a href="#" title="수도권3호선" class="_subway">3호선(구파발)</a>
+						</p>
+						<p class="subway">
+							<span class="s100"></span><a href="#" title="분당선" class="_subway">분당선(정자)</a>
+						</p>
+						<p class="subway">
+							<span class="s109"></span><a href="#" title="신분당선" class="_subway" id="733">신분당선(정자)</a>
+						</p>
+					</div>
+
+					<ul>
+					<li>
+						<em title="마을버스" class="bus3">마을버스</em>
+						<a href="#">강남05</a> , <a href="#">강남09</a> , <a href="#">강남02</a>
+					</li>
+					<li>
+						<em title="일반" class="bus1">일반</em>
+						<a href="#">917</a> , <a href="#">11-3</a>
+					</li>
+					<li>
+						<em title="공항버스" class="bus5">공항버스</em>
+						<a href="#">6009</a>
+					</li>
+					<li>
+						<em title="직행좌석" class="bus4">직행좌석</em>
+						<a href="#">9414</a>
+					</li>
+					<li>
+						<em title="간선" class="bus11">간선</em>
+						<a href="#">141</a> , <a href="#">402</a>  , <a href="#">406</a> , <a href="#">N37</a> , <a href="#">472</a>
+					</li>
+					<li>
+						<em title="지선" class="bus12">지선</em>
+						<a href="#">2413</a> , <a href="#">6411</a> , <a href="#">3012</a> , <a href="#">4319</a> , <a href="#">4432</a> , <a href="#">4434</a> , <a href="#">2415</a> , <a href="#">3219</a> ,<a href="#">4433</a>
+					</li>
+					</ul>
+				</div>
+				<div class="photo">
+					<h4>갤러리</h4>
+					<ul class="plist">
+					<li class="first"><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 면적별 매매시세 -->
+			<div class="bx_com">
+				<h4 class="t_end t_loan"><span>면적별 매매시세</span></h4>
+				<div class="loan_tbl">
+					<table cellspacing="0" border="1" summary="대출정보">
+					<caption>대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="90"><col width="90">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" class="frst">면적 <em>(㎡)</em></th>
+					<th scope="col">상한가 <em>(만원)</em></th>
+					<th scope="col" class="last">하한가 <em>(만원)</em></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td>183</td>
+					<td>135,000</td>
+					<td><strong>125,000</strong></td>
+					</tr>
+					<tr>
+					<td>191A</td>
+					<td>145,000</td>
+					<td><strong>135,000</strong></td>
+					</tr>
+					<tr class="last">
+					<td>191A</td>
+					<td>145,000</td>
+					<td><strong>135,000</strong></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">한국감정원제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 많이 본 단지 -->
+			<div class="bx_com">
+				<h4 class="t_end"><span>정자동 많이 본 단지</span></h4>
+				<ul class="lst_view_div">
+				<!-- [D]말줄임 처리-->
+				<li class="on"><em class="ic_num num1">1</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num2">2</em> <a href="#">느티마을경남선경</a> <span class="state up"><em></em>1</span></li>
+				<li><em class="ic_num num3">3</em> <a href="#">느티마을경남선경</a> <span class="state dn"><em></em>2</span></li>
+				<li><em class="ic_num num4">4</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num5">5</em> <a href="#">느티마을경남선경</a> <span class="new"><em></em><span class="blind">new</span></span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //Aside Component List -->
+	</div>
+	<!-- //하위 컨텐츠 및 Aside Component 영역 List Container -->
+
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+<div id="pvframe" style="display:none"></div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>도전 퀴즈왕</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+</head>
+<body class="">
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<div class="t_content">
+	<!-- 페이지 타이틀 영역 -->
+	<div class="h2_titarea"></div>
+	<div class="slid_area quiz_box">
+		<div class="slid" style="height:350px">
+			<div class="book_bg3" style="display:block">
+				<!-- [D]
+					- 60초 부터 11초까지 1최단위로 해당 클래스 추가 (s60, s59, s58...)
+					- 10초부터 0초까지 1초단위로 해당클래스 추가 (s10, s9, s8...)
+					- 10초부 0.1초 단위로 blink클래스 추가, 삭제 반복
+
+					60초 : s60 / 59초 : s59 / 58초 : s58 / .....
+					10초 : s10 / 10.1초 s10 blink / 10.2초 s10 / 10.3초 s10 blink / .....
+					9초 : s9 / 9.1초 s9 blink / 9.2초 s9 / 9.3초 s9 blink / .....
+					0초 s0
+				 -->
+				<div class="time_box s8">
+					<div class="time_bar_w">
+						<span class="time_bar"></span>
+						<span class="time_sec">8</span>
+					</div>
+				</div>
+				<div class="flk_top_v2">
+					<!-- [D]  pass 5 : p5 추가  / pass 4 : p4 추가 / pass 3 : p3 추가  ....  -->
+					<p class="pass p5">pass 5</p>
+					<!-- [D] 콤보없을때 클래스 combo / Combo14 : c14 추가  / Combo13 : c13 추가  / Combo12: c12 추가 ...  -->
+					<p class="combo c10">combo 10!</p>
+					<!-- [D] 활성화시 on클래스 추가 -->
+					<a href="#" class="reload">새로고침</a>
+					<p class="cen_txt colb3">아침 식사는 추가 요금 없이 제공된다.</p>
+					<p class="cen_txt colb4">
+						<span class="alpb_ck2 noti">There is widespread disillusionment with the present government.</span>
+					</p>
+					<span class="judge_bg right_ico"><span class="hc">정답</span></span>
+				</div>
+				<div class="flk_dn3">
+					<ol>
+					<li class="on"><a href="#" class="btn_lk2">starts</a></li>
+					<!-- [D] 활성화시 클래스 on 추가 -->
+					<li class="on"><a href="#" class="btn_lk2">seven</a></li>
+					<li class="on"><a href="#" class="btn_lk2">at</a></li>
+					<li class="on"><a href="#" class="btn_lk2">performance</a></li>
+					</ol>
+				</div>
+			</div>
+			<p class="btm_txt4">제시된 단어로 문장을 완성하세요.</p>
+		</div>
+	</div>
+</div>
+<hr />
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver1"></div>
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/header_challenge.html', sel:'.h2_titarea'},
+        {path:'include/footer.html', sel:'.__ver1'},
+        {path:'include/common_ham_menu.html', sel:'.sidenav'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

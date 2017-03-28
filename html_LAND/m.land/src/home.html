@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css"/>
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/home_land.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var inputHeight = $('.sch_form_wrap').outerHeight();
+			var headerHeight = $('#header').outerHeight();
+			$('#searchBtn').click(function(){
+				$('#header').toggleClass('active');
+
+				if($('#header').hasClass('active')){
+					$('#header').animate({height:'+='+ inputHeight +'px'}, 300,'easeInOutCubic');
+					$('.sch_form_wrap').animate({top:headerHeight +'px'}, 300,'easeInOutCubic');
+					$('#searchBtn').addClass('on');
+				}else{
+					$('#header').animate({height:'-='+ inputHeight +'px'}, 300,'easeInOutCubic');
+					$('.sch_form_wrap').animate({top:'-=' +headerHeight +'px'}, 300,'easeInOutCubic');
+					$('#searchBtn').removeClass('on');
+				}
+
+			})
+		});
+	</script>
+</head>
+<body>
+
+<div id="wrap" style="overflow:hidden">
+	<!-- header -->
+	<header id="header">
+		<h1 class="gnb_h1">
+			<div class="btn_mod">
+				<a href="#" class="on">부동산</a>
+				<a href="#">원룸</a>
+			</div>
+		</h1>
+		<a href="#" class="gnb naver"><span>NAVER</span></a>
+		<a href="#" class="gnb s_btn" id="searchBtn"><span>검색</span></a>
+		<div class="sch_form_wrap">
+			<div class="input_area">
+				<input type="search" placeholder="지역명, 또는 단지명">
+				<button type="button" class="btn_txt_del"><span>삭제</span></button>
+				<button type="button" class="btn_txt_sch"><span>부동산검색</span></button>
+			</div>
+			<button type="button" class="btn_total_sch">통합검색</button>
+		</div>
+		<button type="button" class="btn_b_side"><span>확장메뉴</span></button>
+	</header>
+	<!-- //header -->
+
+	<!-- cont -->
+	<div id="cont">
+		<ul class="u_tab">
+			<li class="u_tab_l u_tab_on"><a href="#" class="u_tab_a">홈</a></li>
+			<li class="u_tab_l"><a href="#" class="u_tab_a">매물<span class="ic_new">NEW</span></a></li>
+			<li class="u_tab_l"><a href="#" class="u_tab_a">분양</a></li>
+			<li class="u_tab_l"><a href="#" class="u_tab_a">뉴스</a></li>
+			<li class="u_tab_l"><a href="#" class="u_tab_a">MY</a></li>
+		</ul>
+
+		<!-- spot_box -->
+		<div class="spot_box">
+			<!-- [D] 이미지가 들어가는 경우 li에 class img 추가 -->
+			<ul>
+			<li class="spot_type_product">
+				<a href="#">
+					<span class="sp_home ico_map"></span>
+					<span class="txt_area">
+						<strong>매물지도로 보기</strong>
+						<span>지도에서 원하는 매물만 쏙!</span>
+					</span>
+				</a>
+			</li>
+			<li class="spot_type_subway">
+				<a href="#">
+					<span class="sp_home ico_metro"></span>
+					<span class="txt_area">
+						<strong>지하철역 매물</strong>
+						<span>교통이 편리한 위치는?</span>
+					</span>
+				</a>
+			</li>
+			<li class="img spot_type_complex">
+				<a href="#">
+					<span class="thumb"><img src="im/@thumb12.png" alt=""></span>
+					<span class="sp_home ico_complex"></span>
+					<span class="txt_area">
+						<strong>단지별 매물</strong>
+						<span>아파트, 오피스텔 매물만!</span>
+					</span>
+				</a>
+			</li>
+			<li class="img spot_type_room">
+				<a href="#">
+					<span class="thumb"><img src="im/@thumb11.png" alt=""></span>
+					<span class="sp_home ico_room"></span>
+					<span class="txt_area">
+						<strong>원룸 매물</strong>
+						<span>대학생, 직장인을 위해!</span>
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+		<!-- //spot_box -->
+
+		<!-- wrap -->
+		<!-- [D] 메뉴가 하나일때 클래스 crd_box_one 추가 -->
+		<div class="cont_tab_wrap">
+			<!-- 탭메뉴 -->
+			<div class="crd_tab">
+				<div class="tit_area">
+					<ul class="crd_tab_menu">
+					<li class="item on" id="favorite_tab_complex"><a href="#" class="btn_tab">관심단지</a></li>
+					<li id="favorite_tab_sale"><a href="#" class="btn_tab">관심매물</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //탭메뉴 -->
+			<!-- 관심단지 -->
+			<div class="crd_box cont_tab_box" id="favorite_cont_complex">
+				<div class="tit_area">
+					<h2>관심단지</h2>
+				</div>
+				<div class="crd_cont">
+					<div class="lst_complex_wrap">
+<!--					li width:111px * 6 -->
+						<ul class="lst_complex" style="width:690px;">
+						<li>
+							<a href="#">
+								<div class="thumb no_thumb"><span>이미지 없음</span></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="quantity">
+										<em>매</em>549<span class="bar">/</span><em>전</em>208<span class="bar">/</span><em>월</em>137</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="quantity">
+										<em>매</em>549<span class="bar">/</span><em>전</em>208<span class="bar">/</span><em>월</em>137</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="quantity">
+										<em>매</em>549<span class="bar">/</span><em>전</em>208<span class="bar">/</span><em>월</em>137</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="quantity">
+										<em>매</em>549<span class="bar">/</span><em>전</em>208<span class="bar">/</span><em>월</em>137</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="quantity">
+										<span><em>매</em>549<span class="bar">/</span><em>전</em>208<span class="bar">/</span><em>월</em>137</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="quantity">
+										<em>매</em>549<span class="bar">/</span><em>전</em>208<span class="bar">/</span><em>월</em>137</em>
+								</div>
+							</a>
+						</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="sp_home btn_more">관심단지 더보기</a>
+			</div>
+			<!-- //관심단지 -->
+			<!-- 관심매물 -->
+			<div class="crd_box cont_tab_box" id="favorite_cont_sale">
+				<div class="tit_area">
+					<h2>관심매물</h2>
+				</div>
+				<div class="crd_cont">
+					<div class="lst_sale_wrap">
+<!--					li width:141px * li 갯수 - 맨처음 li 여백 8px -->
+						<ul class="lst_sale" style="width:838px;">
+						<li>
+							<a href="#">
+								<div class="thumb no_thumb"><span>이미지 없음</span></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="price_area">
+										<span class="sp_home sale_label type3">매매</span>
+										<span class="price">2,000<span class="bar">/</span>44</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><span class="i_sq_place">현장</span><img src="im/@detail_img.jpg"><span class="i_play">동영상</span></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="price_area">
+										<span class="sp_home sale_label type1">월세</span>
+										<span class="price">2,000<span class="bar">/</span>44</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="price_area">
+										<span class="sp_home sale_label type2">전세</span>
+										<span class="price">2,000<span class="bar">/</span>44</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="price_area">
+										<span class="sp_home sale_label type3">매매</span>
+										<span class="price">2,000<span class="bar">/</span>44</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="price_area">
+										<span class="sp_home sale_label type3">매매</span>
+										<span class="price">2,000<span class="bar">/</span>44</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="thumb"><img src="im/@detail_img.jpg"></div>
+								<div class="txt_area">
+									<span class="location">서현동</span>
+									<span class="place_name">선수마을3단지 선수빌리지</span>
+									<em class="price_area">
+										<span class="sp_home sale_label type3">매매</span>
+										<span class="price">2,000<span class="bar">/</span>44</span>
+									</em>
+								</div>
+							</a>
+						</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="sp_home btn_more">관심매물 더보기</a>
+			</div>
+			<!-- //관심매물 -->
+		</div>
+		<!-- //wrap -->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>MY필터</h2>
+				<span class="tit_info">지니님이 설정한 조건에 맞는 매물입니다.</span>
+			</div>
+			<div class="crd_cont crd_myfilter">
+				<div class="tag_area">
+					<ul class="lst_tag">
+					<li><span class="tag">#아파트</span></li>
+					<li><span class="tag">#오피스텔</span></li>
+					<li><span class="tag">#매매가 50,000</span></li>
+					<li><span class="tag">#면적 85m<sup>2</sup></span></li>
+					<li><span class="tag">#면적 85m<sup>2</sup></span></li>
+					<li><span class="tag">#면적 85m<sup>2</sup></span></li>
+					</ul>
+				</div>
+				<div class="lst_sale_wrap lst_myfilter_wrap">
+<!--					li width:141px * li 갯수 - 맨처음 li 여백 8px -->
+					<ul class="lst_sale" style="width:840px">
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/g_plan.png"></div>
+							<div class="txt_area">
+								<span class="location">삼평동</span>
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="price_area">
+									<span class="sp_home sale_label type4">단기</span>
+									<span class="price">2,000<span class="bar">/</span>44</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/g_plan.png"></div>
+							<div class="txt_area">
+								<span class="location">삼평동</span>
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="price_area">
+									<span class="sp_home sale_label type3">매매</span>
+									<span class="price">2,000<span class="bar">/</span>44</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/g_plan.png"></div>
+							<div class="txt_area">
+								<span class="location">삼평동</span>
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="price_area">
+									<span class="sp_home sale_label type3">매매</span>
+									<span class="price">2,000<span class="bar">/</span>44</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/g_plan.png"></div>
+							<div class="txt_area">
+								<span class="location">삼평동</span>
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="price_area">
+									<span class="sp_home sale_label type3">매매</span>
+									<span class="price">2,000<span class="bar">/</span>44</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/g_plan.png"></div>
+							<div class="txt_area">
+								<span class="location">삼평동</span>
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="price_area">
+									<span class="sp_home sale_label type3">매매</span>
+									<span class="price">2,000<span class="bar">/</span>44</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/g_plan.png"></div>
+							<div class="txt_area">
+								<span class="location">삼평동</span>
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="price_area">
+									<span class="sp_home sale_label type3">매매</span>
+									<span class="price">2,000<span class="bar">/</span>44</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!-- //crd_box-->
+
+		<div class="land_banner_sec v2">
+			<a href="#">
+				<strong class="hide">네이버 원룸 나 혼자 잘~산다!</strong>
+				<span class="hide">고시원 정보 OPEN</span>
+			</a>
+		</div>
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>부동산 랭킹</h2>
+			</div>
+			<div class="crd_cont">
+				<div class="tag_area">
+					<ul class="lst_tag">
+					<li><span class="tag">#20대</span></li>
+					<li><span class="tag">#남성이</span></li>
+					<li><span class="tag">#신림동</span></li>
+					</ul>
+					<span class="txt">에서 많이찾아본 매물입니다.</span>
+				</div>
+				<ul class="lst_rank_thumb">
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@thumb2.jpg" alt=""></span>
+						<span class="txt_area">삼성 힐스테이트 1단지</span>
+					</a>
+				</li>
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@thumb.jpg" alt=""></span>
+						<span class="txt_area">송파 파인타운</span>
+					</a>
+				</li>
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@thumb.jpg" alt=""></span>
+						<span class="txt_area">코오롱하늘채</span>
+					</a>
+				</li>
+				<li class="no_img">
+					<a href="#">
+						<span class="thumb"></span>
+						<span class="txt_area">송파 파인타운 7단지 705동</span>
+					</a>
+				</li>
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@thumb.jpg" alt=""></span>
+						<span class="txt_area">대치삼성</span>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area no-border">
+				<h2>나도 카페 주인이 되어볼까</h2>
+			</div>
+			<div class="crd_cont">
+				<ul class="lst_big_thumb">
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@list_img.jpg" alt=""></span>
+						<span class="txt_area">카페숍 차릴려면 가게세는 얼마나?</span>
+					</a>
+				</li>
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@list_img.jpg" alt=""></span>
+						<span class="txt_area">뜨는 동네의 역설 젠트리피케이션이란?</span>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area no-border">
+				<h2>내 보증금은 내가 지킨다</h2>
+			</div>
+			<div class="crd_cont">
+				<ul class="lst_small_thumb">
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@list_img.jpg" alt=""></span>
+						<span class="txt_area"><em>매물</em> 전입신고 할 수 있는 오피스텔 찾으신다면?</span>
+					</a>
+				</li>
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@list_img.jpg" alt=""></span>
+						<span class="txt_area"><em>꼭 체크!</em> 전입신고하고 확정일자 받는 법</span>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>궁금했지만 몰랐던 아파트의 역사</h2>
+			</div>
+			<div class="crd_cont">
+				<ul class="lst_thumb_wrap">
+				<li>
+					<a href="#">
+						<div class="thumb">
+							<img src="im/@thumb4.jpg" alt="섬네일">
+						</div>
+						<div class="txt_area">
+							<div class="txt_align">
+								<span><em>대한민국 국민평수 33평</em> 109m2 아파트의 과거와 오늘</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="thumb">
+							<img src="im/@thumb5.jpg" alt="섬네일">
+						</div>
+						<div class="txt_area">
+							<div class="txt_align">
+								<span><em>아파트 이름 변천사</em> 트리마제, 텐즈힐 이름이 왜 저래?트리마제, 텐즈힐 이름이 왜 저래?</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="thumb">
+							<img src="im/@thumb6.jpg" alt="섬네일">
+						</div>
+						<div class="txt_area">
+							<div class="txt_align">
+								<span><em>다 똑같은 아파트 구조</em> 거실,부엌은 한공간에 언제부터? 거실,부엌은 한공간에 언제부터?</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>수도권 빌라 분양 정보</h2>
+			</div>
+			<div class="crd_cont">
+				<div class="lst_sale_wrap lst_point_wrap">
+<!--				li width:133px * li 갯수 - 맨처음 li 여백 8px -->
+					<ul class="lst_sale" style="width:795px">
+					<li>
+						<a href="#">
+							<div class="thumb no_thumb"><span>이미지 없음</span></div>
+							<div class="txt_area">
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="house_location_area">
+<!--									<span class="sp_home location_label">위치</span>-->
+									<span class="location_desc">경기 성남분당구</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/@list_img.jpg"></div>
+							<div class="txt_area">
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="house_location_area">
+<!--									<span class="sp_home location_label">위치</span>-->
+									<span class="location_desc">경기 성남분당구</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/@list_img.jpg"></div>
+							<div class="txt_area">
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="house_location_area">
+<!--									<span class="sp_home location_label">위치</span>-->
+									<span class="location_desc">경기 성남분당구</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/@list_img.jpg"></div>
+							<div class="txt_area">
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="house_location_area">
+<!--									<span class="sp_home location_label">위치</span>-->
+									<span class="location_desc">경기 성남분당구</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/@list_img.jpg"></div>
+							<div class="txt_area">
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="house_location_area">
+<!--									<span class="sp_home location_label">위치</span>-->
+									<span class="location_desc">경기 성남분당구</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb"><img src="im/@list_img.jpg"></div>
+							<div class="txt_area">
+								<span class="place_name">선수마을3단지 선수빌리지</span>
+								<em class="house_location_area">
+<!--									<span class="sp_home location_label">위치</span>-->
+									<span class="location_desc">경기 성남분당구</span>
+								</em>
+							</div>
+						</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="crd_cont">
+				<div class="lst_txt_wrap lst_add_line">
+					<ul>
+					<li><a href="#"><em>부자들의 집</em> '상위0.1%'가 사는 동네</a></li>
+					<li><a href="#"><em>서울 명동 임대료</em> 전세계서 8번째로 높다</a></li>
+					<li><a href="#"><em>투자포커스</em> 내 집 마련 점검 항목</a></li>
+					<li><a href="#"><em>토지 투자</em> 진짜'좋은 땅'은 전화로 권하지 않는다</a></li>
+					<li><a href="#"><em>전셋집 구하기</em> 하늘의 별따기라지만 이정도까지 해야하나</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>재건축 단지에 투자하는 방법</h2>
+			</div>
+			<div class="crd_cont">
+				<div class="lst_txt_wrap">
+					<ul>
+					<li><a href="#"><em>시황</em> 수서 KTX역세권,7억원'껑충'</a></li>
+					<li><a href="#"><em>일반분양</em> 정부만 예상못한 신혼부부 행복주택 미달사태</a></li>
+					<li><a href="#"><em>노하우</em> 30대 이과장 "전세 살며 오피스텔 월세 받아요"</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area no-border">
+				<!--h2>평생직장은 없다! 평생현역으로 사는법</h2-->
+			</div>
+			<!-- 타이틀 없을경우 none_tit 클래스 추가 -->
+			<div class="crd_cont none_tit">
+				<ul class="lst_small_thumb">
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@list_img.jpg" alt=""></span>
+						<span class="keyword_txt_area"><em>잘나가는 11개의 직업들</em>10년후엔 어떻게 될까?</span>
+					</a>
+				</li>
+				<li class="img">
+					<a href="#">
+						<span class="thumb"><img src="im/@list_img.jpg" alt=""></span>
+						<span class="keyword_txt_area"><em>회사를 떠날수밖에 없다면</em>나 주식회사의 CEO가 되자</span>
+					</a>
+				</li>
+				</ul>
+				<div class="lst_txt_wrap">
+					<ul>
+					<li><a href="#"><em>시황</em> 수서 KTX역세권,7억원'껑충'</a></li>
+					<li><a href="#"><em>일반분양</em> 정부만 예상못한 신혼부부 행복주택 미달사태</a></li>
+					<li><a href="#"><em>노하우</em> 30대 이과장 "전세 살며 오피스텔 월세 받아요"</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area no-border">
+				<h2>분양정보 <span class="sp_home location_ico"></span><span class="location_place">서울특별시</span></h2>
+			</div>
+			<div class="crd_cont">
+				<div class="sale_area">
+					<ul>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="im/@thumb7.jpg" alt="섬네일">
+							</div>
+							<div class="txt_area">
+								<strong class="location">하왕십리동</strong>
+								<span class="place">왕십리자이 2차</span>
+								<span class="price">941,200~756,600<span>만원</span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="im/@thumb8.jpg" alt="섬네일">
+							</div>
+							<div class="txt_area">
+								<strong class="location">월계동</strong>
+								<span class="place">녹천역 두산위브</span>
+								<span class="price">16,099~68,429<span>만원</span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="im/@thumb9.jpg" alt="섬네일">
+							</div>
+							<div class="txt_area">
+								<strong class="location">공덕동</strong>
+								<span class="place">공덕더샾</span>
+								<span class="price">30.000~43,200<span>만원</span></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="im/@thumb10.jpg" alt="섬네일">
+							</div>
+							<div class="txt_area">
+								<strong class="location">상계동</strong>
+								<span class="place">상계동 공공분양 주택</span>
+								<span class="price">27,000~68,400<span>만원</span></span>
+							</div>
+						</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+			<a href="#" class="sp_home btn_more">분양정보 더보기</a>
+		</div>
+		<!-- //crd_box-->
+
+		<!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>주간 랭킹 뉴스</h2>
+			</div>
+			<div class="crd_cont">
+				<div class="lst_rank_txt_wrap">
+					<ol>
+					<li><em>1</em><a href="#">수서 KTX역세권,7억원'껑충'</a></li>
+					<li><em>2</em><a href="#"> 정부만 예상못한 신혼부부 행복주택 미달사태</a></li>
+					<li><em>3</em><a href="#">30대 이과장 "전세 살며 오피스텔 월세 받아요"</a></li>
+					<li><em>4</em><a href="#">서울 아파트 전셋값, 2분기에도 3% 이상 올라</a></li>
+					<li><em>5</em><a href="#">비수기 맞아? 수도권 아파트 때아닌 '여름 전세난</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- //crd_box-->
+
+	</div>
+	<!-- //cont -->
+
+	<!-- footer -->
+	<footer role="contentinfo" class="footer">
+		<p id="u_ftlkw" class="u_ftlkw">
+			<a id="loginLink" href="#" class="u_ftlk" >로그인</a>
+			<a href="#" class="u_ftlk">PC버전</a>
+			<a href="#" class="u_ftlk">전체서비스</a>
+			<a href="#" class="u_ftlk">원룸 홈</a>
+		</p>
+		<p class="u_cr">
+			<span class="u_cri"><a href="#" class="u_cra">부동산도움말</a></span>
+			<span class="u_cri u_cri_v1"><a href="#" class="u_cra">문제신고</a></span>
+			<span class="u_cri u_cri_v2">&copy; <a href="#"  class="u_cra u_cra_v1">NAVER Corp.</a></span>
+		</p>
+		<div class="u_sca">
+		<a href="#" class="u_sc"><span class="u_ics"></span><em>네이버앱의</em><strong>부동산</strong> 홈화면에 바로가기 추가<span class="u_ica"></span></a>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+
+<div class="pop_content" style="display:none;">
+	<div class="pop_open_wrap">
+		<h2 class="hide">네이버부동산 홈과 매물서비스가 새로워졌습니다.</h2>
+		<button type="button">닫기</button>
+	</div>
+</div>
+
+<div class="pop_content" style="display:none;">
+	<div class="pop_new_wrap ios">
+		<h2 class="hide">새로워진 네이버 부동산앱을 지금 만나보세요</h2>
+		<button type="button" class="btn_detail">자세히보기</button>
+		<button type="button" class="btn_ios">App Store</button>
+		<button type="button" class="btn_clse">닫기</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".crd_tab_menu li").click(function(e){
+			e.preventDefault();
+			$(".crd_tab_menu li").removeClass("on");
+			$(this).addClass("on");
+			$(".cont_tab_box").hide();
+			var tabId = $(this).attr("id");
+			var contId = tabId.replace("_tab","_cont");
+			$("#"+contId).show();
+		});
+	});
+</script>
+</body>
+</html>

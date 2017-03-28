@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>의뢰리스트2 :: 부동산 매물관리센터</title>
+<link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css">
+</head>
+<body>
+<div id="wrap">
+
+	<!-- container -->
+	<div id="container" class="sub">
+		<div id="content" class="content">
+			<a href="#" class="btn_recommview">매물 추천방법 보기</a>
+			<ul class="tabmenu3">
+			<!-- [D]  활성화된 탭에 class="on" 추가 -->
+			<li><a href="#">신규의뢰 <span>(2건)</span></a></li>
+			<li class="on"><a href="#">진행중 의뢰 <span>(1건)</span></a></li>
+			<li><a href="#">종료된 의뢰</a></li>
+			</ul>
+			<div class="daysrch_area">
+				<ul>
+				<li class="w"><h3 class="t_daysrch">일자별조회</h3></li>
+				<li class="w2">
+					<select title="추천시작일" class="sltbox" style="width:109px">
+						<option>추천시작일</option>
+						<option>추천종료일</option>
+					</select>
+				</li>
+				<li class="w3">
+					<span class="bar"><em>|</em></span>
+					<span class="cal_box">
+						<input type="text" title="시작일자">
+						<a href="#" class="cal">달력</a>
+					</span>
+					<em class="dash">-</em>
+					<span class="cal_box">
+						<input type="text" title="종료일자">
+						<a href="#" class="cal">달력</a>
+					</span>
+				</li>
+				<li><a href="#" class="btn_srch">조회</a></li>
+				</ul>
+			</div>
+			<div class="t_listcont">
+				<ul class="t_cont">
+				<li>· 아래의 목록에서 의뢰건을 선택하시면, 의뢰상세 내용 및 해당 의뢰에 대해 추천하신 맞춤매물 정보를 확인하실 수 있습니다.</li>
+				<li>· 의뢰 수락을 원하지 않으실 경우, <strong>계정관리 &gt;정보관리&gt;회원정보관리</strong> 페이지의 맞춤매물 의뢰 항목에서 <strong>수락하지 않음</strong>을 선택하시면 되며, 다시 맞춤매물 의뢰 수락을 원하실 경우에는 수락을 선택하시면 됩니다.</li>
+				<li>· 의뢰에 대한 매물 추천이 일정 기간 없어서 <strong>의뢰인이 조건을 수정한 경우,</strong> 수정된 조건에 맞게 의뢰-중개업소 재매칭이 일어나기 때문에 <strong>신규의뢰 탭에 노출되던 의뢰가 삭제될 수 있습니다.</strong></li>
+				</ul>
+			</div>
+			<table cellspacing="0" border="1" summary="의뢰리스트" class="table_ad">
+			<caption>의뢰리스트</caption>
+			<colgroup>
+			<col width="148"><col width="116"><col width="82"><col width="112"><col width=""><col width="90"><col width="140"><col width="55"><col width="110">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col" colspan="5"><span class="w">의뢰내용</span></th>
+			<th scope="col"><span class="w2">의뢰등록번호</span></th>
+			<!-- [D] 클릭시 화살표이미지 반대로 하기위해 w3 클래스가 w3_up으로 변경 -->
+			<th scope="col"><a href="#" class="w3_up">추천기한</a></th>
+			<!-- [D] 클릭시 화살표이미지 반대로 하기위해 w4 클래스가 w4_up으로 변경 -->
+			<th scope="col" class="al_l2"><a href="#" class="w4">잔여일</a></th>
+			<th scope="col"><span class="w5">의뢰확인여부</span></th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- [D] 링크가 라인전체 링크라고 합니다. tr에 링크걸어주시기 바랍니다 -->
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">12-03-05 11:30</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<!-- [D] 선택된 라인에서는 tr에 class="selected"삽입 -->
+			<tr class="selected">
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<!-- [D] 선택된 라인에서는 tr에 class="selected"삽입 -->
+			<tr class="selected">
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<!-- [D] 선택된 라인에서는 tr에 class="selected"삽입 -->
+			<tr class="selected">
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			<tr>
+			<td class="kind">아파트,오피스텔</td>
+			<td>매매,전세,월세</td>
+			<td>정자동</td>
+			<td class="area">86㎡~100㎡</td>
+			<td class="price">35,000~52,000</td>
+			<td class="num">1234567890</td>
+			<td class="period">11.12.01~11.12.08</td>
+			<td class="date"><strong>6</strong>일</td>
+			<td class="confirm">확인</td>
+			</tr>
+			</tbody>
+			</table>
+
+			<!-- pagenate -->
+			<div class="paginate2">
+				<a href="#" class="pre">이전페이지</a> <strong>1</strong> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a> <a href="#" class="next">다음페이지</a>
+			</div>
+			<!-- //pagenate -->
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<? include("00_footer_incl.html"); ?>
+	<!-- //footer -->
+</div>
+</body>
+</html>

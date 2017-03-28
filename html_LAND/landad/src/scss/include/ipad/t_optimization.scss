@@ -1,0 +1,48 @@
+@import "../../common/_variable";
+@import "../../common/_mixin";
+@import "../../common/_common";
+
+/* NTS UID Team 2 CSM 110622 */
+
+/* 기본 설정(공통) */
+body{-webkit-text-size-adjust:none}
+strong,b{-webkit-text-stroke-width:.02em}
+select,input[type=checkbox]{border-radius:0}
+input[type=image],input[type=text],input[type=password]{border-radius:0;-webkit-appearance:none}
+input[type=button]{padding:3px 5px;border-radius:2px;background-color:#f9fafa;background:-webkit-gradient(linear,0 0,0 100%,from(#fdfdfd),to(#f9fafa));-webkit-appearance:none}
+textarea{border-radius:0;-webkit-appearance:none}
+
+/* 홈 */
+.t_home #content .main_component .emphasis dt{padding-top:0;padding-bottom:4px}
+.t_home #content .main_component .emphasis dt a{-webkit-text-stroke-width:.02em}
+
+/* 매물 */
+.t_article .sale_info .current_6weeks {border-collapse:collapse}
+.t_article .land_guide .lst_guide dt a strong{height:26px !important;margin-bottom:2px !important;padding-top:15px !important}
+
+.section_calendar .calendar table{border-collapse:collapse}
+.tbl_sale td.num ul li img{margin-right:3px;vertical-align:top}
+.section_info .sale_search{border:.1em solid #E3E3E3 !important;border-bottom-color:#D5D5D5}
+.lst_help {height:84px}
+.help_area .tbl_sale {border-collapse:collapse}
+.help_area .tbl_help .input_txt {border-width:0.1em}
+.aside .focus_area h4 a {-webkit-text-stroke-width:.02em}
+
+/* 뉴스 */
+.t_news dl dd span.set_date {border:0.1em solid #D8D8D8 !important}
+.t_news .view_type a {height:12px}
+
+/* 커뮤니티 */
+.t_community .spot .input_q .input_txt .btn{border-radius:0}
+.t_community .land_pro5 .join .btn a,.land_pro5 .join2 .btn a{height:35px}
+.t_community .land_pro5 .join .dsc {height:29px;background-position:0 -40px}
+.t_community .land_pro5 .join2 .dsc {height:29px;background-position:0 -110px}
+.t_community .page_lank span {padding-top:6px}
+
+/* 매물관리센터 */
+.t_landad .member_type p.info span {margin:0 0 0 -25px}
+
+/* iframe qboard */
+.paginate a.next {margin-left:1px}
+/* [D] qboard.css(pagenate) 에도 동일하게 적용(PC에서도 동일하게 적용 되도록) */
+.paginate a.frst, .paginate strong.frst {border-left:none}

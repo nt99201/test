@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>추천맞춤매물정보비교_4건이하 :: 부동산 마이페이지</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_mypage_popup.css">
+</head>
+
+<!-- [D] Document Size : 637*838 -->
+<body>
+<div id="pop_wrap" class="w637">
+	<!-- header -->
+	<div id="pop_header">
+		<h1>추천 맞춤매물 정보 비교하기</h1>
+	</div>
+	<!-- //header -->
+
+	<div id="pop_container">
+		<div id="pop_content">
+			<p class="t_cont">
+				추천 맞춤매물 정보를 <strong>최대 4건</strong>까지 선택하여 비교해보실 수 있습니다.&nbsp;
+				<!-- [D] 매물추가클릭시 화살표 아이콘 반대로 바뀜 span class="up" -->
+				<a href="#">비교할 매물추가하기 <span class="down"></span></a>
+			</p>
+			<!-- [D] 비교할매물추가클릭시 뜨는 레이어 -->
+			<div class="ly_compare">
+				<div class="list_head">
+					소재지 <strong>&#39;강남구 신사동&#39;,&#39;강남구 압구정동&#39;</strong>&nbsp;&nbsp;&nbsp;전체 <strong class="total">23</strong>건 (미확인 <strong>7</strong>건, 관심 <strong>10</strong>건)
+				</div>
+
+				<!-- QP예외코드 -->
+				<!-- [D] 헤더 테이블 -->
+				<table cellspacing="0" border="1" summary="추천정보 리스트 헤드" class="table_v2 table_v2_head">
+				<caption>추천정보 리스트 헤드</caption>
+				<colgroup>
+				<col width="32"><col width="76"><col width="152"><col width="78"><col width="72"><col width="44"><col width="46"><col width="60">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">추가</th>
+				<th scope="col">거래 / 매물종류</th>
+				<!-- [D] 클릭시 리스트정렬되면서 화살표위로바뀜 a class="up" -->
+				<th scope="col"><a href="#" class="down">매물명</a></th>
+				<th scope="col"><a href="#" class="up">면적(㎡)</a></th>
+				<th scope="col"><a href="#" class="down">매물가 (만원)</a></th>
+				<th scope="col">동</th>
+				<th scope="col">층</th>
+				<th scope="col"><a href="#" class="down">추천일</a></th>
+				</tr>
+				</thead>
+				<tbody><tr><td colspan="8"></td></tr></tbody>
+				</table>
+
+				<!-- [D] 바디 테이블 -->
+				<div class="overflow_compare">
+					<table cellspacing="0" border="1" summary="추천정보 리스트 바디" class="table_v2 table_v2_body">
+					<caption>추천정보 리스트 바디</caption>
+					<colgroup>
+					<col width="32"><col width="76"><col width="152"><col width="78"><col width="72"><col width="44"><col width="46"><col width="60">
+					</colgroup>
+					<tbody>
+					<!-- [D] 홀수 라인에서는 tr에 배경색을 위해 class="odd" 삽입 -->
+					<tr class="odd">
+					<td rowspan="2"><label for="chk" class="blind">체크</label><input type="checkbox" name="" id="chk" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>105B</strong>/83</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">고/5</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<!-- [D] 점선 줄도 같은 배경 라인이라  class="dotted odd" -->
+					<tr class="dotted odd">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l">깨끗함중간층</td>
+					</tr>
+
+					<tr>
+					<td rowspan="2"><label for="chk2" class="blind">체크</label><input type="checkbox" name="" id="chk2" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>154</strong>/119</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">-/24</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+					</tr>
+
+					<tr class="odd">
+					<td rowspan="2"><label for="chk3" class="blind">체크</label><input type="checkbox" name="" id="chk3" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>105B</strong>/83</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">고/5</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted odd">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l">깨끗함중간층</td>
+					</tr>
+
+					<tr>
+					<td rowspan="2"><label for="chk4" class="blind">체크</label><input type="checkbox" name="" id="chk4" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>154</strong>/119</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">-/24</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+					</tr>
+
+					<tr class="odd">
+					<td rowspan="2"><label for="chk5" class="blind">체크</label><input type="checkbox" name="" id="chk5" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>105B</strong>/83</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">고/5</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted odd">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l">깨끗함중간층</td>
+					</tr>
+
+					<tr>
+					<td rowspan="2"><label for="chk6" class="blind">체크</label><input type="checkbox" name="" id="chk6" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>154</strong>/119</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">-/24</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+					</tr>
+
+					<tr class="odd">
+					<td rowspan="2"><label for="chk7" class="blind">체크</label><input type="checkbox" name="" id="chk7" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>105B</strong>/83</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">고/5</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted odd">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l">깨끗함중간층</td>
+					</tr>
+
+					<tr>
+					<td rowspan="2"><label for="chk8" class="blind">체크</label><input type="checkbox" name="" id="chk8" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">대치아이파크(도곡2차..</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>154</strong>/119</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">-/24</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l"><span class="ic_pic">사진</span> 풀 옵 션 | 4 0 형 월세 | 5 9 5 - 8 8 8 0</td>
+					</tr>
+
+					<tr class="odd">
+					<td rowspan="2"><label for="chk9" class="blind">체크</label><input type="checkbox" name="" id="chk9" class="input_chk"></td>
+					<td rowspan="2">매매<br>아파트</td>
+					<td class="al_l"><a href="#" class="t2">개포우성7차</a> <a href="#" class="ic_blankwindow">새창열기</a></td>
+					<td class="al_l"><strong>105B</strong>/83</td>
+					<td><strong>79,000</strong></td>
+					<td class="t">104</td>
+					<td class="t">고/5</td>
+					<td class="t">12.01.08</td>
+					</tr>
+					<tr class="dotted odd">
+					<td class="al_l"><span class="t_mark"><em>확인매물</em>12.02.13</span></td>
+					<td colspan="5" class="al_l">깨끗함중간층</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<!-- //QP예외코드 -->
+				<a href="#" class="btn_lyclose">닫기</a>
+			</div>
+
+			<table cellspacing="0" border="1" summary="추천 맞춤매물 정보 비교하기" class="pop_table">
+			<caption>추천 맞춤매물 정보 비교하기</caption>
+			<colgroup>
+			<col width="19%"><col width="27%"><col width="27%"><col width="27%">
+			</colgroup>
+			<tbody>
+			<!-- [D] 각 tr의 마지막 td는 last클래스 삽입 -->
+			<tr class="bg">
+			<th scope="row">거래,매물종류</th>
+			<td>매매,아파트</td>
+			<td>매매,아파트</td>
+			<td class="last">매매,아파트</td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">매물명</th>
+			<td>삼성 래미안 <span class="ic_star">관심</span> <a href="#" class="btn_delete">삭제</a></td>
+			<td>삼성 래미안 <span class="ic_star2">관심</span> <a href="#" class="btn_delete">삭제</a></td>
+			<td class="last">삼성 래미안 <span class="ic_star">관심</span> <a href="#" class="btn_delete">삭제</a></td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">지역</th>
+			<td>경기도 고양시 일산동구<br>정발산동</td>
+			<td>경기도 고양시 일산동구<br>정발산동</td>
+			<td class="last">경기도 고양시 일산동구<br>정발산동</td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">가격(만원)</th>
+			<td>3억~5억</td>
+			<td>3억~5억</td>
+			<td class="last">3억~5억</td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">면적(㎡)</th>
+			<td>65㎡~100㎡</td>
+			<td>65㎡~100㎡</td>
+			<td class="last">65㎡~100㎡</td>
+			</tr>
+			<tr>
+			<th scope="row">총세대 수</th>
+			<td>1234세대</td>
+			<td>1234세대</td>
+			<td class="last">1234세대</td>
+			</tr>
+			<tr>
+			<th scope="row">준공년도</th>
+			<td>2002.9.10</td>
+			<td>2002.9.10</td>
+			<td class="last">2002.9.10</td>
+			</tr>
+			<tr>
+			<th scope="row">층/구조</th>
+			<td>3층, 방3개, 욕실2개</td>
+			<td>3층, 방3개, 욕실2개</td>
+			<td class="last">3층, 방3개, 욕실2개</td>
+			</tr>
+			<tr>
+			<th scope="row">기전세/월세</th>
+			<td>- 만원 / - 만원</td>
+			<td>- 만원 / - 만원</td>
+			<td class="last">- 만원 / - 만원</td>
+			</tr>
+			<tr>
+			<th scope="row">융자금</th>
+			<td>- 만원</td>
+			<td>- 만원</td>
+			<td class="last">- 만원</td>
+			</tr>
+			<tr>
+			<th scope="row">추천매물특징</th>
+			<td class="nopd">
+				<div class="overflow h">아이들의 소음으로인해 저층부로 원함.</div>
+			</td>
+			<td class="nopd">
+				<div class="overflow h">아이들의 소음으로인해 저층부로 원함.</div>
+			</td>
+			<td class="nopd last">
+				<div class="overflow h">아이들의 소음으로인해 저층부로 원함.</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row">추천사유</th>
+			<td class="nopd">
+				<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.<br>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.</div>
+			</td>
+			<td class="nopd">
+				<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.<br>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.</div>
+			</td>
+			<td class="nopd  last">
+				<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.<br>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.</div>
+			</td>
+			</tr>
+			<!-- [D] 마지막줄엔 tr에 noline 추가 -->
+			<tr class="noline">
+			<th scope="row">평면도</th>
+			<td class="center"><img src="img/@pic3.gif" alt=""></td>
+			<td class="center"><img src="img/@pic3.gif" alt=""></td>
+			<td class="center last"><img src="img/@pic3.gif" alt=""></td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="pop_footer">
+		<a href="#" class="btn_close">닫기</a>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

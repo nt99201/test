@@ -1,0 +1,820 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+		<!-- og:tag -->
+		<meta property="og:title" content="네이버 부동산" />
+		<meta property="og:type" content="article" />
+		<meta property="og:description" content="내 집 마련의 시작, 네이버 부동산" />
+		<meta property="og:image" content="http://static.land.naver.net/static/service/20150804/lnb/ico_og_tag_2.png"/>
+		<meta property="og:image:width" content="200" />
+		<meta property="og:image:height" content="200" />
+		<meta property="og:article:author" content="네이버 부동산" />
+		<meta property="og:url" content="http://land.naver.com/index.nhn" />
+		<meta property="og:article:author:url" content="http://land.naver.com/" />
+		<!-- //og:tag -->
+		<title>네이버 부동산</title>
+		<link rel="stylesheet" href="css/land_home.css" type="text/css">
+		<script type="text/javascript">	document.domain = 'naver.com';</script>
+	</head>
+	<body class="">
+		<div id="wrap">
+			<div id="u_skip">
+				<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+				<a href="#container"><span>하위 메뉴로 바로가기</span></a>
+				<a href="#content"><span>본문으로 바로가기</span></a>
+			</div>
+			<!-- header -->
+			<script src="http://static.land.naver.net/static/service/js/201508042152/lib/lcslog.js" type="text/javascript"></script>
+			<script type="text/javascript">lcs_do();</script>
+			<style type="text/css">
+				#gnb{float:right;right:5px;top:-3px;}
+			</style>
+			<div id="header">
+				<div id="gnb">
+					<script type="text/javascript" charset="utf-8" src="http://static.gn.naver.net/template/gnb_utf8.nhn?20150811"></script>
+				</div>
+				<div id="sta_wrap" class="NE=a:STA">
+					<h1>
+						<a href="http://www.naver.com/" class="logo NPI=a:naverlogo">NAVER</a>
+						<a href="http://land.naver.com/" class="land NPI=a:land">부동산</a>
+					</h1>
+					<fieldset>
+						<legend>검색</legend>
+						<div class="sta_search_box">
+							<div class="sta_search_box_sub">
+								<!-- [D] 입력위해 focus 가지면 sta_text_ovr 추가 -->
+								<input type="hidden" name="where" value="nexearch" />
+								<input type="hidden" name="sm" value="top_hty" />
+								<input type="hidden" name="fbm" value="1" />
+								<input type="hidden" name="query" id="serviceInternalSearchQuery" value="" />
+								<input type="hidden" name="internalSearchURL" id="internalSearchURL" value="http://land.naver.com" />
+								<input type="text" title="검색" id="queryInputHeader" value='' query='' onKeyUp="serviceInternalSearchEnterCheck(event,0);" accesskey="s" searchAreaClicked="false" searchType="Promotion" class="sta_search_text" onFocus="searchInputBoxFocus(this);">
+							</div>
+							<a href="#" class="btn_search NPI=a:search" onclick="serviceInternalSearch();return false;">검색</a>
+							<a href="#" class="btn_search2 NPI=a:nx" onclick="serviceInternalTotalSearch();return false;">통합검색</a>
+						</div>
+					</fieldset>
+				</div>
+				<div id="lnb" class="lnb_menu">
+					<ul class="menu NE=a:LNB">
+						<li class="m1 m1_on on">
+							<a href="/" class="NPI=a:home">부동산홈</a>
+						</li>
+						<li class="m2">
+							<a href="/article/" class="NPI=a:article">매물</a>
+						</li>
+						<li class="m3">
+							<a href="/isale/" class="NPI=a:sale">분양</a>
+						</li>
+						<li class="m4">
+							<a href="/news/" class="NPI=a:news">뉴스</a>
+						</li>
+						<li class="m5">
+							<a href="/community/" class="NPI=a:community">커뮤니티</a>
+						</li>
+						<li class="m6">
+							<a href="/auction/" class="NPI=a:auction">경매</a>
+						</li>
+						<li class="m7">
+							<a href="/mypage/interestArticle.nhn" class="NPI=a:mypage">MY페이지</a>
+						</li>
+					</ul>
+					<ul class="etc NE=a:LNB">
+						<li class="e1"><a href="http://finance.naver.com/" target="_blank" class="NPI=a:finance">금융</a></li>
+						<li class="e2"><a href="http://moneybook.naver.com/" target="_blank" class="NPI=a:moneybook">가계부</a></li>
+						<li class="e3"><a href="http://landad.naver.com/" target="_blank" class="NPI=a:landad">매물관리센터</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //header -->
+			<div id="container">
+				<script>nsc="land.home";</script>
+				<div class="spot_wrap">
+					<div class="spot">
+						<div class="map">
+							<div class="map_top NE=a:pf1">
+								<div id="top_rlet_tp">
+									<ul class="cate">
+										<li class="m1"><a href="javascript:void(0);" class="selected NPI=a:apt" tpcd="A01" btnid="m1">아파트</a></li>
+										<li class="m2"><a href="javascript:void(0);" class=" NPI=a:oft" tpcd="A02" btnid="m2">오피스텔</a></li>
+										<li class="m3"><a href="javascript:void(0);" class=" NPI=a:bun" tpcd="B01" btnid="m3">분양권</a></li>
+										<li class="m4"><a href="javascript:void(0);" class=" NPI=a:hos" tpcd="C03" btnid="m4">주택</a></li>
+										<li class="m5"><a href="javascript:void(0);" class=" NPI=a:lnd" tpcd="E03" btnid="m5">토지</a></li>
+										<li class="m6"><a href="javascript:void(0);" class=" NPI=a:onr" tpcd="C01" btnid="m6">원룸</a></li>
+										<li class="m7"><a href="javascript:void(0);" class=" NPI=a:shp" tpcd="D02" btnid="m7">상가</a></li>
+										<li class="m8"><a href="javascript:void(0);" class=" NPI=a:ofc" tpcd="D01" btnid="m8">사무실</a></li>
+										<li class="m9"><a href="javascript:void(0);" class=" NPI=a:fct" tpcd="E02" btnid="m9">공장</a></li>
+										<li class="m10"><a href="javascript:void(0);" class=" NPI=a:rdv" tpcd="F01" btnid="m10">재개발</a></li>
+										<li class="m11"><a href="javascript:void(0);" class=" NPI=a:etc" tpcd="D03" btnid="m11">건물</a></li>
+									</ul>
+								</div>
+								<div id="top_trad_tp">
+									<ul class="cate">
+										<li class="m12"><a href="javascript:void(0);" class=" NPI=a:all" tpcd="all" btnid="m12">전체</a></li>
+										<li class="m13"><a href="javascript:void(0);" class="selected NPI=a:sale" tpcd="A1" btnid="m13">매매</a></li>
+										<li class="m14"><a href="javascript:void(0);" class=" NPI=a:rent" tpcd="B1" btnid="m14">전세</a></li>
+										<li class="m15"><a href="javascript:void(0);" class=" NPI=a:monthly" tpcd="B2" btnid="m15">월세</a></li>
+									</ul>
+								</div>
+								<!-- [D] 리스트보기 클래스 : list, 지도로 보기 클래스 : map -->
+								<p class="btn NE=a:pf1"><a href="javascript:void(0);" class="list NPI=a:listview"><span>리스트로 보기</span></a></p>
+							</div>
+							<!-- 맵 출력 영역-->
+							<div class="map_view" id="map_view"></div>
+							<!-- //맵 출력 영역-->
+							<div class="location">
+								<div class="loc_view">
+									<div id="loc_view1" class="sel w ">
+										<select class="selectbox-source" style="position:absolute; top : -1000px; left:-1000px;" title="시/도" tabIndex="-1">
+											<option value="1100000000" xcrdn="126.977872" ycrdn="37.566427" selected>서울시</option>
+											<option value="4100000000" xcrdn="127.008689" ycrdn="37.274939" >경기도</option>
+											<option value="2800000000" xcrdn="126.705151" ycrdn="37.456054" >인천시</option>
+											<option value="2600000000" xcrdn="129.075413" ycrdn="35.180143" >부산시</option>
+											<option value="3000000000" xcrdn="127.384953" ycrdn="36.350465" >대전시</option>
+											<option value="2700000000" xcrdn="128.601763" ycrdn="35.87139" >대구시</option>
+											<option value="3100000000" xcrdn="129.311375" ycrdn="35.5386" >울산시</option>
+											<option value="3600000000" xcrdn="127.292375" ycrdn="36.592907" >세종시</option>
+											<option value="2900000000" xcrdn="126.851338" ycrdn="35.160032" >광주시</option>
+											<option value="4200000000" xcrdn="127.72975" ycrdn="37.885399" >강원도</option>
+											<option value="4300000000" xcrdn="127.491238" ycrdn="36.636149" >충청북도</option>
+											<option value="4400000000" xcrdn="127.420963" ycrdn="36.326717" >충청남도</option>
+											<option value="4700000000" xcrdn="128.60065" ycrdn="35.892474" >경상북도</option>
+											<option value="4800000000" xcrdn="128.6924" ycrdn="35.238343" >경상남도</option>
+											<option value="4500000000" xcrdn="127.108875" ycrdn="35.820433" >전라북도</option>
+											<option value="4600000000" xcrdn="126.462443" ycrdn="34.816358" >전라남도</option>
+											<option value="5000000000" xcrdn="126.498238" ycrdn="33.488976" >제주도</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label">서울시</div>
+										</div>
+										<div class="selectbox-layer">
+											<div class="selectbox-list"></div>
+										</div>
+									</div>
+									<span class="bar">&gt;</span>
+									<div id="loc_view2" class="sel w2 ">
+										<select class="selectbox-source" style="position:absolute; top : -1000px; left:-1000px;" title="시/군/구" tabIndex="-1">
+											<option class="selectbox-default">시&frasl;군&frasl;구</option>
+											<option value="1168000000" xcrdn="127.047313" ycrdn="37.517408" selected>강남구</option>
+											<option value="1174000000" xcrdn="127.123771" ycrdn="37.530126" >강동구</option>
+											<option value="1130500000" xcrdn="127.025488" ycrdn="37.63974" >강북구</option>
+											<option value="1150000000" xcrdn="126.849534" ycrdn="37.550985" >강서구</option>
+											<option value="1162000000" xcrdn="126.951601" ycrdn="37.481021" >관악구</option>
+											<option value="1121500000" xcrdn="127.082375" ycrdn="37.538617" >광진구</option>
+											<option value="1153000000" xcrdn="126.887532" ycrdn="37.49551" >구로구</option>
+											<option value="1154500000" xcrdn="126.902075" ycrdn="37.45196" >금천구</option>
+											<option value="1135000000" xcrdn="127.056411" ycrdn="37.654286" >노원구</option>
+											<option value="1132000000" xcrdn="127.047163" ycrdn="37.668768" >도봉구</option>
+											<option value="1123000000" xcrdn="127.039765" ycrdn="37.574493" >동대문구</option>
+											<option value="1159000000" xcrdn="126.9395" ycrdn="37.51245" >동작구</option>
+											<option value="1144000000" xcrdn="126.9084" ycrdn="37.563517" >마포구</option>
+											<option value="1141000000" xcrdn="126.9368" ycrdn="37.579225" >서대문구</option>
+											<option value="1165000000" xcrdn="127.032594" ycrdn="37.483564" >서초구</option>
+											<option value="1120000000" xcrdn="127.036838" ycrdn="37.563475" >성동구</option>
+											<option value="1129000000" xcrdn="127.020729" ycrdn="37.5874" >성북구</option>
+											<option value="1171000000" xcrdn="127.105863" ycrdn="37.514592" >송파구</option>
+											<option value="1147000000" xcrdn="126.866546" ycrdn="37.517007" >양천구</option>
+											<option value="1156000000" xcrdn="126.896213" ycrdn="37.526367" >영등포구</option>
+											<option value="1117000000" xcrdn="126.96535" ycrdn="37.538825" >용산구</option>
+											<option value="1138000000" xcrdn="126.929163" ycrdn="37.60278" >은평구</option>
+											<option value="1111000000" xcrdn="126.979638" ycrdn="37.573025" >종로구</option>
+											<option value="1114000000" xcrdn="126.9976" ycrdn="37.563842" >중구</option>
+											<option value="1126000000" xcrdn="127.092584" ycrdn="37.606324" >중랑구</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label">강남구</div>
+										</div>
+										<div class="selectbox-layer">
+											<div class="selectbox-list"></div>
+										</div>
+									</div>
+									<span class="bar" id="loc_view3_bar" style="display:">&gt;</span>
+									<div id="loc_view3" class="sel w " style="display:">
+										<select class="selectbox-source" style="position:absolute; top : -1000px; left:-1000px;" title="읍/면/동" tabIndex="-1">
+											<option class="selectbox-default">읍&frasl;면&frasl;동</option>
+											<option value="1168010300" xcrdn="127.0634" ycrdn="37.482968" >개포동</option>
+											<option value="1168010800" xcrdn="127.031375" ycrdn="37.513583" >논현동</option>
+											<option value="1168010600" xcrdn="127.065463" ycrdn="37.49911" >대치동</option>
+											<option value="1168011800" xcrdn="127.04505" ycrdn="37.488143" >도곡동</option>
+											<option value="1168010500" xcrdn="127.055387" ycrdn="37.514792" >삼성동</option>
+											<option value="1168011100" xcrdn="127.1046" ycrdn="37.46436" >세곡동</option>
+											<option value="1168011500" xcrdn="127.104886" ycrdn="37.488856" >수서동</option>
+											<option value="1168010700" xcrdn="127.0229" ycrdn="37.524142" >신사동</option>
+											<option value="1168011000" xcrdn="127.0236" ycrdn="37.5291" selected>압구정동</option>
+											<option value="1168010100" xcrdn="127.03895" ycrdn="37.499776" >역삼동</option>
+											<option value="1168011300" xcrdn="127.1114" ycrdn="37.4717" >율현동</option>
+											<option value="1168011400" xcrdn="127.081638" ycrdn="37.487485" >일원동</option>
+											<option value="1168011200" xcrdn="127.101" ycrdn="37.4766" >자곡동</option>
+											<option value="1168010400" xcrdn="127.05235" ycrdn="37.525492" >청담동</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label">압구정동</div>
+										</div>
+										<div class="selectbox-layer">
+											<div class="selectbox-list"></div>
+										</div>
+									</div>
+								</div>
+								<!-- [D] 최근 검색한 지역과 단지가 열렸을 때는 lastest 영역에 on 클래스 추가 -->
+								<div class="lastest">
+									<p>최근 검색한 지역과 단지 <a href="javascript:void(0);" title="최근검색한 지역과 단지">펼치기</a></p>
+									<div class="list_wrap" style="display:none;" id="recentComplexList">
+										<ol>
+											<li id="li_107799">
+												<a href="http://land.naver.com/article/articleList.nhn?rletTypeCd=A01&tradeTypeCd=&rletNo=107799&hscpTypeCd=A01%3AA03%3AA04" title="수서동 강남데시앙포레" class="N=a:ldr.fvrlocal,i:107799">수서동 강남데시앙..</a><button id="107799" type="button" class="del" ><span class="blind">삭제</span></button>
+											</li>
+											<li id="li_671">
+												<a href="http://land.naver.com/article/articleList.nhn?rletNo=671&rletTypeCd=A01&tradeTypeCd=&hscpTypeCd=" title="수서동 신동아" class="N=a:ldr.fvrlocal,i:671">수서동 신동아</a><button id="671" type="button" class="del" ><span class="blind">삭제</span></button>
+											</li>
+											<li id="li_12252">
+												<a href="http://land.naver.com/article/articleList.nhn?rletTypeCd=A02&tradeTypeCd=&hscpTypeCd=A02&rletNo=12252" title="수서동 목화" class="N=a:ldr.fvrlocal,i:12252">수서동 목화</a><button id="12252" type="button" class="del" ><span class="blind">삭제</span></button>
+											</li>
+										</ol>
+										<button type="button" class="all_del">전체기록 삭제</button>
+									</div>
+								</div>
+								<!--result: home_recent processed//-->
+								<!-- [D] display:none/block toggle -->
+								<div class="loc_list NE=a:lcl" id="loc_list" style="">
+									<div id="cityList" class="list">
+										<ul>
+											<li><a href="javascript:void(0);" cityNo="1100000000" xcrdn="126.977872" ycrdn="37.566427" class="selected _cityItm NPI=a:sido,r:1,i:1100000000">서울시</a></li>
+											<li><a href="javascript:void(0);" cityNo="4100000000" xcrdn="127.008689" ycrdn="37.274939" class=" _cityItm NPI=a:sido,r:2,i:4100000000">경기도</a></li>
+											<li><a href="javascript:void(0);" cityNo="2800000000" xcrdn="126.705151" ycrdn="37.456054" class=" _cityItm NPI=a:sido,r:3,i:2800000000">인천시</a></li>
+											<li><a href="javascript:void(0);" cityNo="2600000000" xcrdn="129.075413" ycrdn="35.180143" class=" _cityItm NPI=a:sido,r:4,i:2600000000">부산시</a></li>
+											<li><a href="javascript:void(0);" cityNo="3000000000" xcrdn="127.384953" ycrdn="36.350465" class=" _cityItm NPI=a:sido,r:5,i:3000000000">대전시</a></li>
+											<li><a href="javascript:void(0);" cityNo="2700000000" xcrdn="128.601763" ycrdn="35.87139" class=" _cityItm NPI=a:sido,r:6,i:2700000000">대구시</a></li>
+											<li><a href="javascript:void(0);" cityNo="3100000000" xcrdn="129.311375" ycrdn="35.5386" class=" _cityItm NPI=a:sido,r:7,i:3100000000">울산시</a></li>
+											<li><a href="javascript:void(0);" cityNo="3600000000" xcrdn="127.292375" ycrdn="36.592907" class=" _cityItm NPI=a:sido,r:8,i:3600000000">세종시</a></li>
+											<li><a href="javascript:void(0);" cityNo="2900000000" xcrdn="126.851338" ycrdn="35.160032" class=" _cityItm NPI=a:sido,r:9,i:2900000000">광주시</a></li>
+											<li><a href="javascript:void(0);" cityNo="4200000000" xcrdn="127.72975" ycrdn="37.885399" class=" _cityItm NPI=a:sido,r:10,i:4200000000">강원도</a></li>
+											<li><a href="javascript:void(0);" cityNo="4300000000" xcrdn="127.491238" ycrdn="36.636149" class=" _cityItm NPI=a:sido,r:11,i:4300000000">충청북도</a></li>
+											<li><a href="javascript:void(0);" cityNo="4400000000" xcrdn="127.420963" ycrdn="36.326717" class=" _cityItm NPI=a:sido,r:12,i:4400000000">충청남도</a></li>
+											<li><a href="javascript:void(0);" cityNo="4700000000" xcrdn="128.60065" ycrdn="35.892474" class=" _cityItm NPI=a:sido,r:13,i:4700000000">경상북도</a></li>
+											<li><a href="javascript:void(0);" cityNo="4800000000" xcrdn="128.6924" ycrdn="35.238343" class=" _cityItm NPI=a:sido,r:14,i:4800000000">경상남도</a></li>
+											<li><a href="javascript:void(0);" cityNo="4500000000" xcrdn="127.108875" ycrdn="35.820433" class=" _cityItm NPI=a:sido,r:15,i:4500000000">전라북도</a></li>
+											<li><a href="javascript:void(0);" cityNo="4600000000" xcrdn="126.462443" ycrdn="34.816358" class=" _cityItm NPI=a:sido,r:16,i:4600000000">전라남도</a></li>
+											<li><a href="javascript:void(0);" cityNo="5000000000" xcrdn="126.498238" ycrdn="33.488976" class=" _cityItm NPI=a:sido,r:17,i:5000000000">제주도</a></li>
+										</ul>
+									</div>
+									<!-- [D] 두줄 클래스 : multi -->
+									<div id="dvsnList" class="list2">
+										<ul id="ulid">
+											<li><a href="javascript:void(0);" dvsnNo="1168000000" xcrdn="127.047313" ycrdn="37.517408" class="selected _dvsnItm NPI=a:gu,r:1,i:">강남구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1174000000" xcrdn="127.123771" ycrdn="37.530126" class=" _dvsnItm NPI=a:gu,r:2,i:">강동구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1130500000" xcrdn="127.025488" ycrdn="37.63974" class=" _dvsnItm NPI=a:gu,r:3,i:">강북구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1150000000" xcrdn="126.849534" ycrdn="37.550985" class=" _dvsnItm NPI=a:gu,r:4,i:">강서구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1162000000" xcrdn="126.951601" ycrdn="37.481021" class=" _dvsnItm NPI=a:gu,r:5,i:">관악구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1121500000" xcrdn="127.082375" ycrdn="37.538617" class=" _dvsnItm NPI=a:gu,r:6,i:">광진구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1153000000" xcrdn="126.887532" ycrdn="37.49551" class=" _dvsnItm NPI=a:gu,r:7,i:">구로구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1154500000" xcrdn="126.902075" ycrdn="37.45196" class=" _dvsnItm NPI=a:gu,r:8,i:">금천구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1135000000" xcrdn="127.056411" ycrdn="37.654286" class=" _dvsnItm NPI=a:gu,r:9,i:">노원구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1132000000" xcrdn="127.047163" ycrdn="37.668768" class=" _dvsnItm NPI=a:gu,r:10,i:">도봉구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1123000000" xcrdn="127.039765" ycrdn="37.574493" class=" _dvsnItm NPI=a:gu,r:11,i:">동대문구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1159000000" xcrdn="126.9395" ycrdn="37.51245" class=" _dvsnItm NPI=a:gu,r:12,i:">동작구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1144000000" xcrdn="126.9084" ycrdn="37.563517" class=" _dvsnItm NPI=a:gu,r:13,i:">마포구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1141000000" xcrdn="126.9368" ycrdn="37.579225" class=" _dvsnItm NPI=a:gu,r:14,i:">서대문구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1165000000" xcrdn="127.032594" ycrdn="37.483564" class=" _dvsnItm NPI=a:gu,r:15,i:">서초구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1120000000" xcrdn="127.036838" ycrdn="37.563475" class=" _dvsnItm NPI=a:gu,r:16,i:">성동구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1129000000" xcrdn="127.020729" ycrdn="37.5874" class=" _dvsnItm NPI=a:gu,r:17,i:">성북구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1171000000" xcrdn="127.105863" ycrdn="37.514592" class=" _dvsnItm NPI=a:gu,r:18,i:">송파구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1147000000" xcrdn="126.866546" ycrdn="37.517007" class=" _dvsnItm NPI=a:gu,r:19,i:">양천구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1156000000" xcrdn="126.896213" ycrdn="37.526367" class=" _dvsnItm NPI=a:gu,r:20,i:">영등포구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1117000000" xcrdn="126.96535" ycrdn="37.538825" class=" _dvsnItm NPI=a:gu,r:21,i:">용산구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1138000000" xcrdn="126.929163" ycrdn="37.60278" class=" _dvsnItm NPI=a:gu,r:22,i:">은평구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1111000000" xcrdn="126.979638" ycrdn="37.573025" class=" _dvsnItm NPI=a:gu,r:23,i:">종로구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1114000000" xcrdn="126.9976" ycrdn="37.563842" class=" _dvsnItm NPI=a:gu,r:24,i:">중구</a></li>
+											<li><a href="javascript:void(0);" dvsnNo="1126000000" xcrdn="127.092584" ycrdn="37.606324" class=" _dvsnItm NPI=a:gu,r:25,i:">중랑구</a></li>
+										</ul>
+									</div>
+									<div id="secList" class="list3">
+										<div>
+											<ul>
+												<li><a href="javascript:void(0);" secNo="1168010300" xcrdn="127.0634" ycrdn="37.482968" class="  _secItm NPI=a:dong,r:1,i:1168010300">개포동<span> (1484)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168010800" xcrdn="127.031375" ycrdn="37.513583" class="  _secItm NPI=a:dong,r:2,i:1168010800">논현동<span> (332)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168010600" xcrdn="127.065463" ycrdn="37.49911" class="  _secItm NPI=a:dong,r:3,i:1168010600">대치동<span> (1305)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011800" xcrdn="127.04505" ycrdn="37.488143" class="  _secItm NPI=a:dong,r:4,i:1168011800">도곡동<span> (1224)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168010500" xcrdn="127.055387" ycrdn="37.514792" class="  _secItm NPI=a:dong,r:5,i:1168010500">삼성동<span> (1055)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011100" xcrdn="127.1046" ycrdn="37.46436" class="  _secItm NPI=a:dong,r:6,i:1168011100">세곡동<span> (84)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011500" xcrdn="127.104886" ycrdn="37.488856" class="  _secItm NPI=a:dong,r:7,i:1168011500">수서동<span> (85)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168010700" xcrdn="127.0229" ycrdn="37.524142" class="  _secItm NPI=a:dong,r:8,i:1168010700">신사동<span> (46)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011000" xcrdn="127.0236" ycrdn="37.5291" class=" selected _secItm NPI=a:dong,r:9,i:1168011000">압구정동<span> (764)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168010100" xcrdn="127.03895" ycrdn="37.499776" class="  _secItm NPI=a:dong,r:10,i:1168010100">역삼동<span> (1065)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011300" xcrdn="127.1114" ycrdn="37.4717" class="  _secItm NPI=a:dong,r:11,i:1168011300">율현동<span> (0)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011400" xcrdn="127.081638" ycrdn="37.487485" class="  _secItm NPI=a:dong,r:12,i:1168011400">일원동<span> (217)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168011200" xcrdn="127.101" ycrdn="37.4766" class="  _secItm NPI=a:dong,r:13,i:1168011200">자곡동<span> (15)</span></a></li>
+												<li><a href="javascript:void(0);" secNo="1168010400" xcrdn="127.05235" ycrdn="37.525492" class="  _secItm NPI=a:dong,r:14,i:1168010400">청담동<span> (850)</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="sel_view">
+										<p class="txt">
+											<strong><em>‘압구정동’</em> 매물건수</strong><br>
+											매매 <small>764</small> <span class="bar">|</span> 전세 <small>558</small> <span class="bar">|</span> 월세 <small>464</small>
+										</p>
+										<!-- [D] 확인 매물 보기 활성화 클래스 : view -->
+										<p class="btn"><a class="view NPI=a:view" href="javascript:void(0);">확인 매물 보기</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--result: home_rbox processed//-->
+						<div class="aside">
+							<div class="article_wrap">
+								<div id="_CastContainer" class="article tip">
+									<p style="width:100%;height:50px;font-size:0;line-height:0;"></p>
+									<div id="_CastItemsList">
+										<!--result: home_cast processed//-->
+										<div class="bnnr3 _bnnr con con2" style='height:155px;display:block;'>
+											<a href="http://land.naver.com/news/expertColumnView.nhn?artcl_seq=5825&page=" target="_blank">
+											<img title="<span>가로주택정비사업</span>에는 혜택이 많다는데" height="114" width="258" src="http://landthumb.phinf.naver.net/20150810_95/land_naver_1439174586236YAG5Y_JPEG/photoinfra_1439174585683.jpg" onerror="errorImg(this)"><span class="mask"></span>
+											<strong class="tit"><span>가로주택정비사업</span>에는 혜택이 많다는데</strong>
+											<span>가로주택정비사업에는 혜택이 많다는데 부동산칼럼에서 확인하세요.</span>
+											</a>
+										</div>
+										<p style="display: none;" id="_bnnr_more" class='more more N=a:.more'><a target="_blank" href="http://land.naver.com/news/expertColumnView.nhn?artcl_seq=5825&page=">자세히 보기</a></p>
+										<div class="bnnr3 _bnnr2 con con2" style='height:155px;display:none;'>
+											<a href="http://landad.naver.com/home/mobileGuidePopup.nhn" target="_blank">
+											<img title="<span>모바일 확인 매물</span> 출시!" height="114" width="258" src="http://landthumb.phinf.naver.net/20150730_279/land_naver_1438218983396HV6Ky_PNG/photoinfra_1438218982991.png" onerror="errorImg(this)"><span class="mask"></span>
+											<strong class="tit"><span>모바일 확인 매물</span> 출시!</strong>
+											<span>집주인이 모바일로 직접 확인합니다.</span>
+											</a>
+										</div>
+										<p style="display: none;" id="_bnnr_more" class='more more N=a:.more'><a target="_blank" href="http://landad.naver.com/home/mobileGuidePopup.nhn">자세히 보기</a></p>
+									</div>
+									<div id="_cast_Paging" class="header" style="top:0;width:100%;position:absolute;">
+										<a id="cast_more_url" href="/guide/guideList.nhn">
+											<h2 class="_ttl">TODAY TIP!</h2>
+										</a>
+										<p>
+											<span><strong class="_cur">1</strong>/2</span>
+											<a href="javascript:void(0);" class="prev move N=a:rgp.prev">이전 페이지 보기</a>
+											<a href="javascript:void(0);" class="next move N=a:rgp.next">다음 페이지 보기</a>
+										</p>
+									</div>
+									<div id="castpagingInfo" class="hidden">,bnnr,bnnr2</div>
+									<div id="totalCastCnt" class="hidden">2</div>
+								</div>
+							</div>
+							<div class="hot NE=a:fsc" id="hot">
+								<h2><span tabIndex="0">부동산 인기검색</span></h2>
+								<div class="rolling" id="rolling" style="position:relative;">
+									<ol id="schIdx">
+										<li class="no1 schIdxPage1 NPI=a:list1" title="경기도2억원대전원주택매매"><a href="/search/search.nhn?query=%EA%B2%BD%EA%B8%B0%EB%8F%842%EC%96%B5%EC%9B%90%EB%8C%80%EC%A0%84%EC%9B%90%EC%A3%BC%ED%83%9D%EB%A7%A4%EB%A7%A4">경기도2억원대전원주택매매</a> <em><span class="new">new</span> </em></li>
+										<li class="no2 schIdxPage1 NPI=a:list2" title="고급스러운수도권타운하우스"><a href="/search/search.nhn?query=%EA%B3%A0%EA%B8%89%EC%8A%A4%EB%9F%AC%EC%9A%B4%EC%88%98%EB%8F%84%EA%B6%8C%ED%83%80%EC%9A%B4%ED%95%98%EC%9A%B0%EC%8A%A4">고급스러운수도권타운하우스</a> <em><span class="new">new</span> </em></li>
+										<li class="no3 schIdxPage1 NPI=a:list3" title="경기도전원주택10억이상매매"><a href="/search/search.nhn?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%EC%A0%84%EC%9B%90%EC%A3%BC%ED%83%9D10%EC%96%B5%EC%9D%B4%EC%83%81%EB%A7%A4%EB%A7%A4">경기도전원주택10억이상매매</a> <em><span class="new">new</span> </em></li>
+										<li class="no4 schIdxPage1 NPI=a:list4" title="서울특별시아파트매물"><a href="/search/search.nhn?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EC%95%84%ED%8C%8C%ED%8A%B8%EB%A7%A4%EB%AC%BC">서울특별시아파트매물</a> <em><span class="new">new</span> </em></li>
+										<li class="no5 schIdxPage1 NPI=a:list5" title="서울시30평대2억대빌라매매"><a href="/search/search.nhn?query=%EC%84%9C%EC%9A%B8%EC%8B%9C30%ED%8F%89%EB%8C%802%EC%96%B5%EB%8C%80%EB%B9%8C%EB%9D%BC%EB%A7%A4%EB%A7%A4">서울시30평대2억대빌라매매</a> <em><span class="new">new</span> </em></li>
+										<li class="no6 NPI=a:list6" title="서울시아파트분양"><a href="/search/search.nhn?query=%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%95%84%ED%8C%8C%ED%8A%B8%EB%B6%84%EC%96%91">서울시아파트분양</a> <em><span class="new">new</span> </em></li>
+										<li class="no7 NPI=a:list7" title="서울시아파트매물"><a href="/search/search.nhn?query=%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%95%84%ED%8C%8C%ED%8A%B8%EB%A7%A4%EB%AC%BC">서울시아파트매물</a> <em><span class="new">new</span> </em></li>
+										<li class="no8 NPI=a:list8" title="최근분양아파트내부구경하기"><a href="/search/search.nhn?query=%EC%B5%9C%EA%B7%BC%EB%B6%84%EC%96%91%EC%95%84%ED%8C%8C%ED%8A%B8%EB%82%B4%EB%B6%80%EA%B5%AC%EA%B2%BD%ED%95%98%EA%B8%B0">최근분양아파트내부구경하기</a> <em><span class="new">new</span> </em></li>
+										<li class="no9 NPI=a:list9" title="서울특별시아파트"><a href="/search/search.nhn?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EC%95%84%ED%8C%8C%ED%8A%B8">서울특별시아파트</a> <em><span class="new">new</span> </em></li>
+										<li class="no10 NPI=a:list10" title="부동산중개보수"><a href="/search/search.nhn?query=%EB%B6%80%EB%8F%99%EC%82%B0%EC%A4%91%EA%B0%9C%EB%B3%B4%EC%88%98">부동산중개보수</a> <em><span class="new">new</span> </em></li>
+									</ol>
+								</div>
+								<a href="javascript:void(0);"  id="hotMoreBtn" class="btn_more" tabindex="-1">부동산인기검색 펼치기</a>
+								<p class="btn">
+									<a href="javascript:void(0);" class="prev NPI=a:prev">이전 리스트 페이지 보기</a>
+									<span id="schIdxPage"><strong>1</strong>/2</span>
+									<a href="javascript:void(0);" class="next NPI=a:next">다음 리스트 페이지 보기</a>
+								</p>
+							</div>
+							<!--result: home_fvrkwd processed//-->
+						</div>
+					</div>
+				</div>
+				<div id="content">
+					<div class="section_l">
+						<div class="news NE=a:tdn">
+							<h2 tabIndex="0">오늘의 뉴스</h2>
+							<h3><a href="/news/newsRead.nhn?type=headline&prsco_id=025&arti_id=0002519905" class="NPI=a:title,i:0002519905" title="임대주택 정책·편견 변화…“집 살 여력돼도 임대로”">임대주택 정책·편견 변화…“집 살 여력..</a></h3>
+							<p class="con"><a href="/news/newsRead.nhn?type=headline&prsco_id=025&arti_id=0002519905" class="NPI=a:contents,i:0002519905">아직도 임대주택이라고 하면 흔히 사회 취약계층을 떠올리는 사람이 있다. 일반 분양 아파트 주민들이 주변 임대주택 주민이 자신들의 아파트에 출입하는 것을 막는 예가 비일비재하게 벌..</a><span>중앙일보</span></p>
+							<ul>
+								<li><a href="/news/newsRead.nhn?type=headline&prsco_id=016&arti_id=0000816743" class="NPI=a:list,r:1,i:0000816743" title="서울 강남 재건축 ‘이주수요발’ 전세난 본격화 조짐">서울 강남 재건축 ‘이주수요발’ 전세난 본격화..</a> <span>헤럴드경제</span></li>
+								<li><a href="/news/newsRead.nhn?type=headline&prsco_id=020&arti_id=0002840893" class="NPI=a:list,r:2,i:0002840893" title="“우리도 행복주택사업서 빼달라”… 목동 이어 잠실-공릉도 해제 요청">“우리도 행복주택사업서 빼달라”… 목동 이어 ..</a> <span>동아일보</span></li>
+								<li><a href="/news/newsRead.nhn?type=headline&prsco_id=081&arti_id=0002591711" class="NPI=a:list,r:3,i:0002591711" title="1조 규모 옛 서울의료원 부지 주인은?">1조 규모 옛 서울의료원 부지 주인은?</a> <span>서울신문</span></li>
+								<li><a href="/news/newsRead.nhn?type=headline&prsco_id=008&arti_id=0003522711" class="NPI=a:list,r:4,i:0003522711" title="&quot;용적률 300% 해줘도 재건축사업성 부족하다&quot;">"용적률 300% 해줘도 재건축사업성 부족하다"</a> <span>머니투데이</span></li>
+							</ul>
+							<p class="more NPI=a:more"><a href="/news/headline.nhn">더보기</a></p>
+						</div>
+						<!--result: home_tdynews processed//-->
+						<div class="special NE=a:ssp">
+							<h2 tabIndex="0">분양 특집</h2>
+							<a href="http://land.naver.com/isale/complexDetail.nhn?isaleHscpNo=6006227&isaleNotifSeq=9006995" class="l_spot NPI=a:title">
+							<span class="thmb"><img src="http://landthumb.phinf.naver.net/20150810_30/land_naver_1439180856134C1geF_JPEG/photoinfra_1439180855568.jpg?type=m196" width="127" height="92" onerror="this.src='http://static.land.naver.net/static/service/20150804/noimage/noimage_120.gif'" alt="안산센트럴푸르지오"><span></span></span>
+							<span class="tit"><strong>안산센트럴푸르지오</strong></span>
+							<em class="info">(주)대우건설 </em>
+							<span class="con">
+							경기도 안산시 단원구 고잔동<br>
+							29 - 37층, 7개동 총 990가구<br>
+							청약접수 2015.08.12
+							</span>
+							</a>
+							<ul>
+								<li><a href="http://land.naver.com/news/newsRead.nhn?type=breaking&bss_ymd=20150810&prsco_id=020&arti_id=0002840057" class="NPI=a:list,r:1" title="가계빚대책 ‘유탄’에 분양권 웃돈 반토막">가계빚대책 ‘유탄’에 분양권 웃돈 반토막</a> <span>동아일보</span></li>
+								<li><a href="http://land.naver.com/news/newsRead.nhn?type=breaking&bss_ymd=20150810&prsco_id=421&arti_id=0001567453" class="NPI=a:list,r:2" title="‘미분양·청약미달‘ 계속되는 경고등…숨고르기? vs 침">‘미분양·청약미달‘ 계속되는 경고등…숨고르기? v..</a> <span>뉴스1</span></li>
+								<li><a href="http://land.naver.com/news/newsRead.nhn?type=breaking&bss_ymd=20150810&prsco_id=119&arti_id=0002089517" class="NPI=a:list,r:3" title="대구·경북 분양 열기, 하반기 지속…신규물량은?">대구·경북 분양 열기, 하반기 지속…신규물량은?</a> <span>데일리안</span></li>
+							</ul>
+						</div>
+						<!--result: home_saleissue processed//-->
+						<div class="trend NE=a:rpt">
+							<h2 tabIndex="0">분양 특집</h2>
+							<ul>
+								<li><em>[주간_08월07일]</em> <a href="/isale/isaleNewsTrendRead.nhn?artcl_tp_cd=&page=&atcl_seq=709" class="NPI=a:list,r:1,i:709" title="광교중흥 등 모델하우스 10곳 오픈">광교중흥 등 모델하우스 10곳 오픈</a></li>
+								<li><em>[월간_08월10일]</em> <a href="/isale/isaleNewsTrendRead.nhn?artcl_tp_cd=&page=&atcl_seq=710" class="NPI=a:list,r:2,i:710" title="브랜드만 보고 아파트 청약한다면?">브랜드만 보고 아파트 청약한다면?</a></li>
+								<li><em>[주간_08월07일]</em> <a href="/isale/isaleNewsTrendRead.nhn?artcl_tp_cd=&page=&atcl_seq=708" class="NPI=a:list,r:3,i:708" title="휴가 극성수기 종료 후 건설사 분양 채비">휴가 극성수기 종료 후 건설사 분양 채비</a></li>
+								<li><em>[월간_08월05일]</em> <a href="/isale/isaleNewsTrendRead.nhn?artcl_tp_cd=&page=&atcl_seq=707" class="NPI=a:list,r:4,i:707" title="강남 황금노선 역세권이 뜬다">강남 황금노선 역세권이 뜬다</a></li>
+								<li><em>[주간_08월03일]</em> <a href="/isale/isaleNewsTrendRead.nhn?artcl_tp_cd=&page=&atcl_seq=706" class="NPI=a:list,r:5,i:706" title="미분양 2달 연속 증가, 향후 추이 주목">미분양 2달 연속 증가, 향후 추이 주목</a></li>
+								<li><em>[주간_07월31일]</em> <a href="/isale/isaleNewsTrendRead.nhn?artcl_tp_cd=&page=&atcl_seq=705" class="NPI=a:list,r:6,i:705" title="여름철 비수기, 6곳 청약">여름철 비수기, 6곳 청약</a></li>
+							</ul>
+							<p class="more NPI=a:more"><a href="/isale/isaleNewsTrend.nhn">더보기</a></p>
+							<!--result: home_saletrnd processed//-->
+						</div>
+					</div>
+					<div class="section_c">
+						<div class="today NE=a:tda" id="_sconfirmAtclArea">
+							<h2 tabIndex="0"><span>현장확인매물</span> <em>서울특별시 강남구 압구정동</em></h2>
+							<div class="tab" id="cofm_atcl_div">
+								<p class="btn prev NPI=a:prev"><a href="javascript:void(0);">이전 보기</a></p>
+								<ul id="cofmAtclUl_1">
+									<li class="tab1 selected NPI=a:tab1"><a href="javascript:void(0);" class="sel first" tpcd="A01" tabid="tab1">아파트</a></li>
+									<li class="tab2 NPI=a:tab2"><a href="javascript:void(0);" tpcd="A02" tabid="tab2">오피스텔</a></li>
+									<li class="tab3 NPI=a:tab3"><a href="javascript:void(0);" tpcd="B01" tabid="tab3">분양권</a></li>
+									<li class="tab4 NPI=a:tab4"><a href="javascript:void(0);" tpcd="D01" tabid="tab4">사무실</a></li>
+									<li class="tab5 NPI=a:tab5"><a href="javascript:void(0);" tpcd="E02" tabid="tab5">공장</a></li>
+									<li class="tab6 NPI=a:tab6"><a href="javascript:void(0);" tpcd="F01" tabid="tab6">재개발</a></li>
+								</ul>
+								<ul id="cofmAtclUl_2" style="display:none;">
+									<li class="tab7 NPI=a:tab7"><a href="javascript:void(0);" class="sel first" tpcd="C03" tabid="tab7">주택</a></li>
+									<li class="tab8 NPI=a:tab8"><a href="javascript:void(0);" tpcd="C01" tabid="tab8">원룸</a></li>
+									<li class="tab9 NPI=a:tab9"><a href="javascript:void(0);" tpcd="D02" tabid="tab9">상가</a></li>
+									<li class="tab10 NPI=a:tab10"><a href="javascript:void(0);" tpcd="E03" tabid="tab10">토지</a></li>
+									<li class="tab11 NPI=a:tab11"><a href="javascript:void(0);" tpcd="D03" tabid="tab11">건물</a></li>
+								</ul>
+								<p class="btn next NPI=a:next"><a href="javascript:void(0);">다음 보기</a></p>
+							</div>
+							<div id="confirm_article_area">
+								<a href="/article/articleRedirect.nhn?rletTypeCd=A01&tradeTypeCd=B2&cortarNo=1168011000&atclNo=1505766918" class="l_spot NPI=a:plist,r:1i:1505766918">
+								<span class="thmb"><em class="ico_m">동영상</em><img src="http://landthumb.phinf.naver.net/20150804_244/atcl_photo_1438676442562yfggC_JPEG/531C04F3E30FF37C9CE3A33613307AB3348_muploader_n_480P_854_1024_128_30_logo.jpg?type=m70" width="62" height="62"  onerror="this.src='http://static.land.naver.net/static/service/20150804/noimage/noimage_120.gif'" alt="아파트월세"></span>
+								<em class="type">[아파트월세]</em>
+								<span><strong>신현대(현대9,11,12차)</strong></span>
+								<span class="con"><span class="adr">서울특별시 강남구 압구정동</span>
+								188.94/171.43㎡ <span class="bar">|</span> 10,000/400만원</span>
+								</a>
+								<a href="/article/articleRedirect.nhn?rletTypeCd=A01&tradeTypeCd=B2&cortarNo=1168011000&atclNo=1505766472" class="l_spot NPI=a:plist,r:2i:1505766472">
+								<span class="thmb"><em class="ico_m">동영상</em><img src="http://landthumb.phinf.naver.net/20150804_264/atcl_photo_1438676446249WQ29b_JPEG/E3140413EF0F13739CB3BF30E30C2DC3143_muploader_o_480P_854_1024_128_30_logo.jpg?type=m70" width="62" height="62"  onerror="this.src='http://static.land.naver.net/static/service/20150804/noimage/noimage_120.gif'" alt="아파트월세"></span>
+								<em class="type">[아파트월세]</em>
+								<span><strong>신현대(현대9,11,12차)</strong></span>
+								<span class="con"><span class="adr">서울특별시 강남구 압구정동</span>
+								115.4/108.3㎡ <span class="bar">|</span> 5,000/220만원</span>
+								</a>
+								<p class="more" siteYN="Y" searchCortar="1168011000" rlet_tp_cd="A01"><a href="#">더보기</a></p>
+							</div>
+						</div>
+						<!--result: home_cfmatcl processed//-->
+						<div class="theme NE=a:tha" id="theme">
+							<h2 class="theme" tabIndex="0">테마 매물</h2>
+							<div class="select">
+								<div id="themeSelect" class="selectbox selectbox-noscript">
+									<select class="selectbox-source" title="테마 매물">
+										<option value="경기 1억 이하 빌라 매매" title="신혼부부를 위한 경기도 1억 이하 내 집 마련">신혼부부를 위한 경기도 1억 이하 내..</option>
+										<option value="경기도 2억 이하 아파트" title="네식구 살 수 있는 2억 이하 아파트">네식구 살 수 있는 2억 이하 아파트</option>
+										<option value="홍대 상가 월세" title="연예인들에게도 인기 많은 홍대상가 알아보자 ">연예인들에게도 인기 많은 홍대상가 ..</option>
+									</select>
+									<div class="selectbox-box">
+										<div class="selectbox-label"></div>
+									</div>
+									<div class="selectbox-layer theme-selectbox-layer">
+										<div class="selectbox-list"></div>
+									</div>
+								</div>
+							</div>
+							<div id="_themeItm">
+								<a href="http://land.naver.com/article/articleRedirect.nhn?tradeTypeCd=A1&rletTypeCd=C02&atclRletTypeCd=C02&atclNo=1505768256&cortarNo=4119910500" class="l_spot NPI=a:plist,r:1,i:1505768256" title="고강동 빌라/연립">
+								<span class="thmb">
+								<em class="ico_m">동영상</em>
+								<img src="http://landthumb.phinf.naver.net/20150806_275/atcl_photo_1438826543650v93L7_JPEG/531C04F3F310F30C1BE3C38C137069B3C43_muploader_g_480P_854_1024_128_30_logo.jpg?type=f52_52 " width="64" height="64" alt="현장확인 고강동 빌라/연립 매물 이미지"><span class="mask"></span></span>
+								<em class="type">[빌라/연립매매] </em>
+								<span class="tit"><strong title="고강동 빌라/연립">
+								고강동 빌라/연립
+								</strong></span>
+								<span class="con"><span class="adr">경기도 부천시 오정구 고강동</span>38/34㎡ <span class="bar">|</span> 9,000만원</span>
+								</a>
+								<a href="http://land.naver.com/article/articleRedirect.nhn?tradeTypeCd=A1&rletTypeCd=C02&atclRletTypeCd=C02&atclNo=1505771470&cortarNo=4119910500" class="l_spot NPI=a:plist,r:2,i:1505771470" title="고강동 빌라/연립">
+								<span class="thmb">
+								<em class="ico_m">동영상</em>
+								<img src="http://landthumb.phinf.naver.net/20150806_68/atcl_photo_14388261217639AW3I_JPEG/531C04F3F310F30C1BE3638A13505AB3747_muploader_e_480P_854_1024_128_30_logo.jpg?type=f52_52 " width="64" height="64" alt="현장확인 고강동 빌라/연립 매물 이미지"><span class="mask"></span></span>
+								<em class="type">[빌라/연립매매] </em>
+								<span class="tit"><strong title="고강동 빌라/연립">
+								고강동 빌라/연립
+								</strong></span>
+								<span class="con"><span class="adr">경기도 부천시 오정구 고강동</span>30/27㎡ <span class="bar">|</span> 7,700만원</span>
+								</a>
+							</div>
+							<!--result: home_theme processed//-->
+							<p class="more NPI=a:more"><a href="javascript:void(0);" class="_more">더보기</a></p>
+						</div>
+						<div class="answer NE=a:kin">
+							<h2 tabIndex="0">전문가 답변</h2>
+							<p class="q"><em>질문</em> <a href="http://land.naver.com/community/kin.nhn?m=detail&qboardId=30&d1id=4&dirId=402&docId=224897184&qb=7Yag7KeAIOq1rOyehQ==&enc=utf8&section=kin.qna&rank=4&search_sort=3&spq=1" class="NPI=a:question" title="토지를 증여받을 때, 등기필증 서류는?"><strong><span>[지식인홈]</span> 토지를 증여받을 때, 등기필증 서류는?</strong></a></p>
+							<p class="a"><em>답변</em> <a href="http://land.naver.com/community/kin.nhn?m=detail&qboardId=30&d1id=4&dirId=402&docId=224897184&qb=7Yag7KeAIOq1rOyehQ==&enc=utf8&section=kin.qna&rank=4&search_sort=3&spq=1" class="NPI=a:answer">등기필증(등기권리증)이 없는 임야도 얼마든지 증여를 받을 수 있습니다. 직접 등기소를 방문하여 확인서면을 하여 ..</a></p>
+							<p class="more NPI=a:more"><a href="/community/kin.nhn">더보기</a></p>
+						</div>
+						<!--result: home_expans processed//-->
+					</div>
+					<div class="section_r">
+						<div class="ad" id="addiv" name="addiv">
+							<div id="da_280240" name="da_280240">
+								<iframe id="f280240" name="f280240" src="http://ad.naver.com/adshow?unit=779A" width="280" height="240" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" align="center" title="광고"></iframe>
+							</div>
+						</div>
+						<div class="aside_bx magazine NE=a:mgz">
+							<h2 tabIndex="0">부동산매거진</h2>
+							<a href="/news/magazineView.nhn?arti_seq=22196387" class="l_spot NPI=a:text">
+							<img src="http://landthumb.phinf.naver.net/20150714_170/land_naver_1436864868828JtE9Q_JPEG/ss.jpg?type=m196" width="74" height="55" alt="도배장판은 누가 하나요? 관련 이미지" class="thmb" onerror="this.src='http://static.land.naver.net/static/service/20150804/noimage/noimage_083.gif'" ><span class="mask"></span>
+							<span class="tit"><strong>도배장판은 누가 하나요?</strong></span>
+							<em class="info">부동산법률 </em>
+							<span class="con">임대차 계약할 때 도배장판 비용을 누가 부담하는가를 놓고 다툼이 자주 일어난다....</span>
+							</a>
+							<p class="more NPI=a:more"><a href="/news/magazine.nhn">더보기</a></p>
+						</div>
+						<!--result: home_magz processed//-->
+						<div class="column NE=a:scl">
+							<h2 tabIndex="0">부동산칼럼</h2>
+							<a href="/news/expertColumnView.nhn?artcl_seq=5826" class="l_spot NPI=a:title,i:5826">
+							<span class="tit"><strong>내 집 마련 돌발변수, 가계부채 종합관리방안</strong></span>
+							<em class="info">장성수 <span class="bar">|</span> 2015.10.06</em>
+							<span class="con">1. 서론
+							&nbsp;
+							주택가격이 안정됨에 따라 매매 수요보다는 전세 수요가 증가하는 주택시장 구조가 형성되고 있다. 여기에 월세를 부추긴 저금리기조와...</span>
+							</a>
+							<p class="more"><a href="/news/expertColumn.nhn">더보기</a></p>
+						</div>
+						<!--result: home_expcol processed//-->
+						<div class="notice NE=a:not">
+							<h2 tabIndex="0">공지사항</h2>
+							<ul>
+								<li><a href="http://land.naver.com/index/notice.nhn?&docId=10000000000030249269" class="NPI=a:list,r:1,i:20150325155211" title="부동산 경매 무료 열람 서비스 오픈">부동산 경매 무료 열람 서비스 오픈</a></li>
+								<li><a href="http://land.naver.com/index/notice.nhn?&docId=10000000000030226250" class="NPI=a:list,r:2,i:20150306143707" title="네이버 부동산 전문답변인 정보 및 네이버 회원 정보 통합 공지">네이버 부동산 전문답변인 정보 ..</a></li>
+								<li><a href="http://land.naver.com/index/notice.nhn?&docId=10000000000030163394" class="NPI=a:list,r:3,i:20150113192804" title="맞춤매물 서비스 종료 안내">맞춤매물 서비스 종료 안내</a></li>
+							</ul>
+							<p class="more NPI=a:more"><a href="/index/notice.nhn">더보기</a></p>
+						</div>
+						<!--result: home_notice processed//-->
+					</div>
+				</div>
+
+				<div id="sub_content">
+					<div class="market_report">
+						<div class="header">
+							<h2>시장보고서</h2>
+							<p>
+								<span><strong class="_cur">1</strong>/2</span>
+								<a href="javascript:void(0);" class="prev move N=a:rgp.prev">이전 페이지 보기</a>
+								<a href="javascript:void(0);" class="next move N=a:rgp.next">다음 페이지 보기</a>
+							</p>
+						</div>
+						<ul>
+							<li>
+								<div class="market_box">
+									<a href="#">
+										<strong>사업시행인가 신청中 강남 개포주공1단지아파트, 9억원 매매완료</strong>
+										<p class="market_local">성남시 분당구 서현동</p>
+										<p>서초구 서초힐스아파트 전용면적 59.91㎡ (약 18.1평)가 월세로 거래됐다. 이...</p>
+									</a>
+									<div class="market_logo">
+										<!-- [D] 로고 아이콘 클래스 - v1:부동산써브, v2:닥터아파트, v3:매경부동산, v4:부동산114, v5:텐컴즈, v6:한경부동산, v7:부동산뱅크, v8:중앙일보 조인스랜드 -->
+										<a href="#"><span class="logo_name v1">부동산써브</span></a>
+									</div>
+								</div>
+								<div class="market_thmb">
+									<a href="#"><img src="http://dev.ui.naver.com/tmp/?80x80_default_y_FFB4B4_50" width="80" height="80" alt="임시 이미지"></a>
+								</div>
+							</li>
+							<li>
+								<div class="market_box">
+									<a href="#">
+										<strong>사업시행인가 신청中 강남 개포주공1단지아파트, 9억원 매매완료</strong>
+										<p class="market_local">성남시 분당구 서현동</p>
+										<p>서초구 서초힐스아파트 전용면적 59.91㎡ (약 18.1평)가 월세로 거래됐다. 이...</p>
+									</a>
+									<div class="market_logo">
+										<!-- [D] 로고 아이콘 클래스 - v1:부동산써브, v2:닥터아파트, v3:매경부동산, v4:부동산114, v5:텐컴즈, v6:한경부동산, v7:부동산뱅크, v8:중앙일보 조인스랜드 -->
+										<a href="#"><span class="logo_name v3">매경부동산</span></a>
+									</div>
+								</div>
+								<div class="market_thmb">
+									<a href="#"><img src="http://dev.ui.naver.com/tmp/?80x80_default_y_FFB4B4_50" width="80" height="80" alt="임시 이미지"></a>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+					<a href="#" class="market_banner">
+						<img src="img/market_banner1.png" width="280" height="186" alt="지하철역 근처 교통이 편리한 원룸을 찾는다면? - 네이버 원룸 (m.room.land.naver.com)">
+					</a>
+				</div>
+
+				<script type="text/template" id="city_list_template" defer="defer">
+					<ul>
+					{for num:regionInfo in Region}
+						<li><a href="javascript:void(0);" cityNo="{=regionInfo.cortar_no}" class="_cityItm NPI=a:city,r:{=num},i:{=regionInfo.cortar_no}">{=regionInfo.cortar_nm}</a></li>
+					{/for}
+					</ul>
+				</script>
+				<script type="text/template" id="dvsn_list_template" defer="defer">
+					<ul>
+					{for num:regionInfo in Region}
+						<li><a href="javascript:void(0);" dvsnNo="{=regionInfo.cortar_no}" class="{=regionInfo.cortar_nm.length > 5 ? 'multi ' : ''} _dvsnItm NPI=a:gu,r:{=num},i:{=regionInfo.cortar_no}">{=regionInfo.cortar_nm.replace(' ','<br>')}</a></li>
+					{/for}
+					</ul>
+				</script>
+				<script type="text/template" id="sec_list_template" defer="defer">
+					<div>
+					<ul>
+					{for num:regionInfo in Region}
+						<li><a href="javascript:void(0);" secNo="{=regionInfo.cortar_no}" class="{js home.getSecListClass(=regionInfo.cortar_nm,=regionInfo.articleCount)} _secItm  NPI=a:dong,r:{=num},i:{=regionInfo.cortar_no}">{js home.getSecListName(=regionInfo.cortar_nm,=regionInfo.articleCount)} <span>({js home.getAtclCntMapValue(=regionInfo.articleCount)})</span></a></li>
+					{/for}
+					</ul>
+					</div>
+				</script>
+				<script type="text/template" id="confirm_article_template" defer="defer">
+					{for num:atcl in confirmArticle.atclList}
+					<a href="/article/articleRedirect.nhn?rletTypeCd={=atcl.rlet_atcl_tp_cd}&tradeTypeCd={=atcl.trad_tp_cd}&cortarNo={=atcl.cortar_no}&atclNo={=atcl.atcl_no}" class="l_spot NPI=a:{if atcl.vod_exps_yn == 'Y'}p{/if}list,r:{=num+1},i:{=atcl.atcl_no}">
+					{if atcl.rep_img_url}<span class="thmb">{if atcl.vod_exps_yn == 'Y'}<em class="ico_m">동영상</em>{/if}<img src="http://landthumb.phinf.naver.net{=atcl.rep_img_url}?type=m70" width="62px" height="62px" onerror="this.src='http://static.land.naver.net/static/service/20150804/noimage/noimage_120.gif'" alt="{=atcl.rlet_tp_nm}{=atcl.trad_tp_nm}"><span class="mark"></span></span>{/if}
+					<em class="type">[{=atcl.rlet_tp_nm}{=atcl.trad_tp_nm}]{if atcl.trad_comp_yn == 'Y'} <span>거래완료</span>{/if}</em>
+					<span class="tit"><strong>{=atcl.atcl_nm}</strong></span>
+					<span class="con"><span class="adr">{=atcl.cortar_info}</span>{=atcl.spc1}{if atcl.spc2}/{=atcl.spc2}{/if}㎡ <span class="bar">|</span> {=atcl.prc_info}만원</span></a>
+					{/for}
+					<p class="more" siteYN="{=confirmArticle.siteAtclYN}" searchCortar="{=confirmArticle.searchCortar}" rlet_tp_cd="{=confirmArticle.rlet_tp_cd}"><a href="#">더보기</a></p>
+				</script>
+				<script type="text/template" id="theme_article_template" defer="defer">
+					{if articleResult}
+						{if articleResult.total > 0}
+					    	{set printedThemeArticle = "-1"}
+							{for num:itm in articleResult.picYArticleList}
+								{if num <2}
+								{set tmpTitle==itm.articleName}
+								{if itm.articleTypeCode == "E03" || itm.articleTypeCode == "C04" || itm.articleTypeCode == "C02"}
+									{set tmpTitle==itm.secName+" "+=itm.articleTypeCodeName}
+								{/if}
+								{set printedThemeArticle = num}
+								<a href="{=itm.linkUrl}&cortarNo={=itm.addressCodeDisplay}" class="l_spot NPI=a:{if itm.vod_exps_yn == 'Y'}p{/if}list,r:{=num + 1},i:{=itm.articleNumber}" title="{=tmpTitle}">
+								{if itm.siteImageUrl!="" && itm.siteImageCount!=""}
+									<span class="thmb">
+										{if itm.vod_exps_yn == 'Y'}<em class="ico_m">동영상</em>{/if}
+										<img src="{=itm.siteImageUrl}?type=f52_52 " width="64" height="64" alt="현장확인 {=tmpTitle} 매물 이미지"><span class="mask"></span>
+									</span>
+								{/if}
+								<em class="type">[{=itm.articleTypeCodeName}{=itm.tradeTypeCodeName}] {if itm.tradeCompletion==1}<span>거래완료</span>{/if}</em>
+								<span class="tit"><strong title="{=tmpTitle}">{js land.home.compareAndCutString(=tmpTitle, =itm.dvsnName + =itm.secName, 22)}</strong></span>
+								<span class="con"><span class="adr">{=itm.cityName} {=itm.dvsnName} {=itm.secName}</span>{=itm.sizeShort}㎡ <span class="bar">|</span> {=itm.priceShort}만원</span>
+								</a>
+								{/if}
+							{/for}
+						{/if}
+					{/if}
+				</script>
+				<script type="text/template" id="cast_article_template" defer="defer">
+					{for num:itm in out.castList}
+					{if num == 0}
+						{if itm.more_url}<p class="_01 more"><a href="{=itm.more_url}">더보기</a></p>{/if}
+						<p class="_01 date NE=a:rgt*c">
+						<a class='move prev{if !itm.pno}_off{/if} NPI=a:calprev' href="javascript:void(0);" castno='{=itm.pno}'>이전 날짜 기사 보기1</a>
+							<span class="no{=out.cast_ymd.y}">{=out.cast_ymd.y}.</span>
+							<span class="no{=out.cast_ymd.m}">{=out.cast_ymd.m}.</span>
+							<span class="l_no{=out.cast_ymd.d}">{=out.cast_ymd.d}</span>
+							<a class='move next{if !itm.nno}_off{/if} NPI=a:calnext' href="javascript:void(0);" castno='{=itm.nno}'>다음 날짜 기사 보기1</a>
+						</p>
+					     		<a href="{=itm.cast_url}"{if itm.popup_yn=="Y"} target='_blank'{/if}  class="_01 l_spot N=a:rgt*c.content,i:{=itm.cast_no}">
+					       			{if itm.img_url}
+					       			<span class="thmb"><img src="http://landthumb.phinf.naver.net{=itm.img_url}" width="94px" height="70px" alt="{=itm.cast_ttl} 이미지" onerror="this.src='http://static.land.naver.net/static/service/20150804/noimage/noimage_120.gif'"><span></span></span>
+							{/if}
+					      			{if itm.tp_ttl}<em class="mark">[{=itm.tp_ttl}]</em>{/if}
+							<span class="tit"><strong>{=itm.cast_ttl}</strong></span>
+							<span class="con">{=itm.desc1} {=itm.desc2}</span>
+						</a>
+						<ul class="_01">
+							{/if}
+							<li>
+						{if itm.ltp_ttl != null && itm.ltp_ttl.length > 2}
+					      		<a href="{=itm.list_url}" class="N=a:rgt*c.list{=num + 1},i:{=itm.list_no}">{=itm.list_ttl}</a>
+						{else}
+					     			<a href="{=itm.list_url}" class="N=a:rgt*c.list{=num + 1},i:{=itm.list_no}">{=itm.list_ttl}</a>
+						{/if}
+					   		</li>
+					{/for}
+					{if num > 0}
+					  </ul>
+					{/if}
+				</script>
+			</div>
+			<div id="mySalesLayer" class="my_sales" style="top: 115px; right: -89px; position:absolute">
+				<div id="mySalesUserInfolayer" class="bg_my_sales_t">
+					<h3 class="type1">MY매물</h3>
+					<div class="cont">
+						<p class="login">로그인을 해주세요</p>
+						<a href="javascript:void(0);" id="aLoginTag" class="N=a:rwb_off.login"><img src="http://static.land.naver.net/static/service/20150804/sale/btn_my_popup_login.gif" width="59" height="17" alt="로그인" style="margin-bottom:2px;"></a>
+						<!--result: home_myatcl processed//-->
+					</div>
+				</div>
+				<div class="bg_my_sales_b"></div>
+				<div class="bg_my_sales_t">
+					<div id="mySalesArticleLayer" class="bg_my_sales_t">
+						<h3 class="type2" tabindex="0">최근본매물</h3>
+						<div class="cont NE=a:rwb">
+							<!-- 비활성시 btn_up, 활성시 btn_up_on -->
+							<span class="updown btn_up NPI=a:prev" style="display:block;"><a href="javascript:void(0);" class="up"><img src="http://static.land.naver.net/static/service/20150804/article/btn_my_popup_up.gif" width="57" height="10" alt="위로"></a></span>
+							<!-- If exist housing user seen -->
+							<!-- If not exist housing user seen -->
+							<div id="horizon_rollingmask" class="maskarea" style="display: block; ">
+								<ul id="articleUI" class="housing">
+									<li class="frst handle_hover">
+										<a href="http://land.naver.com/article/articleDetailInfo.nhn?atclNo=1505688280&atclRletTypeCd=D04&rletTypeCd=D03" class="NPI=a:alist,r:1,i:1505688280" alt="전농동 상가건물" title="전농동 상가건물">
+										전농동 상가건물
+										<br>
+										<em>
+										334/1000㎡
+										<span>|</span><br>[월]334/1000
+										</em>
+										</a>
+										<button id="1505688280" style="display:none;" type="button" class="btn_hover" ><span class="blind">삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<span class="updown btn_down NPI=a:next" style="display: block;"><a href="javascript:void(0);" class="down"><img src="http://static.land.naver.net/static/service/20150804/article/btn_my_popup_down.gif" alt="아래로" width="57" height="10"></a></span>
+						</div>
+						<!--result: home_recatcl processed//-->
+						<h3 class="type3">평형계산</h3>
+						<div class="cont">
+							<fieldset id="pyLayer">
+								<legend>평형계산</legend>
+								<input class="input_text" id="m2Input"  title="값 입력" maxlength="5" type="text" style="padding-right:1px;cursor:text;">
+								<a href="javascript:void(0);" onClick="return false;" class="_calc"><img src="http://static.land.naver.net/static/service/20150804/article/new/btn_calculate.gif" alt="계산" class="input_btn" width="61" height="18"></a>
+								<input class="input_text" id="pyInput" title="값 입력" maxlength="5" type="text" style="padding-right:1px;cursor:text;">
+								<input type="text" id="ftInput" title="값 입력" maxlength="5" class="input_text" style="padding-right:1px;margin-top:3px;cursor:text;">
+								<input type="text" id="ydInput" title="값 입력" maxlength="5" class="input_text" style="padding-right:1px;margin-top:3px;cursor:text;">
+								<ul class="cal_list" style="display: none;">
+								</ul>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+				<div class="bg_my_sales_b"></div>
+			</div>
+			<!-- footer -->
+			<script type="text/javascript" language="javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js"></script>
+			<div id="footer">
+				<div class="footwrap NE=a:fot">
+					<fieldset>
+						<legend class="blind">검색</legend>
+						<div class="sta_search_box NE=a:lsc">
+							<input type="text" title="검색" id="queryInputFooter" value='' query='' onKeyUp="serviceInternalSearchEnterCheck(event,1);" accesskey="s" searchAreaClicked="false" searchType="Promotion" class="sta_search_text" onFocus="searchInputBoxFocus(this);">
+							<a href="#" class="btn_search NPI=a:search" onclick="serviceInternalSearchFooter();return false;">검색</a>
+							<a href="#" class="btn_search2 NPI=a:nx" onclick="serviceInternalTotalSearchFooter();return false;">통합검색</a>
+						</div>
+					</fieldset>
+					<ul class="NE=a:fot">
+						<li class="first"><a href="http://land.naver.com/index/service.nhn" class="NPI=a:service">이용약관</a></li>
+						<li><a href="/index/declaredArticlePolicy.nhn">매물신고운영</a></li>
+						<li><a href="http://www.naver.com/rules/privacy.html" target="_blank" class="NPI=a:privacy"><strong>개인정보취급방침 </strong></a></li>
+						<li><a href="http://land.naver.com/index/disclaimer.nhn" class="NPI=a:limit">책임의 한계와 법적고지</a></li>
+						<li><a href="#" onclick="OPS.viewOPS('ops', {url : 'https://help.naver.com/support/service/main.nhn',  param : 'serviceNo=746'}); return false;" class="NPI=a:help">부동산 고객센터</a></li>
+					</ul>
+					<p class="info" tabindex="0">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며,<br>제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+					<address>
+						<a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="logo N=a:fot.nbpcorp"><span class="blind">NAVER</span></a>
+						<em>Copyright ⓒ</em> <a href="http://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a> <span>All Rights Reserved.</span>
+					</address>
+				</div>
+			</div>
+			<!-- //footer -->
+		</div>
+		<script language="JavaScript" type="text/javascript">
+			var jsonSecList;
+
+			try {
+				jsonSecList = [{"articleCount":{"A1":1480,"F01B1":0,"C01A1":0,"F01B2":0,"A02SB2":0,"D02A1":5,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":11,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":447,"C01B1":9,"D03SB2":0,"B01SB1":0,"C01B2":48,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":27,"A02SB1":0,"E03A1":1,"B01SA1":0,"B01A1":0,"B1":521,"D03B2":2,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":8,"D01B1":0,"D01B2":41,"A02A1":3,"A01A1":1484,"C03B2":30,"D02SA1":0,"C03B1":36,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":2,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":54,"A02B1":0,"A01B2":447,"D01SB2":1,"F01SA1":0,"D01SB1":0,"A01B1":521,"D02SB2":0,"D02SB1":0,"C03A1":65},"city_nm":"서울시","cortar_nm":"개포동","cortar_no":"1168010300","dvsn_nm":"강남구","map_x_crdn":"127.0634","map_y_crdn":"37.482968","sec_nm":"개포동"},{"articleCount":{"A1":331,"F01B1":0,"C01A1":6,"F01B2":0,"A02SB2":0,"D02A1":8,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":107,"F01SB1":0,"B01B1":0,"B01B2":0,"C01B1":51,"B2":121,"D03SB2":2,"B01SB1":0,"C01B2":470,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":150,"A02SB1":0,"E03A1":6,"B01SA1":0,"B01A1":0,"B1":57,"D03B2":13,"D03B1":0,"A01SA1":2,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":415,"A02A1":31,"A01A1":332,"C03B2":251,"D02SA1":0,"C03B1":87,"D03SA1":1,"E03SB2":0,"E03SB1":0,"D01A1":1,"C03SB1":0,"C01SB2":14,"C03SB2":4,"C01SB1":0,"A02B2":107,"A02B1":36,"A01B2":121,"D01SB2":77,"F01SA1":0,"D01SB1":0,"A01B1":58,"D02SB2":11,"D02SB1":0,"C03A1":174},"city_nm":"서울시","cortar_nm":"논현동","cortar_no":"1168010800","dvsn_nm":"강남구","map_x_crdn":"127.031375","map_y_crdn":"37.513583","sec_nm":"논현동"},{"articleCount":{"A1":1305,"F01B1":0,"C01A1":3,"F01B2":0,"A02SB2":0,"D02A1":21,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":21,"F01SB2":0,"D03A1":37,"F01SB1":0,"B01B1":573,"B01B2":585,"B2":814,"C01B1":11,"D03SB2":0,"B01SB1":24,"C01B2":370,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":5,"A01SB2":7,"D02B1":0,"D02B2":121,"A02SB1":0,"E03A1":5,"B01SA1":14,"B1":565,"B01A1":367,"D03B2":1,"D03B1":0,"A01SA1":4,"E03SA1":0,"C01SA1":0,"C03SA1":1,"D01B1":2,"D01B2":192,"A02A1":25,"A01A1":1305,"C03B2":346,"D02SA1":1,"C03B1":74,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":5,"C03SB1":3,"C01SB2":65,"C03SB2":20,"C01SB1":2,"A02B2":109,"A02B1":19,"A01B2":814,"D01SB2":15,"F01SA1":0,"D01SB1":0,"A01B1":565,"D02SB2":2,"D02SB1":0,"C03A1":44},"city_nm":"서울시","cortar_nm":"대치동","cortar_no":"1168010600","dvsn_nm":"강남구","map_x_crdn":"127.065463","map_y_crdn":"37.49911","sec_nm":"대치동"},{"articleCount":{"A1":1221,"F01B1":0,"C01A1":4,"F01B2":0,"A02SB2":0,"D02A1":7,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":15,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":739,"C01B1":8,"D03SB2":0,"B01SB1":0,"C01B2":87,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":39,"A02SB1":0,"E03A1":0,"B01SA1":0,"B01A1":10,"B1":545,"D03B2":0,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":1,"D01B2":69,"A02A1":95,"A01A1":1224,"C03B2":42,"D02SA1":0,"C03B1":31,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":14,"C03SB2":0,"C01SB1":0,"A02B2":138,"A02B1":27,"A01B2":743,"D01SB2":5,"F01SA1":0,"D01SB1":0,"A01B1":548,"D02SB2":0,"D02SB1":0,"C03A1":18},"city_nm":"서울시","cortar_nm":"도곡동","cortar_no":"1168011800","dvsn_nm":"강남구","map_x_crdn":"127.04505","map_y_crdn":"37.488143","sec_nm":"도곡동"},{"articleCount":{"A1":1055,"F01B1":0,"C01A1":2,"F01B2":0,"A02SB2":3,"D02A1":19,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":35,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":712,"C01B1":26,"D03SB2":0,"B01SB1":0,"C01B2":107,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":1,"A01SB2":15,"D02B1":0,"D02B2":79,"A02SB1":0,"E03A1":2,"B01SA1":0,"B1":381,"B01A1":0,"D03B2":3,"D03B1":0,"A01SA1":4,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":1,"D01B2":364,"A02A1":29,"A01A1":1055,"C03B2":149,"D02SA1":0,"C03B1":99,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":1,"C03SB1":0,"C01SB2":1,"C03SB2":1,"C01SB1":0,"A02B2":173,"A02B1":23,"A01B2":712,"D01SB2":60,"F01SA1":0,"D01SB1":0,"A01B1":381,"D02SB2":4,"D02SB1":0,"C03A1":61},"city_nm":"서울시","cortar_nm":"삼성동","cortar_no":"1168010500","dvsn_nm":"강남구","map_x_crdn":"127.055387","map_y_crdn":"37.514792","sec_nm":"삼성동"},{"articleCount":{"A1":84,"F01B1":0,"C01A1":0,"F01B2":0,"A02SB2":0,"D02A1":0,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":0,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":39,"C01B1":0,"D03SB2":0,"B01SB1":0,"C01B2":0,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":3,"A02SB1":0,"E03A1":6,"B01SA1":0,"B01A1":1,"B1":42,"D03B2":0,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":2,"A02A1":0,"A01A1":84,"C03B2":4,"D02SA1":0,"C03B1":3,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":0,"A02B1":0,"A01B2":39,"D01SB2":0,"F01SA1":0,"D01SB1":0,"A01B1":42,"D02SB2":0,"D02SB1":0,"C03A1":20},"city_nm":"서울시","cortar_nm":"세곡동","cortar_no":"1168011100","dvsn_nm":"강남구","map_x_crdn":"127.1046","map_y_crdn":"37.46436","sec_nm":"세곡동"},{"articleCount":{"A1":85,"F01B1":0,"C01A1":0,"F01B2":0,"A02SB2":0,"D02A1":5,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":2,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":123,"C01B1":0,"D03SB2":0,"B01SB1":0,"C01B2":1,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":2,"D02B1":0,"D02B2":12,"A02SB1":0,"E03A1":1,"B01SA1":0,"B1":55,"B01A1":6,"D03B2":1,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":26,"A02A1":36,"A01A1":85,"C03B2":0,"D02SA1":0,"C03B1":0,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":119,"A02B1":3,"A01B2":123,"D01SB2":0,"F01SA1":0,"D01SB1":0,"A01B1":55,"D02SB2":0,"D02SB1":0,"C03A1":5},"city_nm":"서울시","cortar_nm":"수서동","cortar_no":"1168011500","dvsn_nm":"강남구","map_x_crdn":"127.104886","map_y_crdn":"37.488856","sec_nm":"수서동"},{"articleCount":{"A1":33,"F01B1":0,"C01A1":3,"F01B2":0,"A02SB2":0,"D02A1":11,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":68,"F01SB1":0,"B01B1":0,"B01B2":0,"C01B1":10,"D03SB2":0,"B2":120,"B01SB1":0,"C01B2":174,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":301,"A02SB1":0,"E03A1":1,"B01SA1":0,"B01A1":0,"B1":50,"D03B2":14,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":1,"D01B2":322,"A02A1":0,"A01A1":46,"C03B2":120,"D02SA1":0,"C03B1":50,"D03SA1":1,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":2,"C01SB2":13,"C03SB2":1,"C01SB1":0,"A02B2":4,"A02B1":0,"A01B2":19,"D01SB2":35,"F01SA1":0,"D01SB1":0,"A01B1":23,"D02SB2":3,"D02SB1":0,"C03A1":33},"city_nm":"서울시","cortar_nm":"신사동","cortar_no":"1168010700","dvsn_nm":"강남구","map_x_crdn":"127.0229","map_y_crdn":"37.524142","sec_nm":"신사동"},{"articleCount":{"A1":764,"F01B1":0,"C01A1":0,"F01B2":0,"A02SB2":0,"D02A1":8,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":2,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":464,"C01B1":0,"D03SB2":0,"B01SB1":0,"C01B2":0,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":4,"D02B1":0,"D02B2":39,"A02SB1":0,"E03A1":0,"B01SA1":0,"B01A1":0,"B1":558,"D03B2":0,"D03B1":0,"A01SA1":3,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":9,"A02A1":0,"A01A1":764,"C03B2":0,"D02SA1":0,"C03B1":0,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":0,"A02B1":0,"A01B2":464,"D01SB2":0,"F01SA1":0,"D01SB1":0,"A01B1":558,"D02SB2":0,"D02SB1":0,"C03A1":0},"city_nm":"서울시","cortar_nm":"압구정동","cortar_no":"1168011000","dvsn_nm":"강남구","map_x_crdn":"127.0236","map_y_crdn":"37.5291","sec_nm":"압구정동"},{"articleCount":{"A1":19,"F01B1":0,"C01A1":6,"F01B2":0,"A02SB2":25,"D02A1":36,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":142,"F01SB1":0,"B01B1":0,"B01B2":0,"C01B1":112,"B2":822,"D03SB2":0,"B01SB1":0,"C01B2":638,"D03SB1":0,"F01A1":0,"A02SA1":8,"A01SB1":3,"A01SB2":4,"D02B1":0,"D02B2":254,"A02SB1":2,"E03A1":10,"B01SA1":0,"B01A1":24,"B1":3,"D03B2":7,"D03B1":0,"A01SA1":5,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":3,"D01B2":822,"A02A1":160,"A01A1":1065,"C03B2":333,"D02SA1":0,"C03B1":157,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":19,"C03SB1":3,"C01SB2":63,"C03SB2":3,"C01SB1":3,"A02B2":704,"A02B1":104,"A01B2":615,"D01SB2":135,"F01SA1":0,"D01SB1":0,"A01B1":284,"D02SB2":7,"D02SB1":0,"C03A1":107},"city_nm":"서울시","cortar_nm":"역삼동","cortar_no":"1168010100","dvsn_nm":"강남구","map_x_crdn":"127.03895","map_y_crdn":"37.499776","sec_nm":"역삼동"},{"articleCount":{"A1":0,"F01B1":0,"C01A1":0,"F01B2":0,"A02SB2":0,"D02A1":1,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":0,"F01SB1":0,"B01B1":9,"B01B2":3,"B2":3,"C01B1":0,"D03SB2":0,"B01SB1":0,"C01B2":0,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":1,"A02SB1":0,"B01SA1":0,"E03A1":7,"B1":9,"B01A1":0,"D03B2":0,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":0,"A02A1":0,"A01A1":0,"C03B2":2,"D02SA1":0,"C03B1":3,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":0,"A02B1":0,"A01B2":0,"D01SB2":0,"F01SA1":0,"D01SB1":0,"A01B1":0,"D02SB2":0,"D02SB1":0,"C03A1":12},"city_nm":"서울시","cortar_nm":"율현동","cortar_no":"1168011300","dvsn_nm":"강남구","map_x_crdn":"127.1114","map_y_crdn":"37.4717","sec_nm":"율현동"},{"articleCount":{"A1":217,"F01B1":0,"C01A1":1,"F01B2":0,"A02SB2":0,"D02A1":1,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":3,"F01SB1":0,"B01B1":0,"B01B2":0,"B2":108,"C01B1":7,"D03SB2":0,"B01SB1":0,"C01B2":10,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":3,"A02SB1":0,"E03A1":0,"B01SA1":0,"B1":94,"B01A1":0,"D03B2":0,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":9,"A02A1":0,"A01A1":217,"C03B2":23,"D02SA1":0,"C03B1":15,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":0,"A02B1":0,"A01B2":109,"D01SB2":0,"F01SA1":0,"D01SB1":0,"A01B1":94,"D02SB2":0,"D02SB1":0,"C03A1":21},"city_nm":"서울시","cortar_nm":"일원동","cortar_no":"1168011400","dvsn_nm":"강남구","map_x_crdn":"127.081638","map_y_crdn":"37.487485","sec_nm":"일원동"},{"articleCount":{"A1":15,"F01B1":0,"C01A1":0,"F01B2":0,"A02SB2":3,"D02A1":2,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":1,"F01SB1":0,"B01B1":0,"B01B2":0,"C01B1":0,"B2":18,"D03SB2":0,"B01SB1":0,"C01B2":1,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":0,"A01SB2":0,"D02B1":0,"D02B2":4,"A02SB1":0,"E03A1":2,"B01SA1":0,"B01A1":0,"B1":10,"D03B2":0,"D03B1":0,"A01SA1":0,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":0,"D01B2":0,"A02A1":31,"A01A1":15,"C03B2":4,"D02SA1":0,"C03B1":1,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":0,"C03SB2":0,"C01SB1":0,"A02B2":140,"A02B1":25,"A01B2":18,"D01SB2":0,"F01SA1":0,"D01SB1":0,"A01B1":10,"D02SB2":0,"D02SB1":0,"C03A1":4},"city_nm":"서울시","cortar_nm":"자곡동","cortar_no":"1168011200","dvsn_nm":"강남구","map_x_crdn":"127.101","map_y_crdn":"37.4766","sec_nm":"자곡동"},{"articleCount":{"A1":0,"F01B1":0,"C01A1":5,"F01B2":0,"A02SB2":0,"D02A1":1,"D01SA1":0,"E03B1":0,"E03B2":0,"B01SB2":0,"F01SB2":0,"D03A1":60,"F01SB1":0,"B01B1":0,"B01B2":0,"C01B1":8,"D03SB2":0,"B2":153,"B01SB1":0,"C01B2":70,"D03SB1":0,"F01A1":0,"A02SA1":0,"A01SB1":3,"A01SB2":11,"D02B1":0,"D02B2":63,"A02SB1":0,"E03A1":1,"B01SA1":0,"B01A1":0,"B1":4,"D03B2":6,"D03B1":0,"A01SA1":4,"E03SA1":0,"C01SA1":0,"C03SA1":0,"D01B1":4,"D01B2":154,"A02A1":15,"A01A1":850,"C03B2":84,"D02SA1":0,"C03B1":70,"D03SA1":0,"E03SB2":0,"E03SB1":0,"D01A1":0,"C03SB1":0,"C01SB2":1,"C03SB2":1,"C01SB1":0,"A02B2":31,"A02B1":3,"A01B2":399,"D01SB2":9,"F01SA1":0,"D01SB1":0,"A01B1":396,"D02SB2":2,"D02SB1":0,"C03A1":54},"city_nm":"서울시","cortar_nm":"청담동","cortar_no":"1168010400","dvsn_nm":"강남구","map_x_crdn":"127.05235","map_y_crdn":"37.525492","sec_nm":"청담동"}];
+			} catch (e) {};
+
+			jsonPageData={
+				tradeTypeCd : "A1",
+				rletTypeCd : "A01",
+				query : "",
+				cityNo : "1100000000",
+				dvsnNo : "1168000000",
+				cortarNo : "1168011000",
+				imgUrlService:"http://static.land.naver.net/static/service/20150804",
+				isIpad: "false",
+				flashMapUseYn : "Y",
+				loadRegionList : "N"
+			};
+		</script>
+		<script src="http://static.land.naver.net/static/service/js/201508042152/min/home/home_jindo.min.js" type="text/javascript"></script>
+		<script src="http://static.land.naver.net/static/service/js/201508042152/min/home/home_page.min.js" type="text/javascript"></script>
+	</body>
+</html>

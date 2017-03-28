@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+<title>영단어장</title>
+<link rel="stylesheet" type="text/css" href="css/conversation.css"/>
+<!-- 댓글 1.0 css -->
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/comment_e.css"> -->
+
+<!-- 댓글 2.0 css -->
+<!-- <link rel="stylesheet" type="text/css" href="css/comment_conversation_w.css" /> -->
+</head>
+<!-- [D] 언어스킨 lang 속성 부여. ISO 639-1 Language Codes 기준
+    영어 : en
+    중국어 : zh
+    일본어 : ja
+    베트남 : vi
+    태국 : th
+-->
+<body>
+<!-- 20160823 접근성 추가
+    [D] 리얼에서는 id="content" 가 본문으로 연결되어있어 아래와 같이 연결하였습니다.
+    html에서 확인해보니 작동을 안하고 있습니다. 반영후 작동이 안되면 스크립트 추가가 필요해보입니다.
+ -->
+	<a href="#content" class="skip_to_content">본문 바로가기</a>
+<!-- //20160823 접근성 추가 -->
+<div id="wrap">
+	<div class="banner_old_wrap">
+		<a href="#" class="guide">
+			<p>오늘의 회화가 개편되었습니다.</p>
+			<span>개편 이용안내 바로가기</span>
+		</a>
+		<a href="#" class="lnk_old"><span>이전버전</span></a>
+	</div>
+	<div id="header">
+		<div class="gnb">
+			<h1><a href="#"><span class="blind">오늘의 회화</span></a></h1>
+			<a href="#" class="btn_prev"><span class="blind">이전으로 바로가기</span></a>
+			<span class="date_area">
+				<a href="#" class="btn_month">1월 17일<span class="ico_arrow"></span></a>
+				<a href="#" class="btn_calendar"><span class="blind">달력 펼치기</span></a>
+			</span>
+		</div>
+		<!-- [D] 캘린더 버튼 클릭시 on클래스 추가 및 <div class="pp1" id="calendar" style="display: block;top:159px"> 수정 -->
+		<div class="pp1" id="calendar" style="display: none">
+			<div class="pp1w">
+				<div class="chh">
+					<h1>
+						<!--a href="#" class="bt5 bt5pv2"><img src="https://ssl.pstatic.net/static/www/m/im/bl.gif" width="1" height="1" alt="이전해" /> <span class="hc">이전해</span></a-->
+						<a href="#" class="bt5 bt5pv"><img src="https://ssl.pstatic.net/static/www/m/im/bl.gif"
+								width="1" height="1" alt="이전달"/> <span class="hc">이전달</span></a>
+						<span id="title">2009.12</span>
+						<a href="#" class="bt5 bt5nx"><img src="https://ssl.pstatic.net/static/www/m/im/bl.gif"
+								width="1" height="1" alt="다음달"/> <span class="hc">다음달</span></a>
+						<!--a href="#" class="bt5 bt5nx2"><img src="https://ssl.pstatic.net/static/www/m/im/bl.gif" width="1" height="1" alt="다음해" /> <span class="hc">다음해</span></a-->
+						<a href="#" class="btn_today">오늘</a>
+					</h1>
+
+				</div>
+				<table class="month2" width="100%">
+	            <!-- 20160823 접근성 추가 -->
+	            <caption class="hc">달력</caption>
+	            <!-- //20160823 접근성 추가 -->
+				<colgroup span="7" width="14%"></colgroup>
+				<thead>
+				<tr>
+					<th scope="col">일</th>
+					<th scope="col">월</th>
+					<th scope="col">화</th>
+					<th scope="col">수</th>
+					<th scope="col">목</th>
+					<th scope="col">금</th>
+					<th scope="col">토</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr id="week1">
+					<td id="d1" class="dim_hol"><a href="#" class="fnt">30</a></td>
+					<td id="d2" class="on"><a href="#">01</a></td>
+					<td id="d3"><a href="#">02</a></td>
+					<td id="d4"><a href="#">03</a></td>
+					<td id="d5"><a href="#">04</a></td>
+					<td id="d6"><a href="#">05</a></td>
+					<td id="d7" class="nbo"><a href="#">06</a></td>
+				</tr>
+				<tr id="week2">
+					<td id="d8" class="hol"><a href="#">07</a></td>
+					<td id="d9"><a href="#">08</a></td>
+					<td id="d10"><a href="#">09</a></td>
+					<td id="d11"><a href="#">10</a></td>
+					<td id="d12"><a href="#">11</a></td>
+					<td id="d13"><a href="#">12</a></td>
+					<td id="d14" class="nbo"><a href="#">13</a></td>
+				</tr>
+				<tr id="week3">
+					<td id="d15" class="hol"><a href="#">14</a></td>
+					<td id="d16"><a href="#">15</a></td>
+					<td id="d17"><a href="#">16</a></td>
+					<td id="d18"><a href="#">17</a></td>
+					<td id="d19"><a href="#">18</a></td>
+					<td id="d20" class="today"><a href="#">19</a></td>
+					<td id="d21" class="dim nbo"><a href="#">20</a></td>
+				</tr>
+				<tr id="week4">
+					<td id="d22" class="dim_hol"><a href="#">21</a></td>
+					<td id="d23" class="dim"><a href="#">22</a></td>
+					<td id="d24" class="dim"><a href="#">23</a></td>
+					<td id="d25" class="dim"><a href="#">24</a></td>
+					<td id="d26" class="dim"><a href="#">25</a></td>
+					<td id="d27" class="dim"><a href="#">26</a></td>
+					<td id="d28" class="dim nbo"><a href="#">27</a></td>
+				</tr>
+				<tr id="week5">
+					<td id="d29" class="dim_hol"><a href="#">28</a></td>
+					<td id="d30" class="dim"><a href="#">29</a></td>
+					<td id="d31" class="dim"><a href="#">30</a></td>
+					<td id="d32" class="dim"><a href="#">31</a></td>
+					<td id="d33" class="dim"><a href="#" class="fnt">01</a></td>
+					<td id="d34" class="dim"><a href="#" class="fnt">02</a></td>
+					<td id="d35" class="dim nbo"><a href="#" class="fnt">03</a></td>
+				</tr>
+				<tr id="week6" class="last">
+					<td id="d36" class="dim_hol"><a href="#" class="fnt">04</a></td>
+					<td id="d37" class="dim"><a href="#" class="fnt">05</a></td>
+					<td id="d38" class="dim"><a href="#" class="fnt">06</a></td>
+					<td id="d39" class="dim"><a href="#" class="fnt">07</a></td>
+					<td id="d40" class="dim"><a href="#" class="fnt">08</a></td>
+					<td id="d41" class="dim"><a href="#" class="fnt">09</a></td>
+					<td id="d42" class="dim nbo"><a href="#" class="fnt">10</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<a href="#" class="ac"><span class="hc">닫기</span></a>
+				<div class="tbl_dn">
+					<p>로그인 후 오늘의 영어를 학습하면<br>달력에 학습 현황이 표시됩니다.</p>
+				</div>
+			</div>
+		</div>
+		<!-- [D] 스크롤탑값이 42보다 크면 fixed 클래스 추가. 작으면 삭제 -->
+		<div class="conversation_tab_area" id="wrapper">
+			<div class="conv_tab_wrap">
+				<ul class="tab_wrap">
+				<li class="tab01 on"><a href="#">리딩</a></li>
+				<li class="tab02"><a href="#">퀴즈<span class="ico_new hc">new</span></a></li>
+				<li class="tab03"><a href="#">리스닝</a></li>
+				<li class="tab04"><a href="#">스피킹</a></li>
+				<li class="tab05"><a href="#">의견 <span class="num">25</span></a></li>
+				<li class="tab06"><a href="#">학습현황</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- [D]  default : 클래스 없음
+			  폰트 작게 1단계 : fs1
+			  폰트 작게 2단계 : fs2
+			  폰트 크게 1단계 : fs4
+			  폰트 크게 2단계 : fs5
+	-->
+	<div id="content" class="">
+		<!-- [D] 펼침/닫힘 메뉴나 텍스트입력 등과 같이 전체 레이아웃의 높이값에 영향을 주는 경우에
+				해당 영역 컨텐츠의 높이값을 재산정해야 합니다.
+		-->
+		<div class="conversation_group" id="slider">
+			<div class="conv_swipe_wrap">
+				<div class="conv_swipe_item">
+					<!-- 플리킹 영역 (의견) -->
+					<div class="conversation_wrap">
+						<!-- 20160824 내용추가 -->
+						<div class="yellow_area">
+							<div class="txt">
+								댓글의 닉네임을 터치하면<br/>작성자의 댓글/답글 모음을 볼 수 있습니다.
+							</div>
+							<a href="#" class="btn_cls"><span class="blind">안내레이어 닫기</span></a>
+						</div>
+						<!-- //20160824 내용추가 -->
+						<div class="comment_area">
+							<!--[D] 댓글영역 -->
+						</div>
+						<div class="banner_area">
+							<a href="#" class="btn_banner">
+								학습현황에서 <span class="g">출석과 점수를 확인</span>하세요<span class="ico_arrow"></span>
+							</a>
+						</div>
+						<div class="banner_area talk">
+							<a href="#" class="btn_banner">
+							<span class="banner_inner">
+								혼자서만 공부했던 오늘의 회화,
+								<span><strong>영어톡톡</strong>에서 대화하며 연습하세요</span>
+							</span>
+							</a>
+						</div>
+						<!-- footer -->
+						<div class="footer"></div>
+						<!-- //footer -->
+					</div>
+				</div>
+				<div class="conv_swipe_item">
+					<!-- 플리킹 영역 (학습현황) -->
+					<!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 87px(header영역 높이값) -->
+					<div class="conversation_wrap">
+						<div class="status_area">
+							<div class="status_control">
+								<span class="year">2016</span>년 <span class="month">1</span>월
+								<a href="#" class="btn_prev"><span class="ico_arrow"></span><span
+										class="blind">이전달</span></a>
+								<!-- [D] 비활성화 disabled 추가 -->
+								<a href="#" class="btn_next disabled"><span class="ico_arrow"></span><span
+										class="blind">다음달</span></a>
+							</div>
+							<!-- [D] 더보기 클릭하면 month, 닫기하면 삭제 -->
+							<div class="calendar_status">
+								<table>
+								<thead>
+								<tr>
+									<th>월</th>
+									<th>화</th>
+									<th>수</th>
+									<th>목</th>
+									<th>금</th>
+									<th>토</th>
+									<th>일</th>
+								</tr>
+								</thead>
+								<tbody class="weekly_status">
+								<tr>
+									<!-- [D] 학습정보가 있으면 <span class="complete"></span> 추가 -->
+									<td><a href="#">11<span class="complete"></span></a></td>
+									<td><a href="#">12</a></td>
+									<td><a href="#">13</a></td>
+									<!-- [D] 활성화 되면 on -->
+									<td><a href="#" class="on">14<span class="complete"></span></a></td>
+									<!-- [D] 아직 열리지 않은 날짜 -->
+									<td><span>15</span></td>
+									<td><span>16</span></td>
+									<td><span>17</span></td>
+								</tr>
+								</tbody>
+								<tbody class="monthly_status">
+								<tr>
+									<td><a href="#"><span class="complete"></span></a></td>
+									<td><a href="#"><span class="complete"></span></a></td>
+									<td><a href="#"><span class="complete"></span></a></td>
+									<td><a href="#"><span class="complete"></span></a></td>
+									<td><a href="#">1<span class="complete"></span></a></td>
+									<td><a href="#">2<span class="complete"></span></a></td>
+									<td><a href="#">3<span class="complete"></span></a></td>
+								</tr>
+								<tr>
+									<td><a href="#">4</a></td>
+									<td><a href="#">5<span class="complete"></span></a></td>
+									<td><a href="#">6<span class="complete"></span></a></td>
+									<td><a href="#">7<span class="complete"></span></a></td>
+									<td><a href="#">8<span class="complete"></span></a></td>
+									<td><a href="#">9<span class="complete"></span></a></td>
+									<td><a href="#">10</a></td>
+								</tr>
+								<tr>
+									<td><a href="#">11</a></td>
+									<td><a href="#">12<span class="complete"></span></a></td>
+									<td><a href="#">13<span class="complete"></span></a></td>
+									<td><a href="#" class="on">14<span class="complete"></span></a></td>
+									<td><span>15</span></td>
+									<td><span>16</span></td>
+									<td><span>17</span></td>
+								</tr>
+								<tr>
+									<td><span>18</span></td>
+									<td><span>19</span></td>
+									<td><span>20</span></td>
+									<td><span>21</span></td>
+									<td><span>22</span></td>
+									<td><span>23</span></td>
+									<td><span>24</span></td>
+								</tr>
+								<tr>
+									<td><span>25</span></td>
+									<td><span>26</span></td>
+									<td><span>27</span></td>
+									<td><span>28</span></td>
+									<td><span>29</span></td>
+									<td><span>30</span></td>
+									<td><span>31</span></td>
+								</tr>
+								</tbody>
+								</table>
+								<!-- [D] 클릭시 on 추가.
+									<div class="calendar_status"> 태그에 month 추가.
+									텍스트 : 주간 달력 보기
+								-->
+								<a href="#" class="btn_more"><span class="ico_arrow"></span><span
+										class="blind">달력 전체 보기</span></a>
+							</div>
+						</div>
+						<!-- [D] 복습 결과 -->
+						<div class="review_area">
+							<div class="section_tit">
+								<h3 class="h_tit">복습 결과</h3>
+								<a href="#" class="btn_link">출제 문장 보기</a>
+							</div>
+							<!-- [D] 80점~100점 : s100
+									 50점~79점  : s50
+									 0점 ~49점  : s0
+							-->
+							<div class="score_wrap s100">
+								<div class="score">
+									<span class="img_score"></span>
+                                    <span class="score_comment">
+                                        <strong>100점, 매우 훌륭하네요!</strong>
+                                        상위 1% 입니다.
+                                    </span>
+								</div>
+								<div class="score_bar_wrap">
+									<div class="bar_wrap">
+										<!-- [D] 화면이 로딩 될때
+												 평균 점수를 width값(%)으로 반환
+												 transition: transform 1s ease, width 0.5s ease 0s
+												 인라인 스타일로 추가
+										-->
+										<div class="everage_bar" style=""></div>
+										<!-- [D] 화면이 로딩 될때
+												 내 점수를 width값(%)으로 반환
+												 transition: transform 1s ease, width 1s ease 1s
+												 인라인 스타일로 추가
+										-->
+										<div class="myscore" style=""><span class="marker"></span></div>
+									</div>
+									<p class="score_ment">다른 이용자의 평균 점수는 <span>50점</span> 입니다.</p>
+								</div>
+							</div>
+							<a href="#" class="btn_review">다시 풀기</a>
+						</div>
+						<!-- [D] 학습 결과 -->
+						<div class="review_area">
+							<div class="section_tit">
+								<h3 class="h_tit">학습 결과</h3>
+								<a href="#" class="btn_link">회화문 보기</a>
+							</div>
+							<!-- [D] 80점~100점 : s100
+									 50점~79점  : s50
+									 0점 ~49점  : s0
+							-->
+							<div class="score_wrap s0">
+								<div class="score">
+									<span class="img_score"></span>
+                                    <span class="score_comment">
+                                        <strong>20점..? 조금 충격적이네요..</strong>
+                                        상위 92% 입니다.
+                                    </span>
+								</div>
+								<div class="score_bar_wrap">
+									<div class="bar_wrap">
+										<!-- [D] 화면이 로딩 될때
+												 평균 점수를 width값(%)으로 반환
+												 transition: transform 1s ease, width 0.5s ease 0s
+												 인라인 스타일로 추가
+										-->
+										<div class="everage_bar" style=""></div>
+										<!-- [D] 화면이 로딩 될때
+												 내 점수를 width값(%)으로 반환
+												 transition: transform 1s ease, width 1s ease 1s
+												 인라인 스타일로 추가
+										-->
+										<div class="myscore" style=""><span class="marker"></span></div>
+									</div>
+									<p class="score_ment">다른 이용자의 평균 점수는 <span>50점</span> 입니다.</p>
+								</div>
+							</div>
+							<a href="#" class="btn_review">다시 풀기</a>
+						</div>
+						<!-- [D] 퀴즈제공 안된 예전날짜 -->
+						<div class="review_area">
+							<p class="review_none">
+								<span class="g">4월 8일</span> 이전에는<br>퀴즈결과가 제공되지 않습니다.
+							</p>
+						</div>
+						<!-- [D] 주간 복습 미실행 시 -->
+						<div class="review_area">
+							<p class="review_none">
+								주간 복습을<br>아직 실행하지 않으셨습니다.
+							</p>
+							<a href="#" class="btn_review type2">주간복습 퀴즈 풀기</a>
+						</div>
+						<!-- [D] 일간 학습 미실행 시 -->
+						<div class="review_area">
+							<p class="review_none">
+								해당 날짜의 퀴즈를 아직 <br>풀지 않으셨습니다.
+							</p>
+							<a href="#" class="btn_review type3">퀴즈 풀기</a>
+						</div>
+						<!-- [D] 비로그인 시 -->
+						<div class="review_area">
+							<p class="review_none">
+								<a href="#" class="btn_login">로그인</a> 하시면 <br>출석 현황과 학습결과를 볼 수 있습니다.
+							</p>
+							<!-- [D] 80점~100점 : s100
+									 50점~79점  : s50
+									 0점 ~49점  : s0
+							-->
+							<div class="score_wrap s50">
+								<div class="score_bar_wrap">
+									<div class="bar_wrap">
+										<!-- [D] 화면이 로딩 될때
+												 평균 점수를 width값(%)으로 반환
+												 transition: transform 1s ease, width 0.5s ease 0s
+												 인라인 스타일로 추가
+										-->
+										<div class="everage_bar" style=""></div>
+									</div>
+									<p class="score_ment">다른 이용자의 평균 점수는 <span>50점</span> 입니다.</p>
+								</div>
+							</div>
+							<a href="#" class="btn_review type4">퀴즈 풀기</a>
+						</div>
+						<!-- [D] 최근 학습기록 -->
+						<div class="record_area">
+							<div class="section_tit">
+								<h3 class="h_tit">최근 학습기록</h3>
+								<dl class="chart_info">
+									<!-- [D] 비로그인시 첫번째 dt,dd display:none -->
+									<dt class="g"><span class="blind">녹색</span></dt>
+									<dd>내 점수</dd>
+									<dt><span class="blind">회색</span></dt>
+									<dd>평균점수</dd>
+								</dl>
+							</div>
+							<div class="record_chart">
+								그래프영역
+							</div>
+						</div>
+						<!-- footer -->
+						<div class="footer"></div>
+						<!-- //footer -->
+					</div>
+				</div>
+				<div class="conv_swipe_item">
+					<!-- 플리킹 영역 (리딩) -->
+					<!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 87px(header영역 높이값) -->
+					<div class="conversation_wrap">
+						<div class="notice_area">
+							<a href="#">
+								<span class="ico">공지</span>
+								오늘의 회화가 오늘의 회화가 오늘의 회화가 개편되었습니다.
+							</a>
+							<a href="#" class="btn_cls"><span class="blind">공지사항 닫기</span></a>
+						</div>
+						<div class="reading_area">
+							<!-- [D] incl_reading_area.html -->
+						</div>
+						<div class="keyword_area">
+							<!-- [D] incl_keyword_area.html -->
+						</div>
+						<div class="best_reply_area">
+							<!-- [D] incl_best_reply_area.html -->
+						</div>
+						<div class="banner_area">
+							<a href="#" class="btn_banner">
+								회화 표현과 문장 기억은 <span class="g">효과 좋은 퀴즈로</span><span class="ico_arrow"></span>
+							</a>
+						</div>
+						<div class="banner_area talk">
+							<a href="#" class="btn_banner">
+							<span class="banner_inner">
+								혼자서만 공부했던 오늘의 회화,
+								<span><strong>영어톡톡</strong>에서 대화하며 연습하세요</span>
+							</span>
+							</a>
+						</div>
+						<!-- footer -->
+						<div class="footer"></div>
+						<!-- //footer -->
+					</div>
+				</div>
+				<div class="conv_swipe_item">
+					<!-- 플리킹 영역 (퀴즈 - 난이도설정 메인) -->
+					<!-- [D] min-height : 기기별 컨텐츠 100%의 높이값 - 87px(header영역 높이값) -->
+					<div class="conversation_wrap">
+						<div class="quiz_home_area">
+							<h3 class="h_tit"><span class="txt_inner"><strong>오늘의 회화</strong>를<br><strong>퀴즈</strong>를 통해 배워보세요</span>
+							</h3>
+							<div class="level_wrap">
+								<h4 class="tit">난이도 선택</h4>
+								<ul class="level_select">
+								<li><input type="radio" name="level" id="easy" checked="checked" class="checked"><label
+										for="easy">쉽게</label></li>
+								<li><input type="radio" name="level" id="normal"><label for="normal">보통</label></li>
+								</ul>
+							</div>
+							<div class="mode_wrap">
+								<h4 class="tit">퀴 선택</h4>
+								<ul class="mode_select">
+								<li>
+									<input type="radio" name="mode" id="mode1" checked="checked" class="checked">
+									<label for="mode"><span class="ico01"></span><span class="txt">문장 만들기</span></label>
+								</li>
+								<li>
+									<input type="radio" name="mode" id="mode2">
+									<label for="mode2"><span class="ico02"></span><span class="txt">빈칸 입력하기</span></label>
+								</li>
+								<li>
+									<input type="radio" name="mode" id="mode3">
+									<label for="mode3"><span class="ico03"></span><span class="txt">종합퀴즈 <em>종합 퀴즈는 <strong>학습현황에 기록</strong>됩니다.</em></span></label>
+								</li>
+								</ul>
+							</div>
+							<div class="btn_wrap"><a href="#" class="btn_challenge">퀴즈 도전</a></div>
+						</div>
+						<!-- footer -->
+						<div class="footer"></div>
+						<!-- //footer -->
+					</div>
+				</div>
+				<div class="conv_swipe_item">
+					<!-- 플리킹 영역 (리스닝 ) -->
+					<div class="conversation_wrap">
+						<div class="listening_area">
+							<p class="tit">
+								<strong>원어민 발음을 듣고 받아적으며,</strong>
+								들릴 듯 안들리는 리스닝을<br> 극복하세요.
+							</p>
+							<a href="#" class="btn_app"><span class="blind">듣고 따라하기</span></a>
+						</div>
+						<div class="banner_area">
+							<a href="#" class="btn_banner">
+								알아듣게 말해요. <span class="g">원어민처럼 스피킹</span><span class="ico_arrow"></span>
+							</a>
+						</div>
+						<!-- footer -->
+						<div class="footer"></div>
+						<!-- //footer -->
+					</div>
+				</div>
+				<div class="conv_swipe_item">
+					<!-- 플리킹 영역 (스피킹 ) -->
+					<div class="conversation_wrap">
+						<div class="speaking_area">
+							<p class="tit">
+								<strong>원어민 발음을 듣고 따라하며,</strong>
+								한문장씩 연습해보세요.
+							</p>
+							<em class="caution">스피킹 기능은 사전앱에서 지원됩니다.</em>
+							<a href="#" class="btn_app"><span class="blind">듣고 따라하기</span></a>
+						</div>
+						<div class="banner_area">
+							<a href="#" class="btn_banner">
+								더 궁금한 점이나 의견은 <span class="g">의견나누기에서</span><span class="ico_arrow"></span>
+							</a>
+						</div>
+						<!-- footer -->
+						<div class="footer"></div>
+						<!-- //footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 보조사전 레이어 -->
+<!-- [D] 선택 영역의 위로 11px 떨어지도록 top값 조절 -->
+<div class="ly_help_dic" style="display:none">
+	<div class="txt_wrap">
+		<div class="txt_origin">Thanks</div>
+		<span class="txt_trans">[감탄사]네, 고맙습니다 (남의 제의를 정중히 받아들일 때)</span>
+	</div>
+	<a href="#" class="btn_search_all">전체검색결과 보기</a>
+	<a href="#" class="btn_cls"><span class="blind">닫기</span></a>
+	<!-- [D] 선택 영역의 중간에 위치 하도록 left값 조절 -->
+	<!-- [D] 하이라이트 단어가 위에 있으면 up 추가 -->
+	<span class="pop_arrow" style=""></span>
+</div>
+
+<!-- 출제문장보기 레이어 -->
+<!-- [D] 레이어 노출시 #wrap 에 position:fixed,
+         레이어 비노출시 #wrap position:relative
+ -->
+<div class="ly_wrap" style="display:none;">
+	<div class="ly_container">
+		<div class="ly_content">
+			<div class="ly_exam_question">
+				<h3 class="h_date"><span>2016년 1월 17일 주간복습</span></h3>
+				<div class="lst_frame">
+					<ul>
+					<li><a href="#">But the chocolate box is empty.<span class="ico_wrong">오답</span></a></li>
+					<li class="wrong"><a href="#">But the chocolate box is empty empty empty empty.<span
+							class="ico_wrong">오답</span></a></li>
+					<li class="wrong"><a href="#">But the.<span class="ico_wrong">오답</span></a></li>
+					<li><a href="#">But the.<span class="ico_wrong">오답</span></a></li>
+					<li><a href="#">But the chocolate box is empty.<span class="ico_wrong">오답</span></a></li>
+					<li><a href="#">But the chocolate box is empty.<span class="ico_wrong">오답</span></a></li>
+					</ul>
+				</div>
+				<div class="btn_area3">
+					<a href="#" class="btn_replay">틀린 문제 다시 풀기 <span>학습현황에 반영되지 않습니다.</span></a>
+				</div>
+				<a href="#" class="btn_cls hc">닫기</a>
+			</div>
+		</div>
+	</div>
+	<div class="dimmed"></div>
+</div>
+
+<!-- [D] 마크업 확인용. 개발시 삭제 -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/iScroll.js"></script>
+<script type="text/javascript" src="js/highcharts.src.js"></script>
+<script type="text/javascript"
+		src="http://view.gitlab2.uit.nhncorp.com/RND/includebyjavascript/raw/master/js/ibjs.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript">
+	IBJS.include([
+		{path: 'incl_comment_v1.html', sel: '.comment_area'},
+		{path: 'incl_reading_area.html', sel: '.reading_area'},
+		{path: 'incl_keyword_area.html', sel: '.keyword_area'},
+		{path: 'incl_best_reply_area_v1.html', sel: '.best_reply_area'},
+		{path: 'incl_footer.html', sel: '.footer'}
+	]);
+
+	window.mySwipe = new Swipe(document.getElementById('slider'));
+	window.mySwipe = new Swipe(document.getElementById('layer_slide'));
+
+</script>
+<!-- //[D] 마크업 확인용. 개발시 삭제 -->
+</body>
+</html>

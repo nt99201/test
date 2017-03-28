@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>list_map</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+<!--<div id="dom_list_map" style="bottom:0;left:0;width:100%;height:232px">-->
+	<div id="dom_list_map">
+		<div class="pdt_map_wrap">
+			<div class="pdt_map">
+				<!--pdt_lst-->
+				<div class="pdt_lst estate_agent">
+					<div class="btn_all_view"><a href="#">매물 <span>59</span>개 전체보기</a></div>
+					<div class="scroll_box" id="scroll_box">
+						<div class="scroll_area">
+							<ul class="v1_type">
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">라이프 공인중개사</p>
+												<p class="frst_info">서울 강남구 신사동 614-7</p>
+												<p class="scnd_info">
+<!--												비활성화 시 class="off", disalbed="disabled" 추가-->
+													<button type="button" class="call off" disalbed="disabled">전화걸기</button>
+													<button type="button" class="talk">1:1 채팅하기</button>
+													<button type="button" class="modoo off" disalbed="disabled">modoo 사이트가기</button>
+												</p>
+												<p class="thrth_info"><em>129</em>업체매물</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">라이프 공인중개사</p>
+												<p class="frst_info">서울 강남구 신사동 614-7</p>
+												<p class="scnd_info">
+													<button type="button" class="call">전화걸기</button>
+													<button type="button" class="talk">1:1 채팅하기</button>
+													<button type="button" class="modoo">modoo 사이트가기</button>
+												</p>
+												<p class="thrth_info"><em>129</em>업체매물</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">라이프 공인중개사</p>
+												<p class="frst_info">서울 강남구 신사동 614-7</p>
+												<p class="scnd_info">
+													<button type="button" class="call">전화걸기</button>
+													<button type="button" class="talk">1:1 채팅하기</button>
+													<button type="button" class="modoo">modoo 사이트가기</button>
+												</p>
+												<p class="thrth_info"><em>129</em>업체매물</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">라이프 공인중개사</p>
+												<p class="frst_info">서울 강남구 신사동 614-7</p>
+												<p class="scnd_info">
+													<button type="button" class="call">전화걸기</button>
+													<button type="button" class="talk">1:1 채팅하기</button>
+													<button type="button" class="modoo">modoo 사이트가기</button>
+												</p>
+												<p class="thrth_info"><em>129</em>업체매물</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">라이프 공인중개사</p>
+												<p class="frst_info">서울 강남구 신사동 614-7</p>
+												<p class="scnd_info">
+													<button type="button" class="call">전화걸기</button>
+													<button type="button" class="talk">1:1 채팅하기</button>
+													<button type="button" class="modoo">modoo 사이트가기</button>
+												</p>
+												<p class="thrth_info"><em>129</em>업체매물</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="lst_obj">
+										<a href="#">
+											<div class="thumb" alt="im/@list_img.jpg">
+												<img src="im/@list_img.jpg" alt="">
+											</div>
+											<div class="obj_info">
+												<p class="tw_name">라이프 공인중개사</p>
+												<p class="frst_info">서울 강남구 신사동 614-7</p>
+												<p class="scnd_info">
+													<button type="button" class="call">전화걸기</button>
+													<button type="button" class="talk">1:1 채팅하기</button>
+													<button type="button" class="modoo">modoo 사이트가기</button>
+												</p>
+												<p class="thrth_info"><em>129</em>업체매물</p>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--//pdt_lst-->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

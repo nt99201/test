@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>매물관리센터홈 :: 부동산 매물관리센터</title>
+    <link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css">
+    <!-- 마크업 확인용 삭제 -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- //마크업 확인용 삭제 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- skip to content -->
+    <a href="#content" class="skip">본문 바로가기</a>
+    <!-- //skip to content -->
+
+    <div id="content" class="main_container_new">
+        <div class="content_talk">
+            <h2><span class="h_set_talk"><em class="blind">1:1 톡 관리</em></span></h2>
+            <table summary="1:1톡 관리 테이블" class="set_talk_tbl master">
+                <colgroup><col width="50%"><col width="50%"></colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">중개업소명</th>
+
+                    <th scope="col">1:1톡 채널연결상태</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>믿음공인중개사</td>
+                    <td class="master">
+                        <!-- [D] 클릭시 btns_on, btns_off로 토글 -->
+                        <span class="tglBtn btns_on"><button type="button"><em class="blind">on</em></button></span>
+                        <span class="stateBtn del"><button type="button"><em class="blind">검수중</em></button></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <ul class="talk_guide">
+                <li><span class="middot"></span>ON/OFF 기는을 통해 1:1톡 대화 버튼의 노출 여부를 선택할 수 있습니다.</li>
+                <li><span class="middot"></span>삭제 버튼을 선택하시면, 개설된 채팅창과 연결정보가 삭제됩니다.</li>
+            </ul>
+            <div class="go_link">
+                <div class="goBox">
+                    <h3><em class="blind">1:1 톡 바로가기</em></h3>
+                    <p>1:1톡은 가입한 개인아이디로서 다시 로그인해야 이용할 수 있습니다.</p>
+                    <a href="#">1:1톡 대화보기</a>
+                </div>
+                <div class="goBox">
+                    <h3><em class="blind">파트너 센터 바로가기</em></h3>
+                    <p>다양한 관리 기능을 이용하고 싶다면 파트너 센터를 이용해 보세요.</p>
+                    <a href="#">파트너 센터 바로가기</a>
+                </div>
+            </div>
+            <table summary="1:1톡 관리 테이블" class="set_talk_tbl">
+                <colgroup><col width="50%"><col width="50%"></colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">중개업소명</th>
+                    <th scope="col">1:1톡 계정상태</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>믿음공인중개사</td>
+                    <td><span class="stateBtn btns_on"><button type="button"><em class="blind">ON</em></button></span></td>
+                </tr>
+                </tbody>
+            </table>
+            <script>
+                $(".tglBtn").find("button").on("click",function(){
+                    var parentClass = this.parentNode.className;
+                    if (parentClass.indexOf("btns_on") != -1) {
+                        this.parentNode.className = "tglBtn btns_off";
+                    }
+                    else {
+                        this.parentNode.className = "tglBtn btns_on";
+                    }
+                })
+            </script>
+
+        </div>
+    </div>
+    <!-- //content -->
+    <!-- footer -->
+    <script>
+        $.get("00_footer_incl.html",function(tmpl){
+            $("#wrap").append(tmpl)
+        })
+    </script>
+    <!-- //footer -->
+</div>
+</body>
+</html>

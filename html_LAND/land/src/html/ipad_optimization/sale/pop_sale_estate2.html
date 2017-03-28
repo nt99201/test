@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>분양정보 신규등록 아파트 필수정보 :: 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_isale.css">
+</head>
+<body>
+
+<div id="pop_wrap">
+	<!-- pop_header -->
+	<div id="pop_header">
+		<h1>
+			<a href="#"><img src="img/h_pop_naver.gif" width="56" height="15" alt="NAVER"></a><img src="img/pop_sale_estate2.gif" width="103" height="16" alt="단지정보 수정요청">		
+		</h1>
+	</div>
+	<!-- //pop_header -->
+
+<form method="post" name="cform">
+	<input type="hidden" name="dcl_seq" id="dcl_seq" value="8378">
+	<!-- pop_container -->
+	<div id="pop_container">
+		<!-- pop_content -->
+		<div id="pop_content">
+			<div class="pop_sale_estate2">
+				<h2 class="blind">단지정보 수정요청</h2>
+				<p class="blind">단지정보를 수정요청 하시면 절차를 거쳐서 부동산 단지 서비스에 등록됩니다.</p>
+			</div>
+			<div class="section_select estate2">
+				<fieldset>
+				<legend>구분</legend>
+					<dl>
+					<dt><span>구분</span></dt>
+					<dd>
+						<select name="sel" id="sel">
+							<option value="유형선택">유형선택</option>
+							<option value="단지정보">단지정보</option>
+							<option value="부가정보">부가정보</option>
+						</select>
+					</dd>
+					</dl>
+				</fieldset>
+			</div>
+			<div class="tab_regist tab_estate2">
+				<a href="#"><span>수정요청단지</span></a>
+			</div>
+			<div class="scroll" style="height:351px">
+				<fieldset>
+				<legend>필수정보 입력</legend>
+					<ul class="lst_info">
+					<li class="frst">
+						<h3 class="h_pop33"><span>주소</span></h3>
+						<div class="info_group address2">
+							<select name="" id="">
+								<option value="">시/도</option>
+							</select>
+							<select name="" id="">
+								<option value="">시/군/구</option>
+							</select>
+							<select name="" id="">
+								<option value="">읍/면/동</option>
+							</select>
+							<select name="" id="">
+								<option value="">단지명</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<h3 class="h_pop34"><span>문의처</span></h3>
+						<div class="info_group contact">
+							<select name="tel_no1" id="tel_no1">
+								<option value="">없음</option>
+								<option value="02" selected>02</option>
+								<option value="031">031</option>
+								<option value="032">032</option>
+								<option value="033">033</option>
+								<option value="041">041</option>
+								<option value="042">042</option>
+								<option value="043">043</option>
+								<option value="051">051</option>
+								<option value="052">052</option>
+								<option value="053">053</option>
+								<option value="054">054</option>
+								<option value="055">055</option>
+								<option value="061">061</option>
+								<option value="062">062</option>
+								<option value="063">063</option>
+								<option value="064">064</option>
+								<option value="070">070</option>
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>
+							<span>-</span><input type="text" title="문의처 중간번호"  name="tel_no2" id="tel_no2" value="" class="input_txt" maxlength="4">
+							<span>-</span><input type="text" title="문의처 마지막번호" name="tel_no3" id="tel_no3" value="" class="input_txt" maxlength="4">
+						</div>
+						<h3 class="h_pop31 type2"><span>이메일</span></h3>
+						<div class="info_group email">
+							<input type="text" title="이메일 주소" name="email_no1" id="email_no1" value="" class="input_txt">
+							<span>@</span>
+							<select name="email_no2" id="email_no2">
+								<option value="">없음</option>
+								<option value="naver" selected>naver.com</option>
+								<option value="daum.net">daum.net</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<h3 class="h_pop35"><span>상세내용</span></h3>
+						<div class="info_group contact">
+							<textarea class="text_area" style="display: "></textarea>
+							
+					
+<!-- [D] 구분:단지정보 일때 -->		
+<textarea class="text_area" style="display: none">난방방식이 도시가스인데 LPG로 잘못 표기됩니다. 
+수정 요청합니다.</textarea>
+<!-- [D] //구분:단지정보 일때 -->	
+
+<!-- [D] 구분:부가정보 일때 -->		
+<textarea class="text_area" style="display: none">교통정보의 지하철역명이 다르게 표시되어 있습니다. 
+수정 요청합니다.</textarea>
+<!-- [D] //구분:부가정보 일때 -->	
+
+							<div class="tx_num"><em>0</em><span class="and">/</span>1000</div>
+						</div>
+					</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<!-- //pop_content -->
+	</div>
+	<!-- //pop_container --> 
+	<!-- pop_footer -->
+	<div id="pop_footer">
+		<a href="javascript:data_insert();"><img src="img/btn_modify.gif" width="87" height="34" alt="수정요청"></a>
+		<a href="javascript:self.close();"><img src="img/btn_cancel.gif" width="64" height="34" alt="취소"></a>
+	</div>
+	<!-- //pop_footer -->
+</form>
+</div>
+
+</body>
+</html>

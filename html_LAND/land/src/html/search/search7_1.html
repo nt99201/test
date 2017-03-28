@@ -1,0 +1,679 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<title>경매</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="gnb"><img src="img/@img_gnb.gif" width="960" height="26" alt="" ></div>
+		<div class="sta"><img src="img/@img_sta.gif" width="495" height="41" alt="" ></div>
+		<div class="lnb"><img src="img/@img_lnb.gif" width="960" height="38" alt="" ></div>
+		<!-- 검색탭 -->
+		<div class="section_tab">
+			<div class="interaction">
+				<h2>'<strong>전국</strong>'의 '<strong>래미안</strong>' 검색 결과입니다.</h2>
+			</div>
+			<ul class="searchtab">
+			<li><a href="#" class="t1"><span>전체</span></a></li><!-- [D] 선택된 탭은 on 클래스 사용 -->
+			<li><a href="#" class="t5"><span>매물</span></a></li>
+			<li><a href="#" class="t4"><span>시세</span></a></li>
+			<li><a href="#" class="t6"><span>분양</span></a></li>
+			<li><a href="#" class="t3"><span>단지</span></a></li>
+			<li><a href="#" class="t2"><span>지역정보</span></a></li>
+			<li class="on"><a href="#" class="t7"><span>경매</span></a></li>
+			</ul>
+			<div class="rank">
+				<ol class="ranklist">
+				<li class="rank1"><a href="#">서울 아파트 전세</a> <em class="up">351</em><span>상승</span></li>
+				</ol>
+			</div>
+			<div class="ranklayer" style="display:none;">
+				<h3><a href="#">부동산 인기 검색어 <img src="img/btn_rankmore.gif" alt="" width="3" height="6" ></a></h3>
+				<ol class="ranklist">
+				<li class="rank1"><a href="#">서울 아파트 전세</a> <em class="new"><img src="img/ico_new.gif" alt="NEW" width="22" height="5" ></em></li>
+				<li class="rank2"><a href="#">판교 분양</a> <em class="up">351</em><span>상승</span></li>
+				<li class="rank3"><a href="#">세곡동 분양</a> <em class="up">51</em><span>상승</span></li>
+				<li class="rank4"><a href="#">서울 아파트 전세</a> <em class="up">1</em><span>상승</span></li>
+				<li class="rank5"><a href="#">서울 아파트 전세</a> <em class="up">31</em><span>상승</span></li>
+				<li class="rank6"><a href="#">서울 아파트 전세</a> <em class="up">35</em><span>상승</span></li>
+				<li class="rank7"><a href="#">판교 분양</a> <em class="up">5</em><span>상승</span></li>
+				<li class="rank8"><a href="#">세곡동 분양</a> <em class="up">351</em><span>상승</span></li>
+				<li class="rank9"><a href="#">세곡동 분양</a> <em class="up">999</em><span>상승</span></li>
+				<li class="rank10"><a href="#">세곡동 분양</a> <em class="up">31</em><span>상승</span></li>
+				</ol>
+			</div>
+		</div>
+		<!-- //검색탭 -->
+		
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<div class="snb">
+			<!-- 맵 -->
+			<div class="map"><img src="img/@200x200.gif" alt="" width="198" height="199" ></div>
+			<!-- //맵 -->
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>경매종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio"> <label for="type1_radio1">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio" checked="checked"> <label for="type1_radio2" class="on">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand on"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+					<div class="fold2">
+						<div class="col1">
+							<!-- [D] 체크박스 Jindo component 사용했습니다. -->
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check1">
+							</span>
+							<label for="type1_check1" class="on">아파트</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check2">
+							</span>
+							<label for="type1_check2" class="on">근린주택</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">오피스텔</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">근린상가</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">주택</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">근린시설</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">다가구</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">숙박시설</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">다세대</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">토지</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">과수원</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">대지</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">임야</label>
+						</div>
+						<div class="col2">
+							<span class="radio-applied">
+								<span class="radio-mark"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check4">
+							</span>
+							<label for="type1_check4">농지</label>
+						</div>
+						<div class="col1">
+							<span class="radio-applied">
+								<span class="radio-mark radio-checked"></span>
+								<input type="checkbox" name="checkbox1" id="type1_check3">
+							</span>
+							<label for="type1_check3" class="on">공장</label>
+						</div>
+						<div class="btn_area">
+							<a href="#"><img src="img/btn_select_auction.gif" alt="경매종류 선택" width="96" height="24" ></a>
+						</div>
+					</div>
+				</div>
+				<h3>경매가 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area" style="z-index:4">
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+					<div class="calc">
+						<h4>평형 계산기</h4>
+						<input type="text" class="calc_text" title="면적" style="width:34px;">
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">평</option>
+						   		<option value="2">㎡</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">평</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">평</li>
+									<li class="selectbox-item selectbox-item-over">㎡ </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+						<p class="result"><strong>175.5</strong> ㎡</p>
+						<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+					</div>
+				</div>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio" checked="checked"> <label for="type4_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"> <label for="type4_radio2" title="66㎡ = 20평"><em>66㎡ </em>이하</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"> <label for="type4_radio3" title="66㎡ = 20평&#13;99㎡ = 30평"><em>66~99㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"> <label for="type4_radio4" title="99㎡ = 30평&#13;132㎡ = 40평"><em>99~132㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"> <label for="type4_radio5" title="132㎡ = 40평&#13;165㎡ = 50평"><em>132~165㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio"> <label for="type4_radio6" title="165㎡ = 50평&#13;198㎡ = 60평"><em>165~198㎡</em></label></div>
+					<div class="wide pd5"><input type="radio" name="radio4" id="type4_radio11" class="btn_radio"> <label for="type4_radio11">직접입력</label> <span class="crit"><em>(㎡)</em></span></div>
+					<div class="direct">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:20px;"><em>25.8평</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:92px;"><em>25.8평</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="top:83px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>입찰일 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="wide"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">오늘</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">최근 1주</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">최근 1달</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">최근 2달</label></div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area select_none">
+					<ul>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>매물종류 (아파트,주상복합,오피스텔,재개발,원룸) <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 검색속성 -->
+			<!-- 연관검색어 -->
+			<div class="section_link">
+				<h3>연관검색어</h3>
+				<ul>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				</ul>
+			</div>
+			<!-- //연관검색어 -->
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!-- 지역선택 -->
+			<div class="section_local">
+				<div class="box">
+					<h3 class="blind">지역선택</h3>
+					<p class="locale"><strong>전국</strong></p>
+					<ul class="list_local">
+					<li><a href="#">서울시</a></li>
+					<li><a href="#">경기도</a></li>
+					<li><a href="#">인천시</a></li>
+					<li><a href="#">부산시</a></li>
+					<li><a href="#">대전시</a></li>
+					<li><a href="#">대구시</a></li>
+					<li><a href="#">울산시</a></li>
+					<li><a href="#">광주시</a></li>
+					<li><a href="#">강원도</a></li>
+					<li><a href="#">충청북도</a></li>
+					<li><a href="#">충청남도</a></li>
+					<li><a href="#">경상북도</a></li>
+					<li><a href="#">경상남도</a></li>
+					<li><a href="#">전라북도</a></li>
+					<li><a href="#">전라남도</a></li>
+					<li><a href="#">제주도</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //지역선택 -->
+			<!-- 경매 -->
+			<div class="section_collection auction_collection nograph">
+				<div class="sale_top">
+					<h3 class="intab"><img src="img/h_collection_auction.gif" alt="경매" width="25" height="15" > (34,567건)</h3>
+					<ul class="tab_sort">
+					<li class="t15"><a href="#" class="on"><span>입찰일자순</span></a></li>
+					<li class="t16"><a href="#"><span>유찰횟수순</span></a></li>
+					<li class="t17"><a href="#"><span>최저경매가순</span></a></li>
+					<li class="t2"><a href="#"><span>지역순</span></a></li>
+					<li class="t11"><a href="#"><span>면적순</span></a></li>
+					</ul>					
+				</div>
+				<table class="collection_table" summary="">
+				<caption class="blind">경매정보</caption>
+				<colgroup>
+				<col width="74">
+				<col width="68">
+				<col>
+				<col width="118">
+				<col width="81">
+				<col width="66">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">사건번호</th>
+				<th scope="col">경매종류</th>
+				<th scope="col">소재지</th>
+				<th scope="col"><span class="newline">감정평가액(원)</span>최저경매가(원)</th>
+				<th scope="col">결과/유찰횟수</th>
+				<th scope="col">일찰일자</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr>
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				<tr class="last">
+				<td class="num">5897-5288</td>
+				<td>아파트</td>
+				<td class="tl"><a href="#" class="underline">서울시 강남구 청담동 101-1 대우로얄 카운티 6차 1동 101호</a><span class="auctext">건물 463.47㎡ <span class="bar">|</span> 토지 292.8㎡</span></td>
+				<td class="num"><strong><a href="#">80,320,000,000</a></strong> <strong class="newline"><a href="#" class="orange">24,320,000,000</a></strong></td>
+				<td class="num">진행/22</td>
+				<td class="num">2010.01</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="paginate">
+					<a href="#" class="pre_end">처음</a>
+					<a href="#" class="pre">이전</a>
+					<a href="#">1</a>
+					<strong>2</strong>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">다음</a>
+					<a href="#" class="next_end">끝</a>
+				</div>
+			</div>
+			<!-- //경매 -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- 우측플로팅 -->
+	<div class="my_sales">
+		<div class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="#"><img src="img/btn_my_popup_login.gif" width="59" height="17" alt="로그인" style="margin-bottom:2px;"></a>
+			</div>	
+		</div>			
+		<div class="bg_my_sales_b"></div>
+		<div class="bg_my_sales_t">
+			<h3 class="type2">최근본단지</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 본 단지가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span> 
+			</div>
+			<h3 class="type3">최근검색어</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 검색어가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span> 
+			</div>			
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+					<legend class="blind">평형계산</legend>
+					<input type="text" class="input_text" title="값 입력" value="11"><a href="#"><img src="img/btn_calculate.gif" alt="계산" width="61" height="18" class="input_btn"></a>
+					<input type="text" class="input_text" title="값 입력" value="11">
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+	<!-- //우측플로팅 -->
+	<!-- footer -->
+	<div id="footer">
+		<!-- 연관검색어 -->
+		<div class="foot_link">
+			<h3>연관검색어</h3>
+			<p>
+				<a href="#">정자동 아파트</a>, 
+				<a href="#">강남구 아파트</a>, 
+				<a href="#">정자동 오피스텔</a>, 
+				<a href="#">서울 3억 아파트</a>, 
+				<a href="#">정자동 아파트</a>, 
+				<a href="#">강남구 아파트</a>, 
+				<a href="#">정자동 오피스텔</a>, 
+				<a href="#">서울 3억 아파트</a>
+			</p>
+			<a href="#" class="btn_top">맨위로</a>
+		</div>
+		<!-- //연관검색어 -->
+		<img src="img/@img_footer.gif" alt="" width="960" height="184" >
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html> 
+
+

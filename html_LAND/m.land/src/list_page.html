@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>list_page</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_list_page">
+		<!--list_page-->
+		<div class="list_page">
+<!--		리스트내에 알림버튼 노출된 경우 alarm_set 추가-->
+			<div class="h_loc alarm_set">
+<!--            한줄일 경우 <h1 class="sngl">-->
+                <h2>서초구 양재동 주변<span class="num"><span>26</span></span></h2>
+                <p class="sub_info">아파트, 오피스텔, 원룸 / 30,000만원 이하</p>
+                <button type="button" class="btn_set on">ON</button>
+
+                <div class="align1_1">
+                <select name="" id="">
+                  <option value="">랭킹순</option>
+                  <option value="">낮은가격순</option>
+                  <option value="">높은가격순</option>
+                  <option value="">좁은면적순</option>
+                  <option value="">넓은면적순</option>
+                  <option value="">최신순</option>
+                  <option value="">오래된순</option>
+                </select>
+                </div>
+                <a href="" class="prev"><em>뒤로</em></a>
+            </div>
+
+            <div class="view_mode">
+                <!-- [D] 셀렉트 박스 추가 -->
+                <div class="align1">
+                   	<select name="" id="">
+                   	<option value="">랭킹순</option>
+					<option value="">낮은가격순</option>
+					<option value="">높은가격순</option>
+					<option value="">좁은면적순</option>
+					<option value="">넓은면적순</option>
+					<option value="">최신순</option>
+					<option value="">오래된순</option>
+					</select>
+                </div>
+            </div>
+
+			<div class="pdt_page">
+			<!--pdt_lst-->
+				<div class="pdt_lst">
+					<ul class="v1_type">
+						<li class="new_chked">
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place">현장</span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스단지 409동<span class="new2">NEW</span></p>
+										<p class="frst_info"><span class="i_sq_full type4">단기</span><span class="price"><strong>162,000</strong><strong>440</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/44m², 4/1000005층</span></p>
+										<p class="fifth_info deal_complt">확인매물<span>15.00.00</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="closed_box">
+								<p class="closed_txt">노출이 종료된 매물입니다.</p>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_mbr_certify">회원인증</span>
+										<img src="im/@list_img.jpg" alt="">
+										<span class="i_play"></span>
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스단지 409동<span class="new2">NEW</span></p>
+										<p class="frst_info"><span class="i_sq_full type2">전세</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp off" disalbed="disabled">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/44m², 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb">
+										<span class="i_mbr_certify">회원인증</span>
+										<span class="no_img"><span>이미지 없음</span></span>
+									</div>
+									<div class="obj_info">
+										<p class="tw_name"><span class="i_mbr_certify">회원인증</span>삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp off">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/44m², 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li class="chked">
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place"></span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/44m², 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place"></span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/44m², 4/15층</span></p>
+										<p class="frth_info"><span  class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="lst_obj">
+								<a href="#">
+									<div class="thumb" alt="im/@list_img.jpg">
+										<span class="i_sq_place"></span>
+										<img src="im/@list_img.jpg" alt="">
+									</div>
+									<div class="obj_info">
+										<p class="tw_name">삼성힐스테이트1단지 409동</p>
+										<p class="frst_info"><span class="i_sq_full type3">매매</span><span class="price"><strong>2,000</strong><strong>44</strong></span><span class="i_cir_hp">전화걸기</span></p>
+										<p class="scnd_info">동향 거실 앞뒤 전망 좋고 즉시입주</p>
+										<p class="thrth_info"><span class="pdt_type_tit">오피스텔</span><span>59/44m², 4/15층</span></p>
+										<p class="frth_info"><span class="date_txt">등록일</span><span>2015.07.20</span></p>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--//pdt_lst-->
+				</div>
+
+			<div class="ic map" style="position:fixed;bottom:15px;left:15px;">지도보기</div>
+			<div class="ic top" style="position:fixed;bottom:15px;right:20px">상단으로 가기</div>
+
+		</div>
+		<!--//list_page-->
+	</div>
+</div>
+</body>
+</html>

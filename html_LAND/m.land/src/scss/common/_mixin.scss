@@ -1,0 +1,177 @@
+@import "_variable";
+
+%bg-common-style {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+@mixin sp_header(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_header.png) no-repeat;
+	background-size: 190px 105px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_ic(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_ic.png) no-repeat;
+	background-size: 435px 255px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_lst(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_lst.png) no-repeat;
+	background-size: 265px 300px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_end(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_end.png) no-repeat;
+	background-size: 225px 340px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_scrh(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_scrh.png) no-repeat;
+	background-size: 85px 50px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_lypop(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_lypop.png) no-repeat;
+	background-size: 220px 230px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_side(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_side.png) no-repeat;
+	background-size: 165px 145px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_flt(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_flt.png) no-repeat;
+	background-size: 385px 330px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_fclty(){
+	display: $inbck;
+	background:url(#{$imgUrl-mobile}/sp_fclty.png) no-repeat;
+	background-size: 240px 250px;
+	@extend %bg-common-style;
+}
+
+@mixin sp_guide_pdt {
+	background:url(#{$imgUrl-mobile}/sp_guide.png) no-repeat;
+    background-size:345px 450px;
+}
+
+@mixin shotString() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+		word-break: break-all;
+}
+
+@mixin webkitFlex() {
+    display: -webkit-flex;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+}
+
+@mixin horizonAlign($value:center) {
+    -webkit-box-pack: $value;
+    -webkit-justify-content: $value;
+    justify-content: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+}
+
+@mixin verticalAlign($value:center) {
+    -webkit-box-align: $value;
+    -webkit-align-items: $value;
+		-ms-grid-row-align: $value;
+    align-items: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+}
+
+/* prefix mixin helper */
+@mixin prefix($property, $value) {
+    -webkit-#{$property}:$value;
+		-moz-#{$property}:$value;
+    #{$property}:$value;
+}
+
+/* card top area Outer Glow effect */
+@mixin outerglow() {
+    content: '';
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: $crd-box-top;
+    background-color: #e4e8e9;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* multi-line ellipsis mixin */
+@mixin ellis($value:1) {
+	overflow: hidden;
+	@if ($value == 1) {
+		white-space: nowrap;
+    text-overflow: ellipsis;
+		word-break: break-all;
+	}
+	@else {
+		display:-webkit-box;
+    -webkit-line-clamp:$value;
+    -webkit-box-orient:vertical;
+    white-space:normal;
+    word-wrap:break-word
+	}
+}
+
+
+/* image outline */
+@mixin image-outline() {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:1px solid rgba(0,0,0,.08);
+    box-sizing: border-box;
+}
+
+// 미디어쿼리
+$breakpoints: (
+	'small': (min-width: 481px),
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

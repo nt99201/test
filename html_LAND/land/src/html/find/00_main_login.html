@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>메인 :: 맞춤매물</title>
+<link rel="stylesheet" type="text/css" href="../../css/findhouse.css">
+</head>
+
+<body onload="getGNB();">
+<div id="wrap">
+
+	<div id="u_skip">
+		<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+		<a href="#content"><span>본문으로 바로가기</span></a>
+	</div>
+
+	<!-- 원네이버 GNB -->
+	<div id="header" class="header_one">
+		<div class="gnb_wrap">
+			<div class="inner_wrap">
+				<div class="item_area">
+					<h1 class="logo_area">
+						<a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+						<a class="logo_land" href="http://land.naver.com"><i class="icon">부동산</i></a>
+					</h1>
+					<div class="inner_gnb_search">
+						<h2 class="blind">검색영역</h2>
+						<fieldset>
+							<legend>부동산 검색</legend>
+							<input type="text" title="검색" class="search_input" placeholder="지역명 또는 단지명">
+							<a href="#" onclick="" class="search_button type_inside"><i class="icon">검색</i></a>
+							<a href="#" onclick="" class="search_button type_integration"><i class="icon">통합검색</i></a>
+						</fieldset>
+					</div>
+				</div>
+				<div class="gnb_area">
+					<div id="gnb">
+						<script type="text/javascript">
+						var nsc = "naver.service";
+						var gnb_service = "static.nid.naver.com";
+						var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+						var gnb_template = "gnb_utf8";
+						var gnb_one_naver = 1;
+						</script>
+						<script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lnb" class="nav_wrap">
+			<h2 class="blind">메인메뉴</h2>
+			<div class="inner_wrap">
+				<!-- [D] 활성화 클래스 on -->
+				<ul class="nav_list">
+				<li class="menu main_home"><a href="#">부동산 홈</a></li>
+				<li class="menu main_article"><a href="#">매물</a></li>
+				<li class="menu main_isale"><a href="#">분양</a></li>
+				<li class="menu main_news"><a href="#">뉴스</a></li>
+				<li class="menu main_community"><a href="#">커뮤니티</a></li>
+				<li class="menu main_auction"><a href="#">경매</a></li>
+				<li class="menu main_mypage on"><a href="#">MY페이지</a></li>
+				</ul>
+				<div class="button_area">
+					<a class="type_admin" href="http://landad.naver.com">부동산관리센터</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //원네이버 GNB -->
+
+	<div id="container" class="main">
+		<div class="main_spot_wrap">
+			<div class="main_spot">
+				<div class="ly_open">OPEN</div>
+				<dl class="spot_cont">
+				<dt>원하는 매물을 직접 찾아주는 맞춤매물 서비스</dt>
+				<dd>아이때문에 초등학교 근처 집을 찾으세요? 주변에 CCTV가 있는 원룸을 찾으세요? 네이버에 원하는 매물을 의뢰하시면 조건에 맞는 매물을 추천해 드립니다</dd>
+				<dd class="btn"><a href="#" class="btn_rq">맞춤매물의뢰신청</a> <a href="#" class="btn_my">MY 맞춤매물 확인</a></dd>
+				</dl>
+				<div class="vod"><img src="img/@vod.gif" alt="부동산 맞춤매물 체험하기"></div>
+			</div>
+		</div>
+		<hr>
+		<div class="bar"></div>
+		<div id="content">
+			<div class="qa_area">
+				<h3 class="h_m">맞춤매물 Q&#38;A</h3>
+				<dl class="qa">
+				<dt><span>Q.</span><a href="#">맞춤매물이란 무엇인가요?</a></dt>
+				<!-- [D] 내용 3줄이 넘어가면 ... 으로 표시 부탁합니다 -->
+				<dd><span>A.</span><a href="#">매수/임차인이 매물 찾기를 의뢰하면 네이버가 의뢰를 확인한 후 관련 지역 중개업소에 제공하고,<br>중개업소가 조건 매수/임차인이 매물 찾기를 의뢰하면 네이버가 추천된 매물을 검수한 후 매수/임차인에게 제공해 드리는 서비스입니다.</a></dd>
+				</dl>
+				<ul class="q_list">
+				<li><span>Q.</span><a href="#">맞춤매물 서비스는 네이버 아이디만으로 이용할 수 있나요?</a></li>
+				<li><span>Q.</span><a href="#">맞춤매물은 무료로 이용할 수 있나요?</a></li>
+				</ul>
+				<a href="#" class="more">더보기</a>
+			</div>
+			<h3 class="h_m2">맞춤매물 STEP | 의뢰하신 맞춤매물은 영업일 기준 7일 이내 확인하실 수 있습니다.</h3>
+			<div class="service_step">
+				<div class="service_step_img"></div>
+				<ol class="service_step_cont">
+				<li>STEP1. 의뢰인 - 맞춤매물 신청하기 페이지에서 의뢰 내용을 작성하세요.</li>
+				<li>STEP2. 네이버 - 네이버에서 의뢰 내용을 확인한 후 관련 지역 중개업소에 전달합니다.</li>
+				<li>STEP3. 중개업소 - 선정된 중개업소에서 의뢰 조건에 맞는 매물을 추천합니다.</li>
+				<li>STEP4. 네이버→의뢰인 - 중개업소에서 추천한 맞춤매물정보를 확인해 보세요.</li>
+				</ol>
+			</div>
+		</div>
+		<hr>
+
+		<div class="aside_main">
+			<div class="login">
+				<p class="login_head"><strong>로그인</strong> 해주세요.</p>
+				<div class="login_cont">로그인하시면 맞춤매물 의뢰를 신청하시거나<br>의뢰하신 맞춤매물 정보를 확인하실 수 있습니다.</div>
+				<a href="#" class="btn_login">로그인</a>
+			</div>
+			<div class="aside_ban"><img src="img/@ban.gif" alt="banner"></div>
+			<dl class="notice">
+			<dt>공지사항</dt>
+			<dd><a href="#">[오픈] 부동산 맞춤매물 서비스 오픈</a></dd>
+			<dd><a href="#">[종료] 국민은행 시세 서비스 종료</a></dd>
+			<dd><a href="#">[오픈] 부동산뱅크 시세 서비스 오픈</a></dd>
+			<dd><a href="#">[오픈] 부동산114 시세 서비스 오픈</a></dd>
+			<dd class="more"><a href="#">더보기</a></dd>
+			</dl>
+		</div>
+	</div>
+	<hr>
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

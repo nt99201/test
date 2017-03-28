@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+//mixin,placeholder내에서 사용가능
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: $value;
+    }
+
+    #{$property}: $value;
+}
+
+@function is-valid-length($value) {
+    @return (type-of($value) == "number" and not unitless($value))
+		or (index(auto initial inherit 0, $value) != null);
+}
+
+// position sample
+//.test{ @include absolute(top left); } => top:0; left:0
+//.test2{ @include absolute(all); } => top:0; left:0; right:0; bottom:0
+//.test3{ @include absolute(left 10px right 10px) } => left:10px; right:10px
+@mixin position($position, $args: ()) {
+    $offsets: top right bottom left;
+    position: $position;
+
+    @if $args == all {
+        top:0;left:0;right:0;bottom:0
+    } @else {
+
+        @each $offset in $offsets {
+            $index: index($args, $offset);
+
+            @if $index {
+                @if $index == length($args) {
+                    #{$offset}: 0;
+                }
+                @else {
+                    $next: nth($args, $index + 1);
+                    @if is-valid-length($next) {
+                        #{$offset}: $next;
+                    }
+                    @else if index($offsets, $next) {
+                        #{$offset}: 0;
+                    }
+                    @else {
+                        @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@mixin absolute($args: ()) {
+    @include position(absolute, $args);
+}
+
+@mixin fixed($args: ()) {
+    @include position(fixed, $args);
+}
+
+@mixin relative($args: ()) {
+    @include position(relative, $args);
+}
+
+@mixin ellipsis ($lines: 1) {
+    @if ($lines == 1) {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@mixin pseudoElement($display: block, $width: null, $height: null) {
+    content: '';
+    display: $display;
+    width: $width;
+    height: $height;
+    @if (type-of($display) == number) {
+        @error 'Check display value';
+    }
+}
+
+@mixin boxSizing($value: border-box) {
+    @include prefix(box-sizing, $value, 'webkit' 'moz');
+}
+
+@mixin borderRadius($length) {
+    @include prefix(border-radius, $length, 'webkit' 'moz');
+}
+
+@mixin boxFlex($rate) {
+    @include prefix(box-flex, $rate, 'webkit' 'moz');
+}
+
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin retina($src, $width, $height){
+    @media screen and (-webkit-min-device-pixel-ratio:1.5){
+        background-image:url($src);
+        @include prefix(background-size, $width $height, 'webkit');
+    }
+}
+
+@mixin retina($src, $width, $height){
+    @media screen and (-webkit-min-device-pixel-ratio:1.5){
+        background-image:url($src);
+        @include prefix(background-size, $width $height, 'webkit');
+    }
+}
+
+// grunt-spritesmith mixin
+@mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+}
+
+// sprite 배열의 순서는 알파벳 순으로 변경되기 때문에 인자를 숫자로 사용하면 위험하다.
+@mixin sprite_nthimage($nth) {
+    .#{nth($sp_opinion_sprites_name, $nth)} {
+        @include sprite(nth($sp_opinion-sprites, $nth));
+    }
+}
+
+//오늘의 회화 sprite img
+@mixin spriteConversation($width,$height,$xPos,$yPos) {
+    width:$width;
+    height:$height;
+    background-position:$xPos $yPos;
+}

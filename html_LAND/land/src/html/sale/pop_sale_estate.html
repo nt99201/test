@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>분양정보 신규등록 아파트 필수정보 :: 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_isale.css">
+</head>
+<body>
+
+<div id="pop_wrap">
+	<!-- pop_header -->
+	<div id="pop_header">
+		<h1>
+			<a href="#"><img src="img/h_pop_naver.gif" width="56" height="15" alt="NAVER"></a><img src="img/pop_sale_estate.gif" width="103" height="15" alt="단지정보 신규등록">		
+		</h1>
+	</div>
+	<!-- //pop_header -->
+
+<form method="post" name="cform">
+	<input type="hidden" name="dcl_seq" id="dcl_seq" value="8378">
+	<!-- pop_container -->
+	<div id="pop_container">
+		<!-- pop_content -->
+		<div id="pop_content">
+			<div class="pop_sale_estate">
+				<h2 class="blind">단지정보 신규등록</h2>
+				<p class="blind">단지정보를 등록요청 하시면 절차를 거쳐서 부동산 단지 서비스에 등록됩니다.</p>
+			</div>
+			<div class="section_select estate">
+				<fieldset>
+				<legend>단지종류선택</legend>
+					<dl>
+					<dt><span>단지종류선택</span></dt>
+					<dd>
+						<input type="radio" id="sale" name="supp_div" value="아파트" checked><label for="sale">아파트</label>
+						<input type="radio" id="sale2" name="supp_div" value="오피스텔"><label for="sale2">오피스텔</label>
+						<input type="radio" id="sale3" name="supp_div" value="분양권"><label for="sale3">분양권</label>
+					</dd>
+					</dl>
+				</fieldset>
+			</div>
+			<div class="tab_regist tab_estate">
+				<a href="#"><span>단지정보</span></a>
+				<div class="check_area">
+					<input type="checkbox" id="c1"><label for="c1">아파트</label><input type="checkbox" id="c2"><label for="c2">주상복합</label><input type="checkbox" id="c3"><label for="c3">재건축</label>
+				</div>
+			</div>
+			<p class="desc_regist">해당 필수정보들은 전부 입력해주세요</p>
+			<div class="scroll" style="height:351px">
+				<fieldset>
+				<legend>필수정보 입력</legend>
+					<ul class="lst_info">
+					<li class="frst">
+						<h3 class="h_pop29"><span>단지명</span></h3>
+						<div class="info_group building">
+							<input type="text" title="건물명" id="build_nm" name="build_nm" value="" onChange="javascript:setCheckLen('건물명',this,'build_nm_size',40);" onKeyUp="javascript:setCheckLen('건물명',this,'build_nm_size',40);"  onKeydown="javascript:setCheckLen('건물명',this,'build_nm_size',40);" class="input_txt"><span>(<em><span id="build_nm_size">0</span></em>/40byte)</span>
+						</div>
+					</li>
+					<li>
+						<h3 class="h_pop3"><span>주소</span></h3>
+						<div class="info_group address">
+							<input type="hidden" name="cortar_no" id="cortar_no" value=""><input type="text" title="주소" name="addr" id="addr" value="[주소검색]을 클릭하여 &acute;동(읍/면/리)&acute;를 선택" class="input_txt" onclick="javascript:popNaverZipcode();" readonly><a href="javascript:popNaverZipcode();"><img src="img/btn_address.gif" width="52" height="21" alt="주소검색"></a>
+							<input type="text" title="상세주소" id="dtl_addr" name="dtl_addr"  value="번지수를 포함한 상세 주소 입력(예: 254-1 미래에셋 빌딩 8층)" class="input_txt" onfocus="javascript:toClear('번지수를 포함한 상세 주소 입력(예: 254-1 미래에셋 빌딩 8층)', this);">
+						</div>
+					</li>
+					<li>
+						<h3 class="h_pop30"><span>연락처</span></h3>
+						<div class="info_group contact">
+							<select name="tel_no1" id="tel_no1">
+								<option value="">없음</option>
+								<option value="02" selected>02</option>
+								<option value="031">031</option>
+								<option value="032">032</option>
+								<option value="033">033</option>
+								<option value="041">041</option>
+								<option value="042">042</option>
+								<option value="043">043</option>
+								<option value="051">051</option>
+								<option value="052">052</option>
+								<option value="053">053</option>
+								<option value="054">054</option>
+								<option value="055">055</option>
+								<option value="061">061</option>
+								<option value="062">062</option>
+								<option value="063">063</option>
+								<option value="064">064</option>
+								<option value="070">070</option>
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>
+							<span>-</span><input type="text" title="문의처 중간번호"  name="tel_no2" id="tel_no2" value="" class="input_txt" maxlength="4">
+							<span>-</span><input type="text" title="문의처 마지막번호" name="tel_no3" id="tel_no3" value="" class="input_txt" maxlength="4">
+						</div>
+						<h3 class="h_pop31 type2"><span>이메일</span></h3>
+						<div class="info_group email">
+							<input type="text" title="이메일 주소" name="email_no1" id="email_no1" value="" class="input_txt">
+							<span>@</span>
+							<select name="email_no2" id="email_no2">
+								<option value="">없음</option>
+								<option value="naver" selected>naver.com</option>
+								<option value="daum.net">daum.net</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<h3 class="h_pop32"><span>요청내용</span></h3>
+						<div class="info_group contact">
+							<textarea class="text_area">경기도 성남시 정자동 신축 아파트로 2014년 7월 1일 입주예정인 단지입니다.
+네이버 부동산에 노출이 안되고 있어 신규 단지 등록 요청합니다.</textarea>
+							<div class="tx_num"><em>0</em><span class="and">/</span>1000</div>
+						</div>
+					</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<!-- //pop_content -->
+	</div>
+	<!-- //pop_container --> 
+	<!-- pop_footer -->
+	<div id="pop_footer">
+		<a href="javascript:data_insert();"><img src="img/btn_regist.gif" width="87" height="34" alt="등록신청"></a>
+		<a href="javascript:self.close();"><img src="img/btn_cancel.gif" width="64" height="34" alt="취소"></a>
+	</div>
+	<!-- //pop_footer -->
+</form>
+</div>
+
+</body>
+</html>

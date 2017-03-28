@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>중개업소 업무대행 - 영업권 관리 :: 부동산 영업툴</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_tool.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- skip to content -->
+	<a href="#content" class="skip">본문 바로가기</a>
+	<!-- //skip to content -->
+
+	<!-- header -->
+	<div id="header">
+	</div>
+	<!-- //header -->
+	<div id="container" class="con_snb">
+		<div class="snb">
+			<img src="img/@snb.gif" width="180" height="165" alt="">
+		</div>
+		<!-- content -->
+		<div id="content">
+			<h2 class="h_tit"><span class="h_agency_info">중개업소별 영업권 정보확인</span></h2>
+			<p class="tx_info">중개업소 정보 및 영업권을 위임받은 기간정액제/현장확인 패키지 상품에 대한 정보를 확인하실 수 있습니다.  <br>
+			<em>가입현황</em>에서 <em>신청가능/재계약대상</em>을 클릭하면 해당 상품에 대한 신규 신청/재계약 신청을 진행하실 수 있습니다.  <br>
+			<em>영업권확보일</em>을 클릭하면 해당 상품에 대한 구매 내역 및 영업권 히스토리를 확인하실 수 있습니다.</p>
+			<div class="his_sch">
+				<h3 class="h_stit"><span class="h_agency_info">중개업소 정보</span></h3>
+				<table cellspacing="0" border="1" summary="정보입력/선택" class="tbl_tool">
+				<caption>정보입력/선택</caption>
+				<colgroup>
+				<col width="133"><col width="607">
+				</colgroup>
+				<tbody> 
+				<tr class="frst">
+				<th scope="row">중개업소명</th>
+				<td>솔로몬공인중개사사무소 <a href="#" class="btn btn_sale"><span class="blind">업체매물보기</span></a></td>
+				</tr>
+				<tr>
+				<th scope="row">중개업소 대표</th>
+				<td>홍길동</td>
+				</tr>
+				<tr>
+				<th scope="row">중개없소 주소</th>
+				<td>서울시 동대문구 장안2동 719-1호</td>
+				</tr>
+				<tr>
+				<th scope="row">중개업소 전화번호</th>
+				<td>02-1234-4829</td>
+				</tr>
+				</table>
+				<h3 class="h_stit"><span class="h_product_info">기간정액제/패키지 상품정보</span></h3>
+				<table cellspacing="0" border="1" summary="정보입력/선택" class="tbl_tool">
+				<caption>정보입력/선택</caption>
+				<colgroup>
+				<col width="148"><col width="592">
+				</colgroup>
+				<tbody> 
+				<tr class="frst">
+				<th scope="row">상품종류</th>
+				<td>
+					<select style="width:108px">
+					<option>전체</option>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">매물종류/지역/단지명</th>
+				<td>
+					<select style="width:108px;margin-right:6px">
+					<option>전체</option>
+					</select>
+					<select style="width:88px;margin-right:6px">
+					<option>시/도</option>
+					</select>
+					<select style="width:108px;margin-right:6px">
+					<option>시/군/구</option>
+					</select>
+					<select style="width:108px;margin-right:6px">
+					<option>읍/면/동</option>
+					</select>
+					<select style="width:108px">
+					<option>단지리스트</option>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">가입현황</th>
+				<td>
+					<select style="width:108px">
+					<option>전체</option>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">영업권 확보일</th>
+				<td>
+					<span class="bx_cal">
+						<input type="text" title="시작일자">
+						<a href="#" class="btn btn_cal">달력</a>
+					</span>
+					<span class="dash">~</span>
+					<span class="bx_cal">
+						<input type="text" title="종료일자">
+						<a href="#" class="btn btn_cal">달력</a>
+					</span>
+				</td>
+				</tr>
+				</tbody> 
+				</table>
+				<div class="btn_area">
+					<a href="#" class="btn btn_sch"><span class="blind">조회하기</span></a>
+				</div>
+			</div>
+			<div class="his_result">
+				<p class="tx_result">결과값 <strong><em>42</em>건</strong></p>
+				<table cellspacing="0" border="1" summary="정보입력/선택" class="tbl_tool tbl_tool_v2">
+				<caption>정보입력/선택</caption>
+				<colgroup>
+				<col width="86"><col width="79"><col width="68"><col width="153"><col width="92"><col width="54"><col width="69"><col width="58"><col width="81">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="frst">중개업소</th>
+				<th scope="col">상품종류</th>
+				<th scope="col">매물종류</th>
+				<th scope="col">지역</th>
+				<th scope="col">단지/재개발명</th>
+				<th scope="col">입점현황</th>
+				<th scope="col"><a href="#">신청가능일</a></th>
+				<th scope="col">가입현황</th>
+				<th scope="col"><a href="#">영업권확보일</a></th>
+				</tr>
+				</thead>
+				<tbody> 
+				<tr class="frst">
+				<td><a href="#">솔로몬부동산 (pl_1080)</a></td>
+				<td>PC프리미엄</td>
+				<td>아파트</td>
+				<td>서울시 강남구 개포동</td>
+				<td>LG개포자이</td>
+				<td>2/2</td>
+				<td>2012.08.20<br>11:23:00</td>
+				<td>미신청<br>(<a href="#" class="apply">신청가능</a>)</td>
+				<td><a href="#">2012.08.20</a></td>
+				</tr>
+				<tr class="even">
+				<td><a href="#">솔로몬부동산 (pl_1080)</a></td>
+				<td>PC프리미엄</td>
+				<td>아파트</td>
+				<td>서울시 강남구 개포동</td>
+				<td>LG개포자이</td>
+				<td>2/2</td>
+				<td>2012.08.20<br>11:23:00</td>
+				<td>미신청<br>(<em class="apply">신청불가</em>)</td>
+				<td><a href="#">2012.08.20</a></td>
+				</tr>
+				<tr class="">
+				<td><a href="#">솔로몬부동산 (pl_1080)</a></td>
+				<td>PC프리미엄</td>
+				<td>아파트</td>
+				<td>서울시 강남구 개포동</td>
+				<td>LG개포자이</td>
+				<td>2/2</td>
+				<td>2012.08.20<br>11:23:00</td>
+				<td>영업관리자<br>(mintsmell)</td>
+				<td><a href="#">2012.08.20</a></td>
+				</tr>
+				</tbody> 
+				</table>
+				<div class="paginate">
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">다음 </a>
+				</div>
+			</div>
+			<div class="section_memo">
+				<h3 class="h_stit"><span class="h_memo">관리자 메모</span></h3>
+				<p class="tx">해당 중개업소의 상품 신청 대행을 위해 필요한 사항에 대해 메모를 남기실 수 있습니다.</p>
+				<div class="memo_area">
+					<div class="write_area">
+						<p class="t_memo"><label for="in_memo">메모 입력</label></p>
+						<div class="write"><textarea cols="30" rows="5" id="in_memo" title="메모 입력"></textarea></div>
+						<button class="btn_memo"><span>메모하기</span></button>
+					</div>
+					<ul class="lst_memo">
+					<li>
+						<span class="date"><strong>2013.02.05</strong> <span class="bar">l</span></span> 프리미엄_LG개포자이 재계약 완료
+						<a href="#" class="btn btn_del">삭제</a>
+					</li>
+					<li>
+						<span class="date"><strong>2013.02.05</strong> <span class="bar">l</span></span> 프리미엄_LG개포자이 재계약 완료
+						<a href="#" class="btn btn_del">삭제</a>
+					</li>
+					<li>
+						<span class="date"><strong>2013.02.05</strong> <span class="bar">l</span></span> 프리미엄_LG개포자이 재계약 완료
+						<a href="#" class="btn btn_del">삭제</a>
+					</li>
+					</ul>
+					<div class="btn_area">
+						<a href="#" class="btn btn_lst"><span class="blind">목록으로 돌아가기</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="960" height="68" alt="">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

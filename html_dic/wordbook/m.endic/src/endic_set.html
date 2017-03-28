@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>설정 페이지</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+</head>
+<body class="">
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<div class="t_content">
+    <div class="h2_titarea"><h2><strong>설정</strong></h2></div>
+    <ul class="lst_ul4 unbd">
+    <li class="lst_li4"><a href="#" class="link_bock"><span class="jl_ico"></span>내 단어장 편집 <span class="li_rgt_arr">더보기</span></a></li>
+    <li class="lst_li4 last_li"><a href="#" class="link_bock"><span class="jl_ico"></span>오늘의 영어 네이버앱 알림<span class="rgt_txt_col">상세 설정</span><span class="li_rgt_arr">더보기</span></a></li>
+    </ul>
+    <div class="set_noti">
+    <ul>
+    <li class="check_li">
+        <input type="radio" id="r_check" name="">
+        <label for="r_check" class="txt">수신</label>
+    </li>
+    <li class="check_li">
+        <input type="radio" id="r_check2" name="">
+        <label for="r_check2" class="txt">비수신</label>
+    </li>
+    </ul>
+    <dl>
+    <dt class="txt_dt">알림을 수신하시면,</dt>
+    <dd class="txt_dd">오늘의 단어, 오늘의 퀴즈를 네이버 알림 메시지로 제공받으실 수 있습니다.</dd>
+    <dt class="txt_dt">콘텐츠별 알림 시간을 별도 설정하지 않은 경우</dt>
+    <dd class="txt_dd">오늘의 단어 오전 <em>9:00</em>, 오늘의 회화 오전 <em>10:00</em>, 오늘의 퀴즈 오후 <em>2:00</em> 입니다. </dd>
+    <dt class="txt_dt">알림이 오지 않는다면? (안드로이드)</dt>
+    <dd class="txt_dd">모바일 설정 &gt; 배터리 &gt; 앱 절전(상세 정보) &gt; 네이버 사전 &gt; 절전 안 함으로 설정해 주세요.</dd>
+    </dl>
+</div>
+</div>
+<hr />
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver2"></div>
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/footer.html', sel:'.__ver2'},
+        {path:'include/common_ham_menu.html', sel:'.sidenav'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

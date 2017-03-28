@@ -1,0 +1,2901 @@
+@charset "UTF-8";
+/* NHN Web Standard 2Team YMJ 110126, KYH 110207 */
+/* Common */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+body, input, textarea, select, button, table {
+  font-size: 14px;
+  line-height: 1.25em;
+}
+
+body.s, .s input, .s textarea, .s select, .s button, .s table {
+  font-family: Helvetica;
+}
+
+body {
+  position: relative;
+  background-color: #f4f4f4;
+  color: #000;
+  -webkit-text-size-adjust: none;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+em, address {
+  font-style: normal;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.u_nc, hr {
+  display: none !important;
+}
+
+.u_hc, .u_skip {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  left: -999em;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.u_vc {
+  position: absolute;
+  z-index: -1;
+  font-size: 1px;
+  line-height: 1px;
+  color: transparent;
+}
+
+#ct {
+  clear: both;
+  width: 100%;
+  background-color: #fff;
+}
+
+#ct:after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  content: '';
+}
+
+select {
+  height: 29px;
+  padding: 0 20px 0 6px;
+  border: 1px solid #C9C9C9;
+  border-radius: 2px;
+  background-color: #fff;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_sel.png) no-repeat 100% 0;
+  background-size: 19px auto;
+  -webkit-background-size: 19px auto;
+  font-size: 13px !important;
+  color: #000;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+.a select {
+  padding-top: 1px;
+}
+
+/* Logo Title */
+.u_ts {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  padding: 6px 0 5px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/u_bg.png) repeat-x;
+  text-align: center;
+  background-size: 1px 45px;
+  -webkit-background-size: 1px 45px;
+}
+
+.u_ts a {
+  display: inline-block;
+  width: 65px;
+  height: 32px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/u_cm.png) -61px -501px no-repeat;
+}
+
+.u_ts a:first-child {
+  width: 61px;
+  background-position: 0 -501px;
+}
+
+.u_tsh {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 17px;
+  color: #fff;
+}
+
+.gnb, .h1.gnb_h1.end a, .a_close span, .lnb .grd_prev:after, .lnb .grd_next:after, .lnb_sub li a span, .pg_btn, .pg_num, .sch_wrp.off .ct_wrp button span, .ct_wrp h1 + button span, .chr_pg .prev, .chr_pg .next, .days3 .prev, .days3 .next, .no_data a span:before {
+  background-image: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1-2.png);
+  background-repeat: no-repeat;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+h1.gnb_h1 {
+  position: relative;
+  z-index: 10;
+  height: 45px;
+  background: #4c71b8;
+  text-align: center;
+  border-bottom: 1px solid #2f3642;
+}
+
+h1.gnb_h1 .btn_mod {
+  display: inline-block;
+  margin: 6px 0 0 21px;
+}
+
+h1.gnb_h1 .btn_mod a {
+  display: inline-block;
+  float: left;
+  height: 33px;
+  color: #fff;
+  position: relative;
+  font-weight: normal;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1-2.png) no-repeat -189px 0;
+  width: 71px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+  text-indent: -9999px;
+  position: relative;
+}
+
+h1.gnb_h1 .btn_mod a:first-child {
+  width: 72px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1-2.png) no-repeat -117px -33px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+h1.gnb_h1 .btn_mod a.on {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1-2.png) no-repeat -189px -33px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+h1.gnb_h1 .btn_mod a:first-child.on {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1-2.png) no-repeat -117px 0;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+h1.gnb_h1 .btn_mod a em {
+  display: inline-block;
+  position: absolute;
+  right: 6px;
+  top: -4px;
+  width: 17px;
+  height: 17px;
+  background-image: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1-2.png);
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+h1.gnb_h1 + .naver {
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 77px;
+  height: 33px;
+  background-position: -1px -1px;
+  z-index: 20;
+}
+
+h1.gnb_h1 + .naver span {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+h1.gnb_h1.end {
+  height: 31px;
+  padding: 14px 0 0 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+h1.gnb_h1.end a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1.gnb_h1.end a span {
+  color: transparent;
+}
+
+h1.gnb_h1.end .naver {
+  width: 59px;
+  height: 18px;
+  background-position: -1px -100px;
+}
+
+h1.gnb_h1.end .sports {
+  width: 81px;
+  height: 18px;
+  background-position: -60px -100px;
+}
+
+.s_btn {
+  position: absolute;
+  right: 7px;
+  top: 5px;
+  width: 37px;
+  height: 33px;
+  background-position: -80px 0;
+  z-index: 20;
+  zoom: 1;
+}
+
+.s_btn span {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.s_btn.on + form {
+  display: block;
+}
+
+.a_close {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  z-index: 20;
+  background: none;
+}
+
+.a_close span {
+  display: block;
+  overflow: hidden;
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+  color: transparent;
+  background-position: -278px -18px;
+}
+
+.lnb {
+  overflow: hidden;
+  position: relative;
+  background: #f5f5f5;
+  font-size: 13px;
+  color: #333;
+  font-weight: bold;
+  line-height: 33px;
+}
+
+.lnb:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 33px;
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(70%, rgba(255, 255, 255, 0.99)), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+}
+
+.lnb ul {
+  display: -webkit-flex;
+  display: flex;
+  height: 33px;
+}
+
+.lnb li {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  position: relative;
+  text-align: center;
+  padding: 0 2px;
+  letter-spacing: -1px;
+}
+
+.lnb li a {
+  display: block;
+  padding: 0 13px;
+}
+
+/*.lnb li:first-child a{padding-left:0;}
+.lnb li:last-child a{padding-right:0;}*/
+.lnb li.on a {
+  color: #2f63c5;
+}
+
+.lnb li:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 1px;
+  background: #d6d6d6;
+  right: 0;
+  top: 9px;
+}
+
+.lnb li:before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 1px;
+  background: #fff;
+  left: 0;
+  top: 9px;
+}
+
+.lnb li:first-child:before {
+  background: none;
+}
+
+.lnb li:last-child:before, .lnb li:last-child:after {
+  background: none;
+}
+
+@media screen and (max-width: 640px) {
+  .lnb ul {
+    width: 600px;
+  }
+}
+
+/* Common Images */
+.u_hs {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/u_bg.png) repeat-x 0 0;
+  background-size: 1px 45px;
+  -webkit-background-size: 1px 45px;
+}
+
+.u_gnbt, .u_hsbt, .u_gnbn, .u_clrt, .u_hs .u_hssbt, .atbt .atbt_b, .u_ftsa .u_ico, .u_ftsa .u_ico2, .u_ftsa .u_ico3, .u_ftsa .u_ico4, .u_ftsa_v1 .u_ico, .u_ftst .u_ico, .u_ftlk, .u_ftlkbt, .u_cri_v1, .u_gnbh {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/u_cm.png) no-repeat 0 0;
+}
+
+/* All Services */
+.u_gnbt {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  z-index: 30;
+  width: 32px;
+  height: 32px;
+}
+
+.u_gnbt_fd {
+  background-position: 0 -36px;
+}
+
+.u_gnbw {
+  clear: both;
+}
+
+.u_gnbuw {
+  position: relative;
+  z-index: 20;
+  margin-bottom: -1px;
+  padding: 7px;
+  border-top: 1px solid #2F3642;
+  border-bottom: 1px solid #2A303A;
+  background: #363C49;
+  text-align: left;
+  box-shadow: 0 1px 0 #3E4652;
+  -webkit-box-shadow: 0 1px 0 #3E4652;
+}
+
+.u_gnbu_w {
+  background: #FFF;
+  border: 1px solid #262A33;
+}
+
+.u_gnbuwm {
+  margin-bottom: 0;
+}
+
+.u_gnbu {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  padding: 9px 0 9px 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.u_gnbuf {
+  padding-top: 11px;
+  border-top: none;
+}
+
+.u_gnb {
+  overflow: hidden;
+  float: left;
+  position: relative;
+  width: 91px;
+  padding: 2px 0 3px;
+}
+
+.u_gnb_v1 {
+  width: 13em;
+}
+
+.u_gnba {
+  display: inline-block;
+  height: 27px;
+  padding: 0 .25em;
+  line-height: 27px;
+  color: #222;
+  white-space: nowrap;
+}
+
+.u_gnba_v1 {
+  font-size: 15px;
+}
+
+.u_gnbn {
+  display: inline-block;
+  overflow: hidden;
+  width: 11px;
+  height: 11px;
+  background-color: #e12;
+  background-position: 0 -186px;
+  text-indent: 15px;
+  vertical-align: 0;
+}
+
+.u_gnba_v1 .u_gnbn {
+  vertical-align: -1px;
+}
+
+/* Search */
+.u_hsbt {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  z-index: 30;
+  width: 32px;
+  height: 32px;
+}
+
+.u_hsbt_op {
+  background-position: 0 -259px;
+}
+
+.u_hsbt_fd {
+  background-position: 0 -295px;
+}
+
+.u_hs {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 38px;
+  background-color: #343c49;
+  background-position: 0 -45px;
+}
+
+.u_hsw {
+  padding: 3px 32px 0 5px;
+}
+
+.u_hsmb0 {
+  margin-bottom: 0;
+}
+
+.u_hs .u_itw {
+  position: relative;
+  height: 24px;
+  padding: 5px 39px 0 6px;
+  border: 1px solid #09090b;
+  background: #fff;
+  margin-right: 36px;
+}
+
+.u_hs .u_it {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  font-size: 14px;
+  color: #010101;
+  -webkit-appearance: none;
+  line-height: 18px;
+  box-sizing: border-box;
+  padding-right: 34px;
+}
+
+header input::-webkit-input-placeholder {
+  color: #888;
+}
+
+header input {
+  color: #000;
+}
+
+header .u_hsw {
+  height: 34px;
+}
+
+.u_hs .u_it.u_sd {
+  color: #888;
+}
+
+.u_clrt {
+  overflow: visible;
+  position: absolute;
+  top: 1px;
+  right: 30px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-position: 5px -209px;
+  text-indent: -999px;
+  cursor: pointer;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1.png) no-repeat -209px -66px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+.u_hs .u_hssbt {
+  position: absolute;
+  top: 3px;
+  height: 31px;
+  border: 0;
+  border-radius: 0;
+  font-size: 12px;
+  line-height: 32px;
+  color: #fff;
+  -webkit-appearance: none;
+  border: 1px solid #282b35;
+  background: #444a58;
+  -webkit-background: #444a58;
+}
+
+.s .u_hs .u_hssbt {
+  letter-spacing: -2px;
+  text-indent: -2px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+}
+
+.u_hs .u_hssbt_ss {
+  right: 0;
+  width: 29px;
+  height: 29px;
+  background: #fff url(http://static.land.naver.net/static/mobile/20160707/im/sp_gnb_v1.png) no-repeat -17px -95px;
+  background-size: 300px 130px;
+  -webkit-background-size: 300px 130px;
+  border: 0;
+  top: 0;
+}
+
+.u_hs .u_hssbt_us {
+  right: 5px;
+  width: 58px;
+  background-position: 0 -331px;
+  white-space: nowrap;
+}
+
+.s2 .u_hs .u_hssbt_us {
+  text-indent: -4px;
+}
+
+.u_hs_nous .u_hsw {
+  padding-right: 43px;
+}
+
+.u_hs_nous .u_hssbt_ss {
+  right: 5px;
+}
+
+.atit {
+  -webkit-border-bottom-left-radius: 0 !important;
+  -webkit-border-bottom-right-radius: 0 !important;
+}
+
+.atcp {
+  position: relative;
+  z-index: 900;
+  width: 100%;
+}
+
+.atcpw {
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+}
+
+.atcpw2 {
+  border: 1px solid #666;
+  border-top-color: #e8e8e8;
+  background: #fff;
+}
+
+.atcpli {
+  border-bottom: 1px solid #f7f7f7;
+  font-size: .93em;
+}
+
+.atcpa {
+  display: block;
+  overflow: hidden;
+  padding: .5em .5em .5em 10px;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.atcpa em, .atcpkw {
+  color: #e51313;
+}
+
+.atcpsb {
+  margin-left: .8em;
+  color: #888;
+}
+
+.atbt {
+  margin-top: -1px;
+  padding: 5px 4px;
+  border-top: 1px solid #e8e8e8;
+  background: #f8f8f8;
+  text-align: right;
+}
+
+.atbt .atbt_b {
+  overflow: visible;
+  margin: 0;
+  padding: .45em .5em .4em 1.1em;
+  border: 0;
+  background-position: -68px -216px;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.atcpt .atcpw2 {
+  border-top-color: #bcbcbc;
+  border-right: 0;
+  border-left: 0;
+}
+
+.atcpb .atcpw {
+  top: -11px;
+}
+
+.atcpb .atcpw2 {
+  margin: 0 43px 0 10px;
+  border-color: #bcbcbc;
+}
+
+.auto_lft {
+  float: left;
+  margin-top: 4px;
+  padding-left: 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+.auto_bg {
+  background-color: #5c5c62;
+}
+
+.auto_bg .auto_lft {
+  color: #fff;
+  -webkit-text-shadow: 0 1px 1px #505055;
+  text-shadow: 0 1px 1px #505055;
+}
+
+.auto_bg .atbt_b {
+  color: #fff;
+  -webkit-text-shadow: 0 1px 1px #525257;
+  text-shadow: 0 1px 1px #525257;
+}
+
+.auto_bg .atbt_b {
+  background-position: -68px -232px;
+}
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:1.5){
+.u_ts a{background-image:url(http://static.land.naver.net/static/mobile/20160707/im/u_cm_v2.png);background-size:126px 533px;-webkit-background-size:126px 533px}
+.u_gnbt,.u_hsbt,.u_gnbh,.u_hs .u_hssbt{background-size:126px 533px;-webkit-background-size:126px 533px}
+}
+*/
+/* Footer */
+.u_ft {
+  position: relative;
+  padding-top: 13px;
+  background: #fff;
+}
+
+.u_hsft {
+  margin-top: -5px;
+  padding: 0 5px 21px;
+}
+
+.a .u_hsft {
+  padding: 0 5px 21px;
+}
+
+.u_hsft .u_hs {
+  margin-bottom: 0;
+  border: none;
+  background: transparent;
+}
+
+.u_hsft .u_hsw {
+  border: none;
+}
+
+.u_hsft .u_itw {
+  border-color: #cecece;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.u_hsft .u_hssbt {
+  background-color: #f2f2f2;
+  color: #777;
+}
+
+.u_hsft .u_hssbt_ss {
+  width: 39px;
+  background-position: -42px -293px;
+}
+
+.u_hsft .u_hssbt_us {
+  background-color: #697795;
+  border: 1px solid #5f7296;
+  color: #fff;
+  line-height: 31px;
+  letter-spacing: -1px;
+  font-family: AppleSDGothicNeo-Medium, '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,AppleGothic,sans-serif;
+  font-size: 12px;
+}
+
+.u_ftsw {
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  margin-top: 5px;
+  padding: 0 0 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.u_ftsa, .u_ftst {
+  padding: 3px 2px;
+  color: #222;
+}
+
+.u_ftsa .u_ico, .u_ftsa .u_ico2, .u_ftsa .u_ico3, .u_ftsa .u_ico4, .u_ftst .u_ico {
+  display: inline-block;
+  height: 19px;
+  margin-right: 4px;
+  vertical-align: -5px;
+}
+
+.u_ftsa {
+  float: left;
+  margin-left: 8px;
+  letter-spacing: -1px;
+}
+
+.u_ftsa.qst {
+  padding: 4px 2px 3px;
+}
+
+.u_ftsa.bar {
+  color: #bfbfbf;
+}
+
+.u_ftsa .u_ico {
+  width: 19px;
+  background-position: -34px -186px;
+}
+
+.u_ftsa .u_ico2 {
+  width: 19px;
+  background-position: -57px -186px;
+}
+
+.u_ftsa .u_ico3 {
+  width: 19px;
+  background-position: 0 -401px;
+}
+
+.u_ftsa .u_ico4 {
+  width: 19px;
+  background-position: -23px -401px;
+}
+
+.u_ftsa_v1 .u_ico {
+  background-position: -57px -186px;
+}
+
+.u_ftst {
+  float: right;
+  margin-right: 8px;
+}
+
+.u_ftst .u_ico {
+  width: 15px;
+  background-position: -15px -186px;
+}
+
+.a .u_hsft ~ .u_ftsw {
+  position: absolute;
+  top: 80px;
+}
+
+.u_ft .u_gnbuw {
+  border-color: #dcdcdc;
+  background: #f9f9f9;
+  -webkit-box-shadow: none;
+}
+
+.u_ft .u_gnbu_w {
+  margin: -1px;
+  border: 1px solid #d4d4d4;
+  -webkit-box-shadow: none;
+}
+
+.u_ftlkw {
+  clear: both;
+  padding-top: 4px;
+  border-top: 1px solid #dfe1e3;
+  text-align: center;
+}
+
+.u_ftlk {
+  display: inline-block;
+  margin: 0;
+  padding: 0 7px;
+  font-size: 12px;
+  color: #484848;
+  border: 1px solid #afafaf;
+  border-radius: 3px;
+  background: #fff;
+  line-height: 25px;
+}
+
+.u_ftlkbt {
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+  height: 25px;
+  margin: 0;
+  padding: 0 14px 0 7px;
+  font-size: 12px;
+  color: #484848;
+  border: 1px solid #afafaf;
+  border-radius: 3px;
+  background-color: #fff;
+  background-position: 100% -464px;
+  line-height: 25px;
+}
+
+.a .u_ftlk, .a .u_ftlkbt {
+  border-radius: 0;
+  border: 1px solid #d4d4d4;
+}
+
+.u_ftlkbt_fd {
+  margin-top: -12px;
+  padding-top: 18px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  background-color: #fff;
+  background-position: 100% -487px;
+}
+
+.a .u_ftlkbt_fd {
+  margin-top: -13px;
+  border-top: 1px solid #fff;
+}
+
+.u_cr {
+  clear: both;
+  padding: 16px 0 12px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #9e9e9e;
+  text-align: center;
+}
+
+.u_cr_v2 {
+  border-top: 1px solid #dfe1e3;
+}
+
+.u_cri {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.u_cri_v1 {
+  margin-left: 3px;
+  padding-left: 10px;
+  background-position: 0 -82px;
+}
+
+.u_cri_v2 {
+  display: block;
+  margin-top: 5px;
+  line-height: 17px;
+}
+
+.u_cra {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.u_cra_v1 {
+  font-size: 11px;
+}
+
+/* common */
+.v_top {
+  vertical-align: top !important;
+}
+
+.line_top_no {
+  margin-top: 0 !important;
+  border-top: 0 !important;
+}
+
+.cfm_date, .cfm_date2, .cfm_date3 {
+  display: inline-block;
+  height: 13px;
+  margin-right: .6em;
+  padding: 1px 4px 1px 52px;
+  border: 1px solid #ee3a26;
+  background: #fff url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 1px -788px;
+  font-weight: bold;
+  font-size: .8em;
+  line-height: 12px;
+  color: #ee3a26;
+}
+
+.cfm_date.cfm_date_v1 {
+  position: relative;
+}
+
+.cfm_date.cfm_date_v1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 47px;
+  height: 14px;
+  background: #fff url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat 0 -54px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+}
+
+.cfm_date2 {
+  border-color: #989898;
+  background-position: 1px -950px;
+  color: #989898;
+}
+
+.cfm_date3 {
+  border-color: #3482b7;
+  background-position: 1px -993px;
+  color: #3482b7;
+}
+
+.ic_new {
+  width: 13px;
+  height: 13px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -132px;
+}
+
+.write_num {
+  padding: 0 .3em;
+  background: #f06f32;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#EF8654), to(#EE5B16));
+  font-size: .86em;
+  line-height: 14px;
+  color: #fff;
+  -webkit-border-radius: 7px;
+}
+
+.direct_deal {
+  display: inline-block;
+  width: 46px;
+  height: 15px;
+  margin-right: .45em;
+  border: 1px solid #c28a66;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -1074px;
+}
+
+/* button */
+.u_btn {
+  display: inline-block;
+  overflow: hidden;
+  padding: 5px 8px;
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.u_btn .btpv {
+  width: 6px;
+  height: 15px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 3px;
+  vertical-align: middle;
+}
+
+.u_btn .btnx {
+  width: 6px;
+  height: 15px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 100% -42px;
+  vertical-align: middle;
+}
+
+.dim .btpv {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg2.gif) no-repeat 0 -75px;
+}
+
+.dim .btnx {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg2.gif) no-repeat 100% -114px;
+}
+
+.u_btn .regist {
+  display: inline-block;
+  padding-left: 18px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -246px;
+}
+
+.u_btn .ic_app {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.u_btn .ic_app:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -105px -45px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+}
+
+.u_btn2 {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  height: 33px;
+  border: 1px solid #CACACA;
+  background: #f1f1f1;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), color-stop(0.05, #fbfbfb), to(#f1f1f1));
+  font-size: .93em;
+  line-height: 33px;
+  color: #666;
+  letter-spacing: -1px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.u_btn2 a, .article_bt .dim {
+  display: table-cell;
+  float: none;
+  .float: left;
+  height: 100%;
+  background: url(http://static.naver.com/m/cm/im/ib.png) no-repeat 0 -219px;
+  color: #666;
+}
+
+.u_btn2 .f {
+  background: none;
+}
+
+.u_btn2 .w33 {
+  width: 33%;
+}
+
+.u_btn2 .pv {
+  display: inline-block;
+  padding-left: .95em;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 12px;
+}
+
+.u_btn2 .nx {
+  display: inline-block;
+  padding-right: .95em;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 100% -33px;
+}
+
+.u_btn3 {
+  display: inline-block;
+  padding: .16em .8em;
+  border: 1px solid #556782;
+  background: #6D85A6;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#849ABC), color-stop(0.05, #7C93B7), to(#627B9D));
+  font-size: .93em;
+  color: #fff;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  -webkit-border-radius: 2px;
+}
+
+.u_btn4 {
+  display: inline-block;
+  padding: .25em .5em;
+  border: 1px solid #C9C9C9;
+  background: #F7F7F7;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#FDFDFD), color-stop(0.05, #FAFAFA), to(#F4F4F4), linear, 100% 0, 100% 100%, from(#FAFAFA));
+  font-size: .86em;
+  color: #333;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  -webkit-border-radius: 2px;
+}
+
+.u_btn4.u_btn4_v1 {
+  background: #fff;
+}
+
+.u_btn5 {
+  display: inline-block;
+  padding: .25em .5em;
+  border: 1px solid #C9C9C9;
+  background: #F7F7F7;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), color-stop(0.05, #FAFBFB), to(#F2F2F2));
+  font-size: .86em;
+  color: #666;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.u_btn6 {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat 0 -69px;
+  background-size: 200px auto;
+  font-size: 0;
+}
+
+.u_btn_mr {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  padding-right: 10px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 100% -41px;
+  font-size: .93em;
+  color: #1172B6;
+}
+
+.u_btn7 {
+  display: inline-block;
+  height: 25px;
+  padding: 0 8px;
+  border: 1px solid #c9c9c9;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f7f7f7));
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.9), inset -1px -1px 0 rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  color: #333;
+  line-height: 25px;
+  -webkit-border-radius: 2px;
+}
+
+.phone {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  padding: 0 8px 0 25px;
+  border: 1px solid #c9c9c9;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f7f7f7));
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.9), inset -1px -1px 0 rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  color: #333;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+}
+
+.phone:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  width: 13px;
+  height: 13px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -100px -25px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+}
+
+.phone2 {
+  display: inline-block;
+  position: relative;
+  width: 36px;
+  height: 27px;
+  margin-right: 2px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -60px 0;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+  text-indent: -9999px;
+}
+
+.phone2:before {
+  display: block;
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  width: 5px;
+  height: 3px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -45px -40px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+  content: '';
+}
+
+.phone2.on:before {
+  background-position: -52px -40px;
+}
+
+.premium {
+  display: inline-block;
+  width: 112px;
+  height: 24px;
+  padding: 0 0 0 20px;
+  background: #f9fcfb url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 10px -825px;
+  font-size: .93em;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+}
+
+.btn_list {
+  display: inline-block;
+  width: 130px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #d1dee2;
+  background: #f9fcfb url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 10px -1332px;
+  font-size: .93em;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+}
+
+.btn_map {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  padding: 0 13px 0 27px;
+  border: 1px solid #c9c9c9;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f7f7f7));
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.9), inset -1px -1px 0 rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  color: #333;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+}
+
+.btn_map:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  width: 11px;
+  height: 14px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -125px -45px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+}
+
+.btn_mobile {
+  display: inline-block;
+  width: 130px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #d1dee2;
+  background: #f9fcfb url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 10px -1376px;
+  font-size: .93em;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  text-indent: 10px;
+}
+
+.phone_map {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  padding: 0 8px 0;
+  border: 1px solid #c9c9c9;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f7f7f7));
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.9), inset -1px -1px 0 rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  color: #333;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+}
+
+/* tab */
+.u_tab {
+  display: table;
+  width: 100%;
+  border-top: 1px solid #2F3642;
+  border-bottom: 1px solid #000;
+  background: #343C49;
+  text-align: center;
+}
+
+.u_tab_l {
+  display: table-cell;
+  width: 20%;
+  vertical-align: top;
+}
+
+.u_tab_a {
+  display: block;
+  position: relative;
+  height: 34px;
+  line-height: 33px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.u_tab_on .u_tab_a {
+  color: #85AAFF;
+}
+
+.u_tab .write_num {
+  margin-left: .1em;
+}
+
+.u_tab3 {
+  display: table;
+  width: 100%;
+  height: 33px;
+  border-bottom: 1px solid #cdcdcd;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.u_tab3_l {
+  display: table-cell;
+  width: 33.3%;
+  vertical-align: top;
+}
+
+.u_tab3_l:nth-of-type(2) {
+  width: 33.4%;
+}
+
+.u_tab3_a {
+  display: block;
+  position: relative;
+  height: 100%;
+  margin: 0 0 -1px;
+  line-height: 34px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: -1px;
+}
+
+.u_tab3_on .u_tab3_a {
+  color: #2f63c5;
+}
+
+.u_tab3_a:after {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: -1px;
+  width: 1px;
+  height: 15px;
+  border-left: 1px solid #d6d6d6;
+  background: #fff;
+  content: '';
+}
+
+.u_tab3_l:first-child .u_tab3_a:after {
+  display: none;
+}
+
+.u_tab3 .ico_open, .u_tab3 .ico_close {
+  display: inline-block;
+  overflow: hidden;
+  width: 8px;
+  height: 4px;
+  margin-left: 6px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic2.gif) no-repeat 1px -1338px;
+  text-indent: -100em;
+  vertical-align: 3px;
+}
+
+.u_tab3 .ico_close {
+  background-position: 1px -1368px;
+}
+
+.u_tab3 .tab_lyw {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+}
+
+.u_tab3 .tab_ly {
+  position: absolute;
+  right: 0;
+  width: 89px;
+  border: 1px solid #b0b0b0;
+  background: #fff;
+}
+
+.u_tab3 .tab_lya {
+  display: block;
+  padding: .5em 10px;
+  border-bottom: 1px solid #dfdfdf;
+  color: #333;
+  letter-spacing: -1px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.u_tab3 .tab_lyl:last-child .tab_lya {
+  border-bottom: 0;
+}
+
+.u_tab3 .tab_lyon .tab_lya {
+  background: #f4f5f5;
+}
+
+.tab_option {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  height: 17px;
+  padding: 8px 29px 11px;
+  border-top: 1px solid #dfdfdf;
+  background: #fff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f7f7), color-stop(0.57, #fff), to(#fff));
+}
+
+.tab_option .all {
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 0 .8em 0 1.8em;
+  color: #8e979a;
+}
+
+.tab_option .menu {
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 0 .8em;
+  font-size: 1.14em;
+  color: #8e979a;
+}
+
+.tab_option .on {
+  color: #00a62a;
+}
+
+.tab_option .prev {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 19px;
+  height: 19px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_arrow2.gif) no-repeat 0 0;
+}
+
+.tab_option .next {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 19px;
+  height: 19px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_arrow2.gif) no-repeat 100% 0;
+}
+
+.tab_type {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin-top: -1px;
+  border-top: 2px solid #5375B0;
+  background: #f8f8f8 url(http://static.land.naver.net/static/mobile/20160707/im/bg_bar.gif) repeat-x 0 34px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.tab_type li {
+  float: left;
+  width: 20%;
+}
+
+.tab_type .link {
+  display: block;
+  height: 100%;
+  background: #f8f8f8 url(http://static.land.naver.net/static/mobile/20160707/im/bg_bar.gif) no-repeat 0 11px;
+  font-weight: bold;
+  color: #666;
+}
+
+.tab_type .link2 {
+  display: table;
+  width: 100%;
+  height: 37px;
+  background: #f8f8f8 url(http://static.land.naver.net/static/mobile/20160707/im/bg_bar.gif) no-repeat 0 11px;
+  color: #666;
+  line-height: normal;
+}
+
+.tab_type .link2 .lnk2_txt {
+  display: table-cell;
+  padding: 0 10px;
+  line-height: 14px;
+  vertical-align: middle;
+}
+
+.tab_type .link2 .txt_wn {
+  white-space: nowrap;
+}
+
+.tab_type .on {
+  position: relative;
+  color: #2f63c5;
+}
+
+.tab_type .link2.on {
+  border-right: 1px solid #FFF !important;
+}
+
+.tab_type .t1 .link {
+  background-image: none;
+}
+
+.tab_type_v1 {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.tab_type_v1 .link .num {
+  position: relative;
+  top: -1px;
+  font-size: .93em;
+  line-height: 33px;
+}
+
+.tab_type_v1 .on .num {
+  color: #1072b5;
+}
+
+.tab_type_v2 {
+  height: 38px;
+  line-height: 37px;
+}
+
+.tab_type.tab_type_v2 .on {
+  position: relative;
+  height: 38px;
+  margin: 0 -1px;
+  border-right: 1px solid #bdbdbd;
+  border-left: 1px solid #bdbdbd;
+  background: #fff;
+  color: #000;
+  line-height: 37px;
+}
+
+.menu_type {
+  overflow: hidden;
+  clear: both;
+  height: 27px;
+  padding: 10px 10px 2px;
+  font-size: .93em;
+  text-align: center;
+}
+
+.menu_type li {
+  float: left;
+  width: 25%;
+  height: 25px;
+  margin: 0 -1px;
+  border: 1px solid #b7b7b7;
+  background: #f8f8f8;
+  line-height: 2em;
+}
+
+.menu_type a {
+  display: block;
+  height: 24px;
+  color: #666;
+}
+
+.menu_type .m1 {
+  width: 24.9%;
+  -webkit-border-radius: 2px 0 0 2px;
+}
+
+.menu_type .m4 {
+  -webkit-border-radius: 0 2px 2px 0;
+}
+
+.menu_type .on {
+  position: relative;
+  border-color: #5375B0;
+  background: #eaf1f4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f3fbff), color-stop(0.28, #f3fbff), to(#dde5e8));
+}
+
+.menu_type .on a {
+  border: 1px solid #e9f1f4;
+  border-width: 0 1px 1px;
+  color: #1072b5;
+}
+
+/* header */
+.u_h {
+  position: relative;
+  padding: 10px 0 7px;
+  border-bottom: 2px solid #5375B0;
+  text-align: center;
+}
+
+.u_h .u_h_h {
+  display: inline;
+  padding: 0 6px;
+  font-size: .93em;
+  font-weight: normal;
+  color: #000;
+  vertical-align: middle;
+}
+
+.u_h2 {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #5375B0;
+  text-align: center;
+}
+
+.u_h2 .u_h2_h {
+  padding: 9px 65px 8px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #676767;
+  letter-spacing: -1px;
+}
+
+.u_h2 .u_h2_h strong {
+  font-weight: normal;
+  color: #000;
+}
+
+.u_h2 .u_h2_h .date {
+  letter-spacing: 0;
+}
+
+.u_h2 .uc_pl, .u_h2 .uc_pr {
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+  letter-spacing: -1px;
+}
+
+.u_h2 .uc_pl {
+  left: 5px;
+}
+
+.u_h2 .uc_pr {
+  right: 5px;
+}
+
+.u_h2 .u_btn .uc_ico_bk {
+  display: inline-block;
+  margin-left: -.15em;
+  padding-left: .85em;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 4px;
+}
+
+.u_h2 .all_srch {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  padding-right: 14px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 100% -869px;
+  font-size: .86em;
+}
+
+.u_h3 {
+  position: relative;
+  height: 45px;
+  padding: 0 10px;
+  border-bottom: 2px solid #5375B0;
+}
+
+.u_h3 .u_h3_h {
+  overflow: hidden;
+  height: 35px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 45px;
+  color: #000;
+  letter-spacing: -1px;
+}
+
+.u_h3 .uc_pl, .u_h3 .uc_pr {
+  position: absolute;
+  top: 10px;
+  letter-spacing: -1px;
+}
+
+.u_h3 .uc_pl {
+  left: 10px;
+}
+
+.u_h3 .uc_pr {
+  right: 10px;
+}
+
+.u_h3_v1 {
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.u_h4 {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #5a7bb4;
+  text-align: left;
+}
+
+.u_h4 .u_h4_h {
+  padding: 9px 130px 9px 10px;
+  color: #333;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+.u_h4 .u_h4_h .date {
+  letter-spacing: 0;
+}
+
+.u_h4 .u_h4_h .stit {
+  color: #676767;
+}
+
+.u_h4 .u_h4_h2 {
+  padding: 10px 80px 9px 10px;
+  font-size: 13px;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.u_h4 .u_h4_h2 em {
+  display: inline-block;
+  position: relative;
+  padding-left: 8px;
+  width: 41px;
+  font-size: 12px;
+  color: #333;
+}
+
+.u_h4 .u_h4_h2 em:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 2px;
+  height: 2px;
+  background-color: #c3c3c3;
+  content: '';
+}
+
+.u_h4_v3 {
+  border-bottom: 0;
+}
+
+.u_h4 .nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u_h4 .uc_btn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  height: 29px;
+  margin-top: -14px;
+}
+
+.u_h4 .uc_pr {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -14px;
+  letter-spacing: -1px;
+}
+
+.u_h4 .uc_pr .u_btn.rp {
+  color: #ee3a26;
+}
+
+.u_h4 .uc_pr .u_btn.rp:before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  margin: -2px 3px 0 0;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -65px -55px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+  vertical-align: middle;
+}
+
+.u_h4 .all_srch {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  padding-right: 14px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 100% -869px;
+  font-size: .86em;
+}
+
+.u_h4 .cfm_date_v1 {
+  margin-bottom: 5px;
+}
+
+.u_h4 .ic_commu {
+  display: inline-block;
+  width: 51px;
+  height: 15px;
+  margin-bottom: 4px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -1119px;
+}
+
+.u_h4 .ic_dist {
+  display: inline-block;
+  width: 28px;
+  height: 15px;
+  margin-bottom: 4px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -1164px;
+}
+
+.u_h4_v1 .u_h4_h {
+  padding-left: 80px;
+  text-align: center;
+}
+
+.u_h4_v2 .u_h4_h {
+  margin-right: 105px;
+  padding-right: 0;
+}
+
+/* line */
+.u_line {
+  display: none;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  height: 5px;
+  border-bottom: 1px solid #b0b0b0;
+  background: #f4f5f5;
+}
+
+/* 페이지네이션 */
+.u_pg, .u_pg_lod {
+  background: #e6e7e7;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), color-stop(0.3, #f6f6f6), color-stop(0.8, #e7eae9), to(#dde3e4));
+  -webkit-box-shadow: inset 0 1px 0 #fefefe,inset 0 -1px 0 #d8dada;
+}
+
+.u_pg {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #babcbe;
+  border-bottom: 1px solid #cecece;
+  text-align: center;
+}
+
+.u_pg_btn {
+  display: table-cell;
+  border-right: 1px solid #d3d3d3;
+  line-height: 1em;
+}
+
+.u_pg_area {
+  display: table;
+  position: relative;
+  height: 43px;
+  margin: 0 auto;
+  padding-left: 23px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg.gif) no-repeat 0 10px;
+  font-size: 1em;
+}
+
+.u_pg_wrap {
+  display: block;
+  position: relative;
+}
+
+.u_pg_lod {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 21px;
+  height: 43px;
+  margin-left: -29px;
+}
+
+.u_pg_lodic, .u_pg_lodjs {
+  display: inline-block;
+  overflow: hidden;
+  width: 21px;
+  height: 22px;
+  margin-top: 11px;
+  text-indent: -999em;
+}
+
+.u_pg_lodic {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_lod2.gif) no-repeat 50% 50%;
+}
+
+.u_pg_lodjs {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_lod2_ngif.png) no-repeat;
+}
+
+.u_pg_txt {
+  display: table-cell;
+  line-height: 1.25em;
+  vertical-align: middle;
+}
+
+.u_pg_cnt {
+  font-size: .79em;
+  line-height: 1.25em;
+  color: #666;
+}
+
+.u_pg_total {
+  color: #a6a6a6;
+}
+
+.u_pg_end .u_pg_btn {
+  background: none;
+  background-color: #fafafa;
+  -webkit-box-shadow: none;
+}
+
+.u_pg_end .u_pg_area {
+  background: none;
+}
+
+.u_pg_top {
+  display: table-cell;
+  width: 53px;
+  padding-top: 18px;
+  border-left: 1px solid #fdfdfd;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg.gif) no-repeat 50% -53px;
+  font-size: .8em;
+  color: #707070;
+  vertical-align: top;
+}
+
+.u_pg2 {
+  padding: 15px 0;
+  font-size: .86em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.u_pg2_btn {
+  display: inline-block;
+  padding: .42em .86em;
+  border: 1px solid #bcbcbc;
+  background: #f1f1f1;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), color-stop(0.05, #fbfbfb), to(#f1f1f1));
+  color: #666;
+}
+
+.u_pg2_btn.uc_vh {
+  display: none;
+}
+
+.u_pg2_prev, .u_pg2_next {
+  display: inline-block;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg2.gif) no-repeat;
+  font-size: 1.07em;
+}
+
+.u_pg2_prev {
+  padding-left: .86em;
+  background-position: 0 4px;
+}
+
+.u_pg2_next {
+  padding-right: .86em;
+  background-position: 100% -35px;
+}
+
+.u_pg2_pg {
+  display: inline-block;
+  padding: .42em .85em;
+  font-weight: bold;
+  color: #32a800;
+}
+
+.u_pg2_total {
+  color: #999;
+}
+
+.u_pg2_v1 {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.u_pg_more {
+  background: none;
+  text-align: right;
+  margin: 20px 10px 10px 0;
+}
+
+.u_pg_more a {
+  display: inline-block;
+  color: #217BBB;
+  font-size: 13px;
+  letter-spacing: -1px;
+  padding: 0 12px 0 0;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg2.gif) no-repeat 100% -35px;
+}
+
+/* 부동산홈 */
+.market_lst {
+  position: relative;
+  margin-top: 20px;
+}
+
+.market_lst h2.tit {
+  height: 25px;
+  padding: 5px 0 0 10px;
+  border-bottom: 2px solid #5375B0;
+  font-size: 1.07em;
+  font-weight: normal;
+  color: #000;
+}
+
+.market_lst h2.tit_v1 {
+  letter-spacing: -1px;
+}
+
+.market_lst .uc_pr {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+}
+
+.market_lst .product_list {
+  letter-spacing: -1px;
+}
+
+.product_list .product_info:last-of-type {
+  border-bottom: 0;
+}
+
+.pg {
+  clear: both;
+  position: relative;
+  margin: 0.75em 0 1.43em;
+  text-align: center;
+}
+
+.pg_btn {
+  overflow: hidden;
+  width: 42px;
+  height: 23px;
+  border: 1px solid #c9c9c9;
+  background: #fafafa url(http://static.land.naver.net/static/mobile/20160707/im/ico_pg3.gif) no-repeat 50% 6px;
+  color: transparent;
+  line-height: 50em;
+  vertical-align: middle;
+  -webkit-border-radius: 1px;
+  -webkit-box-shadow: inset 1px 1px #fff,inset -1px -1px #f7f7f7;
+  background-size: 18px 48px;
+}
+
+.pg_btn_next {
+  background-position: 50% -33px;
+}
+
+.pg_num_area {
+  display: inline-block;
+  width: 54px;
+  height: 20px;
+  font-size: .93em;
+  line-height: 20px;
+  color: #999;
+  letter-spacing: 2px;
+}
+
+.pg_num_area_v1 {
+  width: 58px;
+  letter-spacing: 0;
+}
+
+.pg_num_on2 {
+  color: #32a800;
+}
+
+.pg_num {
+  display: inline-block;
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #c6c6c6;
+  background: #dfdfdf;
+  color: transparent;
+  vertical-align: middle;
+  -webkit-border-radius: 3px;
+}
+
+.pg_num_on {
+  width: 7px;
+  height: 7px;
+  border-color: #2F5996;
+  background: #2c4885;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#508cc6), to(#4574bd));
+  -webkit-border-radius: 4px;
+}
+
+.home_btn_mr {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  padding-right: 5px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 100% -1207px;
+  color: #666;
+  font-size: .79em;
+  letter-spacing: -1px;
+}
+
+.home_txt {
+  margin: 0 5px 0;
+  color: #f00;
+  letter-spacing: -1px;
+}
+
+.directory_area {
+  position: relative;
+  margin-top: 15px;
+  padding: 14px 80px 14px 10px;
+  border-top: 1px solid #dfdfdf;
+  color: #898989;
+  font-size: .86em;
+  letter-spacing: -1px;
+}
+
+.directory_area .pr {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -13px;
+}
+
+.directory_area .pr .u_btn {
+  margin-left: 5px;
+  padding: .29em .8em;
+  font-size: 12px;
+  letter-spacing: normal;
+  -webkit-border-radius: 2px;
+}
+
+.directory_area_v1 {
+  padding-right: 160px;
+}
+
+.convert_area {
+  margin-bottom: 1px;
+  padding: 10px;
+  border-top: 1px solid #dfdfdf;
+  background: #f2f1f1;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#FDFDFD), color-stop(0.05, #FAFAFB), to(#F2F1F1));
+}
+
+.convert_area .convert_wrap {
+  display: table;
+  width: 100%;
+}
+
+.convert_area .h, .convert_area .ct, .convert_area .btn_wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.convert_area .h {
+  width: 53px;
+  color: #52627d;
+  font-size: .93em;
+  letter-spacing: -1px;
+}
+
+.convert_area .btn_wrap {
+  width: 67px;
+  text-align: center;
+}
+
+.convert_area .btn_convert {
+  display: inline-block;
+  width: 57px;
+  height: 25px;
+  border: 1px solid #46536f;
+  background: #606e8c;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#707e9c), to(#606e8c));
+  text-align: left;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+}
+
+.s2 .convert_area .btn_convert .ico_convert {
+  margin: 0 -1em;
+}
+
+.convert_area .ico_convert {
+  padding-left: 21px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 8px -1293px;
+  color: #fff;
+  font-size: .86em;
+}
+
+.convert_area .ct {
+  border: 1px solid #a4acba;
+  background: #fff;
+  color: #a5a5a5;
+  font-size: .93em;
+  -webkit-border-radius: 5px;
+}
+
+.convert_area .ct_inner {
+  display: table;
+  width: 100%;
+}
+
+.convert_area .input_txt {
+  display: table-cell;
+  width: 100%;
+  border: 0;
+  color: #3a455d;
+  font-size: 15px;
+  letter-spacing: -1px;
+  text-align: right;
+  -webkit-appearance: none;
+  vertical-align: middle;
+}
+
+.convert_area .large {
+  display: table-cell;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Floating Banner */
+.f_b {
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  bottom: 5px;
+  z-index: 100;
+  width: 300px;
+  height: 97px;
+  margin: 0 0 0 -150px;
+  display: none;
+}
+
+/* Naver */
+.u_gnbh {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  z-index: 40;
+  width: 62px;
+  height: 32px;
+  background-position: 0 -426px;
+}
+
+.u_gnbh_v2 {
+  background-position: 0 -462px;
+  width: 59px;
+}
+
+.u_h4 .u_h4_h a.fav {
+  padding-left: 21px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -1426px;
+}
+
+.u_h4 .u_h4_h a.fav_on {
+  padding-left: 21px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -1472px;
+}
+
+.u_h4 .u_h4_h .rcm_day {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: #909090;
+}
+
+.u_h4 .u_h4_h .rcm_day .bar {
+  display: inline-block;
+  margin: 0 4px;
+  color: #c9c9c9;
+  vertical-align: top;
+}
+
+.rq_head {
+  overflow: hidden;
+  padding: 7px 80px 8px 10px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.rq_head dt {
+  float: left;
+  position: relative;
+  width: 52px;
+  padding: 3px 0 2px 6px;
+  color: #333;
+}
+
+.rq_head dt:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 2px;
+  height: 2px;
+  background-color: #c3c3c3;
+  content: '';
+}
+
+.rq_head dd {
+  padding: 3px 0 2px 58px;
+  color: #666;
+  letter-spacing: -0.5px;
+}
+
+.rq_head dd strong {
+  color: #333;
+}
+
+.rq_head dd em {
+  color: #0068b1;
+}
+
+.rq_head dd .num {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.rq_head .t_rqconfirm, .rq_head .t_recomm, .rq_head .t_rqend {
+  display: inline-block;
+  height: 14px;
+  margin-top: 1px;
+  padding: 0 3px;
+  line-height: 14px;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  vertical-align: top;
+}
+
+.rq_head .t_rqconfirm {
+  border: 1px solid #3c87d3;
+  background-color: #5d9ad7;
+  text-shadow: 0 0 2px #3c87d3;
+}
+
+.rq_head .t_recomm {
+  border: 1px solid #ea4742;
+  background-color: #e66663;
+  text-shadow: 0 0 2px #ea4742;
+}
+
+.rq_head .t_rqend {
+  background: #cccccc;
+}
+
+.rq_head_v2 {
+  padding: 8px 10px 9px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.tb_type_v3 {
+  border-top: none;
+}
+
+.round_envi_v2 {
+  border-top: none;
+}
+
+.round_envi_v2 .last {
+  border-bottom: none;
+}
+
+.market_info .market_iftit span {
+  font-size: .86em;
+  color: #909090;
+}
+
+/* 서비스 바로가기 추가 (안드로이드) */
+.u_sca {
+  display: none;
+}
+
+.a .u_sca {
+  display: block;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.a .u_sca a.u_sc {
+  display: block;
+  margin: 0 10px 57px;
+  padding: 10px 10px 10px;
+  border: 1px solid #d3d5d9;
+  border-radius: 2px;
+  background-color: #fcfcfc;
+  font-size: 14px;
+  color: #333;
+}
+
+.a .u_sca a.u_sc .u_ics, .u_sca a.u_sc .u_ica {
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic_app.png) no-repeat;
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  -webkit-background-size: 30px 65px;
+  background-size: 30px 65px;
+}
+
+.a .u_sca a.u_sc .u_ics {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 9px 0 0;
+  background-position: 0 -35px;
+}
+
+.a .u_sca a.u_sc em {
+  display: block;
+  position: relative;
+  top: -3px;
+  margin-bottom: -4px;
+  font-size: 11px;
+  color: #666;
+}
+
+.a .u_sca a.u_sc strong {
+  color: #009403;
+}
+
+.a .u_sca a.u_sc .u_ica {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0 0 0 3px;
+  background-position: 0 0;
+  vertical-align: -2px;
+}
+
+@media screen and (min-width: 450px) and (orientation: landscape) {
+  .a .u_sca a.u_sc {
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .a .u_sca a.u_sc em {
+    display: inline-block;
+    top: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  .a .u_sca a.u_sc .u_ica {
+    margin-left: 2px;
+    vertical-align: -1px;
+  }
+}
+
+.tab_type .link .ft1 {
+  color: #cacaca;
+}
+
+.tab_type_v3 {
+  border-top: 1px solid #b0b0b0;
+}
+
+.product_info .fav {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  z-index: 10;
+  width: 29px;
+  height: 27px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic.gif) no-repeat 0 -1683px;
+  line-height: 999em;
+  vertical-align: top;
+}
+
+.product_info .fav.on {
+  background-position: 0 -1740px;
+}
+
+/* 현장 확인 */
+.u_sel3_lst .input_chk {
+  vertical-align: middle;
+  margin: -2px 0 2px;
+}
+
+.u_sel3_lst label {
+  display: inline-block;
+  padding: .4em 0 .3em;
+  font-size: .93em;
+  color: #909090;
+  letter-spacing: -1px;
+}
+
+.thmb_site {
+  position: relative;
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 11px 9px 0 10px;
+  background: #dcdcdc;
+}
+
+.thmb_site a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.thmb_site a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  content: '';
+}
+
+.thmb_site .tx_site {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thmb_site .ic_m {
+  overflow: hidden;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  margin-left: -15px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -60px -30px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+  text-indent: -999em;
+}
+
+.no_data {
+  position: relative;
+  margin: 13px 10px 10px 10px;
+  font-size: 13px;
+  color: #666;
+  letter-spacing: -1px;
+}
+
+.no_data .tit_data {
+  display: block;
+  position: relative;
+  height: 18px;
+  margin-bottom: 4px;
+  padding-left: 23px;
+  font-size: 14px;
+  color: #f2331d;
+  line-height: 18px;
+}
+
+.no_data .tit_data:before {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/sp_ic.png) no-repeat -85px -45px;
+  background-size: 200px auto;
+  -webkit-background-size: 200px auto;
+  content: '';
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .complex_tit .adr_road2 a:before {
+    background: url(http://static.land.naver.net/static/mobile/20160707/im/ic_adr_x2.png) no-repeat;
+    background-size: 40px auto;
+    -webkit-background-size: 40px auto;
+  }
+  .complex_tit .adr_road2.on a:after {
+    background: url(http://static.land.naver.net/static/mobile/20160707/im/ic_adr_x2.png) no-repeat 0 -24px;
+    background-size: 40px auto;
+    -webkit-background-size: 40px auto;
+  }
+}
+
+/* add 2015031 */
+.stat_mk_pdt {
+  height: 45px;
+  border-bottom: 2px solid #5a7bb4;
+  line-height: 46px;
+}
+
+.stat_mk_pdt h2 {
+  height: 45px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.mk_pdt {
+  background: #eee;
+}
+
+.mk_pdt dl.dep1 > dt {
+  overflow: hidden;
+  max-width: 100%;
+  height: 35px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #000;
+  line-height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  letter-spacing: -1px;
+}
+
+.mk_pdt dl.dep2 {
+  padding: 11px 10px 6px;
+  font-size: 12px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.mk_pdt dl.dep2 dt {
+  display: block;
+  float: left;
+  clear: left;
+  color: #000;
+  width: 60px;
+  font-size: 13px;
+}
+
+.mk_pdt dl.dep2 dd {
+  color: #676767;
+  line-height: 14px;
+  margin-top: 2px;
+  margin-bottom: 7px;
+  margin-left: 60px;
+  font-size: 13px;
+}
+
+.mk_pdt dl.dep2 dd + dt {
+  margin-top: -1px;
+}
+
+.mk_pdt dl.dep2 dd em {
+  color: #ed1b23;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.mk_etc {
+  padding: 22px 10px;
+  font-size: 12px;
+}
+
+.mk_etc li {
+  /*overflow:hidden;text-overflow:ellipsis;white-space:nowrap;*/
+  max-width: 100%;
+  margin-bottom: 4px;
+  color: #676767;
+  font-size: 13px;
+}
+
+.mk_etc li a {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  color: #676767;
+  border: 1px solid #c9c9c9;
+  height: 16px;
+  border-radius: 2px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/ic_tel.png) no-repeat 6px 0;
+  background-size: 11px 15px;
+  padding: 0  4px 0 21px;
+  line-height: 15px;
+  font-size: 14px;
+}
+
+.mk_etc li .tel:before {
+  display: inline-block;
+  width: 1px;
+  height: 9px;
+  margin: 0 5px 0 1px;
+  background: #e7e7e7;
+  content: "";
+}
+
+.mk_etc li:nth-child(2) {
+  margin-bottom: 3px;
+}
+
+.mk_etc .h_tit {
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.mk_etc .btns {
+  margin-top: 18px;
+}
+
+.mk_etc .btns span {
+  display: inline-block;
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #c9c9c9;
+  margin-bottom: 4px;
+}
+
+.mk_etc .btns span:first-child {
+  background: -webkit-linear-gradient(#5a7bb4, #4c71b8);
+  border: 1px solid #4c71b8;
+  margin-bottom: 24px;
+}
+
+.mk_etc .btns span:first-child button em {
+  padding-left: 20px;
+  background: url(http://static.land.naver.net/static/mobile/20160707/im/mk_btn.png) no-repeat 5px 50%;
+  color: #fff;
+  background-size: 10px 8px;
+}
+
+.mk_etc .btns span button {
+  display: inline-block;
+  width: 100%;
+  height: 38px;
+  line-height: 36px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #909090;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+.end_tx {
+  padding: 12px 10px;
+}
+
+.mk_end p {
+  color: #333;
+  line-height: 18px;
+}
+
+.mk_end p em {
+  color: #3e6ab7;
+}
+
+.mk_end p.p_01 {
+  margin-top: 17px;
+}
+
+.mk_end p.p_02 {
+  margin-top: 18px;
+}
+
+.mk_end p.p_03 {
+  margin-top: 18px;
+}
+
+.mk_end .btns {
+  margin-top: 0px;
+  padding: 0px 10px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.mk_end .btns span {
+  display: inline-block;
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #c9c9c9;
+  background: -webkit-linear-gradient(#5a7bb4, #4c71b8);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
+}
+
+.mk_end .btns span button {
+  display: inline-block;
+  width: 100%;
+  height: 38px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #909090;
+  font-size: 15px;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+/*# sourceMappingURL=../../maps/include/landad/w.css.map */

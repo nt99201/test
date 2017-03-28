@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>추천맞춤매물정보비교_4건이하 :: 부동산 마이페이지</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_mypage_popup.css">
+</head>
+
+<!-- [D] Document Size : 637*838 -->
+<body>
+<div id="pop_wrap" class="w637">
+	<!-- header -->
+	<div id="pop_header">
+		<h1>추천 맞춤매물 정보 비교하기</h1>
+	</div>
+	<!-- //header -->
+
+	<div id="pop_container">
+		<div id="pop_content">
+			<p class="t_cont">
+				추천 맞춤매물 정보를 <strong>최대 4건</strong>까지 선택하여 비교해보실 수 있습니다.&nbsp;
+				<!-- [D] 매물추가클릭시 화살표 아이콘 반대로 바뀜 span class="up" -->
+				<a href="#">비교할 매물추가하기 <span class="down"></span></a>
+			</p>
+			<table cellspacing="0" border="1" summary="추천 맞춤매물 정보 비교하기" class="pop_table">
+			<caption>추천 맞춤매물 정보 비교하기</caption>
+			<colgroup>
+			<col width="19%"><col width="27%"><col width="27%"><col width="27%">
+			</colgroup>
+			<tbody>
+			<!-- [D] 각 tr의 마지막 td는 last클래스 삽입 -->
+			<tr class="bg">
+			<th scope="row">거래,매물종류</th>
+			<td>매매,아파트</td>
+			<td>매매,아파트</td>
+			<td class="last">매매,아파트</td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">매물명</th>
+			<td>삼성 래미안 <span class="ic_star">관심</span> <a href="#" class="btn_delete">삭제</a></td>
+			<td>삼성 래미안 <span class="ic_star2">관심</span> <a href="#" class="btn_delete">삭제</a></td>
+			<td class="last">삼성 래미안 <span class="ic_star">관심</span> <a href="#" class="btn_delete">삭제</a></td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">지역</th>
+			<td>경기도 고양시 일산동구<br>정발산동</td>
+			<td>경기도 고양시 일산동구<br>정발산동</td>
+			<td class="last">경기도 고양시 일산동구<br>정발산동</td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">가격(만원)</th>
+			<td>3억~5억</td>
+			<td>3억~5억</td>
+			<td class="last">3억~5억</td>
+			</tr>
+			<tr class="bg">
+			<th scope="row">면적(㎡)</th>
+			<td>65㎡~100㎡</td>
+			<td>65㎡~100㎡</td>
+			<td class="last">65㎡~100㎡</td>
+			</tr>
+			<tr>
+			<th scope="row">총세대 수</th>
+			<td>1234세대</td>
+			<td>1234세대</td>
+			<td class="last">1234세대</td>
+			</tr>
+			<tr>
+			<th scope="row">준공년도</th>
+			<td>2002.9.10</td>
+			<td>2002.9.10</td>
+			<td class="last">2002.9.10</td>
+			</tr>
+			<tr>
+			<th scope="row">층/구조</th>
+			<td>3층, 방3개, 욕실2개</td>
+			<td>3층, 방3개, 욕실2개</td>
+			<td class="last">3층, 방3개, 욕실2개</td>
+			</tr>
+			<tr>
+			<th scope="row">기전세/월세</th>
+			<td>- 만원 / - 만원</td>
+			<td>- 만원 / - 만원</td>
+			<td class="last">- 만원 / - 만원</td>
+			</tr>
+			<tr>
+			<th scope="row">융자금</th>
+			<td>- 만원</td>
+			<td>- 만원</td>
+			<td class="last">- 만원</td>
+			</tr>
+			<tr>
+			<th scope="row">추천매물특징</th>
+			<td class="nopd">
+				<div class="overflow h">아이들의 소음으로인해 저층부로 원함.</div>
+			</td>
+			<td class="nopd">
+				<div class="overflow h">아이들의 소음으로인해 저층부로 원함.</div>
+			</td>
+			<td class="nopd last">
+				<div class="overflow h">아이들의 소음으로인해 저층부로 원함.</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row">추천사유</th>
+			<td class="nopd">
+				<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.<br>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.</div>
+			</td>
+			<td class="nopd">
+				<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.<br>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.</div>
+			</td>
+			<td class="nopd  last">
+				<div class="overflow">원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.<br>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤 매물을 발견하고 의뢰를 신청하게 되었습니다.</div>
+			</td>
+			</tr>
+			<!-- [D] 마지막줄엔 tr에 noline 추가 -->
+			<tr class="noline">
+			<th scope="row">평면도</th>
+			<td class="center"><img src="img/@pic3.gif" alt=""></td>
+			<td class="center"><img src="img/@pic3.gif" alt=""></td>
+			<td class="center last"><img src="img/@pic3.gif" alt=""></td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="pop_footer">
+		<a href="#" class="btn_close">닫기</a>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

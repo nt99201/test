@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+</head>
+<body>
+<div id="wrap" style="width:980px;margin:0 auto">
+	<!-- header -->
+	<div id="header"> <img src="img/@header.gif" width="980" height="116" alt="해더 임시 이미지"> </div>
+	<!-- //header -->
+	<div><img src="img/@map2.gif" width="980" height="408" alt="임시 이미지"></div>
+	<div id="container">
+		<div id="content">
+			<div id="depth4Content" class="sale_info">
+				<fieldset>
+				<legend>관심매물 등록</legend>
+					<h2 id="depth4Content_Title" class="NE=a:ttl">[서현동]
+						<span>서현포스파크 <a href="#" class="map street NPI=a:street" target="_blank">거리뷰</a> </span>
+						<a class="btn" href="#">관심단지등록</a><span class="bar">ㅣ</span><a href="#" class="btn">단지매물전체</a>
+						<a href="#" class="view_all _address_move_link" style="display:none"><span><strong></strong>매물보기</span></a>
+					</h2>
+
+					<ul class="tab_sale_detail">
+					<li class="w66"><a href="#">매물</a></li>
+					<li class="w66"><a href="#">시세</a></li>
+					<li class="w76 on"><a href="#">단지정보<span class="ico_opentab"></span></a></li>
+					<li class="w92"><a href="#"><span class="ico_newtab">New</span>동/평면도</a></li>
+					<li class="w76"><a href="#">커뮤니티</a></li>
+					<li class="w66"><a href="#">대출</a></li>
+					<li class="w66"><a href="#">세금</a></li>
+					<li class="w76 end"><a href="#">지난매물</a></li>
+					</ul>
+
+					<div class="tab_article">
+						<h3><span class="arrow"></span><img src="http://static.land.naver.net/static/service/20120215/article/h3_sale_info6.gif" alt="단지상세" width="42" height="12"></h3>
+						<!-- 매물 제한 오류 메세지 -->
+						<div class="complex_limit">
+							<p><span class="limit_ico"></span>본 단지는 <strong>전매제한 단지</strong>로, 일반 분양권은 전매제한 종료 이후 거래가 가능합니다.<br>전매제한 분양권을 매매할 경우 주택법에 따라 처벌될 수 있으므로 전매제한 종료 이후 거래하시기 바랍니다.</p>
+							<div class="complex_msg">
+								<div class="complex_double">
+									<!--[D] 10개 이상인 경우 ul 추가, 10개 이하일 경우 ul 삭제 시켜주세요 -->
+									<ul class="double_list">
+									<li>99A㎡ 거래 가능일 : 2016.05.19</li>
+									<li>194AD-23F㎡ 거래 가능일 : 2016.06.01</li>
+									<li>110A㎡ 거래 가능일 : 2016.05.19</li>
+									<li>110A㎡ 거래 가능일 : 2016.05.19</li>
+									<li>110A㎡ 거래 가능일 : 2016.05.19</li>
+									<li>110A㎡ 거래 가능일 : 2016.05.19</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //매물 제한 오류 메세지 -->
+
+						<table summary="단지상세 정보" class="housing_info" cellspacing="0">
+						<caption><!-- 단지상세 정보 --></caption>
+						<colgroup>
+							<col width="124"><col width="216"><col width="124"><col width="216">
+						</colgroup>
+						<tbody>
+
+
+
+								<tr>
+									<th scope="row" class="first" tabindex="0">총세대수</th>
+									<td class="first"><strong tabindex="0">1631세대</strong></td>
+									<th scope="row" class="first" tabindex="0">총동수</th>
+									<td class="first" tabindex="0">3개동</td>
+								</tr>
+								<tr>
+									<th scope="row" tabindex="0">준공년월</th>
+									<td tabindex="0">2011년11월</td>
+									<th scope="row" tabindex="0">건설사명</th>
+									<td tabindex="0">현대산업개발</td>
+								</tr>
+								<tr>
+									<th scope="row" tabindex="0">총주차대수</th>
+									<td tabindex="0">3728 대</td>
+									<th scope="row" tabindex="0">세대당주차대수</th>
+									<td tabindex="0">2.28 대</td>
+								</tr>
+								<tr>
+									<th scope="row" tabindex="0">난방방식</th>
+									<td tabindex="0">개별난방</td>
+									<th scope="row" tabindex="0">난방연료</th>
+									<td tabindex="0">도시가스</td>
+								</tr>
+								<tr>
+									<th scope="row" tabindex="0">용적율</th>
+									<td tabindex="0">898%</td>
+									<th scope="row" tabindex="0">건폐율</th>
+									<td tabindex="0">37%</td>
+								</tr>
+								<tr>
+									<th scope="row" tabindex="0">최고층</th>
+									<td tabindex="0">72층</td>
+									<th scope="row" tabindex="0">최저층</th>
+									<td tabindex="0">46층</td>
+								</tr>
+								<tr>
+									<th scope="row" tabindex="0">면적</th>
+
+									<td colspan="3">
+
+
+											<span title="공급 118.46㎡ " tabindex="0">118A㎡</span>,
+
+
+											<span title="공급 121.05㎡ " tabindex="0">121B㎡</span>,
+
+
+											<span title="공급 121.29㎡ " tabindex="0">121D㎡</span>,
+
+
+											<span title="공급 122.5㎡ " tabindex="0">122F㎡</span>,
+
+
+											<span title="공급 124.56㎡ " tabindex="0">124A-1㎡</span>,
+
+
+											<span title="공급 127.13㎡ " tabindex="0">127B-1㎡</span>,
+
+
+											<span title="공급 127.77㎡ " tabindex="0">127F-1㎡</span>,
+
+
+											<span title="공급 129.22㎡ " tabindex="0">129C㎡</span>,
+
+
+											<span title="공급 129.43㎡ " tabindex="0">129B-1㎡</span>,
+
+
+											<span title="공급 129.62㎡ " tabindex="0">129B㎡</span>,
+
+
+											<span title="공급 130.7㎡ " tabindex="0">130E-3㎡</span>,
+
+
+											<span title="공급 132.58㎡ " tabindex="0">132B-3㎡</span>,
+
+
+											<span title="공급 133.45㎡ " tabindex="0">133B-2㎡</span>,
+
+
+											<span title="공급 135.15㎡ " tabindex="0">135A㎡</span>,
+
+
+											<span title="공급 135.6㎡ " tabindex="0">135C-1㎡</span>,
+
+
+											<span title="공급 136.19㎡ " tabindex="0">136C㎡</span>,
+
+
+											<span title="공급 136.19㎡ " tabindex="0">136H-1㎡</span>,
+
+
+											<span title="공급 136.64㎡ " tabindex="0">136H㎡</span>,
+
+
+											<span title="공급 136.69㎡ " tabindex="0">136A-1㎡</span>,
+
+
+											<span title="공급 138.1㎡ " tabindex="0">138D-7㎡</span>,
+
+
+											<span title="공급 138.57㎡ " tabindex="0">138E-2㎡</span>,
+
+
+											<span title="공급 139.78㎡ " tabindex="0">139A-2㎡</span>,
+
+
+											<span title="공급 140.81㎡ " tabindex="0">140C-2㎡</span>,
+
+
+											<span title="공급 141.47㎡ " tabindex="0">141H-2㎡</span>,
+
+
+											<span title="공급 142.24㎡ " tabindex="0">142G-1㎡</span>,
+
+
+											<span title="공급 142.55㎡ " tabindex="0">142D-6㎡</span>,
+
+
+											<span title="공급 142.97㎡ " tabindex="0">142D㎡</span>,
+
+
+											<span title="공급 144.56㎡ " tabindex="0">144G㎡</span>,
+
+
+											<span title="공급 144.63㎡ " tabindex="0">144E-1㎡</span>,
+
+
+											<span title="공급 146.22㎡ " tabindex="0">146D-5㎡</span>,
+
+
+											<span title="공급 147.52㎡ " tabindex="0">147G-2㎡</span>,
+
+
+											<span title="공급 147.65㎡ " tabindex="0">147B㎡</span>,
+
+
+											<span title="공급 148.06㎡ " tabindex="0">148D-2㎡</span>,
+
+
+											<span title="공급 148.35㎡ " tabindex="0">148D-1㎡</span>,
+
+
+											<span title="공급 149㎡ " tabindex="0">149E㎡</span>,
+
+
+											<span title="공급 149.12㎡ " tabindex="0">149D-4㎡</span>,
+
+
+											<span title="공급 151.21㎡ " tabindex="0">151D-3㎡</span>,
+
+
+											<span title="공급 151.75㎡ " tabindex="0">151B-2㎡</span>,
+
+
+											<span title="공급 153.05㎡ " tabindex="0">153B-1㎡</span>,
+
+
+											<span title="공급 156.57㎡ " tabindex="0">156A-1㎡</span>,
+
+
+											<span title="공급 156.78㎡ " tabindex="0">156A㎡</span>,
+
+
+											<span title="공급 158.77㎡ " tabindex="0">158C-1㎡</span>,
+
+
+											<span title="공급 159㎡ " tabindex="0">159C㎡</span>,
+
+
+											<span title="공급 159.17㎡ " tabindex="0">159A-3㎡</span>,
+
+
+											<span title="공급 160.21㎡ " tabindex="0">160A-2㎡</span>,
+
+
+											<span title="공급 160.81㎡ " tabindex="0">160D-1㎡</span>,
+
+
+											<span title="공급 161.43㎡ " tabindex="0">161D㎡</span>,
+
+
+											<span title="공급 161.45㎡ " tabindex="0">161E-1㎡</span>,
+
+
+											<span title="공급 161.81㎡ " tabindex="0">161E㎡</span>,
+
+
+											<span title="공급 163.51㎡ " tabindex="0">163F-1㎡</span>,
+
+
+											<span title="공급 163.98㎡ " tabindex="0">163B㎡</span>,
+
+
+											<span title="공급 164.5㎡ " tabindex="0">164B-2㎡</span>,
+
+
+											<span title="공급 164.55㎡ " tabindex="0">164F㎡</span>,
+
+
+											<span title="공급 164.99㎡ " tabindex="0">164C-2㎡</span>,
+
+
+											<span title="공급 166.3㎡ " tabindex="0">166A-1㎡</span>,
+
+
+											<span title="공급 166.34㎡ " tabindex="0">166E-3㎡</span>,
+
+
+											<span title="공급 166.82㎡ " tabindex="0">166E-2㎡</span>,
+
+
+											<span title="공급 167.02㎡ " tabindex="0">167D-2㎡</span>,
+
+
+											<span title="공급 168.02㎡ " tabindex="0">168B-1㎡</span>,
+
+
+											<span title="공급 168.25㎡ " tabindex="0">168A㎡</span>,
+
+
+											<span title="공급 168.84㎡ " tabindex="0">168F-2㎡</span>,
+
+
+											<span title="공급 170.49㎡ " tabindex="0">170A-2㎡</span>,
+
+
+											<span title="공급 172㎡ " tabindex="0">172A㎡</span>,
+
+
+											<span title="공급 173.39㎡ " tabindex="0">173C㎡</span>,
+
+
+											<span title="공급 175.53㎡ " tabindex="0">175A-2㎡</span>,
+
+
+											<span title="공급 176.16㎡ " tabindex="0">176A-1㎡</span>,
+
+
+											<span title="공급 176.97㎡ " tabindex="0">176C-2㎡</span>,
+
+
+											<span title="공급 177.08㎡ " tabindex="0">177B-1㎡</span>,
+
+
+											<span title="공급 177.38㎡ " tabindex="0">177C-1㎡</span>,
+
+
+											<span title="공급 180.1㎡ " tabindex="0">180E㎡</span>,
+
+
+											<span title="공급 181.39㎡ " tabindex="0">181D-1㎡</span>,
+
+
+											<span title="공급 183.15㎡ " tabindex="0">183D㎡</span>,
+
+
+											<span title="공급 184.04㎡ " tabindex="0">184G-1㎡</span>,
+
+
+											<span title="공급 184.23㎡ " tabindex="0">184B-1㎡</span>,
+
+
+											<span title="공급 185.36㎡ " tabindex="0">185D-2㎡</span>,
+
+
+											<span title="공급 185.56㎡ " tabindex="0">185B㎡</span>,
+
+
+											<span title="공급 186㎡ " tabindex="0">186D-3㎡</span>,
+
+
+											<span title="공급 187.13㎡ " tabindex="0">187A㎡</span>,
+
+
+											<span title="공급 187.24㎡ " tabindex="0">187B-2㎡</span>,
+
+
+											<span title="공급 187.27㎡ " tabindex="0">187E-1㎡</span>,
+
+
+											<span title="공급 188.5㎡ " tabindex="0">188B㎡</span>,
+
+
+											<span title="공급 190.68㎡ " tabindex="0">190C㎡</span>,
+
+
+											<span title="공급 194.31㎡ " tabindex="0">194F㎡</span>,
+
+
+											<span title="공급 195.84㎡ " tabindex="0">195E㎡</span>,
+
+
+											<span title="공급 196.43㎡ " tabindex="0">196E-1㎡</span>,
+
+
+											<span title="공급 199.61㎡ " tabindex="0">199A-1㎡</span>,
+
+
+											<span title="공급 200.34㎡ " tabindex="0">200A㎡</span>,
+
+
+											<span title="공급 200.58㎡ " tabindex="0">200E-2㎡</span>,
+
+
+											<span title="공급 200.71㎡ " tabindex="0">200G㎡</span>,
+
+
+											<span title="공급 201.87㎡ " tabindex="0">201D㎡</span>,
+
+
+											<span title="공급 205.77㎡ " tabindex="0">205A-2㎡</span>,
+
+
+											<span title="공급 206.59㎡ " tabindex="0">206D-4㎡</span>,
+
+
+											<span title="공급 206.62㎡ " tabindex="0">206F㎡</span>,
+
+
+											<span title="공급 208.94㎡ " tabindex="0">208B㎡</span>,
+
+
+											<span title="공급 210.48㎡ " tabindex="0">210A-2㎡</span>,
+
+
+											<span title="공급 214.33㎡ " tabindex="0">214C㎡</span>,
+
+
+											<span title="공급 217.92㎡ " tabindex="0">217B-1㎡</span>,
+
+
+											<span title="공급 218.13㎡ " tabindex="0">218G㎡</span>,
+
+
+											<span title="공급 220.22㎡ " tabindex="0">220E㎡</span>,
+
+
+											<span title="공급 220.53㎡ " tabindex="0">220D3㎡</span>,
+
+
+											<span title="공급 222.85㎡ " tabindex="0">222D-3㎡</span>,
+
+
+											<span title="공급 225.68㎡ " tabindex="0">225E-1㎡</span>,
+
+
+											<span title="공급 226.72㎡ " tabindex="0">226B-1㎡</span>,
+
+
+											<span title="공급 228.19㎡ " tabindex="0">228B㎡</span>,
+
+
+											<span title="공급 228.73㎡ " tabindex="0">228A-1㎡</span>,
+
+
+											<span title="공급 228.77㎡ " tabindex="0">228F㎡</span>,
+
+
+											<span title="공급 231.18㎡ " tabindex="0">231C㎡</span>,
+
+
+											<span title="공급 232.45㎡ " tabindex="0">232D-2㎡</span>,
+
+
+											<span title="공급 232.92㎡ " tabindex="0">232B-2㎡</span>,
+
+
+											<span title="공급 233.24㎡ " tabindex="0">233E-1㎡</span>,
+
+
+											<span title="공급 234.7㎡ " tabindex="0">234D-2㎡</span>,
+
+
+											<span title="공급 234.91㎡ " tabindex="0">234E㎡</span>,
+
+
+											<span title="공급 235.92㎡ " tabindex="0">235A㎡</span>,
+
+
+											<span title="공급 237.11㎡ " tabindex="0">237D-1㎡</span>,
+
+
+											<span title="공급 237.27㎡ " tabindex="0">237E-3㎡</span>,
+
+
+											<span title="공급 237.46㎡ " tabindex="0">237E-2㎡</span>,
+
+
+											<span title="공급 237.9㎡ " tabindex="0">237C㎡</span>,
+
+
+											<span title="공급 241.38㎡ " tabindex="0">241B-4㎡</span>,
+
+
+											<span title="공급 242.43㎡ " tabindex="0">242B-1㎡</span>,
+
+
+											<span title="공급 242.58㎡ " tabindex="0">242D-1㎡</span>,
+
+
+											<span title="공급 243.35㎡ " tabindex="0">243A㎡</span>,
+
+
+											<span title="공급 243.61㎡ " tabindex="0">243D㎡</span>,
+
+
+											<span title="공급 245.21㎡ " tabindex="0">245B㎡</span>,
+
+
+											<span title="공급 246.72㎡ " tabindex="0">246F㎡</span>,
+
+
+											<span title="공급 247.63㎡ " tabindex="0">247B-3㎡</span>,
+
+
+											<span title="공급 248.66㎡ " tabindex="0">248B-2㎡</span>,
+
+
+											<span title="공급 248.92㎡ " tabindex="0">248SB㎡</span>,
+
+
+											<span title="공급 249.44㎡ " tabindex="0">249D㎡</span>,
+
+
+											<span title="공급 251.52㎡ " tabindex="0">251A-4㎡</span>,
+
+
+											<span title="공급 251.83㎡ " tabindex="0">251B-3㎡</span>,
+
+
+											<span title="공급 256.85㎡ " tabindex="0">256SA-1㎡</span>,
+
+
+											<span title="공급 257.27㎡ " tabindex="0">257C-1㎡</span>,
+
+
+											<span title="공급 258.42㎡ " tabindex="0">258C㎡</span>,
+
+
+											<span title="공급 260.36㎡ " tabindex="0">260D㎡</span>,
+
+
+											<span title="공급 260.87㎡ " tabindex="0">260B-2㎡</span>,
+
+
+											<span title="공급 261.39㎡ " tabindex="0">261C-2㎡</span>,
+
+
+											<span title="공급 262.28㎡ " tabindex="0">262A-3㎡</span>,
+
+
+											<span title="공급 262.81㎡ " tabindex="0">262E-1㎡</span>,
+
+
+											<span title="공급 263.23㎡ " tabindex="0">263E㎡</span>,
+
+
+											<span title="공급 264.58㎡ " tabindex="0">264SA㎡</span>,
+
+
+											<span title="공급 267.12㎡ " tabindex="0">267E-2㎡</span>,
+
+
+											<span title="공급 268.05㎡ " tabindex="0">268B-1㎡</span>,
+
+
+											<span title="공급 270.19㎡ " tabindex="0">270F㎡</span>,
+
+
+											<span title="공급 271.83㎡ " tabindex="0">271A㎡</span>,
+
+
+											<span title="공급 272.54㎡ " tabindex="0">272SD-1㎡</span>,
+
+
+											<span title="공급 273.24㎡ " tabindex="0">273B㎡</span>,
+
+
+											<span title="공급 273.56㎡ " tabindex="0">273A-2㎡</span>,
+
+
+											<span title="공급 275.54㎡ " tabindex="0">275E-4㎡</span>,
+
+
+											<span title="공급 277.06㎡ " tabindex="0">277E-3㎡</span>,
+
+
+											<span title="공급 282.86㎡ " tabindex="0">282SA-1㎡</span>,
+
+
+											<span title="공급 283.95㎡ " tabindex="0">283A-1㎡</span>,
+
+
+											<span title="공급 285.83㎡ " tabindex="0">285E-2㎡</span>,
+
+
+											<span title="공급 287.6㎡ " tabindex="0">287B㎡</span>,
+
+
+											<span title="공급 287.6㎡ " tabindex="0">287SC㎡</span>,
+
+
+											<span title="공급 288.9㎡ " tabindex="0">288SD㎡</span>,
+
+
+											<span title="공급 290.6㎡ " tabindex="0">290A㎡</span>,
+
+
+											<span title="공급 290.79㎡ " tabindex="0">290D㎡</span>,
+
+
+											<span title="공급 291.04㎡ " tabindex="0">291C-2㎡</span>,
+
+
+											<span title="공급 292.92㎡ " tabindex="0">292E-1㎡</span>,
+
+
+											<span title="공급 294.6㎡ " tabindex="0">294A㎡</span>,
+
+
+											<span title="공급 296.84㎡ " tabindex="0">296C-1㎡</span>,
+
+
+											<span title="공급 298.03㎡ " tabindex="0">298E㎡</span>,
+
+
+											<span title="공급 300.07㎡ " tabindex="0">300C-2㎡</span>,
+
+
+											<span title="공급 301.48㎡ " tabindex="0">301B-3㎡</span>,
+
+
+											<span title="공급 302.13㎡ " tabindex="0">302C㎡</span>,
+
+
+											<span title="공급 302.38㎡ " tabindex="0">302SA㎡</span>,
+
+
+											<span title="공급 303.64㎡ " tabindex="0">303SC-1㎡</span>,
+
+
+											<span title="공급 305.04㎡ " tabindex="0">305SE㎡</span>,
+
+
+											<span title="공급 311.17㎡ " tabindex="0">311SC㎡</span>,
+
+
+											<span title="공급 312.8㎡ " tabindex="0">312A-3㎡</span>,
+
+
+											<span title="공급 313.79㎡ " tabindex="0">313C-1㎡</span>,
+
+
+											<span title="공급 316.71㎡ " tabindex="0">316A-2㎡</span>,
+
+
+											<span title="공급 319.31㎡ " tabindex="0">319B-2㎡</span>,
+
+
+											<span title="공급 325.09㎡ " tabindex="0">325A-2㎡</span>,
+
+
+											<span title="공급 326.04㎡ " tabindex="0">326SA-1㎡</span>,
+
+
+											<span title="공급 326.12㎡ " tabindex="0">326C㎡</span>,
+
+
+											<span title="공급 326.27㎡ " tabindex="0">326B-1㎡</span>,
+
+
+											<span title="공급 329.14㎡ " tabindex="0">329A-1㎡</span>,
+
+
+											<span title="공급 331.11㎡ " tabindex="0">331SG-1㎡</span>,
+
+
+											<span title="공급 332.59㎡ " tabindex="0">332B㎡</span>,
+
+
+											<span title="공급 337.16㎡ " tabindex="0">337A-1㎡</span>,
+
+
+											<span title="공급 337.76㎡ " tabindex="0">337C-2㎡</span>,
+
+
+											<span title="공급 338.41㎡ " tabindex="0">338SG㎡</span>,
+
+
+											<span title="공급 341.99㎡ " tabindex="0">341A㎡</span>,
+
+
+											<span title="공급 342.42㎡ " tabindex="0">342SC-1㎡</span>,
+
+
+											<span title="공급 343.56㎡ " tabindex="0">343SF㎡</span>,
+
+
+											<span title="공급 343.89㎡ " tabindex="0">343SA-1㎡</span>,
+
+
+											<span title="공급 344.06㎡ " tabindex="0">344B㎡</span>,
+
+
+											<span title="공급 345.74㎡ " tabindex="0">345SA㎡</span>,
+
+
+											<span title="공급 347.56㎡ " tabindex="0">347A㎡</span>,
+
+
+											<span title="공급 350.6㎡ " tabindex="0">350C-1㎡</span>,
+
+
+											<span title="공급 354.3㎡ " tabindex="0">354SB-1㎡</span>,
+
+
+											<span title="공급 356.54㎡ " tabindex="0">356A㎡</span>,
+
+
+											<span title="공급 357.08㎡ " tabindex="0">357SC㎡</span>,
+
+
+											<span title="공급 358.7㎡ " tabindex="0">358SA㎡</span>,
+
+
+											<span title="공급 358.84㎡ " tabindex="0">358C㎡</span>,
+
+
+											<span title="공급 360.56㎡ " tabindex="0">360SB㎡</span>,
+
+
+											<span title="공급 369.46㎡ " tabindex="0">369SB㎡</span>,
+
+
+											<span title="공급 423.4㎡ " tabindex="0">423SA㎡</span>
+										</td>
+
+								</tr>
+
+
+
+						</tbody>
+					</table>
+
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div id="hdn_maxValue" class="hidden"></div>
+
+		<!-- Aside Component List -->
+		<div id="depthAside" class="aside" style="display:block">
+			<img src="img/@depth_aside.gif" width="280" height="1419" alt="임시 이미지">
+		</div>
+		<!-- //Aside Component List -->
+	</div>
+	<!-- //하위 컨텐츠 및 Aside Component 영역 List Container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+<div id="pvframe" style="display:none"></div>
+</body>
+</html>

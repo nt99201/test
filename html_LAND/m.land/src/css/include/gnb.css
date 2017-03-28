@@ -1,0 +1,290 @@
+/* GNB */
+.Ngnb {
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+  background-color: #00c73c;
+  font-size: 14px;
+  font-family: helvetica, sans-serif;
+  line-height: 14px;
+}
+
+.Ngnb.is_scale .Ngnb_logo {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+}
+
+.Ngnb.is_scale .Ngnb_service {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform: translateX(-6px);
+  transform: translateX(-6px);
+}
+
+/*
+.Ngnb.is_scale .Ntool_button .Nicon_search {
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) ;
+	transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) ;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+*/
+.Ngnb_logo {
+  float: left;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Ngnb_logo .Nlogo_link {
+  display: block;
+  overflow: hidden;
+  margin: 4px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 39px;
+}
+
+.Ngnb_logo .Nlogo_link .Nicon_logo {
+  display: inline-block;
+  margin: 0 auto;
+  width: 19px;
+  height: 18px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -76px -5px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+  color: transparent;
+  vertical-align: middle;
+}
+
+.Ngnb_navigation {
+  float: left;
+}
+
+.Ngnb_navigation + .Ngnb_service {
+  padding-left: 0;
+}
+
+.Ngnb_navigation .Nnavigation_link {
+  display: block;
+  overflow: hidden;
+  margin: 4px;
+  height: 40px;
+  text-align: center;
+  line-height: 39px;
+}
+
+.Ngnb_navigation .Nnavigation_link .Nicon_home {
+  display: inline-block;
+  margin: 0 8px 0 11px;
+  width: 23px;
+  height: 22px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  /*background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);*/
+  background-position: -43px -5px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+  color: transparent;
+  vertical-align: middle;
+}
+
+.Ngnb_service {
+  overflow: hidden;
+  margin: 0 76px 0 0;
+  padding-left: 10px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.Ngnb_service .Nservice_item {
+  float: left;
+  color: #fff;
+  font-size: 21px;
+}
+
+.Ngnb_service .Nservice_item .Nicon_service {
+  display: inline-block;
+  overflow: hidden;
+  margin: 14px 0 2px;
+  width: 56px;
+  height: 24px;
+  background-image: url("http://static.land.naver.net/static/oneroom/20160608/Nicon_land_bold.png");
+  /*background-image: linear-gradient(transparent, transparent), url('http://static.land.naver.net/static/oneroom/20160608/Nicon_land_bold.svg');*/
+  -webkit-background-size: 56px auto;
+  background-size: 56px auto;
+  background-repeat: no-repeat;
+  color: transparent;
+  vertical-align: middle;
+}
+
+.Ngnb_service .Nservice_subitem {
+  float: left;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 18px;
+}
+
+.Ngnb_service .Nservice_subitem .Nicon_family {
+  display: inline-block;
+  overflow: hidden;
+  margin: 3px 0 1px;
+  width: 32px;
+  height: 22px;
+  background-image: url("http://static.land.naver.net/static/oneroom/20160608/Nicon_oneroom.png");
+  /*background-image: linear-gradient(transparent, transparent), url('http://static.land.naver.net/static/oneroom/20160608/Nicon_oneroom.svg');*/
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
+  background-repeat: no-repeat;
+  color: transparent;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+.Ngnb_service .Nservice_subitem:before {
+  display: inline-block;
+  float: left;
+  margin: 17px 11px 0;
+  width: 1px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  content: '';
+}
+
+.Ngnb_tool {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  font-size: 0;
+}
+
+.Ngnb_tool .Ntool_button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  height: 40px;
+  border: 0;
+  background: none;
+  color: transparent;
+  vertical-align: top;
+  font-size: 0;
+  line-height: 40px;
+  touch-action: manipulation;
+}
+
+.Ngnb_tool .Ntool_button + .Ntool_button {
+  margin-left: 6px;
+}
+
+.Ngnb_tool .Ntool_button.is_hide {
+  display: none;
+}
+
+.Ngnb_tool .Ntool_button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.Ngnb_tool .Ntool_button [class*='Nicon_'] {
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_search {
+  width: 18px;
+  height: 18px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -34px -65px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_drawer {
+  width: 15px;
+  height: 16px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -105px -31px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_camera {
+  width: 21px;
+  height: 18px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -43px -37px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_my {
+  width: 28px;
+  height: 16px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -5px -5px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_cart {
+  width: 21px;
+  height: 24px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -5px -31px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_setup {
+  width: 18px;
+  height: 18px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -62px -65px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_write {
+  width: 17px;
+  height: 16px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -105px -5px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_alarm {
+  width: 19px;
+  height: 18px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -5px -65px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_talk {
+  width: 19px;
+  height: 18px;
+  background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.png);
+  background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_gnb.svg);
+  background-position: -76px -33px;
+  background-size: 127px 88px;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=../maps/include/gnb.css.map */

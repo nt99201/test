@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<title>예스공인중개사무소 :: 내집마련의 시작, 네이버 부동산</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="stylesheet" type="text/css" href="../../css/land_realtor.css">
+<!-- [테스트 코드] -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){ anchor_remove() }
+
+function anchor_remove(){
+	var el = $('dd.area span.lst a');
+	var el_size = $(el).size();
+	var el_wrap = $('dd.area span.lst');
+
+	do{
+		if( $(el_wrap).height() > 42 ){
+			$(el[(el_size-2)]).remove();
+			el_size -= 1;
+		}else{
+			break;
+		}
+	}while(1);
+
+	/* 마지막 a의 ,(콤마) 없애기 */
+	$(el[(el_size-2)]).text( $(el[(el_size-2)]).text().replace(',', '') );
+}
+</script>
+<!-- //테스트 코드 -->
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		
+	</div>
+	<!-- 대표이미지 없는 경우 -->
+	<div class="member_ad_area inr_ad">
+		<div class="con normal">
+			<div class="tit">
+				<h2>뮤인테리어</h2>
+			</div>
+			<div class="info_area inr_ad">
+				<table border="0" cellspacing="0">
+				<caption class="blind">업체 정보</caption>
+				<tbody>
+				<tr>
+				<th scope="row">전화</th>
+				<td>031-707-9500 / 010-8981-2132</td>
+				</tr>
+				<tr>
+				<th scope="row">대표</th>
+				<td>김수현</td>
+				</tr>
+				<tr>
+				<th scope="row">주소</th>
+				<td>경기도 성남시 분당구 이매동 이매금강 상가 1층 102호</td>
+				</tr>
+				<tr>
+				<th scope="row">홈페이지</th>
+				<td><a href="#" target="_blank">http://www.askd.com</a></td>
+				</tr>
+				<tr>
+				<th scope="row">약력</th>
+				<td>인테리어 23년 경력, 책임시공</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="map">
+			<div class="map_print"><img src="http://dev.ui.naver.com/tmp/?278x228_map_y_F4CCCC_100" width="278" height="228" alt="임시 이미지"></div>
+			<a href="#" class="map_btn map_zoom">지도확대</a>
+		</div>
+	</div>
+	<!-- //대표이미지 없는 경우 -->
+
+	<!-- 대표이미지 있는 경우 -->
+	<div class="member_ad_area inr_ad">
+		<div class="con">
+			<div class="tit">
+				<h2>뮤인테리어</h2>
+			</div>
+			<div class="photo">
+				<img src="http://dev.ui.naver.com/tmp/?120x120_default_y_F4CCCC_0" width="120" height="120" alt="임시 이미지"><span class="mask"></span>
+			</div>
+			<div class="info_area" >
+				<table border="0" cellspacing="0">
+				<caption class="blind">업체 정보</caption>
+				<tbody>
+				<tr>
+				<th scope="row">전화</th>
+				<td>031-707-9500 / 010-8981-2132</td>
+				</tr>
+				<tr>
+				<th scope="row">대표</th>
+				<td>김수현</td>
+				</tr>
+				<tr>
+				<th scope="row">주소</th>
+				<td>경기도 성남시 분당구 이매동 이매금강 상가 1층 102호</td>
+				</tr>
+				<tr>
+				<th scope="row">홈페이지</th>
+				<td><a href="#" target="_blank">http://www.askd.com</a></td>
+				</tr>
+				<tr>
+				<th scope="row">약력</th>
+				<td>인테리어 23년 경력, 책임시공</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="map">
+			<div class="map_print"><img src="http://dev.ui.naver.com/tmp/?278x228_map_y_F4CCCC_100" width="278" height="228" alt="임시 이미지"></div>
+			<a href="#" class="map_btn map_zoom">지도확대</a>
+		</div>
+	</div>
+	<!-- //대표이미지 있는 경우 -->
+
+	<div id="container">
+		<div id="content">
+			<div id="depth4Content" class="sale_info">
+				<h3 class="ti">
+					<strong tabindex="0">인테리어</strong>
+					<span class="txt">이미지를 클릭하면 크게 볼 수 있습니다.</span>
+					<ul class="a_sort">
+					<li><a href="#" class="asc">면적순</a><span class="bar">|</span></li>
+					<li><a href="#">가격순</a></li>
+					</ul>
+				</h3>
+				<ul class="interior_lst">
+				<li>
+					<div class="thmb_area">
+						<a href="#" class="thmb"><img src="http://dev.ui.naver.com/tmp/?400x200_default_y_F4CCCC_0" width="400" height="200" alt="임시 이미지"><span class="mask"></span></a>
+						<!-- [D] 좌우 이미지 없을시 class="dsb" 추가 -->
+						<a href="#" class="btn_p btn_prev dsb"><span class="ic">이전</span></a>
+						<a href="#" class="btn_p btn_next"><span class="ic">다음</span></a>
+						<div class="thmb_lst">
+							<ul class="lst_view">
+							<li class="selected"><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><span class="l_mask"></span></li>
+							</ul>
+						</div>
+					</div>
+					<table class="info">
+					<caption>인테리어 정보</caption>
+					<colgroup><col style="width:63px"><col style="width:"></colgroup>
+					<tr>
+					<th>지역</th>
+					<td class="bb">경기도 성남시 분당구 이매동</td>
+					</tr>
+					<tr>
+					<th scope="row">단지명</th>
+					<td>이매금강 <a href="#" class="btn complex">단지정보</a></td>
+					</tr>
+					<tr>
+					<th scope="row">면적</th>
+					<td>76m3 <a href="#" class="btn floor">평면도보기</a></td>
+					</tr>
+					<tr>
+					<th scope="row">시공비</th>
+					<td class="bl">3,000~3,500</td>
+					</tr>
+					<tr>
+					<th scope="row">시공기간</th>
+					<td>14일</td>
+					</tr>
+					<tr>
+					<th scope="row">시공공간</th>
+					<td>전체</td>
+					</tr>
+					<tr>
+					<th scope="row">특징</th>
+					<td>폴딩도어, 매입등, ㄷ자 주방</td>
+					</tr>
+					</table>
+				</li>
+				<li>
+					<div class="thmb_area">
+						<a href="#" class="thmb"><img src="http://dev.ui.naver.com/tmp/?400x200_default_y_F4CCCC_0" width="400" height="200" alt="임시 이미지"><span class="mask"></span></a>
+						<!-- [D] 좌우 이미지 없을시 class="dsb" 추가 -->
+						<a href="#" class="btn_p btn_prev dsb"><span class="ic">이전</span></a>
+						<a href="#" class="btn_p btn_next"><span class="ic">다음</span></a>
+						<div class="thmb_lst">
+							<ul class="lst_view">
+							<li class="selected"><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><span class="l_mask"></span></li>
+							</ul>
+						</div>
+					</div>
+					<table class="info">
+					<caption>인테리어 정보</caption>
+					<colgroup><col style="width:63px"><col style="width:"></colgroup>
+					<tr>
+					<th>지역</th>
+					<td class="bb">경기도 성남시 분당구 이매동</td>
+					</tr>
+					<tr>
+					<th scope="row">단지명</th>
+					<td>이매금강 <a href="#" class="btn complex">단지정보</a></td>
+					</tr>
+					<tr>
+					<th scope="row">면적</th>
+					<td>76m3 <a href="#" class="btn floor">평면도보기</a></td>
+					</tr>
+					<tr>
+					<th scope="row">시공비</th>
+					<td class="bl">3,000~3,500</td>
+					</tr>
+					<tr>
+					<th scope="row">시공기간</th>
+					<td>14일</td>
+					</tr>
+					<tr>
+					<th scope="row">시공공간</th>
+					<td>전체</td>
+					</tr>
+					<tr>
+					<th scope="row">특징</th>
+					<td>폴딩도어, 매입등, ㄷ자 주방</td>
+					</tr>
+					</table>
+				</li>
+				<li>
+					<div class="thmb_area">
+						<a href="#" class="thmb"><img src="http://dev.ui.naver.com/tmp/?400x200_default_y_F4CCCC_0" width="400" height="200" alt="임시 이미지"><span class="mask"></span></a>
+						<!-- [D] 좌우 이미지 없을시 class="dsb" 추가 -->
+						<a href="#" class="btn_p btn_prev dsb"><span class="ic">이전</span></a>
+						<a href="#" class="btn_p btn_next"><span class="ic">다음</span></a>
+						<div class="thmb_lst">
+							<ul class="lst_view">
+							<li class="selected"><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><span class="l_mask"></span></li>
+							</ul>
+						</div>
+					</div>
+					<table class="info">
+					<caption>인테리어 정보</caption>
+					<colgroup><col style="width:63px"><col style="width:"></colgroup>
+					<tr>
+					<th>지역</th>
+					<td class="bb">경기도 성남시 분당구 이매동</td>
+					</tr>
+					<tr>
+					<th scope="row">단지명</th>
+					<td>이매금강 <a href="#" class="btn complex">단지정보</a></td>
+					</tr>
+					<tr>
+					<th scope="row">면적</th>
+					<td>76m3 <a href="#" class="btn floor">평면도보기</a></td>
+					</tr>
+					<tr>
+					<th scope="row">시공비</th>
+					<td class="bl">3,000~3,500</td>
+					</tr>
+					<tr>
+					<th scope="row">시공기간</th>
+					<td>14일</td>
+					</tr>
+					<tr>
+					<th scope="row">시공공간</th>
+					<td>전체</td>
+					</tr>
+					<tr>
+					<th scope="row">특징</th>
+					<td>폴딩도어, 매입등, ㄷ자 주방</td>
+					</tr>
+					</table>
+				</li>
+				<li>
+					<div class="thmb_area">
+						<a href="#" class="thmb"><img src="http://dev.ui.naver.com/tmp/?400x200_default_y_F4CCCC_0" width="400" height="200" alt="임시 이미지"><span class="mask"></span></a>
+						<!-- [D] 좌우 이미지 없을시 class="dsb" 추가 -->
+						<a href="#" class="btn_p btn_prev dsb"><span class="ic">이전</span></a>
+						<a href="#" class="btn_p btn_next"><span class="ic">다음</span></a>
+						<div class="thmb_lst">
+							<ul class="lst_view">
+							<li class="selected"><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><a href="#"><img src="http://dev.ui.naver.com/tmp/?70x70_default_y_F4CCCC_0" width="70" height="70" alt="임시 이미지"><span class="l_mask"></span></a></li>
+							<li><span class="l_mask"></span></li>
+							</ul>
+						</div>
+					</div>
+					<table class="info">
+					<caption>인테리어 정보</caption>
+					<colgroup><col style="width:63px"><col style="width:"></colgroup>
+					<tr>
+					<th>지역</th>
+					<td class="bb">경기도 성남시 분당구 이매동</td>
+					</tr>
+					<tr>
+					<th scope="row">단지명</th>
+					<td>이매금강 <a href="#" class="btn complex">단지정보</a></td>
+					</tr>
+					<tr>
+					<th scope="row">면적</th>
+					<td>76m3 <a href="#" class="btn floor">평면도보기</a></td>
+					</tr>
+					<tr>
+					<th scope="row">시공비</th>
+					<td class="bl">3,000~3,500</td>
+					</tr>
+					<tr>
+					<th scope="row">시공기간</th>
+					<td>14일</td>
+					</tr>
+					<tr>
+					<th scope="row">시공공간</th>
+					<td>전체</td>
+					</tr>
+					<tr>
+					<th scope="row">특징</th>
+					<td>폴딩도어, 매입등, ㄷ자 주방</td>
+					</tr>
+					</table>
+				</li>
+				</ul>
+				<p class="end_txt">본 컨텐츠의 저작권은 제공처에 있으며 이를 무단 사용시 저작권법 등에 따라 법적 책임을 질 수 있습니다.<br>시공비 및 시공기간 등의 정보는 인테리어 현장 사정에 따라 달라질 수 있습니다.</p>
+				<div class="paginate" style="margin:7px 0 -3px 0;padding:0">
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">다음 </a>
+ 					<a href="#" class="next_end">끝 </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="aside member_aside_info">
+			<!-- [D] 기존 교통 정보 찾기 폼 동일하게 적용 -->
+			<div class="bx_com ts">
+				<h4 class="t_end t_traffic"><span>교통정보</span></h4>
+				<div class="traffic_srch">
+					<h5>빠른길 찾기</h5>
+					<p class="input">
+						<input type="text" id="path_input" class="_inputArea" value="출발지" title="출발지 입력">
+						<span>→</span>
+						<strong title="타워팰리스3차">타워팰리스3차</strong>
+						<a class="srch" href="#">찾기</a>
+					</p>
+					<!-- [D]빠른길 찾기 레이어 활성화시 style="display: block -->
+					<div class="ly_traffic_srch" style="display: ">
+						<div class="ts_top">
+							<h5>출발지검색</h5><input type="text" id="ly_path_input" value="출발지" title="출발지 입력"><a href="#"><span>검색</span></a>
+						</div>
+						<div class="ts_con scroll">
+							<div class="ts_con_top">출발지 검색 결과<strong>0건</strong></div>
+							<ul class="ts_lst">
+							<li><span><input type="checkbox" id="ts1"></span><label for="ts1"><em>광교상록</em> (경기도 수원시 영통구 이의동 하동 116-2)</label></li>
+							<li><span><input type="checkbox" id="ts2"></span><label for="ts2"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts3"></span><label for="ts3"><em>KT</em> (경기도 성남시 분당구 정자동 206)</label></li>
+							<li><span><input type="checkbox" id="ts4"></span><label for="ts4"><em>토다이 분당점 </em> (경기도 성남시 분당구 정자동 174-1 더샵스타파크 지하1층)</label></li>
+							<li><span><input type="checkbox" id="ts5"></span><label for="ts5"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts6"></span><label for="ts6"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts7"></span><label for="ts7"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							</ul>
+							<!-- [D]내용없을 시 style="block" -->
+							<span class="nodata" style="display: ">원하시는 출발지를 검색하세요.</span>
+						</div>
+						<a href="#" class="btn_close"><span class="blind">레이어닫기</span></a>
+					</div>
+				</div>
+				<div class="traffic">
+					<h5>주변 대중교통 <span class="means">(지하철, 버스)</span></h5>
+
+					<div class="subway_area">
+						<p class="subway">
+							<span class="s3"></span><a href="#" title="수도권3호선" class="_subway">3호선(구파발)</a>
+						</p>
+						<p class="subway">
+							<span class="s100"></span><a href="#" title="분당선" class="_subway">분당선(정자)</a>
+						</p>
+						<p class="subway">
+							<span class="s109"></span><a href="#" title="신분당선" class="_subway" id="733">신분당선(정자)</a>
+						</p>
+					</div>
+
+					<ul>
+					<li>
+						<em title="마을버스" class="bus3">마을버스</em>
+						<a href="#">강남05</a> , <a href="#">강남09</a> , <a href="#">강남02</a>
+					</li>
+					<li>
+						<em title="일반" class="bus1">일반</em>
+						<a href="#">917</a> , <a href="#">11-3</a>
+					</li>
+					<li>
+						<em title="공항버스" class="bus5">공항버스</em>
+						<a href="#">6009</a>
+					</li>
+					<li>
+						<em title="직행좌석" class="bus4">직행좌석</em>
+						<a href="#">9414</a>
+					</li>
+					<li>
+						<em title="간선" class="bus11">간선</em>
+						<a href="#">141</a> , <a href="#">402</a>  , <a href="#">406</a> , <a href="#">N37</a> , <a href="#">472</a>
+					</li>
+					<li>
+						<em title="지선" class="bus12">지선</em>
+						<a href="#">2413</a> , <a href="#">6411</a> , <a href="#">3012</a> , <a href="#">4319</a> , <a href="#">4432</a> , <a href="#">4434</a> , <a href="#">2415</a> , <a href="#">3219</a> ,<a href="#">4433</a>
+					</li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="임시 푸터 이미지">
+	</div>
+</div>
+</body>
+</html>

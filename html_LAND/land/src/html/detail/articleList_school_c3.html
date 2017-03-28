@@ -1,0 +1,1561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+<link rel="stylesheet" type="text/css" href="../../css/land_article.map.css">
+
+
+
+
+<!-- 1) jQuery 로딩 -->
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  
+
+  <!-- 2) 의존성 및 C3+ 로딩 -->
+  <!-- 모든 의존성(D3.js, C3.js 및 eg.js) 파일들이 패키징된 c3p.js를 로딩 -->
+  <script src="js/c3p.pkgd.min.js"></script>
+
+  <!-- 3) insight 테마 파일 로딩 -->
+  <link rel="stylesheet" href="https://pages.oss.navercorp.com/chart/c3p/latest/dist/theme/insight/insight.desktop.css">
+  <script src="https://pages.oss.navercorp.com/chart/c3p/latest/dist/theme/insight/insight.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header"></div>
+	<!-- //header -->
+
+	<!-- 거래종류 / 매물카테고리 / 매물종류 -->
+	<div class="search">
+		<!-- 100830 부동산가이드 배너 -->
+		<div id="guidebanner_area"></div>
+		<!-- //100830 부동산가이드 배너 -->
+
+		<!-- 지도 상단 카테고리 -->
+		<div class="map_top">
+			<ul class="cate">
+			<div id="top_rlet_tp">
+				<li class="m1"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">주택</a></li>
+				<li class="m5"><a href="#">토지</a></li>
+				<li class="m6"><a href="#">원룸</a></li>
+				<li class="m7"><a href="#">상가</a></li>
+				<li class="m8"><a href="#">사무실</a></li>
+				<li class="m9"><a href="#">공장</a></li>
+				<li class="m10"><a href="#">재개발</a></li>
+				<li class="m11"><a href="#">건물</a></li>
+			</div>
+			<div id="top_trad_tp">
+				<li class="m12"><a href="#" class="selected">전체</a></li>
+				<li class="m13"><a href="#">매매</a></li>
+				<li class="m14"><a href="#">전세</a></li>
+				<li class="m15"><a href="#">월세</a></li>
+			</div>
+			</ul>
+		</div>
+		<!-- //지도 상단 카테고리 -->
+	</div>
+	<!-- //거래종류 / 매물카테고리 / 매물종류 -->
+
+	<div id="map" class="map_sub">
+		<!-- 위치 선택 -->
+		<div id="locationArea" class="location">
+			<div class="loc_view">
+				<div id="loc_view1" class="sel">
+					<select class="selectbox-source">
+					<option value="1100000000" selected="selected">서울시</option>
+					<option value="4100000000">경기도</option>
+					<option value="2800000000">인천시</option>
+					<option value="2600000000">부산시</option>
+					<option value="3000000000">대전시</option>
+					<option value="2700000000">대구시</option>
+					<option value="3100000000">울산시</option>
+					<option value="2900000000">광주시</option>
+					<option value="4200000000">강원도</option>
+					<option value="4300000000">충청북도</option>
+					<option value="4400000000">충청남도</option>
+					<option value="4700000000">경상북도</option>
+					<option value="4800000000">경상남도</option>
+					<option value="4500000000">전라북도</option>
+					<option value="4600000000">전라남도</option>
+					<option value="5000000000">제주도</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">서울시</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel">
+					<select class="selectbox-source">
+					<option value="1168000000" selected="selected">강남구</option>
+					<option value="1174000000">강동구</option>
+					<option value="1130500000">강북구</option>
+					<option value="1150000000">강서구</option>
+					<option value="1162000000">관악구</option>
+					<option value="1121500000">광진구</option>
+					<option value="1153000000">구로구</option>
+					<option value="1154500000">금천구</option>
+					<option value="1135000000">노원구</option>
+					<option value="1132000000">도봉구</option>
+					<option value="1123000000">동대문구</option>
+					<option value="1159000000">동작구</option>
+					<option value="1144000000">마포구</option>
+					<option value="1141000000">서대문구</option>
+					<option value="1165000000">서초구</option>
+					<option value="1120000000">성동구</option>
+					<option value="1129000000">성북구</option>
+					<option value="1171000000">송파구</option>
+					<option value="1147000000">양천구</option>
+					<option value="1156000000">영등포구</option>
+					<option value="1117000000">용산구</option>
+					<option value="1138000000">은평구</option>
+					<option value="1111000000">종로구</option>
+					<option value="1114000000">중구</option>
+					<option value="1126000000">중랑구</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">강남구</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel">
+					<select class="selectbox-source" style="position:absolute;top:-1000px;left:-1000px">
+					<option value="1168010300">개포동</option>
+					<option value="1168010800">논현동</option>
+					<option value="1168010600">대치동</option>
+					<option value="1168011800">도곡동</option>
+					<option value="1168010500">삼성동</option>
+					<option value="1168011100">세곡동</option>
+					<option value="1168011500">수서동</option>
+					<option value="1168010700">신사동</option>
+					<option value="1168011000">압구정동</option>
+					<option value="1168010100" selected="selected">역삼동</option>
+					<option value="1168011300">율현동</option>
+					<option value="1168011400">일원동</option>
+					<option value="1168011200">자곡동</option>
+					<option value="1168010400">청담동</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">역삼동</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel">
+					<select class="selectbox-source">
+					<option value="_" class="selectbox-default">단지</option>
+					<option value="26441">N-스위트</option>
+					<option value="19658">SK허브젠</option>
+					<option value="22025">강남역우정에쉐르</option>
+					<option value="787">개나리4차</option>
+					<option value="795">개나리5차</option>
+					<option value="798">개나리6차</option>
+					<option value="18213">개나리래미안</option>
+					<option value="17528">개나리푸르지오</option>
+					<option value="15905">갤러리빌</option>
+					<option value="102690">갤러리아트</option>
+					<option value="11071">갤러리하우스</option>
+					<option value="16456">거평빌라</option>
+					<option value="3314">경남</option>
+					<option value="23222">골든베르힐</option>
+					<option value="102534">공간쉐르빌</option>
+					<option value="104157">그린비</option>
+					<option value="9123">금호어울림</option>
+					<option value="16462">네스빌</option>
+					<option value="24263">노블스위트</option>
+					<option value="13518">뉴엠</option>
+					<option value="13813">대림e-편한세상</option>
+					<option value="977">대림역삼</option>
+					<option value="13118">대우디오빌플러스</option>
+					<option value="588">동부센트레빌</option>
+					<option value="24863">디오슈페리움</option>
+					<option value="25843">뜨라네(828-21)</option>
+					<option value="102136">뜨라네(828-76)</option>
+					<option value="837">래미안그레이튼(진달래2차)</option>
+					<option value="394">래미안그레이튼(진달래3차)</option>
+					<option value="22386">래미안펜타빌</option>
+					<option value="11739">로얄빌리지</option>
+					<option value="102724">로얄팰리스</option>
+					<option value="11087">명인갤러리1차</option>
+					<option value="22733">명인갤러리2차</option>
+					<option value="102702">베르사이유</option>
+					<option value="17816">베스젠빌</option>
+					<option value="101553">불루밍코트</option>
+					<option value="14386">브라운스톤역삼</option>
+					<option value="103616" selected="selected">블루밍하우스</option>
+					<option value="13814">삼성래미안역삼</option>
+					<option value="18779">상지리츠빌</option>
+					<option value="25941">상지리츠빌2차</option>
+					<option value="12739">선릉역우정에쉐르멤버스</option>
+					<option value="804">성보</option>
+					<option value="26275">성영</option>
+					<option value="11429">세방하이빌1차</option>
+					<option value="25650">세방하이빌2차</option>
+					<option value="15203">세종빌라트</option>
+					<option value="18991">쌍용플래티넘밸류</option>
+					<option value="102632">쎄비앙(101동)</option>
+					<option value="102899">쎄비앙(102동)</option>
+					<option value="104215">에벤에셀빌라트</option>
+					<option value="25264">역삼 프리마빌</option>
+					<option value="24081">역삼2차아이파크</option>
+					<option value="17805">역삼IPARK</option>
+					<option value="16464">역삼경일</option>
+					<option value="22647">역삼노블카운티</option>
+					<option value="102665">역삼동빌라</option>
+					<option value="3315">역삼디오빌</option>
+					<option value="22320">역삼롯데캐슬노블</option>
+					<option value="14197">역삼르비앙</option>
+					<option value="18566">역삼예명</option>
+					<option value="23999">역삼우성</option>
+					<option value="14295">역삼우정에쉐르1</option>
+					<option value="17795">역삼우정에쉐르2</option>
+					<option value="19457">역삼우정에쉐르3</option>
+					<option value="17527">역삼월드메르디앙</option>
+					<option value="100667">역삼이안애에이</option>
+					<option value="16459">역삼칼라</option>
+					<option value="14142">역삼푸르지오</option>
+					<option value="27333">역삼프라임</option>
+					<option value="10556">역삼하나빌</option>
+					<option value="100318">역삼하나빌</option>
+					<option value="9517">열성카이스빌</option>
+					<option value="100375">예지인</option>
+					<option value="14357">예지향</option>
+					<option value="13128">오투빌</option>
+					<option value="12828">우림루미아트1</option>
+					<option value="11803">우림루미아트2</option>
+					<option value="15206">우성빌라트</option>
+					<option value="821">은하수</option>
+					<option value="23089">정원</option>
+					<option value="25057">조이너스</option>
+					<option value="16461">주풍타워</option>
+					<option value="13174">진넥스빌2</option>
+					<option value="22783">천평대</option>
+					<option value="24373">탑펠리스</option>
+					<option value="101753">테라힐스</option>
+					<option value="10294">트레벨</option>
+					<option value="26849">파크앤스위트</option>
+					<option value="103695">포스틸빌라트</option>
+					<option value="102054">풍림지오빌</option>
+					<option value="24071">프리마빌</option>
+					<option value="24783">프리우스역삼</option>
+					<option value="12766">플래티늄</option>
+					<option value="104039">한솔</option>
+					<option value="3054">한스빌</option>
+					<option value="23094">한양럭스</option>
+					<option value="3055">한화진넥스빌</option>
+					<option value="3316">현대까르디에710</option>
+					<option value="104244">현대이스트빌</option>
+					<option value="13891">현대트라움</option>
+					<option value="102815">현대하이츠</option>
+					<option value="10331">휴먼터치빌</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">블루밍하우스</div>
+					</div>
+				</div>
+			</div>
+			<div class="lastest">
+				<p>최근 검색한 지역과 단지 <a href="#">보기</a></p>
+				<ol id="recentComplexList" style="display:none;height:28px">
+				<li><a href="#">역삼동 블루밍하우스</a></li>
+				</ol>
+			</div>
+		</div>
+		<!-- //위치 선택 -->
+		
+		<!-- 지도 영역 -->
+		<div class="map_viewer" id="map">
+			<div class="map_area">
+				<div id="mapReal" class="map_real" style="padding:0;width:699px;height:340px">
+					<!-- 학군정보 버튼 -->
+					<div class="nmap_btn nmap_sel_basic" style="top: 6px; left:16px">
+						<div class="nmap_location">
+							<a href="#">
+								<span class="nmap_btn_wrap">법정동</span>
+							</a>
+						</div>
+						<div class="nmap_school">
+							<a href="#" class="nmap_on">
+								<span class="nmap_btn_wrap">초등학교 학군정보</span>
+							</a>
+						</div>
+					</div>
+					<!-- //학군정보 버튼 -->
+				
+					<!-- 체크박스 초등학교 학군정보 -->
+					<div class="map_search" style="top:35px; left: 4px;">	
+						<div class="search_area">		
+							<ul class="view_sale_cate">			
+								<li class="dong_button" style="cursor:pointer;">				
+									<a href="#" class="sale_on"><span class="ico"></span>동별매물</a>	
+								</li>		
+							</ul>	
+						</div>	
+						<div class="view_sale_cate_rtbg"></div>
+					</div>
+					<!-- //체크박스 초등학교 학군정보 -->
+
+					<!-- 체크박스 초등학교 학군정보 -->
+					<div class="map_search" style="top: 35px; left: 75px;">	
+						<div class="search_area">		
+							<ul class="view_sale_cate">			
+								<li class="dong_button" style="cursor:pointer;">				
+									<a href="#" class="sale_on"><span class="ico"></span>초등학교 학군정보</a>	
+								</li>		
+							</ul>	
+						</div>	
+						<div class="view_sale_cate_rtbg"></div>
+					</div>
+					<!-- //체크박스 초등학교 학군정보 -->
+
+					<!-- [D] 학군별 컬러 --> 
+					<svg width="100" height="30" style="position:absolute;top:50px; left:10px;">
+					  <rect width="100" height="30" style="fill:#e5de1c;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:80px; left:10px;">
+					  <rect width="100" height="30" style="fill:#1bff16;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:110px; left:10px;">
+					  <rect width="100" height="30" style="fill:#14f5e2;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:140px; left:10px;">
+					  <rect width="100" height="30" style="fill:#1d97ff;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:170px; left:10px;">
+					  <rect width="100" height="30" style="fill:#2f47ff;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:200px; left:10px;">
+					  <rect width="100" height="30" style="fill:#8a50ff;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:230px; left:10px;">
+					  <rect width="100" height="30" style="fill:#ec3cf7;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<svg width="100" height="30" style="position:absolute;top:260px; left:10px;">
+					  <rect width="100" height="30" style="fill:#f14720;fill-opacity:.25;stroke:#3095f4;stroke-width: 2px;stroke-opacity: 1;"/>
+					</svg>
+					<div style="position: absolute; cursor: pointer; z-index: 50;  left: 134px; top: 217px;">
+						<img width="30px" height="30px" style=" overflow: hidden;display:block;background: url('../land_map/img/mapmarker.png') no-repeat scroll -252px -128px transparent;" src="http://static.land.naver.net/static/service/20121009/isale/blank.gif">
+					</div>
+					<div style="position: absolute; cursor: pointer; z-index: 50;  left: 484px; top: 145px;">
+						<img width="30px" height="30px" style=" overflow: hidden;display:block;background: url('../land_map/img/mapmarker.png') no-repeat scroll -252px -96px transparent;" src="http://static.land.naver.net/static/service/20121009/isale/blank.gif">
+					</div>
+
+					<div class="map_marker2 marker_no_thumb" style="position:absolute;left:150px;top:50px;width:244px">
+						<div class="inner">
+							<dl class="type">
+							<dt>
+								<a href="#">포이초등학교(공립)</a>
+							</dt>
+							<dd class="dd4"><strong>주소</strong> <em>강남구 개포로 22길 87</em></dd>
+							<dd class="dd4"><strong>전화</strong> <em>02-571-3977</em></dd>
+							<dd class="school"><strong>학급당 학생수</strong> <em>28명</em></dd>
+							<dd class="school"><strong>교사당 학생수</strong> <em>22.8명</em></dd>
+							</dl>
+							<!-- [D] div로 감싸고 내용이 좀 바꼇습니다 -->
+							<div class="btn_area">
+								<a href="#" class="btn_school">학군정보 더보기</a>
+								<a href="#" class="btn_street">거리뷰</a>
+							</div>
+						</div>
+						<a href="#" class="btn_clse"><img src="img/btn_close_layer.gif" width="13" height="13" alt="닫기"></a>
+						<span class="bg_btm"><span></span></span>
+					</div>
+					<div class="map_marker4" style="position:absolute;left:10px;top:300px;">
+						<span class="marker_num"><em>23</em>건</span>
+					</div>
+					<div class="map_marker4_on" style="position:absolute;left:70px;top:300px;">
+						<span class="marker_num"><em>23</em>건</span>
+					</div>
+					<div class="map_marker" style="left:150px;top:300px">
+						<span class="bg_school">포이초</span>
+					</div>
+					<div id="mapGuidePop" class="map_guide map_on" style="display:none"></div>
+					<div id="mapGuideHowto" class="map_guide" style="display:none">
+						<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="53" height="53" title="활용법 플래시">
+							<param name="movie" value="img/howto.swf">
+							<param name="quality" value="high">
+							<param name="wmode" value="transparent">
+							<param name="allowScriptAccess" value="always">
+							<object type="application/x-shockwave-flash" data="img/howto.swf" width="53" height="53">
+								<param name="quality" value="high">
+								<param name="wmode" value="transparent">
+								<param name="allowScriptAccess" value="always">
+							</object>						
+						</object>
+					</div>
+				</div>
+			</div>
+			<!-- 매물정보 레이어, 중개업소정보 레이어 -->
+			<div id="sideListLayer" class="address_list">
+				<div class="backgroud_png"></div>
+				<div class="map_tab">
+					<ul class="lst_tab">
+						<li class="on" id="complexListTitle">
+							<a href="#" class="tab_a">단지</a>
+							<em class="sale_num">매매</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<!-- [D] 비공동 확인매물,중개업소 탭 bd_section 추가 -->
+							<div id="realtorListLayer" class="housing scroll bd_section">
+								<div class="housing_inner">
+									<!-- [D] 현장확인 매물 리스트 -->
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+									<!-- [D] 단순 매물 리스트 매물 -->
+									<ul class="lst_site lst_site_v2">
+									<li>
+										<a href="#">
+											<span class="tit">첫번째빌라</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="" id="siteListTitle">
+							<a href="#" class="tab_a">현장확인매물</a>
+							<em class="sale_num">매매 0건</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li id="realtorListTitle">
+							<a href="#" class="tab_a">중개업소</a> 
+							<span class="sale_num">매매</span>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_layer"><span class="bg_btn_layer"></span><a href="#"><span class="blind">지역 리스트 크게보기</span></a></div>
+			</div>
+			<!-- //매물정보 레이어, 중개업소정보 레이어 -->
+		</div>
+		<!-- //지도 영역 -->
+		
+		<div class="clear"></div>
+		<div id="map_bar" class="map_bar"><a href="#"><img src="img/btn_map_down.gif" title="지도확대" alt="지도확대"></a></div>
+	</div>
+
+	<!-- 하위 컨텐츠 및 Aside Component 영역 List Container -->
+	<a href="#" name="tabLocation"></a>
+	<div id="container">
+		<div id="content">
+			<div class="ad_area">
+				<img src="img/m_guide_banner.png" width="680" height="110" alt="더욱 신뢰도 높은 모바일 확인 매물로 내집 마련하자!"> 
+				<a href="#" target="_blank" class="mbl_link"><span class="blind">모바일 확인 매물이란?</span></a>
+			</div>
+			<div id="depth4Content" class="sale_info school_info" style="display:block">
+				<fieldset>
+				<legend>관심매물 등록</legend>
+					<h2 id="depth4Content_Title">[역삼동]<span>블루밍하우스</span><a href="http://map.naver.com/?lat=37.4964378&amp;lng=127.0775008&amp;streetid=5Hb8dLTSpCbfoKV1vyMpBw%3D%3D&amp;span=-92.12&amp;sfov=120&amp;streetlat=37.4964378&amp;streetlng=127.0775008" class="map street NPI=a:street" target="_blank">거리뷰</a><a href="http://map.naver.com/?dlevel=12&amp;lat=37.4970963&amp;lng=127.0775039&amp;menu=location&amp;mapMode=0&amp;flight=on&amp;street=off&amp;flng=127.0774994&amp;flat=37.4970932&amp;flightid=SfAlJWhxhVy5UhIBeGEUvw%3D%3D&amp;ftilt=-62.46&amp;ffov=76&amp;fpoi=on&amp;fpan=-148.12&amp;fsky=on&amp;enc=b64" class="map airplane NPI=a:flight" target="_blank">항공뷰</a><a href="#" class="btn first">관심단지등록</a><span class="bar">ㅣ</span><a href="#" class="btn">단지매물전체</a><a href="#" class="view_all" style="display: none"><span><strong></strong>매물보기</span></a></h2>
+					
+					<ul class="tab_sale_detail">
+						<li class="w66"><a href="#">매물</a></li>
+						<li class="w66"><a href="#">시세</a></li>
+						<li class="w95 on"><a href="#"><span class="ico_newtab">New</span>학군정보<span class="ico_opentab"></span></a></li>
+					</ul>
+
+					<div class="tab_article">
+						<h3 class="h_school_group">초등학교 학군 정보</h3>
+						<span class="desc_school_group"><em class="v_line"></em>해당 단지는 주소지에 따라 초등학교가 배정 됩니다.</span>
+						<!-- [D] 탭이 1개일때 펼침이 기본 -->
+						<div class="school_article">
+							<div class="tit_area">
+								<h4>포이초등학교</h4>
+								<span class="ico_school ico_school_type1"><em class="txt_blind">공립</em></span>
+								<span class="ico_school ico_school_type2"><em class="txt_blind">공립</em></span>
+								<span class="ico_school ico_school_type3"><em class="txt_blind">혁신</em></span>
+								<span class="ico_school ico_school_type4"><em class="txt_blind">사립</em></span>
+								<a href="#" class="ico_homepage" title="새창열림"><em>홈페이지</em></a>
+							</div>
+							<div class="cont_area">
+								<table summary="해당학교 주소,교육청,전화,교원수,설립,학생수 정보제공" class="table_row">
+									<caption>학교 상세정보</caption>
+									<colgroup>
+									<col width="79">
+									<col width="246">
+									<col width="79">
+									<col width="246">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">주소</th>
+											<td>서울특별시 강남구 개포로</td>
+											<th scope="row">교육청</th>
+											<td>강남교육지원청</td>
+										</tr>
+										<tr>
+											<th scope="row">전화</th>
+											<td>01-2345-6789</td>
+											<th scope="row">교원수</th>
+											<td>54명 (남 6명, 여 48명)</td>
+										</tr>
+										<tr>
+											<th scope="row">설립</th>
+											<td>공립(단설)/ 1990년 4월 6일</td>
+											<th scope="row">학생수</th>
+											<td>483명 (남 268명, 여 215명)</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="town_infos">
+									<div class="town_box info_location">
+										<div class="inner">
+											<i class="ico_location"></i>
+											<span class="tit_town"><em class="txt_blind">배정동</em>배정동</span>
+											<span class="building">우성6차</span>
+											<span class="keyword"><em class="txt_number">12345678910</em><em class="txt_unit">호</em></span>
+										</div>
+									</div>
+									<div class="town_box info_distance">
+										<div class="inner">
+											<i class="ico_distance"></i>
+											<span class="tit_town">단지에서 학교정문까지</span>
+											<span class="keyword"><em class="txt_way">도보로</em> <em class="txt_number">6</em><em class="txt_unit">분</em></span>
+										</div>
+									</div>
+								</div>
+								<div class="detail_infos">
+			
+									<div class="chart_wrap type_bar">
+										<div class="half_chart">
+											<div class="h_data">
+												<h5>학급당 학생수</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<div class="bar_chart">
+												<span class="vertical_axis"><em class="blind">5,10,15,20,25,30,35,40</em></span>
+												
+												
+											
+												<div class="bar">
+													<!-- [D] bar 높이값 비율에 따라 지정 -->
+													<span class="bar_data data1" style="height:80%"><em class="txt_data">28.5</em><em class="txt_label">인천주안남초등학교</em></span>
+												</div>
+												<div class="bar">
+													<span class="bar_data data2" style="height:70%"><em class="txt_label">강남구평균</em><em class="txt_data">23.3</em></span>
+												</div>
+												<div class="bar">
+													<span class="bar_data data3" style="height:75%"><em class="txt_label">서울시평균</em><em class="txt_data">26.7</em></span>
+												</div>									
+											</div>
+										</div>
+										<span class="middle_line"></span>
+										<div class="half_chart">
+											<div class="h_data">
+												<h5>교사당 학생 수</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<div class="bar_chart">
+												<span class="vertical_axis"><em class="blind">5,10,15,20,25,30,35,40</em></span>
+											
+												
+									
+												<div class="bar">
+													<span class="bar_data data1" style="height:80%; "><em class="txt_data">28.5</em><em class="txt_label">포이초등학교</em></span>
+												</div>
+												<div class="bar">
+													<span class="bar_data data2" style="height:70%"><em class="txt_label">강남구평균</em><em class="txt_data">23.3</em></span>
+												</div>
+												<div class="bar">
+													<span class="bar_data data3" style="height:75%"><em class="txt_label">서울시평균</em><em class="txt_data">26.7</em></span>
+												</div>									
+											</div>
+										</div>
+									</div>
+									<div class="chart_wrap type_donut">
+										<div class="half_chart">
+											<div class="h_data">
+												<h5>교직원현황</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<div class="donut_chart">
+												<div id="donut_teacher" class="u_ni_chart"></div>
+												<!-- [D] 우측상단 label에 color는 최고비율 컬러 지정 -->
+												<dl class="ratio_info best" style="color:#ff7783">
+													<dt>여교원</dt>
+													<dd>33</dd>
+												</dl>
+												<ul class="donut_legend">
+													<li><i class="data2"></i>여교원 <strong>33</strong>명</li>
+													<li><i class="data1"></i>남교원 <strong>13</strong>명</li>
+													<li><i class="data4"></i>여사무직 <strong>6</strong>명</li>
+													<li><i class="data3"></i>남사무직 <strong>14</strong>명</li>
+												</ul>																					
+											</div>
+
+										</div>
+										<span class="middle_line"></span>
+										<div class="half_chart">
+											<div class="h_data">
+												<h5>상담전문가 현황</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<div class="donut_chart">
+												<div id="donut_counselor" class="u_ni_chart"></div>			
+												<dl class="ratio_info best" style="color:#5e80dd">
+													<dt>내부</dt>
+													<dd>544</dd>
+												</dl>
+												<ul class="donut_legend type2">
+													<li><i class="data1"></i>내부상담사 <strong>54</strong>명</li>
+													<li><i class="data2"></i>외부상담사 <strong>15</strong>명</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<script class="chart_js">
+										var chart = c3.generate({
+											bindto: '#donut_teacher',
+											data: {
+												columns: [
+													['여교원', 36],
+													['남교원', 13],
+													['여사무직', 6],
+													['남사무직', 14]
+													
+												],
+												type: 'donut',
+												labels: false
+											},
+											size: {
+												width: 183,
+												height: 183
+											},
+											donut: {
+												title: '총인원 66명',
+												width: 25
+											},
+											
+											tooltip: {
+												grouped: true
+											},
+											legend: {
+												show: false
+											},
+											color: {
+												pattern: ['#ff7783','#2db9c2','#c9c9c9','#939393']
+											}
+										});
+									</script>
+									<script class="chart_js">
+										var chart = c3.generate({
+											bindto: '#donut_counselor',
+											data: {
+												columns: [
+													['내부상담사', 54],
+													['외부상담사', 15]
+												],
+												type: 'donut',
+												labels: true
+											},
+											size: {
+												width: 183,
+												height: 183
+											},
+											donut: {
+												title: "총인원 69명",
+												width: 25
+											},
+											tooltip: {
+												grouped: true
+											},
+											legend: {
+												show: false
+											},
+											color: {
+												pattern: ['#5e80dd','#dbdbdb']
+											}
+										});
+									</script>
+									<!-- [D] IE8이하 노출 영역 -->
+									<div class="chart_wrap old_browsers">
+										<div class="half_chart">
+											<div class="h_data">
+												<h5>교직원현황</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<div class="donut_chart">
+												<div id="bar_teacher">
+													<p class="total_info">총 인원 <strong>66</strong>명</p>
+													<div class="donut_data_bar">
+														<!-- [D] bar 가로값 비율에 따라 지정 -->
+														<a href="#" class="donut_data data1" style="width:52.2%"></a>
+														<a href="#" class="donut_data data2" style="width:20.3%"></a>
+														<a href="#" class="donut_data data3" style="width:18.7%"></a>
+														<a href="#" class="donut_data data4" style="width:8.7%"></a>
+													</div>
+												</div>
+												<ul class="donut_legend">
+													<li><i class="data2"></i>여교원 <strong>33</strong>명</li>
+													<li><i class="data1"></i>남교원 <strong>13</strong>명</li>
+													<li><i class="data4"></i>여사무직 <strong>6</strong>명</li>
+													<li><i class="data3"></i>남사무직 <strong>14</strong>명</li>
+												</ul>																					
+											</div>
+										</div>
+										<span class="middle_line"></span>
+										<div class="half_chart">
+											<div class="h_data">
+												<h5>상담전문가 현황</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<div class="donut_chart">
+												<div id="bar_counselor">
+													<p class="total_info">총 인원 <strong>69</strong>명</p>
+													<div class="donut_data_bar">
+														<!-- [D] bar 가로값 비율에 따라 지정 -->
+														<a href="#" class="donut_data data5" style="width:78.3%"></a>
+														<a href="#" class="donut_data data6" style="width:21.7%"></a>
+													</div>
+												</div>
+												<ul class="donut_legend type2">
+													<li><i class="data1"></i>내부상담사 <strong>54</strong>명</li>
+													<li><i class="data2"></i>외부상담사 <strong>15</strong>명</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- //[D] IE8이하 노출 영역 -->
+
+									<div class="table_wrap">
+										<div class="h_data">
+											<h5>학년별 학급수,학생수</h5>
+											<span class="txt_update">2016년3월15일 기준</span>
+										</div>
+										<table summary="1~6학년, 특수학급동의 학급수,학생수 정보 제공" class="table_row align_center">
+											<caption>학년별 학급수와 학생수</caption>
+											<colgroup>
+												<col colspan="8" width="80">
+											</colgroup>
+											<thead>
+												<tr>
+													<th></th>
+													<th>1학년</th>
+													<th>2학년</th>
+													<th>3학년</th>
+													<th>4학년</th>
+													<th>5학년</th>
+													<th>6학년</th>
+													<th>특수학급동</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">학급수</th>
+													<td>3</td>
+													<td>4</td>
+													<td>4</td>
+													<td>3</td>
+													<td>4</td>
+													<td>4</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<th scope="row">학생수</th>
+													<td>82</td>
+													<td>101</td>
+													<td>91</td>
+													<td>83</td>
+													<td>4</td>
+													<td>99</td>
+													<td>6</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="table_wrap">
+										<div class="half_table">
+											<div class="h_data">
+												<h5>방과후 프로그램</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<table summary="방과후 프로그램수와 참여학생수 정보 제공" class="table_row align_center">
+												<caption>방과후 프로그램</caption>
+												<colgroup>
+													<col width="112">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">프로그램수</th>
+														<td>45개</td>
+													</tr>
+													<tr>
+														<th scope="row">참여학생수</th>
+														<td>312명</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="h_data">
+												<h5>학교 도서관 현황</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<table summary="학교 도서관의 장서수, 1인당 장서수 정보 제공" class="table_row align_center">
+												<caption>학교 도서관 현황</caption>
+												<colgroup>
+													<col width="112">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">장서수</th>
+														<td>18,783권</td>
+													</tr>
+													<tr>
+														<th scope="row">1인당 장서수</th>
+														<td>17.2권</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="half_table">
+											<div class="h_data">
+												<h5>급식 현황</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+											<table summary="1~6학년, 특수학급동의 학급수,학생수 정보 제공" class="table_row align_center">
+												<caption>학년별 학급수와 학생수</caption>
+												<colgroup>
+													<col width="122">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th class="th_lunch" scope="row">운영방식</th>
+														<td>직영급식</td>
+													</tr>
+													<tr>
+														<th class="th_lunch" scope="row">1인당 급식비<br>(1식기준)</th>
+														<td>5,000원</td>
+													</tr>
+													<tr>
+														<th class="th_lunch" scope="row">전년도 지원<br>대상 학생수</th>
+														<td>1108명</td>
+													</tr>
+													<tr>
+														<th class="th_lunch" scope="row">전년도 연간<br>급식비 지원 총액</th>
+														<td>61,313,000원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<!-- //[D] 탭이 1개일때 펼침이 기본 -->
+						<!-- [D] 탭이 2개 이상일때 class="type_more2", 상세보기 클릭시 class="active" 추가 -->
+					
+						<div class="school_article type_more2">
+							<div class="tit_area">
+								<h4>포이초등학교</h4>
+								<span class="ico_school ico_school_type1"><em class="txt_blind">공립</em></span>
+								<a href="#" class="ico_homepage" title="새창열림"><em>홈페이지</em></a>
+							</div>
+							<div class="cont_area">
+								<table summary="해당학교 주소,교육청,전화,교원수,설립,학생수 정보제공" class="table_row">
+									<caption>학교 상세정보</caption>
+									<colgroup>
+									<col width="79">
+									<col width="246">
+									<col width="79">
+									<col width="246">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">주소</th>
+											<td>서울특별시 강남구 개포로</td>
+											<th scope="row">교육청</th>
+											<td>강남교육지원청</td>
+										</tr>
+										<tr>
+											<th scope="row">전화</th>
+											<td>01-2345-6789</td>
+											<th scope="row">교원수</th>
+											<td>54명 (남 6명, 여 48명)</td>
+										</tr>
+										<tr>
+											<th scope="row">설립</th>
+											<td>공립(단설)/ 1990년 4월 6일</td>
+											<th scope="row">학생수</th>
+											<td>483명 (남 268명, 여 215명)</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="town_infos">
+									<div class="town_box info_location">
+										<span class="tit_town"><em class="txt_blind">배정동</em>배정동</span>
+										<span class="txt_building">우성6차</span>
+										<div class="inner">
+											<i class="ico_location"></i>
+											
+											
+											<span class="keyword small"><!-- [D] 12자 이상일 경우, class="small" 추가 --><em class="txt_number">1101~1111, 1201~1214, 1301~1311, 1404~1408, 1501~1507, 1511</em><em class="txt_unit">호</em></span>
+										</div>
+									</div>
+									<div class="town_box info_distance">
+										<span class="tit_town">단지에서 학교정문까지</span>
+										<div class="inner">
+											<i class="ico_distance"></i>
+											
+											<span class="keyword"><em class="txt_way">도보로</em> <em class="txt_number">6</em><em class="txt_unit">분</em></span>
+										</div>
+									</div>
+								</div>
+								<div class="detail_infos">
+									<div class="chart_wrap">
+										<div class="h_data">
+												<h5>학급당 학생수</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+										,,, 그래프와 상세정보
+									</div>
+									
+								</div>
+								
+							</div>
+							<a href="#" class="btn_toggle open"><span class="inner">상세보기<i class="ico_plus"></i></span></a>
+							<a href="#" class="btn_toggle close"><span class="inner">닫기<i class="ico_minus"></i></span></a>
+							<a href="#" class="btn_toggle bottom"><span class="inner">닫기<i class="ico_minus"></i></span></a>
+						</div>
+						<!-- //[D] 탭이 1개일때 -->
+						<!-- [D] 탭이 2개 이상일때 class="type_more2", 상세보기 클릭시 class="active" 추가 -->
+						
+						<div class="school_article type_more2 active">
+							<div class="tit_area">
+								<h4>포이초등학교</h4>
+								<span class="ico_school ico_school_type1"><em class="txt_blind">공립</em></span>
+								<a href="#" class="ico_homepage" title="새창열림"><em>홈페이지</em></a>
+							</div>
+							<div class="cont_area">
+								<table summary="해당학교 주소,교육청,전화,교원수,설립,학생수 정보제공" class="table_row">
+									<caption>학교 상세정보</caption>
+									<colgroup>
+									<col width="79">
+									<col width="246">
+									<col width="79">
+									<col width="246">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">주소</th>
+											<td>서울특별시 강남구 개포로</td>
+											<th scope="row">교육청</th>
+											<td>강남교육지원청</td>
+										</tr>
+										<tr>
+											<th scope="row">전화</th>
+											<td>01-2345-6789</td>
+											<th scope="row">교원수</th>
+											<td>54명 (남 6명, 여 48명)</td>
+										</tr>
+										<tr>
+											<th scope="row">설립</th>
+											<td>공립(단설)/ 1990년 4월 6일</td>
+											<th scope="row">학생수</th>
+											<td>483명 (남 268명, 여 215명)</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="town_infos">
+									<tr>
+										<td>
+											<div class="town_box info_location">
+												<span class="tit_town">배정동 <span class="building">우성6차</span></span>
+												<div class="inner">
+													<span class="keyword"><em class="txt_number">1234567690</em></span>
+													<em class="txt_unit">호</em>
+												</div>
+												<i class="ico_location"></i>
+											</div>
+										</td>
+										<td>
+											<div class="town_box info_distance">
+												<span class="tit_town">단지에서 학교정문까지</span>
+												<div class="inner">
+													<span class="keyword"><em class="txt_way">도보로</em> <em class="txt_number">6</em><em class="txt_unit">분</em></span>
+												</div>
+												<i class="ico_distance"></i>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<table class="town_infos">
+									<tr>
+										<td>
+											<div class="town_box info_location">
+												<span class="tit_town">배정동 <span class="building">우성6차</span></span>
+												<div class="inner">
+													<span class="keyword small"><em class="txt_number">1101~1111, 1201~1214, 1301~1311, 1404~1408, 1501~1507, 1511</em></span>
+													<em class="txt_unit">호</em>
+												</div>
+												<i class="ico_location"></i>
+											</div>
+										</td>
+										<td>
+											<div class="town_box info_distance">
+												<span class="tit_town">단지에서 학교정문까지</span>
+												<div class="inner">
+													<i class="ico_distance"></i>
+													<span class="keyword"><em class="txt_way">도보로</em> <em class="txt_number">6</em><em class="txt_unit">분</em></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<div class="detail_infos">
+									<div class="chart_wrap">
+										<div class="h_data">
+												<h5>학급당 학생수</h5>
+												<span class="txt_update">2016년3월15일 기준</span>
+											</div>
+										그래프와 상세정보 생략
+									</div>	
+								</div>
+							</div>
+							<a href="#" class="btn_toggle open"><span class="inner">상세보기<i class="ico_plus"></i></span></a>
+							<a href="#" class="btn_toggle close"><span class="inner">닫기<i class="ico_minus"></i></span></a>
+							<a href="#" class="btn_toggle bottom"><span class="inner">닫기<i class="ico_minus"></i></span></a>
+						</div>
+						<!-- //[D] 탭이 2개 이상일때 -->
+						<!-- [D] 탭이 3개 이상일때 class="type_more3" -->
+						<p style="margin-top:10px;font-size: 14px;font-weight:bold;color:red;">*** 탭이 3개 이상일때 기본 view</p>
+						<div class="school_article type_more3">
+							<div class="tit_area">
+								<h4>포이초등학교</h4>
+								<span class="ico_school ico_school_type1"><em class="txt_blind">공립</em></span>
+								<a href="#" class="ico_homepage" title="새창열림"><em>홈페이지</em></a>
+							</div>
+							<div class="cont_area">
+								<table summary="해당학교 주소,교육청,전화,교원수,설립,학생수 정보제공" class="table_row">
+									<caption>학교 상세정보</caption>
+									<colgroup>
+									<col width="79">
+									<col width="246">
+									<col width="79">
+									<col width="246">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">주소</th>
+											<td>서울특별시 영등포구 여의대방로35길 14</td>
+											<th scope="row">교육청</th>
+											<td>강남교육지원청</td>
+										</tr>
+										<tr>
+											<th scope="row">전화</th>
+											<td>01-2345-6789</td>
+											<th scope="row">교원수</th>
+											<td>(남 6명, 여 48명)</td>
+										</tr>
+										<tr>
+											<th scope="row">설립</th>
+											<td>공립(단설)/ 1990년 4월 6일</td>
+											<th scope="row">학생수</th>
+											<td>483명 (남 268명, 여 215명)</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="town_infos">
+									<div class="town_box info_location">
+										<div class="inner">
+											<i class="ico_location"></i>
+											<span class="tit_town"><em class="txt_blind">배정동</em>배정동</span>
+											<span class="building">우성6차</span>
+											<span class="keyword"><em class="txt_number">1407~1511</em><em class="txt_unit">호</em></span>
+										</div>
+									</div>
+									<div class="town_box info_distance">
+										<div class="inner">
+											<i class="ico_distance"></i>
+											<span class="tit_town">단지에서 학교정문까지</span>
+											<span class="keyword"><em class="txt_way">도보로</em> <em class="txt_number">6</em><em class="txt_unit">분</em></span>
+										</div>
+									</div>
+								</div>
+								<div class="detail_infos">
+									그래프와 상세정보 생략
+								</div>
+							</div>
+							<a href="#" class="btn_toggle open"><span class="inner">상세보기<i class="ico_plus"></i></span></a>
+							<a href="#" class="btn_toggle close"><span class="inner">닫기<i class="ico_minus"></i></span></a>
+							<a href="#" class="btn_toggle bottom"><span class="inner">닫기<i class="ico_minus"></i></span></a>
+						</div>
+						<!--//[D] 탭이 3개 이상일때 class="type_more3", 상세보기 클릭시 class="active" 추가 -->
+					</div>
+					<p class="p_guide">학교 배정 정보는 실제와 상이할수 있으므로 참고용으로 이용하시기 바랍니다. <br>학군 정보에 오류가 있을 경우, <a href="#" class="txt_strong">학군정보 수정 요청</a>을 통해 문의하여 주시기 바랍니다.</p>
+				</fieldset>
+				
+				
+			</div>
+		</div>
+		<div id="hdn_maxValue" class="hidden"></div>
+
+
+
+		<!-- Aside Component List -->
+		<div id="depthAside" class="aside" style="display:block">
+
+			<div class="bx_com ts">
+				<h4 class="t_end t_traffic"><span>교통정보</span></h4>
+				<div class="traffic_dsc">
+					<h5><span class="ic_hot">HOT</span> <strong>분당선 도곡역 도보 7분</strong></h5>
+					<ul class="normal">
+					<li class="info info_v2"><span class="dot"></span>경기도 성남시 분당구 정자동 11
+						<!-- [D] layer open class btn_adr_on add -->
+						<a href="#" class="btn_m btn_adr btn_adr_on">
+							<span class="blind">도로명</span>
+							<span class="ly_tx">
+								<em>경기도 성남시 분당구 불정로 6길 (정자동 그린팩토리)</em>
+							</span>
+						</a>
+					</li>
+					<li class="info"><span class="dot"></span>입주일자: 2003.05</li>
+					<li class="info"><span class="dot"></span>건설사: 현대산업개발(주)</li>
+					<li class="info"><span class="dot"></span>총 307세대 / 총 2개동/ 총 34층</li>
+					<li class="info"><span class="dot"></span>면적 : 104㎡ .191A㎡. 19BA㎡. 195㎡. 201㎡</li>
+					</ul>
+				</div>	
+				<div class="traffic_srch">
+					<h5>빠른길 찾기</h5>
+					<p class="input">
+						<input type="text" id="path_input" class="_inputArea" value="출발지" title="출발지 입력"> 
+						<span>→</span> 
+						<strong title="타워팰리스3차">타워팰리스3차</strong> 
+						<a class="srch" href="#">찾기</a>
+					</p>
+					<!-- [D]빠른길 찾기 레이어 활성화시 style="display: block -->
+					<div class="ly_traffic_srch" style="display: ">
+						<div class="ts_top">
+							<h5>출발지검색</h5><input type="text" id="ly_path_input" value="출발지" title="출발지 입력"><a href="#"><span>검색</span></a>
+						</div>
+						<div class="ts_con scroll">
+							<div class="ts_con_top">출발지 검색 결과<strong>0건</strong></div>
+							<ul class="ts_lst">
+							<li><span><input type="checkbox" id="ts1"></span><label for="ts1"><em>광교상록</em> (경기도 수원시 영통구 이의동 하동 116-2)</label></li>
+							<li><span><input type="checkbox" id="ts2"></span><label for="ts2"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts3"></span><label for="ts3"><em>KT</em> (경기도 성남시 분당구 정자동 206)</label></li>
+							<li><span><input type="checkbox" id="ts4"></span><label for="ts4"><em>토다이 분당점 </em> (경기도 성남시 분당구 정자동 174-1 더샵스타파크 지하1층)</label></li>
+							<li><span><input type="checkbox" id="ts5"></span><label for="ts5"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts6"></span><label for="ts6"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts7"></span><label for="ts7"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							</ul>
+							<!-- [D]내용없을 시 style="block" -->
+							<span class="nodata" style="display: ">원하시는 출발지를 검색하세요.</span>
+						</div>
+						<a href="#" class="btn_close"><span class="blind">레이어닫기</span></a>
+					</div>
+				</div>	
+				<div class="traffic">
+					<h5>주변 대중교통 <span class="means">(지하철, 버스)</span></h5>
+
+					<div class="subway_area">
+						<p class="subway">
+							<span class="s3"></span><a href="#" title="수도권3호선" class="_subway">3호선(구파발)</a>
+						</p>
+						<p class="subway">
+							<span class="s100"></span><a href="#" title="분당선" class="_subway">분당선(정자)</a>
+						</p>
+						<p class="subway">
+							<span class="s109"></span><a href="#" title="신분당선" class="_subway" id="733">신분당선(정자)</a>
+						</p>
+					</div>
+
+					<ul>
+					<li>
+						<em title="마을버스" class="bus3">마을버스</em>
+						<a href="#">강남05</a> , <a href="#">강남09</a> , <a href="#">강남02</a> 
+					</li>
+					<li>
+						<em title="일반" class="bus1">일반</em>
+						<a href="#">917</a> , <a href="#">11-3</a> 
+					</li>
+					<li>
+						<em title="공항버스" class="bus5">공항버스</em>
+						<a href="#">6009</a> 
+					</li>
+					<li>
+						<em title="직행좌석" class="bus4">직행좌석</em>
+						<a href="#">9414</a> 
+					</li>
+					<li>
+						<em title="간선" class="bus11">간선</em>
+						<a href="#">141</a> , <a href="#">402</a>  , <a href="#">406</a> , <a href="#">N37</a> , <a href="#">472</a> 
+					</li>
+					<li>
+						<em title="지선" class="bus12">지선</em>
+						<a href="#">2413</a> , <a href="#">6411</a> , <a href="#">3012</a> , <a href="#">4319</a> , <a href="#">4432</a> , <a href="#">4434</a> , <a href="#">2415</a> , <a href="#">3219</a> ,<a href="#">4433</a> 
+					</li>
+					</ul>
+                    
+					<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+				</div>
+				<div class="photo">
+					<h4>갤러리</h4>
+					<ul class="plist">
+					<li class="first"><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+			
+			<!-- 스페셜 제휴 컨텐츠 -->
+			<div class="bx_com_thumb">
+				<h4 class="t_end"><span class="cont_sort">AD</span><span>스페셜 제휴 컨텐츠</span></h4>
+				<div class="cont_wrap">
+					<h5><a href="#">서울시 서초구 서초동 실거래가는?</a></h5>
+					<div class="thumb_img"><a href="#"><img src="img/@thmb_interior.jpg" alt=""><span class="mask"></span></a></div>
+					<p class="txt_area">서초구 신동안 1차 아파트전용면적 78.86가 매매로 요즘 가장 핫한지역이다. 서초구 신동안 1차 아파트전용면적 78.86가 .. </p>
+					<div class="txt_source">제공<span class="bar">|</span>매경부동산</div>
+				</div>
+			</div>
+			
+			<!-- 시장보고서 -->
+			<div class="bx_market_report">
+				<h4 class="t_end"><span>시장보고서</span></h4>
+				<div class="market_area">
+					<div class="market_box">
+						<div class="market_logo">
+							<!-- [D] 로고 아이콘 클래스 - v1:부동산써브, v2:닥터아파트, v3:매경부동산, v4:부동산114, v5:텐컴즈, v6:한경부동산, v7:부동산뱅크, v8:중앙일보 조인스랜드 -->
+							<a href="#"><span class="logo_name v3">매경부동산</span></a>
+						</div>
+						<a href="#">
+							<strong>사업시행인가 신청中 강남 개포주공1단지아파트</strong>
+							<p>서초구 서초힐스아파트 전용면적 59.91㎡ (약 18.1평)가...</p>
+						</a>
+					</div>
+					<div class="market_thmb">
+						<a href="#"><img src="http://dev.ui.naver.com/tmp/?80x80_default_y_FFB4B4_50" width="80" height="80" alt="임시 이미지"></a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 제휴사 매물 더보기 -->
+			<div class="bx_com">
+				<h4 class="t_end"><span>제휴사 매물 더보기</span></h4>
+				<div class="chain_area">
+					<ul>
+					<li class="odd"><a href="#"><img src="img/img_chain.gif" width="100" height="50" border="0" alt="부동산 즐겨찾기 닥터아파트"></a></li>
+					<li><a href="#"><img src="img/img_chain2.gif" width="100" height="50" border="0" alt="중앙일보 조인스랜드 부동산"></a></li>
+					<li class="odd"><a href="#"><img src="img/img_chain3.gif" width="100" height="50" border="0" alt="MK 부동산"></a></li>
+					<li><a href="#"><img src="img/img_chain4.gif" width="100" height="50" border="0" alt="부동산 써브"></a></li>
+					</ul>
+					<div class="premium_btn_page2">
+						<span class="pagenum"><strong>1</strong>/2</span>
+						<!-- [D] 활성화시 class="_on" 추가 -->
+						<a href="#" title="이전" class="btn_prev_on"><span>이전</span></a><a href="#" title="재생" class="btn_start_on" style="display: none"><span>재생</span></a><a href="#" title="멈춤" class="btn_stop_on" ><span>멈춤</span></a><a href="#" title="다음" class="btn_next_on"><span>다음</span></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 면적별 매매시세 -->
+			<div class="bx_com">
+				<h4 class="t_end t_loan"><span>담보대출정보</span></h4>
+				<div class="loan_tbl">
+					<table cellspacing="0" border="1" summary="대출정보">
+					<caption>대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="90"><col width="90">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" class="frst">면적 <em>(㎡)</em></th>
+					<th scope="col">상한가 <em>(만원)</em></th>
+					<th scope="col" class="last">하한가 <em>(만원)</em></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td>183</td>
+					<td>135,000</td>
+					<td><strong>125,000</strong></td>
+					</tr>
+					<tr>
+					<td>191A</td>
+					<td>145,000</td>
+					<td><strong>135,000</strong></td>
+					</tr>
+					<tr class="last">
+					<td>191A</td>
+					<td>145,000</td>
+					<td><strong>135,000</strong></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">한국감정원제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 에너지 사용량 정보 -->
+			<div class="bx_com">
+				<h4 class="t_end t_loan"><span>에너지 사용량 정보</span><a href="#" class="ic_q">에너지 사용량 정보란?</a></h4>
+				<div class="loan_tbl eng_tbl">
+					<table cellspacing="0" border="1" summary="대출정보">
+					<caption>대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="90"><col width="90">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" class="frst">면적 <em>(㎡)</em></th>
+					<th scope="col">전기에너지</th>
+					<th scope="col" class="last">열에너지</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td>183</td>
+					<td><span class="ic_e c1">A</span></td>
+					<td><span class="ic_e c2">B</span></td>
+					</tr>
+					<tr>
+					<td>191A</td>
+					<td><span class="ic_e c3">C</span></td>
+					<td><span class="ic_e c4">D</span></td>
+					</tr>
+					<tr class="last">
+					<td>201A</td>
+					<td><span class="ic_e c5">E</span></td>
+					<td><span class="ic_e c5">E</span></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">국토교통부 제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 부동산 주요뉴스 -->
+			<div class="bx_com">
+				<h4 class="t_end"><span>부동산 주요뉴스</span></h4>
+				<div class="lst_news_tab">
+					<!-- [D] 활성화시 class="on" 추가 -->
+					<a href="#" class="tab_btn first on">Today</a><a href="#" class="tab_btn last">주간뉴스</a>
+					<ul class="lst_news first">
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">살아나고 있는 부동산시장에 웬 '된서리'</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					</ul>
+					<ul class="lst_news last" style="display: none">
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">살아나고 있는 부동산시장에 웬 '된서리'</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기<span class="ico"></span></a>
+			</div>
+			<div class="bx_com">
+				<h4 class="t_end"><span>정자동 많이 본 단지</span></h4>
+				<ul class="lst_view_div">
+				<!-- [D]말줄임 처리-->
+				<li class="on"><em class="ic_num num1">1</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num2">2</em> <a href="#">느티마을경남선경</a> <span class="state up"><em></em>1</span></li>
+				<li><em class="ic_num num3">3</em> <a href="#">느티마을경남선경</a> <span class="state dn"><em></em>2</span></li>
+				<li><em class="ic_num num4">4</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num5">5</em> <a href="#">느티마을경남선경</a> <span class="new"><em></em><span class="blind">new</span></span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //Aside Component List -->
+	</div>
+	<!-- //하위 컨텐츠 및 Aside Component 영역 List Container -->
+
+	<!-- 퀵메뉴 -->
+	<?include "../../trunk/home/side_scroll_layer_incl.html";?>
+	<!-- //퀵메뉴 -->
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+	
+</div>
+<div id="pvframe" style="display:none"></div>
+<!-- [D] 마크업 확인용 -->
+<script>
+	$(function(){
+		$('.btn_toggle.open').click(function(){
+			$(this).parent().addClass('active');
+			return false;
+		});	
+		$('.btn_toggle.close, .btn_toggle.bottom').click(function(){
+			$(this).parent().removeClass('active');
+			return false;
+		});	
+		chartFocus('#donut_counselor');
+		chartFocus('#donut_teacher');
+		chartFocusIe8('#bar_teacher');
+		chartFocusIe8('#bar_counselor');
+		
+	});
+	function chartFocus(id){
+		$(id).find('.c3-chart-arc').each(function(){
+			$(this).mouseover(function(){
+				var index = $('.c3-focused').index();
+				$(id).siblings('.donut_legend').find('li').removeClass('c3-legend-item-focused').addClass('c3-legend-item-unfocused');
+				$(id).siblings('.donut_legend').find('li').eq(index).addClass('c3-legend-item-focused');
+				console.log(index);
+				if(index == 0){
+					$(id).siblings('.ratio_info.best').css('opacity','1');
+				}else {
+					$(id).siblings('.ratio_info.best').css('opacity','.3');
+				}
+			});
+			$(this).mouseout(function(){
+				$(id).siblings('.ratio_info.best').css('opacity','1');
+				$(id).siblings('.donut_legend').find('li').removeClass('c3-legend-item-unfocused');
+			});
+		});
+	}
+	function chartFocusIe8(id){
+		$(id).find('.donut_data').each(function(){
+			$(this).mouseover(function(){
+				var index = $(this).index();
+				$(id).siblings('.donut_legend').find('li').removeClass('c3-legend-item-focused').addClass('c3-legend-item-unfocused');
+				$(id).siblings('.donut_legend').find('li').eq(index).addClass('c3-legend-item-focused');
+			});
+			$(this).mouseout(function(){
+				$(id).siblings('.donut_legend').find('li').removeClass('c3-legend-item-unfocused');
+			});
+		});
+	}
+</script>
+
+</body>
+</html>

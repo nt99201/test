@@ -1,0 +1,19 @@
+// 아래 예시와 같이 사용한다.
+// background:url(#{$imgUrl-center}/article/articlelist.gif);
+
+// 이미지경로 (static)
+$imgUrl-service: "http://static.land.naver.net/static/service/20160802";
+$imgUrl-center: "http://static.land.naver.net/static/center/20160802";
+$imgUrl-mobile: "http://static.land.naver.net/static/mobile/20160707";
+
+// 이미지경로 (develop)
+//$imgUrl-service: "${imgUrl.service}";
+//$imgUrl-center: "${imgUrl.center}";
+//$imgUrl-mobile: "${imgUrl.mobile}";
+
+// 이미지경로 (local)
+//$imgUrl-center: "../img";
+
+// CSS hack
+$ie7-hack: "."; // * (IE 7 star hack) 대신 . (IE 6, 7 dot hack)
+$ie6-hack: "#"; // _ (IE 6 underscore hack) 대신 # (IE 6 해시 hack)

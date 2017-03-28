@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>전체 캐스트 :: 부동산 캐스트</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_cast.css">
+<style type="text/css">
+/* 임시 코드 (개발 적용 안함) */
+#header .lnb_sub{height:43px !important}
+.layer_mobile_wrap{display:none !important}
+</style>
+</head>
+
+<body onload="getGNB();">
+<div id="wrap">
+
+	<div id="u_skip">
+		<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+		<a href="#content"><span>본문으로 바로가기</span></a>
+	</div>
+
+	<!-- 원네이버 GNB -->
+	<div id="header" class="header_one">
+		<div class="gnb_wrap">
+			<div class="inner_wrap">
+				<div class="item_area">
+					<h1 class="logo_area">
+						<a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+						<a class="logo_land" href="http://land.naver.com"><i class="icon">부동산</i></a>
+					</h1>
+					<div class="inner_gnb_search">
+						<h2 class="blind">검색영역</h2>
+						<fieldset>
+							<legend>부동산 검색</legend>
+							<input type="text" title="검색" class="search_input" placeholder="지역명 또는 단지명">
+							<a href="#" onclick="" class="search_button type_inside"><i class="icon">검색</i></a>
+							<a href="#" onclick="" class="search_button type_integration"><i class="icon">통합검색</i></a>
+						</fieldset>
+					</div>
+				</div>
+				<div class="gnb_area">
+					<div id="gnb">
+						<script type="text/javascript">
+						var nsc = "naver.service";
+						var gnb_service = "static.nid.naver.com";
+						var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+						var gnb_template = "gnb_utf8";
+						var gnb_one_naver = 1;
+						</script>
+						<script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lnb" class="nav_wrap">
+			<h2 class="blind">메인메뉴</h2>
+			<div class="inner_wrap">
+				<!-- [D] 활성화 클래스 on -->
+				<ul class="nav_list">
+				<li class="menu main_home"><a href="#">부동산 홈</a></li>
+				<li class="menu main_article"><a href="#">매물</a></li>
+				<li class="menu main_isale"><a href="#">분양</a></li>
+				<li class="menu main_news"><a href="#">뉴스</a></li>
+				<li class="menu main_community"><a href="#">커뮤니티</a></li>
+				<li class="menu main_auction"><a href="#">경매</a></li>
+				<li class="menu main_mypage"><a href="#">MY페이지</a></li>
+				</ul>
+				<div class="button_area">
+					<a class="type_admin" href="http://landad.naver.com">부동산관리센터</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //원네이버 GNB -->
+
+	<div id="container">
+		<div id="snb">
+			<div class="date">
+				<span class="no_t no2011">2011</span><br>
+				<span class="no_m no3">03</span>
+				<span class="no_m slash">/</span>
+				<span class="no_m no22">22</span><br>
+				<span class="no_b tue">Tuesday</span>
+			</div>
+			<h2><img src="img/snb_tit.gif" width="124" height="57" alt="부동산 캐스트 부동산에 관련된 육인한 정보들을 소개합니다."></h2>
+			<ul>
+			<li class="nav"><a href="#" class="on"><span>전체 보기</span></a></li>
+			<li class="nav2"><a href="#"><span>월별로 보기</span></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div class="con_top">
+				<h3><img src="img/h_all_cast.gif" width="66" height="15" alt="전체 캐스트"></h3>
+				<form action="">
+					<fieldset>
+						<legend>전체 캐스트 검색 폼</legend>
+						<input type="text" title="검색어 입력" class="input">
+						<input type="image" src="img/btn_srch.gif" alt="검색">
+					</fieldset>
+				</form>
+			</div>
+			<div class="all_cast_list">
+				<p class="cnt">전체<strong>400</strong>개 <span>(1-12 / 400)</span></p>
+				<ul class="list">
+				<li class="today">
+					<h4>
+						<em class="today">Today</em>
+						<!-- [D] no_t와 not_2 클래스를 가진 span은 꼭 공백없이 붙여주세요 -->
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no3">03</span><br>
+						<span class="no_m bno22">22</span><br>
+						<span class="no_b mon">Monday</span>
+					</h4>
+					<p class="spot">
+						<a href="#"><img src="img/@thum.gif" width="118" height="87" alt="임시 이미지"></a>
+						<span class="tit"><img src="img/@tmp_cate.gif" alt="분양"> <a href="#"><strong>서울 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no5">05</span><br>
+						<span class="no_m bno21">21</span><br>
+						<span class="no_b tue">Tuesday</span>
+					</h4>
+					<p class="spot">
+						<a href="#"><img src="img/@thum.gif" width="118" height="87" alt="임시 이미지"></a>
+						<span class="tit">[분양] <a href="#"><strong>서울 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li>[Q&amp;A] <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no3">03</span><br>
+						<span class="no_m bno20">20</span><br>
+						<span class="no_b wed">Wednesday</span>
+					</h4>
+					<p class="spot">
+						<a href="#"><img src="img/@thum.gif" width="118" height="87" alt="임시 이미지"></a>
+						<span class="tit"><img src="img/@tmp_cate.gif" alt="분양"> <a href="#"><strong>서울 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no3">03</span><br>
+						<span class="no_m bno19">19</span><br>
+						<span class="no_b thu">Thursday</span>
+					</h4>
+					<p class="spot">
+						<a href="#"><img src="img/@thum.gif" width="118" height="87" alt="임시 이미지"></a>
+						<span class="tit"><img src="img/@tmp_cate.gif" alt="분양"> <a href="#"><strong>서울 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no3">03</span><br>
+						<span class="no_m bno18">18</span><br>
+						<span class="no_b fri">Friday</span>
+					</h4>
+					<p class="spot">
+						<a href="#"><img src="img/@thum.gif" width="118" height="87" alt="임시 이미지"></a>
+						<span class="tit"><img src="img/@tmp_cate.gif" alt="분양"> <a href="#"><strong>서울 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no3">03</span><br>
+						<span class="no_m bno17">17</span><br>
+						<span class="no_b sat">Saturday</span>
+					</h4>
+					<p class="spot">
+						<a href="#"><img src="img/@thum.gif" width="118" height="87" alt="임시 이미지"></a>
+						<span class="tit"><img src="img/@tmp_cate.gif" alt="분양"> <a href="#"><strong>서울 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>
+						<span class="no_t no2011">2011.</span><span class="no_t no_t2 no3">03</span><br>
+						<span class="no_m bno16">16</span><br>
+						<span class="no_b sun">Sunday</span>
+					</h4>
+					<p class="spot">
+						<!-- [D] 이미지가 없을때 noimg 클래스 추가 -->
+						<span class="tit noimg"><img src="img/@tmp_cate.gif" alt="분양"> <a href="#" class="tit"><strong>서울 20평대 경매APT 서울 20평대 경매APT 20평대 경매APT</strong></a></span><br>
+						<a href="#" class="con">전원주택에 적합한 경기도 200평대 땅값 얼마나할까? 전원주택에 적합한 경기도 200평대 땅값 얼마나할까?</a>
+					</p>
+					<ul>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">전세난 해법은? 시장기능에 맡겨야</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">월세 계약시 확정일자를 꼭 받아야 할까?</a></li>
+					<li><img src="img/@tmp_cate.gif" alt="분양"> <a href="#">시프트 재계약 때…전셋값 최고 30% 껑충</a></li>
+					</ul>
+				</li>
+				</ul>
+			</div>
+			<div class="paginate_regular">
+				<a href="#" class="direction"><span>‹</span> 이전페이지</a>
+				<a href="#">1</a>
+				<strong>2</strong>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				<a href="#">9</a>
+				<a href="#">10</a>
+				<a href="#" class="direction">다음페이지<span>›</span></a>
+			</div>
+		</div>
+	</div>
+	<? include "http://svn.nhndesign.com/svnview/N_finance/land/branches/p_110531_home/footer_incl.html" ?>
+</div>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_mypage.css">
+</head>
+<body onload="getGNB();">
+<div id="wrap">
+
+	<!-- skip to content -->
+	<div id="u_skip">
+		<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+		<a href="#content"><span>본문으로 바로가기</span></a>
+	</div>
+	<!-- //skip to content -->
+
+	<!-- 원네이버 GNB -->
+	<div id="header" class="header_one">
+		<div class="gnb_wrap">
+			<div class="inner_wrap">
+				<div class="item_area">
+					<h1 class="logo_area">
+						<a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+						<a class="logo_land" href="http://land.naver.com"><i class="icon">부동산</i></a>
+					</h1>
+					<div class="inner_gnb_search">
+						<h2 class="blind">검색영역</h2>
+						<fieldset>
+							<legend>부동산 검색</legend>
+							<input type="text" title="검색" class="search_input" placeholder="지역명 또는 단지명">
+							<a href="#" onclick="" class="search_button type_inside"><i class="icon">검색</i></a>
+							<a href="#" onclick="" class="search_button type_integration"><i class="icon">통합검색</i></a>
+						</fieldset>
+					</div>
+				</div>
+				<div class="gnb_area">
+					<div id="gnb">
+						<script type="text/javascript">
+						var nsc = "naver.service";
+						var gnb_service = "static.nid.naver.com";
+						var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+						var gnb_template = "gnb_utf8";
+						var gnb_one_naver = 1;
+						</script>
+						<script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lnb" class="nav_wrap">
+			<h2 class="blind">메인메뉴</h2>
+			<div class="inner_wrap">
+				<!-- [D] 활성화 클래스 on -->
+				<ul class="nav_list">
+				<li class="menu main_home"><a href="#">부동산 홈</a></li>
+				<li class="menu main_article"><a href="#">매물</a></li>
+				<li class="menu main_isale"><a href="#">분양</a></li>
+				<li class="menu main_news"><a href="#">뉴스</a></li>
+				<li class="menu main_community"><a href="#">커뮤니티</a></li>
+				<li class="menu main_auction"><a href="#">경매</a></li>
+				<li class="menu main_mypage on"><a href="#">MY페이지</a></li>
+				</ul>
+				<div class="button_area">
+					<a class="type_admin" href="http://landad.naver.com">부동산관리센터</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //원네이버 GNB -->
+
+	<div id="container">
+		<div class="snb">
+			<h2><img src="http://static.land.naver.net/static/service/20120214/mypage/h2_mypage.gif" width="179" height="75" alt="My 페이지"></h2>
+			<ul class="nav">
+			<!-- 선택된 리스트에 대하여 이미지 파일명 뒤에 _on 추가 -->
+			<li><a href="/mypage/findHouse.nhn"><img src="http://static.land.naver.net/static/service/20120807/isale/snb6.gif" hiddenSrc="http://static.land.naver.net/static/service/20120807/isale/snb6_on.gif" id="sub_menu6" width="178" height="35" alt="맞춤매물"></a></li>
+			<li><a href="/mypage/interestArticle.nhn"><img src="http://static.land.naver.net/static/service/20120807/isale/snb.gif" hiddenSrc="http://static.land.naver.net/static/service/20120807/isale/snb_on.gif" id="sub_menu1" width="178" height="35" alt="관심매물·단지·분양"></a></li>
+			<li><a href="/mypage/interestColumn.nhn"><img src="http://static.land.naver.net/static/service/20120807/isale/snb5.gif" hiddenSrc="http://static.land.naver.net/static/service/20120807/isale/snb5_on.gif"  id="sub_menu5" width="178" height="35"alt="관심칼럼&middot;뉴스" ></a></li>
+			<li><a href="/mypage/isaleScheduleNotice.nhn"><img src="http://static.land.naver.net/static/service/20120807/isale/snb2.gif" hiddenSrc="http://static.land.naver.net/static/service/20120807/isale/snb2_on.gif" width="178" height="35" id="sub_menu4" alt="분양 일정 알림"></a></li>
+			<li><a href="/mypage/secession.nhn"><img src="http://static.land.naver.net/static/service/20120807/isale/snb4.gif" hiddenSrc="http://static.land.naver.net/static/service/20120807/isale/snb4_on.gif" id="sub_menu3" width="178" height="35" alt="부동산회원 탈퇴"></a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<h3><img src="http://static.land.naver.net/static/service/20120807/isale/h3_1interest.gif" width="136" height="18" alt="관심매물&middot;단지&middot;분양"></h3>
+			<div class="menu_guide">
+				<p>관심 매물과 단지를 저장해 두시고, 다시 확인하실 수 있습니다.<br>관심 매물은 <em>서비스 기간이 만료</em>되면, 관심 분양은 <em>분양이 완료</em>되면 <em>리스트에서 삭제</em>될 수 있습니다.</p>
+			</div>
+			<ul class="interest_menu">
+			<li class="on"><a href="/mypage/interestArticle.nhn"><img src="http://static.land.naver.net/static/service/20120807/mypage/tab_sales1_on.gif" width="88" height="33" alt="매물"></a></li>
+			<li><a href="/mypage/interestComplex.nhn"><img src="http://static.land.naver.net/static/service/20120807/mypage/tab_sales2.gif" width="88" height="33" alt="단지"></a></li>
+			<li><a href="/mypage/interestIsaleComplex.nhn"><img src="http://static.land.naver.net/static/service/20120807/isale/tab_sales3.gif" width="88" height="33" alt="분양"></a></li>
+			</ul>
+			<fieldset>
+				<legend>관심매물 관리</legend>
+				<div class="btn_input1">
+					<a href="#"><img src="http://static.land.naver.net/static/service/20120807/mypage/btn_delete.gif" width="54" height="21" onClick="deleteCheckList();" alt="삭제"></a>
+					<!-- <a href="#"><img src="http://static.land.naver.net/static/service/20120807/mypage/btn_print.gif" width="54" height="21" alt="인쇄"></a> -->
+				</div>
+				<form id="searchForm" method="get" action="/mypage/interestArticle.nhn">
+				<input type="hidden" id="rletTypeCd" name="rletTypeCd" value="">
+				<input type="hidden" name="sort" value="">
+				<input type="hidden" name="sortOrder" value="">
+				<input type="hidden" name="page" id="page" value="">
+				<div class="set_condition">
+					<label class="front_select">매물종류</label>
+					<select id="rlet_type_cd" name="rlet_type_cd" style="width:115px;" onChange="submitSearchForm();">
+    				<option value="">전체</option>
+    				<option value="A01">아파트</option>
+    				</select>
+					<label class="front_select1">지역선택</label>
+					<select id="cityList" name="city" onChange="javascript:setRegion('cityList', 'dvsnList'); submitSearchForm('city');" >
+						<option value="">시/도</option>
+					</select>
+					<select id="dvsnList" name="dvsn" onChange="javascript:setRegion('dvsnList', 'secList'); submitSearchForm('dvsn');">
+						<option value="">시/군/구</option>
+					</select>
+					<select id="secList" name="sec" onChange="javascript:setComplex('secList', 'complexList'); submitSearchForm('sec');">
+						<option value="">읍/면/동</option>
+					</select>
+					<select id="complexList" name="complex" onChange="javascript: submitSearchForm('complex');">
+						<option value="">단지리스트</option>
+					</select>
+					<ul class="trade_type">
+					<li><input type="radio" id="trade_type1" name="trad_tp_cd" class="input_radio" value="" onClick="submitSearchForm();"><label for="trade_type1">전체(17)</label></li>
+					<li><input type="radio" id="trade_type2" name="trad_tp_cd" class="input_radio" value="A1" onClick="submitSearchForm();"><label for="trade_type2">매매(7)</label></li>
+					<li><input type="radio" id="trade_type3" name="trad_tp_cd" class="input_radio" value="B1" onClick="submitSearchForm();"><label for="trade_type3">전세(6)</label></li>
+					<li><input type="radio" id="trade_type4" name="trad_tp_cd" class="input_radio" value="B2" onClick="submitSearchForm();"><label for="trade_type4">월세(4)</label></li>
+					</ul>
+				</div>
+				</form>
+				<div class="bg_set_condition_b"></div>
+				<form name="list" action="/mypage/interestArticle.nhn" method="POST" style='margin:0'>
+				<input type="hidden" name="orderType">
+				<!-- width:775px -->
+				<table summary="매물 리스트"  cellspacing="0 "class="sale_list">
+				<colgroup>
+				<col width="22"><col width="32"><col width="49"><col width="97"><col width="58"><col width="50"><col width="136"><col width="62"><col width="40"><col width="32"><col width="80"><col width="*"></colgroup>
+				<thead>
+				<tr>
+				<th scope="col"><input type="checkbox" class="input_check" name="check_all" onClick="toggleCheck()"></th>
+				<th scope="col">거래</th>
+				<th scope="col">종류</th>
+				<th scope="col"><a href="#" onClick="listSort('sort2'); return false;">소재지<img src="http://static.land.naver.net/static/service/20130116/mypage/ico_order_down.gif" id="sort3" width="5" height="3" title="내림차순"></a></th>
+				<th scope="col">&nbsp;<span class="blind">확인일자</span></th>
+				<th scope="col" colspan="2" class="align_l"><a href="#" onClick="listSort('sort3'); return false;">매물명<img src="http://static.land.naver.net/static/service/20130116/mypage/ico_order_down.gif" id="sort3" width="5" height="3" title="내림차순"></a></th>
+				<th scope="col">면적(㎡)</th>
+				<th scope="col"><a href="#" onClick="listSort('sort6'); return false;">동<img src="http://static.land.naver.net/static/service/20130116/mypage/ico_order_down.gif" id="sort3" width="5" height="3" title="내림차순"></a></th>
+				<th scope="col"><a href="#" onClick="listSort('sort7'); return false;">층<img src="http://static.land.naver.net/static/service/20130116/mypage/ico_order_down.gif" id="sort3" width="5" height="3" title="내림차순"></a></th>
+				<th scope="col" class="align_r"><a href="#" onClick="listSort('sort5'); return false;">매물가(만원)<img src="http://static.land.naver.net/static/service/20130116/mypage/ico_order_down.gif" id="sort3" width="5" height="3" title="내림차순"></a></th>
+				<th scope="col">연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td rowspan="2" class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td rowspan="2" class="sale_type2 bottomline">매매</td>
+				<td rowspan="2" class="sale_type2 bottomline">주상복합</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span class="tx_area">서울시 동대문구 휘경동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/sp_my_con.png) -442px 0 no-repeat;" width="48" height="15" alt="">12.08.08</span>
+					</div>
+				</td>
+				<td class="name" colspan="2"><span class="ico_site">현장확인</span><a href="#">일이삼사오육칠팔구..</a></td>
+				<td class="num">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num"><div class="inner">431</div></td>
+				<td class="num"><div class="inner">3/5</div></td>
+				<td class="num align_r"><div class="inner"><strong>98,000/70</strong></div></td>
+				<td  rowspan="2" class="contact bottomline">
+					<div class="inner">
+						<a href="javascript:nhn.article.common.moveRealtorPage('', null, true)">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+						</a>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="6" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt"> 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a"><a href="#" class="tx">부동산114</a></span>
+					</div>
+				</td>
+				</tr>
+				<tr class="evennum">
+				<td rowspan="2" class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td rowspan="2" class="sale_type2 bottomline">매매</td>
+				<td rowspan="2" class="sale_type2 bottomline">재건축</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span class="tx_area">동대문구 휘경동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark5" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/sp_my_con.png) -493px 0 no-repeat;" width="48" height="15" alt="">12.08.08</span>
+					</div>
+				</td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_thmb">
+						<div class="thmb">
+							<div class="thmb_area">
+								<img src="http://static.land.naver.net/static/service/20120724/article/blank.gif" width="24" height="14" alt="현장확인" class="ico ico_site">
+								<a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+							</div>
+							<!-- [D] 1개 : width:66px, 2개 : 124px, 3개 : 182px, 4개 : 240px, 5개 : 298px -->
+							<div class="ly_thmb" style="width:298px">
+								<ul>
+								<li><a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+								<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+								<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+								<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+								<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+								</ul>
+								<p class="ly_num">5<em>/</em><strong>10</strong></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td class="name"><a href="#">주공4단지</a></td>
+				<td class="num">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num"><div class="inner">431</div></td>
+				<td class="num"><div class="inner">3/5</div></td>
+				<td class="num align_r"><div class="inner"><strong>8,000/70</strong></div></td>
+				<td  rowspan="2" class="contact bottomline">
+					<div class="inner">
+						<a href="javascript:nhn.article.common.moveRealtorPage('', null, true)">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+						</a>
+					</div>
+				</td>
+				</tr>
+				<tr class="evennum">
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt"> 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a"><a href="#" class="tx">부동산114</a></span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td rowspan="2" class="sale_type2 bottomline">매매</td>
+				<td rowspan="2" class="sale_type2 bottomline">재건축</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span class="tx_area">동대문구 휘경동</span></td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_mark">
+						<span class="mark6" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/sp_my_con.png) -445px -21px no-repeat;" width="48" height="15" alt="">12.08.08</span>
+					</div>
+				</td>
+				<td rowspan="2" class="bottomline">
+					<div class="inner inner_thmb">
+						<div class="thmb">
+							<div class="thmb_area">
+								<a href="#"><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+								<p class="thmb_num _thumb_num"></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td class="name"><span class="ico_site">현장확인</span><a href="#">일이삼사오육칠팔구..</a></td>
+				<td class="num">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num"><div class="inner">431</div></td>
+				<td class="num"><div class="inner">3/5</div></td>
+				<td class="num align_r"><div class="inner"><span class="ico down">최초등록가 대비 하락</span><strong title="10,000/98">10,000/98</strong></div></td>
+				<td  rowspan="2" class="contact bottomline">
+					<div class="inner">
+						<a href="javascript:nhn.article.common.moveRealtorPage('', null, true)">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+						</a>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="5" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt">회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a"><a href="#" class="tx">부동산114</a></span>
+					</div>
+				</td>
+				</tr>
+				<!-- [D] 중복 중개업소 펼침시 class="chain_on" 추가 -->
+				<tr class="chain_on evennum">
+				<td rowspan="2" class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td rowspan="2" class="sale_type2 bottomline">매매</td>
+				<td rowspan="2" class="sale_type2 bottomline">재건축</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span class="tx_area">동대문구 휘경동</span></td>
+				<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+				<td colspan="2" class="name"><a href="#">주공4단지</a></td>
+				<td class="num">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num"><div class="inner">431</div></td>
+				<td class="num"><div class="inner">3/5</div></td>
+				<td class="num align_r"><div class="inner"><strong>98,000/70</strong></div></td>
+				<td rowspan="2" class="contact bottomline">
+					<div class="inner">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+					</div>
+				</td>
+				</tr>
+				<!-- [D] 중복 중개업소 펼침시 class="chain_on" 추가 -->
+				<tr class="chain_on evennum">
+				<td colspan="6" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt">회기역 외대역 5분거리 최상의 입지조건 회기역 외대역 5분거리 최상의 입지조건.</span>
+						<!-- [D] 새대한공인... 5자, 한국공인중개... 6자로 말줄임. 개발에서 적용 -->
+						<span class="txt_a"><a href="#" class="tx">새대한공인...외</a><a href="#" class="ic on"><span class="blind">펼침</span></a><span class="ic aw"></span></span>
+					</div>
+				</td>
+				</tr>
+				<!-- [D] 중복 중개업소 펼침 class="chain" 추가 / 첫번째 class="first" 추가 / 마지막 class="last" 추가 -->
+				<tr class="chain first evennum">
+				<td rowspan="2" class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td rowspan="2" class="sale_type2 bottomline">매매</td>
+				<td rowspan="2" class="sale_type2 bottomline">재건축</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span class="tx_area">동대문구 휘경동</span></td>
+				<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+				<td colspan="2" class="name"><a href="#">주공4단지</a></td>
+				<td class="num">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num"><div class="inner">431</div></td>
+				<td class="num"><div class="inner">3/5</div></td>
+				<td class="num align_r"><div class="inner"><strong>98,000/70</strong></div></td>
+				<td rowspan="2" class="contact bottomline">
+					<div class="inner">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+					</div>
+				</td>
+				</tr>
+				<!-- [D] 중복 중개업소 펼침 class="chain" 추가 -->
+				<tr class="chain evennum">
+				<td colspan="6" class="desc bottomline">
+					<div class="inner">
+						<span title="조건좋은 급매물건" class="txt">회기역 외대역 5분거리 최상의 입지조건.</span>
+						<span class="txt_a">새대한공인중개사협회</span>
+					</div>
+				</td>
+				</tr>
+				<!-- [D] 중복 중개업소 펼침 class="chain" 추가 -->
+				<tr class="chain last evennum">
+				<td rowspan="2" class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td rowspan="2" class="sale_type2 bottomline">매매</td>
+				<td rowspan="2" class="sale_type2 bottomline">재건축</td>
+				<td rowspan="2" class="sale_type2 align_l bottomline"><span class="tx_area">동대문구 휘경동</span></td>
+				<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+				<td colspan="2" class="name"><a href="#">주공4단지</a></td>
+				<td class="num">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num"><div class="inner">431</div></td>
+				<td class="num"><div class="inner">3/5</div></td>
+				<td class="num align_r"><div class="inner"><strong>98,000/70</strong></div></td>
+				<td rowspan="2" class="contact bottomline">
+					<div class="inner">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+					</div>
+				</td>
+				</tr>
+				<!-- [D] 마지막 class="last" 추가 -->
+				<tr class="chain last evennum">
+				<td colspan="6" class="desc bottomline">
+					<div class="inner">
+						<span class="txt_a">새대한공인중개사협회</span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td class="bottomline sale_type"><div class="inner"><input type="checkbox" class="input_check" name="checkList" value="816374"></div></td>
+				<td class="sale_type2 bottomline">매매</td>
+				<td class="sale_type2 bottomline">재건축</td>
+				<td class="sale_type2 align_l bottomline"><span class="tx_area">동대문구 휘경동</span></td>
+				<td class="sale_type3 bottomline">12.08.08</td>
+				<td colspan="2" class="name bottomline"><a href="#">주공4단지</a></td>
+				<td class="num bottomline">
+					<div class="inner">
+						<span title="공급면적 35.87㎡ 전용면적 35.87㎡ ">35.87/35.87</span>
+						<div class="layer_sale_size" style="display:none;"><p>공급면적/전용면적</p></div>
+					</div>
+				</td>
+				<td class="num bottomline"><div class="inner">431</div></td>
+				<td class="num bottomline"><div class="inner">3/5</div></td>
+				<td class="num align_r bottomline"><div class="inner"><span class="ico down">최초등록가 대비 하락</span><strong>98,000/70</strong></div></td>
+				<td class="contact bottomline">
+					<div class="inner">
+						<span class="name">황금공인중개사..</span>
+						<span class="tel">02-3411-5544</span>
+					</div>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				</form>
+			</fieldset>
+			<div class="paginate" style="margin:36px 0 -3px 0;padding:0">
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">다음 </a>
+ 					<a href="#" class="next_end">끝 </a>
+				</div>
+		</div>
+<script type="text/javascript">
+function init(){
+//	toggleMainMenu('mypage_menu');
+	toggleMenu('sub_menu1');
+	chgRletType();
+	cityInit();
+	radioInit($Form('searchForm').element('trad_tp_cd'), '');
+	sortInit();
+	makeParamUrl();
+}
+function mypageInit(){
+//	toggleMainMenu('mypage_menu');
+	toggleMenu('sub_menu1');
+	chgRletType();
+	cityInit();
+	radioInit($Form('searchForm').element('trad_tp_cd'), '');
+	sortInit();
+	makeParamUrl();
+}
+function setLists (moveFlag)
+{
+	var tform = document.list;
+	var delCheck = 0;
+
+	if( tform.checkList ) {
+		var size = tform.checkList.length;
+		if( !size ) size = 1;
+	}
+
+	if( size > 1 )
+	{
+		for( var i = 0; i < size ; i++ )
+		{
+			if( tform.checkList[i].checked )
+			{
+				delCheck = 1;
+			}
+		}
+	}
+	else if( size == 1 )
+	{
+		if( tform.checkList.checked )
+		{
+				delCheck = 1;
+		}
+	}
+	return delCheck;
+}
+
+function deleteCheckList()
+{
+	var tform = document.list;
+	var delCheck = 0;
+
+	delCheck = setLists ();
+
+	if( !delCheck )
+	{
+		alert( '삭제할 매물을 선택해주세요.' );
+		return;
+	}
+	else
+	{
+		if( !confirm ('선택하신 매물을 삭제하시겠습니까?') ) {
+				return;
+		}
+		tform.orderType.value = 1;
+
+		tform.submit();
+		return;
+	}
+}
+
+function toggleCheck()
+{
+	var tform = document.list;
+
+	if( tform.checkList )
+	{
+		var size = tform.checkList.length;
+		if( !size ) size = 1;
+	}
+	else
+	{
+		tform.check_all.value = 0;
+		return;
+	}
+
+	if ( tform.check_all.value == 1 )
+	{
+		tform.check_all.value = 0;
+	}
+	else
+	{
+		tform.check_all.value = 1;
+	}
+
+	var current_checked = tform.check_all.value;
+	if ( current_checked == 1 )
+		var check_value = true;
+	else
+		var check_value = false;
+
+	if( size > 1 )
+	{
+		for( var i = 0 ; i < size ; i++ )
+		{
+			tform.checkList[i].checked = check_value;
+		}
+	}
+	else if( size == 1 )
+	{
+		tform.checkList.checked = current_checked;
+	}
+
+	return;
+}
+function submitSearchForm(changed){
+	if(changed=="city"){
+		$('dvsnList').disabled = true;
+		$('secList').disabled = true;
+		$('complexList').disabled = true;
+	}
+	else if (changed=="dvsn"){
+		$('secList').disabled = true;
+		$('complexList').disabled = true;
+	}
+	else if (changed=="sec") {
+		$('complexList').disabled = true;
+	}
+	var searchForm = $('searchForm');
+	searchForm.submit();
+}
+function cityInit(){
+	var city = "";
+	if (city != ""){
+		setRegion('', 'cityList',city,dvsnInit);
+	} else {
+		setRegion('' , 'cityList');
+		return;
+	}
+}
+function dvsnInit(){
+	var dvsn = "";
+	if (dvsn != ""){
+		setRegion('cityList', 'dvsnList',dvsn,secInit);
+	} else {
+		setRegion('cityList', 'dvsnList');
+		return;
+	}
+}
+function secInit(){
+	var sec = "";
+	if (sec != ""){
+		setRegion('dvsnList', 'secList',sec,complexInit);
+	} else {
+		setRegion('dvsnList', 'secList');
+		return;
+	}
+}
+
+function complexInit(){
+	var complex="";
+	if (complex != ""){
+		setComplex('secList', 'complexList',complex);
+	} else {
+		setComplex('secList', 'complexList');
+		return;
+	}
+}
+
+function radioInit(id,value){
+	for(var i = 0; i < id.length; i++){
+		if(id[i].value == value){
+			id[i].checked = true;
+			return;
+		}
+	}
+}
+
+function sortInit(){
+	var id = "";
+	if(id != ""){
+		var sortId = $(id);
+		var sortOrder="";
+		if(sortOrder == "asc"){
+			sortId.src = sortId.getAttribute('hiddenSrc1');
+			sortId.setAttribute("sortOrder","asc");
+			sortId.setAttribute("title","오름차순");
+		}else {
+			sortId.src = sortId.getAttribute('hiddenSrc2');
+			sortId.setAttribute("sortOrder","desc");
+			sortId.setAttribute("title","내림차순");
+		}
+	}
+}
+
+function listSort(elementId){
+	var id = $(elementId);
+	if(id.src == id.getAttribute("hiddenSrc1")){
+		id.src = id.getAttribute("hiddenSrc2");
+		$Form('searchForm').value('sort',elementId);
+		$Form('searchForm').value('sortOrder',"desc");
+		id.setAttribute("sortOrder","desc");
+		$Form('searchForm').submit();
+	}
+	else {
+		id.src = id.getAttribute("hiddenSrc1");
+		$Form('searchForm').value('sort',elementId);
+		$Form('searchForm').value('sortOrder',"asc");
+		id.setAttribute("sortOrder","asc");
+		$Form('searchForm').submit();
+		for(var i = 1; i < 9; i++){
+			var sortId = "sort"+i;
+			try {
+			if(sortId != elementId)
+				$(sortId).src = $(sortId).getAttribute("hiddenSrc2");
+			} catch (e){
+			}
+		}
+	}
+}
+
+function sizeLayerControl(obj, isView){
+
+	var divLayer = obj.parentNode.getElementsByTagName('div');
+	if(isView == 1)
+		divLayer[0].style.display="";
+	else if(isView == 0)
+		divLayer[0].style.display="none";
+}
+
+function chgRletType(){
+	var sOpt = getSelectedOption('rlet_type_cd');
+	var tempValue = sOpt.value;
+	$('rletTypeCd').value = sOpt.value;
+	if(tempValue != ""){
+		if(tempValue.charAt(0) == 'A' || tempValue.charAt(0) == 'B' || tempValue.charAt(0) == 'F'){
+			$('complexList').disabled = false;
+		} else {
+			clearOptions('complexList',1);
+			$('complexList').disabled = true;
+		}
+	} else {
+			clearOptions('complexList',1);
+			$('complexList').disabled = true;
+	}
+}
+
+var urlParam = "";
+function makeParamUrl(){
+	var cityValue = "";
+	var dvsnValue = "";
+	var secValue = "";
+	var complexValue = "";
+	var form = $('searchForm');
+	for(var i=0; i < form.elements.length;i++){
+		var obj = form.elements[i];
+		if(obj.disabled) continue;
+
+		if( obj == null || typeof obj == 'undefined' || obj.name == 'page' || obj.name == undefined) continue;
+		if((obj.type == "radio" || obj.type == "checkbox") && !obj.checked)
+			continue;
+		if( urlParam.length != 0 ) urlParam += "&";
+
+		var objValue = "";
+		if(obj.name=='city')
+			objValue = cityValue;
+		else if(obj.name=='dvsn')
+			objValue = dvsnValue;
+		else if(obj.name=='sec')
+			objValue = secValue;
+		else if(obj.name=='complex')
+			objValue = complexValue;
+		else
+			objValue = obj.value;
+		urlParam += obj.name + "=" + encodeURI(objValue);
+	}
+}
+
+function searchFormSubmit(pidx){
+
+	var form = $('searchForm');
+	if(pidx){
+		$("page").value = pidx;
+		urlParam += "&page=" + pidx;
+		document.location = form.action + "?" + urlParam;
+		return;
+	}
+	form.submit();
+}
+</script>
+		</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+
+	</div>
+</body>
+<script src="http://static.land.naver.net/static/service/js/201208071823/min/my/my.min.js" type="text/javascript"></script>
+<script>
+	// init()함수 JS파일 호출 위치변경으로 JS내에서 초기화되어 이름 변경.
+	mypageInit();
+</script>
+</html>

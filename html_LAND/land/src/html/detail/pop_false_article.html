@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="css/land_popup.css" type="text/css">
+<script src="http://static.land.naver.net/static/service/js/201406181820/lib/jindo2.all.js" type="text/javascript"></script>
+<script src="http://static.land.naver.net/static/service/js/201406181820/common.js" type="text/javascript"></script>
+<script src="http://static.land.naver.net/static/service/js/201406181820/article/land_article_common.js" type="text/javascript"></script>
+<script type="text/javascript">
+var dclContFocused = false;
+var checkPhoneAuth = false;
+
+topW = 0;
+
+function hasInnerWidthProperty() {
+	return typeof(window.innerWidth) == 'number';
+}
+
+function resizeWH(width,height) {
+	reW = width + topW;
+	window.resizeTo(reW,height);
+}
+
+function buildWH(height, id) {
+	var isIE7 = navigator.appVersion.indexOf("MSIE 7.0") > 0 ? true : false;
+	
+	var divWidth = 478;
+	
+    if (!hasInnerWidthProperty()) {
+    	window.resizeTo(divWidth, height);
+    	
+    	var divWindowWidth = 0;
+    	
+		if(document.documentElement && document.documentElement.clientWidth) {
+			//IE 6+ in 'standards compliant mode'
+			divWindowWidth = document.documentElement.clientWidth;
+		} else if( document.body && document.body.clientWidth) {
+			//IE 4 compatible
+			divWindowWidth = document.body.clientWidth;
+		} else {
+			divWindowWidth = document.body.offsetWidth;
+		}
+		
+		var widthGap = divWidth - divWindowWidth;
+		if (isIE7) {
+			topW = widthGap + 1;
+		} else {			
+			topW = widthGap;
+		}
+    } else {
+    	topW = window.outerWidth - window.innerWidth + 17;
+    }
+    
+    resizeWH(divWidth, height);
+}
+
+//날짜 유효성 체크 펑션
+function chkDay(tmpYear, tmpMonth, tmpDay){
+	 if (isNaN(tmpDay)){return false;}
+	 else{
+		 if(tmpMonth==2 && tmpDay!='' && tmpYear%4==0 && (tmpDay<1 || tmpDay>29)){return false;}
+		 else if(tmpMonth==2 && tmpDay!='' && tmpYear%4!=0 && (tmpDay<1 || tmpDay>28)){return false;}
+		 else if((tmpMonth==4 || tmpMonth==6 || tmpMonth==9 || tmpMonth==11) && tmpDay!='' && (tmpDay<1 || tmpDay>30)){return false;}
+		 else if((tmpMonth==1 || tmpMonth==3 || tmpMonth==5 || tmpMonth==7 || tmpMonth==8 || tmpMonth==10 || tmpMonth==12) && tmpDay!='' && (tmpDay<1 || tmpDay>31)){return false;}
+		 else{return true;}
+	 }
+}
+
+function showEtc(){
+	var etc = document.getElementById('etc');
+	etc.style.display="";
+}
+
+function hideEtc(){
+	var etc = document.getElementById('etc');
+	etc.style.display="none";
+}
+
+
+function submitForm(){
+	var inputForm = $Form('inputForm');	
+	var year = $('inq_year').value;
+	var month = $('inq_month').value;
+	var day = $('inq_date').value;
+	var hour = $('inq_time').value;
+
+	var inqMonth = month;
+	if((month + "").length < 2){
+		inqMonth = "0" + month;
+	} 
+	var inqDay = day;
+	if((day + "").length < 2){
+		inqDay = "0" + day;
+	}	
+	var inqHour = hour;
+	if((hour + "").length < 2){
+		inqHour = "0" + hour;
+	}	
+	var inqYmdt = year+""+inqMonth+""+inqDay+""+inqHour;
+
+	var currentDate = new Date();
+	var currentYear = currentDate.getFullYear();
+	var currentMonth = currentDate.getMonth()+1;
+	var currentDay = currentDate.getDate();
+	var currentHour = currentDate.getHours();
+	if((currentMonth + "").length < 2){
+		currentMonth = "0" + currentMonth;
+	}
+	if((currentDay + "").length < 2){
+		currentDay = "0" + currentDay;
+	}
+	if((currentHour + "").length < 2){
+		currentHour = "0" + currentHour;
+	}
+	var today = currentYear+""+currentMonth+""+currentDay+""+currentHour;
+	inputForm.value('inqYmdt', inqYmdt);
+	
+	inputForm.submit(
+		// for validation
+		function() {
+			if(Number(inqYmdt) > Number(today)) {
+				alert('문의일은 오늘 이후 날짜로 설정될 수 없습니다.\n\n다시 선택해주세요.');
+				return false;
+			}
+			if(!chkDay(year, month, day)) {
+				alert(month+'월 '+day+'일은 '+'유효하지 않은 날짜입니다. 다시 선택해주세요.');
+				return false;
+			}
+			if(!radioCheck(inputForm.element('cfmMthCd'))){
+				alert('매물확인방법을 선택해주세요.');
+				return false;
+			}
+			if($S(inputForm.value('inq_time')).trim() == "") {
+				alert('상담시간을 선택해주세요.');
+				return false;
+			}
+			if($S(inputForm.value('clslrSexTpCd')).trim() == "") {
+				alert('상담자의 성별을 선택해주세요.');
+				return false;
+			}
+			if(!radioCheck(inputForm.element('dclrRsnCd'))){
+				alert('매물신고사유를 선택해주세요.');
+				return false;
+			}
+			if( ($S(inputForm.value('dclrRsnCd'))=='ETC') && ($S(inputForm.value('dclrRsnCont')).trim() == "")) {
+				alert('매물신고 기타사유를 작성해주세요.');
+				inputForm.element('dclrRsnCont').focus();
+				return false;
+			}
+			if(!dclContFocused || $S(inputForm.value('dclCont')).trim() == ""){
+				alert("신고내용은 필수입력 항목입니다.");
+				inputForm.element('dclCont').focus();
+				return false;
+			}
+			
+			if(!checkPhoneAuth) {
+				alert("핸드폰 인증이 필요합니다.");
+				return false;
+			}
+			
+			if(confirm("신고하신 매물 정보는 중개업소에 사실관계를 확인하게 됩니다.\n허위 신고를 하시면 앞으로 매물 신고가 제한될 수 있습니다.\n\n신고 하시겠습니까?")) {
+				return true;
+			}
+			return false;
+		}
+	);	
+}
+
+function MaxCheck(id, type){
+	checkMaxLength(id,200, type);
+}
+
+function checkMaxLength(id,length,type){
+	if(getStringLength(id.value) > length){
+		id.value = cutString(id.value,length,type);
+		return false;
+	}
+	return true;
+}
+
+function cutString(str,limitLength,type){
+    var strLength = str.length;
+    var strIndex=0;
+    var strCharLength = 0; 
+    for(var i=0;i<strLength;i++) {
+        strIndex = i;  
+        if(str.charCodeAt(i)>256) 
+        	strCharLength++;
+    	strCharLength++;
+    	if(strCharLength >= limitLength)
+        	break;
+    } 
+    if(type == "cont")
+		alert('신고내용은 최대 한글 100글자 영문 200글자입니다.');
+    else if(type == "etc")
+		alert('매물신고 기타사유는 최대 한글 100글자 영문 200글자입니다.');	
+    return str.substring(0,strIndex+1);	
+}
+
+function getStringLength(str) { 
+    var length = str.length; 
+    var hangul_count = 0; 
+    for(var i=0;i<length;i++) {  
+        if(str.charCodeAt(i)>256) 
+        	hangul_count++; 
+    } 
+    return length - hangul_count + hangul_count*2;
+} 
+
+function radioCheck(id) { 
+    if (id.length > 1) { 
+        for (var i = 0; i < id.length; i++) { 
+            if (id[i].checked) return true; 
+        } 
+    } else { 
+        if (id.checked) return true; 
+    } 
+    return false; 
+}
+
+//SMS인증 팝업(알리미, 기존 MY모바일인증은 이것을 사용)
+function persAuth_popup() {
+	nhn.article.common.window_popup('', "persAuth_popup", 400 , 455, true);
+	document.mobileAuthForm.action = 'https://nid.naver.com/iasystem/pop.nhn';
+	document.mobileAuthForm.target = 'persAuth_popup';
+	document.mobileAuthForm.submit();
+}
+
+function persAuth_complete() {
+	checkPhoneAuth = true;
+	var eMobileAuthImg = $$.getSingle("#mobileAuthLink img");
+	var eMobileAuthHref = $$.getSingle("#mobileAuthLink a");
+	if(eMobileAuthImg) {
+		eMobileAuthImg.src = "http://static.land.naver.net/static/service/20140617/popup/btn_hp_auth2.gif";
+	}
+	
+	if (eMobileAuthHref) {
+		eMobileAuthHref.onclick = function () {
+			alert('이미 인증이 완료되었습니다');
+			return false;
+		};
+	}
+}
+
+</script>
+</head>
+<body style="background: none repeat scroll 0% 0% rgb(100, 100, 100);" onload="buildWH(600, 'pop_land');">
+<div id="pop_land" style="width:100%; overflow:hidden;">
+	<div class="header">
+		<h1>허위매물신고</h1>
+	</div>
+	<form id="mobileAuthForm" name="mobileAuthForm" method="post">
+		<input type="hidden" name="todo" value="pers_popup">
+		<input type="hidden" name="token" value="J5MobKqeBYO40ob2">
+		<input type="hidden" name="return_url" value="http://land.naver.com/article/falseArticleInput.nhn?m=auth">
+	</form>
+	<form id="inputForm" name="inputForm" method="post" action="/article/falseArticleRegist.nhn">
+		<input type="hidden" name="atclNo" value="1402564959">
+		<input type="hidden" name="rltrMbrId" value="n8128989">
+		<input type="hidden" name="indvMbrId" value="nararayalli">
+		<input type="hidden" name="inqYmdt" id="inqYmdt" value="">
+		<input type="hidden" name="cpid" value="">
+	<div class="content">
+		<p class="desc4">매물신고 시, 아래 항목을 정확히 기재해 주셔야 접수가 됩니다.<br>
+			고객님께서 신고하신 내용은 확인 후 e-mail로 회신드리겠습니다.<br>
+			단, 허위신고일 경우, 서비스 이용에 제한이 있으니 유의해주세요.</p>
+		<h2 class="land_info"><strong>신고매물</strong> 정보</h2>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tlist">
+			<colgroup>
+			<col width="95"><col>
+			</colgroup>
+			<tr>
+				<th><label for="info1" style="cursor:text;">중개업소</label></th>
+				<td>대림공인중개사사무소</td>
+			</tr>
+			<tr>
+				<th><label for="info2" style="cursor:text;">전화번호</label></th>
+				<td>02-3665-4080</td>
+			</tr>
+			<tr>
+				<th><label for="info3" style="cursor:text;">매물구분</label></th>
+				<td>상가점포월세</td>
+			</tr>
+			<tr>
+				<th><label for="info4" style="cursor:text;">매물소재지</label></th>
+				<td>서울시 강서구 화곡동
+				</td>
+			</tr>
+			<tr>
+				<th><label for="info5" style="cursor:text;">매물상세내역</label></th>
+				<td>
+					
+						
+						247.9/191.7
+						
+					m<sup style="font-size:.83em;">2</sup> / 2,000/70 만원
+				</td>
+			</tr>
+		</table>
+		 
+		
+		
+		<h2 class="land_info"><strong>매물신고</strong> 사유</h2>
+		<div class="section" style="border:1px solid #e3e3e3;">
+			<ul class="purpose2">
+			<li><input class="input_radio" id="dclrRsnCd" name="dclrRsnCd" checked="checked" onclick="hideEtc();" value="FLSAD" type="radio"><label for="info12" class="route">허위/과장된 가격정보를 가진 매물 </label></li>
+			<li><input class="input_radio" id="dclrRsnCd" name="dclrRsnCd" onclick="hideEtc();" value="CMPL" type="radio"><label for="info12" class="route">거래가 완료되어 존재하지 않는 매물 </label></li>
+			<li><input class="input_radio" id="dclrRsnCd" name="dclrRsnCd" onclick="hideEtc();" value="AUCT" type="radio"><label for="info12" class="route">경매의심매물</label></li>
+			<li><input class="input_radio" id="dclrRsnCd" name="dclrRsnCd" onclick="showEtc();" value="ETC" type="radio"><label for="info14" class="route">기타 사유로 정보가 부정확한 매물</label></li>
+			<li><div id="etc" style="display:none;"><input type="text" id="dclrRsnCont" name="dclrRsnCont" class="input_text" style="width:388px;margin:-1px 0 0 18px; height:19px;" onKeyUp="MaxCheck(this,'etc');"></div></li>
+			</ul>
+		</div>
+		<h2><strong>신고</strong> 내용</h2>
+		<p class="report"><textarea title="신고 내용" rows="5" cols="30" id="dclCont" name="dclCont" onfocus="if(!dclContFocused){this.value=''; dclContFocused=true; this.style.color='#000000';}" onKeyUp="MaxCheck(this,'cont');">정확한 확인을 위해 신고내용을 구체적으로 기재해주세요.</textarea></p>
+		<h2 class="h_pop_false"><strong>신고인</strong> 핸드폰인증</h2>
+		<div class="section hp_auth v2">
+
+			<p><span class="desc_hp">*</span>허위매물신고는 신고인 인증을 하셔야 접수되며, 신고인 인증을 한 날로부터 30일간 추가 인증
+			절차 없이 매물신고를 하실 수 있습니다. 기재하신 정보는 회원님의 문의처리를 위한 용도로만
+			사용됩니다. 핸드폰 미소지 고객님은 콜센터 <strong>1588-0332</strong>로 신고를 부탁드립니다.</p>
+		</div>
+	</div>
+	<div class="footer2">
+		<img src="http://static.land.naver.net/static/service/20140617/popup/btn_ok.gif" alt="확인" onclick="javascript:submitForm();" style="cursor: pointer;" height="23" width="40">
+		<a href="javascript:self.close();"><img src="http://static.land.naver.net/static/service/20140617/popup/btn_cancel2.gif" alt="취소" height="23" width="40"></a>
+	</div>
+	<input name="webworkCookieTokenName" value="lucyCookieToken" type="hidden"><br>
+	<input name="lucyCookieToken" value="4MN2ILEBAKCK4E6JKC1W9MDW47IUNWOB" type="hidden">
+	</form> 
+ 
+</div>
+ 
+</body>
+</html>

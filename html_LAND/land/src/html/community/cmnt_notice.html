@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>지금,우리동네는 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/land_community.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- content -->
+		<div id="content">
+			<h2 class="h_t" style="border-bottom:0;"><img src="http://test.img.land.naver.com/static/service/notice/h3_notice.gif" width="56" height="16" alt="공지사항"></h2>
+			<!-- 검색조건 -->
+			<form name="searchForm" id="searchForm" method="get" action="/home/noticeList.nhn">
+			<fieldset class="set_condition">
+				<legend>검색조건</legend>
+				<div class="bg_set_condition_t NE=a:sch">
+					<dl class="first">
+					<dt><strong>검색</strong></dt>
+					<dd class="bar">
+						<ul class="term">
+						<li>
+							<input type="radio" name="search_type" id="select_type1" value="ttl" class="input_radio NPI=a:title"  checked><label for="select_type1">제목</label>
+						</li>
+						<li>
+							<input type="radio" name="search_type" id="select_type2" value="all" class="input_radio NPI=a:titlecontesns" ><label for="select_type2">제목+내용</label>
+						</li>
+						</ul>
+					</dd>
+					<dd>
+						<input type="text" id="search" name="search" class="input_text" value="" style="width:190px;" exFnc="no-special;maxLength:20" maxlength="21" title="검색어">
+					</dd>
+					<dd>
+						<a href="javascript:searchFormSubmit();" class="NPI=a:search"><img src="http://test.img.land.naver.com/static/service/notice/btn_search.gif" alt="검색" style="margin-left:-5px;"></a>
+					</dd>
+					</dl>
+				</div>
+				<div class="bg_set_condition_b"></div>
+			</fieldset>
+			</form>
+			<!-- //검색조건 -->
+			<table border="1" cellpadding="0" cellspacing="0" summary="공지사항 리스트" class="tbl_list_type1 NE=a:ntc">
+			<caption>공지사항 리스트</caption>
+			<colgroup>
+			<col width="55"><col><col width="91"><col width="81">
+			</colgroup>
+			<thead>
+			<tr>
+				<th class="first">번호</th>
+				<th>제목</th>
+				<th>작성일</th>
+				<th>조회</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="first notice">
+			<td><strong>*</strong></td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2475&tpprt_exps_yn=Y&search_type=&search=" class="NPI=a:list,r:1,i:2475">전문답변인 사전모집 프로모션 종료 안내 </a>
+			</td>
+			<td class="date"><strong>10.12.23</strong></td>
+			<td class="count2"><strong>168</strong></td>
+			</tr>
+			<tr class="notice">
+			<td><strong>*</strong></td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1875&tpprt_exps_yn=Y&search_type=&search=" class="NPI=a:list,r:2,i:1875">매물 섹션 개편 안내</a>
+				<img src="http://test.img.land.naver.com/static/service/notice/ico_file.gif" width="10" height="10" alt="첨부파일">
+			</td>
+			<td class="date"><strong>10.08.04</strong></td>
+			<td class="count2"><strong>1811</strong></td>
+			</tr>
+			<tr class="notice">
+			<td><strong>*</strong></td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1873&tpprt_exps_yn=Y&search_type=&search=" class="NPI=a:list,r:3,i:1873">서비스 개편에 따른 이용 제한 안내</a>
+			</td>
+			<td class="date"><strong>10.08.02</strong></td>
+			<td class="count2"><strong>1777</strong></td>
+			</tr>
+			<tr>
+			<td class="num">55 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2477&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:4,i:2477">2011년 01월 신용카드 무이자 행사 안내</a>
+				<img src="http://test.img.land.naver.com/static/service/notice/ico_new.gif" width="10" height="9" alt="new">
+			</td>
+			<td class="date">10.12.31</td>
+			<td class="count2">10</td>
+			</tr>
+			<tr>
+			<td class="num">54 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2476&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:5,i:2476">네이버 부동산 충전금 지급 기준 변경 안내</a>
+				<img src="http://test.img.land.naver.com/static/service/notice/ico_new.gif" width="10" height="9" alt="new">
+			</td>
+			<td class="date">10.12.27</td>
+			<td class="count2">50</td>
+			</tr>
+			<tr>
+			<td class="num">53 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2473&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:6,i:2473">전매제한단지 서비스 시행 </a>
+				<img src="http://test.img.land.naver.com/static/service/notice/ico_file.gif" width="10" height="10" alt="첨부파일">
+			</td>
+			<td class="date">10.12.09</td>
+			<td class="count2">88</td>
+			</tr>
+			<tr>
+			<td class="num">52 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2373&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:7,i:2373">2010년 12월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.11.30</td>
+			<td class="count2">262</td>
+			</tr>
+			<tr>
+			<td class="num">51 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2274&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:8,i:2274">2010년 11월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.11.01</td>
+			<td class="count2">212</td>
+			</tr>
+			<tr>
+			<td class="num">50 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2273&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:9,i:2273">매물 특징란 운영안 안내</a>
+			</td>
+			<td class="date">10.10.26</td>
+			<td class="count2">205</td>
+			</tr>
+			<tr>
+			<td class="num">49 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2076&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:10,i:2076">2010년 10월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.10.01</td>
+			<td class="count2">319</td>
+			</tr>
+			<tr>
+			<td class="num">48 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=2073&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:11,i:2073">네이버 부동산 고객센터 휴무 안내 </a>
+			</td>
+			<td class="date">10.09.13</td>
+			<td class="count2">294</td>
+			</tr>
+			<tr>
+			<td class="num">47 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1973&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:12,i:1973">2010년 9월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.08.31</td>
+			<td class="count2">373</td>
+			</tr>
+			<tr>
+			<td class="num">46 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1874&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:13,i:1874">2010년 8월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.08.03</td>
+			<td class="count2">394</td>
+			</tr>
+			<tr>
+			<td class="num">45 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1780&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:14,i:1780">창원시 통합으로 비공동매물 제휴사 전송 불가 안내</a>
+				<img src="http://test.img.land.naver.com/static/service/notice/ico_file.gif" width="10" height="10" alt="첨부파일">
+			</td>
+			<td class="date">10.07.15</td>
+			<td class="count2">342</td>
+			</tr>
+			<tr>
+			<td class="num">44 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1778&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:15,i:1778">네이버 부동산 고객센터 토요일 근무 변경 안내</a>
+			</td>
+			<td class="date">10.07.06</td>
+			<td class="count2">1383</td>
+			</tr>
+			<tr>
+			<td class="num">43 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1777&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:16,i:1777">2010년 7월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.07.01</td>
+			<td class="count2">465</td>
+			</tr>
+			<tr>
+			<td class="num">42 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1776&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:17,i:1776">네이버 부동산 전화 확인 발신번호가 변경 됩니다.</a>
+			</td>
+			<td class="date">10.06.30</td>
+			<td class="count2">442</td>
+			</tr>
+			<tr>
+			<td class="num">41 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1774&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:18,i:1774">매물등록시 동,층정보 입력방식이 개선됩니다. </a>
+				<img src="http://test.img.land.naver.com/static/service/notice/ico_file.gif" width="10" height="10" alt="첨부파일">
+			</td>
+			<td class="date">10.06.24</td>
+			<td class="count2">480</td>
+			</tr>
+			<tr>
+			<td class="num">40 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1673&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:19,i:1673">2010년 6월 신용카드 무이자 행사 안내</a>
+			</td>
+			<td class="date">10.06.01</td>
+			<td class="count2">501</td>
+			</tr>
+			<tr>
+			<td class="num">39 </td>
+			<td class="title">
+				<a href="/home/noticeView.nhn?noti_mttr_seq=1475&tpprt_exps_yn=N&search_type=&search=" class="NPI=a:list,r:20,i:1475">일반 매물 무료 20건 초과 시 유료 결제 가능 안내</a>
+			</td>
+			<td class="date">10.05.06</td>
+			<td class="count2">651</td>
+			</tr>
+			</tbody>
+			</table>
+			<div class="pagn">
+				<a href="#" style="margin-right:0;padding:0;background:#fff;"><strong>1</strong></a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				<a href="#">9</a>
+				<a href="#">10</a>
+				<a href="#" class="next">다음 페이지</a>
+ 				<a href="#" class="next_end">끝 </a>
+			</div>
+		</div>
+		<!-- //content -->
+		<!-- aside -->
+		<div class="aside">
+			<div class="ad">
+				<img src="img/community/@tmp_banner.gif" width="280" height="240" alt="배너 더미 이미지">
+			</div>
+			<a href="#" class="ad3"><img src="img/community/img_banner.gif" width="280" height="126" alt="우리동네 글쓰기"></a>
+			<div class="as_sc">
+				<h3><img src="img/community/h_as.gif" width="42" height="12" alt="우리동네"></h3>
+				<ul class="tm_m">
+				<li><strong><img src="img/community/tab_item_on.gif" width="119" height="27" alt="추천 Q and A"></strong></li>
+				<li><a href="#"><img src="img/community/tab_item2.gif" width="118" height="27" alt="추천 이야기"></a></li>
+				</ul>
+				<dl class="qa_t">
+				<dt>
+				<em>[서울시 강남구 개포동 LG자이]</em><br>
+				<a href="#">1000만원미만으로 매입가능한 단지</a>
+				</dt>
+				<dd>
+				<a href="#">개인정보는 중요한 것이니 꼭 필요한 경우에만 알려주십시오. 3천만원을 신용대출로 받으셔도 전세자금대출로 4천 5백은 가능합니다.</a>
+				</dd>
+				</dl>
+				<div class="btn_p"><a href="#" class="prev"><img src="img/community/btn_prev.gif" width="13" height="14" alt="이전"></a><a href="#" class="next"><img src="img/community/btn_next.gif" width="13" height="14" alt="다음"></a></div>
+				<a href="#" class="btn_m">더보기</a>
+			</div>
+			<div class="as_sc">
+				<h3><img src="img/community/h_as2.gif" width="103" height="12" alt="궁금해요! 답변주세요"></h3>
+				<dl class="qa_t otr_t2">
+				<dt>
+				<em>[서울시 강남구 개포동 LG자이]</em><br>
+				<a href="#">1000만원미만으로 매입가능한 단지</a>
+				</dt>
+				<dd>
+				<a href="#">개인정보는 중요한 것이니 꼭 필요한 경우에만 알려주십시오. 3천만원을 신용대출로 받으셔도 전세자금대출로 4천 5백은 가능합니다.</a>
+				</dd>
+				</dl>
+				<div class="btn_p"><a href="#" class="prev"><img src="img/community/btn_prev.gif" width="13" height="14" alt="이전"></a><a href="#" class="next"><img src="img/community/btn_next.gif" width="13" height="14" alt="다음"></a></div>
+				<a href="#" class="btn_a"><img src="img/community/btn_a.gif" width="71" height="28" alt="답변하기"></a>
+				<a href="#" class="btn_m">더보기</a>
+			</div>
+			<div class="as_sc">
+				<h3><img src="img/community/h_as3.gif" width="76" height="12" alt="전문답변인 랭킹"></h3>
+				<div class="sot_m">
+				<strong><img src="img/community/txt_sotitem_on.gif" width="26" height="15" alt="전체"></strong><span class="split">|</span><a href="#"><img src="img/community/txt_sotitem2.gif" width="35" height="15" alt="급상승"></a>
+				</div>
+				<ul class="tm_m tm_t">
+				<li><strong><img src="img/community/tab_item3_on.gif" width="51" height="27" alt="종합"></strong></li>
+				<li><a href="#"><img src="img/community/tab_item4.gif" width="60" height="27" alt="분야별"></a></li>
+				<li><a href="#"><img src="img/community/tab_item5.gif" width="59" height="27" alt="지역별"></a></li>
+				</ul>
+				<div class="selectbox-applied">
+					<select class="selectbox-source">
+						<option>시/도</option>
+						<option>서울</option>
+						<option>경기</option>
+						<option>인천</option>
+					</select>
+					<div class="selectbox-box" style="width:55px;">
+						<div class="selectbox-label">시/도</div>
+					</div>
+					<div class="selectbox-layer" style="display:none;width:55px;">
+						<ul class="selectbox-list">
+						<li>서울</li>
+						<li>경기</li>
+						<li>인천</li>
+						</ul>
+					</div>
+				</div>
+				<ol class="lank_lst ll_otr_t2">
+				<li class="n">
+					<a href="#">
+						<img src="img/community/@tmp43.gif" width="43" height="43" alt="섬네일 이미지" class="thumb_img">
+						<span class="txt">
+							<strong>가나다라마바사</strong> <span>(abcdef**)</span><br>
+							경기도 성남시 분당구 서현동<br>
+							답변 : <em class="b">1,235</em> 채택 : <em class="b">254</em><span class="lank"><img src="img/community/ico_l4.gif" width="18" height="18" alt="전문가"></span>
+						</span>
+					</a>
+				</li>
+				<li class="n2">
+					<a href="#">
+						<img src="img/community/@tmp43.gif" width="43" height="43" alt="섬네일 이미지" class="thumb_img">
+						<span class="txt">
+							<strong>가나다라마바...</strong> <span>(abcdef***)</span><br>
+							경기도 성남시 분당구 서현동<br>
+							답변 : <em class="b">1,235</em> 채택 : <em class="b">254</em><span class="lank"><img src="img/community/ico_l4.gif" width="18" height="18" alt="전문가"></span>
+						</span>
+					</a>
+				</li>
+				<li class="n3">
+					<a href="#">
+						<img src="img/community/@tmp43.gif" width="43" height="43" alt="섬네일 이미지" class="thumb_img">
+						<span class="txt">
+							<strong>가나다라마아자차</strong> <span>(abcd***)</span><br>
+							경기도 성남시 분당구 서현동<br>
+							답변 : <em class="b">1,235</em> 채택 : <em class="b">254</em><span class="lank"><img src="img/community/ico_l4.gif" width="18" height="18" alt="전문가"></span>
+						</span>
+					</a>
+				</li>
+				<li class="n4">
+					<a href="#">
+						<img src="img/community/@tmp43.gif" width="43" height="43" alt="섬네일 이미지" class="thumb_img">
+						<span class="txt">
+							<strong>가나다라마바차</strong> <span>(abcdef***)</span><br>
+							경기도 성남시 분당구 서현동<br>
+							답변 : <em class="b">1,235</em> 채택 : <em class="b">254</em><span class="lank"><img src="img/community/ico_l4.gif" width="18" height="18" alt="전문가"></span>
+						</span>
+					</a>
+				</li>
+				<li class="n5">
+					<a href="#">
+						<img src="img/community/@tmp43.gif" width="43" height="43" alt="섬네일 이미지" class="thumb_img">
+						<span class="txt">
+							<strong>가나다라마자차</strong> <span>(abcdef***)</span><br>
+							경기도 성남시 분당구 서현동<br>
+							답변 : <em class="b">1,235</em> 채택 : <em class="b">254</em><span class="lank"><img src="img/community/ico_l4.gif" width="18" height="18" alt="전문가"></span>
+						</span>
+					</a>
+				</li>
+				</ol>
+			</div>
+			<a href="#" class="ad2"><img src="img/community/img_banner2.gif" width="240" height="72" alt="부동산 전문답변인 신청하기"></a>
+			<div class="as_sc">
+				<h3><img src="img/community/h_as4.gif" width="67" height="12" alt="부동산 지식iN"></h3>
+				<ul class="tm_m">
+				<li><strong><img src="img/community/tab_item6_on.gif" width="85" height="27" alt="새로 올라온"></strong></li>
+				<li><a href="#"><img src="img/community/tab_item7.gif" width="59" height="27" alt="베스트"></a></li>
+				</ul>
+				<ul class="txt_lst">
+				<li><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li class="n5"><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li><em>[매매]</em> <a href="#">30년이 넘었지만 깨끗함. 재건춘</a></li>
+				<li><em>[매매]</em> <a href="#">가나다라마바사아자차카타파하</a></li>
+				</ul>
+				<a href="#" class="btn_m">더보기</a>
+			</div>
+		</div>
+		<!-- //aside -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<fieldset>
+		<legend class="blind">검색</legend>
+			<div class="sta_search_box">
+				<input type="text" title="검색" value="&quot;1억원대 오피스텔 전세&quot;" class="sta_search_text">
+				<a href="#" class="btn_search"><img src="http://img.land.naver.com/static/service/20100804/lnb/btn_srch.gif" width="42" height="25" alt="검색"></a>
+				<a href="#" class="btn_search"><img src="http://img.land.naver.com/static/service/20100804/lnb/btn_union_srch.gif" width="56" height="25" alt="통합검색"></a>
+			</div>
+		</fieldset>
+		<ul>
+		<li class="first"><a href="#">부동산 도움말</a> </li>
+		<li><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+		<li><a href="http://www.nbp-corp.com/rules/privacy.html" target="_blank"><strong>개인정보취급방침 </strong></a></li>
+		<li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+		<li><a href="http://rd.naver.com/i:1000013391/c:24344?http://help.naver.com/claim_main.asp" target="_blank">게시중단요청서비스</a></li>
+		<li><a href="http://rd.naver.com/i:1000013392/c:44155?http://help.naver.com/main.asp" target="_blank">고객센터</a></li>
+		</ul>
+		<p class="info"> 네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며,<br>네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다. </p>
+		<address>
+		<a href="http://www.nbp-corp.com/" target="_blank"><img src="http://static.naver.com/common/footer/logo_nhn.gif" alt="NHN" height="15" width="62"></a> <em>Copyright &copy;</em> <a href="http://www.nbp-corp.com/" target="_blank">NHN BUSINESS PLATFORM Corp.</a> <span>All Rights Reserved.</span>
+		</address>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

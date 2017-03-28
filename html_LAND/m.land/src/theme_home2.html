@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>테마매물</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/home_land.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var inputHeight = $('.sch_form_wrap').outerHeight();
+			var headerHeight = $('#header').outerHeight();
+			$('#searchBtn').click(function(){
+				$('#header').toggleClass('active');
+
+				if($('#header').hasClass('active')){
+					$('#header').animate({height:'+='+ inputHeight +'px'}, 300,'easeInOutCubic');
+					$('.sch_form_wrap').animate({top:headerHeight +'px'}, 300,'easeInOutCubic');
+					$('#searchBtn').addClass('on');
+				}else{
+					$('#header').animate({height:'-='+ inputHeight +'px'}, 300,'easeInOutCubic');
+					$('.sch_form_wrap').animate({top:'-=' +headerHeight +'px'}, 300,'easeInOutCubic');
+					$('#searchBtn').removeClass('on');
+				}
+
+			})
+		});
+	</script>
+</head>
+<body>
+
+<div id="wrap" style="overflow:hidden">
+	<!-- header -->
+	<header id="header">
+		<h1 class="gnb_h1">
+			<div class="btn_mod">
+				<a href="#" class="on">부동산</a>
+				<a href="#">원룸</a>
+			</div>
+		</h1>
+		<a href="#" class="gnb naver"><span>NAVER</span></a>
+		<a href="#" class="gnb s_btn" id="searchBtn"><span>검색</span></a>
+		<div class="sch_form_wrap">
+			<div class="input_area">
+				<input type="search" placeholder="지역명, 또는 단지명">
+				<button type="button" class="btn_txt_del"><span>삭제</span></button>
+				<button type="button" class="btn_txt_sch"><span>부동산검색</span></button>
+			</div>
+			<button type="button" class="btn_total_sch">통합검색</button>
+		</div>
+		<button type="button" class="btn_b_side"><span>확장메뉴</span></button>
+	</header>
+	<!-- //header -->
+
+	<!-- cont -->
+	<div id="cont">
+        <div class="theme_title">
+            <h2>테마매물</h2>
+            <a href="" class="prev"><em>뒤로</em></a>
+        </div>
+        <!-- theme img box -->
+        <div class="crd_box theme_box theme_box2">
+             <a href="#">
+                 <h3>테마</h3>
+                 <span class="txt_box">
+                    <span class="txt_area">
+                        <span>임대수익율 높은 강북 소형아파트를 찾으신다면?</span>
+                    </span>
+                 </span>
+            </a>
+        </div>
+        <!-- theme item list -->
+        <div class="theme_item_list theme_item_list2">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="theme_item_list">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">1서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">2서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지 스테이트1단지 스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">3서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">4서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+								<li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+								<li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="thumb"><img src="im/@thumb9.jpg" alt=""></span>
+                        <dl>
+                            <dt class="u_hc">위치</dt>
+                            <dd class="item_addr">서대문구 북아현동</dd>
+                            <dt class="u_hc">매물명</dt>
+                            <dd class="item_name">스테이트1단지</dd>
+                            <dt class="u_hc">매물가</dt>
+                            <dd class="item_price">월세 <em>2,000 / 44</em></dd>
+                            <dt class="u_hc">종류</dt>
+                            <dd class="item_kind">오피스텔</dd>
+                            <dt class="u_hc">면적</dt>
+                            <dd class="item_area">59/55m2, 2/4층</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- banner -->
+        <div class="land_banner_sec">
+			<a href="#">
+				<strong class="hide">통화 후 중개사 매물정보를 한 눈에!</strong>
+				<span class="hide">중개사님들을 위한 신개념 마케팅(후스콜-콜카드)</span>
+			</a>
+		</div>
+        <!-- crd_box-->
+        <div class="crd_box theme_banner_box">
+					<a href="#">
+            <div class="thumb">
+                <img src="im/@thumb11.png" width="105" height="70" alt="">
+            </div>
+            <div class="txt_area">
+                <strong>한달만 살게요 초단기 임대가</strong>
+                <p>방학 1~2달동안 머물 강남쪽 월세를 찾으신다면?</p>
+            </div>
+					</a>
+        </div>
+        <!-- crd_box-->
+		<div class="crd_box">
+			<div class="tit_area">
+				<h2>주간 랭킹 뉴스</h2>
+			</div>
+			<div class="crd_cont">
+				<div class="lst_rank_txt_wrap">
+					<ol>
+					<li><em>1</em><a href="#">수서 KTX역세권,7억원'껑충'</a></li>
+					<li><em>2</em><a href="#"> 정부만 예상못한 신혼부부 행복주택 미달사태</a></li>
+					<li><em>3</em><a href="#">30대 이과장 "전세 살며 오피스텔 월세 받아요"</a></li>
+					<li><em>4</em><a href="#">서울 아파트 전셋값, 2분기에도 3% 이상 올라</a></li>
+					<li><em>5</em><a href="#">비수기 맞아? 수도권 아파트 때아닌 '여름 전세난</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- //crd_box-->
+    </div>
+	<!-- //cont -->
+	<div class="ic top" style="position:fixed;bottom:15px;right:20px">상단으로 가기</div>
+	<!-- footer -->
+	<footer role="contentinfo" class="footer">
+		<p id="u_ftlkw" class="u_ftlkw">
+			<a id="loginLink" href="#" class="u_ftlk" >로그인</a>
+			<a href="#" class="u_ftlk">PC버전</a>
+			<a href="#" class="u_ftlk">전체서비스</a>
+			<a href="#" class="u_ftlk">원룸 홈</a>
+		</p>
+		<p class="u_cr">
+			<span class="u_cri"><a href="#" class="u_cra">부동산도움말</a></span>
+			<span class="u_cri u_cri_v1"><a href="#" class="u_cra">문제신고</a></span>
+			<span class="u_cri u_cri_v2">&copy; <a href="#"  class="u_cra u_cra_v1">NAVER Corp.</a></span>
+		</p>
+		<div class="u_sca">
+		<a href="#" class="u_sc"><span class="u_ics"></span><em>네이버앱의</em><strong>부동산</strong> 홈화면에 바로가기 추가<span class="u_ica"></span></a>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+
+<div class="pop_content" style="display:none;">
+	<div class="pop_open_wrap">
+		<h2 class="hide">네이버부동산 홈과 매물서비스가 새로워졌습니다.</h2>
+		<button type="button">닫기</button>
+	</div>
+</div>
+
+<div class="pop_content" style="display:none;">
+	<div class="pop_new_wrap ios">
+		<h2 class="hide">새로워진 네이버 부동산앱을 지금 만나보세요</h2>
+		<button type="button" class="btn_detail">자세히보기</button>
+		<button type="button" class="btn_ios">App Store</button>
+		<button type="button" class="btn_clse">닫기</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".crd_tab_menu li").click(function(e){
+			e.preventDefault();
+			$(".crd_tab_menu li").removeClass("on");
+			$(this).addClass("on");
+			$(".cont_tab_box").hide();
+			var tabId = $(this).attr("id");
+			var contId = tabId.replace("_tab","_cont");
+			$("#"+contId).show();
+		});
+	});
+</script>
+</body>
+</html>

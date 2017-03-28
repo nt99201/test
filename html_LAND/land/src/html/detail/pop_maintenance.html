@@ -1,0 +1,485 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<title> [대치동] 관리비 비교 :: 네이버 부동산</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="css/land_article.css" type="text/css">
+</head>
+<body>
+<!-- [D] 682 x auto -->
+<div id="pop_wrap" class="pop_cost" style="height:415px;">
+	<div id="pop_content">
+		<h1 class="pop_cost_tit">[대치동] 관리비 비교</h1>
+		<table border="1" cellspacing="0" class="tbl_cost">
+		<colgroup>
+		<col style="width:134px">
+		<col style="width:71px">
+		<col style="width:88px">
+		<col style="width:82px">
+		<col style="width:73px">
+		<col style="width:89px">
+		<col style="width:47px">
+		<col style="width:47px">
+		<col style="width:43px">
+		</colgroup>
+		<thead>
+		<tr>
+		<th rowspan="2" scope="col">단지명</th>
+		<th rowspan="2" scope="col"><a href="#" onclick="javascript:mnexInfoSort(this,'sply_spc');return false;" class="up">면적<span>(㎡)</span></a></th>
+		<th rowspan="2" scope="col" class="m_cost"><a href="#" onclick="javascript:mnexInfoSort(this,'cmuse_tot_prc');return false;" class="up">평균 공용<br>관리비<span>(원)</span></a></th>
+		<th colspan="2" scope="colgroup" class="none">평균 개별관리비<span>(원)</span></th>
+		<th rowspan="2" scope="col" class="total"><a href="#" onclick="javascript:mnexInfoSort(this,'mnex_tot_prc');return false;" class="up">평균 총<br>관리비<span>(원)</span></a></th>
+		<th colspan="2" scope="colgroup" class="tx_ul" tabIndex="0">에너지 사용량</th>
+		<th rowspan="2" scope="col" class="del">삭제</th>
+		</tr>
+		<tr>
+		<th scope="col"><a href="#" onclick="javascript:mnexInfoSort(this,'heat_tot_prc');return false;" class="up"><span class="nor">난방비(원)</span></a></th>
+		<th scope="col"><a href="#" onclick="javascript:mnexInfoSort(this,'etc_patcl_tot_prc');return false;" class="up"><span class="nor">기타(원)</span></a></th>
+		<th scope="col"><a href="#" class="up" id="mnexPrice_2" alt="전기 높은순 정렬"><span class="nor">전기</span></a></th>
+		<th scope="col"><a href="#" class="up" id="mnexPrice_3" alt="열 높은순 정렬"><span class="nor">열</span></a></th>
+		</tr>
+		</thead>
+		<tbody id="mnexInfoCompareList">
+		
+			<tr id="8994_2" class="_mnex_info">
+			<td class="name"><span>대치삼성3차</span></td>
+			<td><span title="공급면적 178.51㎡  = 54.0평">178</span></td>
+			<td><span>243,160</span></td>
+			<td><span>5,090</span></td>
+			<td><span>48,020</span></td>
+			<td class="total"><span><strong>296,270</strong></span></td>
+			<td><span class="ic_e c1">A</span></td>
+			<td><span class="ic_e c2">B</span></td>
+			<td class="del"><a href="javascript:deleteCompareMnexInfo('8994_2');">삭제</a></td>
+			</tr>
+		
+			<tr id="8994_3" class="_mnex_info">
+			<td class="name"><span>대치삼성3차</span></td>
+			<td><span title="공급면적 201.65㎡  = 61.0평">201</span></td>
+			<td><span>272,626</span></td>
+			<td><span>5,740</span></td>
+			<td><span>24,756</span></td>
+			<td class="total"><span><strong>303,122</strong></span></td>
+			<td><span class="ic_e c1">A</span></td>
+			<td><span class="ic_e c2">B</span></td>			
+			<td class="del"><a href="javascript:deleteCompareMnexInfo('8994_3');">삭제</a></td>
+			</tr>
+		
+		</tbody>
+		<tfoot>
+		<tr>
+		<td class="name"><span><a href="javascript:toggleAddLayer();" class="btn_add">비교할 단지 추가</a></span>
+		<div id="addCompareMnexInfoLayer" style="display:none;">
+			<fieldset>
+			<legend>비교할 단지 추가 폼</legend>
+				<div class="pop_add" style="display:block">
+					<div id="cityList" class="jselectbox-applied  ">
+						<select class="jselectbox-source" style="width:74px"  title="시/도">
+							
+								<option value="1100000000" selected>서울시</option>
+							
+								<option value="4100000000" >경기도</option>
+							
+								<option value="2800000000" >인천시</option>
+							
+								<option value="2600000000" >부산시</option>
+							
+								<option value="3000000000" >대전시</option>
+							
+								<option value="2700000000" >대구시</option>
+							
+								<option value="3100000000" >울산시</option>
+							
+								<option value="3600000000" >세종시</option>
+							
+								<option value="2900000000" >광주시</option>
+							
+								<option value="4200000000" >강원도</option>
+							
+								<option value="4300000000" >충청북도</option>
+							
+								<option value="4400000000" >충청남도</option>
+							
+								<option value="4700000000" >경상북도</option>
+							
+								<option value="4800000000" >경상남도</option>
+							
+								<option value="4500000000" >전라북도</option>
+							
+								<option value="4600000000" >전라남도</option>
+							
+								<option value="5000000000" >제주도</option>
+							
+						</select>
+						<div class="jselectbox-box"  style="width:74px">
+							<div class="jselectbox-label">서울시</div>
+						</div>
+						<div class="jselectbox-layer">
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+					<div id="dvsnList" class="jselectbox-applied  ">
+						<select class="jselectbox-source" style="width:124px" title="시/군/구">
+							<option value="-1">시&frasl;군&frasl;구</option>
+							
+								<option value="1168000000" selected>강남구</option>
+							
+								<option value="1174000000" >강동구</option>
+							
+								<option value="1130500000" >강북구</option>
+							
+								<option value="1150000000" >강서구</option>
+							
+								<option value="1162000000" >관악구</option>
+							
+								<option value="1121500000" >광진구</option>
+							
+								<option value="1153000000" >구로구</option>
+							
+								<option value="1154500000" >금천구</option>
+							
+								<option value="1135000000" >노원구</option>
+							
+								<option value="1132000000" >도봉구</option>
+							
+								<option value="1123000000" >동대문구</option>
+							
+								<option value="1159000000" >동작구</option>
+							
+								<option value="1144000000" >마포구</option>
+							
+								<option value="1141000000" >서대문구</option>
+							
+								<option value="1165000000" >서초구</option>
+							
+								<option value="1120000000" >성동구</option>
+							
+								<option value="1129000000" >성북구</option>
+							
+								<option value="1171000000" >송파구</option>
+							
+								<option value="1147000000" >양천구</option>
+							
+								<option value="1156000000" >영등포구</option>
+							
+								<option value="1117000000" >용산구</option>
+							
+								<option value="1138000000" >은평구</option>
+							
+								<option value="1111000000" >종로구</option>
+							
+								<option value="1114000000" >중구</option>
+							
+								<option value="1126000000" >중랑구</option>
+							
+						</select>
+						<div class="jselectbox-box"  style="width:124px">
+							<div class="jselectbox-label"></div>
+						</div>
+						<div class="jselectbox-layer">
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+					<div id="secList" class="jselectbox-applied  ">
+						<select class="jselectbox-source" style="width:120px" title="읍/면/동">
+							<option value="-1">읍&frasl;면&frasl;동</option>
+							
+								<option value="1168010300" >개포동</option>
+							
+								<option value="1168010800" >논현동</option>
+							
+								<option value="1168010600" selected>대치동</option>
+							
+								<option value="1168011800" >도곡동</option>
+							
+								<option value="1168010500" >삼성동</option>
+							
+								<option value="1168011100" >세곡동</option>
+							
+								<option value="1168011500" >수서동</option>
+							
+								<option value="1168010700" >신사동</option>
+							
+								<option value="1168011000" >압구정동</option>
+							
+								<option value="1168010100" >역삼동</option>
+							
+								<option value="1168011300" >율현동</option>
+							
+								<option value="1168011400" >일원동</option>
+							
+								<option value="1168011200" >자곡동</option>
+							
+								<option value="1168010400" >청담동</option>
+							
+						</select>
+						<div class="jselectbox-box"  style="width:120px">
+							<div class="jselectbox-label">대치동</div>
+						</div>
+						<div class="jselectbox-layer" >
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+					<br>
+					<div id="complexList" class="jselectbox-applied  ">
+						<select class="jselectbox-source" style="width:205px" title="단지">
+							<option value="-1">단지</option>
+						</select>
+						<div class="jselectbox-box"  style="width:205px">
+							<div class="jselectbox-label">단지</div>
+						</div>
+						<div class="jselectbox-layer">
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+					<div id="ptpList" class="jselectbox-applied  ">
+						<select class="jselectbox-source" style="width:67px" title="면적">
+							<option value="-1">면적</option>
+						</select>
+						<div class="jselectbox-box"  style="width:67px">
+							<div class="jselectbox-label">면적</div>
+						</div>
+						<div class="jselectbox-layer" >
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+					<p class="add"><a href="#" onclick="javascript:addMnexInfo();return false;">추가</a></p>
+					<p class="close"><a href="javascript:toggleAddLayer();">비교할 단지 추가 레이어창 닫기</a></p>
+				</div>
+			</fieldset>
+		</div>				
+		</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td class="del"></td>
+		</tr>
+		</tfoot>		
+		</table>
+		<p class="pop_close"><a href="javascript:self.close();">닫기</a></p>
+	</div>
+</div>
+<script src="http://static.land.naver.net/static/service/js/201408011539/min/common/jindo.min.js" type="text/javascript"></script>
+<script src="http://static.land.naver.net/static/service/js/201408011539/min/article/article_common.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var rletTypeCd = 'A01';
+	var secNo = '1168010600';
+
+	/**
+	 * select option을 생성한다.
+	 * @param v
+	 * @param t
+	 * @return
+	 */
+	function createOption(v , t ){
+		var option = document.createElement("option");
+		option.value = v;
+		option.text = t;
+		return option;
+	}
+	
+	
+	var cityList = new jindo.SelectBox($("cityList"), {  sClassPrefix : "jselectbox-" ,nWidth : 74, nHeight : 150 });
+	$Element(cityList.getSelectElement()).delegate('change', 'SELECT', function(oEvent) {
+		setDvsnList(cityList.getValue(), $("dvsnList"));
+	});
+	
+	var dvsnList = new jindo.SelectBox($("dvsnList"), {  sClassPrefix : "jselectbox-" ,nWidth : 124, nHeight : 150 });
+	$Element(dvsnList.getSelectElement()).delegate('change', 'SELECT', function(oEvent) {
+			setSecList(dvsnList.getValue(), $("secList"));
+	});
+	var secList =new jindo.SelectBox($("secList"), {  sClassPrefix : "jselectbox-" ,nWidth : 120, nHeight : 150 });
+	$Element(secList.getSelectElement()).delegate('change', 'SELECT', function(oEvent) {
+			setComplexList(secList.getValue(), rletTypeCd, $("complexList"));
+	});
+	var complexList = new jindo.SelectBox($("complexList"), {  sClassPrefix : "jselectbox-" ,nWidth : 205, nHeight : 150 });
+	$Element(complexList.getSelectElement()).delegate('change', 'SELECT', function(oEvent) {
+			setPtpList(complexList.getValue(), $("ptpList"));
+	});
+	var ptpList = new jindo.SelectBox($("ptpList"), {  sClassPrefix : "jselectbox-" ,nWidth : 67, nHeight : 150 });
+	$Element(ptpList.getSelectElement()).delegate('change', 'SELECT', function(oEvent) {
+			//setDvsnList(oEvent.value, $("dvsnList"));
+	});
+	
+	
+	var comboList = [cityList , dvsnList , secList , complexList , ptpList];
+	
+	/**
+	 * select option을 clear 한다.
+	 * @param obj
+	 * @param breakPoint
+	 * @return
+	 */
+	function clearRegionOptions(no){
+		
+		while(comboList.length > no ) {
+			comboList[no].setSelectedIndex(0);
+			comboList[no].getSelectElement().options.length = 1;
+			comboList[no].paint();
+			no++;
+		}
+	}
+	
+	function deleteCompareMnexInfo(targetId) {
+		var mnexInfoList = $A($Element($('mnexInfoCompareList')).queryAll("._mnex_info"));
+		if((mnexInfoList.length()) <= 2) {
+			alert("관리비 비교는 2개이상, 최대 5개까지 가능합니다.");
+			return;
+		}		
+		$Element(targetId).leave();
+	}
+	
+	function setDvsnList(){
+		// 초기화
+		clearRegionOptions(1);
+		if(cityList.getValue()){
+			$Ajax("/info/regionList.nhn", {
+			    onload:function(response) {
+					var json = $Json(response.text());
+					var regionList = json.get("Region");
+					var options = dvsnList.getSelectElement().options;
+					for (var i = 0; i < regionList.length; i++) {
+						var m = createOption(regionList[i].cortar_no , regionList[i].dvsn_nm);
+						options.add(m);
+					}
+					dvsnList.paint();
+				}
+		    }).request({"cortar_no":cityList.getValue()});
+		}
+	}
+
+	function setSecList(){
+		clearRegionOptions(2);
+		if(dvsnList.getValue()){
+			$Ajax("/info/regionList.nhn", {
+			    onload:function(response) {
+					var json = $Json(response.text());
+					var regionList = json.get("Region");
+					var options = secList.getSelectElement().options;
+					for (var i = 0; i < regionList.length; i++) {
+						options.add(createOption(regionList[i].cortar_no , regionList[i].sec_nm));
+					}
+					secList.paint();
+				}
+		    }).request({"cortar_no":dvsnList.getValue()});
+		}
+	}	
+	
+	function setComplexList(){
+		clearRegionOptions(3);
+		if(secList.getValue()){
+			$Ajax("/info/complexList.nhn", {
+			    onload:function(response) {
+					var json = $Json(response.text());
+					var resultList = json.get("Complex");
+					var options = complexList.getSelectElement().options;
+					for (var i = 0; i < resultList.length; i++) {
+						options.add(createOption(resultList[i].hscp_no , resultList[i].hscp_nm));
+					}
+					complexList.paint();
+				}
+		    }).request({"cortar_no":secList.getValue(),"rlet_type_cd":rletTypeCd , "hasMnex" : "Y"});
+		}
+	}	
+	
+	function setPtpList() {
+		clearRegionOptions(4);
+		if(complexList.getValue()) {
+			$Ajax("/info/ptpList.nhn", {
+			    onload:function(response) {
+					var json = $Json(response.text());
+					var resultList = json.get("Ptp");
+					
+					var options = ptpList.getSelectElement().options;
+					for (var i = 0; i < resultList.length; i++) {
+						options.add(createOption(resultList[i].ptp_no , resultList[i].ptp_nm));
+					}
+					ptpList.paint();
+				}
+		    }).request({"hscp_no":complexList.getValue() , "hasMnex" : "Y"});			
+		}
+	}
+	
+	function addMnexInfo() {
+		var hscpNo = complexList.getValue();
+		var ptpNo = ptpList.getValue();
+		var addInfo = hscpNo + "_" + ptpNo;
+		
+		var isAlreadyExist = false; 
+		if(! hscpNo == "-1" || ptpNo == "-1") {
+			alert("단지 및 평형을 선택해주세요!");
+			return;
+		} else {
+			var hscpPtpList = [];
+			var checkCount = 0;
+			
+			var mnexInfoList = $A($Element($('mnexInfoCompareList')).queryAll("._mnex_info"));
+			mnexInfoList.forEach(function(el , idx , al){
+				var _el = el._element;
+				if(addInfo == _el.id) {
+					isAlreadyExist = true;
+					return;
+				} else {
+					hscpPtpList[checkCount] = _el.id;
+					checkCount++;
+				}
+			});
+			
+			if(isAlreadyExist) {
+				alert("동일한 항목이 이미 존재합니다.");
+				return false;
+			} else {
+				hscpPtpList[checkCount] = addInfo;
+				
+				var url = '/article/maintenanceComparePopup.nhn';
+				url += "?hscpPtpList=" + hscpPtpList + "&rletTypeCd=" + rletTypeCd + "&cortarNo=" + secNo + "&bssYm=201407";
+				document.location = url;
+			}
+		}
+	}
+	
+	function toggleAddLayer() {
+		if(!$Element('addCompareMnexInfoLayer').visible()) {
+			var mnexInfoList = $A($Element($('mnexInfoCompareList')).queryAll("._mnex_info"));
+			if(mnexInfoList.length() >= 5) {
+				alert("관리비 비교는 2개이상, 최대 5개까지 가능합니다.");
+				return;
+			}			
+		}
+		$Element('addCompareMnexInfoLayer').toggle();
+	}
+	
+	function mnexInfoSort(obj, type) {
+		var isAsc = $Element(obj).hasClass('up');
+		var order;
+		if(isAsc) {
+			order = "desc";
+		} else {
+			order = "asc";
+		}
+		
+		var hscpPtpList = [];
+		var checkCount = 0;
+		
+		var mnexInfoList = $A($Element($('mnexInfoCompareList')).queryAll("._mnex_info"));
+		mnexInfoList.forEach(function(el , idx , al){
+			hscpPtpList[checkCount] = el._element.id;
+			checkCount++;
+		});
+		
+		var url = '/article/maintenanceComparePopup.nhn';
+		url += "?hscpPtpList=" + hscpPtpList + "&rletTypeCd=" + rletTypeCd + "&cortarNo=" + secNo + "&sortType=" + type + "&sortOrder=" + order + "&bssYm=201407";
+		document.location = url;
+	}
+	
+	setComplexList();
+	
+</script>
+</body>
+</html>

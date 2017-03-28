@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>네이버 ::부동산 매물관리센터</title>
+<link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css">
+</head><body>
+<div id="wrap">
+
+	<!-- container -->
+	<div id="container" class="sub">
+		<!-- 등록/관리 페이지 : 'sub' 클래스 삽입 -->
+		<div class="content">
+			<h3 class="salereg_tit"><img src="img/h3_register.gif" width="56" height="16" alt="매물등록"></h3>
+			<p class="salereg_info">철거가옥 매매, 입주권(특별분양) 관련 홍보성 매물 또는 중복매물 등은<strong>경고없이 삭제</strong>됩니다.<br> 매물 등록/결제 후 노출 시까지 매도자 확인 기간이 <strong>1~3일 정도 소요</strong>됩니다.
+			<br> 서비스 기간은 <strong>노출 시작일로부터 60일간</strong> 입니다.<br>
+			직거래로 등록하는 매물은 <strong>소유자가 법인일 경우 등록이 불가능</strong>하며, 본인 혹은 가족의 소유일 경우에만 서비스 가능합니다.<br> 중개업을 하는 고객님은 개인회원 매물 등록을 이용하실 수 없습니다.</p>
+			<form action="" name="registForm" id="registForm" class="member_join" method="post">
+				<input type="hidden" name="regist_option" id="regist_option" value="regist">
+				<input type="hidden" name="src_atcl_no" id="src_atcl_no" value="">
+				<input type="hidden" name="account_option" id="account_option" value="">
+				<fieldset>
+				<legend>매물등록</legend>
+					<h4 class="salereg_tit"><img src="img/h4_register1.gif" width="99" height="14" alt="등록상품 종류 선택"></h4>
+					<p class="essentiality">* 표시된 항목은 필수입력사항입니다.</p></h4>
+					<table cellspacing="0" border="1" summary="등록상품 종류 선택" cellpadding="0" class="tbl_write">
+					<caption>등록상품 종류 선택</caption>
+					<colgroup><col width="135"><col width="794"></colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row" class="point">상품종류<span class="must">*</span></th>
+					<td>
+						<input type="hidden" name="premium_or_focus" id="premium_or_focus" value="">
+						<input type="hidden" name="pay_prod_tp_cd" id="pay_prod_tp_cd" value="F01">
+						<input type="hidden" id="temp_prev_rlet_no" value="">
+						<input type="hidden" name="rlet_top_type_cd" id="rlet_top_type_cd" value="D03">
+						<ul class="goods_type">
+						<li><input type="radio" name="atcl_rgst_prod_tp_cd" id="goods5" checked="checked" title="상품종류" value="20"> <label for="goods5">포커스 건당결제</label></li>
+						<li><input type="radio" name="atcl_rgst_prod_tp_cd" id="goods6" title="상품종류" value="30"> <label for="goods6">일반 * 이번달 무료 등록 수량  9/10 (사용/총 건수)</label></li>
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">노출매체<span class="must">*</span></th>
+					<td>
+						<input type="checkbox" id="naverYN" checked="checked" disabled="" class="input_radio first"> 네이버 부동산
+						<input type="hidden" id="isIndvMbr" value="N">
+						<span id="cp_send_info">
+							<input type="hidden" id="exps_chg" value="change">
+							<input type="checkbox" name="trsm_cp_id" id="rsunYN" checked="checked" value="kms" class="input_radio"> <label for="rsunYN">네이버 RSUN</label>
+							<a href="#" target="_blank"><img src="img/btn_market_guide.gif" alt=""></a>
+							<input type="checkbox" name="trsm_cp_id" id="monetaYN" checked="checked" value="moneta" class="input_radio"> <label for="monetaYN">네이트&amp;모네타 부동산</label>
+							<span id="r114_exps"><input type="checkbox" name="trsm_cp_id" id="r114YN" value="r114" class="input_radio"> <label for="r114YN">부동산114</label></span>
+						</span>
+						<br>
+						<p id="exps_message" class="explan">* 노출 매체를 선택하시면 네이버와 제휴를 맺은 매체에 동시노출 됩니다.<br> * 부동산114에 매물 노출 여부는 결제수단에 따라 달라질 수 있습니다.</p>
+					</td>
+					</tr>
+					<tr id="product_select" block_disabled="false">
+					<th scope="row">매물종류<span class="must">*</span></th>
+					<td>
+						<input type="hidden" id="rletTypeListCount" value="">
+						<input type="hidden" id="visibleRletTypeCd" value="">
+						<input type="hidden" id="modRletType" value="true">
+						<select id="rletTypeCd" name="rlet_type_cd" title="매물종류">
+						<option value="A01">아파트</option>
+						<option value="A03">주상복합</option>
+						<option value="A02">오피스텔</option>
+						<option value="A04">재건축</option>
+						<option value="B01">아파트 분양권</option>
+						<option value="B03">주상복합 분양권</option>
+						<option value="B02">오피스텔 분양권</option>
+						<option value="F01">재개발</option>
+						<option value="C01">원룸</option>
+						<option value="C03">단독/다가구</option>
+						<option value="C02">빌라/연립</option>
+						<option value="D01">사무실</option>
+						<option value="D03">빌딩/건물</option>
+						<option value="E01">숙박/콘도</option>
+						<option value="D04">상가건물</option>
+						<option value="D05">상가주택</option>
+						<option value="D02">상가점포</option>
+						<option value="E02">공장/창고</option>
+						<option value="E03">토지/임야</option>
+						<option value="C04">전원/농가주택</option>
+						<option value="Z00">기타</option>
+						</select>
+						<span class="explan">'건물' 유형의 세부유형 '기타'로 서비스 됩니다.&nbsp;&nbsp;매물 등록 이후에는 매물종류<strong>수정이 불가능</strong>하오니, 정확히 확인해 주세요.</span>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register15.gif" width="54" height="14" alt="위치/종류"></h4>
+					<table cellspacing="0" border="1" summary="위치/구조" cellpadding="0" class="tbl_write">
+					<caption>위치/종류</caption>
+					<colgroup><col width="135"><col width="315"><col width="135"><col width="316"></colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr id="place_select" class="first">
+					<th scope="row">소재지<span class="must">*</span></th>
+					<td colspan="3">
+					<input type="hidden" id="cp_id_list" value="">
+					<select id="cityList" name="city_no" title="소재지(시/도)" class="sido" style="width:80px;">
+					<option value="">시/도</option>
+					<option value="1100000000">서울시</option>
+					<option value="4100000000">경기도</option>
+					<option value="2800000000">인천시</option>
+					<option value="2600000000">부산시</option>
+					<option value="3000000000">대전시</option>
+					<option value="2700000000">대구시</option>
+					<option value="3100000000">울산시</option>
+					<option value="2900000000">광주시</option>
+					<option value="4200000000">강원도</option>
+					<option value="4300000000">충청북도</option>
+					<option value="4400000000">충청남도</option>
+					<option value="4700000000">경상북도</option>
+					<option value="4800000000">경상남도</option>
+					<option value="4500000000">전라북도</option>
+					<option value="4600000000">전라남도</option>
+					<option value="5000000000">제주도</option>
+					</select>
+					<select id="dvsnList" title="소재지(시/군/구)" class="gu" style="width:120px;">
+					<option value="">시/군/구</option>
+					</select>
+					<select id="secList" name="cortar_no" title="소재지(읍/면/동)" class="dong" style="width:100px;">
+					<option value="">읍/면/동</option>
+					</select>
+					<div style="position:relative;top:0;left:312px;width:1px;height:1px;z-index:5">
+						<div id="direct_find" class="layer_direct_find" style="display:none;">
+							<iframe frameborder="0" style="position:absolute;z-index:-1;width:100%;height:100%"></iframe>
+							<div id="direct_find_scroll" class="scroll"></div>
+							<div class="btn_close"><a href="#"><img src="img/btn_close_popup.gif" width="48" height="24" alt="닫기"></a></div>
+						</div>
+					</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">상세주소<span class="must">*</span></th>
+					<td colspan="3">
+					<select id="" name="" title="소재지 상세1">
+					<option value="">무기리</option>
+					</select>
+					<select id="" name="" title="소재지 상세2">
+					<option value="">산</option>
+					</select>
+					<input type="text" name="" id="" title="상세주소(번지)" value="" class="input_text" style="width:35px">번지
+					<input type="text" name="" id="" title="상세주소(호)" value="" class="input_text" style="width:50px">호
+					<label for="etc">기타</label> : <input type="text" name="" id="etc" title="상세주소 기타" value="" class="input_text" style="width:205px">
+					<p class="explan">지번 정보(123의 4번지 → 123-4로 표기)와 건물명칭, 동/호수 정보(건물인 경우)를 모두 입력해 주시기 바랍니다.<br>
+					<strong>'리, 층, 호수'</strong> 등 상세주소 작성이 미흡할 경우 처리지연 및 등록취소 될 수 있습니다.
+					<br> 단, 상세주소는 매물정보 확인용으로만 사용되며 서비스 화면에 노출되지 않습니다.</p>
+					</td>
+					</tr>
+					<tr><th scope="row">건물명</th>
+					<td colspan="3"><input type="text" name="bild_nm" id="bild_nm" title="건물명" value="" maxlengthex="50" maxlength="51" class="input_text" style="width:200px;"></td>
+					</tr>
+					<tr>
+					<th scope="row">지도위치표시</th>
+					<td colspan="3"><input type="radio" name="map_loca_indcn_yn" id="mapLocaIndcnY" checked="checked" title="지도위치표시" value="Y" class="input_radio first"><label for="mapLocaIndcnY">표시함</label>
+					<input type="radio" name="map_loca_indcn_yn" id="mapLocaIndcnN" title="지도위치표시" value="N" class="input_radio"><label for="mapLocaIndcnN">표시안함</label>
+					</td>
+					</tr>
+					<tr id="map_layer">
+					<th scope="row">위치지정</th>
+					<td colspan="3"><input type="hidden" name="map_x_crdn" id="map_x_crdn"><input type="hidden" name="map_y_crdn" id="map_y_crdn">
+					<span class="explan" style="padding-bottom:10px;">* 위치 수정을 원하시면, 지도에서 해당 위치를 클릭해 주세요.</span>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register5.gif" width="24" height="14" alt="가격"></h4>
+					<table cellspacing="0" border="1" summary="가격" cellpadding="0" id="prc_info" class="tbl_write NE=a:rpr">
+					<caption>가격</caption>
+					<colgroup>
+					<col width="135"><col width="794">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">거래종류<span class="must">*</span></th>
+					<td>
+						<input type="radio" name="trad_tp_cd" id="ttc1" title="거래종류" value="A1" alt="매매" class="input_radio first NPI=a:sale">
+						<label for="ttc1">매매</label>
+						<input type="radio" name="trad_tp_cd" id="ttc2" title="거래종류" value="B1" alt="전세" class="input_radio  NPI=a:rent">
+						<label for="ttc2">전세</label>
+						<input type="radio" name="trad_tp_cd" id="ttc3" title="거래종류" value="B2" alt="월세" class="input_radio  NPI=a:monthly">
+						<label for="ttc3">월세</label>
+						<span style="display:none;"><input type="checkbox" name="auct_yn" id="auct_yn" value="Y" class="input_check" style="margin-left:30px;"><label for="auct_yn">경매</label></span>
+						<span id="indv_direct_price_explan" class="explan"><em>* 등기부등본 상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</em></span>
+					</td>
+					</tr>
+					<input type="hidden" id="modPrice" value="Y">
+					<input type="hidden" id="f_deal_amt" value="">
+					<input type="hidden" id="f_wrrnt_amt" value="">
+					<input type="hidden" id="f_lease_amt" value="">
+					<input type="hidden" id="l_deal_amt" value="">
+					<input type="hidden" id="l_wrrnt_amt" value="">
+					<input type="hidden" id="l_lease_amt" value="">
+					<tr depend="A1" block_disabled="false" style="">
+					<th scope="row">매매가<span class="must">*</span></th>
+					<td>
+						<input type="text" name="deal_amt" id="deal_amt" title="매매가" value="" maxlength="9" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원
+						[금액: <em id="deal_amt_han" style="color:red">- </em>원]
+						<em id="auctMsg" style="color: red; display: none; "></em>
+						<span id="siseView"></span>
+					</td>
+					</tr>
+					<tr depend="B1" block_disabled="true" style="display: none; ">
+					<th scope="row">전세가<span class="must">*</span></th>
+					<td><input type="text" name="wrrnt_amt" id="wrrnt_amt" title="전세가" value="" maxlength="9" disabled="" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원
+						[금액: <em id="wrrnt1_amt_han" style="color:red">- </em>원]
+					</td>
+					</tr>
+					<tr depend="B2" block_disabled="true" style="display: none; ">
+					<th scope="row">월세가<span class="must">*</span></th>
+					<td>보증금<input type="text" name="wrrnt_amt" id="wrrnt_amt2" title="보증금" value="" maxlength="9" disabled="" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원 /
+						월세가 <input type="text" name="lease_amt" id="lease_amt" title="월세가" value="" maxlength="9" disabled="" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원
+						[금액: <em id="wrrnt2_amt_han" style="color:red">- </em>원 / <em id="lease_amt_han" style="color:red">- </em>원]
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">융자금</th>
+					<td><input type="text" name="fnc_amt" id="fnc_amt" title="융자금" value="" maxlength="9" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원
+						[금액: <em id="fnc_amt_han" style="color:red">- </em>원]
+					</td>
+					</tr>
+					<tr depend="A1" block_disabled="false" style="">
+					<th scope="row">기전세금(월세금)</th>
+					<td>전세(보증금)<input type="text" name="al_wrrnt_amt" id="al_wrrnt_amt" title="전세(보증금)" value="" maxlength="9" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원 /
+						월세가 <input type="text" name="al_lease_amt" id="al_lease_amt" title="월세가" value="" maxlength="9" class="input_text" style="width: 60px; text-align: right; padding-right: 5px; "> 만원
+						[금액: <em id="al_wrrnt_amt_han" style="color:red">- </em>원 / <em id="al_lease_amt_han" style="color:red">- </em>원]
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register4.gif" width="48" height="14" alt="매물정보"><a href="#" class="btn_edit"><img src="img/btn_db.gif" width="110" height="20" alt="건물DB등록/수정요청"></a></h4>
+					<table cellspacing="0" border="1" summary="매물정보" cellpadding="0" class="tbl_write">
+					<caption>매물정보</caption>
+					<colgroup>
+					<col width="135"><col width="315"><col width="135"><col width="316">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">대지면적<span class="must">*</span></th>
+					<td colspan="3">
+						<input type="text" name="grnd_spc" id="grnd_spc" title="대지면적" value="" maxlength="9" class="input_text" style="width:78px; margin-right:3px;">㎡
+						<span class="bar">|</span>면적계산기 <input type="text" id="grnd_spc_p" maxlength="9" class="input_text" style="width:78px; margin:0 2px 0 4px;">평 =
+						<input type="text" id="grnd_spc_m" readonly="" class="input_text" style="width:78px; margin:0 1px 0 6px;"> ㎡
+						<span class="explan">* 정보를 입력하시면 자동으로 제곱미터로 변환됩니다.</span></td>
+					</tr>
+					<tr>
+					<th scope="row">연면적<span class="must">*</span></th>
+					<td colspan="3">
+						<input type="text" name="bldg_spc" id="bldg_spc" title="건축면적" value="" maxlength="9" class="input_text" style="width:78px; margin-right:3px;">㎡
+						<span class="bar">|</span>면적계산기 <input type="text" id="bldg_spc_p" maxlength="9" class="input_text" style="width:78px; margin:0 2px 0 4px;">평 =
+						<input type="text" id="bldg_spc_m" readonly="" class="input_text" style="width:78px; margin:0 1px 0 6px;"> ㎡
+						<span class="explan">* 정보를 입력하시면 자동으로 제곱미터로 변환됩니다.</span></td>
+					</tr><tr>
+					<th scope="row">건축면적</th>
+					<td colspan="3">
+						<input type="text" name="bldg_spc" id="bldg_spc" title="건축면적" value="" maxlength="9" class="input_text" style="width:78px; margin-right:3px;">㎡
+						<span class="bar">|</span>면적계산기 <input type="text" id="bldg_spc_p" maxlength="9" class="input_text" style="width:78px; margin:0 2px 0 4px;">평 =
+						<input type="text" id="bldg_spc_m" readonly="" class="input_text" style="width:78px; margin:0 1px 0 6px;"> ㎡
+						<span class="explan">* 정보를 입력하시면 자동으로 제곱미터로 변환됩니다.</span></td>
+					</tr>
+					<tr>
+					<th scope="row">건폐율</th>
+					<td></td>
+					<th scope="row">용적률</th>
+					<td colspan="2"></td>
+					</tr>
+					<tr>
+					<th scope="row">용도지역</th>
+					<td>일반주거지역</td>
+					<th scope="row">주구조</th>
+					<td colspan="2"></td>
+					</tr>
+					<tr>
+					<th scope="row">층<span class="must">*</span></th>
+					<td colspan="3">
+						<input type="hidden" name="flr_input_mthd_cd" value="10">
+						<input type="text" name="cores_flr_cnt" id="cores_flr_cnt" title="해당층" value="" maxlength="3" class="input_text" style="width:50px; background:url(http://static.land.naver.net/static/center/20110527/txt_floor.gif) no-repeat 7px 4px;"> /
+						<input type="text" name="tot_flr_cnt" id="tot_flr_cnt1" title="총층" value="" maxlength="3" class="input_text" style="width:50px; background:url(http://static.land.naver.net/static/center/20110527/txt_totalfloor.gif) no-repeat 7px 4px;"> / <input type="text" name="ugrod_flr_cnt" id="ugrod_flr_cnt" title="지하층" value="" maxlength="3" class="input_text" style="width:50px; background:url(http://static.land.naver.net/static/center/20110527/txt_basement.gif) no-repeat 7px 4px;">
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">총 세대수</th>
+					<td><input type="text" name="curr_usge_cont" id="curr_usge_cont" value="" maxlengthex="100" maxlength="101" class="input_text" style="width:57px"> 세대</td>
+					<th scope="row">방향</th>
+					<td>
+						<select name="drctn_tp_cd" id="drctn_tp_cd" title="방향" style="width:80px;"><option value="">선택</option>
+						<option value="EE">동</option>
+						<option value="WW">서</option>
+						<option value="SS">남</option>
+						<option value="NN">북</option>
+						<option value="EN">북동</option>
+						<option value="ES">남동</option>
+						<option value="WN">북서</option>
+						<option value="WS">남서</option>
+						</select>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">입주일자</th>
+					<td>
+						<select name="cmct_y" id="cmct_y" title="입주년도" style="width:50px;"><option value="">선택</option>
+						<option value="2012">2012</option>
+						<option value="2011">2011</option>
+						<option value="2010">2010</option>
+						<option value="2009">2009</option>
+						<option value="2008">2008</option>
+						<option value="2007">2007</option>
+						<option value="2006">2006</option>
+						<option value="2005">2005</option>
+						<option value="2004">2004</option>
+						<option value="2003">2003</option>
+						<option value="2002">2002</option>
+						<option value="2001">2001</option>
+						<option value="2000">2000</option>
+						<option value="1999">1999</option>
+						<option value="1998">1998</option>
+						<option value="1997">1997</option>
+						<option value="1996">1996</option>
+						<option value="1995">1995</option>
+						<option value="1994">1994</option>
+						<option value="1993">1993</option>
+						<option value="1992">1992</option>
+						<option value="1991">1991</option>
+						<option value="1990">1990</option>
+						<option value="1989">1989</option>
+						<option value="1988">1988</option>
+						<option value="1987">1987</option>
+						<option value="1986">1986</option>
+						<option value="1985">1985</option>
+						<option value="1984">1984</option>
+						<option value="1983">1983</option>
+						<option value="1982">1982</option>
+						<option value="1981">1981</option>
+						<option value="1980">1980</option>
+						<option value="1979">1979</option>
+						<option value="1978">1978</option>
+						<option value="1977">1977</option>
+						<option value="1976">1976</option>
+						<option value="1975">1975</option>
+						<option value="1974">1974</option>
+						<option value="1973">1973</option>
+						<option value="1972">1972</option>
+						<option value="1971">1971</option>
+						<option value="1970">1970</option>
+						<option value="1969">1969</option>
+						<option value="1968">1968</option>
+						<option value="1967">1967</option>
+						<option value="1966">1966</option>
+						<option value="1965">1965</option>
+						<option value="1964">1964</option>
+						<option value="1963">1963</option>
+						<option value="1962">1962</option>
+						<option value="1961">1961</option>
+						<option value="1960">1960</option>
+						<option value="1959">1959</option>
+						<option value="1958">1958</option>
+						<option value="1957">1957</option>
+						<option value="1956">1956</option>
+						<option value="1955">1955</option>
+						<option value="1954">1954</option>
+						<option value="1953">1953</option>
+						<option value="1952">1952</option>
+						<option value="1951">1951</option>
+						<option value="1950">1950</option>
+						<option value="1949">1949</option>
+						<option value="1948">1948</option>
+						<option value="1947">1947</option>
+						<option value="1946">1946</option>
+						<option value="1945">1945</option>
+						<option value="1944">1944</option>
+						<option value="1943">1943</option>
+						<option value="1942">1942</option>
+						<option value="1941">1941</option>
+						<option value="1940">1940</option>
+						<option value="1939">1939</option>
+						<option value="1938">1938</option>
+						<option value="1937">1937</option>
+						<option value="1936">1936</option>
+						<option value="1935">1935</option>
+						<option value="1934">1934</option>
+						<option value="1933">1933</option>
+						<option value="1932">1932</option>
+						<option value="1931">1931</option>
+						<option value="1930">1930</option>
+						<option value="1929">1929</option>
+						<option value="1928">1928</option>
+						<option value="1927">1927</option>
+						<option value="1926">1926</option>
+						<option value="1925">1925</option>
+						<option value="1924">1924</option>
+						<option value="1923">1923</option>
+						<option value="1922">1922</option>
+						<option value="1921">1921</option>
+						<option value="1920">1920</option>
+						<option value="1919">1919</option>
+						<option value="1918">1918</option>
+						<option value="1917">1917</option>
+						<option value="1916">1916</option>
+						<option value="1915">1915</option>
+						<option value="1914">1914</option>
+						<option value="1913">1913</option>
+						</select> 년
+						<select name="cmct_m" id="cmct_m" title="준공월" style="width:50px;"><option value="">선택</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						</select> 월
+					</td>
+					<th scope="row">총 주차대수</th>
+					<td><input type="text" name="prkg_cnt" id="prkg_cnt" value="" maxlength="2" class="input_text" style="width:30px;"> 대</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register10.gif" width="48" height="14" alt="시설정보"><a href="#" class="btn_edit"><img src="img/btn_db.gif" width="110" height="20" alt="건물DB등록/수정요청"></a></h4>
+					<table cellspacing="0" border="1" summary="시설정보" cellpadding="0" class="tbl_write">
+					<caption>시설정보</caption>
+					<colgroup><col width="135"><col width="315"><col width="135"><col width="316"></colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">난방방식</th>
+					<td>
+						<select id="heat_mthd_tp_cd" name="heat_mthd_tp_cd"><option value="">선택</option>
+						<option value="HT001">개별난방</option>
+						<option value="HT002">중앙난방</option>
+						<option value="HT003">개별냉난방</option>
+						<option value="HT004">중앙냉난방</option>
+						<option value="HT005">지역난방</option>
+						<option value="HT000">미노출</option>
+						</select>
+					</td>
+					<th scope="row">난방연료</th>
+					<td>
+						<select id="heat_fuel_tp_cd" name="heat_fuel_tp_cd"><option value="">선택</option>
+						<option value="HF001">도시가스</option>
+						<option value="HF002">열병합</option>
+						<option value="HF003">기름</option>
+						<option value="HF004">전기</option>
+						<option value="HF005">심야전기</option>
+						<option value="HF006">태양열</option>
+						<option value="HF007">LPG</option>
+						<option value="HF000">미노출</option>
+						</select>
+					</td>
+					</tr>
+
+					<tr>
+					<th scope="row">보안시설</th>
+					<td colspan="3">
+						<ul class="option_list">
+						<li><input type="checkbox" name="sec_fcts_cd" id="sec_fcts_list1" value="SEC01" class="input_check NPI=a:secu1"> <label for="sec_fcts_list1">자체경비원</label></li>
+						<li><input type="checkbox" name="sec_fcts_cd" id="sec_fcts_list2" value="SEC02" class="input_check NPI=a:secu2"> <label for="sec_fcts_list2">비디오폰</label></li>
+						<li><input type="checkbox" name="sec_fcts_cd" id="sec_fcts_list3" value="SEC03" class="input_check NPI=a:secu3"> <label for="sec_fcts_list3">인터폰</label></li>
+						<li class="fnone"><input type="checkbox" name="sec_fcts_cd" id="sec_fcts_list4" value="SEC04" class="input_check"> <label for="sec_fcts_list4">카드키</label></li>
+						<li><input type="checkbox" name="sec_fcts_cd" id="sec_fcts_list5" value="SEC05" class="input_check"> <label for="sec_fcts_list5">CCTV</label></li>
+						<li class="end"><input type="checkbox" name="sec_fcts_cd" id="sec_fcts_list6" value="SEC06" class="input_check"> <label for="sec_fcts_list6">사설경비</label></li>
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">기타시설</th>
+					<td colspan="3">
+						<ul class="option_list">
+						<li><input type="checkbox" name="etc_fcts_cd" id="etc_fcts_list1" value="ETC01" class="input_check"> <label for="etc_fcts_list1">엘리베이터</label></li>
+						<li class="fnone"><input type="checkbox" name="etc_fcts_cd" id="etc_fcts_list2" value="ETC02" class="input_check"> <label for="etc_fcts_list2">화재경보기</label></li>
+						<li class="end"><input type="checkbox" name="etc_fcts_cd" id="etc_fcts_list3" value="ETC03" class="input_check"> <label for="etc_fcts_list3">베란다</label></li>
+						</ul>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register12.gif" width="46" height="14" alt="주변정보"></h4>
+					<table cellspacing="0" border="1" summary="상세정보" cellpadding="0" class="tbl_write">
+					<caption>상세정보</caption>
+					<colgroup><col width="135"><col width="794"></colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">지하철 정보</th>
+					<td>
+						<span id="baseSubway">
+							<select id="sbwy_line_tp_cd">
+							<option value="">호선</option>
+							<option value="SLT01">1호선</option>
+							<option value="SLT03">중앙선</option>
+							<option value="SLT04">2호선</option>
+							<option value="SLT05">3호선</option>
+							<option value="SLT06">4호선</option>
+							<option value="SLT07">5호선</option>
+							<option value="SLT08">6호선</option>
+							<option value="SLT09">7호선</option>
+							<option value="SLT10">8호선</option>
+							<option value="SLT11">분당선</option>
+							<option value="SLT12">신분당선</option>
+							<option value="SLT13">부산1호선</option>
+							<option value="SLT14">부산2호선</option>
+							<option value="SLT15">부산3호선</option>
+							<option value="SLT26">부산4호선</option>
+							<option value="SLT16">대구1호선</option>
+							<option value="SLT17">대구2호선</option>
+							<option value="SLT18">인천1호선</option>
+							<option value="SLT20">광주1호선</option>
+							<option value="SLT21">대전1호선</option>
+							<option value="SLT22">공항철도</option>
+							<option value="SLT23">9호선</option>
+							<option value="SLT24">경의선</option>
+							<option value="SLT25">경춘선</option>
+							</select>
+							<select id="sbwy_stn_no" title="역명">
+							<option value="">역명</option>
+							</select>
+							<select id="sbwy_mv_mns_tp_cd">
+							<option value="">이동수단</option>
+							<option value="10">도보</option>
+							<option value="20">마을버스</option>
+							</select>
+							<input type="text" id="sbwy_mv_tm_tp_cd" value="" maxlength="3" class="input_text" style="width:30px;">분
+						</span>
+						<a href="#"><img src="img/btn_add.gif" width="63" height="20" alt="추가하기"></a>
+						<span class="explan">* 지하철 정보 선택후 추가하기 버튼을 눌러주세요. (10개까지 등록 가능)</span>
+						<ul id="otherSubway"></ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">버스정보</th>
+					<td><textarea cols="30" rows="5" name="bus_info_desc" maxlengthex="300" maxlength="301" style="width:748px; height:40px;"></textarea></td>
+					</tr>
+					<tr>
+					<th scope="row">도로정보</th>
+					<td><textarea cols="30" rows="5" name="road_info_desc" maxlengthex="300" maxlength="301" style="width:748px; height:40px;"></textarea></td>
+					</tr>
+					<tr>
+					<th scope="row">편의시설</th>
+					<td><textarea cols="30" rows="5" name="cfcts_desc" maxlengthex="300" maxlength="301" style="width:748px; height:40px;"></textarea></td>
+					</tr>
+					<tr>
+					<th scope="row">교육환경</th>
+					<td><textarea cols="30" rows="5" name="edu_env_desc" maxlengthex="300" maxlength="301" style="width:748px; height:40px;"></textarea></td>
+					</tr>
+					<tr>
+					<th scope="row">공원/녹지</th>
+					<td><textarea cols="30" rows="5" name="park_info_desc" maxlengthex="300" maxlength="301" style="width:748px; height:40px;"></textarea></td>
+					</tr>
+					<tr>
+					<th scope="row">의료시설</th>
+					<td><textarea cols="30" rows="5" name="mfcts_desc" maxlengthex="300" maxlength="301" style="width:748px; height:40px;"></textarea></td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register6.gif" width="34" height="14" alt="입주일"></h4>
+					<table cellspacing="0" border="1" summary="입주일" cellpadding="0" class="tbl_write">
+					<caption>입주일</caption>
+					<colgroup><col width="135"><col width="794"></colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">입주가능일</th>
+					<td>
+						<input type="radio" name="mvi_tp_cd" id="mvi_tp_cd1" checked="checked" title="입주가능일" value="MV001" class="input_radio">
+						<label for="mvi_tp_cd1">즉시입주</label>
+						<input type="radio" name="mvi_tp_cd" id="mvi_tp_cd2" title="입주가능일" value="MV002" class="input_radio">
+						<label for="mvi_tp_cd2">
+							<select name="mvi_psbl_in_m_cnt" id="mvi_psbl_in_m_cnt" title="입주가능일(개월이내)" disabled="" style="width:50px;">
+							<option value="">선택</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							</select> 개월 이내
+						</label>
+						<input type="radio" name="mvi_tp_cd" id="mvi_tp_cd3" title="입주가능일" value="MV003" class="input_radio">
+						<label for="mvi_tp_cd3">
+							<select name="mvi_psbl_aft_y" id="mvi_psbl_aft_y" title="입주가능일(년 이후)" disabled="" style="width:50px;">
+							<option value="">선택</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							</select> 년
+							<select name="mvi_psbl_aft_m" id="mvi_psbl_aft_m" title="입주가능일(월 이후)" disabled="" style="width:50px;">
+							<option value="">선택</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							</select> 월 이후
+						</label>
+						<input type="checkbox" name="cnfrn_psbl_yn" id="cnfrn_psbl_yn" value="Y" class="input_check">
+						<label for="cnfrn_psbl_yn">협의가능</label>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h4 class="salereg_tit"><img src="img/h4_register7.gif" width="47" height="14" alt="상세정보" id="detail_img"></h4>
+					<table cellspacing="0" border="1" summary="상세정보" cellpadding="0" class="tbl_write NE=a:rdt">
+					<caption>상세정보</caption>
+					<colgroup>
+					<col width="135"><col width="794">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">매물특징</th>
+					<td><input type="text" name="atcl_fetr_desc" id="atcl_fetr_desc" title="매물특징" value="" maxlength="41" maxlengthex="40" class="input_text" style="width:455px; background:url(http://static.land.naver.net/static/center/20110527/txt_salespecial.gif) no-repeat 7px 4px;"><br>
+						<p id="detail_info_explan" class="explan">* 매물 정보와 관련없는 문구, 특수문자 등은 임의로<strong>삭제</strong>될 수 있습니다.<br>
+						* 한글, 영어, 한자, 일본어, 숫자 이외에 특수문자는 입력할 수 없습니다.<br>
+						* 경매  매물은 리스트 노출용 매물 특징을 등록하실 수 없습니다.</p>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">상세설명</th>
+					<td>
+						<span id="descList">
+<textarea cols="30" rows="5" name="desc$dtl_desc" title="상세설명" maxlengthex="1000" maxlength="1001" style="width:748px; height:80px; background:url(http://static.land.naver.net/static/center/20110527/txt_detailexplan_new.gif) no-repeat 7px 7px;"></textarea></span>
+
+						<div id="descAddButton" class="btn_add"><a href="#"><img src="img/btn_input_add.gif" width="75" height="20" alt="입력창 추가"></a></div>
+						<div id="descDeleteButton" class="btn_add" style="display:none;"><a href="#"><img src="img/btn_input_add.gif" width="75" height="20" alt="입력창 추가"></a><a href="#"><img src="img/btn_delete2.gif" width="42" height="20" alt="삭제"></a>
+						</div>
+
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">매물사진</th>
+					<td>
+						<a href="#"><img src="img/btn_photo_open.gif" alt=""></a>
+						<span class="file"><strong id="filecapacity">0KB</strong> / 5120KB</span>
+						<span class="explan">* 매물사진을 등록하시면 리스트 페이지에 아이콘이 추가되어 주목도가 높아집니다.</span>
+						<div style="margin-top: 5px; position:relative; z-index:10;">
+							<span style="color:#f5433d;font-size:11px; letter-spacing:-1px; ">* 매물사진을 등록하시면 리스트 페이지에 아이콘이 추가되어 주목도가 높아지며, 네이버 통합이미지 검색에 노출되어 다양한 노출효과를 보실 수 있습니다.<br> 단, 가이드에 적합하지 않은 사진은 관리자에 의해 삭제될 수 있으니, 가이드를 확인하신 후 사진 등록을 해주시길 바랍니다.&nbsp;&nbsp;	<a href="#" style="color:#3E75AC; text-decoration:underline;">가이드보기</a></span>
+						</div>
+					</td>
+					</tr>
+
+					<tr>
+					<th scope="row">중개사 메모<span class="open_option">(비공개)</span></th>
+					<td><textarea cols="30" rows="5" name="brkg_memo" title="중개사 메모" maxlengthex="300" maxlength="301" style="width:748px; height:80px; background:url(http://static.land.naver.net/static/center/20110527/txt_seller_memo.gif) no-repeat 7px 7px;"></textarea>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<div id="sellrInfo">
+						<h4 class="salereg_tit"><img src="img/h4_register16.gif" width="113" height="14" alt="매도/임대 의뢰인 정보"></h4>
+						<p class="userinfo_notice">
+							<span id="sellr_info_notice1" class="userinfo_notice">
+							입력한 매도/임대 의뢰인 정보는<strong>내부 확인용으로만 사용</strong>되며 실제 서비스 상에 노출되지 않습니다. (<strong>수집된 정보는 노출 종료 시 자동으로 폐기됩니다.</strong>)
+							</span><br>
+							매도/임대 의뢰인 정보가 <strong>정확하게 입력되지 않으면 매물 등록이 취소</strong>될 수 있습니다.<br>
+							매도/임대 의뢰인은 등기부등본 상의 소유자이거나 소유자의 가족, 친척인 경우에만 인정됩니다. (단, 전세/월세에 한하여 세입자도 임대 의뢰인이 될 수 있습니다.)<br>
+							매도/임대 의뢰인의 전화 연락이 어려운 경우 <strong>'매물홍보 확인서'</strong>를 이용하여 매물등록이 가능하며, 홍보확인서는 <strong>의뢰인이 직접 작성</strong>해야 처리 가능합니다.<br>
+						</p>
+
+						<table cellspacing="0" border="1" summary="매도/임대 의뢰인 정보" cellpadding="0" class="tbl_write">
+						<caption>매도/임대인 의뢰인 정보</caption>
+						<colgroup><col width="135"><col width="315"><col width="135"><col width="316"></colgroup>
+						<thead>
+						<tr>
+						<th scope="col">항목</th>
+						<th scope="col">내용</th>
+						<th scope="col">항목</th>
+						<th scope="col">내용</th>
+						</tr>
+						</thead>
+						<tbody id="sellrInfo">
+						<tr class="first">
+						<th scope="row">홍보확인 방식<span class="must">*</span></th>
+						<td colspan="3">
+							<input type="radio" name="vrfc_mthd_tp_cd" id="vrfc_mthd_tp_cd1" checked="checked" title="홍보확인 방식" value="10" class="input_radio first"><label for="vrfc_mthd_tp_cd1">전화 확인</label>
+							<input type="radio" name="vrfc_mthd_tp_cd" id="vrfc_mthd_tp_cd2" title="홍보확인 방식" value="20" class="input_radio"><label for="vrfc_mthd_tp_cd2">홍보확인서 확인</label>
+							<em class="explan"><strong>(※ 매물 등록 완료 이후, 매물 정보가 기입된 홍보확인서 출력이 가능합니다.)</strong></em>
+						</td>
+						</tr>
+						<tr id="vrfcMthdTpCd1">
+						<th scope="row">매도/임대 의뢰인명<span class="must">*</span></th>
+						<td><input type="text" name="sellr_nm" id="sellr_nm" title="매도/임대 의뢰인명" value="" maxlength="21" maxlengthex="20" class="input_text" style="width: 100px; visibility: visible; "></td>
+						<th scope="row" class="tel">의뢰인 연락처<span class="must">*</span></th>
+						<td>
+							<select id="sellr_tel_no1" name="sellr_tel_no1" title="매도/임대인 연락처" style="width: 50px; visibility: visible; ">
+							<option value="">선택</option>
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+							<option value="02">02</option>
+							<option value="031">031</option>
+							<option value="032">032</option>
+							<option value="033">033</option>
+							<option value="041">041</option>
+							<option value="042">042</option>
+							<option value="043">043</option>
+							<option value="051">051</option>
+							<option value="052">052</option>
+							<option value="053">053</option>
+							<option value="054">054</option>
+							<option value="055">055</option>
+							<option value="061">061</option>
+							<option value="062">062</option>
+							<option value="063">063</option>
+							<option value="064">064</option>
+							<option value="070">070</option>
+							<option value="0502">0502</option>
+							<option value="0505">0505</option>
+							<option value="0506">0506</option>
+							<option value="080">080</option>
+							<option value="0303">0303</option>
+							<option value=" ">없음</option>
+							</select> -
+							<input type="text" name="sellr_tel_no2" id="sellr_tel_no2" title="의뢰인 연락처" value="" maxlength="4" class="input_text" style="width: 40px; visibility: visible;"> -
+							<input type="text" name="sellr_tel_no3" id="sellr_tel_no3" title="의뢰인 연락처" value="" maxlength="4" class="input_text" style="width: 40px; visibility: visible;">
+						</td>
+						</tr>
+						<tr id="vrfcMthdTpCd2" style="display: none; ">
+						<th scope="row">매물홍보 확인서 다운</th>
+						<td colspan="3"><a href="#" style="visibility: hidden; "><img src="img/btn_pub_down.gif" width="140" height="20" alt="매물홍보 확인서 다운로드"></a>
+						<span class="explan"><em>* 왼쪽의 '매물홍보 확인서' 양식을 다운 받으시어 매물 정보 기재 후 팩스(Fax:<span>02-2046-9932</span>) 전송하여 주시면 됩니다. </em> </span>
+						<span class="explan">* 매물홍보 확인서의 모든 항목에 정보가 제대로 기재되지 않으면 매물 등록이 되지 않습니다.</span>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+
+						<p class="checkbox" type="checkbox" name="ofr_agree" id="ofr_agree" title="고객 동의" value="Y" style="visibility: visible; ">
+							<input type="checkbox" name="ofr_agree" id="ofr_agree" value="Y" exfnc="required" title="고객 동의" style="visibility: visible; ">
+							<label for="ofr_agree">상기 개인정보의 수집 및 네이버 제공에 대해서 고객으로부터 동의를 받았습니다.</label>
+						</p>
+					</div>
+
+					<h4 class="salereg_tit"><img src="img/h4_register9.gif" width="111" height="14" alt="중개업소 담당자 정보"></h4>
+					<table cellspacing="0" border="1" summary="중개업소 담당자 정보" cellpadding="0" class="tbl_write">
+					<caption>중개업소 담당자 정보</caption>
+					<colgroup><col width="135"><col width="315"><col width="135"><col width="316"></colgroup>
+					<thead>
+					<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="first">
+					<th scope="row">담당자명<span class="must">*</span></th>
+					<td><input type="text" name="rltr_chrgr_nm" id="rltr_chrgr_nm" title="담당자명" value="홍길동" maxlength="21" maxlengthex="20" class="input_text" style="width:100px;"></td>
+					<th scope="row" class="tel">연락처<span class="must">*</span></th>
+					<td>
+						<select id="rltr_chrgr_tel_no1" name="rltr_chrgr_tel_no1" title="담당자 연락처" style="width:50px;">
+						<option value="">선택</option>
+						<option value="010" selected="selected">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+						<option value="02">02</option>
+						<option value="031">031</option>
+						<option value="032">032</option>
+						<option value="033">033</option>
+						<option value="041">041</option>
+						<option value="042">042</option>
+						<option value="043">043</option>
+						<option value="051">051</option>
+						<option value="052">052</option>
+						<option value="053">053</option>
+						<option value="054">054</option>
+						<option value="055">055</option>
+						<option value="061">061</option>
+						<option value="062">062</option>
+						<option value="063">063</option>
+						<option value="064">064</option>
+						<option value="070">070</option>
+						<option value="0502">0502</option>
+						<option value="0505">0505</option>
+						<option value="0506">0506</option>
+						<option value="080">080</option>
+						<option value="0303">0303</option>
+						<option value=" ">없음</option>
+						</select> -
+						<input type="text" name="rltr_chrgr_tel_no2" id="rltr_chrgr_tel_no2" title="담당자 연락처" value="8963" maxlength="4" class="input_text" style="width:40px;"> -
+						<input type="text" name="rltr_chrgr_tel_no3" id="rltr_chrgr_tel_no3" title="담당자 연락처" value="7262" maxlength="4" class="input_text" style="width:40px;">
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<div id="registWrap1" class="btn_wrap">
+						<a href="#"><img src="img/btn_accounts.gif" alt="결제하기"></a>
+						<a href="#"><img src="img/btn_temporarysave.gif" alt="임시저장"></a>
+						<a href="#"><img src="img/btn_cancel.gif" width="67" height="29" alt="취소하기"></a>
+					</div>
+					<div id="registWrap2" class="btn_wrap" style="display: none; ">
+						<a href="#"><img src="img/btn_register.gif" width="82" height="29" alt="등록하기"></a>
+						<a href="#"><img src="img/btn_cancel.gif" width="67" height="29" alt="취소하기"></a>
+					</div>
+					<iframe src="" width="0" height="0" frameborder="0" id="action_iframe" name="action_iframe"></iframe>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer"><img src="img/@footer.png" width="960" height="64" alt="푸터 임시 이미지"> </div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,1847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header"></div>
+	<!-- //header -->
+
+	<!-- 거래종류 / 매물카테고리 / 매물종류 -->
+	<div class="search">
+		<!-- 100830 부동산가이드 배너 -->
+		<div id="guidebanner_area"></div>
+		<!-- //100830 부동산가이드 배너 -->
+
+		<!-- 지도 상단 카테고리 -->
+		<div class="map_top">
+			<ul class="cate">
+			<div id="top_rlet_tp">
+				<li class="m1"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#">오피스텔</a></li>
+				<li class="m3"><a href="#">분양권</a></li>
+				<li class="m4"><a href="#">주택</a></li>
+				<li class="m5"><a href="#">토지</a></li>
+				<li class="m6"><a href="#">원룸</a></li>
+				<li class="m7"><a href="#">상가</a></li>
+				<li class="m8"><a href="#">사무실</a></li>
+				<li class="m9"><a href="#">공장</a></li>
+				<li class="m10"><a href="#">재개발</a></li>
+				<li class="m11"><a href="#">건물</a></li>
+			</div>
+			<div id="top_trad_tp">
+				<li class="m12"><a href="#" class="selected">전체</a></li>
+				<li class="m13"><a href="#">매매</a></li>
+				<li class="m14"><a href="#">전세</a></li>
+				<li class="m15"><a href="#">월세</a></li>
+			</div>
+			</ul>
+		</div>
+		<!-- //지도 상단 카테고리 -->
+	</div>
+	<!-- //거래종류 / 매물카테고리 / 매물종류 -->
+
+	<div id="map" class="map_sub">
+		<!-- 위치 선택 -->
+		<div id="locationArea" class="location">
+			<div class="loc_view">
+				<div id="loc_view1" class="sel">
+					<select class="selectbox-source">
+					<option value="1100000000" selected="selected">서울시</option>
+					<option value="4100000000">경기도</option>
+					<option value="2800000000">인천시</option>
+					<option value="2600000000">부산시</option>
+					<option value="3000000000">대전시</option>
+					<option value="2700000000">대구시</option>
+					<option value="3100000000">울산시</option>
+					<option value="2900000000">광주시</option>
+					<option value="4200000000">강원도</option>
+					<option value="4300000000">충청북도</option>
+					<option value="4400000000">충청남도</option>
+					<option value="4700000000">경상북도</option>
+					<option value="4800000000">경상남도</option>
+					<option value="4500000000">전라북도</option>
+					<option value="4600000000">전라남도</option>
+					<option value="5000000000">제주도</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">서울시</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel">
+					<select class="selectbox-source">
+					<option value="1168000000" selected="selected">강남구</option>
+					<option value="1174000000">강동구</option>
+					<option value="1130500000">강북구</option>
+					<option value="1150000000">강서구</option>
+					<option value="1162000000">관악구</option>
+					<option value="1121500000">광진구</option>
+					<option value="1153000000">구로구</option>
+					<option value="1154500000">금천구</option>
+					<option value="1135000000">노원구</option>
+					<option value="1132000000">도봉구</option>
+					<option value="1123000000">동대문구</option>
+					<option value="1159000000">동작구</option>
+					<option value="1144000000">마포구</option>
+					<option value="1141000000">서대문구</option>
+					<option value="1165000000">서초구</option>
+					<option value="1120000000">성동구</option>
+					<option value="1129000000">성북구</option>
+					<option value="1171000000">송파구</option>
+					<option value="1147000000">양천구</option>
+					<option value="1156000000">영등포구</option>
+					<option value="1117000000">용산구</option>
+					<option value="1138000000">은평구</option>
+					<option value="1111000000">종로구</option>
+					<option value="1114000000">중구</option>
+					<option value="1126000000">중랑구</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">강남구</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel">
+					<select class="selectbox-source" style="position:absolute;top:-1000px;left:-1000px">
+					<option value="1168010300">개포동</option>
+					<option value="1168010800">논현동</option>
+					<option value="1168010600">대치동</option>
+					<option value="1168011800">도곡동</option>
+					<option value="1168010500">삼성동</option>
+					<option value="1168011100">세곡동</option>
+					<option value="1168011500">수서동</option>
+					<option value="1168010700">신사동</option>
+					<option value="1168011000">압구정동</option>
+					<option value="1168010100" selected="selected">역삼동</option>
+					<option value="1168011300">율현동</option>
+					<option value="1168011400">일원동</option>
+					<option value="1168011200">자곡동</option>
+					<option value="1168010400">청담동</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">역삼동</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel">
+					<select class="selectbox-source">
+					<option value="_" class="selectbox-default">단지</option>
+					<option value="26441">N-스위트</option>
+					<option value="19658">SK허브젠</option>
+					<option value="22025">강남역우정에쉐르</option>
+					<option value="787">개나리4차</option>
+					<option value="795">개나리5차</option>
+					<option value="798">개나리6차</option>
+					<option value="18213">개나리래미안</option>
+					<option value="17528">개나리푸르지오</option>
+					<option value="15905">갤러리빌</option>
+					<option value="102690">갤러리아트</option>
+					<option value="11071">갤러리하우스</option>
+					<option value="16456">거평빌라</option>
+					<option value="3314">경남</option>
+					<option value="23222">골든베르힐</option>
+					<option value="102534">공간쉐르빌</option>
+					<option value="104157">그린비</option>
+					<option value="9123">금호어울림</option>
+					<option value="16462">네스빌</option>
+					<option value="24263">노블스위트</option>
+					<option value="13518">뉴엠</option>
+					<option value="13813">대림e-편한세상</option>
+					<option value="977">대림역삼</option>
+					<option value="13118">대우디오빌플러스</option>
+					<option value="588">동부센트레빌</option>
+					<option value="24863">디오슈페리움</option>
+					<option value="25843">뜨라네(828-21)</option>
+					<option value="102136">뜨라네(828-76)</option>
+					<option value="837">래미안그레이튼(진달래2차)</option>
+					<option value="394">래미안그레이튼(진달래3차)</option>
+					<option value="22386">래미안펜타빌</option>
+					<option value="11739">로얄빌리지</option>
+					<option value="102724">로얄팰리스</option>
+					<option value="11087">명인갤러리1차</option>
+					<option value="22733">명인갤러리2차</option>
+					<option value="102702">베르사이유</option>
+					<option value="17816">베스젠빌</option>
+					<option value="101553">불루밍코트</option>
+					<option value="14386">브라운스톤역삼</option>
+					<option value="103616" selected="selected">블루밍하우스</option>
+					<option value="13814">삼성래미안역삼</option>
+					<option value="18779">상지리츠빌</option>
+					<option value="25941">상지리츠빌2차</option>
+					<option value="12739">선릉역우정에쉐르멤버스</option>
+					<option value="804">성보</option>
+					<option value="26275">성영</option>
+					<option value="11429">세방하이빌1차</option>
+					<option value="25650">세방하이빌2차</option>
+					<option value="15203">세종빌라트</option>
+					<option value="18991">쌍용플래티넘밸류</option>
+					<option value="102632">쎄비앙(101동)</option>
+					<option value="102899">쎄비앙(102동)</option>
+					<option value="104215">에벤에셀빌라트</option>
+					<option value="25264">역삼 프리마빌</option>
+					<option value="24081">역삼2차아이파크</option>
+					<option value="17805">역삼IPARK</option>
+					<option value="16464">역삼경일</option>
+					<option value="22647">역삼노블카운티</option>
+					<option value="102665">역삼동빌라</option>
+					<option value="3315">역삼디오빌</option>
+					<option value="22320">역삼롯데캐슬노블</option>
+					<option value="14197">역삼르비앙</option>
+					<option value="18566">역삼예명</option>
+					<option value="23999">역삼우성</option>
+					<option value="14295">역삼우정에쉐르1</option>
+					<option value="17795">역삼우정에쉐르2</option>
+					<option value="19457">역삼우정에쉐르3</option>
+					<option value="17527">역삼월드메르디앙</option>
+					<option value="100667">역삼이안애에이</option>
+					<option value="16459">역삼칼라</option>
+					<option value="14142">역삼푸르지오</option>
+					<option value="27333">역삼프라임</option>
+					<option value="10556">역삼하나빌</option>
+					<option value="100318">역삼하나빌</option>
+					<option value="9517">열성카이스빌</option>
+					<option value="100375">예지인</option>
+					<option value="14357">예지향</option>
+					<option value="13128">오투빌</option>
+					<option value="12828">우림루미아트1</option>
+					<option value="11803">우림루미아트2</option>
+					<option value="15206">우성빌라트</option>
+					<option value="821">은하수</option>
+					<option value="23089">정원</option>
+					<option value="25057">조이너스</option>
+					<option value="16461">주풍타워</option>
+					<option value="13174">진넥스빌2</option>
+					<option value="22783">천평대</option>
+					<option value="24373">탑펠리스</option>
+					<option value="101753">테라힐스</option>
+					<option value="10294">트레벨</option>
+					<option value="26849">파크앤스위트</option>
+					<option value="103695">포스틸빌라트</option>
+					<option value="102054">풍림지오빌</option>
+					<option value="24071">프리마빌</option>
+					<option value="24783">프리우스역삼</option>
+					<option value="12766">플래티늄</option>
+					<option value="104039">한솔</option>
+					<option value="3054">한스빌</option>
+					<option value="23094">한양럭스</option>
+					<option value="3055">한화진넥스빌</option>
+					<option value="3316">현대까르디에710</option>
+					<option value="104244">현대이스트빌</option>
+					<option value="13891">현대트라움</option>
+					<option value="102815">현대하이츠</option>
+					<option value="10331">휴먼터치빌</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">블루밍하우스</div>
+					</div>
+				</div>
+			</div>
+			<div class="lastest">
+				<p>최근 검색한 지역과 단지 <a href="#">보기</a></p>
+				<ol id="recentComplexList" style="display:none;height:28px">
+				<li><a href="#">역삼동 블루밍하우스</a></li>
+				</ol>
+			</div>
+		</div>
+		<!-- //위치 선택 -->
+
+		<!-- 지도 영역 -->
+		<div class="map_viewer">
+			<div class="map_area">
+				<div id="mapReal" class="map_real" style="padding:0;width:699px;height:340px"><img src="img/@map.gif" width="699" height="340" alt="지도 임시이미지"></div>
+				<div id="mapGuidePop" class="map_guide map_on" style="display:none"></div>
+				<div id="mapGuideHowto" class="map_guide" style="display:block">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="53" height="53" title="활용법 플래시">
+						<param name="movie" value="img/howto.swf">
+						<param name="quality" value="high">
+						<param name="wmode" value="transparent">
+						<param name="allowScriptAccess" value="always">
+						<object type="application/x-shockwave-flash" data="img/howto.swf" width="53" height="53">
+							<param name="quality" value="high">
+							<param name="wmode" value="transparent">
+							<param name="allowScriptAccess" value="always">
+						</object>
+					</object>
+				</div>
+			</div>
+			<!-- 매물정보 레이어, 중개업소정보 레이어 -->
+			<div id="sideListLayer" class="address_list">
+				<div class="backgroud_png"></div>
+				<div class="map_tab">
+					<ul class="lst_tab">
+						<li class="on" id="complexListTitle">
+							<a href="#" class="tab_a">단지</a>
+							<em class="sale_num">매매</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<!-- [D] 비공동 확인매물,중개업소 탭 bd_section 추가 -->
+							<div id="realtorListLayer" class="housing scroll bd_section">
+								<div class="housing_inner">
+									<!-- [D] 현장확인 매물 리스트 -->
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+									<!-- [D] 단순 매물 리스트 매물 -->
+									<ul class="lst_site lst_site_v2">
+									<li>
+										<a href="#">
+											<span class="tit">첫번째빌라</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="" id="siteListTitle">
+							<a href="#" class="tab_a">현장확인매물</a>
+							<em class="sale_num">매매 0건</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li id="realtorListTitle">
+							<a href="#" class="tab_a">중개업소</a>
+							<span class="sale_num">매매</span>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_layer"><span class="bg_btn_layer"></span><a href="#"><span class="blind">지역 리스트 크게보기</span></a></div>
+			</div>
+			<!-- //매물정보 레이어, 중개업소정보 레이어 -->
+		</div>
+		<!-- //지도 영역 -->
+
+		<div class="clear"></div>
+		<div id="map_bar" class="map_bar"><a href="#"><img src="img/btn_map_down.gif" title="지도확대" alt="지도확대"></a></div>
+	</div>
+
+	<!-- 하위 컨텐츠 및 Aside Component 영역 List Container -->
+	<a href="#" name="tabLocation"></a>
+	<div id="container">
+		<div id="content">
+			<div class="ad_area">
+				<img src="img/m_guide_banner.png" width="680" height="110" alt="더욱 신뢰도 높은 모바일 확인 매물로 내집 마련하자!">
+				<a href="#" target="_blank" class="mbl_link"><span class="blind">모바일 확인 매물이란?</span></a>
+			</div>
+			<div id="depth4Content" class="sale_info" style="display:block">
+				<fieldset>
+				<legend>관심매물 등록</legend>
+					<h2 id="depth4Content_Title">[역삼동]<span>블루밍하우스</span><a href="http://map.naver.com/?lat=37.4964378&amp;lng=127.0775008&amp;streetid=5Hb8dLTSpCbfoKV1vyMpBw%3D%3D&amp;span=-92.12&amp;sfov=120&amp;streetlat=37.4964378&amp;streetlng=127.0775008" class="map street NPI=a:street" target="_blank">거리뷰</a><a href="http://map.naver.com/?dlevel=12&amp;lat=37.4970963&amp;lng=127.0775039&amp;menu=location&amp;mapMode=0&amp;flight=on&amp;street=off&amp;flng=127.0774994&amp;flat=37.4970932&amp;flightid=SfAlJWhxhVy5UhIBeGEUvw%3D%3D&amp;ftilt=-62.46&amp;ffov=76&amp;fpoi=on&amp;fpan=-148.12&amp;fsky=on&amp;enc=b64" class="map airplane NPI=a:flight" target="_blank">항공뷰</a><a href="#" class="btn first">관심단지등록</a><span class="bar">ㅣ</span><a href="#" class="btn">단지매물전체</a><a href="#" class="view_all" style="display: none"><span><strong></strong>매물보기</span></a></h2>
+
+					<ul class="tab_sale_detail">
+					<li class="w66 on"><a href="#">매물<span class="ico_opentab"></span></a></li>
+					<li class="w66"><a href="#">시세</a></li>
+					<li class="w76"><a href="#">단지정보</a></li>
+					<li class="w92"><a href="#"><span class="ico_newtab">New</span>동/평면도</a></li>
+					<li class="w76"><a href="#">커뮤니티</a></li>
+					<li class="w66"><a href="#">세금</a></li>
+					<li class="w76 end"><a href="#">지난매물</a></li>
+					</ul>
+
+					<div class="tab_article">
+						<div class="list_option">
+							<ul id="tabDepth4DealCateList" class="type">
+							<li>
+								<input type="radio" name="tradeTypeCd" id="sale4_type1" checked="checked" value="" class="input_radio">
+								<label for="sale4_type1">전체</label>
+							</li>
+							<li>
+								<input type="radio" name="tradeTypeCd" id="sale4_type2" value="A1" class="input_radio">
+								<label for="sale4_type2">매매</label>
+							</li>
+							<li>
+								<input type="radio" name="tradeTypeCd" id="sale4_type3" value="B1" class="input_radio">
+								<label for="sale4_type3">전세</label>
+							</li>
+							<li>
+								<input type="radio" name="tradeTypeCd" id="sale4_type4" value="B2" class="input_radio">
+								<label for="sale4_type4">월세</label>
+							</li>
+							<li>
+								<input type="radio" name="tradeTypeCd" id="sale4_type5" value="B3" class="input_radio">
+								<label for="sale4_type5">단기임대</label>
+							</li>
+							</ul>
+							<ul id="sale_type" class="type3">
+							<li>
+								<input type="checkbox" name="sale_type" id="hscp_type_A01" checked="checked" value="A01">
+								<label for="hscp_type_A01" class="on" style="cursor:default">아파트</label>
+							</li>
+							<li>
+								<input type="checkbox" name="sale_type" id="hscp_type_A03" checked="checked" value="A03">
+								<label for="hscp_type_A03" class="on" style="cursor:default">주상복합</label>
+							</li>
+							<li>
+								<input type="checkbox" name="sale_type" id="hscp_type_A04" checked="checked" value="A04">
+								<label for="hscp_type_A04" class="on" style="cursor:default">재건축</label>
+							</li>
+							</ul>
+						</div>
+						<!-- 매물 제한 오류 메세지 -->
+						<div class="list_limit">
+							<div class="limit_content">
+								<p><span class="limit_ico"></span>본 단지는 <strong>전매제한 단지</strong>로, 일반 분양권은 전매제한 종료 이후 거래가 가능합니다.<br>전매제한 분양권을 매매할 경우 주택법에 따라 처벌될 수 있으므로 전매제한 종료 이후 거래하시기 바랍니다.</p>
+								<a href="#" class="list_btn_confirm">거래 가능일 확인하기</a>
+							</div>
+						</div>
+						<!-- //매물 제한 오류 메세지 -->
+						<h3 class="ti">
+							<strong tabindex="0">확인매물</strong>
+							<span class="btn_layer">
+								<img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -20px -50px no-repeat;" alt="" width="14" height="14">
+								<span class="layer" id="premium_tooltip_4" style="display:none;">
+									<span class="arw"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -50px -20px no-repeat;" alt="" width="9" height="6"></span>
+									<span class="tit">확인매물</span>
+									<span class="tx">집주인(의뢰인) 의 실제 거래 의사<br>
+									여부를 확인한 후 등록됩니다. </span>
+									<span class="btn_close"><img src="http://static.land.naver.net/static/service/20120807/article/btn_layer_close3.gif" alt="닫기" width="10" height="9"></span>
+								</span>
+							</span>
+							<ul class="a_sort">
+							<li><a href="#" class="rk">랭킹순
+								<span class="layer">
+									<strong class="tit">랭킹순</strong>
+									<span class="tx"><em>매물 정보의 진정성을 점수화하여 높은 순으로 정렬</em>
+									매물 정보의 진정성은 네이버 부동산의 내부<br>정책에 따라 산정됩니다.</span>
+								</span>
+								</a><span class="bar">|</span>
+							</li>
+							<li><a href="#" class="on">확인매물일자순</a><span class="bar">|</span></li>
+							<li><a href="#" class="asc">면적순</a><span class="bar">|</span></li>
+							<li><a href="#">가격순</a></li>
+							</ul>
+						</h3>
+						<!-- width:680px -->
+						<table summary="확인 매물 리스트" class="sale_list NE=a:prm" cellspacing="0">
+						<caption class="blind">확인 매물</caption>
+						<colgroup>
+						<col style="width:43px">
+						<col style="width:50px">
+						<col style="width:55px">
+						<col style="width:155px">
+						<col style="width:75px">
+						<col style="width:55px">
+						<col style="width:50px">
+						<col style="width:79px">
+						<col style="width:">
+						</colgroup>
+						<thead>
+						<tr>
+						<th scope="col">거래</th>
+						<th scope="col">확인일자</th>
+						<th scope="col">&nbsp;<span class="blind">현장확인 사진</span></th>
+						<th scope="col">매물명</th>
+						<th scope="col">
+							<div id="prSpcFilter" class="jselectbox-applied  ">
+								<select class="jselectbox-source">
+								<option value="_">면적(㎡)</option>
+								<option value="1">52</option>
+								</select>
+								<div class="jselectbox-box" style="width:62px;">
+									<div class="jselectbox-label">면적(㎡)</div>
+								</div>
+								<div class="jselectbox-layer">
+									<div class="jselectbox-list"></div>
+								</div>
+							</div>
+						</th>
+						<th scope="col">
+							<div id="prBildFilter" class="jselectbox-applied  ">
+								<select class="jselectbox-source">
+								<option value="_">동</option>
+								<option value="1">101</option>
+								</select>
+								<div class="jselectbox-box" style="width:43px;">
+									<div class="jselectbox-label">동</div>
+								</div>
+								<div class="jselectbox-layer">
+									<div class="jselectbox-list"></div>
+								</div>
+								<div id="prBildFilterMax" class="hidden">101</div>
+							</div>
+						</th>
+						<th scope="col">층</th>
+						<th scope="col" class="align_r">매물가(만원)</th>
+						<th scope="col">연락처</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="evennum">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">월세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_thmb">
+								<div class="thmb">
+									<div class="thmb_area">
+										<a href="#"><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+										<p class="thmb_num _thumb_num"></p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="align_l name">
+							<div class="inner">
+								<span class="ico_mbr_chk">회원인증</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><img src="http://test.static.land.naver.net/static/service/article/blank.gif" style="background:url(http://test.static.land.naver.net/static/service/article/articlelist.gif) -140px -40px no-repeat;" width="7" height="8" class="ico" title="최초등록가 대비 하락"><strong title="10,000/140">10,000/140</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr class="evennum">
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건확장형 저렴한 전세 물건</span>
+								<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_thmb">
+								<div class="thmb">
+									<div class="thmb_area">
+										<a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+									</div>
+									<!-- [D] 1개 : width:66px, 2개 : 124px, 3개 : 182px, 4개 : 240px, 5개 : 298px -->
+									<!-- <div class="ly_thmb" style="width:298px">
+										<ul>
+										<li><a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										</ul>
+										<p class="ly_num">5<em>/</em><strong>10</strong></p>
+									</div> -->
+								</div>
+							</div>
+						</td>
+						<td class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건</span>
+								<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+							</div>
+						</td>
+						</tr>
+						<tr class="evennum">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_thmb">
+								<div class="thmb">
+									<div class="thmb_area">
+										<a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="45" height="45" alt=""><span class="mask"></span></a>
+									</div>
+									<!-- [D] 1개 : width:66px, 2개 : 124px, 3개 : 182px, 4개 : 240px, 5개 : 298px -->
+									<div class="ly_thmb" style="width:298px">
+										<ul>
+										<li><a href="#"><em class="ico_m">동영상</em><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										<li><a href="#"><img src="img/@thmb.gif" width="52" height="52" alt=""><span class="mask"></span></a></li>
+										</ul>
+										<p class="ly_num">5<em>/</em><strong>10</strong></p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr class="evennum">
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span>
+								<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td colspan="2" class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td colspan="6" class="desc bottomline">
+							<div class="inner">
+								<!-- [D] 말줄임 colspan="6" 일때 class="cs6" 추가 -->
+								<p class="txt cs6"><span class="ico_put">매물사진</span><span class="and">|</span><span class="info" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span></p>
+								<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+							</div>
+						</td>
+						</tr>
+
+						<!-- [D] 중복 중개업소 펼침시 class="chain_on" 추가 -->
+						<tr class="evennum chain_on">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td colspan="2" class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="아이파크분당3">아이파크분당3</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="3,000">3,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침시 class="chain_on" 추가 -->
+						<tr class="evennum chain_on">
+						<td colspan="6" class="desc bottomline">
+							<div class="inner">
+								<!-- [D] 말줄임 colspan="6" 일때 class="cs6" 추가 -->
+								<span class="txt cs6" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span>
+								<!-- [D] 중복 중개업소 펼친 class="ic on" 추가 / <span class="ic aw"></span> 추가 -->
+								<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic on"><span class="blind">펼침</span></a><span class="ic aw"></span></span>
+							</div>
+						</td>
+						</tr>
+
+						<!-- [D] 중복 중개업소 펼침 class="chain" 추가 / 첫번째 class="first" 추가 -->
+						<tr class="chain first">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td colspan="2" class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="아이파크분당3">아이파크분당3</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="3,000">3,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr class="chain">
+						<td colspan="6" class="desc bottomline">
+							<div class="inner">
+								<!-- [D] 말줄임 colspan="6" 일때 class="cs6" 추가 -->
+								<span class="txt cs6" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span>
+								<span class="txt_a"><a href="#" class="tx">부동산 서브</a></span>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침 class="chain" 추가 -->
+						<tr class="chain">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td colspan="2" class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="아이파크분당3">아이파크분당3</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="3,000">3,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침 class="chain" 추가 -->
+						<tr class="chain">
+						<td colspan="6" class="desc bottomline">
+							<div class="inner">
+								<!-- [D] 말줄임 colspan="6" 일때 class="cs6" 추가 -->
+								<span class="txt cs6" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span>
+								<span class="txt_a"><a href="#" class="tx">부동산114</a></span>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침 class="chain" 추가 / 마지막 줄 class="last" 추가 -->
+						<tr class="chain last">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="bottomline">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td colspan="2" class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="아이파크분당3">아이파크분당3</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="3,000">3,000</strong></div></td>
+						<td  rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침 class="chain" 추가 / 마지막 줄 class="last" 추가 -->
+						<tr class="chain last">
+						<td colspan="6" class="desc bottomline">
+							<div class="inner">
+								<!-- [D] 말줄임 colspan="6" 일때 class="cs6" 추가 -->
+								<span class="txt cs6" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span>
+								<span class="txt_a"><a href="#" class="tx">부동산119</a></span>
+							</div>
+						</td>
+						</tr>
+
+						<tr>
+						<td rowspan="2" class="sale_type"><div class="inner">전세</div></td>
+						<td rowspan="2" class="">
+							<div class="inner inner_mark">
+								<span class="mark4" title="확인한지 2개월 이내인 매물"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -100px -130px no-repeat;" width="48" height="15">12.08.08</span>
+							</div>
+						</td>
+						<td colspan="2" class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onclick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&amp;atclRletTypeCd=A01&amp;rletTypeCd=A01&amp;tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td rowspan="2" class="contact">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td colspan="6" class="desc">
+							<div class="inner">
+								<!-- [D] 말줄임 colspan="6" 일때 class="cs6" 추가 -->
+								<span class="txt cs6" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건유DBDBDB 물건유DBDBDB물건유DBDBDB</span>
+								<span class="txt_a"><a href="#" class="tx">부동산뱅크 외</a><a href="#" class="ic"><span class="blind">펼침</span></a></span>
+							</div>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- 더보기 리스트 영역 -->
+
+
+						<h3 class="ti">
+							<strong tabindex="0">공인중개사협회매물</strong>
+							<span class="btn_layer" style="">
+								<img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -20px -50px no-repeat;" alt="" width="14" height="14">
+								<span class="layer" id="premium_tooltip_4" style="display: ; left:-136px; width:186px">
+									<span class="arw" style="left:137px"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -50px -20px no-repeat;" alt="" width="9" height="6"></span>
+									<span class="tit">공인중개사협회 매물</span>
+									<span class="tx">공인중개사협회에 가입한 중개업소간<br>상호 공유 매물입니다.</span>
+									<span class="btn_close"><img src="http://static.land.naver.net/static/service/20120807/article/btn_layer_close3.gif" alt="닫기" width="10" height="9"></span>
+								</span>
+							</span>
+							<ul class="a_sort">
+							<li><a href="#" class="on">등록일순</a><span class="bar">|</span></li>
+							<li><a href="#">면적순</a><span class="bar">|</span></li>
+							<li><a href="#">가격순</a></li>
+							</ul>
+						</h3>
+						<!-- width:680px -->
+						<table summary="확인 매물 리스트" class="sale_list NE=a:prm" cellspacing="0">
+						<caption class="blind">확인 매물</caption>
+						<colgroup>
+						<col style="width:43px">
+						<col style="width:50px">
+						<col style="width:210px">
+						<col style="width:75px">
+						<col style="width:55px">
+						<col style="width:50px">
+						<col style="width:79px">
+						<col style="width:">
+						</colgroup>
+						<thead>
+						<tr>
+						<th scope="col">거래</th>
+						<th scope="col">등록일</th>
+						<th scope="col">매물명</th>
+						<th scope="col">
+							<div id="prSpcFilter" class="jselectbox-applied  ">
+								<select class="jselectbox-source">
+								<option value="_">면적(㎡)</option>
+								<option value="1">52</option>
+								</select>
+								<div class="jselectbox-box" style="width:62px;">
+									<div class="jselectbox-label">면적(㎡)</div>
+								</div>
+								<div class="jselectbox-layer">
+									<div class="jselectbox-list"></div>
+								</div>
+							</div>
+						</th>
+						<th scope="col">
+							<div id="prBildFilter" class="jselectbox-applied  ">
+								<select class="jselectbox-source">
+								<option value="_">동</option>
+								<option value="1">101</option>
+								</select>
+								<div class="jselectbox-box" style="width:43px;">
+									<div class="jselectbox-label">동</div>
+								</div>
+								<div class="jselectbox-layer">
+									<div class="jselectbox-list"></div>
+								</div>
+								<div id="prBildFilterMax" class="hidden">101</div>
+							</div>
+						</th>
+						<th scope="col">층</th>
+						<th scope="col" class="align_r">매물가(만원)</th>
+						<th scope="col">연락처</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr rowspan="2" class="evennum">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">월세</div></td>
+						<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="10,000/98">10,000/98</strong></div></td>
+						<td rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr class="evennum">
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt_a">한국공인중개사협회</span>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt_a">새대한공인중개사협회</span>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침시 class="chain_on" 추가 -->
+						<tr class="chain_on evennum">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침시 class="chain_on" 추가 -->
+						<tr class="chain_on evennum">
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건확장형 저렴한 전세 물건</span>
+								<!-- [D] 새대한공인... 5자, 한국공인중개... 6자로 말줄임. 개발에서 적용 -->
+								<span class="txt_a"><a href="#" class="tx">새대한공인...외</a><a href="#" class="ic on"><span class="blind">펼침</span></a><span class="ic aw"></span></span>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 중복 중개업소 펼침 class="chain" 추가 / 첫번째 class="first" 추가 -->
+						<tr class="chain first">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr class="chain">
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건확장형 저렴한 전세 물건</span>
+								<span class="txt_a">새대한공인중개사협회</span>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 마지막 class="last" 추가 -->
+						<tr class="chain last">
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<!-- [D] 마지막 class="last" 추가 -->
+						<tr class="chain last">
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건확장형 저렴한 전세 물건</span>
+								<span class="txt_a">새대한공인중개사협회</span>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td rowspan="2" class="sale_type bottomline"><div class="inner">전세</div></td>
+						<td rowspan="2" class="sale_type3 bottomline">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="파크리오(잠실시영)">파크리오(잠실시영)</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="43,000">43,000</strong></div></td>
+						<td rowspan="2" class="contact bottomline">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<td colspan="5" class="desc bottomline">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건확장형 저렴한 전세 물건</span>
+								<span class="txt_a">한국공인중개사협회</span>
+							</div>
+						</td>
+						</tr>
+						<tr class="evennum">
+						<td rowspan="2"  class="sale_type"><div class="inner">전세</div></td>
+						<td rowspan="2"  class="sale_type3">12.08.08</td>
+						<td class="align_l name">
+							<div class="inner">
+								<span class="ico_site">현장확인</span>
+								<a href="#" class="NPI=a:list,r:1,i:1202592858" onClick="nhn.article.common.moveArticleDetail('1202592858','A01','A01');return false;" title="아이파크분당3">아이파크분당3</a>
+								<a href="/article/articleDetailInfo.nhn?atclNo=1202592858&atclRletTypeCd=A01&rletTypeCd=A01&tradeTypeCd=" class="NPI=a:listnew,r:1,i:1202592858" target="_blank"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -110px -90px no-repeat;" width="11" height="11" alt="새창열기"></a>
+							</div>
+						</td>
+						<td class="num">
+							<div class="inner">
+								109C/84.9
+								<div class="rate_layer" style="display:none;">
+									<div class="layer">
+										<p class="calc_area">공급면적 109.62㎡<br>전용면적 84.9㎡</p>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="num2" title="227"><div class="inner">227</div></td>
+						<td class="num2"><div class="inner"><span>16/30</span></div></td>
+						<td class="num align_r"><div class="inner"><strong title="3,000">3,000</strong></div></td>
+						<td rowspan="2" class="contact">
+							<div class="inner">
+								<a href="#">
+									<span title="한양공인중개사사무소">한양공인중개사..</span>
+									<span class="tel">02-430-0123</span>
+								</a>
+							</div>
+						</td>
+						</tr>
+						<tr class="evennum">
+						<td colspan="5" class="desc">
+							<div class="inner">
+								<span class="txt" title="확장형 저렴한 전세 물건">확장형 저렴한 전세 물건확장형 저렴한 전세 물건</span>
+								<span class="txt_a">한국공인중개사협회</span>
+							</div>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+						<!-- 더보기 리스트 영역 -->
+
+						<h3 class="ti">
+							<strong tabindex="0">확인매물</strong>
+							<span class="btn_layer">
+								<img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -20px -50px no-repeat;" alt="" width="14" height="14">
+								<div class="layer" id="premium_tooltip_4" style="display: none; width:186px">
+									<div class="arw"><img src="http://static.land.naver.net/static/service/20120807/article/blank.gif" style="background:url(img/articlelist.gif) -50px -20px no-repeat;" alt="" width="9" height="6"></div>
+									<h4>한국공인중개사협회 매물</h4>
+									<p>한국공인중개사협회에 가입한 중개업소간<br>상호 공유 매물입니다.</p>
+									<div class="btn_close"><img src="http://static.land.naver.net/static/service/20120807/article/btn_layer_close3.gif" alt="닫기" width="10" height="9"></div>
+								</div>
+							</span>
+							<ul class="a_sort">
+							<li><a href="#" class="on">등록일순</a><span class="bar">|</span></li>
+							<li><a href="#">면적순</a><span class="bar">|</span></li>
+							<li><a href="#">가격순</a></li>
+							</ul>
+						</h3>
+						<table cellspacing="0" summary="일반 매물 리스트" class="sale_list">
+						<colgroup>
+						<col style="width:43px">
+						<col style="width:50px">
+						<col style="width:55px">
+						<col style="width:155px">
+						<col style="width:75px">
+						<col style="width:55px">
+						<col style="width:50px">
+						<col style="width:79px">
+						<col style="width:">
+						</colgroup>
+						<thead>
+						<tr>
+						<th scope="col">거래</th>
+						<th scope="col">확인일자</th>
+						<th scope="col">&nbsp;<span class="blind">현장확인 사진</span></th>
+						<th scope="col">매물명</th>
+						<th scope="col">
+							<div id="prSpcFilter" class="jselectbox-applied  ">
+								<select class="jselectbox-source">
+								<option value="_">면적(㎡)</option>
+								<option value="1">52</option>
+								</select>
+								<div class="jselectbox-box" style="width:62px;">
+									<div class="jselectbox-label">면적(㎡)</div>
+								</div>
+								<div class="jselectbox-layer">
+									<div class="jselectbox-list"></div>
+								</div>
+							</div>
+						</th>
+						<th scope="col">
+							<div id="prBildFilter" class="jselectbox-applied  ">
+								<select class="jselectbox-source">
+								<option value="_">동</option>
+								<option value="1">101</option>
+								</select>
+								<div class="jselectbox-box" style="width:43px;">
+									<div class="jselectbox-label">동</div>
+								</div>
+								<div class="jselectbox-layer">
+									<div class="jselectbox-list"></div>
+								</div>
+								<div id="prBildFilterMax" class="hidden">101</div>
+							</div>
+						</th>
+						<th scope="col">층</th>
+						<th scope="col" class="align_r">매물가(만원)</th>
+						<th scope="col">연락처</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<!-- [D] 예외처리2 : 일반매물(포커스,일반) 없을 시 -->
+						<td colspan="9" class="exception_none"> 등록된 매물이 없습니다. </td>
+						</tr>
+						<!-- [D] (RSUN)프로모션 매물이 존재하면 프로모션을 보여준다. -->
+						</tbody>
+						</table>
+						<div class="group_bottom">
+							<div class="paginate" style="margin-top:-16px"> <strong>1</strong> </div>
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="section_surroundings">
+	<dl id="_surroundings" class="surroundings">
+	<dt><img src="http://test.static.land.naver.net/static/service/article/blank.gif" width="19px" height="19px" alt="" style="background:url(http://test.static.land.naver.net/static/service/article/articlelist_20120109.gif) -420px -100px no-repeat;">지하철 정보</dt>
+	<dd>2호선 성내역 도보 1분, 8호선 몽촌토성역 도보 4분, 8호선 잠실역 도보 6분, 2호선 성내역 151m, 8호선 잠실역 650m&nbsp;</dd>
+	<dt><img src="http://test.static.land.naver.net/static/service/article/blank.gif" width="19px" height="19px" alt="" style="background:url(http://test.static.land.naver.net/static/service/article/articlelist_20120109.gif) -160px -160px no-repeat;">버스 정보</dt>
+	<dd class="bus">
+		<ul>
+		<li><em class="bus1">일반버스</em><a href="#">9401</a>, <a href="#">9403</a>, <a href="#">9409</a>, <a href="#">M4102</a></li>
+		<li><em class="bus2">좌석버스</em><a href="#">116</a>, <a href="#">2</a>, <a href="#">222</a>, <a href="#">303</a>, <a href="#">310</a>, <a href="#">33</a>, <a href="#">370</a>, <a href="#">380</a>, <a href="#">55-1</a>, <a href="#">720-2</a></li>
+		<li><em class="bus3">마을버스</em><a href="#">9401</a>, <a href="#">9403</a>, <a href="#">9409</a>, <a href="#">M4102</a></li>
+		<li><em class="bus4">직행좌석</em><a href="#">1151</a>, <a href="#">8131</a></li>
+		<li><em class="bus5">공항버스</em><a href="#">1001</a>, <a href="#">1005-1</a>, <a href="#">1150</a>, <a href="#">1500</a>, <a href="#">1500-2</a>, <a href="#">3330</a>, <a href="#">3500</a>, <a href="#">4000</a>, <a href="#">7200</a>, <a href="#">9000</a>, <a href="#">9001</a>, <a href="#">9407</a></li>
+		<li><em class="bus6">간선급행</em><a href="#">116</a>, <a href="#">2</a>, <a href="#">222</a>, <a href="#">303</a>, <a href="#">310</a>, <a href="#">33</a>, <a href="#">370</a>, <a href="#">380</a>, <a href="#">55-1</a>, <a href="#">720-2</a></li>
+		<li><em class="bus10">외곽버스</em><a href="#">3</a>, <a href="#">3-1</a>, <a href="#">3-2</a></li>
+		<li><em class="bus11">간선버스</em><a href="#">3</a>, <a href="#">3-1</a>, <a href="#">3-2</a></li>
+		<li><em class="bus12">지선번스</em><a href="#">3</a>, <a href="#">3-1</a></li>
+		<li><em class="bus13">순환버스</em><a href="#">9401</a>, <a href="#">9403</a>, <a href="#">9409</a>, <a href="#">M4102</a></li>
+		<li><em class="bus14">광역버스</em><a href="#">1151</a>, <a href="#">8131</a></li>
+		<li><em class="bus15">급행버스</em><a href="#">1001</a>, <a href="#">1005-1</a>, <a href="#">1150</a>, <a href="#">1500</a>, <a href="#">1500-2</a>, <a href="#">3330</a>, <a href="#">3500</a>, <a href="#">4000</a>, <a href="#">7200</a>, <a href="#">9000</a>, <a href="#">9001</a>, <a href="#">9407</a></li>
+		<!-- [D] 농어촌버스 li에 class="pad"추가 -->
+		<li class="pad"><em class="bus20">농어촌버스</em><a href="#">3</a>, <a href="#">3-1</a>, <a href="#">3-2</a></li>
+		<li><em class="bus21">시외버스</em><a href="#">3</a>, <a href="#">3-1</a>, <a href="#">3-2</a></li>
+		<li><em class="bus26">급행간선</em><a href="#">3</a>, <a href="#">3-1</a></li>
+		</ul>
+	</dd>
+
+	</dl>
+
+</div>
+			</div>
+		</div>
+		<div id="hdn_maxValue" class="hidden"></div>
+
+
+
+		<!-- Aside Component List -->
+		<div id="depthAside" class="aside" style="display:block">
+
+
+			<!-- 중개업소 프로필 노출 영역 -->
+			<div class="bx_com">
+				<div class="mem_area">
+					<div class="thmb"><img src="img/@tmp_member2.gif" width="250" height="117" alt=""></div>
+					<h5 class="t_mem"><a href="#">로얄공인중개사사무소</a></h5>
+					<ul class="lst_mem">
+					<li><em>대표</em>  이현흥<span class="and">|</span><span class="lang">영어</span><span class="lang">중국어</span><span class="lang last">일본어 가능</span></li>
+					<li><em>전화</em>  02-575-0066 / 017-350-6050</li>
+					<li><a href="#">현장확인: <strong>40</strong></a><span class="and">|</span><a href="#">매물: <strong>10</strong></a><span class="and">|</span><a href="#">맞춤매물: <strong>3</strong></a></li>
+					</ul>
+					<div class="btn_group">
+						<a href="#" class="btn_v2"><span class="blind">위치보기</span></a>
+					</div>
+					<div class="premium_btn_page2">
+						<span class="pagenum"><strong>1</strong>/2</span>
+						<!-- [D] 활성화시 class="_on" 추가 -->
+						<a href="#" title="이전" class="btn_prev_on"><span>이전</span></a><a href="#" title="재생" class="btn_start_on" style="display: none"><span>재생</span></a><a href="#" title="멈춤" class="btn_stop_on"><span>멈춤</span></a><a href="#" title="다음" class="btn_next_on"><span>다음</span></a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="bx_com ts">
+				<h4 class="t_end t_traffic"><span>교통정보</span></h4>
+				<div class="traffic_dsc">
+					<h5><span class="ic_hot">HOT</span> <strong>분당선 도곡역 도보 7분</strong></h5>
+					<ul class="normal">
+					<li class="info info_v2"><span class="dot"></span>경기도 성남시 분당구 정자동 11
+						<!-- [D] layer open class btn_adr_on add -->
+						<a href="#" class="btn_m btn_adr btn_adr_on">
+							<span class="blind">도로명</span>
+							<span class="ly_tx">
+								<em>경기도 성남시 분당구 불정로 6길 (정자동 그린팩토리)</em>
+							</span>
+						</a>
+					</li>
+					<li class="info"><span class="dot"></span>입주일자: 2003.05</li>
+					<li class="info"><span class="dot"></span>건설사: 현대산업개발(주)</li>
+					<li class="info"><span class="dot"></span>총 307세대 / 총 2개동/ 총 34층</li>
+					<li class="info"><span class="dot"></span>면적 : 104㎡ .191A㎡. 19BA㎡. 195㎡. 201㎡</li>
+					</ul>
+				</div>
+				<div class="traffic_srch">
+					<h5>빠른길 찾기</h5>
+					<p class="input">
+						<input type="text" id="path_input" class="_inputArea" value="출발지" title="출발지 입력">
+						<span>→</span>
+						<strong title="타워팰리스3차">타워팰리스3차</strong>
+						<a class="srch" href="#">찾기</a>
+					</p>
+					<!-- [D]빠른길 찾기 레이어 활성화시 style="display: block -->
+					<div class="ly_traffic_srch" style="display: ">
+						<div class="ts_top">
+							<h5>출발지검색</h5><input type="text" id="ly_path_input" value="출발지" title="출발지 입력"><a href="#"><span>검색</span></a>
+						</div>
+						<div class="ts_con scroll">
+							<div class="ts_con_top">출발지 검색 결과<strong>0건</strong></div>
+							<ul class="ts_lst">
+							<li><span><input type="checkbox" id="ts1"></span><label for="ts1"><em>광교상록</em> (경기도 수원시 영통구 이의동 하동 116-2)</label></li>
+							<li><span><input type="checkbox" id="ts2"></span><label for="ts2"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts3"></span><label for="ts3"><em>KT</em> (경기도 성남시 분당구 정자동 206)</label></li>
+							<li><span><input type="checkbox" id="ts4"></span><label for="ts4"><em>토다이 분당점 </em> (경기도 성남시 분당구 정자동 174-1 더샵스타파크 지하1층)</label></li>
+							<li><span><input type="checkbox" id="ts5"></span><label for="ts5"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts6"></span><label for="ts6"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts7"></span><label for="ts7"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							</ul>
+							<!-- [D]내용없을 시 style="block" -->
+							<span class="nodata" style="display: ">원하시는 출발지를 검색하세요.</span>
+						</div>
+						<a href="#" class="btn_close"><span class="blind">레이어닫기</span></a>
+					</div>
+				</div>
+				<div class="traffic">
+					<h5>주변 대중교통 <span class="means">(지하철, 버스)</span></h5>
+
+					<div class="subway_area">
+						<p class="subway">
+							<span class="s3"></span><a href="#" title="수도권3호선" class="_subway">3호선(구파발)</a>
+						</p>
+						<p class="subway">
+							<span class="s100"></span><a href="#" title="분당선" class="_subway">분당선(정자)</a>
+						</p>
+						<p class="subway">
+							<span class="s109"></span><a href="#" title="신분당선" class="_subway" id="733">신분당선(정자)</a>
+						</p>
+					</div>
+
+					<ul>
+					<li>
+						<em title="마을버스" class="bus3">마을버스</em>
+						<a href="#">강남05</a> , <a href="#">강남09</a> , <a href="#">강남02</a>
+					</li>
+					<li>
+						<em title="일반" class="bus1">일반</em>
+						<a href="#">917</a> , <a href="#">11-3</a>
+					</li>
+					<li>
+						<em title="공항버스" class="bus5">공항버스</em>
+						<a href="#">6009</a>
+					</li>
+					<li>
+						<em title="직행좌석" class="bus4">직행좌석</em>
+						<a href="#">9414</a>
+					</li>
+					<li>
+						<em title="간선" class="bus11">간선</em>
+						<a href="#">141</a> , <a href="#">402</a>  , <a href="#">406</a> , <a href="#">N37</a> , <a href="#">472</a>
+					</li>
+					<li>
+						<em title="지선" class="bus12">지선</em>
+						<a href="#">2413</a> , <a href="#">6411</a> , <a href="#">3012</a> , <a href="#">4319</a> , <a href="#">4432</a> , <a href="#">4434</a> , <a href="#">2415</a> , <a href="#">3219</a> ,<a href="#">4433</a>
+					</li>
+					</ul>
+
+					<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+				</div>
+				<div class="photo">
+					<h4>갤러리</h4>
+					<ul class="plist">
+					<li class="first"><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					<li><img src="img/img_no_end_aside.gif" width="61" height="42" alt="이미지 없음"></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 스페셜 제휴 컨텐츠 -->
+			<div class="bx_com_thumb">
+				<h4 class="t_end"><span class="cont_sort">AD</span><span>스페셜 제휴 컨텐츠</span></h4>
+				<div class="cont_wrap">
+					<h5><a href="#">서울시 서초구 서초동 실거래가는?</a></h5>
+					<div class="thumb_img"><a href="#"><img src="img/@thmb_interior.jpg" alt=""><span class="mask"></span></a></div>
+					<p class="txt_area">서초구 신동안 1차 아파트전용면적 78.86가 매매로 요즘 가장 핫한지역이다. 서초구 신동안 1차 아파트전용면적 78.86가 .. </p>
+					<div class="txt_source">제공<span class="bar">|</span>매경부동산</div>
+				</div>
+			</div>
+
+			<!-- 시장보고서 -->
+			<div class="bx_market_report">
+				<h4 class="t_end"><span>시장보고서</span></h4>
+				<div class="market_area">
+					<div class="market_box">
+						<div class="market_logo">
+							<!-- [D] 로고 아이콘 클래스 - v1:부동산써브, v2:닥터아파트, v3:매경부동산, v4:부동산114, v5:텐컴즈, v6:한경부동산, v7:부동산뱅크, v8:중앙일보 조인스랜드 -->
+							<a href="#"><span class="logo_name v3">매경부동산</span></a>
+						</div>
+						<a href="#">
+							<strong>사업시행인가 신청中 강남 개포주공1단지아파트</strong>
+							<p>서초구 서초힐스아파트 전용면적 59.91㎡ (약 18.1평)가...</p>
+						</a>
+					</div>
+					<div class="market_thmb">
+						<a href="#"><img src="http://dev.ui.naver.com/tmp/?80x80_default_y_FFB4B4_50" width="80" height="80" alt="임시 이미지"></a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 제휴사 매물 더보기 -->
+			<div class="bx_com">
+				<h4 class="t_end"><span>제휴사 매물 더보기</span></h4>
+				<div class="chain_area">
+					<ul>
+					<li class="odd"><a href="#"><img src="img/img_chain.gif" width="100" height="50" border="0" alt="부동산 즐겨찾기 닥터아파트"></a></li>
+					<li><a href="#"><img src="img/img_chain2.gif" width="100" height="50" border="0" alt="중앙일보 조인스랜드 부동산"></a></li>
+					<li class="odd"><a href="#"><img src="img/img_chain3.gif" width="100" height="50" border="0" alt="MK 부동산"></a></li>
+					<li><a href="#"><img src="img/img_chain4.gif" width="100" height="50" border="0" alt="부동산 써브"></a></li>
+					</ul>
+					<div class="premium_btn_page2">
+						<span class="pagenum"><strong>1</strong>/2</span>
+						<!-- [D] 활성화시 class="_on" 추가 -->
+						<a href="#" title="이전" class="btn_prev_on"><span>이전</span></a><a href="#" title="재생" class="btn_start_on" style="display: none"><span>재생</span></a><a href="#" title="멈춤" class="btn_stop_on" ><span>멈춤</span></a><a href="#" title="다음" class="btn_next_on"><span>다음</span></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 면적별 매매시세 -->
+			<div class="bx_com">
+				<h4 class="t_end t_loan"><span>담보대출정보</span></h4>
+				<div class="loan_tbl">
+					<table cellspacing="0" border="1" summary="대출정보">
+					<caption>대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="90"><col width="90">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" class="frst">면적 <em>(㎡)</em></th>
+					<th scope="col">상한가 <em>(만원)</em></th>
+					<th scope="col" class="last">하한가 <em>(만원)</em></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td>183</td>
+					<td>135,000</td>
+					<td><strong>125,000</strong></td>
+					</tr>
+					<tr>
+					<td>191A</td>
+					<td>145,000</td>
+					<td><strong>135,000</strong></td>
+					</tr>
+					<tr class="last">
+					<td>191A</td>
+					<td>145,000</td>
+					<td><strong>135,000</strong></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">한국감정원제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 에너지 사용량 정보 -->
+			<div class="bx_com">
+				<h4 class="t_end t_loan"><span>에너지 사용량 정보</span><a href="#" class="ic_q">에너지 사용량 정보란?</a></h4>
+				<div class="loan_tbl eng_tbl">
+					<table cellspacing="0" border="1" summary="대출정보">
+					<caption>대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="90"><col width="90">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" class="frst">면적 <em>(㎡)</em></th>
+					<th scope="col">전기에너지</th>
+					<th scope="col" class="last">열에너지</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td>183</td>
+					<td><span class="ic_e c1">A</span></td>
+					<td><span class="ic_e c2">B</span></td>
+					</tr>
+					<tr>
+					<td>191A</td>
+					<td><span class="ic_e c3">C</span></td>
+					<td><span class="ic_e c4">D</span></td>
+					</tr>
+					<tr class="last">
+					<td>201A</td>
+					<td><span class="ic_e c5">E</span></td>
+					<td><span class="ic_e c5">E</span></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">국토교통부 제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<!-- 부동산 주요뉴스 -->
+			<div class="bx_com">
+				<h4 class="t_end"><span>부동산 주요뉴스</span></h4>
+				<div class="lst_news_tab">
+					<!-- [D] 활성화시 class="on" 추가 -->
+					<a href="#" class="tab_btn first on">Today</a><a href="#" class="tab_btn last">주간뉴스</a>
+					<ul class="lst_news first">
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">살아나고 있는 부동산시장에 웬 '된서리'</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					</ul>
+					<ul class="lst_news last" style="display: none">
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">살아나고 있는 부동산시장에 웬 '된서리'</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기<span class="ico"></span></a>
+			</div>
+			<div class="bx_com">
+				<h4 class="t_end"><span>정자동 많이 본 단지</span></h4>
+				<ul class="lst_view_div">
+				<!-- [D]말줄임 처리-->
+				<li class="on"><em class="ic_num num1">1</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num2">2</em> <a href="#">느티마을경남선경</a> <span class="state up"><em></em>1</span></li>
+				<li><em class="ic_num num3">3</em> <a href="#">느티마을경남선경</a> <span class="state dn"><em></em>2</span></li>
+				<li><em class="ic_num num4">4</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num5">5</em> <a href="#">느티마을경남선경</a> <span class="new"><em></em><span class="blind">new</span></span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //Aside Component List -->
+	</div>
+	<!-- //하위 컨텐츠 및 Aside Component 영역 List Container -->
+
+	<!-- 퀵메뉴 -->
+	<?include "../../trunk/home/side_scroll_layer_incl.html";?>
+	<!-- //퀵메뉴 -->
+
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+<div id="pvframe" style="display:none"></div>
+</body>
+</html>

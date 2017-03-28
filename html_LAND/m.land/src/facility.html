@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>facility</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_list_page">
+		<!--facility-->
+		<div class="facility">
+			<div class="h_top fc_tit">
+				<h2>주변편의시설</h2>
+				<p class="fc_txt">매물 주변 <span>500m</span>이내 편의시설정보를 제공합니다.</p>
+				<button type="button" class="btn_clse"><span>닫기</span></button>
+            </div>
+
+            <div class="map_area">
+				<div class="obj_fc bus_stop" style="left:100px;top:150px;"><span class="blind">버스정류장</span></div>
+				<div class="obj_fc p" style="left:150px;top:150px;"><span class="blind">주차장</span></div>
+				<div class="obj_fc medi" style="left:100px;top:100px;"><span class="blind">병원,약국</span></div>
+				<div class="obj_fc mart" style="left:80px;top:190px;"><span class="blind">마트</span></div>
+				<div class="obj_fc bank" style="left:210px;top:70px;"><span class="blind">은행</span></div>
+				<div class="obj_fc cnvnt" style="left:180px;top:150px;"><span class="blind">생활편의</span></div>
+			</div>
+
+			<div class="fc_cont_wrap">
+				<div class="fc_cont_lst">
+				<ul>
+					<li><a href="#" class="fc_item bus_stop on">버스정류장</a></li>
+					<li><a href="#" class="fc_item p">주차장</a></li>
+					<li><a href="#" class="fc_item medi">병원,약국</a></li>
+					<li><a href="#" class="fc_item mart on">마트</a></li>
+					<li><a href="#" class="fc_item bank">은행</a></li>
+					<li><a href="#" class="fc_item cnvnt">생활편의</a></li>
+				</ul>
+				</div>
+			</div>
+			<div class="ly_fc_selc" style="left:109px;top:53px;z-index:30;">
+				<a href="#" class="fc_tit">
+					<span class="ctgry p">주차장</span><span class="txt">영광 민영주차장</span>
+				</a>
+			</div>
+		</div>
+		<!--//facility-->
+	</div>
+</div>
+</body>
+</html>

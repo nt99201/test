@@ -1,0 +1,723 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+	</div>
+	<!-- //header -->
+	<div class="search">
+		<!-- 지도 상단 카테고리 -->
+		<div class="map_top">
+			<ul class="cate">
+			<div id="top_rlet_tp">
+				<li class="m1"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#" class="">오피스텔</a></li>
+				<li class="m3"><a href="#" class="">분양권</a></li>
+				<li class="m4"><a href="#" class="">빌라</a></li>
+				<li class="m5"><a href="#" class="">주택</a></li>
+				<li class="m6"><a href="#" class="">토지</a></li>
+				<li class="m7"><a href="#" class="">원룸</a></li>
+				<li class="m8"><a href="#" class="">상가</a></li>
+				<li class="m9"><a href="#" class="">사무실</a></li>
+				<li class="m10"><a href="#" class="">공장</a></li>
+				<li class="m11"><a href="#" class="">재개발</a></li>
+				<li class="m12"><a href="#" class="">건물</a></li>
+			</div>
+			<div id="top_trad_tp">
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#" class="">매매</a></li>
+				<li class="m15"><a href="#" class="">전세</a></li>
+				<li class="m16"><a href="#" class="">월세</a></li>
+			</div>
+			</ul>
+		</div>
+		<!-- //지도 상단 카테고리 -->
+	</div>
+	<div id="map" style="padding-bottom:0px;">
+		<!-- 위치 선택 -->
+		<div id="locationArea" class="location">
+			<div class="loc_view">
+				<div id="loc_view1" class="sel selectbox-noscript">
+					<select class="selectbox-source">
+						<option value="1100000000" selected="selected">서울시</option>
+						<option value="4100000000">경기도</option>
+						<option value="2800000000">인천시</option>
+						<option value="2600000000">부산시</option>
+						<option value="3000000000">대전시</option>
+						<option value="2700000000">대구시</option>
+						<option value="3100000000">울산시</option>
+						<option value="2900000000">광주시</option>
+						<option value="4200000000">강원도</option>
+						<option value="4300000000">충청북도</option>
+						<option value="4400000000">충청남도</option>
+						<option value="4700000000">경상북도</option>
+						<option value="4800000000">경상남도</option>
+						<option value="4500000000">전라북도</option>
+						<option value="4600000000">전라남도</option>
+						<option value="5000000000">제주도</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">서울시</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel selectbox-noscript">
+					<select class="selectbox-source">
+						<option value="1168000000">강남구</option>
+						<option value="1174000000">강동구</option>
+						<option value="1130500000">강북구</option>
+						<option value="1150000000">강서구</option>
+						<option value="1162000000">관악구</option>
+						<option value="1121500000">광진구</option>
+						<option value="1153000000">구로구</option>
+						<option value="1154500000">금천구</option>
+						<option value="1135000000">노원구</option>
+						<option value="1132000000">도봉구</option>
+						<option value="1123000000">동대문구</option>
+						<option value="1159000000">동작구</option>
+						<option value="1144000000">마포구</option>
+						<option value="1141000000">서대문구</option>
+						<option value="1165000000">서초구</option>
+						<option value="1120000000">성동구</option>
+						<option value="1129000000" selected="selected">성북구</option>
+						<option value="1171000000">송파구</option>
+						<option value="1147000000">양천구</option>
+						<option value="1156000000">영등포구</option>
+						<option value="1117000000">용산구</option>
+						<option value="1138000000">은평구</option>
+						<option value="1111000000">종로구</option>
+						<option value="1114000000">중구</option>
+						<option value="1126000000">중랑구</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">성북구</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel selectbox-noscript">
+					<select class="selectbox-source">
+						<option value="1129013400">길음동</option>
+						<option value="1129010300">돈암동</option>
+						<option value="1129011600">동선동1가</option>
+						<option value="1129011700">동선동2가</option>
+						<option value="1129011800">동선동3가</option>
+						<option value="1129011900">동선동4가</option>
+						<option value="1129012000">동선동5가</option>
+						<option value="1129010400">동소문동1가</option>
+						<option value="1129010500">동소문동2가</option>
+						<option value="1129010600">동소문동3가</option>
+						<option value="1129010700">동소문동4가</option>
+						<option value="1129010800">동소문동5가</option>
+						<option value="1129010900">동소문동6가</option>
+						<option value="1129011000">동소문동7가</option>
+						<option value="1129013000">보문동1가</option>
+						<option value="1129013100">보문동2가</option>
+						<option value="1129013200">보문동3가</option>
+						<option value="1129012600">보문동4가</option>
+						<option value="1129012700">보문동5가</option>
+						<option value="1129012800">보문동6가</option>
+						<option value="1129012900">보문동7가</option>
+						<option value="1129011100">삼선동1가</option>
+						<option value="1129011200">삼선동2가</option>
+						<option value="1129011300">삼선동3가</option>
+						<option value="1129011400">삼선동4가</option>
+						<option value="1129011500">삼선동5가</option>
+						<option value="1129013700">상월곡동</option>
+						<option value="1129013900">석관동</option>
+						<option value="1129010100">성북동</option>
+						<option value="1129010200">성북동1가</option>
+						<option value="1129012100">안암동1가</option>
+						<option value="1129012200">안암동2가</option>
+						<option value="1129012300">안암동3가</option>
+						<option value="1129012400">안암동4가</option>
+						<option value="1129012500">안암동5가</option>
+						<option value="1129013800">장위동</option>
+						<option value="1129013300">정릉동</option>
+						<option value="1129013500">종암동</option>
+						<option value="1129013600" selected="selected">하월곡동</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">하월곡동</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer" style="width:98px;">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel selectbox-noscript">
+					<select class="selectbox-source">
+						<option class="selectbox-default">단지</option>
+						<option value="26644">광남캐스빌</option>
+						<option value="3540">구동신</option>
+						<option value="26130">꿈의숲푸르지오</option>
+						<option value="1194">동신</option>
+						<option value="17700" selected="selected">래미안월곡</option>
+						<option value="26935">새동산</option>
+						<option value="10768">샹그레빌</option>
+						<option value="11597">수산/동양아파트</option>
+						<option value="1193">아남</option>
+						<option value="2990">월곡두산위브</option>
+						<option value="22199">월곡래미안루나밸리</option>
+						<option value="13115">창방트윈</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">래미안월곡</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer" style="width:143px;">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+			</div>
+			<div class="lastest">
+				<p>최근 검색한 지역과 단지 <a href="#">보기</a></p>
+				<ol id="recentComplexList" style="display:none; height:50px;">
+				<li><a href="#">가산동 두산</a></li>
+				<li><a href="#">자양동 한강우성아파트</a></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<!--하위 컨텐츠 및 Aside Component 영역 List Container -->
+	<div class="container_end container_end2" id="container">
+		<div id="content">
+			<div id="depth1Content" style="display: none;">
+				<div id="depth1CityList" class="main_housing mh_emphasis"></div>
+				<div id="depth1NationComplexList" class="main_housing"></div>
+				<div id="depth1AreaList" class="main_housing main_housing_end"></div>
+				<!-- template_commonPriceGraphAndInfo.html 파일로 분리 -->
+				<div id="depth1PriceGraphAndInfo" class="sale_info sale_info_home"></div>
+			</div>
+			<div style="display: block;" class="sale_info" id="depth5Content">
+
+			<h2 id="depth5Content_Title" class="mark_tit">
+				<span class="mark1"><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="60" height="17" title="확인한지 2개월 이내인 매물" alt="확인한지 2개월 이내인 매물" style="background:url(img/articlelist.gif) -183px -350px no-repeat;">12.02.21</span><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="12px" height="5px" alt="" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -330px -110px no-repeat;" class="trade_mark"><em class="mark_txt">[다세대]만득이빌라</em><a href="#" class="btn_add">신당동 전체보기</a>
+			</h2>
+			<span class="btn_group" id="depth5Content_TitleSide"><a onclick="nhn.stb.behavior.printAtclInfo({ rlet_type_cd : 'A01', atcl_no : '1000426751', atcl_amt : '40,000/300', sply_spc : '165.29', sale_label : '반포자이', is_complex : true }); return false;" href="#"><img height="20" width="54" class="btn_print" alt="인쇄하기" src="http://img.land.naver.com/static/service/20100210/sale/btn_print2.gif"></a>
+				<a onclick="nhn.stb.behavior.showFalsehoodInputForm('1000426751'); return false;" href="#"><img height="20" width="73" class="btn_print" alt="허위매물신고" src="http://img.land.naver.com/static/service/20100210/sale/btn_flshd.gif"></a>
+				<a onclick="nhn.stb.behavior.registerInterestSales('1000426751'); return false;" href="#"><img height="21" width="84" class="btn_regist" alt="관심매물등록" src="http://img.land.naver.com/static/service/20100210/sale/btn_interest_sale.gif"></a></span>
+
+			<!--매물 종류 및 거래종류에 따라 선택적으로 템플릿 html을 로드함 -->
+			<div class="clear" id="depth5AtclDetailLayer">
+				<div class="end_left">
+						<h3><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="41px" height="12px" alt="가격정보" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -380px -20px no-repeat;height:12px;">
+						<p class="regist_date">최초 게재일<span>2009.10.01</span></p>
+					</h3>
+					<table cellspacing="0" cellpadding="0" style="width: 682px;" class="end_info" summary="가격정보">
+						<colgroup>
+						<col width="89">
+						<col width="233">
+						<col width="100">
+						<col width="*">
+						</colgroup>
+						<tbody>
+
+
+									<tr>
+										<th scope="row">매매가</th>
+										<td class="price1" colspan="3"><strong>1,000</strong> 만원</td>
+									</tr>
+									<tr>
+										<th scope="row">융자금</th>
+										<td><span class="num">1,000</span> 만원</td>
+										<th class="midline" scope="row">기전세(보증금)/월세</th>
+										<td><span class="num">1000</span> 만원/<span class="num">100</span> 만원</td>
+									</tr>
+
+
+
+
+							<tr>
+								<th scope="row">특징</th>
+								<td colspan="3">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테&nbsp;</td>
+							</tr>
+							<tr>
+								<th scope="row">입주가능일</th>
+								<td>-&nbsp;</td>
+								<th class="midline" scope="row">매물번호</th>
+								<td>0901013500&nbsp;</td>
+							</tr>
+							<tr>
+								<th class="contact noline" scope="row">연락처</th>
+								<td class="contact noline" colspan="3">중개업소이름변경_대박일거야
+									&nbsp;&nbsp;&nbsp;031-444-4444
+
+									<p class="clear">담당자 : 옥미진&nbsp;&nbsp;&nbsp;010-9334-4865</p>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="41px" height="12px" alt="매물정보" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -380px -40px no-repeat;height:12px;"></h3>
+					<table cellspacing="0" cellpadding="0" style="width: 682px;" class="end_info" summary="매물정보">
+						<colgroup>
+						<col width="89">
+						<col width="233">
+						<col width="100">
+						<col width="*">
+						</colgroup>
+						<tbody><tr>
+							<th scope="row">소재지</th>
+							<td colspan="3">서울시 관악구 봉천동 &nbsp;<a href="#" class="more"><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="37px" height="15px" alt="지도보기" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -400px -170px no-repeat;height:15px;" class="btn_view_map"></a></td>
+						</tr>
+						<tr>
+							<th scope="row">공급면적</th>
+							<td><strong>100㎡</strong> <a href="#" class="btn_pyeong"><span class="blind">평 전환</span></a> <strong class="tx_pyeong">17.5평</strong></td>
+							<th class="midline" scope="row">전용면적</th>
+							<td><strong>100㎡ </strong> (100%) <strong class="tx_pyeong">17.5평</strong></td>
+						</tr>
+						<tr>
+							<th scope="row">건폐율</th>
+							<td>100%</td>
+							<th class="midline" scope="row">용적률</th>
+							<td>100%</td>
+						</tr>
+						<tr>
+							<th scope="row">용도지역</th>
+							<td>일반주거지역</td>
+							<th class="midline" scope="row">주구조</th>
+							<td>철근콘크리트</td>
+						</tr>
+						<tr>
+							<th scope="row">구역명</th>
+							<td>봉천4-1구역&nbsp;</td>
+							<th class="midline" scope="row">건물종류</th>
+							<td>다가구&nbsp;</td>
+						</tr>
+						<tr>
+							<th class="noline" scope="row">예상면적</th>
+							<td class="noline"><strong title="예상 100㎡  = 30.2평">100㎡ </strong> (100%)</td>
+							<th class="midline noline" scope="row">해당층/총층</th>
+							<td class="noline">5/5</td>
+						</tr>
+					</tbody>
+					</table>
+					<!-- [D] 대출정보 있을때 -->
+					<div class="end_right tbl_type">
+						<div class="lef_bx">
+							<h3 class="h_info"><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="41px" height="11px" alt="세금정보" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -370px -290px no-repeat;height:11px;">
+							</h3>
+							<table cellspacing="0" summary="세금수수료" cellpadding="0" class="end_info" style="width:302px">
+							<tbody>
+							<col width="89"><col width="213">
+							<tr>
+							<th scope="row">취득세</th>
+							<td class="price3"><strong>-</strong> 만원</td>
+							</tr>
+							<tr>
+							<th scope="row">중개수수료</th>
+							<td class="price3">최대 <strong>64</strong> 만원</td>
+							</tr>
+							<tr class="btm">
+							<th scope="row" class="noline">등기수수료</th>
+							<td class="price3 noline"><strong>-</strong> 만원</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="rgt_bx" style="width:360px;*width:341px">
+							<h3 class="h_info" style="margin:0">
+							<img src="http://static.land.naver.net/static/service/20120215/sale/h3_end18.gif" width="84" height="11" alt="전자세금대출 정보">
+							<a href="#" class="more">더보기</a></h3>
+							<table cellspacing="0" border="1" summary="세금수수료" class="end_info end_info_v2" style="width:100%">
+							<caption>담보대출 정보</caption>
+							<col width="33%"><col width="33%"><col width="*">
+							<thead>
+							<th scope="col">금융기관</th>
+							<th scope="col">대출금리</th>
+							<th scope="col">대출한도</th>
+							</thead>
+							<tbody>
+							<tr>
+							<td><a href="#">우리은행</a></td>
+							<td><a href="#"><strong class="blue">5.66</strong>~6.24%</a></td>
+							<td><a href="#"><strong>13,020</strong> 만원</a></td>
+							</tr>
+							<tr class="btm">
+							<td><a href="#">LIG손해보험</a></td>
+							<td><a href="#">7.1~7.6%</a></td>
+							<td><a href="#"><strong class="red">17,360</strong> 만원</a></td>
+							</tr>
+							</tbody>
+							</table>
+							<p class="sponsor">(주)채움모기지 제공</p>
+						</div>
+					</div>
+					<!-- [D] 대출정보 있을때 -->
+					<h3><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="41px" height="11px" alt="세금정보" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -370px -290px no-repeat;height:11px;">
+					</h3>
+					<table cellspacing="0" summary="세금수수료" cellpadding="0" class="end_info no_btmline" style="width:682px">
+					<col width="89"><col width="100">
+					<col width="89"><col width="100">
+					<col width="89"><col width="100">
+					<tbody>
+					<tr>
+					<th scope="row">취득세</th>
+					<td class="price3"><strong>17,668</strong> 만원</td>
+					<th scope="row">중개수수료</th>
+					<td class="price3">최대 <strong>4,818</strong> 만원</td>
+					<th scope="row">등기수수료</th>
+					<td class="price3"><strong>277</strong> 만원</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h3><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="41px" height="12px" alt="매물사진" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -360px -210px no-repeat;height:12px;"></h3>
+					<table cellspacing="0" cellpadding="0" style="width: 682px;" class="end_info no_topline" summary="사진정보">
+						<tbody>
+							<tr>
+								<td class="photo noline">
+									<div class="rolling">
+									<a href="#" class="prev"><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="12px" height="83px" alt="이전" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) -420px -270px no-repeat;height:83px;"></a>
+									<div class="wrap_rolling" id="horz_wrap">
+										<ul>
+										<li><img src="http://static.land.naver.net/static/service/20120215/article/img_no_end_photo.gif" width="120" height="80" alt="이미지 없음"></li>
+										<li><img src="http://static.land.naver.net/static/service/20120215/article/img_no_end_photo.gif" width="120" height="80" alt="이미지 없음"></li>
+										<li><img src="http://static.land.naver.net/static/service/20120215/article/img_no_end_photo.gif" width="120" height="80" alt="이미지 없음"></li>
+										<li><img src="http://static.land.naver.net/static/service/20120215/article/img_no_end_photo.gif" width="120" height="80" alt="이미지 없음"></li>
+										<li><img src="http://static.land.naver.net/static/service/20120215/article/img_no_end_photo.gif" width="120" height="80" alt="이미지 없음"></li>
+										</ul>
+									</div>
+									<a href="#" class="next"><img src="http://static.land.naver.net/static/service/20120215/article/blank.gif" width="12px" height="83px" alt="다음" style="background:url(http://static.land.naver.net/static/service/20120215/article/articlelist_20120109.gif) 0 -390px no-repeat;height:83px;"></a>
+									</div>
+									<script type="text/javascript">
+									    horz_rolling = new nhn.Rolling($('horz_wrap'), {
+									        duration : 400, // (ms) nhn.Effect, nhn.Transtition 참고
+									        direction : 'horizontal', // || 'vertical'
+									        effect : nhn.Effect.linear //nhn.Effect 참고
+									    });
+									</script>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+
+			<div class="end_clear" id="depth5CommonDetailLayer"><h3><img height="13" width="46" alt="매물 설명" src="http://img.land.naver.com/static/service/20100210/sale/h3_end6.gif"></h3>
+				<div class="sale_desc">
+
+						<p>융자없이 깨끗한 집입니다.
+<br>에어컨,냉장고등 다양한 옵션!
+<br>보증금 월세 조정가능합니다.
+<br>멋스러운 인테리어로 한층 더 고급스러움!
+<br>``````````````````````````````````````````````````
+<br>저희 반포자이공인은
+<br>다량의 매매, 전세, 월세 매물을
+<br>확보하고 있습니다.
+<br>조건에 맞는 최상의 아파트를
+<br>최선을 다해 찾아드리겠습니다.
+<br>```````````````````````````````````````````````````````````
+<br>◆ 반포자이대표부동산 -"반포자이공인중개사-"◆
+<br> ☎ 0 2) 5 9 5 - 8 8 8 0, ^^ 0 1 0 - 4 5 7 9 - 2 4 3 4
+<br>````````````````````````````````````````````````````````````````````````````````````
+<br>* 홈페이지에 오시면 정보와 사진을 더 많이 보실 수 있습니다
+<br>* 이제 자이구조를 영상으로 구경하세요 동영상 업로드!!!!!
+<br>-------------- www.5958880.com --------------------</p>
+
+				</div>
+				<h3><img height="13" width="47" alt="주변 환경" src="http://img.land.naver.com/static/service/20100210/sale/h3_end7.gif"></h3>
+				<dl class="surroundings">
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding1.gif">지하철 정보</dt>
+					<dd>7호선 반포역 도보 1분, 9호선 사평역 도보 2분, 3호선 고속터미널역 도보 10분, 7호선 논현역 도보 11분&nbsp;</dd>
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding2.gif">버스 정보</dt>
+					<dd>일반 36, 87, 87-1, 212-1, 289-1 좌석 41, 1005&nbsp;</dd>
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding3.gif">도로</dt>
+					<dd>&nbsp;</dd>
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding4.gif">편의시설</dt>
+					<dd>신세계백화점, 센트럴시티&nbsp;</dd>
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding5.gif">교육환경</dt>
+					<dd>반포초, 잠원초, 반포중, 방배중, 세화여고, 세화남고, 서울고, 상문고 원촌초등학교 원촌중학교 유치
+<br>원&nbsp;</dd>
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding6.gif">공원/녹지</dt>
+					<dd>한강수변공원, 반포공원&nbsp;</dd>
+					<dt><img height="19" width="19" alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_surrounding7.gif">의료시설</dt>
+					<dd>가톨릭서울성모병원&nbsp;</dd>
+				</dl>
+				<!-- 단지타입일 경우에만 단지 커뮤니티 노출 -->
+
+				<h3><img height="13" width="68" alt="단지 커뮤니티" src="http://img.land.naver.com/static/service/20100210/sale/h3_end8.gif"></h3>
+				<div class="btn_community">
+					<a href="/community/board.nhn?m=write&amp;bid=ourtown&amp;mode=form" target="_blank"><img height="20" width="45" style="margin-top: 4px;" alt="글쓰기" src="http://img.land.naver.com/static/service/20100210/sale/btn_write.gif"></a>
+					<!-- 100225 추가 -->
+
+						<a style="position: absolute; top: 0px; left: 50px;" class="btn_banner_event" href="/community/board.nhn?m=list&amp;bid=ourtown"><img height="36" width="241" border="0" alt="우리동네 생활편의정보 올리면 매주 30명에게 상품권" src="http://img.land.naver.com/static/service/20100210/event/ourtown/banner_community_event2.gif"></a>
+
+					<!-- //100225 추가 -->
+					<a class="more" href="/community/board.nhn?m=list&amp;bid=ourtown&amp;type=address&amp;law_address_code=1165010700&amp;apt_id=22853" target="_blank"><img height="13" width="31" alt="더보기" src="http://img.land.naver.com/static/service/20100210/sale/btn_more2.gif"></a>
+				</div>
+				<ul class="community">
+
+				<li class="">
+					<dl class="cont">
+						<dt><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=219308&amp;page=1" target="_blank">반포자이 등 반포 새아파트 전용률 비교&nbsp;</a></dt>
+						<dd class="id"><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=219308&amp;page=1" target="_blank">prid****&nbsp;</a></dd>
+						<dd class="date">2010-04-11 06:08:56&nbsp;</dd>
+						<dd class="preview"><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=219308&amp;page=1" target="_blank">최근 반포자이와 래미안퍼스티지가 입주하였고삼호가든1,2차, 반포힐스테이트가 올해와 내년에 입주할 예정입니다.그중 소형평수(20~30평대)에 대해서로 비교검토하는 ...&nbsp;</a></dd>
+						<dd class="boomup"><img height="13" width="14" alt="공감" src="http://img.land.naver.com/static/service/20100210/sale/ico_boomup.gif">3</dd>
+					</dl>
+				</li>
+
+				<li class="">
+					<dl class="cont">
+						<dt><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=212516&amp;page=1" target="_blank">반포자이 현 동향&nbsp;</a></dt>
+						<dd class="id"><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=212516&amp;page=1" target="_blank">olok****&nbsp;</a></dd>
+						<dd class="date">2010-01-23 07:19:56&nbsp;</dd>
+						<dd class="preview"><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=212516&amp;page=1" target="_blank">구 주공3단지 2400세대를 재건축한 반포자이는 25평형~91평형 3410세대의 매머드급 단지로탈바꿈해있습니다.작년 말 입주시기 당시 몰아닥친 매서운 글로벌금융위기를 ...&nbsp;</a></dd>
+						<dd class="boomup"><img height="13" width="14" alt="공감" src="http://img.land.naver.com/static/service/20100210/sale/ico_boomup.gif">1</dd>
+					</dl>
+				</li>
+
+				<li class="last">
+					<dl class="cont">
+						<dt><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=212513&amp;page=1" target="_blank">반포/잠원지구 전세 동향&nbsp;</a></dt>
+						<dd class="id"><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=212513&amp;page=1" target="_blank">olok****&nbsp;</a></dd>
+						<dd class="date">2010-01-23 06:01:28&nbsp;</dd>
+						<dd class="preview"><a href="http://land.naver.com/community/board.nhn?m=read&amp;bid=ourtown&amp;num=212513&amp;page=1" target="_blank">반포/잠원 지역은 1월 중순 넘어 들면서 전세 문의가 많이 줄어들었습니다.아무래도 개학시즌을 앞두고 구하실 분들은 미리 구하셨거나, 이지역에서 움직이시려고 했던...&nbsp;</a></dd>
+						<dd class="boomup"><img height="13" width="14" alt="공감" src="http://img.land.naver.com/static/service/20100210/sale/ico_boomup.gif">0</dd>
+					</dl>
+				</li>
+
+				</ul>
+
+
+				<!--중개업소 정보는 매물 상세정보와 함께 받아오므로, 위치를 단지커뮤니티 아래쪽으로 변경한다.-->
+				<!-- * 오픈 이후 서스테이닝 할 때 활성화 필요함  * -->
+				<!--h3><img src="http://img.land.naver.com/static/service/20100210/sale/h3_end9.gif" width="94" height="13" alt="중개업소 상담후기"></h3>
+				<div class="ps_write">
+					<h4>반포자이공인중개사사무소</h4><img src="http://img.land.naver.com/static/service/20100210/sale/img_star_big1.gif" width="93" height="16" alt="1점" class="star"><span class="tel">010-4579-2434</span>
+					<a href="#" class="btn_write" onclick="nhn.stb.behavior.showSaleConsultAfterNote('1000426751'); return false;"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_write_ps.gif" width="77" height="21" alt="상담후기 쓰기"></a>
+				</div--></div>
+			<div id="depth5CommonNoteListLayer">
+			</div>
+			<div class="responsibility" id="depth5CommonResponsibility"><p>NHN은 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다</p>
+				<a onclick="nhn.stb.behavior.selectAddrCodeValue('1165010700', {'complexCode':'22853'}); return false;" href="#"><img height="23" width="75" alt="매물리스트" src="http://img.land.naver.com/static/service/20100210/sale/btn_sale_list.gif"></a></div>
+		</div>
+			<div id="pvframe" style="display: none;">Page Call
+				<iframe src="http://listing.land.naver.com/html/pv.html?rnd=1258532778377" id="writeFrame" width="0" frameborder="0" height="0" scrolling="no"></iframe>
+			</div>
+		</div>
+		<!--하위 컨텐츠 및 Aside Component 영역 List Container -->
+		<!-- Aside Component List -->
+		<div id="depthAside" class="aside aside_end" style="display: block;">
+			<!-- 이미지 태그 대신에 홍보 배너로 교체해주세요 -->
+			<div style="display: none;" id="addiv" name="addiv">
+				<iframe id="f240240" name="f240240" src="http://ad.naver.com/adshow?unit=117B" border="0" marginheight="0" marginwidth="0" width="240" align="center" frameborder="0" height="240" scrolling="no"></iframe>
+			</div>
+			<div style="display: none;" id="asideSaleRegisterLayer" class="side_banner">
+				<!--
+		 	<a target="_blank" href="http://landad.naver.com/"><img src="http://img.land.naver.com/static/service/20100210/banner/promotion_240_99.gif" width="240" height="100" alt="제휴상품 프로모션"></a>
+ -->
+			</div>
+			<div style="display: block;" id="asidePremiumInfoLayer" class="component com_emphasis">
+				<h3 class="spot"><img alt="" src="http://img.land.naver.com/static/service/20100210/sale/ico_premium.gif" width="13" height="13"> 프리미엄 회원업소</h3>
+				<!-- 090722_edit -->
+				<dl class="premium" style="" onMouseOver="this.setAttribute('over','over');" onMouseOut="this.setAttribute('over','out');">
+					<dt> <a href="http://www.ms114.co.kr" target="_blank">명성공인중개사사무소</a></dt>
+					<dd class="photo"><img alt="" src="http://img.land.naver.com/img/premium/BCADC3CAB5BFB8EDBCBAB0F8C0CEC1DFB0B3BBE7BBE7B9ABBCD2_1.JPG" width="210" height="117"></dd>
+					<dd><span class="tit">대표</span> 곽영순&nbsp;</dd>
+					<dd><span class="tit">전화</span> <span class="num">02-536-4700 / 017-220-4700</span></dd>
+					<dd><span class="tit brief1">약력</span> <p class="brief2">삼풍.아크로비스타 전문</p></dd>
+					<dd class="btns"><a href="#"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_location.gif" alt="위치보기" width="50" height="19"></a></dd>
+				</dl>
+			</div>
+			<div style="display: block;" id="asideLocationInfoLayer" class="component">
+				<h3>위치정보</h3>
+				<a href="#" onClick="nhn.stb.map.popupLocationInfoMap('삼풍 5동', '37.499934', '127.015831', true); return false;" class="more"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_more2.gif" alt="더보기" width="31" height="13"></a>
+			</div>
+			<div style="display: block;" id="asideLocationMapLayer" class="location">
+				<!-- 이미지 태그 대신 지도를 넣어주세요 -->
+				<div id="asideLocationMap" style="overflow: hidden; width: 216px; height: 147px; position: relative;" class="aside_map">
+					<div style="position: absolute; top: -10.5px; left: 108px; z-index: 0; -moz-user-select: none; cursor: default;">
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 10; -moz-user-select: none;"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03386-02937.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -275px; top: -310px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03386-02936.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -275px; top: -54px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03387-02937.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -19px; top: -310px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03387-02936.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -19px; top: -54px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03386-02935.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -275px; top: 202px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03387-02935.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -19px; top: 202px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03388-02937.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: 237px; top: -310px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03388-02936.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: 237px; top: -54px;" width="256" height="256"><img src="http://image.map.naver.com/eclipse/image/2.22/12/00003-00002/00052-00045/03388-02935.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: 237px; top: 202px;" width="256" height="256"></div>
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 15; -moz-user-select: none;"></div>
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 20; -moz-user-select: none;"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03386-02937.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -275px; top: -310px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03386-02936.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -275px; top: -54px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03387-02937.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -19px; top: -310px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03387-02936.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -19px; top: -54px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03386-02935.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -275px; top: 202px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03387-02935.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: -19px; top: 202px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03388-02937.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: 237px; top: -310px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03388-02936.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: 237px; top: -54px;" width="256" height="256"><img src="http://image.map.naver.com/land/image/1.05/12/00003-00002/00052-00045/03388-02935.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 256px; height: 256px; left: 237px; top: 202px;" width="256" height="256"></div>
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 30; -moz-user-select: none;"></div>
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 40; -moz-user-select: none;"><img src="../img/map_icon/ic_spot.png" style="position: absolute; -moz-user-select: none; z-index: 10; width: 52px; height: 41px; left: -11px; top: 51px; cursor: pointer;" width="52" height="41"></div>
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 50; -moz-user-select: none;">
+							<div style="padding: 0px; position: absolute; top: 0px; left: 0px; z-index: 0; -moz-user-select: none; display: none;">
+								<div style="position: relative; top: 0px; left: 0px; z-index: 0; -moz-user-select: none;"></div>
+							</div>
+						</div>
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 100; -moz-user-select: none;"></div>
+					</div>
+					<div style="position: absolute; top: 0px; left: 0px; z-index: 10; -moz-user-select: none;">
+						<div class="noprint" style="overflow: hidden; position: absolute; top: 134px; left: 7px; z-index: 0; -moz-user-select: none; opacity: 1; width: 46px; height: 8px;"><img class="noprint" src="http://static.naver.com/maps/naver.png" style="position: absolute; -moz-user-select: none; z-index: 0; width: 46px; height: 8px; left: 0px; top: 0px; cursor: pointer;" width="46" height="8"></div>
+					</div>
+					<div style="position: absolute; top: -10000px; left: -10000px; z-index: -1000; -moz-user-select: none; width: 10000px; height: 10000px;">
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 0; -moz-user-select: none;"></div>
+					</div>
+				</div>
+			</div>
+			<div style="display: block;" id="asideComplexInfoLayer" class="component com_emphasis">
+				<h3>단지정보</h3>
+				<a href="#" class="more" onMouseOver="nhn.stb.common.setSearchOption('contentTabIndex', '1');" onClick="nhn.stb.behavior.selectAddrCodeValue('1165010800', {'complexCode':'481', isKeepingContentTabIndex : true }); return false;"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_more2.gif" alt="더보기" width="31" height="13"></a>
+				<ul class="normal">
+					<li class="hot"><img src="http://img.land.naver.com/static/service/20100210/sale/ico_hot.gif" alt="Hot" width="24" height="11"><strong>2호선 교대역 도보 4분</strong></li>
+					<li class="info">서울시 서초구 서초동 1685</li>
+					<li class="info">입주일자 : 1988.04</li>
+					<li class="info">건설사 : 현대,우성</li>
+					<li class="info">총 2390세대 / 총 24개동 / 총 15층</li>
+					<li class="info">중앙난방, 도시가스</li>
+					<li class="info">면적 : <span title="공급 112.4㎡  = 34.0평">112㎡</span> · <span title="공급 165.29㎡  = 50.0평">165A㎡</span> · <span title="공급 165.29㎡  = 50.0평">165B㎡</span> · <span title="공급 204.96㎡  = 62.0평">204A㎡</span> · <span title="공급 204.96㎡  = 62.0평">204B㎡</span> · <span title="공급 211.57㎡  = 64.0평">211㎡</span> </li>
+				</ul>
+				<div class="photo">
+					<h4><img src="http://img.land.naver.com/static/service/20100210/sale/tx_photo.gif" alt="Photo" width="35" height="5"></h4>
+					<ul class="plist">
+						<!-- 이미지 개수가 0~2개일때 No Image로 대체함-->
+						<li class="first"> <a href="#" onClick="nhn.stb.behavior.showPhotoGalleryPopup({apids : 'XS14', hscp_no : '481', img_no : '0' });return false;"><img src="http://img.land.naver.com/img/complex/2005/09/10/46/BBEFC7B3320copy_s.jpg" alt="" width="63" height="42"></a> </li>
+						<li class=""> <a href="#" onClick="nhn.stb.behavior.showPhotoGalleryPopup({apids : 'XS14', hscp_no : '481', img_no : '1' });return false;"><img src="http://img.land.naver.com/img/complex/2005/09/20/12/jw_20050920142715_dan4_s.jpg" alt="" width="63" height="42"></a> </li>
+						<li class=""> <a href="#" onClick="nhn.stb.behavior.showPhotoGalleryPopup({apids : 'XS14', hscp_no : '481', img_no : '2' });return false;"><img src="http://img.land.naver.com/img/complex/2005/09/20/12/jw_20050920142715_dan3_s.jpg" alt="" width="63" height="42"></a> </li>
+					</ul>
+				</div>
+			</div>
+			<div style="display: block;" id="asidePricePerScaleLendingLayer" class="component">
+				<h3>면적별 시세</h3>
+				<a href="#" class="more" target="_blank"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_more2.gif" alt="더보기" width="31" height="13"></a>
+				<div id="asidePriceLendingTab0Content">
+					<table summary="면적별 시세" class="size_price" style="display: block;" cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th scope="col"><img src="http://img.land.naver.com/static/service/20100210/sale/tit_table1.gif" alt="면적(㎡)" width="62" height="24"></th>
+								<th scope="col"><img src="http://img.land.naver.com/static/service/20100210/sale/tit_table2.gif" alt="매매가(만원)" width="73" height="24"></th>
+								<th scope="col"><img src="http://img.land.naver.com/static/service/20100210/sale/tit_table3.gif" alt="전세가(만원)" width="77" height="24"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="first">
+								<td><span title="공급 112.4㎡  = 34.0평">112</span></td>
+								<td>89,000</td>
+								<td>29,000</td>
+							</tr>
+							<tr class="">
+								<td><span title="공급 165.29㎡  = 50.0평">165A</span></td>
+								<td>150,000</td>
+								<td>49,000</td>
+							</tr>
+							<tr class="">
+								<td><span title="공급 165.29㎡  = 50.0평">165B</span></td>
+								<td>150,000</td>
+								<td>49,000</td>
+							</tr>
+							<tr class="">
+								<td><span title="공급 204.96㎡  = 62.0평">204A</span></td>
+								<td>185,000</td>
+								<td>55,000</td>
+							</tr>
+							<tr class="">
+								<td><span title="공급 204.96㎡  = 62.0평">204B</span></td>
+								<td>185,000</td>
+								<td>55,000</td>
+							</tr>
+							<tr class="">
+								<td><span title="공급 211.57㎡  = 64.0평">211</span></td>
+								<td>190,000</td>
+								<td>55,000</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="sponsor">국민은행 제공</p>
+				</div>
+			</div>
+			<div id="asideManyLookComplex" class="component">
+				<h3>서초구 많이 본 단지</h3>
+				<ul class="order">
+					<li> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_num1.gif" alt="1" class="ico_num" width="13" height="14"> <span class="tit"><a href="#" onClick="nhn.stb.common.setSearchOption('saleCate', 'A01:A03:A04');nhn.stb.behavior.selectAddrCodeValue('1165010700', {'complexCode':'22853', 'complexTypeCode':'A01', 'inb':'FV'}); return false;">반포동 반포자이</a></span> <span class="state"> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_keep.gif" alt="유지" class="arw" width="7" height="9">0 </span> </li>
+					<li> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_num2.gif" alt="2" class="ico_num" width="13" height="14"> <span class="tit"><a href="#" onClick="nhn.stb.common.setSearchOption('saleCate', 'A01:A03:A04');nhn.stb.behavior.selectAddrCodeValue('1165010700', {'complexCode':'23759', 'complexTypeCode':'A01', 'inb':'FV'}); return false;">반포동 래미안퍼스티지(주공..</a></span> <span class="state"> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_keep.gif" alt="유지" class="arw" width="7" height="9">0 </span> </li>
+					<li> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_num3.gif" alt="3" class="ico_num" width="13" height="14"> <span class="tit"><a href="#" onClick="nhn.stb.common.setSearchOption('saleCate', 'A01:A03:A04');nhn.stb.behavior.selectAddrCodeValue('1165010700', {'complexCode':'453', 'complexTypeCode':'A01', 'inb':'FV'}); return false;">반포동 반포주공1단지</a></span> <span class="state"> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_keep.gif" alt="유지" class="arw" width="7" height="9">0 </span> </li>
+					<li> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_num4.gif" alt="4" class="ico_num" width="13" height="14"> <span class="tit"><a href="#" onClick="nhn.stb.common.setSearchOption('saleCate', 'A01:A03:A04');nhn.stb.behavior.selectAddrCodeValue('1165010600', {'complexCode':'3009', 'complexTypeCode':'A01', 'inb':'FV'}); return false;">잠원동 잠원동아</a></span> <span class="state"> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_keep.gif" alt="유지" class="arw" width="7" height="9">0 </span> </li>
+					<li> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_num5.gif" alt="5" class="ico_num" width="13" height="14"> <span class="tit"><a href="#" onClick="nhn.stb.common.setSearchOption('saleCate', 'A01:A03:A04');nhn.stb.behavior.selectAddrCodeValue('1165010800', {'complexCode':'481', 'complexTypeCode':'A01', 'inb':'FV'}); return false;">서초동 삼풍</a></span> <span class="state"> <img src="http://img.land.naver.com/static/service/20100210/sale/ico_keep.gif" alt="유지" class="arw" width="7" height="9">0 </span> </li>
+				</ul>
+			</div>
+			<div id="asideManyLookNews" class="component">
+				<h3>가장 많이 본 뉴스</h3>
+				<a href="http://land.naver.com/news/news.nhn?m=list&amp;mode=best" class="more" target="_blank"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_more2.gif" alt="더보기" width="31" height="13"></a>
+				<ul class="normal">
+					<li><a href="http://land.naver.com/news/news.nhn?m=read&amp;mode=best&amp;office_id=079&amp;article_id=0002107538" target="_blank" title="역세권 아파트 인기, 8호선 단지가 '최고'">역세권 아파트 인기, 8호선 단지가 ‘...</a></li>
+					<li><a href="http://land.naver.com/news/news.nhn?m=read&amp;mode=best&amp;office_id=112&amp;article_id=0002050219" target="_blank" title="내년 개통 도로ㆍ철도 따라 내집마련 해볼까">내년 개통 도로ㆍ철도 따라 내집마련 ...</a></li>
+					<li><a href="http://land.naver.com/news/news.nhn?m=read&amp;mode=best&amp;office_id=008&amp;article_id=0002235702" target="_blank" title="다음달 아파트 4만가구 쏟아진다">다음달 아파트 4만가구 쏟아진다</a></li>
+					<li><a href="http://land.naver.com/news/news.nhn?m=read&amp;mode=best&amp;office_id=028&amp;article_id=0002019277" target="_blank" title="‘전세 4년·값인상 5% 제한’ 법사위 탁자에">‘전세 4년·값인상 5% 제한’ 법사위 ...</a></li>
+					<li><a href="http://land.naver.com/news/news.nhn?m=read&amp;mode=best&amp;office_id=008&amp;article_id=0002231001" target="_blank" title="&quot;판교마저…&quot; 부동산 더블딥 오나">"판교마저…" 부동산 더블딥 오나</a></li>
+				</ul>
+			</div>
+			<!-- 배너 영역 -->
+			<div style="display: none;" id="asidePromotionBanner1" class="side_banner"> <a target="_blank" href="http://landad.naver.com/home/noticeView.nhn?noti_mttr_seq=677&amp;tpprt_exps_yn=N"><img src="http://img.land.naver.com/static/service/20100210/banner/free_regist_promotion_240_100.jpg" alt="일반확인매물 무료등록 프로모션" width="240" height="100"></a> </div>
+			<div style="display: none;" id="asidePromotionBanner2" class="side_banner"> <a target="_blank" href="http://landad.naver.com/"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_sale_guide.gif" alt="매물 등록 이용안내" width="240" height="100"></a> </div>
+			<div id="asidePromotionBanner3" class="side_banner"> <a target="_blank" href="#" onClick="nhn.stb.behavior.popupConfirmPromotionWindow(); return false;"><img src="http://img.land.naver.com/static/service/20100210/banner/confirm_promotion_240_100.jpg" alt="확인매물 프로모션" width="240" height="100"></a> </div>
+		</div>
+	</div>
+	<div id="mySalesLayer" class="my_sales">
+		<div id="mySalesUserInfolayer" class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="#" onClick="nhn.stb.behavior.authenticatePopup(); return false;"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_my_popup_login.gif" alt="로그인" style="margin-bottom: 2px;" width="59" height="17"></a> </div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+		<div id="mySalesComplexLayer" class="bg_my_sales_t">
+			<h3 class="type2">최근본단지</h3>
+			<div class="cont">
+				<!-- 비활성시 btn_up, 활성시 btn_up_on -->
+				<span class="updown btn_up" style="display: none;"><a href="#"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_my_popup_up_on.gif" alt="위로" width="57" height="10"></a></span>
+				<!-- If exist housing user seen -->
+				<p style="display: none;" class="result_none">최근본 단지가 없습니다</p>
+				<!-- If not exist housing user seen -->
+				<div id="horizon_rollingmask" class="maskarea" style="display: block; height: 82px;">
+					<ul class="housing">
+						<li class=""><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'}); return false;">삼풍</a></li>
+						<li class=""><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'}); return false;">강남구청역SK허브블루</a></li>
+						<li class="first"><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A04','addrCode':'1165010800','complexCode':'481','contentTabIndex':'0','complexName':'삼풍','address_nm':'서울시 서초구 서초동 1685','complexTypeCode':'A01'}); return false;">삼풍</a></li>
+						<li class=""><a href="#" title="" onMouseOver="nhn.stb.common.setPermanentLink(this,{'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'});" onClick="nhn.stb.behavior.selectPermanentValue({'dealCate':'','saleCate':'A01:A03:A02:A04','addrCode':'1168010800','complexCode':'13141','contentTabIndex':'0','complexName':'강남구청역SK허브블루','address_nm':'서울시 강남구 논현동 241-3','complexTypeCode':'A02'}); return false;">강남구청역SK허브블루</a></li>
+					</ul>
+				</div>
+				<span class="updown btn_down" style="display: none;"><a href="#"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_my_popup_down_on.gif" alt="아래로" width="57" height="10"></a></span> </div>
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+					<legend>평형계산</legend>
+					<input class="input_text" title="값 입력" maxlength="5" type="text">
+					<a href="#" onClick="return false;"><img src="http://img.land.naver.com/static/service/20100210/sale/btn_calculate.gif" alt="계산" class="input_btn" width="61" height="18"></a>
+					<input class="input_text" title="값 입력" maxlength="5" type="text">
+					<ul class="cal_list" style="display: none;">
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+	</script>
+	<div id="footer">
+		<ul>
+			<li class="first"><a href="http://rd.naver.com/i:1000013390/c:32101?http://help.naver.com/svc_index.asp?CID1=CATE20030924000230&amp;CID2=CATE20030924000233&amp;CName2=%EB%B6%80%EB%8F%99%EC%82%B0" target="_blank">부동산 도움말</a> </li>
+			<li><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+			<li><a href="http://www.nbp-corp.com/rules/privacy.html" target="_blank"><strong>개인정보취급방침 </strong></a></li>
+			<li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+			<li><a href="#">광고안내</a></li>
+			<li><a href="http://rd.naver.com/i:1000013391/c:24344?http://help.naver.com/claim_main.asp" target="_blank">게시중단요청서비스</a></li>
+			<li><a href="http://rd.naver.com/i:1000013392/c:44155?http://help.naver.com/main.asp" target="_blank">고객센터</a></li>
+		</ul>
+		<p class="info"> 네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며, <br>
+			네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다. </p>
+		<address>
+		<a href="http://www.nbp-corp.com/" target="_blank" class="logo"><img src="http://static.naver.com/common/footer/logo_nhn.gif" alt="NHN" width="62" height="15"></a> <em>Copyright ©</em> <a href="http://www.nbp-corp.com/" target="_blank">NHN BUSINESS PLATFORM Corp.</a> <span>All Rights Reserved.</span>
+		</address>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>커뮤니티 리스트</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body style="background-color:#e4e8e9">
+<div>
+	<!--content start-->
+	<div id="dom_detail">
+		<!--detail-->
+		<div class="detail comm_detail">
+			<div class="h_loc agnt_datail">
+<!--            한줄일 경우 <h1 class="sngl">-->
+                <h2>느티나무 공무원 3단지 커뮤니티</h2>
+                <p class="sub_info">
+                	<strong>매매<em>29</em>건</strong>/
+                	<strong>전세<em>21</em>건</strong>/
+                	<strong>월세<em>35</em>건</strong>
+                </p>
+                <a href="" class="prev"><em>뒤로</em></a>
+				<a href="#" class="write_article"><span class="u_hc">글쓰기</span></a>
+            </div>
+
+            <div class="sort_menu">
+            	<ul>
+					<li>
+						<a href="#" class="on">최신순</a>
+					</li>
+					<li>
+						<a href="#">조회순</a>
+					</li>
+					<li>
+						<a href="#">추천순</a>
+					</li>
+				</ul>
+				<div class="select_box">
+					<select>
+						<option>전체</option>
+						<option>테스트</option>
+						<option>테스트</option>
+					</select>
+				</div>
+            </div>
+
+			<div class="spec community">
+					<p class="no_data"><span class="txt">선택하신 단지에 해당하는 글이<br>아직 등록되지 않았습니다.<span class="br">단지에 대해 알고 계신 이야기나<br>궁금한 질문을 등록해 주세요.</span></span></p>
+			</div>
+			<div class="ic top" style="position:fixed;bottom:15px;right:20px">상단으로 가기</div>
+		</div>
+		<!--//detail-->
+	</div>
+</div>
+</body>
+</html>
+<!-- 마크업 검수용, 개발 적용시 삭제 -->
+<script>
+$(document).ready(function(){
+$('.sort_menu>ul').find('a').click(function(){
+$(this).parent().parent().find('a').removeClass('on');
+$(this).addClass('on');
+return false; });
+});
+</script>
+<!-- // 마크업 검수용, 개발 적용시 삭제 -->

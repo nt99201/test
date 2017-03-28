@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>등록관리 :: 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css" >
+</head>
+<body>
+<div id="wrap">
+
+	<!-- [D] 등록/관리 페이지 : 'sub' 클래스 삽입 -->
+	<div id="container" class="sub">
+		<div class="content">
+			<span class="btn_side2"><a href="#"><img src="img/btn_sale_register.gif" width="117" height="33" alt="매물등록 하기"></a><a href="#"><img src="img/btn_sale_info.gif" width="117" height="33" alt="매물상품 안내"></a></span>
+			<ul class="tabmenu2">
+			<li class="on"><a href="#"><strong><img src="img/tab_register1_on.gif" width="89" height="16" alt="등록 리스트"></strong></a></li>
+			<li><a href="#"><img src="img/tab_register2_off.gif" width="89" height="16" alt="등록종료 리스트"></a></li>
+			<li><a href="#"><img src="img/tab_register3_off.gif" width="89" height="16" alt="신고매물 리스트"></a></li>
+			</ul>
+
+			<h4 class="salelist_tit"><img src="img/h3_register3.gif" width="58" height="14" alt="등록 리스트"></h4>
+			<fieldset class="set_condition">
+			<form name="search_form" id="search_form" method="get" action="">
+			<legend>매물검색</legend>
+				<div class="bg_set_condition_t2">
+					<dl class="first">
+					<dt><strong>매물종류</strong></dt>
+					<dd><select id="rlet_type_cd" name="rlet_type_cd">
+						<option value="">전체</option>
+						<option value="A01">아파트</option>
+						<option value="A02">오피스텔</option>
+						<option value="C01">원룸</option>
+						<option value="F01">재개발</option>
+						<option value="D03">건물</option>
+						</select>
+					</dd>
+					<dt class="bar"><strong>상품종류</strong></dt>
+					<dd><select id="atcl_rgst_prod_tp_cd" name="atcl_rgst_prod_tp_cd">
+						<option value="">전체</option>
+						<option value="10">프리미엄</option>
+						<option value="20">포커스</option>
+						<option value="30">일반</option>
+						</select>
+					</dd>
+					<dt class="bar"><strong>거래종류</strong></dt>
+					<dd><select id="trad_tp_cd" name="trad_tp_cd">
+						<option value="">전체</option>
+						<option value="A1">매매</option>
+						<option value="B1">전세</option>
+						<option value="B2">월세</option>
+						</select>
+					</dd>
+					<dt class="bar"><strong>지역선택</strong></dt>
+					<dd><select id="rlet_no" name="area" style="width:360px">
+						<option value="">전체</option>
+						<option value="0|1168010300" title="서울시 강남구 개포동  ">서울시 강남구 개포동  </option>
+						<option value="LG개포자이|1168010300" title="서울시 강남구 개포동 LG개포자이">서울시 강남구 개포동 LG개포자이</option>
+						</select>
+					</dd>
+					</dl>
+					<dl>
+					<dt><strong>입력일 조회</strong></dt>
+					<dd style="min-width:560px">
+						<ul class="term">
+						<li><input type="radio" name="select_term" id="select_term0" value="all" class="input_radio">전체</label></li>
+						<li><input type="radio" name="select_term" id="select_term1" value="w1" class="input_radio">1주</label></li>
+						<li><input type="radio" name="select_term" id="select_term2" value="m1" class="input_radio">1개월</label></li>
+						<li><input type="radio" name="select_term" id="select_term3" value="m3" class="input_radio">3개월</label></li>
+						<li><input type="radio" name="select_term" id="select_term4" value="m6" class="input_radio">6개월</label></li>
+						<li><input type="radio" name="select_term" id="select_term5" value="ma" class="input_radio">기간입력</label></li>
+						</ul>
+						<span class="set_date"><input type="text" id="date1" name="date1" class="input_text" readonly><a href="#" id="btn_from"><img src="img/ico_calendar.gif" width="10" height="11" alt="달력보기"></a></span>
+						<div class="calendar_layer layer" id="calendar_layer1" style="top:78px; left:322px;">
+							<div class="bg_shadow1"><div class="bg_shadow1_side">
+								<div class="calendar_wrap">
+									<div class="calendar_header">
+										<a href="#" class="btn_prev_year"><img src="img/ext/btn_calendar_first_on.gif" alt="이전년" width="14" height="13" class="over"></a>
+										<a href="#" class="btn_prev_month"><img src="img/ext/btn_calendar_prev_on.gif" alt="이전달" width="13" height="13" class="over pre"></a>
+										<strong class="title">2012.4</strong>
+										<a href="#" class="btn_next_month"><img src="img/ext/btn_calendar_next_on.gif" alt="다음달" width="13" height="13" class="over next"></a>
+										<a href="#" class="btn_next_year"><img src="img/ext/btn_calendar_last_on.gif" alt="다음년" width="14" height="13" class="over"></a>
+									</div>
+									<table class="calendar" cellspacing="0" cellpadding="0">
+									<thead>
+									<tr>
+									<th class="sun">sun</th>
+									<th>mon</th><th>tue</th>
+									<th>wed</th><th>thu</th>
+									<th>fri</th>
+									<th class="sat">sat</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr class="week">
+									<td class="sun"><a href="#" class="date">1</a></td>
+									<td><a href="#" class="date">2</a></td>
+									<td><a href="#" class="date">3</a></td>
+									<td class="selected"><a href="#" class="date">4</a></td>
+									<td><a href="#" class="date">5</a></td>
+									<td><a href="#" class="date">6</a></td>
+									<td class="sat"><a href="#" class="date">7</a></td>
+									</tr>
+									<tr class="week">
+									<td class="sun"><a href="#" class="date">8</a></td>
+									<td><a href="#" class="date">9</a></td>
+									<td><a href="#" class="date">10</a></td>
+									<td><a href="#" class="date">11</a></td>
+									<td><a href="#" class="date">12</a></td>
+									<td><a href="#" class="date">13</a></td>
+									<td class="sat"><a href="#" class="date">14</a></td>
+									</tr>
+									<tr class="week">
+									<td class="sun"><a href="#" class="date">15</a></td>
+									<td><a href="#" class="date">16</a></td>
+									<td><a href="#" class="date">17</a></td>
+									<td><a href="#" class="date">18</a></td>
+									<td><a href="#" class="date">19</a></td>
+									<td><a href="#" class="date">20</a></td>
+									<td class="sat"><a href="#" class="date">21</a></td>
+									</tr>
+									<tr class="week">
+									<td class="sun"><a href="#" class="date">22</a></td>
+									<td><a href="#" class="date">23</a></td>
+									<td><a href="#" class="date">24</a></td>
+									<td><a href="#" class="date">25</a></td>
+									<td><a href="#" class="date">26</a></td>
+									<td><a href="#" class="date">27</a></td>
+									<td class="sat"><a href="#" class="date">28</a></td>
+									</tr>
+									<tr class="week">
+									<td class="sun"><a href="#" class="date">29</a></td>
+									<td><a href="#" class="date">30</a></td>
+									<td class="next_month"><a href="#" class="date">1</a></td>
+									<td class="next_month"><a href="#" class="date">2</a></td>
+									<td class="next_month"><a href="#" class="date">3</a></td>
+									<td class="next_month today"><a href="#" class="date">4</a></td>
+									<td class="next_month sat holiday"><a href="#" class="date">5</a></td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div></div>
+						</div>
+						<span class="symbol">~</span>
+						<span class="set_date"><input type="text" id="date2" name="date2" class="input_text" readonly><a href="#" id="btn_to"><img src="img/ico_calendar.gif" width="10" height="11" alt="달력보기"></a></span>
+						<div class="calendar_layer layer" id="calendar_layer2" style="top:78px;left:420px">
+							<div class="bg_shadow1">
+								<div class="bg_shadow1_side">
+									<div class="calendar_wrap">
+										<div class="calendar_header">
+											<a href="#" class="btn_prev_year"><img src="img/ext/btn_calendar_first_on.gif" alt="이전년" width="14" height="13" class="over"></a>
+											<a href="#" class="btn_prev_month"><img src="img/ext/btn_calendar_prev_on.gif" alt="이전달" width="13" height="13" class="over pre"></a>
+											<strong class="title">2012.5</strong>
+											<a href="#" class="btn_next_month"><img src="img/ext/btn_calendar_next_on.gif" alt="다음달" width="13" height="13" class="over next"></a>
+											<a href="#" class="btn_next_year"><img src="img/ext/btn_calendar_last_on.gif" alt="다음년" width="14" height="13" class="over"></a>
+										</div>
+										<table class="calendar" cellspacing="0" cellpadding="0">
+										<thead>
+										<tr>
+										<th class="sun">sun</th>
+										<th>mon</th>
+										<th>tue</th>
+										<th>wed</th>
+										<th>thu</th>
+										<th>fri</th>
+										<th class="sat">sat</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr class="week">
+										<td class="prev_month sun"><a href="#" class="date">29</a></td>
+										<td class="prev_month"><a href="#" class="date">30</a></td>
+										<td><a href="#" class="date">1</a></td>
+										<td><a href="#" class="date">2</a></td>
+										<td><a href="#" class="date">3</a></td>
+										<td class="today selected"><a href="#" class="date">4</a></td>
+										<td class="sat holiday"><a href="#" class="date">5</a></td>
+										</tr>
+										<tr class="week">
+										<td class="sun"><a href="#" class="date">6</a></td>
+										<td><a href="#" class="date">7</a></td>
+										<td><a href="#" class="date">8</a></td>
+										<td><a href="#" class="date">9</a></td>
+										<td><a href="#" class="date">10</a></td>
+										<td><a href="#" class="date">11</a></td>
+										<td class="sat"><a href="#" class="date">12</a></td>
+										</tr>
+										<tr class="week">
+										<td class="sun"><a href="#" class="date">13</a></td>
+										<td><a href="#" class="date">14</a></td>
+										<td><a href="#" class="date">15</a></td>
+										<td><a href="#" class="date">16</a></td>
+										<td><a href="#" class="date">17</a></td>
+										<td><a href="#" class="date">18</a></td>
+										<td class="sat"><a href="#" class="date">19</a></td>
+										</tr>
+										<tr class="week">
+										<td class="sun"><a href="#" class="date">20</a></td>
+										<td><a href="#" class="date">21</a></td>
+										<td><a href="#" class="date">22</a></td>
+										<td><a href="#" class="date">23</a></td>
+										<td><a href="#" class="date">24</a></td>
+										<td><a href="#" class="date">25</a></td>
+										<td class="sat"><a href="#" class="date">26</a></td>
+										</tr>
+										<tr class="week">
+										<td class="sun"><a href="#" class="date">27</a></td>
+										<td class="holiday"><a href="#" class="date">28</a></td>
+										<td><a href="#" class="date">29</a></td>
+										<td><a href="#" class="date">30</a></td>
+										<td><a href="#" class="date">31</a></td>
+										<td class="next_month"><a href="#" class="date">1</a></td>
+										<td class="next_month sat"><a href="#" class="date">2</a></td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="#"></a>
+						<input type="image" class="btn_smit" alt="조회" src="http://test.static.land.naver.net/static/center/btn_srch.gif">
+					</dd>
+					<dt><strong>매물번호</strong></dt>
+					<dd><input type="text" id="atcl_no" name="s_atcl_no" value="" class="input_text">
+						<input type="image" src="img/btn_search.gif" alt="검색">
+					</dd>
+					</dl>
+				</div>
+				<div class="bg_set_condition_b2"></div>
+			</form>
+			</fieldset>
+
+			<h3 class="salelist_tit" id="listTitle"><strong>[전체]</strong> 전체</h3>
+			<div class="list_option">
+				<a href="#"></a>
+				<div class="sort_wrap">
+					<span class="cf_wrap">
+						<img src="img/ico_moneta.gif" width="30" height="14" alt="모네타">모네타
+						<img src="img/ico_r114.gif" width="20" height="14" alt="부동산114">부동산114
+					</span>
+					<input type="radio" name="atcl_stat_cd" id="sale_type1" class="input_radio">전체(91)</label>
+					<input type="radio" name="atcl_stat_cd" id="sale_type2" class="input_radio">결제대기(17)</label>
+					<input type="radio" name="atcl_stat_cd" id="sale_type3" class="input_radio">중개요청(0)</label>
+					<input type="radio" name="atcl_stat_cd" id="sale_type4" class="input_radio">확인중(26)</label>
+					<input type="radio" name="atcl_stat_cd" id="sale_type5" class="input_radio">확인실패(1)</label>
+					<input type="radio" name="atcl_stat_cd" id="sale_type6" class="input_radio">서비스중(47)</label>
+					<select name="page_size" style="width:85px">
+					<option value="15">15개씩 보기</option>
+					<option value="20">20개씩 보기</option>
+					<option value="25">25개씩 보기</option>
+					<option value="30">30개씩 보기</option>
+					<option value="35">35개씩 보기</option>
+					<option value="40">40개씩 보기</option>
+					<option value="45">45개씩 보기</option>
+					<option value="50">50개씩 보기</option>
+					</select>
+				</div>
+			</div>
+
+			<table border="1" cellpadding="0" cellspacing="0" summary="매물 리스트" class="tbl_list_type3" style="width:100%">
+			<caption>매물 리스트</caption>
+			<colgroup>
+			<col width="25"><col width="120"><col width="71"><col width="38"><col width="58"><col width="115"><col width="120"><col width="91"><col width="59"><col width="71"><col width="64"><col width="52"><col width="56">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col"><input type="checkbox" class="input_check"></th>
+			<th scope="col"><a href="#" class="sort_down">상품</a></th>
+			<th scope="col">매물번호</th>
+			<th scope="col">거래</th>
+			<th scope="col">매물종류</th>
+			<th scope="col">소재지</th>
+			<th scope="col"><a href="#" class="sort_down">매물명</a></th>
+			<th scope="col">매물설명</th>
+			<th scope="col">면적</th>
+			<th scope="col"><a href="#" class="sort_down">매물가</a></th>
+			<th scope="col"><a href="#" class="sort_down">등록기간</a></th>
+			<th scope="col" colspan="2"><a href="#" class="sort_down">진행상황</a></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="first">
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">포커스<br>모바일 프리미엄<br>PC 구동노출</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr class="even">
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">모바일 프리미엄</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr>
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">PC 구동노출</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr class="even">
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">포커스</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr>
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">포커스</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr class="even">
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">포커스</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr>
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">포커스</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			<tr class="even">
+			<td><input type="checkbox" name="ch_atcl_no" value="1200053310" class="input_check"></td>
+			<td class="goods">포커스</td>
+			<td class="num"><a href="#">1200053310</a></td>
+			<td>매매</td>
+			<td>아파트</td>
+			<td><a href="#">강남구<br>논현동</a></td>
+			<td title="논현동한진로즈힐"><a href="#">논현동한진로즈힐</a></td>
+			<td title="102동 12호"><a href="#">102동 12호</a></td>
+			<td class="count"><span title="공급면적/전용면적(111.21/84.94)">111.21/8..</span></td>
+			<td class="price" title="1,212"><strong>1,212</strong></td>
+			<td class="period">~</td>
+			<td class="state">정보확인<br><span>(확인중)</span></td>
+			<td class="state_btn"><a href="#"><img src="img/btn_confirm.gif" width="28" height="19" alt="확인"></a><a href="#"></a></td>
+			</tr>
+			</tbody>
+			</table>
+
+			<p class="txt_unit" style="float:right;margin-top:9px">(단위 : 만원, ㎡)</p>
+			<div class="paginate">
+				<a href="#" style="margin-right:0px;padding:0px;background:#fff;"><strong>1</strong></a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#" class="next_end">끝 </a>
+			</div>
+			<div style="margin-top:10px;padding:10px 0 10px 15px;border:1px solid #dedede;background:#f7f7f7;text-align:left;color:#606060;line-height:140%">
+				<h2>확인해주세요!!</h2>
+				<ul style="margin-top:3px">
+				<li style="line-height:150%">* 매물 정보 확인 중 1차 실패된 경우에는 매물 정보를 수정하신 후 재발송하실 수 있습니다. 예)정보확인(확인실패)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<img src="img/@footer.gif" width="960" height="66" alt="푸터 임시 이미지">
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>도전 퀴즈왕</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+</head>
+<body class="">
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<div class="t_content">
+	<!-- 페이지 타이틀 영역 -->
+	<div class="h2_titarea"></div>
+	<div class="h_area">
+		<a href="#" class="btn_lt">목록</a>
+		<h3 class="tit_h">뜻 고르기</h3>
+		<span class="txt_rt"><em class="ct_num">2</em> / <em class="all_num">15</em></span>
+	</div>
+	<div class="slid_area quiz_box">
+		<div class="slid" style="height:350px">
+			<div class="book_bg3" style="display:block">
+				<div class="flk_top_v2">
+					<div class="tim_box"><span class="tim_ico tim_sp12">11s</span></div>
+					<p class="cen_txt colb6">caclolgy</p>
+				</div>
+				<div class="flk_dn3">
+					<ol>
+					<li><a href="#" class="btn_lk"><span>a.</span>삼가는 태도</a></li>
+					<!-- [D] 활성화시 클래스 on 추가 -->
+					<li class="on"><a href="#" class="btn_lk"><span>b.</span>자기 기만의</a></li>
+					<li><a href="#" class="btn_lk"><span>c.</span>말의 오용</a></li>
+					<li><a href="#" class="btn_lk"><span>d.</span>모순</a></li>
+					</ol>
+				</div>
+			</div>
+			<p class="btm_txt4">단어를 보고 뜻을 선택하세요.</p>
+		</div>
+	</div>
+</div>
+<hr />
+
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver1"></div>
+
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/header_challenge.html', sel:'.h2_titarea'},
+        {path:'include/footer.html', sel:'.__ver1'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

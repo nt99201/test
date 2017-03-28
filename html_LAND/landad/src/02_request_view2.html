@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>의뢰상세_신규 :: 부동산 매물관리센터</title>
+<link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<? include("00_header_incl2.html"); ?>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container" class="sub">
+		<div id="content" class="content">
+			<div class="title_area">
+				<h2 class="t_rqview">맞춤매물 의뢰 상세 정보</h2>
+			</div>
+			<div class="stitle_area mgt21">
+				<h3 class="t_essential_info">의뢰 필수 정보</h3>
+				<p>의뢰가 전달된 중개업소 수 <strong>5</strong></p>
+			</div>
+			<div class="essential_area_wrap">
+				<div class="essential_area">
+					<!-- 의뢰 필수정보 테이블 -->
+					<table cellspacing="0" border="1" summary="의뢰필수정보" class="table_es">
+					<caption>의뢰필수정보</caption>
+					<colgroup>
+					<col width="140"><col width="337"><col width="140"><col width="338">
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">거래종류</th>
+					<td><div>매매,전세</div></td>
+					<th scope="row">매물종류</th>
+					<td><div>아파트, 오피스텔, 분양권, 빌라, 주택, 원룸, 재개발</div></td>
+					</tr>
+					<tr>
+					<th scope="row">지역</th>
+					<td>
+						<div class="region">
+							경기도 고양시 일산동구 정발산동
+							<span class="right">
+								<strong>1</strong>/3 &nbsp;<a href="#" class="btn_prev_off">이전</a><a href="#" class="btn_next_on">다음</a>
+							</span>
+						</div>
+					</td>
+					<th scope="row" rowspan="2">선택단지</th>
+					<td rowspan="2" class="complex_area">
+						<div>금광아크아파트, 대현큰마을, 담방마을 금호아파트 2차, 부영7단지 아파트, 햇빛마을 벽산아파트, 태화아파트, LG 개포자이, 포이현대아파트, 쌍용개포아파트, 우성2차 아파트,금광아크아파트, 대현큰마을, 담방마을 금호아파트 2차, 부영7단지 아파트, 햇빛마을 벽산아파트, 태화아파트, LG 개포자이, 포이현대아파트, 쌍용개포아파트, 우성2차 아파트</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">가격(만원)</th>
+					<td><div class="ls">3억~5억</div></td>
+					</tr>
+					<tr>
+					<!-- th scope="row">면적(㎡)</th -->
+                    <th scope="row">
+						<div class="ly_w" style="color: #4c6383">면적(평)
+							<div class="ly_a">
+								<a href="javascript:void(0);" class="ly_b" onclick="document.getElementById('_tooltip_area').style.display='block';">면적(평) 안내</a>
+								<div class="ly_v" id="_tooltip_area" style="display:none; width:130px;">
+									<span class="ly_ic"></span>
+									<dl>
+										<dt>기준</dt>
+										<dd><em>오피스텔 :</em> 전용면적</dd>
+										<dd><em>주택·원룸(매매) :</em> 대지면적</dd>
+										<dd><em>그 외 매물 :</em> 공급면적</dd>
+									</dl>
+									<a href="javascript:void(0);" class="btn_clse" style="top:3px;right:2px;" onclick="document.getElementById('_tooltip_area').style.display='none';"><span>면적(평) 안내 닫기</span></a>
+								</div>
+							</div>
+						</div>
+					</th>
+					<td><div class="ls">65㎡~100㎡</div></td>
+					<th scope="row">입주희망일</th>
+					<td><div class="ls">2012년 01월 입주</div></td>
+					</tr>
+					<tr>
+					<th scope="row">의뢰지역 확인</th>
+					<td colspan="3">
+						<!-- 지도 영역 -->
+						<div class="map_area"><img src="img/@map2.gif" alt=""></div>
+						<!-- //지도 영역 -->
+					</td>
+					</tr>
+					</tbody>
+					</table>
+					<!-- //의뢰 필수정보 테이블 -->
+				</div>
+			</div>
+			<div class="stitle_area mgt26">
+				<h3 class="t_add_info">의뢰 추가 정보</h3>
+			</div>
+			<table cellspacing="0" border="1" summary="의뢰 추가 정보" class="table_add">
+			<caption>의뢰 추가 정보</caption>
+			<colgroup>
+			<col width="99"><col width="159"><col width="98"><col width="159"><col width="98"><col width="">
+			</colgroup>
+			<tbody>
+			<tr>
+			<th scope="row">총세대수</th>
+			<td>300~500세대</td>
+			<th scope="row">준공년도</th>
+			<td>5년이내</td>
+			<th scope="row" rowspan="2">희망거래조건</th>
+			<td rowspan="2" class="cont">
+				<div>원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤매물을 발견하고 의뢰를 신청하게 되었습니다. <br>올수리가 되어 있는 깨끗한 매물 추천을 부탁드립니다. 원하는 조건에 맞는 집을 찾기 어려워 발품을 팔다 맞춤매물을 발견하고 의뢰를 신청하게 되었습니다. <br>올수리가 되어 있는 깨끗한 매물 추천을 부탁드립니다.</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row">층 수</th>
+			<td>중층이상</td>
+			<th scope="row">구조(원룸)</th>
+			<td>상관없음</td>
+			</tr>
+			<tr>
+			<th scope="row">방 수</th>
+			<td>3</td>
+			<th scope="row">욕실 수</th>
+			<td>2</td>
+			<th scope="row" rowspan="2">검수 추가사항</th>
+			<td rowspan="2" class="cont">
+				<div>아파트 매물에 대해 의뢰하였으나, 해당하는 매물이 없을 경우 동일한 가격/평형의 주택 매물도 추가합니다. 아파트 매물에 대해 의뢰하였으나, 해당하는 매물이 없을 경우 동일한 가격/평형의 주택 매물도 추가합니다.</div>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row">전세끼고매매</th>
+			<td>불가능</td>
+			<th scope="row">융자금유무</th>
+			<td>상관없음</td>
+			</tr>
+			</tbody>
+			</table>
+			<!-- btn area -->
+			<div class="btn_area2">
+				<a href="#" class="btn_recommend">매물추천하기</a>
+				<a href="#" class="btn_return">의뢰반려하기</a>
+				<span class="right"><a href="#" class="btn_golist2">목록으로 돌아가기</a></span>
+			</div>
+			<!-- //btn area -->
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<? include("00_footer_incl.html"); ?>
+	<!-- //footer -->
+</div>
+</body>
+</html>

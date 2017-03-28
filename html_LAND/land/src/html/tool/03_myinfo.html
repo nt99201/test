@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>내 정보관리 :: 부동산 영업툴</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_tool.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- skip to content -->
+	<a href="#content" class="skip">본문 바로가기</a>
+	<!-- //skip to content -->
+
+	<!-- header -->
+	<div id="header">
+	</div>
+	<!-- //header -->
+	<div id="container">
+		<!-- content -->
+		<div id="content">
+			<h2 class="h_tit"><span class="h_myinfo">내 정보관리</span></h2>
+			<div class="section_myinfo">
+				<h3 class="h_stit"><span class="h_comp">필수정보</span></h3>
+				<a href="#" class="btn btn_out">탈퇴요청</a>
+				<table cellspacing="0" border="1" summary="정보입력/선택" class="tbl_tool">
+				<caption>정보입력/선택</caption>
+				<colgroup>
+				<col width="133"><col>
+				</colgroup>
+				<tbody> 
+				<tr class="frst">
+				<th scope="row">소속대행사</th>
+				<td>부동산몰</td>
+				</tr>
+				<tr>
+				<th scope="row">요청권한</th>
+				<td>영업관리자</td>
+				</tr>
+				<tr>
+				<th scope="row">이름</th>
+				<td>홍길동</td>
+				</tr>
+				<tr>
+				<th scope="row">휴대폰번호</th>
+				<td>
+					<select style="width:50px">
+					<option>선택</option>
+					<option>010</option>
+					<option>010</option>
+					</select>
+					-
+					<input type="text" style="width:40px" class="input_txt">
+					-
+					<input type="text" style="width:40px" class="input_txt">
+					<a href="#" class="btn btn_phone"><span class="blind">휴대폰인증 </span></a>
+					<p class="tbl_tx">휴대폰 번호를 입력하신 후 <em>휴대폰인증</em> 버튼을 눌러주세요.</p>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">재직상태</th>
+				<td>
+					<span class="tc_r">인증만료</span> <a href="#" class="btn btn_renew"><span class="blind">소속인증 갱신</span></a>
+					<p class="tbl_tx">&lsquo;인증만료&rsquo; 시 <em>소속인증 갱신</em> 버튼을 누르면, 소속 대행사의 &lsquo;영업관리자&rsquo;에게 재직 상태에 대한 갱신 요청이 접수됩니다.  <br>소속 인증을 갱신하지 않은 상태로 <em>O일</em> 경과 시 <em>자동으로 &lsquo;퇴사&rsquo; 상태로 변경</em>되며, 퇴사 상태에서는 영업툴을 이용하실 수 없습니다. </p>
+				</td>
+				</tr>
+				</tbody> 
+				</table>
+			</div>
+			<div class="btn_area">
+				<a href="#" class="btn btn_info_edt"><span class="blind">정보변경</span></a>
+				<a href="#" class="btn btn_cancel2"><span class="blind">취소</span></a>
+			</div>
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="960" height="68" alt="">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

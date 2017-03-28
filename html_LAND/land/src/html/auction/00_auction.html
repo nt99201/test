@@ -1,0 +1,602 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/auction.css">
+<!-- selectbox - JS include -->
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/jindo2.all.js?cssquery=true&refresh=true&debug=true"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/htmlcomponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/sale/lib.sale.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/boxmodel.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/simulateFocus.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://land.naver.com/js/legacy/home/selectbox.patch090224.js"></script>
+<!--// selectbox - JS include -->
+</head>
+<body>
+<div id="wrap" onload="getGNB();">
+
+    <div id="u_skip">
+        <a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+        <a href="#container"><span>본문으로 바로가기</span></a>
+    </div>
+
+    <!-- 원네이버 GNB -->
+    <div id="header" class="header_one">
+        <div class="gnb_wrap">
+            <div class="inner_wrap">
+                <div class="item_area">
+                    <h1 class="logo_area">
+                        <a class="logo_naver" href="http://www.naver.com" title="나의 경쟁력, 네이버"><i class="icon">네이버</i></a>
+                        <a class="logo_land" href="http://land.naver.com"><i class="icon">부동산</i></a>
+                    </h1>
+                    <div class="inner_gnb_search">
+                        <h2 class="blind">검색영역</h2>
+                        <fieldset>
+                            <legend>부동산 검색</legend>
+                            <input type="text" title="검색" class="search_input" placeholder="지역명 또는 단지명">
+                            <a href="#" onclick="" class="search_button type_inside"><i class="icon">검색</i></a>
+                            <a href="#" onclick="" class="search_button type_integration"><i class="icon">통합검색</i></a>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="gnb_area">
+                    <div id="gnb">
+                        <script type="text/javascript">
+                        var nsc = "naver.service";
+                        var gnb_service = "static.nid.naver.com";
+                        var gnb_logout = "http://nid.naver.com/mytest/gnbtest.html";
+                        var gnb_template = "gnb_utf8";
+                        var gnb_one_naver = 1;
+                        </script>
+                        <script charset="utf-8" type="text/javascript" src="http://static.gn.naver.net/template/gnb_utf8.nhn"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lnb" class="nav_wrap">
+            <h2 class="blind">메인메뉴</h2>
+            <div class="inner_wrap">
+                <!-- [D] 활성화 클래스 on -->
+                <ul class="nav_list">
+                <li class="menu main_home"><a href="#">부동산 홈</a></li>
+                <li class="menu main_article"><a href="#">매물</a></li>
+                <li class="menu main_isale"><a href="#">분양</a></li>
+                <li class="menu main_news"><a href="#">뉴스</a></li>
+                <li class="menu main_community"><a href="#">커뮤니티</a></li>
+                <li class="menu main_auction on"><a href="#">경매</a></li>
+                <li class="menu main_mypage"><a href="#">MY페이지</a></li>
+                </ul>
+                <div class="button_area">
+                    <a class="type_admin" href="http://landad.naver.com">부동산관리센터</a>
+                </div>
+            </div>
+        </div>
+        <div class="sub_nav_wrap">
+            <h2 class="blind">서브메뉴</h2>
+            <div class="inner_wrap">
+                <!-- [D] 활성화 클래스 on -->
+                <ul class="sub_nav_list">
+                <li class="menu auction_beginner on"><a href="#">물건상세조회</a></li>
+                <li class="menu auction_search"><a href="#">일정별조회</a></li>
+                <li class="menu auction_report"><a href="#">무료조회물건</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //원네이버 GNB -->
+
+	<div id="container">
+		<!-- 100716 개편안내 레이어 -->
+		<div class="ly_open" style="display:none">
+			<a href="#" class="btn_clse">닫기</a>
+			<div class="cont">
+				<h2 class="blind">누구나 쉽게 사용 할 수 있는 네이버 부동산 경매 서비스</h2>
+				<dl class="blind">
+				<dt>경매 초보자를 위해</dt>
+				<dd>경매 입문자를 위한 동영상 강좌가 무료로 제공됩니다.</dd>
+				<dd>지도에서 경매 물건을 검색하여 쉽게 찾을 수 있습니다.</dd>
+				<dd>다양하게 발생되는 유형별 경매상담 사례가 제공됩니다.</dd>
+				</dl>
+				<dl class="blind">
+				<dt>경매 고수를 위해</dt>
+				<dd>경매 물건의 기본 정보들을 무료로 조회하실 수 있습니다.</dd>
+				<dd>지역, 기간, 물건종류별 낙찰 통계 정보가 무료로  제공됩니다.</dd>
+				<dd>물건 조회 시간을 줄일 수 있는 상세조건 검색이 제공됩니다.</dd>
+				</dl>
+			</div>
+			<a href="#" class="btn_user">기존 유료 서비스 이용자 공지사항 보기</a>
+			<div class="btn_area">
+				<input type="checkbox" id="ly_clse"><label for="ly_clse">일주일간 보이지 않기</label>
+				<button type="button" class="btn_clse2">닫기</button>
+			</div>
+		</div>
+		<!-- //100716 개편안내 레이어 -->
+		<div id="content">
+			<!-- 경매 홈 -->
+			<div class="spot_home">
+				<div class="auction_type">
+					<h2 class="h_type"><strong>STEP 01</strong><span>경매종류 선택</span></h2>
+					<ul>
+					<li class="on"><input type="checkbox" id="type1" class="input_chk" checked="checked"><label for="type1" class="type1"><span>아파트</span></label></li>
+					<li><input type="checkbox" id="type2" class="input_chk"><label for="type2" class="type2"><span>오피스텔</span></label></li>
+					<li><input type="checkbox" id="type3" class="input_chk"><label for="type3" class="type3"><span>주택</span></label></li>
+					<li><input type="checkbox" id="type4" class="input_chk"><label for="type4" class="type4"><span>토지</span></label></li>
+					<li><input type="checkbox" id="type5" class="input_chk"><label for="type5" class="type5"><span>상가점포</span></label></li>
+					<li><input type="checkbox" id="type6" class="input_chk"><label for="type6" class="type6"><span>사무실</span></label></li>
+					<li><input type="checkbox" id="type7" class="input_chk"><label for="type7" class="type7"><span>공장</span></label></li>
+					<li><input type="checkbox" id="type8" class="input_chk"><label for="type8" class="type8"><span>건물</span></label></li>
+					<li><input type="checkbox" id="type9" class="input_chk"><label for="type9" class="type9"><span>기타</span></label></li>
+					</ul>
+					<a href="#" class="btn_search2">상세조회</a>
+				</div>
+				<div class="auction_area">
+					<h2 class="h_area"><strong>STEP 02</strong><span>경매 소재지 선택</span></h2>
+					<div class="map_area">
+						<div class="map">
+							<img src="img/auction/@tmp_map2.gif" width="171" height="149" alt="" style="vertical-align:top;">
+						</div>
+						<div class="area">
+							<a href="#" class="area1 on"><span>서울</span></a>
+							<a href="#" class="area2"><span>경기</span></a>
+							<a href="#" class="area3"><span>인천</span></a>
+							<a href="#" class="area4"><span>부산</span></a>
+							<a href="#" class="area6"><span>대구</span></a>
+							<a href="#" class="area5"><span>대전</span></a>
+							<a href="#" class="area8"><span>광주</span></a>
+							<a href="#" class="area7"><span>울산</span></a>
+							<a href="#" class="area17"><span>세종</span></a>
+							<a href="#" class="area9"><span>강원</span></a>
+							<a href="#" class="area12"><span>경북</span></a>
+							<a href="#" class="area13"><span>경남</span></a>
+							<a href="#" class="area10"><span>충북</span></a>
+							<a href="#" class="area11"><span>충남</span></a>
+							<a href="#" class="area14"><span>전북</span></a>
+							<a href="#" class="area15"><span>전남</span></a>
+							<a href="#" class="area16"><span>제주</span></a>
+						</div>
+					</div>
+					<a href="#" class="btn_search2">상세조회</a>
+				</div>
+				<p class="desc_search"><span>경매 종류를 선택하신 후 경매 소재지를 선택하시면 물건 상세 정보를 확인 하실 수 있습니다</span></p>
+			</div>
+			<div class="auction_list">
+				<div class="auction_newbie">
+                    <div class="tabCtrler">
+                        <div class="h_top">
+                            <h3><span class="popular"><em class="blind">지역별 인기 경매 물건</em></span></h3>
+                            <span class="more"><a href="#"><em class="blind">더보기</em></a></span>
+                        </div>
+                        <ul class="areaTab">
+                            <li class="prev"><a href="#"><em class="blind">이전</em></a></li>
+                            <li class="on"><a href="#">서울시</a></li>
+                            <li><a href="#">경기도</a></li>
+                            <li><a href="#">인천시</a></li>
+                            <li><a href="#">부산시</a></li>
+                            <li><a href="#">대전시</a></li>
+                            <li><a href="#">대구시</a></li>
+                            <li class="last"><a href="#">울산시</a></li>
+                            <li class="next"><a href="#"><em class="blind">다음</em></a></li>
+                        </ul>
+                        <div class="thumBox">
+                            <ul>
+                            <li class="picObj">
+                                <a href="#">
+                                    <span class="thumb"><img src="http://upload2.inven.co.kr/upload/2015/06/03/data/i11067205498.jpg" width="96" height="74" alt=""/></span>
+                                    <dl>
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                        <dt class="views">조회수</dt>
+                                        <dd>2,986</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="picObj">
+                                <a href="#">
+                                    <span class="thumb"><img src="http://upload2.inven.co.kr/upload/2015/06/03/data/i11067205498.jpg" width="96" height="74" alt=""/></span>
+                                    <dl>
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                        <dt class="views">조회수</dt>
+                                        <dd>2,986</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="picObj">
+                                <a href="#">
+                                    <span class="thumb"><img src="http://upload2.inven.co.kr/upload/2015/06/03/data/i11067205498.jpg" width="96" height="74" alt=""/></span>
+                                    <dl>
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                        <dt class="views">조회수</dt>
+                                        <dd>2,986</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hotNews">
+                        <div class="h_top">
+                            <h3><span class="hotAuc"><em class="blind">핫 경매 뉴스</em></span></h3>
+
+                        </div>
+                        <div class="thumbDesc">
+                            <a href="#">
+                                <p class="thumb"><img src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/champions/Ahri_Square_0_1.jpg" width="96" height="74" alt=""/></p>
+                                <div class="ImgInfo">
+                                    <h4>[서울시] 전지현 삼성동 주택 75억 매입 송혜교...</h4>
+                                    <p class="from"><span>머니투데이</span><span>2015.00.00</span></p>
+                                    <p class="txInfo">부동산 자산만 300억원에 달하는 인기 여배우 전지현(왕지현·34)이 지난해 6월 서울 삼성동의 한
+                                        단독주택을 추가 매입한 것이...
+                                    </p>
+                                </div>
+                            </a>
+                            <dl>
+                                <dt>지&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;역</dt>
+                                <dd>서울시 삼성동</dd>
+                                <dt>물건종류</dt>
+                                <dd>단독주택</dd>
+                            </dl>
+                            <p class="btn_cfrm"><a href=""><em class="blind">경매물건 확인</em></a></p>
+                        </div>
+                    </div>
+				</div>
+				<div class="auction_member">
+                    <div class="tabCtrler">
+                        <div class="h_top">
+                            <h3><span class="aptAuc"><em class="blind">저렴한 아파트/빌라 경매</em></span></h3>
+                            <span class="more"><a href="#"><em class="blind">더보기</em></a></span>
+                        </div>
+                        <ul class="areaTab">
+                            <li class="prev"><a href="#"><em class="blind">이전</em></a></li>
+                            <li class="on"><a href="#">서울시</a></li>
+                            <li><a href="#">경기도</a></li>
+                            <li><a href="#">인천시</a></li>
+                            <li><a href="#">부산시</a></li>
+                            <li><a href="#">대전시</a></li>
+                            <li><a href="#">대구시</a></li>
+                            <li class="last"><a href="#">울산시</a></li>
+                            <li class="next"><a href="#"><em class="blind">다음</em></a></li>
+                        </ul>
+                        <div class="thumBox">
+                            <ul>
+                            <li class="picObj">
+                                <a href="#">
+                                    <span class="thumb"><img src="http://upload2.inven.co.kr/upload/2015/06/03/data/i11067205498.jpg" width="96" height="74" alt=""/></span>
+                                    <dl>
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                        <dt class="views">감정가대비</dt>
+                                        <dd>20%</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="picObj">
+                                <a href="#">
+                                    <span class="thumb"><img src="http://upload2.inven.co.kr/upload/2015/06/03/data/i11067205498.jpg" width="96" height="74" alt=""/></span>
+                                    <dl>
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                        <dt class="views">감정가대비</dt>
+                                        <dd>60%</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="picObj">
+                                <a href="#">
+                                    <span class="thumb"><img src="http://upload2.inven.co.kr/upload/2015/06/03/data/i11067205498.jpg" width="96" height="74" alt=""/></span>
+                                    <dl>
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                        <dt class="views">감정가대비</dt>
+                                        <dd>21%</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="freeAucArea">
+                        <div class="h_top">
+                            <h3><span class="freeAuc"><em class="blind">지역별 인기 경매 물건</em></span></h3>
+                            <span class="more"><a href="#"><em class="blind">더보기</em></a></span>
+                        </div>
+                        <div class="imgInfo">
+                            <ul>
+                            <li class="divObj">
+                                <a href="#">
+                                    <p><img src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/champions/Nidalee_Square_0.jpg" width="96" height="74" alt=""/></p>
+                                    <div class="desc">
+                                        <h4>
+                                            <strong>[그린상가]</strong>
+                                            <span>서울특별시 강남구 역삼동</span>
+                                        </h4>
+                                        <dl>
+                                            <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                            <dd>150,000만원</dd>
+                                            <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                            <dd>94,000만원</dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divObj">
+                                <a href="#">
+                                    <p><img src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/champions/Nidalee_Square_0.jpg" width="96" height="74" alt=""/></p>
+                                    <div class="desc">
+                                        <h4>
+                                            <strong>[그린상가]</strong>
+                                            <span>서울특별시 강남구 역삼동</span>
+                                        </h4>
+                                        <dl>
+                                            <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                            <dd>150,000만원</dd>
+                                            <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                            <dd>94,000만원</dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="auction_info">
+                    <div class="h_top">
+                        <h3>
+                            <span class="focusIssue"><em class="blind">경매 결과 포커스 이슈</em></span>
+                            <span class="date">00월00일()</span>
+                        </h3>
+                    </div>
+                    <div class="issueWrap">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p class="thumb">
+                                        <span class="label">서울시 근립상가</span>
+                                        <img src="http://upload2.inven.co.kr/upload/2015/06/10/bbs/i13117884241.jpg" width="150" height="108" alt=""/>
+                                    </p>
+                                    <p class="thumbDesc">
+                                        <span>최고매각가</span>
+                                        <span>10,210,000만원</span>
+                                    </p>
+                                    <dl class="price">
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>96,000만원</dd>
+                                        <dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="thumb">
+                                        <span class="label">서울시 근립상가</span>
+                                        <img src="http://upload2.inven.co.kr/upload/2015/06/10/bbs/i13117884241.jpg" width="150" height="108" alt=""/>
+                                    </p>
+                                    <p class="thumbDesc">
+                                        <span>최고매각가</span>
+                                        <span>210,000만원</span>
+                                    </p>
+                                    <dl class="price">
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>10,250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>96,000만원</dd>
+                                        <dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="thumb">
+                                        <span class="label">서울시 근립상가</span>
+                                        <img src="http://upload2.inven.co.kr/upload/2015/06/10/bbs/i13117884241.jpg" width="150" height="108" alt=""/>
+                                    </p>
+                                    <p class="thumbDesc">
+                                        <span>최고매각가</span>
+                                        <span>210,000만원</span>
+                                    </p>
+                                    <dl class="price">
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>96,000만원</dd>
+                                        <dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="thumb">
+                                        <span class="label">서울시 근립상가</span>
+                                        <img src="http://upload2.inven.co.kr/upload/2015/06/10/bbs/i13117884241.jpg" width="150" height="108" alt=""/>
+                                    </p>
+                                    <p class="thumbDesc">
+                                        <span>최고매각가</span>
+                                        <span>210,000만원</span>
+                                    </p>
+                                    <dl class="price">
+                                        <dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+                                        <dd>250,000만원</dd>
+                                        <dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+                                        <dd>96,000만원</dd>
+                                        <dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+                                        <dd>98,000만원</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+			</div>
+			<!-- //경매 홈 -->
+		<div class="aside">
+			<!-- 배너 -->
+			<div class="banner_area">
+				<!-- [D] 배너크기 280px x 240px -->
+				<img src="img/auction/@tmp_aside_banner.gif" width="280" height="240" alt="" style="display:block">
+			</div>
+			<!-- //배너 -->
+			<!-- 사건번호/법원 조회 -->
+			<div class="aside_content section_search">
+				<ul class="tab_search search1">
+				<li class="tab1"><a href="#"><span>사건번호 조회</span></a></li>
+				<li class="tab2"><a href="#"><span>법원 조회</span></a></li>
+				</ul>
+				<div class="search_area">
+					<div class="selectbox-naked" style="float:left;margin:2px 13px 0 0">
+						<select class="selectbox-source" id="num">
+							<option value="">전체</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+						<div id="selectbox-layer" class="selectbox-layer series_layer">
+							<ul class="selectbox-list"></ul>
+						</div>
+					</div>
+					<span class="p_num">타경</span>
+					<input type="text" class="input_txt">
+					<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_search.gif" alt="조회">
+				</div>
+				<script type="text/javascript">
+				<!--
+					new Selectbox($('num'),{ width : "57", height : false });
+
+				//-->
+				</script>
+			</div>
+			<!-- //사건번호/법원 조회 -->
+			<!-- 용어검색 -->
+			<div class="aside_content section_term">
+				<h3 class="h_term"><span>용어검색</span></h3>
+				<div class="term_list">
+					<a href="#">유치권</a>, <a href="#">권리분석</a>, <a href="#">지상권</a>, <a href="#">가간지</a>
+				</div>
+				<div class="term_search">
+					<input type="text" class="input_txt">
+					<input type="image" src="http://static.land.naver.net/static/service/20160712/auction/btn_search4.gif" alt="검색">
+				</div>
+			</div>
+			<!-- //용어검색 -->
+			<!-- 경매결과 -->
+			<div class="aside_content section_result">
+				<h3 class="h_result"><span>경매결과</span></h3>
+				<div class="btn_area">
+					<a href="#" class="btn_result"><span>실시간 경매 결과</span></a>
+					<a href="#" class="btn_result2"><span>경매 결과 리포트</span></a>
+				</div>
+			</div>
+			<!-- //경매결과 -->
+			<!-- 경매 캘린더 -->
+			<div class="aside_content section_calendar">
+				<h3 class="h_calendar"><span>경매 캘린더</span></h3>
+				<div class="calendar_area">
+					<div class="date">
+						<a href="#" class="btn prev"><span>이전</span></a>
+						<span class="dot"><span class="num num_2010">2010</span></span><span class="dot"><span class="num num_1">01</span></span><span class="day"><span class="num num_1">01</span></span>
+						<a href="#" class="btn next"><span>다음</span></a>
+					</div>
+					<div class="calendar_list">
+						<ul>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">서울중앙본원 10계</a></li>
+						<li><a href="#">광주본원 22계</a></li>
+						<li><a href="#">광주본원 22계</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //경매 캘린더 -->
+			<!-- 경매 관련서적 -->
+			<div class="aside_content section_book">
+				<h3 class="h_book"><span>경매 관련서적</span></h3>
+				<div class="book_area">
+					<a href="#">
+						<span class="thmb">
+							<img src="img/auction/@tmp_book.gif" width="66" height="86" alt=""><span class="mask"></span>
+						</span>
+						<span class="info">
+							<strong>유치권 법정지상권 공략 119</strong>
+							<span>부동산 경매 첫걸음을 위해서는 유치권 법정지상권을 공략하는 것이 무엇보다도 중요...</span>
+						</span>
+					</a>
+				</div>
+				<div class="btn_area">
+					<a href="#" class="btn prev"><span>이전</span></a>
+					<a href="#" class="btn next"><span>다음</span></a>
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //경매 관련서적 -->
+			<!-- 경매결과 -->
+			<div class="aside_content section_notice">
+				<h3 class="h_notice"><span>법원공지안내</span></h3>
+				<ul class="notice_list">
+				<li><a href="#">강제경매개시결정에 대한 이의신청은...</a></li>
+				<li><a href="#">강제경매개시결정에 대한 이의신청은...</a></li>
+				<li><a href="#">강제경매개시결정에 대한 이의신청은...</a></li>
+				</ul>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<!-- //경매결과 -->
+			<!-- 배너 -->
+			<div class="aside_content section_banner">
+				<a href="#"><img src="img/auction/banner_goodauction.gif" width="240" height="41" alt="경매정보 자료제공 - 굿옥션"></a>
+			</div>
+			<!-- //배너 -->
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<div class="footwrap">
+			<fieldset>
+				<legend class="blind">검색</legend>
+				<div class="sta_search_box">
+					<input type="text" title="검색" value="2억이하 아파트 전세" accesskey="s" class="sta_search_text">
+					<a href="#" class="btn_search">검색</a>
+					<a href="#" class="btn_search2">통합검색</a>
+				</div>
+			</fieldset>
+			<ul>
+			<li class="first"><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+            <li><a href="http://mktg.naver.com/privacy/privacy.html" target="_blank"><strong>개인정보 취급방침</strong></a></li>
+            <li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+            <li><a href="https://help.naver.com/support/service/main.nhn?serviceNo=746" target="_blank">부동산 고객센터</a></li>
+			</ul>
+			<p class="info">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며,<br>제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+			<address>
+				<a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="logo">NAVER</a> <em>Copyright ⓒ</em> <a href="http://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>매물등록 :: 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="css/land_salereg_admin.css" >
+</head>
+<body>
+<div id="wrap">
+
+	<!-- [D] 등록/관리 페이지 : 'sub' 클래스 삽입 -->
+	<div id="container" class="sub">
+		<div class="content">
+			<h3 class="salereg_tit"><img src="img/h3_register4.gif" width="87" height="16" alt="매물 상세정보"></h3>
+			<p class="salereg_info">철거가옥 매매, 입주권(특별분양) 관련 홍보성 매물 또는 중복매물 등은 <strong>경고없이 삭제</strong>됩니다.<br>
+			매물 등록/결제 후 노출 시까지 매도자 확인 기간이 <strong>1~3일 정도 소요</strong>됩니다.</p>
+
+			<form name="member_join" method="post" action="#" class="member_join">
+			<fieldset>
+			<legend>매물등록</legend>
+				<!-- 매물정보 -->
+				<h4 class="salereg_tit">
+					<img src="img/h4_register2.gif" width="54" height="14" alt="위치/구조">
+					<p class="essentiality">* 표시된 항목은 필수입력사항입니다.</p>
+				</h4>
+				<table border="1" cellpadding="0" cellspacing="0" summary="매물정보" class="tbl_write">
+				<caption>매물정보</caption>
+				<colgroup>
+				<col width="135"><col width="315"><col width="135"><col width="316">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+					<th scope="row"><label for="sel_kind">매물종류</label><span class="must">*</span></th>
+					<td colspan="3">아파트</td>
+				</tr>
+				<tr>
+					<th scope="row">소재지<span class="must">*</span></th>
+					<td colspan="3">
+						<select title="시/도" id="sel_sido" style="width:80px">
+						<option>시/도</option>
+						</select>
+						<select title="시/군/구" style="width:80px">
+						<option>시/군/구</option>
+						</select>
+						<select title="읍/면/동" style="width:80px">
+						<option>읍/면/동</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="clst_sel">단지명</label><span class="must">*</span></th>
+					<td colspan="3">
+						<select id="clst_sel" style="width:85px">
+						<option>단지리스트</option>
+						</select>
+						<a href="#"><img src="img/btn_complex_reg.gif" width="76" height="20" alt="단지등록 요청"></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">면적<span class="must">*</span></th>
+					<td colspan="3">
+						<label for="area_sel">공급면적</label>
+						<select id="area_sel" style="width:80px">
+						<option>면적</option>
+						</select> ㎡
+						/ 전용면적 <em>101.98㎡</em> / 전용율 <em>80.52 %</em>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">주소<span class="must">*</span></th>
+					<td colspan="3">
+						<select id="dong_sel" style="width:80px">
+						<option>선택</option>
+						</select>
+						<label for="dong_sel">동</label>
+						<input type="text" id="ho_sel" class="input_text" style="width:65px">
+						<label for="ho_sel">호</label>
+						<span class="explan"><em>* 호정보는 확인용으로만 사용되며 서비스화면에 노출되지 않습니다.</em></span>
+						<a href="#"><img src="img/btn_modify_town.gif" width="87" height="20" alt="동정보 수정요청"></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">층<span class="must">*</span></th>
+					<td colspan="3">
+						<input type="text" id="floor_inp" value="0" class="input_text " style="width:65px">
+						<label for="floor_inp">층</label> &nbsp;&nbsp;[저/0층]&nbsp;&nbsp;
+						<input type="radio" id="floor_rad" class="input_radio first ">
+						<label for="floor_rad">직접입력</label>
+						<input type="radio" id="floor2_rad" class="input_radio first ">
+						<label for="floor2_rad">고/중/저</label>
+						<input type="radio" id="floor3_rad" class="input_radio first ">
+						<label for="floor3_rad">미노출</label>
+						<a href="#"><img src="img/btn_modify_floor.gif" width="87" height="20" alt="동정보 수정요청"></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="direction_sel">방향</label></th>
+					<td><select id="direction_sel" style="width:80px">
+						<option>선택</option>
+						</select>
+					</td>
+					<th scope="row"><label for="door_sel">현관구조</label></th>
+					<td><select id="door_sel" style="width:80px">
+						<option>선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="rno_inp">방수</label></th>
+					<td><input type="text" id="rno_inp" class="input_text onlynum" style="width:50px"> 개</td>
+					<th scope="row"><label for="bno_inp">욕실수</label></th>
+					<td><input type="text" id="bno_inp" class="input_text onlynum" style="width:50px"> 개</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //매물정보 -->
+
+				<!-- 가격 -->
+				<h4 class="salereg_tit"><img src="img/h4_register5.gif" width="24" height="14" alt="가격"></h4>
+				<table border="1" cellpadding="0" cellspacing="0" summary="가격" class="tbl_write">
+				<caption>가격</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+					<th scope="row">거래종류<span class="must">*</span></th>
+					<td><input type="radio" id="deal_kind" class="input_radio first"> <label for="deal_kind">매매</label>
+						<input type="radio" id="deal_kind2" class="input_radio"> <label for="deal_kind2">전세</label>
+						<input type="radio" id="deal_kind3" class="input_radio"> <label for="deal_kind3">월세</label>
+						<span class="explan"><em>* 등기부등본 상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</em></span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="full_price">매매가</label><span class="must">*</span></th>
+					<td><input type="text" id="full_price" class="input_text onlynum" style="width:70px"> 만원
+						[금액: <em class="c_r">-</em> 원] (최근시세 : 상한가 <em>-만원</em> / 하한가 <em>-만원</em>)
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="loan">융자금</label></th>
+					<td><input type="text" id="loan" class="input_text onlynum" style="width:70px"> 만원
+						[금액: <em class="c_r">-</em> 원]
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">기전세금(월세금)</th>
+					<td><label for="key_money">전세(보증금)</label>
+						<input type="text" id="key_money" class="input_text onlynum" style="width:70px"> 만원 /
+						<label for="mrent_money">월세가</label>
+						<input type="text" id="mrent_money" class="input_text" style="width:70px"> 만원
+						[금액: <em class="c_r">-</em> 원 / <em class="c_r">-</em> 원]
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //가격 -->
+
+				<!-- 입주일 -->
+				<h4 class="salereg_tit"><img src="img/h4_register6.gif" width="34" height="14" alt="입주일"></h4>
+				<table border="1" cellpadding="0" cellspacing="0" summary="입주일" class="tbl_write">
+				<caption>입주일</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+					<th scope="row">입주가능일</th>
+					<td><input type="radio" id="move1" checked="checked" class="input_radio first">
+						<label for="move1">즉시입주</label>
+						<input type="radio" id="move2" class="input_radio">
+						<select title="입주 예상 개월" disabled="disabled" style="width:50px">
+						<option>선택</option>
+						</select> 개월 이내
+						<input type="radio" id="move3" class="input_radio">
+						<select title="입주가능일 년 선택" disabled="disabled" style="width:50px">
+						<option>선택</option>
+						</select> 년
+						<select title="입주가능일 월 선택" disabled="disabled" style="width:50px">
+						<option>선택</option>
+						</select> 월 이후
+						<input type="checkbox" id="move4" disabled="disabled" class="input_check"> <label for="move4">협의가능</label>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //입주일 -->
+
+				<!-- 상세정보 -->
+				<h4 class="salereg_tit"><img src="img/h4_register7.gif" width="47" height="14" alt="상세정보"></h4>
+				<table border="1" cellpadding="0" cellspacing="0" summary="상세정보" class="tbl_write">
+				<caption>상세정보</caption>
+				<colgroup>
+				<col width="135"><col width="794">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+					<th scope="row"><label for="characteristic">매물특징</label></th>
+					<td><input type="text" id="characteristic" class="input_text" style="width:455px;background:url(img/txt_salespecial.gif) no-repeat 7px 4px"><br>
+						<p class="explan">* 매물 정보와 관련없는 문구, 특수문자 등은 임의로 <strong>삭제</strong>될 수 있습니다.<br>
+						* 한글, 영어, 한자, 일본어, 숫자 이외에 특수문자는 입력할 수 없습니다.<br>
+						* 경매 매물은 리스트 노출용 매물 트징을 등록하실 수 없습니다.</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="full_desc">상세설명</label></th>
+					<td><textarea id="full_desc" style="width:750px;height:80px;background:url(img/txt_detailexplan2.gif) no-repeat 7px 7px"></textarea>
+						<div class="btn_add"><a href="#"><img src="img/btn_input_add.gif" width="75" height="20" alt="입력창 추가"></a></div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">현장확인 매물<br>동영상/사진</th>
+					<td>
+						<p class="explan">* 첫번째 사진이 매물 페이지에 노출됩니다. <br>
+						* 현장확인매물로 등록된 <strong>매물의 사진은 (드레그 하여) 순서변경 및 삭제</strong>만 가능합니다.</p>
+						<style type="text/css">
+							#fileArea div{ height:100px; }
+							#fileArea .dragging, body.dragging *{cursor:default !important; }
+							#fileArea ul{overflow:hidden;width:100%;margin-left:2px}
+							#fileArea ul li{float:left;overflow:hidden;position:relative;width:150px;height:130px;margin:4px 4px 0 0}
+							#phantom{border:1px solid #000;position:absolute;padding:10px;z-index:55;width:130px;height:110px;border:dash-dot 3px #222;display:none; background-color:#fff;}
+							#fileArea .draggable{background-color:#ffd;cursor:pointer;z-index:55;}
+							#fileArea .droppable{background-color:#fff;border:1px solid #ccc;}
+							#fileArea .overed{border:dotted 1px #000;background-color:#0075C8;width:132px;height:111px}
+							#fileArea .dummy{background-color:#fff;height:110px}
+							#fileArea .ph_list .ph_del{position:absolute;top:13px;right:10px;}
+							#fileArea .ph_list dt{width:130px;margin:0 auto;padding:11px 0 4px;border-bottom:1px solid #ccc;font-size:11px;}
+							#fileArea .ph_list dt img{border:0}
+							#fileArea .ph_list dt .chk_view{position:absolute;top:10px;right:9px}
+							#fileArea .ph_list dt .input_check{margin:-1px 3px 1px 0;vertical-align:middle}
+							#fileArea .ph_list dd{margin-top:6px}
+							#fileArea .ph_list dd img{border:1px solid #dfdfdf}
+							#fileArea .ph_list dd.dim img{opacity:.3;filter:alpha(opacity=30)}
+							#fileArea .ph_list dd .ico_m{overflow:hidden;position:absolute;top:62px;left:58px;width:33px;height:34px;background:url(img/ico_movie.png) no-repeat;text-indent:-999px}
+							#fileArea .drag_m{border-width:2px;width:148px;height:128px;background-color:#f5f5f5}
+						</style>
+						<div id="fileArea" class="">
+							<ul id="fileList" class="photo">
+							<li class="droppable draggable drag_m">
+								<dl class="ph_list">
+								<dt>dropbox_pr..
+									<span class="chk_view"><input type="checkbox" id="view" class="input_check"><label for="view">노출</label></span>
+								</dt>
+								<dd><img title="@tmp2.gif" src="http://landthumb.phinf.naver.net/20120731_39/atcl_photo_1343709646922oLisN_JPEG/1343709645691_tmp2.jpg?type=m120"><span class="ico_m">동영상</span></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt>@tmp1.gif
+									<span class="chk_view"><input type="checkbox" id="view2" class="input_check"><label for="view2">노출</label></span>
+								</dt>
+								<dd class="dim"><img title="@tmp1.gif" src="http://landthumb.phinf.naver.net/20120731_279/atcl_photo_1343709668035niP4f_JPEG/1343709667674_tmp1.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt>@tmp1.gif
+									<span class="chk_view"><input type="checkbox" id="view3" class="input_check"><label for="view3">노출</label></span>
+								</dt>
+								<dd><img title="@tmp4.gif" src="http://landthumb.phinf.naver.net/20120731_179/atcl_photo_1343709680463gPEPh_JPEG/1343709680345_tmp4.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt>@tmp1.gif
+									<span class="chk_view"><input type="checkbox" id="view4" class="input_check"><label for="view4">노출</label></span>
+								</dt>
+								<dd><img title="@f_player.gif" src="http://landthumb.phinf.naver.net/20120731_137/atcl_photo_1343709687546dRFM0_JPEG/1343709687439_f_player.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+							<dl class="ph_list">
+								<dt>@tmp1.gif
+									<span class="chk_view"><input type="checkbox" id="view5" class="input_check"><label for="view5">노출</label></span>
+								</dt>
+							<dd><img title="@common_snb_footer.gif" src="http://landthumb.phinf.naver.net/20120731_139/atcl_photo_1343717497945NCiSi_JPEG/1343717497853_common_snb_footer.jpg?type=m120"></dd>
+							</dl>
+							</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="sale_pic">중개업소 등록사진</label></th>
+					<td>
+						<input type="text" id="sale_pic" class="input_text" style="position:absolute;opacity:0;filter:alpha(opacity=0);z-index:-1">
+						<a href="#"><img src="img/btn_photo_open.gif" width="74" height="20" alt="사진 불러오기"></a>
+						<span class="explan">* 매물사진을 등록하시면 리스트 페이지에 아이콘이 추가되어 주목도가 높아집니다.</span>
+						<ul class="img_list" style="display:none">
+						<li><a href="#">gaagrwefa_9780.jpg</a><a href="#"><img src="img/btn_delete4.gif" width="16" height="14" alt="삭제"></a></li>
+						<li><a href="#">asdjfje_fssdkf.gif</a><a href="#"><img src="img/btn_delete4.gif" width="16" height="14" alt="삭제"></a></li>
+						<li><a href="#">gaagrwefa_9780.jpg</a><a href="#"><img src="img/btn_delete4.gif" width="16" height="14" alt="삭제"></a></li>
+						<li><a href="#">asdjfje_fssdkf.gif</a><a href="#"><img src="img/btn_delete4.gif" width="16" height="14" alt="삭제"></a></li>
+						</ul>
+						<p class="explan c_r">* 매물사진을 등록하시면 리스트 페이지에 아이콘이 추가되어 주목도가 높아지며, 네이버 통합이미지 검색에 노출되어 다양한 노출 효과를 보실 수 있습니다.<br>
+						단, 가이드에 적합하지 않는 사진은 관리자에 의해 삭제될 수 있으니, 가이드를 확인하신 후 사진 등록을 해주시길 바랍니다. &nbsp;&nbsp;<a href="#"><em style="text-decoration:underline">가이드 보기</em></a></p>
+						<div id="fileArea" class="">
+							<ul id="fileList" class="photo">
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> dropbox_pr..</dt>
+								<dd><img title="@tmp2.gif" src="http://landthumb.phinf.naver.net/20120731_39/atcl_photo_1343709646922oLisN_JPEG/1343709645691_tmp2.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> @tmp1.gif</dt>
+								<dd><img title="@tmp1.gif" src="http://landthumb.phinf.naver.net/20120731_279/atcl_photo_1343709668035niP4f_JPEG/1343709667674_tmp1.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> @tmp4.gif</dt>
+								<dd><img title="@tmp4.gif" src="http://landthumb.phinf.naver.net/20120731_179/atcl_photo_1343709680463gPEPh_JPEG/1343709680345_tmp4.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> @f_player...</dt>
+								<dd><img title="@f_player.gif" src="http://landthumb.phinf.naver.net/20120731_137/atcl_photo_1343709687546dRFM0_JPEG/1343709687439_f_player.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> @pic.gif</dt>
+								<dd><img title="@pic.gif" src="http://landthumb.phinf.naver.net/20120731_1/atcl_photo_1343709699312vOi98_JPEG/1343709699220_pic.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+								<dl class="ph_list">
+								<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> @map2.gif</dt>
+								<dd><img title="@map2.gif" src="http://landthumb.phinf.naver.net/20120731_103/atcl_photo_1343709706098Y784V_JPEG/1343709705954_map2.jpg?type=m120"></dd>
+								</dl>
+							</li>
+							<li class="droppable draggable">
+							<dl class="ph_list">
+							<dt><a class="ph_del _removeFileInfo" href="#"><img width="16" height="14" alt="삭제" src="http://static.land.naver.net/static/center/20110527//btn_delete4.gif"></a> @common_sn..</dt>
+							<dd><img title="@common_snb_footer.gif" src="http://landthumb.phinf.naver.net/20120731_139/atcl_photo_1343717497945NCiSi_JPEG/1343717497853_common_snb_footer.jpg?type=m120"></dd>
+							</dl>
+							</li>
+							</ul>
+						</div>
+						<p class="explan">* 첫번째 사진이 매물 페이지에 노출됩니다. <br>
+						* 현장확인매물로 등록된 <strong>매물의 사진은 (드레그 하여) 순서변경 및 삭제</strong>만 가능합니다. <br>
+						* 사진을 삭제 하더라도 다시 복구 할 수 있습니다. </p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="memo">중개사 메모</label> <span class="open_option">(비공개)</span></th>
+					<td><textarea id="memo" style="width:750px;height:80px;background:url(img/txt_seller_memo.gif) no-repeat 7px 7px;"></textarea>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //상세정보 -->
+
+				<!-- 중개업소 담당자 정보 -->
+				<h4 class="salereg_tit"><img src="img/h4_register9.gif" width="111" height="14" alt="중개업소 담당자 정보"></h4>
+				<p class="userinfo_notice">
+					단체 ID에 소속되어 있는 담당자 ID를 선택하시면, 해당 담당자의 이름, 연락처 정보가 자동 반영됩니다.<br>
+					<strong>연락처를 수정하시려면, 해당 담당자께서 개인 ID로 로그인하신 후 네이버 회원 정보를 수정하셔야 합니다.</strong>
+				</p>
+				<table border="1" cellpadding="0" cellspacing="0" summary="중개업소 담당자 정보" class="tbl_write">
+				<caption>중개업소 담당자 정보</caption>
+				<colgroup>
+				<col width="100"><col width="195"><col width="100"><col width="197"><col width="100"><col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+					<th scope="col">항목</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="first">
+					<th scope="row"><label for="name">담당자 ID</label><span class="must">*</span></th>
+					<td>
+						<select title="담당자 ID" style="width:172px">
+						<option>담당자 ID</option>
+						</select>
+					</td>
+					<th scope="row">담당자명</th>
+					<td>김동산</td>
+					<th scope="row"><label for="tel">연락처</label><span class="must">*</span></th>
+					<td><select id="tel" title="앞자리" style="width:50px">
+						<option>선택</option>
+						</select> -
+						<input type="text" title="중간자리" class="input_text onlynum" style="width:40px"> -
+						<input type="text" title="끝자리" class="input_text onlynum" style="width:40px">
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- 중개업소 담당자 정보 -->
+
+				<div class="btn_wrap">
+					<a href="#"><img src="img/btn_register.gif" width="82" height="29" alt="등록하기"></a>
+					<a href="#"><img src="img/btn_cancel.gif" width="67" height="29" alt="취소하기"></a>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="footer">
+		<img src="img/@footer.gif" width="960" height="66" alt="푸터 임시 이미지">
+	</div>
+</div>
+</body>
+</html>

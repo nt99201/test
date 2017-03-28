@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>profile</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_b_side">
+	<div class="w_disabled" id="_hamburger_dimmed" style="width: 100%; height: 100%; z-index: 990;  position: fixed;background: #000;opacity: .6;  left: 0;top: 0;"></div>
+		<!--profile-->
+		<div class="profile">
+			<!--            Drawer 메뉴-->
+            <div class="slide_cont" style="display:block;">
+
+            	<div class="side_menu" style="right:0">
+            		<h2 class="hide">확장 메뉴</h2>
+            		<div class="my_info">
+<!--            		로그인 안한 경우<strong class="no_login">로그인하세요</strong> -->
+            			<a href="#"  class="my_prfl"><span class="prfl_img"><img src="im/no_img.png"></span><strong>로그인하세요<span class="id_txt">asdf1234</span></strong></a>
+            		</div>
+            		<div class="mymenu_lst_wrap">
+            			<ul class="m_lst">
+            				<li><a href="#" class="lst_itm chk_pdt">관심매물<span class="cnt"><em>18</em></span></a></li>
+										<li><a href="#" class="lst_itm pdt_alarm">단지<span class="cnt"><em>999+</em></span></a></li>
+            				<li><a href="#" class="lst_itm chk_blck">최근 본 매물<span class="cnt"><em>999+</em></span></a></li>
+            			</ul>
+            		</div>
+            		<div class="menu_lst_wrap">
+            			<ul class="m_lst">
+            			<li><a href="#" class="lst_itm home">홈</a></li>
+            			<li><a href="#" class="lst_itm nr_admin">행정구역</a></li>
+            			<li><a href="#" class="lst_itm nr_subway">지하철역 주변</a></li>
+            			<li><a href="#" class="lst_itm land_sell">분양</a></li>
+            			<li><a href="#" class="lst_itm news">뉴스</a></li>
+            			<li><a href="#" class="lst_itm my">MY</a></li>
+            			</ul>
+            		</div>
+
+            		<div class="menu_lst_wrap">
+            			<ul class="m_lst">
+            			<li><a href="#" class="dir_lst_itm talk"><em>톡톡</em> 대화목록 보기</a></li>
+									<li><a href="#" class="dir_lst_itm room"><em>네이버 원룸</em> 화면으로 이동</a></li>
+            			<li><a href="#" class="dir_lst_itm real"><em>네이버 부동산</em> 바로가기 추가</a></li>
+            			</ul>
+            		</div>
+
+            		<div class="menu_lst_wrap">
+            			<ul class="m_lst">
+            			<li><a href="#" class="lst_itm log">로그아웃<em class="id_txt">qwer1234</em></a></li>
+            			<li><a href="#" class="lst_itm pc_v">PC버전으로 보기</a></li>
+									<li><a href="#" class="lst_itm customer">고객센터</a></li>
+									<li><a href="#" class="lst_itm report">오류 신고하기</a></li>
+            			</ul>
+            		</div>
+
+            		<div class="side_f">
+            			<span class="f_log">ⓒNAVER corp.</span>
+            		</div>
+            		<button type="button"  class="btn_close"><span>닫기</span></button>
+            	</div>
+            </div>
+<!--            //Drawer 메뉴-->
+		</div>
+		<!--//profile-->
+	</div>
+</div>
+</body>
+</html>

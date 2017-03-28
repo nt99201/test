@@ -1,0 +1,677 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>분양정보 지역별 개포동 :: 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_isale.map.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- sale_header -->
+		<div class="sale_header">
+			<h2><img src="img/h_sale_info.gif" width="267" height="15" alt="분양정보 - 지역, 일정, 개발지역 등 원하는 조건에 따라 조회하세요."></h2>
+			<!-- [D] 첫번째 탭을 제외한 탭 선택시 class="tab_sale sale2" 변경 -->
+			<div class="tab_sale">
+				<a href="#" class="front"><span>지역별</span></a>
+				<a href="#" class="front"><span>일정별</span></a>
+				<a href="#" class="front"><span>개발 지역별</span></a>
+				<a href="#"><span>역세권별</span></a>
+				<a href="#"><span>브랜드별</span></a>
+				<a href="#"><span>청약통장별</span></a>
+			</div>
+		</div>
+		<!-- //sale_header -->
+		<!-- spot -->
+		<div class="spot">
+			<div class="map_top">
+				<ul class="cate NE=a:pft">
+						<li class="m1"><a class="selected" name="isaleHscpTypeCd" href="#">전체</a></li>
+						<li class="m2"><a href="#">아파트</a></li>
+						<li class="m3"><a href="#">빌라/연립</a></li>
+						<li class="m4"><a href="#">오피스텔</a></li>
+						<li class="m5"><a href="#">도시형 생활주택</a></li>
+						<li class="m6"><a href="#">상가</a></li>
+						<li class="m7"><a href="#" class="selected">전체</a></li>
+						<li class="m8"><a href="#">분양계획</a></li>
+						<li class="m9"><a href="#">분양중</a></li>
+						<li class="m10"><a href="#">미분양</a></li>
+				</ul>
+				<div id="guidebanner_area">
+					<div id="guideBanner_1" class="ly_guide">
+						<a href="#" class="btn_guide"><img height="26" src="http://landthumb.phinf.naver.net/20110831_245/land_naver_1314778490066x6xDx_GIF/photoinfra_1314778489288.gif" alt=""></a>
+						<div style="display:none;" class="ly">
+							<div class="bg_ly"></div>
+							<div class="ly_content">
+								<a href="#" class="btn_close"><span>닫기</span></a>
+								<h3>
+									<img height="16" src="http://landthumb.phinf.naver.net/20110614_277/land_system_1308030795277QsgN3_GIF/1301451029813.gif" alt="">
+								</h3>
+								<div class="thumb">
+									<img height="140" width="236" src="http://landthumb.phinf.naver.net/20110614_234/land_system_13080307955106O66L_GIF/1301451040152.gif" alt="">
+								</div>
+								<div class="info">
+									<img id="guideTextImg_1" src="http://landthumb.phinf.naver.net/20110614_240/land_system_1308030795743dSnYM_GIF/1301451056516.gif" alt="">
+								</div>
+								<a target="_blank" href="http://land.naver.com/guide/guideList.nhn?cate=isale&amp;no=24" class="btn_view"><span>자세히보기</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="location">
+				<div class="loc_view">
+					<div class="sel w" id="loc_view1">
+						<select style="position:absolute; top : -1000px; left:-1000px;" class="selectbox-source">
+						<option>서울시</option>
+						<option>경기도</option>
+						<option>인천시</option>
+						<option>부산시</option>
+						<option>대전시</option>
+						<option>대구시</option>
+						<option>울산시</option>
+						<option>세종시</option>
+						<option>광주시</option>
+						<option>강원도</option>
+						<option>충청북도</option>
+						<option>충청남도</option>
+						<option>경상북도</option>
+						<option>경상남도</option>
+						<option>전라북도</option>
+						<option>전라남도</option>
+						<option>제주도</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label" unselectable="on">경기도</div>
+						</div>
+
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2" id="loc_view2">
+						<select style="position:absolute; top : -1000px; left:-1000px;" class="selectbox-source">
+						<option>가평군</option>
+						<option>고양시 덕양구</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label" unselectable="on">양주시</div>
+						</div>
+
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel" id="loc_view3">
+						<select style="position:absolute; top : -1000px; left:-1000px;" class="selectbox-source">
+						<option>고암동</option>
+						<option>고읍동</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label" unselectable="on">덕정동</div>
+						</div>
+					</div>
+					<span class="bar">&gt;</span>
+					<div class="sel w2" id="loc_view4">
+						<select style="position:absolute; top : -1000px; left:-1000px;" class="selectbox-source">
+						<option class="selectbox-default">단지</option>
+						<option>양주덕정역서희스타힐스1단지</option>
+						<option>양주덕정역서희스타힐스2단지</option>
+						 </select>
+						<div class="selectbox-box">
+							<div class="selectbox-label" unselectable="on">양주덕정역서희스타힐스1단지</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="lastest">
+					<p>최근 조회한 분양 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+					<ol style="display:none; height:28px;" id="recentComplexList">
+
+
+						<li><a href="http://land.naver.com/isale/complexDetail.nhn?isaleHscpNo=6001295&amp;isaleNotifSeq=9001116">덕정동 양주덕정역서희스..</a></li>
+
+					</ol>
+				</div>
+			</div>
+			<!-- 지도 -->
+			<div class="section_map map_zin" style="height:341px">
+				<div class="map_area">
+					<div class="map_lst">
+						<div class="bg_map"></div>
+						<h3><img src="img/h_area_lst.gif" width="87" height="12" alt="지역리스트(건수)"></h3>
+						<div class="scroll">
+							<ul>
+							<li><a href="#">개포동</a><em>(1)</em></li>
+							<li><a href="#">논현동</a><em>(82)</em></li>
+							<li><a href="#">대치동</a><em>(82)</em></li>
+							<li><a href="#">도곡동</a><em>(82)</em></li>
+							<li><a href="#">삼성동</a><em>(82)</em></li>
+							<li><a href="#">수서동</a><em>(82)</em></li>
+							</ul>
+						</div>
+					</div>
+					<div class="map">
+						<img src="img/@tmp_map.gif" width="581" height="341" alt="" style="vertical-align:top">
+					</div>
+					<div class="map_info">
+						<div class="bg_map"></div>
+						<!-- [D] 분양단지 선택 시 class="tab_info tab_house" 변경 -->
+						<div class="tab_info">
+							<a href="#" class="frst"><span>분양리스트</span></a>
+							<a href="#"><span>개발지역</span></a>
+						</div>
+						<div class="info_group">
+							<ul class="sort">
+							<li class="frst on"><a href="#">가나다순</a></li>
+							<li><a href="#">인기순</a></li>
+							</ul>
+							<div class="scroll">
+								<ul class="sort_lst">
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_fd">닫기</button>
+									<ul class="sort_sub">
+									<li><a href="#">[분양단지] 경남아너스빌</a></li>
+									<li><a href="#">[분양단지] 경남아너스빌</a></li>
+									<li><a href="#">[분양단지] 경남아너스빌</a></li>
+									</ul>
+								</li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_housing.gif" width="42" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_economy.gif" width="60" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								<li><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">서울 성동구 왕십리 뉴타운</a><button type="button" class="btn_unfd">열기</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn_map btn_zin"><span>지도 확대하기</span></a>
+				<!-- 지도 범례 -->
+					<div class="ly_legend ly_legend_si" style="display:none">
+						<div class="ly_mask"></div>
+						<div class="ly_inner">
+							<div class="tab_area">
+								<a href="#legend1" class="tab1"><span class="on">일반지도 범례</span></a>
+								<a href="#" class="tab2"><span>지적편집도 범례</span></a>
+							</div>
+							<div class="ly_cont">
+								<h3 id="legend1" class="blind">일반지도 범례</h3>
+								<ul class="sub_tab">
+								<li class="type1 type_on">
+									<a href="#">경계</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">국가경계</li>
+										<li class="col2">광역시</li>
+										<li class="col1">시도&middot;시군구경계</li>
+										<li class="col2">일반시</li>
+										<li class="col3">택지지구경계</li>
+										<li class="col3">문화거리</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type2">
+									<a href="#">도로</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">고속도로&middot;고속화도로</li>
+										<li class="col2">일반도로</li>
+										<li class="col1">국도</li>
+										<li class="col2">공사중도로</li>
+										<li class="col1">지방도</li>
+										<li class="col2">인터체인지</li>
+										<li class="col1">주요도로</li>
+										<li class="col2">교차로</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type3">
+									<a href="#">교통</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">서울1 (인천)</li>
+										<li class="col2">공항철도</li>
+										<li class="col1">분당선</li>
+										<li class="col2">광주1</li>
+										<li class="col1">부산1</li>
+										<li class="col2">대전1</li>
+										<li class="col1">대구1</li>
+										<li class="col2">중앙선</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type4">
+									<a href="#">등산</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">거리&middot;소요시간</li>
+										<li class="col2">매표소</li>
+										<li class="col1">주요등산로</li>
+										<li class="col2">등산안내소</li>
+										<li class="col1">보조등산로</li>
+										<li class="col2">대피소</li>
+										<li class="col1">옛길등산로</li>
+										<li class="col2">산장</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type5">
+									<a href="#">아파트</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">아파트세대수</li>
+										<li class="col1">아파트층&middot;호수 (18층,1호~4호)</li>
+										<li class="col1">아파트평형 (105.8m² = 32평)</li>
+										</ul>
+									</div>
+								</li>
+								</ul>
+								<h3 id="legend1" class="blind">지적편집도 범례</h3>
+								<ul class="sub_tab" style="display:none">
+								<li class="type6">
+									<a href="#">지번&middot;경계</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">대표지번</li>
+										<li class="col2">시군구경계</li>
+										<li class="col1">독립지번</li>
+										<li class="col2">법정동경계</li>
+										<li class="col1">지번</li>
+										<li class="col2">행정동경계</li>
+										<li class="col1">지적경계</li>
+										<li class="col2">읍면경계</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type7">
+									<a href="#">개발</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">택지개발지구</li>
+										<li class="col2">도시개발구역</li>
+										<li class="col1">신도시</li>
+										<li class="col2">경제자유구역</li>
+										<li class="col1">정비구역</li>
+										<li class="col2">재개발구역</li>
+										<li class="col1">보금자리개발지구</li>
+										<li class="col2">주택재개발</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type8">
+									<a href="#">용도</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">전용주거지역</li>
+										<li class="col2">공업지역</li>
+										<li class="col1">일반주거지역</li>
+										<li class="col2">녹지지역</li>
+										<li class="col1">준주거지역</li>
+										<li class="col2">관리지역</li>
+										<li class="col1">상업지역</li>
+										<li class="col2">농림지역</li>
+										</ul>
+									</div>
+								</li>
+								<li class="type9">
+									<a href="#">도로&middot;철로</a>
+									<div class="tab_cont">
+										<ul>
+										<li class="col1">장기계획도로</li>
+										<li class="col2">예정철도</li>
+										<li class="col1">예정고속도로</li>
+										<li class="col2">공사중철도</li>
+										<li class="col1">공사중고속도로1</li>
+										<li class="col2">공사중지하철</li>
+										<li class="col1">공사중고속도로2</li>
+										<li class="col2">일반철도</li>
+										</ul>
+									</div>
+								</li>
+								</ul>
+								<a href="#" class="btn_more">더보기</a>
+							</div>
+							<div class="ly_btn">
+								<a href="#" class="btn_clse">닫기</a>
+							</div>
+						</div>
+					</div>
+					<!-- //지도 범례 -->
+			</div>
+			<!-- //지도 -->
+		</div>
+		<!-- //spot -->
+		<!-- content -->
+		<div id="content">
+			<h3 class="h_area"><em>[지역별]</em> 서울시</h3>
+			<!-- [D] 첫번째 탭을 제외한 탭 선택시 class="tab_area area2" 변경 -->
+			<div class="tab_area">
+				<a href="#"><span>전체</span></a>
+				<a href="#" class="tab"><span>분양리스트</span></a>
+				<a href="#" class="tab2"><span>개발지역 정보</span></a>
+				<a href="#" class="tab"><span>시세 &amp; 매물</span></a>
+				<a href="#" class="tab2"><span>우리동네 뉴스</span></a>
+			</div>
+			<div class="section_info">
+				<h4><img src="img/h_sale_lst.gif" width="55" height="13" alt="분양리스트"></h4>
+				<table cellspacing="0" border="1" summary="분양단지" class="tbl_sale">
+				<caption>분양단지</caption>
+				<colgroup>
+				<col width="65"><col width="65"><col width="196"><col width="76"><col width="96"><col width="96"><col width="86">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col" class="line2">진행단계</th>
+				<th scope="col" class="line2">분양종류<br>(분양형태)</th>
+				<th scope="col" class="line2">사업명</th>
+				<th scope="col" class="line2">면적(㎡)</th>
+				<th scope="col" class="line2">세대수</th>
+				<th scope="col" class="line2">분양가<br>(만원)</th>
+				<th scope="col" class="line2">공고시기</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="frst">
+				<td>분양계획</td>
+				<td>주상복합</td>
+				<td class="place">
+					<a href="#">래미안 e편한세상래미안 e편한세래미안 e편한세상</a>
+					<a href="#" target="_blank"><img src="img/ico_new_link.gif" width="12" height="11" title="새창열기" alt="새창열기"></a>
+					<p>서울시 서초구 반포동 30-2</p>
+				</td>
+				<td class="num">111~214</td>
+				<td class="house">
+					<ul>
+					<li>총 <em class="total">1,561</em></li>
+					<li>일반 <em>226</em></li>
+					<li>임대 <em>226</em></li>
+					<li>조합 <em>226</em></li>
+					</ul>
+				</td>
+				<td class="num"><strong>28,100</strong> <span>~</span> <strong>64,700</strong></td>
+				<td class="num">2010.08.24</td>
+				</tr>
+				<tr>
+				<td>발표/계획</td>
+				<td>주상복합</td>
+				<td class="place">
+					<a href="#">래미안 e편한세상</a>
+					<a href="#" target="_blank"><img src="img/ico_new_link.gif" width="12" height="11" title="새창열기" alt="새창열기"></a>
+					<p>서울시 서초구 반포동 30-2</p>
+				</td>
+				<td class="num">111~214</td>
+				<td class="house">
+					<ul>
+					<li>총 <em class="total">561</em></li>
+					<li>일반 <em>26</em></li>
+					<li>임대 <em>6</em></li>
+					<li>조합 <em>226</em></li>
+					</ul>
+				</td>
+				<td class="num"><strong>28,100</strong> <span>~</span> <strong>64,700</strong></td>
+				<td class="num">2010.08.24</td>
+				</tr>
+				<tr>
+				<td>분양계획</td>
+				<td>주상복합</td>
+				<td class="place">
+					<a href="#">래미안 e편한세상</a>
+					<a href="#" target="_blank"><img src="img/ico_new_link.gif" width="12" height="11" title="새창열기" alt="새창열기"></a>
+					<p>서울시 서초구 반포동 30-2</p>
+				</td>
+				<td class="num">111~214</td>
+				<td class="house">
+					<ul>
+					<li>총 <em class="total">1,561</em></li>
+					<li>일반 <em>226</em></li>
+					<li>임대 <em>226</em></li>
+					<li>조합 <em>226</em></li>
+					</ul>
+				</td>
+				<td class="num"><strong>28,100</strong> <span>~</span> <strong>64,700</strong></td>
+				<td class="num">2010.08.24</td>
+				</tr>
+				</tbody>
+				</table>
+				<p class="btn_more">
+					<a href="#">분양리스트 더보기</a>
+				</p>
+			</div>
+			<div class="section_info">
+				<h4><img src="img/h_area_info2.gif" width="68" height="13" alt="개발지역 정보"></h4>
+				<ul class="area_lst">
+				<li>
+					<div class="thmb"><a href="#"><img src="img/@tmp_thmb.gif" width="102" height="76" alt=""><span class="mask"></span></a></div>
+					<div class="area_info">
+						<h5><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">흑석 재정비 촉진 사업</a></h5>
+						<dl>
+						<dt>통합사업명</dt>
+						<dd>3차 뉴타운</dd>
+						<dt>위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치</dt>
+						<dd class="type">서울 동작구 흑석동 84-10 일대</dd>
+						<dt>사 업 면 적</dt>
+						<dd>894,933㎡</dd>
+						<dt>사 업 기 간</dt>
+						<dd class="type">2009년 ~ 2015년</dd>
+						<dt>사 업 규 모</dt>
+						<dd class="type2">10,657세대 / 29,016명</dd>
+						</dl>
+					</div>
+				</li>
+				<li>
+					<div class="thmb"><a href="#"><img src="img/@tmp_thmb.gif" width="102" height="76" alt=""><span class="mask"></span></a></div>
+					<div class="area_info">
+						<h5><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">흑석 재정비 촉진 사업</a></h5>
+						<dl>
+						<dt>통합사업명</dt>
+						<dd>3차 뉴타운</dd>
+						<dt>위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치</dt>
+						<dd class="type">서울 동작구 흑석동 84-10 일대</dd>
+						<dt>사 업 면 적</dt>
+						<dd>894,933㎡</dd>
+						<dt>사 업 기 간</dt>
+						<dd class="type">2009년 ~ 2015년</dd>
+						<dt>사 업 규 모</dt>
+						<dd class="type2">10,657세대 / 29,016명</dd>
+						</dl>
+					</div>
+				</li>
+				<li>
+					<div class="thmb"><a href="#"><img src="img/@tmp_thmb.gif" width="102" height="76" alt=""><span class="mask"></span></a></div>
+					<div class="area_info">
+						<h5><a href="#"><img src="img/ico_newtown.gif" width="34" height="13" alt="뉴타운">흑석 재정비 촉진 사업</a></h5>
+						<dl>
+						<dt>통합사업명</dt>
+						<dd>3차 뉴타운</dd>
+						<dt>위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치</dt>
+						<dd class="type">서울 동작구 흑석동 84-10 일대</dd>
+						<dt>사 업 면 적</dt>
+						<dd>894,933㎡</dd>
+						<dt>사 업 기 간</dt>
+						<dd class="type">2009년 ~ 2015년</dd>
+						<dt>사 업 규 모</dt>
+						<dd class="type2">10,657세대 / 29,016명</dd>
+						</dl>
+					</div>
+				</li>
+				</ul>
+				<p class="btn_more">
+					<a href="#">개발지역 정보 더보기</a>
+				</p>
+			</div>
+			<div class="section_info">
+				<h4><img src="img/h_price.gif" width="57" height="12" alt="시세 &amp; 매물"></h4>
+				<p class="provide">국민은행 제공 <span>|</span> 2010.08.20 기준</p>
+				<div class="price_graph">
+					<div class="graph"><img src="img/@tmp_graph.gif" width="330" height="188" alt=""></div>
+					<div class="graph"><img src="img/@tmp_graph2.gif" width="330" height="188" alt=""></div>
+				</div>
+				<p class="btn_more">
+					<a href="#">시세 &amp; 매물 더보기</a>
+				</p>
+			</div>
+			<div class="section_info">
+				<h4><img src="img/h_news.gif" width="68" height="13" alt="우리동네 뉴스"></h4>
+				<ul class="news_lst">
+				<li>
+					<dl>
+					<dt class="photo"><a href="#"><img src="img/@tmp_news.gif" width="90" height="61" alt=""></a></dt>
+					<dt><a href="#">지난달 전국 아파트 거래 관망세 영향으로 다시 감소</a></dt>
+					<dd>
+						국토부, 8월 신고분 실거래가 공개[이데일리 이지현 기자] 서울 강남3구(강남·서초·송파) 아파트 거래량이 다시 줄었다. 반면 강북은 소폭이지만 늘어난...
+						<span class="writing">매일경제</span>
+						<span class="date">2010-01-12</span>
+					</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+					<dt><a href="#">지난달 전국 아파트 거래 관망세 영향으로 다시 감소</a></dt>
+					<dd>
+						국토부, 8월 신고분 실거래가 공개[이데일리 이지현 기자] 서울 강남3구(강남·서초·송파) 아파트 거래량이 다시 줄었다. 반면 강북은 소폭이지만 늘어난...
+						<span class="writing">매일경제</span>
+						<span class="date">2010-01-12</span>
+					</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+					<dt class="photo"><a href="#"><img src="img/@tmp_news2.gif" width="59" height="90" alt=""></a></dt>
+					<dt><a href="#">지난달 전국 아파트 거래 관망세 영향으로 다시 감소</a></dt>
+					<dd>
+						국토부, 8월 신고분 실거래가 공개[이데일리 이지현 기자] 서울 강남3구(강남·서초·송파) 아파트 거래량이 다시 줄었다. 반면 강북은 소폭이지만 늘어난...
+						<span class="writing">매일경제</span>
+						<span class="date">2010-01-12</span>
+					</dd>
+					</dl>
+				</li>
+				</ul>
+				<p class="btn_more">
+					<a href="#">우리동네 뉴스 더보기</a>
+				</p>
+			</div>
+		</div>
+		<!-- //content -->
+		<!-- aside -->
+		<div class="aside">
+			<div class="ad">
+				<img src="img/@tmp_ad.gif" width="280" height="240" alt="">
+			</div>
+			<div class="btn_banner">
+				<a href="#"><img src="img/btn_banner.gif" width="280" height="70" title="분양정보 신규등록" alt="등록되지 않은 분양정보를 등록해주세요."></a>
+				<a href="#"><img src="img/btn_banner2.gif" width="280" height="71" title="분양정보 알리미" alt="원하는 조건의 분양 정보를 등록해주세요."></a>
+			</div>
+			<div class="calendar_section">
+				<h3>주간 분양 일정</h3>
+				<div class="date">
+					<span class="year"><em class="no2">2</em><em class="no0">0</em><em class="no1">1</em><em class="no0">0</em></span>
+					<span class="month"><em class="no0">0</em><em class="no8">8</em></span>
+					<span class="day"><em class="no2">2</em><em class="no4">4</em></span>
+					<span class="bar">-</span>
+					<span class="month"><em class="no0">0</em><em class="no8">8</em></span>
+					<span class="day"><em class="no2">6</em><em class="no6">6</em></span>
+					<!-- [D] 이전, 다음 날짜 없을 시 class : _off 추가 -->
+					<a href="#" class="btn_prev_off"><span>이전</span></a>
+					<a href="#" class="btn_next"><span>다음</span></a>
+				</div>
+				<div class="sale_lst">
+					<div class="tab_group">
+						<a href="#" class="tab"><span>전체</span><em>(99)</em></a>
+						<a href="#" class="tab2"><span>공고</span><em>(8)</em></a>
+						<a href="#" class="tab3"><span>접수</span><em>(3)</em></a>
+						<a href="#" class="tab4"><span>발표</span><em>(18)</em></a>
+						<a href="#" class="tab5"><span>계약</span><em>(8)</em></a>
+					</div>
+					<div class="scroll">
+						<dl class="week_lst">
+						<dt><strong>01일</strong></dt>
+						<dd>
+							<ul>
+							<li><img src="img/ico_accept.gif" width="22" height="13" alt="접수"><a href="#">신월동 양천 롯데캐슬</a></li>
+							<li><img src="img/ico_statement.gif" width="22" height="13" alt="발표"><a href="#">상현동 수원광교 A30블록02일</a></li>
+							<li><img src="img/ico_notice.gif" width="22" height="13" alt="공고"><a href="#">신월동 양천 롯데캐슬</a></li>
+							</ul>
+						</dd>
+						<dt><strong>02일</strong></dt>
+						<dd>
+							<ul>
+							<li><img src="img/ico_contract.gif" width="22" height="13" alt="계약"><a href="#">신월동 양천 롯데캐슬</a></li>
+							<li><img src="img/ico_accept.gif" width="22" height="13" alt="접수"><a href="#">상현동 수원광교 A30블록02일</a></li>
+							<li><img src="img/ico_accept.gif" width="22" height="13" alt="접수"><a href="#">신월동 양천 롯데캐슬</a></li>
+							</ul>
+						</dd>
+						</dl>
+					</div>
+					<a href="#" class="btn_more">더보기</a>
+				</div>
+			</div>
+			<div class="aside_section">
+				<h3>서울시 인기 분양단지</h3>
+				<ol class="popular_lst">
+				<li class="no1"><a href="#">도곡동 도곡렉슬</a><span class="date">2010.08.24</span></li>
+				<li class="no2"><a href="#">대치동 은마</a><span class="date">2010.08.24</span></li>
+				<li class="no3"><a href="#">삼성동 힐스테이트1단지</a><span class="date">2010.08.24</span></li>
+				<li class="no4"><a href="#">개포동 주공1단지</a><span class="date">2010.08.24</span></li>
+				<li class="no5"><a href="#">도곡동 타워팰리스 1차</a><span class="date">2010.08.24</span></li>
+				</ol>
+				<div class="btn_nav">
+					<a href="#" class="btn_prev"><span>이전</span></a>
+					<a href="#" class="btn_next"><span>다음</span></a>
+				</div>
+			</div>
+			<div class="aside_section">
+				<h3>분양 특집</h3>
+				<div class="focus_area">
+					<div class="thmb"><a href="#"><img src="img/@tmp_focus.gif" width="83" height="63" alt=""><span class="mask"></span></a></div>
+					<h4><a href="#">상현동 수원광교</a></h4>
+					<p>경쟁사 대비 저렴한 분양가 발코니 확장 및 추가옵션 무료</p>
+				</div>
+				<ul class="focus_lst">
+				<li><a href="#">정부 고민...하우스 푸어 대책 어찌...</a></li>
+				<li><a href="#">코레일 &quot;삼성물산, 용산개발사업 빠져...</a></li>
+				<li><a href="#">&acute;중산층의 꿈&acute; 앗아간 도시</a></li>
+				</ul>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+		</div>
+		<!-- //aside -->
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<fieldset>
+		<legend class="blind">검색</legend>
+			<div class="sta_search_box">
+				<input type="text" title="검색" id="queryInputFooter" value="&quot;1억원대 오피스텔 전세&quot;" class="sta_search_text">
+				<a href="#" class="btn_search"><img src="http://img.land.naver.com/static/service/20100804/lnb/btn_srch.gif" width="42" height="25" alt="검색"></a>
+				<a href="#" class="btn_search"><img src="http://img.land.naver.com/static/service/20100804/lnb/btn_union_srch.gif" width="56" height="25" alt="통합검색"></a>
+			</div>
+		</fieldset>
+		<ul>
+		<li class="first"><a href="#">부동산 도움말</a> </li>
+		<li><a href="http://land.naver.com/index/service.nhn">이용약관</a></li>
+		<li><a href="http://www.nbp-corp.com/rules/privacy.html" target="_blank"><strong>개인정보취급방침 </strong></a></li>
+		<li><a href="http://land.naver.com/index/disclaimer.nhn">책임의 한계와 법적고지</a></li>
+		<li><a href="http://rd.naver.com/i:1000013391/c:24344?http://help.naver.com/claim_main.asp" target="_blank">게시중단요청서비스</a></li>
+		<li><a href="http://rd.naver.com/i:1000013392/c:44155?http://help.naver.com/main.asp" target="_blank">고객센터</a></li>
+		</ul>
+		<p class="info"> 네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며,<br>네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다. </p>
+		<address>
+		<a href="http://www.nbp-corp.com/" target="_blank" class="logo"><img src="http://static.naver.com/common/footer/logo_nhn.gif" alt="NHN" height="15" width="62"></a> <em>Copyright &copy;</em> <a href="http://www.nbp-corp.com/" target="_blank">NHN BUSINESS PLATFORM Corp.</a> <span>All Rights Reserved.</span>
+		</address>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

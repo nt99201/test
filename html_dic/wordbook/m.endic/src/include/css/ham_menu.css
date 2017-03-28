@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+.dmm{position:fixed;top:0;left:0;bottom:0;right:0;z-index:2000;width:100%;height:100%;background-color:rgba(0,0,0,0.6)}
+.hc{overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+
+/* 공통 언어 */
+#side_menu_nav .sidenav_menu .header .lb,
+#side_menu_nav .sidenav_menu .menu_lst li .lb,
+#side_menu_nav .ham_setlang,
+#side_menu_nav footer .logout_btn,
+#side_menu_nav .sidenav_menu .menu_lst_v2 li{font-family:"AppleSDGothicNeo-Light",sans-serif}
+
+#side_menu_nav .sidenav .my_namebox .btn_clse2,
+#side_menu_nav .sidenav_menu .header .arrow,
+#side_menu_nav .ham_setlang select,
+#side_menu_nav footer .logo_lnk,
+#side_menu_nav .oth_service .menu_lst_v2 .play_ico,
+#side_menu_nav .lb .new{background:url(../im/hm_sp_ico.png) no-repeat;background-size:65px 100px;-webkit-background-size:65px 100px}
+#side_menu_nav .sidenav_menu li .ico{background:url(../im/sp_ham.png) no-repeat;background-size:150px 220px;-webkit-background-size:150px 220px}
+#side_menu_nav .oth_service .menu_lst_v2 .ico{background:url(../im/sp_ham_dic.png) no-repeat;background-size:100px 100px;-webkit-background-size:100px 100px}
+
+#side_menu_nav{z-index:2001;position:fixed;top:0;left:0;bottom:0;overflow:hidden;display:block;width:270px;background-color:#EDEDEE}
+#side_menu_nav .side_menu_controller{background:#dbdbdb;height:100%}
+
+#side_menu_nav .sidenav{position:absolute}
+#side_menu_nav .sidenav .my_namebox{position:relative;line-height:44px;background:#03c73c;padding:0 20px;color:#fff}
+#side_menu_nav .sidenav .my_namebox a,#side_menu_nav .sidenav .my_name{font-size:15px;color:#fff}
+#side_menu_nav .sidenav .my_namebox .btn_clse2{position:absolute;top:50%;margin-top:-12px;right:8px;width:24px;height:24px;background-position:-1px 0}
+#side_menu_nav .sidenav_menu{margin-bottom:10px;line-height:44px}
+#side_menu_nav .sidenav_menu .header{padding:3px 20px 0;position:relative;font-size:15px;background:#fff;color:#000;border-bottom:1px solid #e8e8e8}
+#side_menu_nav .sidenav_menu .header .arrow{display:block;background-position:-26px -21px;position:absolute;top:50%;margin-top:-14px;right:10px;width:26px;height:27px}
+#side_menu_nav .sidenav_menu.on .header .arrow{background-position:0 -21px}
+#side_menu_nav .sidenav_menu .menu_lst{display:none}
+#side_menu_nav .sidenav_menu:first-child .menu_lst{display:block}
+#side_menu_nav .sidenav_menu.on .menu_lst{display:block}
+
+#side_menu_nav .sidenav_menu .menu_lst{padding:16px 20px 1px;background:#f6f6f6}
+#side_menu_nav .sidenav_menu .menu_lst:first-of-type{border-bottom:1px solid #E9E9E9}
+#side_menu_nav .sidenav_menu .menu_lst li{position:relative;margin-bottom:16px;padding-left:31px;line-height:18px}
+#side_menu_nav .sidenav_menu li .ico{position:absolute;left:2px;top:50%;margin-top:-8px;width:17px;height:17px}
+#side_menu_nav .sidenav_menu .menu_lst a.lnk{display:block}
+#side_menu_nav .sidenav_menu .menu_lst li .lb{font-size:14px;color:#333}
+#side_menu_nav .sidenav_menu li.home .ico{background-position:-10px -10px}
+#side_menu_nav .sidenav_menu li.userentry .ico{background-position:-35px -10px}
+#side_menu_nav .sidenav_menu li.opendic .ico{background-position:-65px -10px}
+#side_menu_nav .sidenav_menu li.rc_search .ico{background-position:-95px -10px}
+#side_menu_nav .sidenav_menu li.ts_userentry .ico{background-position:-125px -10px}
+#side_menu_nav .sidenav_menu li.my_opendic .ico{background-position:-10px -40px}
+#side_menu_nav .sidenav_menu li.today_word .ico{background-position:-35px -40px}
+#side_menu_nav .sidenav_menu li.today_quiz .ico{background-position:-65px -40px}
+#side_menu_nav .sidenav_menu li.today_cvs .ico{background-position:-95px -40px}
+#side_menu_nav .sidenav_menu li.std_word .ico{background-position:-125px -40px}
+#side_menu_nav .sidenav_menu li.tt_word .ico,
+#side_menu_nav .sidenav_menu li.jlpt_word .ico,
+#side_menu_nav .sidenav_menu li.hsk_word .ico{background-position:-10px -70px}
+#side_menu_nav .sidenav_menu li.q_king .ico{background-position:-35px -70px}
+#side_menu_nav .sidenav_menu li.my_en_word .ico{background-position:-65px -70px}
+#side_menu_nav .sidenav_menu li.my_std_cur .ico{background-position:-95px -70px}
+#side_menu_nav .sidenav_menu li.setting .ico{background-position:-125px -70px}
+#side_menu_nav .sidenav_menu li.trs_record .ico{background-position:-10px -100px}
+
+#side_menu_nav .oth_service li.webtrans .ico{background-position:-40px -10px}
+#side_menu_nav .oth_service li.inter .ico{background-position:-10px -10px}
+#side_menu_nav .oth_service li.endic .ico{background-position:-70px -10px}
+#side_menu_nav .oth_service li.jpdic .ico{background-position:-10px -40px}
+#side_menu_nav .oth_service li.cndic .ico{background-position:-40px -40px}
+#side_menu_nav .oth_service li.cndic .ico{background-position:-40px -40px}
+#side_menu_nav .oth_service li.estrans .ico{background-position:-70px -40px}
+
+/* 일본어 단어장 */
+#side_menu_nav .sidenav_menu li.handwriting .ico{background-position:-10px -130px}
+#side_menu_nav .sidenav_menu li.hira .ico{background-position:-35px -130px}
+#side_menu_nav .sidenav_menu li.gata .ico{background-position:-65px -130px}
+#side_menu_nav .sidenav_menu li.voice_search .ico{background-position:-95px -130px}
+#side_menu_nav .sidenav_menu li.visual_search .ico{background-position:-125px -130px}
+#side_menu_nav .sidenav_menu li.today_word_jp .ico{background-position:-10px -160px}
+#side_menu_nav .sidenav_menu li.hj_note .ico{background-position:-35px -160px}
+#side_menu_nav .sidenav_menu li.idiom_word .ico{background-position:-65px -160px}
+#side_menu_nav .sidenav_menu li.practical_conv .ico{background-position:-95px -160px}
+#side_menu_nav .sidenav_menu li.jpstart .ico{background-position:-125px -160px}
+
+/* 중국어 단어장 */
+#side_menu_nav .sidenav_menu li.today_word_cn .ico{background-position:-10px -190px}
+#side_menu_nav .sidenav_menu li.img_word .ico{background-position:-35px -190px}
+#side_menu_nav .sidenav_menu li.bct_word .ico{background-position:-65px -190px}
+#side_menu_nav .sidenav_menu li.nihao_chinese .ico{background-position:-95px -190px}
+
+
+/* 번역기 */
+#side_menu_nav .sidenav_menu .menu_lst_v2{background:#f6f6f6}
+#side_menu_nav .menu_lst_v2 li .ico{position:absolute;left:22px}
+#side_menu_nav .sidenav_menu .menu_lst_v2 li{position:relative;font-size:15px;line-height:15px;background:#fff;color:#000;border-bottom:1px solid #F0F0F0}
+#side_menu_nav .sidenav_menu .menu_lst_v2 li.cndic{border-bottom:none}
+#side_menu_nav .sidenav_menu .menu_lst_v2 .lnk{display:block;padding:17px 16px 15px 47px}
+#side_menu_nav .oth_service .header{padding:7px 20px 6px 19px;margin-top:-1px;background:#DBDBDD;border-bottom:none;line-height:12px;font-size:12px;font-weight:normal;color:#44444A}
+#side_menu_nav .oth_service .menu_lst_v2 .ico{width:21px;height:21px;top:50%;left:20px;margin-top:-10px}
+#side_menu_nav .oth_service .menu_lst_v2 .play_ico{width:20px;height:22px;top:50%;margin-top:-10px}
+#side_menu_nav .oth_service .menu_lst_v2 .lnk{padding-left:48px}
+#side_menu_nav .oth_service .menu_lst_v2 .play_txt{position:absolute;right:33px;top:17px;display:inline-block;font-size:12px;color:#777}
+#side_menu_nav .oth_service .menu_lst_v2 .play_ico{position:absolute;right:9px;width:20px;height:21px;background-position:-24px -1px;display:inline-block;margin-left:20px}
+#side_menu_nav .lb .new{visibility:visible;margin-left:4px;margin-top:-3px;display:inline-block;vertical-align:middle;width:13px;height:13px;background-position:-20px -80px}
+
+/* 언어스킨 설정 */
+#side_menu_nav .ham_setlang{white-space:nowrap;position:relative;padding:20px 10px 20px 20px;border-bottom:1px solid #E1E1E2;background-color:#EDEDEE;color:#000;clear:both;overflow:hidden}
+#side_menu_nav .ham_setlang label{margin-right:12px;font-size:13px;line-height:23px}
+#side_menu_nav .ham_setlang .setlang_wrap{display:inline-block;background:#fff}
+#side_menu_nav .ham_setlang select{width:168px;background-position:150px -70px;height:25px;line-height:21px;padding:0 24px 0 6px;border:1px solid #dedede;font-size:14px;color:#000;-webkit-appearance:none;-moz-appearance:none;border-radius:0;-webkit-border-radius:0}
+
+#side_menu_nav .footer_wrap{background-color:#EDEDEE}
+#side_menu_nav .fot{padding:19px 20px 20px 20px}
+#side_menu_nav footer{line-height:25px;position:relative}
+#side_menu_nav footer .logout_btn{display:inline-block;margin:0 1px;padding:0 5px;border:1px solid #d3d3d4;-webkit-border-radius:0;border-radius:0;color:#222;font-size:12px;letter-spacing:-1px;line-height:23px}
+#side_menu_nav footer .logo_lnk{display:inline-block;width:65px;height:22px;position:absolute;right:1px;top:2px;background-position:0 -53px}
+
+/* 배너 */
+#side_menu_nav .ham_banner{overflow:hidden;min-height:72px;border-top:solid 1px #6297ce;border-bottom:solid 1px #6ea3db;background-color:#79a8de}
+#side_menu_nav .ham_banner::after{display:block;height:0;clear:both;content:''}
+#side_menu_nav .ham_banner a{position:relative;display:block}
+#side_menu_nav .ham_banner strong{display:inline-block;margin:11px 0 5px;color:#fff;text-shadow:0 -1px #6790be;font-weight:bold;font-size:15px;line-height:16px;zoom:1}
+#side_menu_nav .ham_banner .txt{line-height:13px;color:#ebf2f9;font-size:12px;text-shadow:0 -1px #6790be;letter-spacing:0}
+#side_menu_nav .ham_banner .ico{position:absolute;top:50%;width:46px;height:55px;margin:-27px 0 0 10px;background:url(../im/hm_banner_ico.png) no-repeat;background-size:46px 55px;-webkit-background-size:46px 55px;zoom:1}
+#side_menu_nav .ham_banner.dic_app .ico{background-image:url(../im/hm_banner_ico.png)}
+#side_menu_nav .ham_banner.linedict .ico{background-image:url(../im/hm_banner_linedict_ico.png)}
+#side_menu_nav .ham_banner.enth .ico{background-image:url(../im/hm_banner_enth_ico.png)}
+#side_menu_nav .ham_banner.enid .ico{background-image:url(../im/hm_banner_enid_ico.png)}
+#side_menu_nav .ham_banner.zhen .ico{background-image:url(../im/hm_banner_zhen_ico.png)}
+#side_menu_nav .ham_banner.trans .ico{background-image:url(../im/hm_banner_trans_ico.png)}
+#side_menu_nav .ham_banner p{overflow:hidden;padding:0 6px 10px 65px;line-height:14px}
+

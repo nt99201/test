@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+<link rel="stylesheet" type="text/css" href="../../css/news.css">
+<style type="text/css">
+.cutStringPosition{position:absolute;top:-1000px;left:-1000px}
+#rolling_mkt_news{overflow:hidden;height:26px;margin-top:18px}
+#rolling_mkt_news ul{height:26px;margin-top:5px}
+#rolling_mkt_news ul li{height:26px;margin:0}
+</style>
+<body onload="getGNB();">
+<div id="wrap">
+
+	<div class="spot">
+		<div id="headline_news_area" class="section">
+			<h2 class="h_news today"><span>TODAY NEWS</span></h2>
+			<div class="section_date">
+				<a href="#" title="이전" class="btn prev"><span>이전</span></a>
+				<span class="dot"><span class="num num_2012">2012</span></span><span class="dot"><span class="num num_1">01</span></span><span class="day"><span class="num num_18">18</span></span>
+				<a href="#" class="btn next_off"><span>다음</span></a>
+				<a href="#" class="btn now"><span>오늘</span></a>
+			</div>
+			<div class="group">
+				<dl class="news_list">
+				<dt>
+					<span id="hnews1" style="display:none">"월급쟁이, 5년 2개월 모아야 서울 전세구한다"</span>
+					<a href="#">"월급쟁이,&nbsp;5년&nbsp;2개월&nbsp;모아야&nbsp;서울&nbsp;전세구한...</a>
+				</dt>
+				<dd>
+					<span id="hnews2" style="display:none">서울에서 얼마나 모아야 전셋집을 구할 수 있을까?
+					월급쟁이가 가계지출 없이 5년 2개월 동안 모아야 서울시 내 공급 100㎡(구30평형) 아파트에 전세보증금을 마련할 수 있는
+					것으로 나타났다. 특히 강남구 등 전셋값이 비싼 지역일수록 전셋집 마련기간은 더 오래 걸린다.18일 부동산 정보업체 리얼투데이에
+					따르면, 국민은행 시세를 기준으로 전셋값을 조사한 결과 1월 둘째주 기준 서울의 경우 3.3㎡당 1233만원인 것으로 조사됐다.
+					서울에 100㎡의 전셋값 시세는 2억4198만원이다. 통계청 자료로 본 2011</span> 서울에서&nbsp;얼마나&nbsp;모아야&nbsp;전셋집을&nbsp;구할&nbsp;수&nbsp;있을까?&nbsp;월급쟁이
+					가&nbsp;가계지출&nbsp;없이&nbsp;5년&nbsp;2개월&nbsp;동안&nbsp;모아야&nbsp;서울시&nbsp;
+					내&nbsp;공급&nbsp;100㎡(구30평형)&nbsp;아파트에&nbsp;전세보증금을&nbsp;마련할&nbsp;수&nbsp;있
+					는&nbsp;것으로&nbsp;나타났다.&nbsp;특히&nbsp;강남구&nbsp;등&nbsp;전셋값이&nbsp;비싼&nbsp;지역일
+					수록&nbsp;전셋집&nbsp;마련...
+					<span class="writing">아시아경제</span>
+					<span class="date">2012.01.18</span>
+				</dd>
+				</dl>
+				<ul class="sub_list">
+				<li>
+					<span id="snews1" style="display:none">설러리맨 강남에 30평 전셋집 구하려면 8년 꼬박 모아야</span>
+					<a href="#">설러리맨&nbsp;강남에&nbsp;30평&nbsp;전셋집&nbsp;구하려면&nbsp;8년&nbsp;꼬박&nbsp;모아...</a>
+					<span class="writing">헤럴드생생뉴스</span>
+					<span class="date">2012.01.18</span>
+				</li>
+				<li>
+					<span id="snews2" style="display:none">서울 국민임대아파트 공급 ‘쇼크’...무주택 서민 내집마련 꿈 막막</span>
+					<a href="#">서울&nbsp;국민임대아파트&nbsp;공급&nbsp;‘쇼크’...무주택&nbsp;서민&nbsp;내집...</a>
+					<span class="writing">헤럴드생생뉴스</span>
+					<span class="date">2012.01.18</span>
+				</li>
+				</ul>
+			</div>
+			<div class="group2">
+				<ul class="list">
+				<li>
+					<span id="h2news1" style="display:none">3200만원 싸게 내집 사는 기막힌 비법</span>
+					<span class="title"><a href="#"><strong>3200만원 싸게 내집 사는 기막힌 비법</strong></a></span>
+					<span class="writing">아시아경제</span>
+					<span class="date">2012.01.18</span>
+				</li>
+
+				<li>
+					<span id="h2news2" style="display:none">씨마른 전세매물…직거래사이트서도 실종</span>
+					<span class="title"><a href="#"><strong>씨마른 전세매물…직거래사이트서도 실종</strong></a></span>
+					<span class="writing">머니투데이</span>
+					<span class="date">2012.01.18</span>
+				</li>
+
+				<li>
+					<span id="h2news3" style="display:none">기상천외 임대주택</span>
+					<span class="title"><a href="#"><strong>기상천외 임대주택</strong></a></span>
+					<span class="writing">동아일보</span>
+					<span class="date">2012.01.18</span>
+				</li>
+				</ul>
+				<ul class="list2">
+				<li>
+					<span id="h2news4" style="display:none">올해 서울 국민임대 겨우 434가구 공급.. 서민은 어디로?</span>
+					<span class="title"><a href="#"><strong>올해&nbsp;서울&nbsp;국민임대&nbsp;겨우&nbsp;434가구&nbsp;공급..&nbsp;서민은...</strong></a></span>
+					<span class="writing">아시아경제</span>
+					<span class="date">2012.01.18</span>
+				</li>
+				<li>
+					<span id="h2news5" style="display:none">도시형생활주택, 규제 풀고 지원 늘리고</span>
+					<span class="title"><a href="#"><strong>도시형생활주택, 규제 풀고 지원 늘리고</strong></a></span>
+					<span class="writing">머니투데이</span>
+					<span class="date">2012.01.18</span>
+				</li>
+				<li>
+					<span id="h2news6" style="display:none">서울시 주상복합아파트 심의 강화</span>
+					<span class="title"><a href="#"><strong>서울시 주상복합아파트 심의 강화</strong></a></span>
+					<span class="writing">매일경제</span>
+					<span class="date">2012.01.18</span>
+				</li>
+				</ul>
+			</div>
+			<div class="btn_area">
+				<span class="bar">|</span>
+				<a href="#">전체기사보기</a>
+			</div>
+		</div>
+		<div class="section2">
+			<div class="section_area">
+				<h2 class="h_news area"><span>우리동네 뉴스</span></h2>
+				<div class="news_group">
+					<div class="flash_area">
+						<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="123" height="159" title="미니맵">
+							<param name="movie" value="img/NewsMinimap_1208.swf">
+							<param name="quality" value="high">
+							<param name="wmode" value="transparent">
+							<param name="allowscriptaccess" value="always">
+							<object type="application/x-shockwave-flash" data="img/NewsMinimap_1208.swf" width="123" height="159">
+								<param name="quality" value="high">
+								<param name="wmode" value="transparent">
+								<param name="allowscriptaccess" value="always">
+							</object>
+						</object>
+					</div>
+					<div id="region_news_area" class="area_news">
+						<div class="area_header">
+							<p><strong><em>경기도</em> 뉴스</strong></p>
+							<span class="btn_area">
+								<a href="#" class="btn prev"><span>이전</span></a>
+								<a href="#" class="btn next"><span>다음</span></a>
+							</span>
+						</div>
+						<ul class="area_list">
+						<li>
+							<a href="#" class="area">[광명시]</a>
+							<a href="#">재래시장 뉴타운 포함 개발 반대 70%...</a>
+						</li>
+						<li>
+							<a href="#" class="area">[하남시]</a>
+							<a href="#">50cc미만 이륜, 사용신고제 도입 </a>
+						</li>
+						<li>
+							<a href="#" class="area">[하남시]</a>
+							<a href="#">H아파트, 보조금 부풀려 받아 말썽 </a>
+						</li>
+						<li>
+							<a href="#" class="area">[용인시]</a>
+							<a href="#">용인시 청사 난방 구조적 문제 있나 없나?</a>
+						</li>
+						<li>
+							<a href="#" class="area">[용인시]</a>
+							<a href="#">용인시 청사 난방 구조적 문제 있나 없나?</a>
+						</li>
+						</ul>
+					</div>
+
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<div class="section_hot">
+				<h2 class="h_news hot"><span>핫이슈</span></h2>
+				<div class="section_issue">
+					<div class="group">
+						<p><a href="#"><strong>2012년 유망 부동산은?</strong></a></p>
+						<ul>
+						<li><a href="#">[분양시장 기상도] 세종시 청약열...</a></li>
+						<li><a href="#">아파트 톱3 브랜드 래미안ㆍ푸르...</a></li>
+						<li><a href="#">뜨거운 2월… 전국 1만8084채 ‘..</a></li>
+						<li><a href="#">대학생, 전세임대 인기 후끈…경...</a></li>
+						<li><a href="#">올해에도 수익형 부동산 유망…어...</a></li>
+						</ul>
+					</div>
+					<div class="group2">
+						<p><a href="#"><strong>부동산시장 결산 및 전망</strong></a></p>
+						<ul>
+						<li><a href="#">올해 총선ㆍ대선 부동산 시장 ...</a></li>
+						<li><a href="#">설 끝나고 전셋값 오른다</a></li>
+						<li><a href="#">짝수효과 옛말..올해 전셋값 잡...</a></li>
+						<li><a href="#">올 부동산 경기 작년과 비슷</a></li>
+						<li><a href="#">30대 10명중 9명은 올해 집 살 계...</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="section_wrap">
+				<div class="wrap">
+					<div class="section_group" style="height:173px">
+						<h3 class="tit_h3 h_headline"><span>분야별 헤드라인</span></h3>
+						<ul class="list_type">
+						<li>
+							<a href="#" class="headline">[시장동향]</a>
+							<a href="#">수도권 소형아파트  상향 평준화...</a>
+						</li>
+						<li>
+							<a href="#" class="headline">[정책/제도]</a>
+							<a href="#">도시형생활주택, 규제 풀고 지원 늘...</a>
+						</li>
+						<li>
+							<a href="#" class="headline">[개발정보]</a>
+							<a href="#">포천·김포 軍시설 보호구역 해제</a>
+						</li>
+						<li>
+							<a href="#" class="headline">[분양]</a>
+							<a href="#">삼성건설, 올해 1만 2231가구 공급</a>
+						</li>
+						<li>
+							<a href="#" class="headline">[업계동향]</a>
+							<a href="#">현대산업개발, 기업문화 가이드북 발간</a>
+						</li>
+						<li>
+							<a href="#" class="headline">[부동산금융]</a>
+							<a href="#">부동산 침체로 금융-부동산 융합사...</a>
+						</li>
+						<li>
+							<a href="#" class="headline">[경매/공매]</a>
+							<a href="#">매경부동산 센터, 부동산 경·공매 강의</a>
+						</li>
+						</ul>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+					<div class="section_group" style="height:173px">
+						<h3 class="tit_h3 h_column"><span>부동산 칼럼</span></h3>
+						<div class="column_group">
+							<div class="thumb">
+								<a href="#"><img src="img/@lc017_main_profile_1302677879105.jpg" width="110" height="75" alt="사진"></a>
+							</div>
+							<dl class="column_list">
+							<dt><a href="#">부동산시장 회복시점, ...</a></dt>
+							<dd>부동산시장이 침체를 벗어나기 위해서는 가계의 소득 증가와 ..</dd>
+							<dd class="info">칼럼니스트<span class="bar">|</span> 김리영</dd>
+							</dl>
+						</div>
+						<ul class="list">
+						<li>
+							<span class="title">
+								<a href="#" class="writer">[오윤섭]</a>
+								<a href="#">하우스 푸어라고 고민하더니 결국...</a>
+							</span>
+							<span class="date">2012.01.12</span>
+						</li>
+						<li>
+							<span class="title">
+								<a href="#" class="writer">[조명수]</a>
+								<a href="#">인구변화와 경제성장 그리고 주택...</a>
+							</span>
+							<span class="date">2012.01.09</span>
+						</li>
+						<li>
+							<span class="title">
+								<a href="#" class="writer">[오윤섭]</a>
+								<a href="#">주택시장 심리게임에서 이기는 법</a>
+							</span>
+							<span class="date">2012.01.05</span>
+						</li>
+						</ul>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+					<div class="section_group" style="height:205px">
+						<h3 class="tit_h3 h_live"><span>실시간 속보</span></h3>
+						<ul class="list_type2">
+						<li><span class="title"><a href="#">현대산업개발, 기업문화 가이드북 발간</a></span><span class="sponsor">이데일리</span></li>
+						<li><span class="title"><a href="#">올해 서울 국민임대 공급량 작년 대비...</a></span><span class="sponsor">조선비즈</span></li>
+						<li><span class="title"><a href="#">대림산업 해외직원 가족에게 아버지 ...</a></span><span class="sponsor">아시아경제</span></li>
+						<li><span class="title"><a href="#">수도권 소형아파트 상향 평준화 ...</a></span><span class="sponsor">아시아경제</span></li>
+						</ul>
+						<ul class="list_type2 line">
+						<li><span class="title"><a href="#">삼성건설, 올해 1만 2231가구 공급</a></span><span class="sponsor">이데일리</span></li>
+						<li><span class="title"><a href="#">현대산업개발은 이런 기업.. A to Z ...</a></span><span class="sponsor">아시아경제</span></li>
+						<li><span class="title"><a href="#">삼성물산, 올해 총 1만 2231가구 공급...</a></span><span class="sponsor">한국경제TV</span></li>
+						<li><span class="title"><a href="#">삼성물산, 올해 수도권 위주 1만2000...</a></span><span class="sponsor">아시아경제</span></li>
+						</ul>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+					<div class="section_group" style="height:205px">
+						<h3 class="tit_h3 h_report"><span>동향 보고서</span></h3>
+						<ul class="list_type">
+						<li><a href="#">[1월2주 충청권시황] 대전,도안신도시 입주로 전세...</a></li>
+						<li><a href="#">[1월2주 경북권시황] 매물 부족, 전세상승 여전</a></li>
+						<li><a href="#">[1월2주 시황] 강동구, 고덕시영 이주로 전셋값 들썩</a></li>
+						<li><a href="#">[12월 월간동향] 발 빠른 전세난 대비로 전셋값 안정</a></li>
+						</ul>
+						<ul class="list_type line">
+						<li><a href="#">[개황] 강동구 물량부족으로 상승률 가장 높아</a></li>
+						<li><a href="#">[서울매매] 중구, 대규모 입주물량으로 중대형 하락세</a></li>
+						<li><a href="#">[지방매매] 과천, 보금자리 사업지연으로 하락세</a></li>
+						<li><a href="#">[서울전세] 고덕시영 이주수요로 지난주대비 대폭 ...</a></li>
+						</ul>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+					<div class="section_group">
+						<h3 class="tit_h3 h_info"><span>분양동향</span></h3>
+						<ul class="list_type">
+						<li><a href="#"><em>[월간_01월12일]</em> 인천 간석오거리역 솔리채 분양</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 김해의 새로운 랜드마크, 김해 부원역 푸르지...</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 조원 광교 "임광그대가" 파격 분양중</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 인천 간석오거리역 솔리채 분양</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 김해의 새로운 랜드마크, 김해 부원역 푸르지...</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 조원 광교 "임광그대가" 파격 분양중</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 조원 광교 "임광그대가" 파격 분양중</a></li>
+						<li><a href="#"><em>[월간_01월12일]</em> 조원 광교 "임광그대가" 파격 분양중</a></li>
+						</ul>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+					<div class="section_group" style="height:194px">
+						<h3 class="tit_h3 h_poll"><span>ISSUE &amp; POLL</span></h3>
+						<div class="issue_area">
+							<h4 class="h_issue">많이 내린 수도권 아파트값, 더 내려야 할까요?</h4>
+							<p class="txt_poll">더 내려야 한다면<strong class="agree">찬성합니다</strong>
+								<br> 아니라면 <strong class="oppose">반대합니다</strong>
+							</p>
+							<div class="section_graph">
+								<div class="agree">
+									<strong>찬성합니다</strong>
+									<span class="bar">|</span>
+									<span class="graph"><span style="width:65.45%"></span></span>
+									<span class="result">65.45%</span>
+								</div>
+
+								<div class="oppose">
+									<strong>반대합니다</strong>
+									<span class="bar">|</span>
+									<span class="graph"><span style="width:34.55%"></span></span>
+									<span class="result">34.55%</span>
+								</div>
+							</div>
+						</div>
+						<p class="desc_issue">투표참여 :<em>1638</em> 참여글 :<em id="comment_count">261</em></p>
+						<div class="btn_area">
+							<a href="#"><img src="img/btn_poll.gif" width="66" height="22" alt="투표하기"></a>
+						</div>
+						<a href="#" class="btn_more">더보기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="aside">
+			<div id="da_280240">
+				<iframe src="about:blank" width="280" height="240" title="광고영역" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" id="f280240" name="f280240" align="middle" class="odohlhemrexmxlmqgcrq"></iframe>
+			</div>
+			<div class="section_aside">
+				<h3 class="tit_h3 h_view"><span>가장 많이 본 뉴스</span></h3>
+				<div id="best_news_tab" class="tab_view veiw1">
+					<!-- [D] view1 : 주간뉴스 view2 : 월간뉴스 -->
+					<a href="#" class="tab1"><span>주간뉴스</span></a>
+					<a href="#" class="tab2 "><span>월간뉴스</span></a>
+				</div>
+				<div id="ww_best" class="news_on">
+					<!-- [D] 활성화 : news_on 비활성화 : news_off -->
+					<ul class="view_list">
+					<li><a href="#"><strong>"집값 바닥… 올해 집 살 마음 ...</strong></a></li>
+					<li><a href="#">"난 부산 집 팔아 분당 집 샀다"...</a></li>
+					<li><a href="#">[세입자, 집 살 마음 점점 사라진다]</a></li>
+					<li><a href="#">꼭지찍은 부산 부동산, 조정 언제까지?</a></li>
+					<li><a href="#">전셋값, 고덕시영 인근 들썩 강남 털썩</a></li>
+					</ul>
+				</div>
+				<div id="mm_best" class="news_off">
+					<ul class="view_list">
+					<li><a href="#"><strong>빚내서 집산 세입자 "올해도 집...</strong></a></li>
+					<li><a href="#">"집값 바닥… 올해 집 살 마음 있다&amp;...</a></li>
+					<li><a href="#">노후 되레 위협하는 중대형 아파트의 덫 </a></li>
+					<li><a href="#">경기 남부 뛰는 집값 위에 나는 전셋값 </a></li>
+					<li><a href="#">대출받아 구입한 집, 어쩌나… </a></li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more news">더보기</a>
+			</div>
+			<div class="section_aside line">
+				<h3 class="tit_h3 h_condition"><span>부동산시황</span></h3>
+				<div class="section_condition">
+					<p>아파트 매매가 변동률(%)</p>
+					<span>
+						<input type="radio" name="rate" id="rate1" checked="checked" class="input_rdo"><label for="rate1">주간</label>
+						<input type="radio" name="rate" id="rate2" class="input_rdo"><label for="rate2">월간</label>
+					</span>
+				</div>
+				<div id="chartdiv" class="graph_rate" style="height:190px">
+					<img src="img/@msline.gif" width="240" height="190" alt="임시 그래프 이미지">
+				</div>
+				<div id="rolling_mkt_news">
+					<ul class="condition_list">
+					<li><a href="#" target="_blank"><span>[매매]</span> 강동구, 고덕시영 이주로 전...</a></li>
+					<li><a href="#" target="_blank"><span>[전세]</span> 매물 부족, 전세상승 여전</a></li>
+					<li><a href="#" target="_blank"><span>[매매]</span> 강동구, 고덕시영 이주로 전...</a></li>
+					<li><a href="#" target="_blank"><span>[전세]</span> 매물 부족, 전세상승 여전</a></li>
+					<li><a href="#" target="_blank"><span>[매매]</span> 강동구, 고덕시영 이주로 전...</a></li>
+					<li><a href="#" target="_blank"><span>[전세]</span> 매물 부족, 전세상승 여전</a></li></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="푸터 임시 이미지">
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</head>
+</html>

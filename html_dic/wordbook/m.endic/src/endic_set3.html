@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>설정 페이지</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+</head>
+<body class="">
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<div class="t_content">
+	<div class="tit_top4">
+		<a href="#" class="btn_link8">이전</a>
+		<h3>내 단어장 편집</h3>
+	</div>
+	<div class="btn_area">
+		<a href="#" class="btn_link9"><span class="add_ico"></span> 새 단어장 추가</a>
+	</div>
+	<ul class="lst_ul4">
+	<li class="lst_li4 set_bg">
+	    <input type="text" placeholder="최대 7자까지 입력가능" class="text_ctm" />
+	    <a href="#" class="edit_btn store_btn">저장</a> <a href="#" class="del_btn">취소</a>
+	</li>
+	<li class="lst_li4">영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	<li class="lst_li4">영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	<li class="lst_li4">영단어영단어영단어영단어영단어영단어영단어영단어영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	<li class="lst_li4">영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	<li class="lst_li4">영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	<li class="lst_li4">영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	<li class="lst_li4 last_li">영단어 <a href="#" class="edit_btn">편집</a> <a href="#" class="del_btn">삭제</a></li>
+	</ul>
+</div>
+<hr />
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver2"></div>
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/footer.html', sel:'.__ver2'},
+        {path:'include/common_ham_menu.html', sel:'.sidenav'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

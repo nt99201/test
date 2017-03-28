@@ -1,0 +1,624 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<title>예스공인중개사무소 :: 내집마련의 시작, 네이버 부동산</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="stylesheet" type="text/css" href="../../css/land_realtor.css">
+<link rel="stylesheet" type="text/css" href="http://dev.ui.naver.com/svnview/common/likeit/trunk/css/likeitlist.css">
+<link rel="stylesheet" type="text/css" href="http://dev.ui.naver.com/svnview/common/likeit/trunk/css/likeitlist_land.css">
+<!-- [테스트 코드] -->
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/demo/asset/jindo.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.Component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.UIComponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.HTMLComponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.RolloverArea.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.RolloverClick.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.Timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.LayerManager.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.LayerPosition.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.SelectBox.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){ anchor_remove() }
+
+function anchor_remove(){
+	var el = $('dd.area span.lst a');
+	var el_size = $(el).size();
+	var el_wrap = $('dd.area span.lst');
+
+	do{
+		if( $(el_wrap).height() > 42 ){
+			$(el[(el_size-2)]).remove();
+			el_size -= 1;
+		}else{
+			break;
+		}
+	}while(1);
+
+	/* 마지막 a의 ,(콤마) 없애기 */
+	$(el[(el_size-2)]).text( $(el[(el_size-2)]).text().replace(',', '') );
+}
+
+$(function(){
+	$('.arr.prev').click(function(){
+		$(this).toggleClass('on');
+	});
+	$('.arr.next').click(function(){
+		$(this).toggleClass('on');
+	});
+});
+</script>
+<!-- //테스트 코드 -->
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		
+	</div>
+
+	<div id="container">
+		<div class="interior_detail">
+        	<div class="tit_area">
+            	<div class="provide_info">제공<span class="bar">|</span><em>인스디자인 (031-600-3668)</em></div>
+                <h2 class="tit">[경기도 성남시 분당구 이매동] <strong>아름4단지 두산 삼호아파트</strong></h2>
+                <div class="lnk">
+                	<a href="#" class="detail_view">매물정보보기</a>
+                	<a href="#" class="interest_save">관심저장</a>
+                	<a href="#" class="lst_view">목록보기</a>
+                </div>
+            </div>
+			<table class="info">
+			<caption>인테리어 정보</caption>
+			<colgroup><col style="width:74px"><col style="width:273px"><col style="width:71px"><col style="width:113px"><col style="width:71px"><col></colgroup>
+			<tr>
+			<th scope="row">시공비</th>
+			<td><strong>3,000 ~ 3,500만원</strong></td>
+			<th scope="row">공사일</th>
+			<td>2014.06</td>
+			<th scope="row">공사기간</th>
+			<td>14일</td>
+			</tr>
+			</table>
+			<div class="info_detail2">
+				<p class="txt">18년된 53평 아파트입니다. 샤시까지 전체 올수리를 했구요. 아무래도 평수가 조금 있다보니, 무채색을 많이 사용했는데 이번에는 조금 강한색을
+				넣었어요(다른 업체에 비하면 약하지만...) 블루+화이트+원목을 기준으로 평수대비 씽크대가 좁아, 식탁 옆에 키 큰 그릇장을 제작하고 6~8인용
+				식탁을 배치하여 이곳에서 식사도 하고, 독서도 하고, 컴도 할 수 있는 다용도 식탁을 제작했구요. 거실사이즈가 넓어 한쪽으로 미는 폴딩도어보다
+				양쪽으로 열 수 있는 폴딩도어를 제작하여 안정감을 주었습니다.</p>
+			</div>
+
+            <h3>평면도</h3>
+            <div class="floorplan_area">
+            	<div class="fp_img"><img src="img/@tmp_floorplan.gif" width="750" height="545" alt="평면도 임시이미지"></div>
+                <!-- [D] 링크 클릭 시 클래스 on 추가 -->
+                <a href="#" class="arr prev on">
+                	<span class="blind">이전</span>
+                    <div class="thumb prev">
+                        <span class="thmb_img">
+                            <img src="http://dev.ui.naver.com/tmp/?100x65_interior_y_CC0000_70" width="100" height="65" alt="임시 이미지">
+                            <span class="mask"></span>
+                        </span>
+                        <strong>157㎡<br>1,000~1,500만원</strong>
+                        <em>판교원10단지휴먼시아아파트먼트</em>
+                    </div>
+                </a>
+                <!-- [D] 링크 클릭 시 클래스 on 추가 -->
+                <a href="#" class="arr next">
+                	<span class="blind">다음</span>
+                    <div class="thumb next">
+                        <span class="thmb_img">
+                            <img src="http://dev.ui.naver.com/tmp/?100x65_interior_y_CC0000_70" width="100" height="65" alt="임시 이미지">
+                            <span class="mask"></span>
+                        </span>
+                        <strong>157㎡<br>1,000~1,500만원</strong>
+                        <em>판교원10단지휴먼시아아파트먼트</em>
+                    </div>
+				</a>
+            </div>
+
+            <h3>주방</h3>
+            <div class="info_detail2">
+				<p class="txt">2톤구성의 씽크구성으로 LG하이뫅스 정품 인조대리석 , 하츠쿸탑 및 하츠후드. 조명은 물론이고 식탁쪽 간접조명등까지 설치가 되었어요. 마루바닥
+                과 다르게 깔끔하고 견고한 타일(포리싱타일 6000각)재질로 바닥재의 차별화를 둬서 깔끔한 이미지의 주방 인테리어로 바뀌었습니다. 조명인테리어
+                는 LED조명등과 백열전등으로 식사분위기를 한껏 높여줄겁니다.<br>
+                2톤구성의 씽크구성으로 LG하이뫅스 정품 인조대리석 , 하츠쿸탑 및 하츠후드. 조명은 물론이고 식탁쪽 간접조명등까지 설치가 되었어요. 마루바닥
+                과 다르게 깔끔하고 견고한 타일(포리싱타일 6000각)재질로 바닥재의 차별화를 둬서 깔끔한 이미지의 주방 인테리어로 바뀌었습니다. 조명인테리어
+                는 LED조명등과 백열전등으로 식사분위기를 한껏 높여줄겁니다.</p>
+			</div>
+
+            <div class="info_detail">
+				<dl>
+                <dt>주요 자재정보</dt>
+				<dd>
+                	<ul class="lst_info">
+                    <li><a href="#">씽크대 : 한샘 시에나 화이트</a></li>
+                    <li><a href="#">후드 : 동양매직 RHD-420A</a></li>
+                    <li><a href="#">현관장 : 에넥스 데코</a></li>
+                    <li><a href="#">씽크대 : 한샘 화이트</a></li>
+                    <li><a href="#">후드 : 린나이 RHD-420A</a></li>
+                    </ul>
+				</dd>
+				</dl>
+			</div>
+
+            <!-- [D] 평면도 썸네일이 들어간 경우 -->
+            <div class="matching_area">
+            	<div class="fp_img">
+                	<img src="img/@tmp_floorplan2.gif" width="270" height="245" alt="임시 이미지">
+					<span class="mask"></span>
+                    <!-- [D] 위치표시 아이콘은 left, top값으로 조정 -->
+                    <span class="ico_maker" style="left:129px;top:58px">위치표시</span>
+                </div>
+            	<h3>주방</h3>
+                <div class="info_detail2">
+                    <p class="txt">2톤구성의 씽크구성으로 LG하이뫅스 정품 인조대리석 , 하츠쿸탑 및 하츠후드. 조명은 물론이고 식탁쪽 간접조명등까지 설치가 되었어요. 마루바닥
+                    과 다르게 깔끔하고 견고한 타일(포리싱타일 6000각)재질로 바닥재의 차별화를 둬서 깔끔한 이미지의 주방 인테리어로 바뀌었습니다. 조명인테리어
+                    는 LED조명등과 백열전등으로 식사분위기를 한껏 높여줄겁니다.</p>
+                </div>
+                <div class="info_detail">
+                    <dl>
+                    <dt>주요 자재정보</dt>
+                    <dd>
+                        <ul class="lst_info">
+                        <li><a href="#">싱크수전 : 아메리칸 스탠다드</a></li>
+                        <li><a href="#">바닥 : 포리싱타일 600각</a></li>
+                        <li><a href="#">싱크볼 : 백조</a></li>
+                    	<li><a href="#">후드 : 린나이 RHD-420A</a></li>
+                        </ul>
+                    </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- //[D] 평면도 썸네일이 들어간 경우 -->
+
+            <!-- 포트폴리오 이미지 -->
+            <!-- [D] 가로형 이미지 -->
+			<div class="thmb_area">
+            	<div class="bx_img">
+                	<img src="http://dev.ui.naver.com/tmp/?978x650_interior_y_FFB4B4_50" width="978" height="650" alt="임시 이미지">
+	                <span class="mask"></span>
+                    <a href="#" class="btn_add_pf">+ 관심 포트폴리오</a>
+                    <!-- 관심 포트폴리오 레이어 -->
+                    <div class="ly_portfolio">
+                        <strong class="ly_tit">관심 포트폴리오</strong>
+                        <div class="ly_cont">
+                            <p>포트폴리오가 담길 목록을 선택하세요.</p>
+                            <div class="sel_area">
+                                <span class="thum"><img src="http://dev.ui.naver.com/tmp/?130x86_interior_y_FFB4B4_50" width="130" height="86" alt="임시 이미지"></span>
+                                <div class="selectbox selectbox-noscript" style="width:198px">
+                                    <select class="selectbox-source">
+                                    <option class="selectbox-default">시/도</option>
+                                    <option value="">서울특별시</option>
+                                    <option value="">경기도</option>
+                                    </select>
+                                    <div class="selectbox-box">
+                                        <div class="selectbox-label"></div>
+                                    </div>
+                                    <div class="selectbox-layer" style="width:196px">
+                                        <div class="selectbox-list"></div>
+                                    </div>
+                                </div>
+                                <input type="text" title="새 목록 만들기" value="새 목록 만들기" class="input_txt">
+                            </div>
+                            <div class="ly_btn">
+                                <a href="#" class="cfm">확인</a>
+                            </div>
+                        </div>
+                        <a href="#" class="ly_close">레이어 닫기</a>
+                    </div>
+                    <!-- //관심 포트폴리오 레이어 -->
+				</div>
+			</div>
+
+            <!-- [D] 세로형 이미지 2개 일 경우 -->
+			<div class="thmb_area v2">
+            	<div class="bx_img">
+                	<img src="http://dev.ui.naver.com/tmp/?485x728_none_y_FFB4B4_50" width="485" height="728" alt="임시 이미지">
+	                <span class="mask"></span>
+                    <a href="#" class="btn_add_pf">+ 관심 포트폴리오</a>
+                    <!-- 관심 포트폴리오 레이어 -->
+                    <div class="ly_portfolio" style="display:block">
+                        <strong class="ly_tit">관심 포트폴리오</strong>
+                        <div class="ly_cont">
+                            <p>포트폴리오가 담길 목록을 선택하세요.</p>
+                            <div class="sel_area">
+                                <span class="thum"><img src="http://dev.ui.naver.com/tmp/?130x86_interior_y_FFB4B4_50" width="130" height="86" alt="임시 이미지"></span>
+                                <div class="selectbox selectbox-noscript" style="width:198px">
+                                    <select class="selectbox-source">
+                                    <option class="selectbox-default">시/도</option>
+                                    <option value="">서울특별시</option>
+                                    <option value="">경기도</option>
+                                    </select>
+                                    <div class="selectbox-box">
+                                        <div class="selectbox-label"></div>
+                                    </div>
+                                    <div class="selectbox-layer" style="width:196px">
+                                        <div class="selectbox-list"></div>
+                                    </div>
+                                </div>
+                                <input type="text" title="새 목록 만들기" value="새 목록 만들기" class="input_txt">
+                            </div>
+                            <div class="ly_btn">
+                                <a href="#" class="cfm">확인</a>
+                            </div>
+                        </div>
+                        <a href="#" class="ly_close">레이어 닫기</a>
+                    </div>
+                    <!-- //관심 포트폴리오 레이어 -->
+				</div>
+            	<div class="bx_img">
+                	<img src="http://dev.ui.naver.com/tmp/?485x728_none_y_FFB4B4_50" width="485" height="728" alt="임시 이미지">
+	                <span class="mask"></span>
+                    <a href="#" class="btn_add_pf">+ 관심 포트폴리오</a>
+                    <!-- 관심 포트폴리오 레이어 -->
+                    <div class="ly_portfolio">
+                        <strong class="ly_tit">관심 포트폴리오</strong>
+                        <div class="ly_cont">
+                            <p>포트폴리오가 담길 목록을 선택하세요.</p>
+                            <div class="sel_area">
+                                <span class="thum"><img src="http://dev.ui.naver.com/tmp/?130x86_interior_y_FFB4B4_50" width="130" height="86" alt="임시 이미지"></span>
+                                <div class="selectbox selectbox-noscript" style="width:198px">
+                                    <select class="selectbox-source">
+                                    <option class="selectbox-default">시/도</option>
+                                    <option value="">서울특별시</option>
+                                    <option value="">경기도</option>
+                                    </select>
+                                    <div class="selectbox-box">
+                                        <div class="selectbox-label"></div>
+                                    </div>
+                                    <div class="selectbox-layer" style="width:196px">
+                                        <div class="selectbox-list"></div>
+                                    </div>
+                                </div>
+                                <input type="text" title="새 목록 만들기" value="새 목록 만들기" class="input_txt">
+                            </div>
+                            <div class="ly_btn">
+                                <a href="#" class="cfm">확인</a>
+                            </div>
+                        </div>
+                        <a href="#" class="ly_close">레이어 닫기</a>
+                    </div>
+                    <!-- //관심 포트폴리오 레이어 -->
+				</div>
+			</div>
+
+            <!-- [D] 세로형 이미지 1개 일 경우 -->
+			<div class="thmb_area v3">
+            	<div class="bx_img">
+                	<img src="http://dev.ui.naver.com/tmp/?485x728_none_y_FFB4B4_50" width="485" height="728" alt="임시 이미지">
+	                <span class="mask"></span>
+                    <a href="#" class="btn_add_pf">+ 관심 포트폴리오</a>
+                    <!-- 관심 포트폴리오 레이어 -->
+                    <div class="ly_portfolio">
+                        <strong class="ly_tit">관심 포트폴리오</strong>
+                        <div class="ly_cont">
+                            <p>포트폴리오가 담길 목록을 선택하세요.</p>
+                            <div class="sel_area">
+                                <span class="thum"><img src="http://dev.ui.naver.com/tmp/?130x86_interior_y_FFB4B4_50" width="130" height="86" alt="임시 이미지"></span>
+                                <div class="selectbox selectbox-noscript" style="width:198px">
+                                    <select class="selectbox-source">
+                                    <option class="selectbox-default">시/도</option>
+                                    <option value="">서울특별시</option>
+                                    <option value="">경기도</option>
+                                    </select>
+                                    <div class="selectbox-box">
+                                        <div class="selectbox-label"></div>
+                                    </div>
+                                    <div class="selectbox-layer" style="width:196px">
+                                        <div class="selectbox-list"></div>
+                                    </div>
+                                </div>
+                                <input type="text" title="새 목록 만들기" value="새 목록 만들기" class="input_txt">
+                            </div>
+                            <div class="ly_btn">
+                                <a href="#" class="cfm">확인</a>
+                            </div>
+                        </div>
+                        <a href="#" class="ly_close">레이어 닫기</a>
+                    </div>
+                    <!-- //관심 포트폴리오 레이어 -->
+				</div>
+			</div>
+            <!-- //포트폴리오 이미지 -->
+
+            <!-- [D] 평면도 썸네일이 들어간 경우 -->
+            <div class="matching_area">
+            	<div class="fp_img">
+                	<img src="img/@tmp_floorplan2.gif" width="270" height="245" alt="임시 이미지">
+					<span class="mask"></span>
+                    <!-- [D] 위치표시 아이콘은 left, top값으로 조정 -->
+                    <span class="ico_maker" style="left:224px;top:42px">위치표시</span>
+                </div>
+            	<h3>욕실</h3>
+                <div class="info_detail2">
+                    <p class="txt">2톤구성의 씽크구성으로 LG하이뫅스 정품 인조대리석 , 하츠쿸탑 및 하츠후드. 조명은 물론이고
+                    식탁쪽 간접조명등까지 설치가 되었어요. 마루바닥과 다르게 깔끔하고 견고한 타일(포리싱타일
+                    6000각)재질로 바닥재의 차별화를 둬서 깔끔한 이미지의 주방 인테리어로 바뀌었습니다. 조명인
+                    테리어는 LED조명등과 백열전등으로 식사분위기를 한껏 높여줄겁니다.</p>
+                </div>
+                <div class="info_detail">
+                    <dl>
+                    <dt>주요 자재정보</dt>
+                    <dd>
+                        <ul class="lst_info">
+                        <li>싱크수전 : 아메리칸 스탠다드</li>
+                        <li>바닥 : 포리싱타일 600각</li>
+                        <li>싱크볼 : 백조</li>
+                    	<li>후드 : 린나이 RHD-420A</li>
+                        </ul>
+                    </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- //[D] 평면도 썸네일이 들어간 경우 -->
+
+            <div class="supply_area">
+                <div class="social_btn">
+                    <div class="u_likeit_list_module">
+                        <a href="#" class="u_likeit_list_btn u_type_round"><span class="u_ico"></span><em class="u_txt">좋아요</em><em class="u_cnt">0</em><span class="bg_blank"></span><span class="bd_blank"></span></a>
+                    </div>
+                    <a href="#" class="btn_save"></a>
+                </div>
+
+            	<div class="provide_info">제공<span class="bar">|</span><em>인스디자인 (031-600-3668)</em><a href="#" class="lnk_company">업체정보</a></div>
+			</div>
+		</div>
+
+		<p class="end_txt">본 컨텐츠의 저작권은 제공처에 있으며 이를 무단 사용시 저작권법 등에 따라 법적 책임을 질 수 있습니다.<br>시공비 및 시공기간 등의 정보는 인테리어 현장 사정에 따라 달라질 수 있습니다.</p>
+
+        <div class="section_case">
+        	<h3>관련 시공사례 더보기</h3>
+            <ul class="lst_interior_info">
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            <li>
+            	<div class="thmb">
+                	<img src="http://dev.ui.naver.com/tmp/?230x206_default_y_FFB4B4_50" width="230" height="206" alt="임시 이미지">
+					<span class="mask"></span>
+                </div>
+                <dl>
+                <dt>푸른한라비발디 89㎥</dt>
+                <dd>경기도 부천시 원미구 상동<br><em>시공비 1,000~1,500만원</em></dd>
+                </dl>
+                <div class="count">
+                	<span class="hits">조회 48,215</span>
+                    <span class="like">좋아요 48,215</span>
+                </div>
+            </li>
+            </ul>
+            <div class="paginate">
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">다음 </a>
+ 					<a href="#" class="next_end">끝 </a>
+				</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<img src="img/@footer.gif" width="980" height="139" alt="임시 푸터 이미지">
+	</div>
+</div>
+<script type="text/javascript">
+	jindo.SelectBox.factory(jindo.$$(".selectbox-noscript"), {nHeight:140, LayerPosition:{bAuto:true}});
+</script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" /> 
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>네이버 :: 부동산 매물관리센터</title>
+<link rel="stylesheet" href="http://static.land.naver.net/static/mobile/css/deploy/20160628133240/min/one_naver_header.css" type="text/css">
+<link rel="stylesheet" href="http://static.land.naver.net/static/mobile/css/201606281805/min/w.css" type="text/css">
+<script src="http://static.land.naver.net/static/center/js/201606231401/min/mobile/center_common.js" type="text/javascript"></script>
+<script src="http://static.land.naver.net/static/center/js/201606231401/lcslog.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<div class="Ngnb" style="will-change: contents;">
+		<span class="Ngnb_logo">
+			<a href="http://m.naver.com" onclick="javascript:land.oneroom.nclick('gnb.naver');" class="Nlogo_link"><span class="Nicon_logo">NAVER</span></a>
+		</span>
+		<div class="Ngnb_service">
+			<h1 class="Nservice_item"><a href="/index.nhn" onclick="javascript:land.oneroom.nclick('gnb.oneroom');"><span class="Nicon_service">부동산</span></a></h1>
+			<span class="Nservice_subitem"><a href="http://m.room.land.naver.com" onclick="javascript:land.oneroom.nclick('gnb.land');"><span class="Nicon_family">원룸</span></a></span>
+		</div>
+	
+		<div class="Ngnb_tool">
+			<!--  button 태그 / a 태그 모두 사용할 수 있음  data-event="click|slide(.Nsearch)" -->
+			<button type="button" class="Ntool_button" data-toggle=".Ngnb|is_scale,.Nsearch|is_fold"><span class="Nicon_search">검색</span></button>
+			<button type="button" class="Ntool_button" data-event="click|drawer(.Ndrawer),click|dimmed(.Ndimmed)"><span class="Nicon_drawer">확장영역 열기</span></button>
+		</div>
+		
+	</div>
+
+<div id="ct">
+	<ul class="u_tab"> 
+		<li class="u_tab_l u_tab_on"><a href="/index.nhn" class="u_tab_a" _nclk="LNB.home">홈</a></li>
+		<li class="u_tab_l"><a href="/article/index.nhn" class="u_tab_a" _nclk="LNB.article">매물 <span class="ic_new">NEW</span></a></li>
+		<li class="u_tab_l"><a href="http://m2.land.naver.com/isale/" class="u_tab_a" _nclk="LNB.isale">분양</a></li>
+		<li class="u_tab_l"><a href="http://m2.land.naver.com/news/" class="u_tab_a" _nclk="LNB.news">뉴스</a></li>
+		<li class="u_tab_l"><a href="http://m2.land.naver.com/my/" class="u_tab_a" _nclk="LNB.my">MY</a></li>
+	</ul>
+</div>
+<style>
+/* mobile Confirm Page */
+h1{line-height:1.267em;}
+.mb_hide{opacity:0;font-size:0;line-height:0}
+.cfrm_pg .topImg{position: relative;height:140px;background:#3c5484 url('http://static.land.naver.net/static/center/20151222/banner/cfrm_img1.png') no-repeat 100% 0; background-size:126px 140px}
+.cfrm_pg .title{position: absolute;top:34px;left:20px;font-family:HelveticaNeue-Medium,AppleSDGothicNeo-Medium,sans-serif}
+.cfrm_pg .title h2{color:#fff;font-size: 27px;font-weight:normal}
+.cfrm_pg .title p{margin-top:17px;color:#c1c6c8;font-size:13px;line-height: 16px}
+ 
+.publicity{background:#fff;padding:23px 20px;border-bottom:1px solid #e7e7e7}
+.publicity > ul{font-family:HelveticaNeue-regular,AppleSDGothicNeo-Regular,sans-serif}
+.publicity > ul > li{border-top:1px solid #e0e0e0;padding:39px 0 35px 0;}
+.publicity > ul > li:first-child{border-top:0;padding-top:0}
+.publicity .in_obj h3{font-size: 17px;color:#323232;font-weight:normal;line-height:21px}
+.publicity .in_obj .slide{overflow:hidden;position: relative;margin-top:35px;margin-bottom:34px;}
+.publicity .in_obj .slide button{display:inline-block;position:absolute;top:0;width:24px;height:128px;border:0;overflow:visible;cursor:pointer;z-index: 10}
+.publicity .in_obj .slide button.prev{left:0;background:#fff url('http://static.land.naver.net/static/center/20151222/banner/cfm_btn_prev.png') no-repeat;background-size:24px 128px}
+.publicity .in_obj .slide button.prev.start,.publicity .in_obj .slide button.next.end{pointer-events:none;}
+.publicity .in_obj .slide button.prev.start:before{width:24px;height:128px;display: inline-block;position: absolute;left:0;top:0;background:rgba(255,255,255,.7);content: ""}
+.publicity .in_obj .slide button.next{right:0;background:#fff url('http://static.land.naver.net/static/center/20151222/banner/cfm_btn_next.png') no-repeat;background-size:24px 128px}
+.publicity .in_obj .slide button.next.end:before{width:24px;height:128px;display: inline-block;position: absolute;left:0;top:0;background:rgba(255,255,255,.7);content: ""}
+ 
+.publicity .in_obj .slide .slideBox{overflow:hidden;text-align:center}
+.publicity .in_obj .slide .slideBox .imgObj{text-align:center;height:128px;}
+.publicity .in_obj .slide .slideBox dl{padding-top:22px;}
+.publicity .in_obj .slide .slideBox dt{font-size: 15px;font-weight: bold;color:#567bc3}
+.publicity .in_obj .slide .slideBox span.step{display:inline-block;height:18px;border:1px solid #567bc3;color:#567bc3;
+        font-size: 13px;font-weight: bold;line-height: 18px;text-align: center;width:52px;box-sizing:border-box;border-radius:20px}
+.publicity .in_obj .slide .slideBox dd{margin-top:9px;font-size: 13px; color:#616161;line-height:17px}
+.publicity .in_obj .slide .slideBox .slider{float:left}
+.publicity .in_obj .slide .slideBox .moving_base{display:inline-block;}
+.publicity .in_obj .howto li{font-size: 12px;color:#9e9e9e;line-height:16px;margin-top:5px}
+.publicity .in_obj .howto li:first-child{margin-top:0;}
+.publicity .in_obj .howto li em{color:#567bc3;}
+.publicity .in_obj .tx1{font-size:13px;color:#616161;margin-top:18px;margin-bottom:3px}
+.publicity .in_obj .tx2{font-size:13px;color:#9e9e9e;margin-top:5px;}
+.publicity .in_obj .tx2:before{display:inline-block;margin-right:2px;width:12px;height:12px;background:url('http://static.land.naver.net/static/center/20151222/banner/cfm_ic1.png') no-repeat;
+content:"";background-size:12px 12px;position: relative;top:1px;}
+.publicity .in_obj .desc li {margin-top:23px;font-size: 13px;color:#616161;line-height: 17px;word-wrap:break-word;}
+.publicity .in_obj .desc li:first-child{margin-top:18px;}
+.publicity .in_obj .desc li span:before{content:"";margin-right:-2px;position:relative;top:-2px;display:inline-block;width:2px;
+height:2px;background:#9e9e9e;vertical-align:middle;left:-8px;}
+.publicity .in_obj .desc li em{color:#567bc3;}
+.publicity .in_obj .desc li span{display:block;padding-left:8px;}
+.publicity .in_obj .desc li p{display:inline-block;margin:8px 0 0 7px;font-size: 12px;color:#707070;height:27px;line-height:29px;
+        border:1px solid #c9c9c9;border-radius: 2px;padding:0 8px;letter-spacing:-1px}
+.publicity .in_obj .desc li p a{color:#707070;}
+</style>
+<div class="cfrm_pg">
+	<div class="topImg">
+		<div class="title">
+			<h2>모바일 확인</h2>
+			<p>전화확인, 홍보확인서 확인,<br>현장확인에 이은 새로운 확인매물<br>검증 방식입니다.</p>
+		</div>
+	</div>
+</div>
+<div class="publicity">
+	<ul>
+	<li>
+		<div class="in_obj">
+			<h3>1. 어떻게 확인하나요?</h3>
+			<div class="slide">
+				<button class="prev start"></button>
+				<div class="slideBox">
+					<div class="moving_base">
+						<div class="slider">
+							<p class="imgObj"><img src="http://static.land.naver.net/static/center/20151222/banner/img_step1.png" width="232" height="128" alt=""></p>
+							<dl>
+								<dt><span class="step">STEP1</span> 중개사, 매물 등록</dt>
+								<dd>중개사가 네이버 부동산 제휴 정보업체*<br>사이트에서 매물을 등록합니다.</dd>
+							</dl>
+						</div>
+						<div class="slider">
+							<p class="imgObj"><img src="http://static.land.naver.net/static/center/20151222/banner/img_step2.png" width="232" height="128" alt=""></p>
+							<dl>
+								<dt><span class="step">STEP2</span> 검증센터, 문자 발송</dt>
+								<dd>검증센터<em>**</em>에서 집주인<em>**</em>의 휴대폰 번호로<br>문자 메시지를 발송합니다.</dd>
+							</dl>
+						</div>
+						<div class="slider">
+							<p class="imgObj"><img src="http://static.land.naver.net/static/center/20151222/banner/img_step3.png" width="232" height="128" alt=""></p>
+							<dl>
+								<dt><span class="step">STEP3</span> 집주인, 매물 확인</dt>
+								<dd>문자 메시지를 받은 집주인은 <em>네이버 로그인</em>을 통해<br>본인이 맞다는 것을 인증한 후,<br>모바일을 통해	
+									<em>'내가 중개사에게 의뢰한 매물정보가 맞는지, 거래가 가능한지'를 확인</em>합니다.
+								</dd>
+							</dl>
+						</div>
+						<div class="slider">
+							<p class="imgObj"><img src="http://static.land.naver.net/static/center/20151222/banner/img_step4.png" width="232" height="128" alt=""></p>
+							<dl>
+								<dt><span class="step">STEP4</span> 검증센터, 등기부등본 확인</dt>
+								<dd>집주인이 확인한 매물은, 검증센터에서<br>등기부등본 조회를 통해 소유자, 주소 등의 <br>정보를 다시 한번 더 확인한 후,<br>네이버에 확인매물로
+									노출되게 됩니다.</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<button class="next"></button>
+			</div>
+			<ul class="howto">
+				<li><em>*</em> 네이버 부동산에 매물 광고를 전송하는 부동산 정보업체</li>
+				<li><em>**</em> 부동산매물검증센터. 한국인터넷자율기구 산하 기관으로서, 네이버 부동산 제휴 정보업체를 통해 등록되는 매물 정보에 대한 확인을 진행하는 곳.</li>
+				<li><em>***</em> 등기부등본상의 소유자</li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<div class="in_obj">
+			<h3>2. 어떤 매물을 '모바일 확인'으로 의뢰할 수 있나요?</h3>
+			<p class="tx1">'집주인' 성명으로 등기부등본 확인이 가능한 매물</p>
+		</div>
+	</li>
+	<li>
+		<div class="in_obj">
+			<h3>3. '모바일 확인', 이렇게 등록하세요!</h3>
+			<ul class="desc">
+			<li>
+				<span>전화 확인, 홍보확인서 확인, 현장 확인과 동일하게 <em>네이버 부동산 제휴 정보업체</em>를 통해 매물을 등록하실 수 
+				있습니다. 비용 및 구체적인 등록 방법 등에 대한 문의는 각 정보업체로 문의주시길 부탁드립니다.</span>
+				<p><a href="http://landad.naver.com/home/noticeView.nhn?noti_mttr_seq=4747&tpprt_exps_yn=Y&search_type=&search=&page=1" target="_blank">네이버 부동산 제휴 정보업체 리스트 확인</a></p>
+			</li>
+			<li><span>중개사께서 '모바일 확인'으로 매물을 등록할 시에는 반드시 '매도/임대 의뢰인'이 아닌 <em>등기부등본상의 
+				소유자인 '집주인'에게 동의</em>를 받으셔야 합니다. </span>
+			</li>
+			<li><span>'모바일 확인' 검증을 위해서는 집주인의 성명 및 휴대폰 번호가 필요합니다. 
+				중개사께서는 집주인에게 '모바일 확인' 관련 내용을 안내하신 후 제공 동의를 꼭 받아주세요. </span>
+			</li>
+			<li><span>검증센터 및 네이버로 전달된 집주인의 성명 및 휴대폰 번호는 매물 검증을 위해서만 사용되며 서비스상에 
+				노출되지 않고, 검증이 완료되면 자동으로 폐기됩니다.</span>
+			</li>
+			</ul>
+		</div>
+	</li>
+	</ul>
+</div>	
+
+<script>
+var doc = document;
+var slide = doc.querySelector(".slide");
+var slideBox = doc.querySelector(".slideBox");
+var slider = doc.querySelectorAll(".slider");
+var moving_base = doc.querySelector(".moving_base");
+var slideBtn = slide.getElementsByTagName('button');
+moving_base.style["-webkit-transform"] = 'translate('+ 0 + 'px' +',0)'
+for (var i=0; i<slider.length; i++) {
+	slider[i].style.width = slideBox.offsetWidth + "px";
+	moving_base.style["width"] = slider[i].offsetWidth * slider.length + "px";
+	slideBox.style["width"] = slide.offsetWidth + "px";
+	moving_base.style["-webkit-transition"] = '.2s ease';
+	for (var j=0; j<slideBtn.length; j++) {
+		var num = 0;
+		slideBtn[j].onclick = function() {
+			if (this.className != "prev" && num <3) {
+				num ++;
+				moving_base.style["-webkit-transform"] = 'translate('+ -(slideBox.offsetWidth*num)+ 'px' +',0)';
+			}
+			if(this.className != "next" && num >0) {
+				num = num -1;
+				moving_base.style["-webkit-transform"] = 'translate('+ -(slideBox.offsetWidth*num)+ 'px' +',0)';
+			}	
+			if(num > 0) {
+				slideBtn[0].className = "prev"
+			}
+			else {
+				slideBtn[0].className = "prev start"	
+			}
+			if(num >= 3) {
+				slideBtn[1].className = "next end"
+			}
+			else {
+				slideBtn[1].className = "next"	
+			}			
+		}
+	}
+}
+</script>
+
+
+
+
+
+
+
+<div class="u_ft">
+	<div class="u_ftsw">
+		<a href="javascript:;" class="u_ftst" onclick="window.scrollTo(0,0);nclk(this, 'fot.top', '', '');return false;"><span class="u_ico"></span>맨위로</a>
+	</div>
+
+	<footer role="contentinfo" class="footer">
+		<p id="u_ftlkw" class="u_ftlkw">
+			<a id="loginLink" href="#" class="u_ftlk" >로그인</a>
+			<a href="#" class="u_ftlk">PC버전</a> 
+			<a href="#" class="u_ftlk">전체서비스</a>
+			<a href="#" class="u_ftlk">원룸 홈</a>
+		</p>
+		<p class="u_cr">
+			<span class="u_cri"><a href="#" class="u_cra">부동산도움말</a></span>
+			<span class="u_cri u_cri_v1"><a href="#" class="u_cra">문제신고</a></span>
+			<span class="u_cri u_cri_v2">&copy; <a href="#"  class="u_cra u_cra_v1">NAVER Corp.</a></span>
+		</p>
+		<div class="u_sca">
+		<a href="#" class="u_sc"><span class="u_ics"></span><em>네이버앱의</em><strong>부동산</strong> 홈화면에 바로가기 추가<span class="u_ica"></span></a>
+		</div>
+	</footer>
+</div>
+
+<div class="pop_content" style="display:none;">
+	<div class="pop_open_wrap">
+		<h2 class="hide">네이버부동산 홈과 매물서비스가 새로워졌습니다.</h2>
+		<button type="button">닫기</button>
+	</div>
+</div>
+
+<div class="pop_content" style="display:none;">
+	<div class="pop_new_wrap ios">
+		<h2 class="hide">새로워진 네이버 부동산앱을 지금 만나보세요</h2>
+		<button type="button" class="btn_detail">자세히보기</button>
+		<button type="button" class="btn_ios">App Store</button>
+		<button type="button" class="btn_clse">닫기</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var ccsrv = "";
+	lcs_do(); 
+	var topUrl = location.href;
+	
+	var searchBtn = document.getElementById("searchBtn");
+	var u_hs = document.getElementById("u_hs");
+	var btn_mod = document.querySelector(".btn_mod")
+	var mdChild = btn_mod.getElementsByTagName("span")
+	  
+	searchBtn.onclick = function() { 
+	        if (u_hs.style.display != "block") {
+	                u_hs.style.display = "block";
+	        } 
+	        else { 
+	                u_hs.style.display = "none";
+	        } 
+	} 
+	
+	function logout() {
+		if (confirm("로그아웃 하시겠습니까?")) {
+			location.href = "https://nid.naver.com/nidlogin.logout?svctype=262144&url=";
+		}
+	}
+	
+	var topUrl = location.href;
+
+	$(function() {
+		var $input = $('#headerQuery', '#headerSearch');
+
+		var val = "";
+
+		if ($input.val() == "" || val == "") {
+			$input.val($input.attr('title'));
+		}
+		
+		/*
+		if (val != "") {
+			$('.u_hsbt').removeClass('u_hsbt_op');
+			$('.u_hsbt').addClass('u_hsbt_fd');
+			$('.u_hs').show();
+		}
+		*/
+		$input.focus(function() {
+			if ($input.val() == $input.attr('title')) {
+				$input.val('');
+			}
+		});
+
+		$input.keypress(function(event) {
+			if (event.keyCode == 13) {
+				event.preventDefault();
+				search();
+			}
+		});
+
+		$('button[type=button]', '#headerSearch').bind('touchstart',
+				function(event) {
+					$input.val('');
+					event.preventDefault();
+				});
+
+
+		$('#headerSearch .u_hssbt_ss').click(function(event) {
+			event.preventDefault();
+			search();
+		});
+
+		$('#headerSearch .u_hssbt_us')
+				.click(
+						function(event) {
+							event.preventDefault();
+
+							$input.val($.trim($input.val()));
+
+							if ($input.val().length > 300) {
+								$input.val($input.val().substring(0, 300));
+							}
+
+							if ($input.val() == $input.attr('title')
+									|| $input.val() == '') {
+								alert("검색어를 입력하세요.");
+							} else {
+								location.href = 'http://m.search.naver.com/search.naver?query='
+										+ encodeURIComponent($input.val())
+										+ '&where=m&sm=msv_hty';
+							}
+						});
+
+		function search() {
+			$input.val($.trim($input.val()));
+
+			if ($input.val().length > 300) {
+				$input.val($input.val().substring(0, 300));
+			}
+
+			if ($input.val() == $input.attr('title') || $input.val() == '') {
+				alert($input.attr('title') + "을 입력하세요.");
+			} else {
+				location.href = "http://m.land.naver.com/search.nhn?query="
+						+ encodeURIComponent($input.val());
+			}
+
+			nclk(this, 'gnb.search', '', '');
+		}
+	});		
+	
+	$(function() {
+		var $input = $('#footerQuery', '#footerSearch');
+
+		if($input.val() == "") {
+			$input.val($input.attr('title'));
+		}
+
+		$input.focus(function() {
+			if($input.val() == $input.attr('title')) {
+				$input.val('');
+			}
+		});
+
+		$input.keypress(function(event) {
+			if(event.keyCode == 13) {
+				event.preventDefault();
+				search();
+			}
+		});
+
+		$('button[type=button]', '#footerSearch').bind('touchstart', function(event) {
+			$input.val('');
+			event.preventDefault();
+		});
+
+		$('#footerSearch .sh1bt').click(function(event) {
+			event.preventDefault();
+			search();
+		});
+		
+		$('#footerSearch .sh2bt').click(function(event) {
+			event.preventDefault();
+
+			$input.val($.trim($input.val()));
+			
+			if ($input.val().length > 300) {
+				$input.val($input.val().substring(0, 300));
+			}
+
+			if($input.val() == $input.attr('title') || $input.val() == '') {
+				alert("검색어를 입력하세요.");
+			} else {
+				location.href = 'http://m.search.naver.com/search.naver?query=' + encodeURIComponent($input.val()) + '&where=m&sm=msv_hty';
+			}
+		});
+
+		function search() {
+			$input.val($.trim($input.val()));
+			
+			if ($input.val().length > 300) {
+				$input.val($input.val().substring(0, 300));
+			}
+
+			if($input.val() == $input.attr('title') || $input.val() == '') {
+				alert($input.attr('title') + "을 입력하세요.");
+			} else {
+				location.href = "http://m.land.naver.com/search.nhn?query=" + encodeURIComponent($input.val());
+			}
+
+			nclk(this, 'fot.search', '', '');
+		}
+	});		
+	
+	var search = true;
+
+	
+
+	$('.u_hsbt').click(toggleSearchBar);
+
+	var inputHeaderQuery = $("#headerQuery", '#headerSearch');
+	var inputHeaderClearButton = $('button[type=button]', '#headerSearch');
+	function watchHeaderQuery() {
+		if (!(inputHeaderQuery.val() == inputHeaderQuery.attr('title') || inputHeaderQuery
+				.val() == '')) {
+			inputHeaderClearButton.show();
+		} else {
+			inputHeaderClearButton.hide();
+		}
+
+		if (!search) {
+			setTimeout(watchHeaderQuery, 10);
+		}
+	}
+
+	var inputFooterQuery = $("#footerQuery", '#footerSearch');
+	var inputFooterClearButton = $('button[type=button]', '#footerSearch');
+
+	function watchFooterQuery() {
+		if (!(inputFooterQuery.val() == inputFooterQuery.attr('title') || inputFooterQuery
+				.val() == '')) {
+			inputFooterClearButton.show();
+		} else {
+			inputFooterClearButton.hide();
+		}
+
+		setTimeout(watchFooterQuery, 100);
+	}
+
+	function toggleSearchBar() {
+		if (search == true) {
+			$('.u_hsbt').removeClass('u_hsbt_op');
+			$('.u_hsbt').addClass('u_hsbt_fd');
+			$('.u_hs').show();
+			search = false;
+			watchHeaderQuery();
+		} else if (search == false) {
+			$('.u_hsbt').addClass('u_hsbt_op');
+			$('.u_hsbt').removeClass('u_hsbt_fd');
+			$('.u_hs').hide();
+			$('.atcp').hide();
+			search = true;
+		}
+	}
+
+	var service = true;
+	watchHeaderQuery();
+	watchFooterQuery();
+</script>
+
+
+</body>
+</html>

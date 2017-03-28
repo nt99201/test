@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css"/>
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/home_land.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var inputHeight = $('.sch_form_wrap').outerHeight();
+			var headerHeight = $('#header').outerHeight();
+			$('#searchBtn').click(function(){
+				$('#header').toggleClass('active');
+
+				if($('#header').hasClass('active')){
+					$('#header').animate({height:'+='+ inputHeight +'px'}, 300,'easeInOutCubic');
+					$('.sch_form_wrap').animate({top:headerHeight +'px'}, 300,'easeInOutCubic');
+					$('#searchBtn').addClass('on');
+				}else{
+					$('#header').animate({height:'-='+ inputHeight +'px'}, 300,'easeInOutCubic');
+					$('.sch_form_wrap').animate({top:'-=' +headerHeight +'px'}, 300,'easeInOutCubic');
+					$('#searchBtn').removeClass('on');
+				}
+
+			})
+		});
+	</script>
+</head>
+<body>
+
+<div id="wrap" style="overflow:hidden">
+	<!-- header -->
+	<header id="header">
+		<h1 class="gnb_h1">
+			<div class="btn_mod">
+				<a href="#" class="on">부동산</a>
+				<a href="#">원룸</a>
+			</div>
+		</h1>
+		<a href="#" class="gnb naver"><span>NAVER</span></a>
+		<a href="#" class="gnb s_btn" id="searchBtn"><span>검색</span></a>
+		<div class="sch_form_wrap">
+			<div class="input_area">
+				<input type="search" placeholder="지역명, 또는 단지명">
+				<button type="button" class="btn_txt_del"><span>삭제</span></button>
+				<button type="button" class="btn_txt_sch"><span>부동산검색</span></button>
+			</div>
+			<button type="button" class="btn_total_sch">통합검색</button>
+		</div>
+		<button type="button" class="btn_b_side"><span>확장메뉴</span></button>
+	</header>
+	<!-- //header -->
+
+	<div class="page_error">
+		<div class="error_detail">
+			<strong>요청하신 페이지를 찾을수 없습니다.</strong>
+			<p>주소가 변경되거나 삭제되어 요청하신 페이지를<br>찾을 수 없습니다. 주소가 정확하게 입력되었는지<br>다시 한번 확인하시기 바랍니다.</p>
+			<a href="#" class="btn_land_home">네이버부동산 바로가기</a>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

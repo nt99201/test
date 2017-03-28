@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>영단어장</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/comment.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/comment_e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+<link id="spi_style_m_standard" rel="stylesheet" type="text/css" href="http://spi.naver.net/css/20131010/spi_unity_m_20131010.css">
+</head>
+<!-- 글자크기조정 옵션 "크게" 클릭 시 클래스 ft_mod 추가 <body class="ft_mod"> -->
+<body class="">
+<div class="banner_old_wrap">
+    <a href="#" class="guide">
+        <p>오늘의 회화 <strong>퀴즈 알림</strong>이 새롭게 추가되었어요!</p>
+        <span>퀴즈 알림 설정하기</span>
+    </a>
+    <a href="#" class="lnk_old"><span>신규버전</span></a>
+</div>
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<!-- 페이지 타이틀 영역 -->
+<div class="top_tab_area">
+</div>
+<!-- 20160823 접근성 tab 타이틀
+    [D] 전체 html의 tab 영역이 현재 비어있으니 해당 tab 영역을 클릭시
+        아래의 타이틀도 같이 변경부탁드립니다.
+ -->
+<h3 class="hc">오늘의 단어</h3>
+<!-- //20160823 접근성 tab 타이틀 -->
+<div class="tim_slide">
+	<!-- [D] 오늘인 경우 on클래스 추가 -->
+    <ul>
+    <li class="tit_day"><a href="#">10.14(수)</a></li>
+    <li class="tit_day"><a href="#">10.15(목)</a></li>
+    <li class="tit_day not_bar"><a href="#" class="on blue">10.16(금)<span class="today_ico">오늘</span></a></li>
+    <li class="tit_r"><a href="#" class="calendar_ico">달력</a></li>
+    </ul>
+</div>
+<div class="area_todaypush">
+	<span class="im_todaypush tx_conv"></span>
+	<span class="hc">오늘의 회화, 알림시간을 내 마음대로!</span>
+	<!-- [D] 알림수신중일때 on 클래스 추가 -->
+	<a href="#" class="btn_todaypush"><span class="hc">알림 설정</span></a>
+	<!--<a href="#" class="btn_todaypush on"><span class="hc">알림 수신중</span></a>-->
+</div>
+<div class="area_todaypush">
+	<span class="im_todaypush tx_conv"></span>
+	<span class="hc">오늘의 회화, 알림시간을 내 마음대로!</span>
+	<a href="#" class="btn_todaypush on"><span class="hc">알림 수신중</span></a>
+</div>
+<div class="conv_notice">
+    <div class="conv_wrap">
+        <h4 class="greeting">안녕하세요 네이버 사전팀입니다.</h4>
+        <p><span>일요일</span>에는 한 주간의 학습을 점검하고 기억 효과를 높일 수 있도록 <strong>회화문</strong> 대신 <strong>주간 복습 퀴즈</strong>를 제공합니다.</p>
+        <p>어학은 반복 학습이 중요한 만큼, 여유를 갖고 기억하고 계신 내용을 꼼꼼하게 점검하여 더 큰 학습 성과를 얻으실 수 있길 바랍니다.</p>
+    </div>
+    <div class="conv_btn_wrap">
+        <a href="#" class="btn_quiz">주간 복습 퀴즈 도전<span class="ico_arrow"></span></a>
+    </div>
+</div>
+
+<hr />
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver2"></div>
+
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<!-- [D] 마크업 확인용 스크립트 (개발 시 삭제해주세요) -->
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://view.gitlab2.uit.nhncorp.com/SJong/IncludeByJavaScript-IBJS/raw/master/js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/header_today_en.html', sel:'.top_tab_area', callback: function(){
+            $($('.tab_link').get(2)).toggleClass("on");
+        }},
+        {path:'include/footer.html', sel:'.__ver2'},
+        {path:'include/common_ham_menu.html', sel:'.sidenav'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

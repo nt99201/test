@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<title>인테리어 시공정보 : 내집마련의 시작, 네이버 부동산</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" type="text/css" href="../../css/news.css">
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/demo/asset/jindo.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.Component.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.UIComponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.HTMLComponent.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.RolloverArea.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.RolloverClick.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.Timer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.LayerManager.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.LayerPosition.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://jindo.nhncorp.com/docs/jindo-component/archive/latest/src/jindo.SelectBox.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+	</div>
+	<hr>
+	<div id="container">
+		<div id="content">
+        	<div class="section_interior">
+            	<h2>인테리어 시공정보</h2>
+                <div class="srch_area">
+                	<div class="local_select">
+                        <div class="selectbox selectbox-noscript" style="width:120px">
+                            <select class="selectbox-source">
+                            <option class="selectbox-default">시/도</option>
+                            <option value="">서울특별시</option>
+                            <option value="">경기도</option>
+                            </select>
+                            <div class="selectbox-box">
+                                <div class="selectbox-label"></div>
+                            </div>
+                            <div class="selectbox-layer" style="width:118px">
+                                <div class="selectbox-list"></div>
+                            </div>
+                        </div>
+                        <div class="selectbox selectbox-noscript" style="width:123px">
+                            <select class="selectbox-source">
+                            <option class="selectbox-default">시/군/구</option>
+                            <option value="">금천구</option>
+                            <option value="">성남시 분당구</option>
+                            </select>
+                            <div class="selectbox-box">
+                                <div class="selectbox-label"></div>
+                            </div>
+                            <div class="selectbox-layer" style="width:121px">
+                                <div class="selectbox-list"></div>
+                            </div>
+                        </div>
+                        <div class="selectbox selectbox-noscript" style="width:123px">
+                            <select class="selectbox-source">
+                            <option class="selectbox-default">읍/면/동</option>
+                            <option value="">가산동</option>
+                            <option value="">서현동</option>
+                            </select>
+                            <div class="selectbox-box">
+                                <div class="selectbox-label"></div>
+                            </div>
+                            <div class="selectbox-layer" style="width:121px">
+                                <div class="selectbox-list"></div>
+                            </div>
+                        </div>
+                        <div class="selectbox selectbox-noscript" style="width:190px">
+                            <select class="selectbox-source">
+                            <option class="selectbox-default">단지</option>
+                            <option value="">1단지</option>
+                            <option value="">2단지</option>
+                            </select>
+                            <div class="selectbox-box">
+                                <div class="selectbox-label"></div>
+                            </div>
+                            <div class="selectbox-layer" style="width:188px">
+                                <div class="selectbox-list"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn_srch">검색</a>
+					</div>
+                    <dl class="condition">
+                    <dt>가격</dt>
+                    <dd>
+                    	<div class="selectbox selectbox-noscript" style="width:80px">
+                            <select class="selectbox-source">
+                            <option class="selectbox-default">단지</option>
+                            <option value="">1단지</option>
+                            <option value="">2단지</option>
+                            </select>
+                            <div class="selectbox-box">
+                                <div class="selectbox-label"></div>
+                            </div>
+                            <div class="selectbox-layer" style="width:78px">
+                                <div class="selectbox-list"></div>
+                            </div>
+                        </div>
+                        <input type="text" title="시작금액 입력" class="input_txt">
+                        <span class="dash">~</span>
+                        <input type="text" title="최대금액 입력" class="input_txt">
+                        <span class="unit">만원</span>
+                    </dd>
+                    <dt>면적</dt>
+                    <dd>
+                    	<div class="selectbox selectbox-noscript" style="width:80px">
+                            <select class="selectbox-source">
+                            <option class="selectbox-default">전체</option>
+                            <option value="">0 ~ 66</option>
+                            <option value="">66 ~ 99</option>
+                            </select>
+                            <div class="selectbox-box">
+                                <div class="selectbox-label"></div>
+                            </div>
+                            <div class="selectbox-layer" style="width:78px">
+                                <div class="selectbox-list"></div>
+                            </div>
+                        </div>
+                        <input type="text" title="시작범위 입력" class="input_txt">
+                        <span class="dash">~</span>
+                        <input type="text" title="최대범위 입력" class="input_txt">
+                        <span class="unit">㎥</span>
+                    </dd>
+                    </dl>
+                </div>
+                <ul class="sort">
+                <!-- [D] 내림차순의 경우 row 클래스 추가, 선택시 on 클래스 추가 -->
+                <li class="row on"><a href="#">면적순</a></li>
+                <li><a href="#">가격순</a></li>
+                </ul>
+                <div class="build_info_area">
+                	<ul class="lst_build">
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>삼성아데나루체110㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>3,500~4,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>삼성아데나루체110㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>3,500~4,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>동양파라곤180㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>2,500~3,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>동양파라곤158㎥ </dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>2,500~3,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>삼성아데나루체110㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>3,500~4,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>삼성아데나루체110㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>3,500~4,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>동양파라곤180㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>2,500~3,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>동양파라곤158㎥ </dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>2,500~3,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>삼성아데나루체110㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>3,500~4,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>삼성아데나루체110㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>3,500~4,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>동양파라곤180㎥</dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>2,500~3,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="thmb"><img src="http://dev.ui.naver.com/tmp/?100x70_default_y_FF0000_50" width="100" height="70" alt="임시 이미지"></span>
+                    	<dl>
+                        <dt>동양파라곤158㎥ </dt>
+                        <dd>경기도 성남시 분당구 정자동</dd>
+                        <dd class="price"><span>시공비</span>2,500~3,000만원</dd>
+                        </dl>
+                        <div class="lnk">
+                        	<span class="heart"><em class="ic"></em>25</span>
+                            <span class="and">|</span>
+                            <span class="no">조회 21,177</span>
+                            <a href="#" class="company">디자인이엔티</a>
+                        </div>
+                    </li>
+                    </ul>
+				</div>
+                <div class="paginate">
+                    <a href="#" class="pre">이전</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <strong>6</strong>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#" class="next">다음</a>
+                </div>
+            </div>
+		</div>
+		<hr>
+		<div class="aside">
+			<div class="ad interior">
+				<img src="img/bann_interior.gif" width="280" height="100" alt="인테리어 시공정보 등록문의 - 컨펌스 1677-3554" style="vertical-align:top">
+			</div>
+			<div class="section_aside interior">
+				<h3 class="tit_h3 h_interior"><span>가장 많이 본 부동산매거진</span></h3>
+				<ul class="lst_im">
+				<li>
+					<a href="#">
+						<span class="thmb"><img src="img/@tmp_news2.gif" width="75" height="55" alt=""><span class="mask"></span></span>
+						<strong class="t">임대주택의 종류와 입주요건</strong>
+						<span class="dsc">주택의 소유자와 거주자가 다른 상황에서 거주자가 세입..</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="thmb"><img src="img/@tmp_news2.gif" width="75" height="55" alt=""><span class="mask"></span></span>
+						<strong class="t">임대주택의 종류와 입주요건</strong>
+						<span class="dsc">주택의 소유자와 거주자가 다른 상황에서 거주자가 세입..</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="thmb"><img src="img/@tmp_news2.gif" width="75" height="55" alt=""><span class="mask"></span></span>
+						<strong class="t">임대주택의 종류와 입주요건</strong>
+						<span class="dsc">주택의 소유자와 거주자가 다른 상황에서 거주자가 세입..</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="thmb"><img src="img/@tmp_news2.gif" width="75" height="55" alt=""><span class="mask"></span></span>
+						<strong class="t">임대주택의 종류와 입주요건</strong>
+						<span class="dsc">주택의 소유자와 거주자가 다른 상황에서 거주자가 세입..</span>
+					</a>
+				</li>
+				</ul>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<div class="section_aside line">
+				<h3 class="tit_h3 h_kin"><span>부동산 지식 iN</span></h3>
+				<ul class="lst_kin">
+				<li>
+					<p class="q">
+						<em>질문</em>
+						<a href="#"><strong><span>[상식]</span> 세입자가 이사를 가지않는 경우 어쩌죠? </strong></a>
+					</p>
+					<p class="a">
+						<em>답변</em>
+						<a href="#">임대차계약이 기간만료나 당사자 간의 합의 등으로 종료한 경우 집주인은 보증금을 반환하여야 하고 임..</a>
+					</p>
+				</li>
+				<li>
+					<p class="q">
+						<em>질문</em>
+						<a href="#"><strong><span>[상식]</span> 세입자가 이사를 가지않는 경우 어쩌죠? </strong></a>
+					</p>
+					<p class="a">
+						<em>답변</em>
+						<a href="#">임대차계약이 기간만료나 당사자 간의 합의 등으로 종료한 경우 집주인은 보증금을 반환하여야 하고 임..</a>
+					</p>
+				</li>
+				<li>
+					<p class="q">
+						<em>질문</em>
+						<a href="#"><strong><span>[상식]</span> 세입자가 이사를 가지않는 경우 어쩌죠? </strong></a>
+					</p>
+					<p class="a">
+						<em>답변</em>
+						<a href="#">임대차계약이 기간만료나 당사자 간의 합의 등으로 종료한 경우 집주인은 보증금을 반환하여야 하고 임..</a>
+					</p>
+				</li>
+				</ul>
+				<a href="#" class="btn_more">더보기</a>
+			</div>
+			<div class="section_aside line">
+				<h3 class="tit_h3 h_view"><span>가장 많이 본 뉴스</span></h3>
+				<div class="tab_view view1"> <!-- view1 : 주간뉴스 view2 : 월간뉴스 -->
+					<ul>
+					<li>
+						<a href="#" class="tab tab1"><span>주간뉴스</span></a>
+						<div class="news_on"> <!-- 활성화 : news_on 비활성화 : news_off -->
+							<ul class="view_list">
+							<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기 연기 연</strong></a></li>
+							<li><a href="#">올해 서울 아파트 값 5% 올랐다.</a></li>
+							<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+							<li><a href="#">'한파주의보'부동산 경매 시장 시장 시장 시</a></li>
+							<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+							<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기 연기 연</strong></a></li>
+							<li><a href="#">올해 서울 아파트 값 5% 올랐다.</a></li>
+							<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+							<li><a href="#">'한파주의보'부동산 경매 시장 시장 시장 시</a></li>
+							<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+							</ul>
+							<a href="#" class="btn_more news">더보기</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="tab tab2"><span>월간뉴스</span></a>
+						<div class="news_off">
+							<ul class="view_list">
+							<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기</strong></a></li>
+							<li><a href="#">올해 서울 아파트 값 5% 올랐다.</a></li>
+							<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+							<li><a href="#">'한파주의보'부동산 경매 시장</a></li>
+							<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+							<li><a href="#"><strong>신도시 찬밥 취급...줄줄이 연기 연기 연</strong></a></li>
+							<li><a href="#">올해 서울 아파트 값 5% 올랐다.</a></li>
+							<li><a href="#">김포한강, 동시분양 흥행몰이</a></li>
+							<li><a href="#">'한파주의보'부동산 경매 시장 시장 시장 시</a></li>
+							<li><a href="#">청라지구 초고층 연말 분양대전</a></li>
+							</ul>
+							<a href="#" class="btn_more news">더보기</a>
+						</div>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div id="footer">
+    	<img src="img/@footer.gif" width="980" height="139" alt="header 임시이미지">
+	</div>
+</div>
+<script type="text/javascript">
+	jindo.SelectBox.factory(jindo.$$(".selectbox-noscript"), {nHeight:140, LayerPosition:{bAuto:true}});
+</script>
+</body>
+</html>

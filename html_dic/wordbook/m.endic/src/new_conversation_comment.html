@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>영단어장</title>
+<link rel="stylesheet" type="text/css" href="css/conversation.css"/>
+<!-- 댓글 1.0 css -->
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+</head>
+<!-- [D] 언어스킨 lang 속성 부여. ISO 639-1 Language Codes 기준
+    영어 : en
+    중국어 : zh
+    일본어 : ja
+    베트남 : vi
+    태국 : th
+-->
+<!-- [D] 회화댓글 페이지 list 추가 -->
+<body class="cmdList">
+<div id="wrap">
+    <div id="header">
+        <div class="gnb">
+            <h1><a href="#"><span class="tit hc">댓글/답글 모음</span></a></h1>
+            <a href="#" class="btn_cls"><span class="blind">닫기</span></a>
+            <a href="#" class="btn_refresh"><span class="blind">새로고침</span></a>
+        </div>
+    </div>
+    <!-- [D]  default : 클래스 없음
+              폰트 작게 1단계 : fs1
+              폰트 작게 2단계 : fs2
+              폰트 크게 1단계 : fs4
+              폰트 크게 2단계 : fs5
+    -->
+    <div id="content" class="">
+        <div class="conversation_wrap">
+            <div class="comment_area">
+                <div class="myCmd_area cmd_padding">
+                    <div class="myCmd_area_in">
+                        <span class="nicName">마스터메이슨 @mast****</span>
+                        <span class="total"><em>+68</em>건의 댓글/답글 작성</span>
+                    </div>
+                    <div class="myCmd_layer">
+                        <a href="#" class="btn_help"><span class="blind">댓글/답글모음 제공안내 레이어 보기</span></a>
+                        <div class="myCmd_layer_box">
+                            <span class="myCmd_layer_tit"><span class="u_cbox_ico_help"></span>댓글/답글모음 제공안내</span>
+                            <p class="myCmd_layer_txt">댓글/답글 모음을 보거나 공개하는 것은 오늘의 회화 서비스 내 댓글/답글에만 국한됩니다.</p>
+                            <a href="#" class="btn_myCmd_layer_close"><span class="blind">댓글/답글모음 제공안내 레이어 닫기</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd_padding u_cbox">
+                    <div class="sort_box">
+                        <!-- 20160823 접근성 title 수정 -->
+                        <ul class="sort_tab">
+                            <li>
+                                <span class="radio_tab">
+                                    <input type="radio" name="radio" id="radio1" title="최신순" class="radio_rec" checked>
+                                    <label for="radio1">최신순</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="radio_tab">
+                                    <input type="radio" name="radio" id="radio2" title="공감순" class="radio_rec">
+                                    <label for="radio2">공감순</label>
+                                </span>
+                            </li>
+                        </ul>
+                        <!-- //20160823 접근성 title 수정 -->
+                        <!-- [D] 내 댓글공개 OFF class = "btn_cmd_open"
+                                 내 댓글공개 ON class = "btn_cmd_open on" 추가 및 <span class="now">ON</span> 텍스트변경  -->
+                        <a href="#" class="btn_cmd_open">
+                            내 댓글 공개<span class="now">OFF</span><span class="ico"></span>
+                        </a>
+                    </div>
+                    <div class="cmdList_area">
+                        <ul class="comment_list_box">
+                            <li class="u_cbox_comment">
+                                <div class="u_cbox_comment_box">
+                                    <span class="date">2016.07.12 화요일</span>
+                                    <span class="tit">Is it okay if I take the next few days off?</span>
+                                    <div class="u_cbox_text_wrap">
+                                        <span class="u_cbox_ico_best">BEST</span>
+                                        <span class="u_cbox_contents">allow 어라우 : 허가하다 / allow 사람 to 동사 : 사람이 동사 하도록 허가하다 cf. be allowed to 어라우투 : ~하는것이 허용되다 / pay for ~를 지불하다 / this year 올해 / you don’t have to pay for dinner 저녁 값 내실 필요 없어요</span>
+                                    </div>
+                                    <div class="u_cbox_info_base">
+                                        <span class="u_cbox_date">4시간 전</span>
+                                        <span class="u_cbox_work_main">
+                                            <a href="#" class="u_cbox_btn_report"><span class="u_cbox_ico_bar"></span><span class="u_cbox_in_report">신고</span></a>
+                                        </span>
+                                    </div>
+                                    <div class="u_cbox_tool">
+                                        <a href="#" class="u_cbox_btn_reply"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt">7</span></a>
+                                        <div class="u_cbox_recomm_set">
+                                            <strong class="u_vc">공감/비공감</strong>
+                                            <a href="#" class="u_cbox_btn_recomm" title="이 댓글을 공감합니다"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">78</em></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="u_cbox_comment">
+                                <div class="u_cbox_comment_box">
+                                    <span class="date">2016.07.12 화요일</span>
+                                    <span class="tit">Is it okay if I take the next few days off?</span>
+                                    <div class="u_cbox_reply_area2">
+                                        <span class="u_cbox_ico_reply">BEST</span>
+                                        <span class="u_cbox_contents">inSISt 주장하다 / I insist 난 주장해/확신해 = (손 뿌리치고 카드 내미는 느낌)내가 낼게 = It’s on me, It’s my treat / hate은 좀 강한 느낌 / I don’t like it / always 어울웨이스 / 녹화하고 편집하고 보니 네이버와 스케쥴이 달라졌네요 ^^; </span>
+                                    </div>
+                                    <div class="u_cbox_info_base btn_recomm_box">
+                                        <span class="u_cbox_date">4시간 전</span>
+                                        <span class="u_cbox_work_main">
+                                            <a href="#" class="u_cbox_btn_report"><span class="u_cbox_ico_bar"></span><span class="u_cbox_in_report">신고</span></a>
+                                        </span>
+                                        <div class="u_cbox_recomm_set">
+                                            <strong class="u_vc">공감/비공감</strong>
+                                            <a href="#" class="u_cbox_btn_recomm" title="이 댓글을 공감합니다"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">78</em></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more_area">
+                        <a href="#" class="btn_more">더보기<span class="ico_arrow"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- [D] 마크업 확인용. 개발시 삭제 -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://view.gitlab2.uit.nhncorp.com/RND/includebyjavascript/raw/master/js/ibjs.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        // {path:'incl_comment_w.html', sel:'.comment_area'},
+        {path:'incl_reading_area.html', sel:'.reading_area'},
+        {path:'incl_keyword_area.html', sel:'.keyword_area'},
+        {path:'incl_best_reply_area.html', sel:'.best_reply_area'}
+    ]);
+</script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript" src="js/highcharts.src.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<!-- //[D] 마크업 확인용. 개발시 삭제 -->
+</body>
+</html>

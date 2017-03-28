@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<title>테마캐스트</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<div class="snb">
+			<!-- 맵 -->
+			<div class="map"><img src="img/@200x200.gif" alt="" width="198" height="199" ></div>
+			<!-- //맵 -->
+			<!-- 검색속성 -->
+			<div class="section_foldopt">
+				<!-- [D] 열기 버튼은 btn_fold.gif -->
+				<h3>매물종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area sale">
+					<div class="wide"><input type="radio" name="radio1" id="type1_radio1" class="btn_radio" checked="checked"> <label for="type1_radio1" class="on">전체매물</label></div>
+					<div class="wide">
+						<input type="radio" name="radio1" id="type1_radio2" class="btn_radio"> <label for="type1_radio2">직접선택</label> <span class="multi">(복수선택가능)</span>
+						<a href="#" class="btn_expand"><span>확장</span></a> <!-- [D] 접는경우 on을 제거하면 됩니다. -->
+					</div>
+				</div>
+				<h3>거래종류 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio2" id="type2_radio1" class="btn_radio"> <label for="type2_radio1">전체</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio2" class="btn_radio"> <label for="type2_radio2">매매</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio3" class="btn_radio" checked="checked"> <label for="type2_radio3" class="on">월세</label></div>
+					<div class="col"><input type="radio" name="radio2" id="type2_radio4" class="btn_radio"> <label for="type2_radio4">전세</label></div>
+				</div>
+				<h3>가격 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area" style="z-index:4">
+					<h4>보증금</h4>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio1" class="btn_radio" checked="checked"> <label for="type3_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio2" class="btn_radio"> <label for="type3_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio3" class="btn_radio"> <label for="type3_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio4" class="btn_radio"> <label for="type3_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio5" class="btn_radio"> <label for="type3_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio3" id="type3_radio6" class="btn_radio"> <label for="type3_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio3" id="type3_radio7" class="btn_radio"> <label for="type3_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="display:none;top:105px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+					<h4 class="month">월세</h4>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio1" class="btn_radio" checked="checked"> <label for="type6_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio2" class="btn_radio"> <label for="type6_radio2">1천만 미만</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio3" class="btn_radio"> <label for="type6_radio3">1~3천만</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio4" class="btn_radio"> <label for="type6_radio4">3~5천만</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio5" class="btn_radio"> <label for="type6_radio5">5천만~1억</label></div>
+					<div class="col"><input type="radio" name="radio6" id="type6_radio6" class="btn_radio"> <label for="type6_radio6">1~3억</label></div>
+					<div class="wide pd5"><input type="radio" name="radio6" id="type6_radio7" class="btn_radio"> <label for="type6_radio7">직접입력</label> <span class="crit">(만원)</span></div>
+					<div class="direct" style="z-index:10">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:8px;"><em>2억5천만원</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:80px;"><em>4억3천5백7십8만원</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="display:none;top:240px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<div class="calc_anchor">
+					<h3>면적 <a href="#" class="btn_calc">평형 계산기</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+					<div class="calc" style="display:none">
+						<h4>평형 계산기</h4>
+						<input type="text" class="calc_text" title="면적" style="width:34px;">
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">평</option>
+						   		<option value="2">㎡</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">평</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">평</li>
+									<li class="selectbox-item selectbox-item-over">㎡ </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+						<p class="result"><strong>175.5</strong> ㎡</p>
+						<a href="#" class="btn_ly_clse"><img src="img/btn_guide_close.gif" alt="닫기" width="10" height="9"></a>
+					</div>
+				</div>
+				<div class="opt_area">
+					<div class="col"><input type="radio" name="radio4" id="type4_radio1" class="btn_radio" checked="checked"> <label for="type4_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio2" class="btn_radio"> <label for="type4_radio2" title="66㎡ = 20평"><em>66㎡ </em>이하</label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio3" class="btn_radio"> <label for="type4_radio3" title="66㎡ = 20평&#13;99㎡ = 30평"><em>66~99㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio4" class="btn_radio"> <label for="type4_radio4" title="99㎡ = 30평&#13;132㎡ = 40평"><em>99~132㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio5" class="btn_radio"> <label for="type4_radio5" title="132㎡ = 40평&#13;165㎡ = 50평"><em>132~165㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio6" class="btn_radio"> <label for="type4_radio6" title="165㎡ = 50평&#13;198㎡ = 60평"><em>165~198㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio7" class="btn_radio"> <label for="type4_radio7" title="198㎡ = 60평&#13;330㎡ = 100평"><em>198~330㎡</em></label></div>
+					<div class="col"><input type="radio" name="radio4" id="type4_radio8" class="btn_radio"> <label for="type4_radio8" title="330㎡ = 100평&#13;991㎡ = 300평"><em>330~991㎡</em></label></div>
+					<div class="wide pd5"><input type="radio" name="radio4" id="type4_radio11" class="btn_radio"> <label for="type4_radio11">직접입력</label> <span class="crit"><em>(㎡)</em></span></div>
+					<div class="direct">
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:20px;"><em>25.8평</em></span>
+						<span>~</span>
+						<input type="text" class="text" style="width:50px;">
+						<span class="tooltip" style="left:92px;"><em>25.8평</em></span>
+						<a href="#"><span>선택</span></a>
+					</div>
+					<div class="apply_tooltip" style="display:none;top:121px;"> <!-- [D] 위치에 따라 top의 값이 변경되어야 합니다. -->
+						<p>값을 입력한 후 <strong>'적용'</strong> 버튼을 클릭해주세요</p>					
+					</div>
+				</div>
+				<h3>단지조건 <span class="multi">(복수선택가능)</span><a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area has_select">
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">역세권</label>
+						<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">3년</option>
+						   		<option value="2">5년</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">3년</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">3년</li>
+									<li class="selectbox-item selectbox-item-over">5년 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1">입주일</label>
+						<div class="select_crit selectbox-disabled">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500m</option>
+						   		<option value="2">1000m</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">500m</div>
+							</div>
+						   	<div class="selectbox-layer" style="display:none;">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item selectbox-item-selected">500m</li>
+									<li class="selectbox-item selectbox-item-over">1000m </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이내</span>
+					</div>
+					<div class="wide2">
+						<span class="radio-applied">
+							<span class="radio-mark radio-checked"></span>
+							<input type="checkbox" name="checkbox1" id="type1_check1">
+						</span>
+						<label for="type1_check1" class="on">세대수</label>
+						<div class="select_crit">
+							<select class="selectbox-source blind">
+						   		<option value="1" class="selectbox-default">500세대</option>
+						   		<option value="2">1000세대</option>
+								<option value="2">2500세대</option>
+							</select>
+							<div class="selectbox-box">
+								<div class="selectbox-label">2500세대</div>
+							</div>
+						   	<div class="selectbox-layer">
+						   		<div class="selectbox-list">
+						   			<ul>
+									<li class="selectbox-item">500세대</li>
+									<li class="selectbox-item selectbox-item-over">1000세대 </li>
+									<li class="selectbox-item selectbox-item-selected">2500세대 </li>
+									</ul>
+								</div>
+						   	</div>
+						</div>
+						<span class="crit">이상</span>
+					</div>
+				</div>
+				<h3>매물확인일 <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="opt_area">
+					<div class="wide"><input type="radio" name="radio5" id="type5_radio1" class="btn_radio" checked="checked"> <label for="type5_radio1" class="on">전체</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio2" class="btn_radio"> <label for="type5_radio2">오늘</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio3" class="btn_radio"> <label for="type5_radio3">최근 1주</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio4" class="btn_radio"> <label for="type5_radio4">최근 1달</label></div>
+					<div class="col"><input type="radio" name="radio5" id="type5_radio5" class="btn_radio"> <label for="type5_radio5">최근 2달</label></div>
+				</div>
+				<h3 class="last_opt">선택한 속성 <a href="#" class="btn_calc">전체삭제</a> <a href="#" class="btn_fold"><img src="img/btn_fold_on.gif" alt="닫기" width="7" height="5" ></a></h3>
+				<div class="selected_area select_none">
+					<ul>
+					<li>입주일 <em>3</em>년 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li>역세권 <em>500m</em> 이내 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					<li><em>5,000</em>만원 ~ <em>10,000</em>만원 <a href="#" class="btn_delete"><span>삭제</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //검색속성 -->
+			<!-- 연관검색어 -->
+			<div class="section_link">
+				<h3>연관검색어</h3>
+				<ul>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				<li><a href="#">정자동 오피스텔</a></li>
+				<li><a href="#">서울 3억 아파트</a></li>
+				<li><a href="#">정자동 아파트</a></li>
+				<li><a href="#">강남구 아파트</a></li>
+				</ul>
+			</div>
+			<!-- //연관검색어 -->
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!-- 테마캐스트 -->
+			<div class="section_theme">
+				<div class="theme_area">
+					<h3><img src="img/h_theme_cast.gif" width="227" height="14" alt="봄나들이 서울 공원11선 인근 부동산정보"></h3>
+					<a href="#" class="btn_theme1"><img src="img/btn_theme1.gif" width="87" height="23" alt="서서울호수공원"></a>
+					<a href="#" class="btn_theme2"><img src="img/btn_theme2.gif" width="68" height="24" alt="월드컵 공원"></a>
+					<a href="#" class="btn_theme3"><img src="img/btn_theme3.gif" width="65" height="23" alt="선유도공원"></a>
+					<a href="#" class="btn_theme4"><img src="img/btn_theme4.gif" width="54" height="23" alt="남산공원"></a>
+					<a href="#" class="btn_theme5"><img src="img/btn_theme5.gif" width="68" height="23" alt="낙산공원 등"></a>
+					<a href="#" class="btn_theme6"><img src="img/btn_theme6.gif" width="76" height="23" alt="북서울꿈의숲"></a>
+					<a href="#" class="btn_theme7"><img src="img/btn_theme7.gif" width="69" height="23" alt="중랑 캠핑숲"></a>
+					<a href="#" class="btn_theme8"><img src="img/btn_theme8.gif" width="75" height="23" alt="어린이대공원"></a>
+					<a href="#" class="btn_theme9"><img src="img/btn_theme9.gif" width="98" height="23" alt="길동자연생태공원"></a>
+					<a href="#" class="btn_theme10"><img src="img/btn_theme10.gif" width="65" height="23" alt="서울대공원"></a>
+				</div>
+			</div>
+			<!-- //테마캐스트 -->
+			<!-- 부동산뉴스 -->
+			<div class="section_base first_base">
+				<h3><img src="img/h_collection_news.gif" alt="부동산 뉴스" width="67" height="15" > (34,567건)</h3>
+				<ul class="list_base">
+				<li>
+					<div class="thumb"><a href="#"><img src="img/@100x74.jpg" alt="썸네일 이미지" width="100" height="74" ></a></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><a href="#"><img src="img/@100x74.jpg" alt="썸네일 이미지" width="100" height="74" ></a></div>
+					<div class="title">
+						<a href="#">금융위기 이후 서울 집값 상승 '세계 최고' 수준</a> <span class="addment">아크로팬 IT/과학 <span class="bar">|</span> 2010.01.12 (화) 오후 12:25</span>
+						<div class="desc">글로벌 이슈에 대한 양국간 공조도 확대해 나갈 것”이라고 말했다. 윤 장관은 “인도는 글로벌 금융위기에서도 괄목할만한 성장을 지속하고 있으며, 차세대 글로벌 리더로서 영향력이 증대되고 있다”고 평가했다.</div>
+					</div>
+				</li>
+				</ul>
+				<div class="more_info">
+					<a href="#" class="btn_more">부동산 뉴스 더보기</a>
+				</div>
+			</div>
+			<!-- //부동산뉴스 -->
+			<!-- 프리미엄,포커스 확인매물 -->
+			<div class="section_sale theme_sale">
+				<div class="sale_top">
+					<h3><img src="img/h_sale_premium.gif" alt="프리미엄,포커스 확인매물" width="150" height="15" > (34,567건)</h3>
+					<ul class="tab_sort">
+					<li class="t1"><a href="#" class="on"><span>확인매물일자순</span></a></li>
+					<li class="t3"><a href="#"><span>매물명순</span></a></li>
+					<li class="t4"><a href="#"><span>면적순</span></a></li>
+					<li class="t5"><a href="#"><span>가격순</span></a></li>
+					</ul>					
+				</div>
+				<table class="sale_table">
+				<caption class="blind">프리미엄, 포커스 확인매물</caption>
+				<colgroup>
+				<col width="30">
+				<col width="106">
+				<col>
+				<col width="77">
+				<col width="91">
+				<col width="63">
+				<col width="62">
+				<col width="101">
+				</colgroup>
+				<thead>
+				<tr>
+				<th class="tl"><span class="col1">거래</span></th>
+				<th>매물종류</th>
+				<th class="tl"><span class="col4">매물명</span></th>
+				<th>면적(㎡)</th>
+				<th>매물가(만원)</th>
+				<th>동</th>
+				<th>층</th>
+				<th>연락처</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>확인한지 1개월 이내인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type2"><span>확인한지 1개월 이상된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type3"><span>거래가 완료된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr class="bar"> <!-- [D] 5번째 마다 구분선을 위해 클래스로  bar추가 -->
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr class="bar">
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>확인한지 1개월 이내인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type2"><span>확인한지 1개월 이상된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type3"><span>거래가 완료된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr class="bar"> <!-- [D] 5번째 마다 구분선을 위해 클래스로  bar추가 -->
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr class="bar">
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>확인한지 1개월 이내인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type2"><span>확인한지 1개월 이상된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type3"><span>거래가 완료된 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr>
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr>
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				<tr class="bar"> <!-- [D] 5번째 마다 구분선을 위해 클래스로  bar추가 -->
+				<td rowspan="2" class="tl"><span class="col1">매매</span></td>
+				<td rowspan="2">아파트</td>
+				<td class="tl bdnone"><div class="col4"><a href="#">길음 뉴타운 2단지 푸르지오</a></div></td>
+				<td class="num bdnone"><a href="#" title="45㎡=13.6평&#13;158㎡=47.9평">45/158</a></td>
+				<td class="num bdnone"><a href="#"><strong>83,000</strong></a></td>
+				<td class="num bdnone">511</td>
+				<td class="num bdnone">14/15</td>
+				<td rowspan="2" class="agent"><span class="premium">신광공인</span><em>02-5816-2579</em></td>
+				</tr>
+				<tr class="bar">
+				<td colspan="5" class="tl dot"><div class="mark type1"><span>1개월 이내 확인 매물 </span><em>10.01.20</em> <a href="#">아름다운 조경 로얄동</a></div></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			<!-- //프리미엄,포커스 확인매물 -->		
+			
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //container -->
+	<!-- 우측플로팅 -->
+	<div class="my_sales">
+		<div class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="#"><img src="img/btn_my_popup_login.gif" width="59" height="17" alt="로그인" style="margin-bottom:2px;"></a>
+			</div>	
+		</div>			
+		<div class="bg_my_sales_b"></div>
+		<div class="bg_my_sales_t">
+			<h3 class="type2">최근본단지</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 본 단지가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span> 
+			</div>
+			<h3 class="type3">최근검색어</h3>
+			<div class="cont">
+				<span class="updown"><img src="img/btn_mysale_up_off.gif" width="61" height="13" alt="위로"></span>
+				<p class="result_none">최근 검색어가 없습니다</p>
+				<span class="updown"><img src="img/btn_mysale_down_off.gif" width="61" height="13" alt="아래로"></span> 
+			</div>			
+			<h3 class="type3">평형계산</h3>
+			<div class="cont">
+				<fieldset>
+					<legend class="blind">평형계산</legend>
+					<input type="text" class="input_text" title="값 입력" value="11"><a href="#"><img src="img/btn_calculate.gif" alt="계산" width="61" height="18" class="input_btn"></a>
+					<input type="text" class="input_text" title="값 입력" value="11">
+				</fieldset>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+	<!-- //우측플로팅 -->
+	<!-- footer -->
+	<div id="footer">
+		<!-- 연관검색어 -->
+		<div class="foot_link">
+			<h3>연관검색어</h3>
+			<p>
+				<a href="#">정자동 아파트</a>, 
+				<a href="#">강남구 아파트</a>, 
+				<a href="#">정자동 오피스텔</a>, 
+				<a href="#">서울 3억 아파트</a>, 
+				<a href="#">정자동 아파트</a>, 
+				<a href="#">강남구 아파트</a>, 
+				<a href="#">정자동 오피스텔</a>, 
+				<a href="#">서울 3억 아파트</a>
+			</p>
+			<a href="#" class="btn_top">맨위로</a>
+		</div>
+		<!-- //연관검색어 -->
+		<img src="img/@img_footer.gif" alt="" width="960" height="184" >
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html> 
+
+

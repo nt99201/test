@@ -1,0 +1,2289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+<link rel="stylesheet" type="text/css" href="../../css/land_map.css">
+</head>
+
+<body class="">
+<div id="wrap">
+	<div id="u_skip">
+	<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+	<a href="#spot"><span>하위 메뉴로 바로가기</span></a>
+	<a href="#container"><span>본문으로 바로가기</span></a>
+	</div>
+	<!-- header -->
+	<div id="header">
+	</div>
+	<!-- //header -->
+
+	<div id="spot" class="search">
+		<!-- 지도 상단 카테고리 -->
+		<div class="map_top">
+			<ul class="cate">
+			<div id="top_rlet_tp">
+				<li class="m1"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#" class="">오피스텔</a></li>
+				<li class="m3"><a href="#" class="">분양권</a></li>
+				<li class="m4"><a href="#" class="">빌라</a></li>
+				<li class="m5"><a href="#" class="">주택</a></li>
+				<li class="m6"><a href="#" class="">토지</a></li>
+				<li class="m7"><a href="#" class="">원룸</a></li>
+				<li class="m8"><a href="#" class="">상가</a></li>
+				<li class="m9"><a href="#" class="">사무실</a></li>
+				<li class="m10"><a href="#" class="">공장</a></li>
+				<li class="m11"><a href="#" class="">재개발</a></li>
+				<li class="m12"><a href="#" class="">건물</a></li>
+			</div>
+			<div id="top_trad_tp">
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#" class="">매매</a></li>
+				<li class="m15"><a href="#" class="">전세</a></li>
+				<li class="m16"><a href="#" class="">월세</a></li>
+			</div>
+			</ul>
+		</div>
+		<!-- //지도 상단 카테고리 -->
+	</div>
+	<div id="map" style="padding-bottom:0px;">
+		<!-- 위치 선택 -->
+		<div id="locationArea" class="location">
+			<div class="loc_view">
+				<div id="loc_view1" class="sel">
+					<select class="selectbox-source">
+						<option value="1100000000" selected="selected">서울시</option>
+						<option value="4100000000">경기도</option>
+						<option value="2800000000">인천시</option>
+						<option value="2600000000">부산시</option>
+						<option value="3000000000">대전시</option>
+						<option value="2700000000">대구시</option>
+						<option value="3100000000">울산시</option>
+						<option value="2900000000">광주시</option>
+						<option value="4200000000">강원도</option>
+						<option value="4300000000">충청북도</option>
+						<option value="4400000000">충청남도</option>
+						<option value="4700000000">경상북도</option>
+						<option value="4800000000">경상남도</option>
+						<option value="4500000000">전라북도</option>
+						<option value="4600000000">전라남도</option>
+						<option value="5000000000">제주도</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">서울시</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view2" class="sel">
+					<select class="selectbox-source">
+						<option value="1168000000">강남구</option>
+						<option value="1174000000">강동구</option>
+						<option value="1130500000">강북구</option>
+						<option value="1150000000">강서구</option>
+						<option value="1162000000">관악구</option>
+						<option value="1121500000">광진구</option>
+						<option value="1153000000">구로구</option>
+						<option value="1154500000">금천구</option>
+						<option value="1135000000">노원구</option>
+						<option value="1132000000">도봉구</option>
+						<option value="1123000000">동대문구</option>
+						<option value="1159000000">동작구</option>
+						<option value="1144000000">마포구</option>
+						<option value="1141000000">서대문구</option>
+						<option value="1165000000">서초구</option>
+						<option value="1120000000">성동구</option>
+						<option value="1129000000" selected="selected">성북구</option>
+						<option value="1171000000">송파구</option>
+						<option value="1147000000">양천구</option>
+						<option value="1156000000">영등포구</option>
+						<option value="1117000000">용산구</option>
+						<option value="1138000000">은평구</option>
+						<option value="1111000000">종로구</option>
+						<option value="1114000000">중구</option>
+						<option value="1126000000">중랑구</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">성북구</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view3" class="sel">
+					<select class="selectbox-source">
+						<option value="1129013400">길음동</option>
+						<option value="1129010300">돈암동</option>
+						<option value="1129011600">동선동1가</option>
+						<option value="1129011700">동선동2가</option>
+						<option value="1129011800">동선동3가</option>
+						<option value="1129011900">동선동4가</option>
+						<option value="1129012000">동선동5가</option>
+						<option value="1129010400">동소문동1가</option>
+						<option value="1129010500">동소문동2가</option>
+						<option value="1129010600">동소문동3가</option>
+						<option value="1129010700">동소문동4가</option>
+						<option value="1129010800">동소문동5가</option>
+						<option value="1129010900">동소문동6가</option>
+						<option value="1129011000">동소문동7가</option>
+						<option value="1129013000">보문동1가</option>
+						<option value="1129013100">보문동2가</option>
+						<option value="1129013200">보문동3가</option>
+						<option value="1129012600">보문동4가</option>
+						<option value="1129012700">보문동5가</option>
+						<option value="1129012800">보문동6가</option>
+						<option value="1129012900">보문동7가</option>
+						<option value="1129011100">삼선동1가</option>
+						<option value="1129011200">삼선동2가</option>
+						<option value="1129011300">삼선동3가</option>
+						<option value="1129011400">삼선동4가</option>
+						<option value="1129011500">삼선동5가</option>
+						<option value="1129013700">상월곡동</option>
+						<option value="1129013900">석관동</option>
+						<option value="1129010100">성북동</option>
+						<option value="1129010200">성북동1가</option>
+						<option value="1129012100">안암동1가</option>
+						<option value="1129012200">안암동2가</option>
+						<option value="1129012300">안암동3가</option>
+						<option value="1129012400">안암동4가</option>
+						<option value="1129012500">안암동5가</option>
+						<option value="1129013800">장위동</option>
+						<option value="1129013300">정릉동</option>
+						<option value="1129013500">종암동</option>
+						<option value="1129013600" selected="selected">하월곡동</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">하월곡동</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer" style="width:98px;">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div id="loc_view4" class="sel">
+					<select class="selectbox-source">
+						<option class="selectbox-default">단지</option>
+						<option value="26644">광남캐스빌</option>
+						<option value="3540">구동신</option>
+						<option value="26130">꿈의숲푸르지오</option>
+						<option value="1194">동신</option>
+						<option value="17700" selected="selected">래미안월곡</option>
+						<option value="26935">새동산</option>
+						<option value="10768">샹그레빌</option>
+						<option value="11597">수산/동양아파트</option>
+						<option value="1193">아남</option>
+						<option value="2990">월곡두산위브</option>
+						<option value="22199">월곡래미안루나밸리</option>
+						<option value="13115">창방트윈</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label">래미안월곡</div>
+					</div>
+					<div class="selectBoxDivList selectbox-layer" style="width:143px;">
+						<div class="selectbox-list"></div>
+					</div>
+				</div>
+			</div>
+			<div class="lastest">
+				<p>최근 검색한 지역과 단지 <a href="#">보기</a></p>
+				<ol id="recentComplexList" style="display:none; height:50px;">
+				<li><a href="#">가산동 두산</a></li>
+				<li><a href="#">자양동 한강우성아파트</a></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div id="container" class="container_end">
+		<div class="end_spot">
+			<div class="btn_group">
+				<a href="#" class="btn_gr"><span class="ic"></span>관심매물등록</a>
+				<a href="#" class="btn_gr v2"><span class="ic2"></span>허위매물신고</a>
+				<!-- [D] 허위매물신고 팝업 클릭시 display: block -->
+				<div class="btn_gr_layer" style="display: block">
+					<span class="arw"></span>
+					<span class="tx">해당 매물에 대해 매물신고시스템을 마련중에 있습니다.<br>본 매물의 신고는 고객센터 (1588-0332)를 통해<br>해주시면 감사하겠습니다.</span>
+				</div>
+				<div class="sc_section" style="">
+					<p class="tx_date v2">한국공인중개사협회</p>
+					<!-- <p class="tx_date v2">새대한공인중개사협회</p> -->
+					<span class="bar">l</span>
+					<p class="tx_date">최초게재일 2013.08.08</p>
+					<div class="sc_area"><img src="img/@social.gif" width="286" height="15" alt=""></div>
+					<span class="bar">l</span>
+					<a href="#" class="btn_gr"><span class="ic3"></span>인쇄</a>
+				</div>
+			</div>
+			<!-- [D] 공동주택 -->
+			<div class="end_info">
+				<div class="inner">
+					<div class="info_section">
+						<div class="adr_area">
+							<div class="mark">
+								<p class="blind">확인매물</p>
+								<strong class="date">13.07.06</strong>
+							</div>
+							<div class="adr_info">
+								<h2 class="t_adr">타워팰리스3차 101동</h2>
+								<a href="#" class="btn_all">단지매물 전체</a>
+							</div>
+							<p class="tx_adr"><em class="ic"><span class="blind">현장확인</span></em> 네이버 부동산이 2013년 7월 6일 직접 현장확인한 매물입니다.</p>
+						</div>
+						<div class="ar_area">
+							<h3 class="t_type">공급/전용면적</h3>
+							<span class="tx_rate">(전용률 50%)</span>
+							<a href="#" class="btn_trans"><span class="blind">단위</span></a>
+							<p class="rate_info">
+								<span class="sp_n num1">1</span>
+								<span class="sp_n num2">2</span>
+								<span class="sp_n num6">6</span>
+								<span class="sp_n dot">.</span>
+								<span class="sp_n num3">3</span>
+								<span class="sp_n num1">1</span>
+								<span class="sp_n slash">/</span>
+								<!-- <span class="sp_n num1">1</span>
+								<span class="sp_n num0">0</span>
+								<span class="sp_n num1">1</span>
+								<span class="sp_n dot">.</span>
+								<span class="sp_n num9">9</span>
+								<span class="sp_n num2">2</span>
+								<span class="sp_n tx_m">㎡</span> -->
+								<span class="sp_n tx_hp">-</span>
+								<span class="sp_n tx_m">㎡</span>
+							</p>
+						</div>
+						<div class="pr_area">
+							<h3 class="t_type">매매가<span class="ic_info"><a href="#"></a></span></h3>
+							<p class="mltm_area"><a href="#" class="btn"><span class="blind">국토해양부 실거래가</span></a></p>
+							<p class="rate_info">
+								<span class="sp_n num6">6</span>
+								<span class="sp_n num7">7</span>
+								<span class="sp_n com">,</span>
+								<span class="sp_n num9">9</span>
+								<span class="sp_n num0">0</span>
+								<span class="sp_n num0">0</span>
+								<span class="sp_n tx_m">만원</span>
+							</p>
+							<p class="tx_adr"><em class="ic"><span class="blind">현장확인</span></em> 네이버 부동산이 2013년 7월 6일 직접 현장확인한 매물입니다.</p>
+							<div class="ly_infoTx">
+								<span class="arw"></span>
+								00.00.00자 매호도가일뿐<br>실거래가로 확인된 금액이 아닙니다.
+								<span class="ic_info_clse"><a href="#"><em class="blind">닫기</em><a></span>
+							</div>
+						</div>
+					</div>
+					<!-- [D] 시세 있을 경우 detail_view_v2 추가 -->
+					<div class="detail_view detail_view_v2">
+						<div class="view_info">
+							<table cellspacing="0" border="1" summary="매물정보">
+							<caption>매물정보</caption>
+							<colgroup>
+							<col width="90"><col><col width="90"><col><col width="90"><col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">해당층/총층</div></th>
+							<td><div class="inner">중/16층</div></td>
+							<th scope="row"><div class="inner">방수/욕실수</div></th>
+							<td><div class="inner">3/2개</div></td>
+							<th scope="row"><div class="inner">분양가</div></th>
+							<td class="t_r"><div class="inner"><strong>62,900</strong> 만원</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">입주가능일</div></th>
+							<td><div class="inner">즉시입주</div></td>
+							<th scope="row"><div class="inner">분양권구분</div></th>
+							<td><div class="inner">조합원분</div></td>
+							<th scope="row"><div class="inner">프리미엄</div></th>
+							<td class="t_r"><div class="inner"><strong>5,000</strong> 만원</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">특징</div></th>
+							<td colspan="3"><div class="inner">8학군으로 좋은 교육환경과 이수교차로 부근으로 교통이 편리합니다.</div></td>
+							<th scope="row"><div class="inner">융자금</div></th>
+							<td class="t_r"><div class="inner"><strong>10,000</strong> 만원</div></td>
+							</tr>
+							<tr class="last">
+							<th scope="row"><div class="inner">중개업소</div></th>
+							<td colspan="5">
+								<div class="inner inner_ly">네이버공인중개사사무소 <strong class="tx">02-1234-4567</strong> <span class="bar">l</span>
+								<a href="#" class="btn_site">소재지 <span class="ic"></span></a>
+								대표: 홍길동 <strong class="tx">010-34455-3456</strong><a href="#" class="btn_biztalk"><span class="blind">1:1 톡</span></a></div>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="mp_area">
+							<h4>시<br>세</h4>
+							<ul class="lst_mp">
+							<li><em class="tx_t">매매가</em> <strong>125,000~127,000</strong> 만원</li>
+							<li><em class="tx_t">전세가</em> <strong>75,000~80,000</strong> 만원</li>
+							<li><em class="tx_t">전세율</em> <strong>60~64</strong> %</li>
+							</ul>
+							<div class="spon_area">
+								<p class="tx_spon" style="display:none">조인스랜드부동산 제공</p>
+								<p class="tx_spon">시세 정보가 없습니다.</p>
+								<a href="#" class="btn_more" style="display:none">더보기 <span class="ico"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="p_area">
+				<div class="bx_p">
+					<ul class="lst_tab">
+					<li class="frst"><a href="#">위치</a></li>
+					<li class="selected"><a href="#">동평형정보</a></li>
+					<li><a href="#">평면도</a></li>
+					<li><a href="#">현장확인</a></li>
+					<li><a href="#">인테리어</a></li>
+					<li><a href="#">매물사진</a></li>
+					<li><a href="#">단지사진</a></li>
+					<li><a href="#">단지시설</a></li>
+					<li><a href="#">주변/기타</a></li>
+					</ul>
+					<span class="p_num">(<strong>1</strong>/24)</span>
+					<div class="p_view">
+						<div class="rolling">
+							<ul class="lst_view">
+							<li class="selected"><a href="#"><img src="img/@tmp.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/thmb_detail2.jpg" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/thmb_detail3.jpg" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li class="selected"><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="ic_movie">동영상</span><span class="ic_site">현장확인</span><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><a href="#"><img src="img/@thmb.gif" width="70" height="70" alt=""><span class="l_mask"></span><span class="mask"></span></a></li>
+							<li><span class="l_mask"></span></li>
+							</ul>
+						</div>
+						<a href="#" class="btn_p btn_prev"><span class="ic">이전</span></a>
+						<a href="#" class="btn_p btn_next"><span class="ic">다음</span></a>
+					</div>
+					<a href="#" class="btn_view"><span class="ic"></span>크게보기</a>
+				</div>
+				<!-- [D] 지도 -->
+				<div class="map_section">
+					<div class="map_area">
+						<div class="plan_view4">
+							<div class="legend_area2">
+								<div class="label_dong_area">
+									<p class="current_dong">211동</p>
+								</div>
+								<div class="summary_plan2 v2">
+									<p><span class="bg_planbar"></span>전체: <a href="#">999</a>건</p>
+									<ul>
+									<li>(매매: <a href="#">999</a><span class="bg_planbar2"></span></li>
+									<li>전세: <a href="#">999</a><span class="bg_planbar2"></span></li>
+									<li>월세: <a href="#">999</a>)</li>
+									</ul>
+								</div>
+								<ul class="lst_legend">
+								<li><span class="ico_detail"></span>매물이 위치한 층</li>
+								<li><span class="ico_piloti"></span>필로티 및 기타공간</li>
+								<!-- [D] 펼치기 class="on" 추가,  활성/비활성 <ul class="lst_extent2" style="display:block/none"> -->
+								<li class="tab_extent2 on"><a href="#">면적구분<span class="bg_extent"></span></a></li>
+								</ul>
+							</div>
+							<!-- [D]  구간별 컬러 - 구간별 마크업 css.jpg 파일 참조
+									class ico_lv1 ~ ico_lv12 / 각 class마다 _2 ~ _5까지 존재 -->
+							<ul class="lst_extent2 v2" style="display:block">
+							<li><span class="extent_color ico_lv1"></span><span class="tahoma">150A</span>㎡</li>
+							<li><span class="extent_color ico_lv2"></span><span class="tahoma">150A</span>㎡</li>
+							<li><span class="extent_color ico_lv3"></span><span class="tahoma">150B</span>㎡</li>
+							<li><span class="extent_color ico_lv3"></span><span class="tahoma">150B</span>㎡</li>
+							<li><span class="extent_color ico_lv4"></span><span class="tahoma">152A</span>㎡</li>
+							<li><span class="extent_color ico_lv3"></span><span class="tahoma">150B</span>㎡</li>
+							<li><span class="extent_color ico_lv4"></span><span class="tahoma">152A</span>㎡</li>
+							<li><span class="extent_color ico_lv4"></span><span class="tahoma">152A</span>㎡</li>
+							<li><span class="extent_color ico_lv5"></span><span class="tahoma">153B</span>㎡</li>
+							<li><span class="extent_color ico_lv6"></span><span class="tahoma">176</span>㎡</li>
+							<li><span class="extent_color ico_lv7"></span><span class="tahoma">197</span>㎡</li>
+							<li><span class="extent_color ico_lv8"></span><span class="tahoma">198</span>㎡</li>
+							</ul>
+
+							<div class="lst_plan">
+								<table class="wrap_table">
+								<tr>
+								<td>
+									<div class="wrap_elevation_apt">
+										<table class="elevation_apt">
+										<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof3"><div></div></td>
+										</tr>
+										<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">2001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">2001</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">2001</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="bg_roof"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										<td class="bg_roof2"><div></div></td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1904</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1905</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1801</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1701</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1501</a>
+												<!-- 툴팁영역 -->
+												<!-- [D] div class="extenttootip_area" 요소 width 값의 절반을 margin-left:값 으로 제공해 주세요 -->
+												<div class="extenttootip_area" style="margin-left:-45px">
+													<p class="extent_tootip">
+														<!-- [D] 면적 아이콘 class ico_lv1 ~ ico_lv12 / 각 class마다 _2 ~ _5까지 존재 -->
+														<span class="extent_color ico_lv1"></span><span class="tahoma">341SC-1A</span>㎡
+														<em class="rgt"></em>
+													</p>
+													<i class="arr"></i>
+												</div>
+												<!-- //툴팁영역 -->
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1501</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1301</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1201</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1201</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1101</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1101</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1101</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">1001</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">1001</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">1001</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">901</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">901</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">901</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">801</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">801</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">801</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">701</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">701</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">701</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">601</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">601</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">601</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">501</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">501</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">501</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area">
+												<a href="#" class="color_lv1">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv1_2">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_3">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv9_4">401</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv3">401</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv3">401</a>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<td class="first">
+											<div class="col_area"><a href="#" class="color_lv12">301</a></div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_4">301</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">301</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">301</a>
+											</div>
+										</td>
+										</tr>
+										<tr class="on">
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_4">201</a>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<a href="#" class="color_lv12_5">201</a>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr class="ground_floor">
+										<td class="first">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td>
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										<td class="last">
+											<div class="col_area">
+												<span class="bg_piloti">필로티 구역</span>
+											</div>
+										</td>
+										</tr>
+										<tr>
+										<!-- [D] col 갯수에 맞춰서 colspan="n" 입력 -->
+										<td colspan="6" class="deck_area">
+											<span class="bg_deck_lft"></span>
+											<span class="bg_deck_rgt"></span>
+										</td>
+										</tr>
+										</table>
+									</div>
+								</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+						<p class="desc_plan_view3"><em>※</em> 마우스를 드래그 해주세요</p>
+						<div class="btn_map v3">
+							<a href="#" class="btn_prev"><span class="blind">이전</span></a>
+							<a href="#" class="btn_next"><span class="blind">다음</span></a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="info_area info_area_v2 first">
+				<div class="info_wrap">
+					<div class="sale_detail">
+						<h3 class="t_end t_sale"><span>매물세부정보</span></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="매물세부정보">
+							<caption>매물세부정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">해당동</div></th>
+							<td><div class="inner">101동</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">해당면적세대수</div></th>
+							<td><div class="inner">99세대</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">세대당주차대수</div></th>
+							<td><div class="inner">1.21대 (총750대)</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">현관구조</div></th>
+							<td><div class="inner">복도식</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">건물종류</div></th>
+							<td><div class="inner">아파트</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">매물번호</div></th>
+							<td><div class="inner">2038292092</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="div_detail">
+						<h3 class="t_end t_div"><span>단지정보</span></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="단지정보">
+							<caption>단지정보</caption>
+							<colgroup>
+							<col width="111"><col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">총동수</div></th>
+							<td><div class="inner">10동</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">총세대수</div></th>
+							<td><div class="inner">999세대</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">난방방식</div></th>
+							<td><div class="inner">지역난방</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">난방연료</div></th>
+							<td><div class="inner">열병합</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">건설사명</div></th>
+							<td><div class="inner">월드건설(주)</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">입주년월</div></th>
+							<td><div class="inner">2000.01</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info_area">
+				<div class="info_wrap">
+					<div class="sale_detail">
+						<h3 class="t_end t_rebuild"><span>재건축정보</span></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="재건축정보">
+							<caption>재건축정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">사업단계</div></th>
+							<td><div class="inner">추진위원회설립인가</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">예상세대수</div></th>
+							<td><div class="inner">999세대</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">예상용적률</div></th>
+							<td><div class="inner">80%</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">추진회/조합전화</div></th>
+							<td><div class="inner">02-567-3234</div></td>
+							</tr>
+							</tbody>
+							</table>
+							<table cellspacing="0" border="1" summary="재건축정보">
+							<caption>재건축정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">선정시공사</div></th>
+							<td><div class="inner">현대산업개발(주), 현대건설(주). 삼성물산(주)</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">예상배정면적</div></th>
+							<td><div class="inner">[공급] 107, 109A~F, 125A~E, 138A~E, 165A~C, 198A~B, 81A~D, 99A~B</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info_area">
+				<div class="info_wrap">
+					<div class="sale_detail">
+						<h3 class="t_end t_sale"><span>매물세부정보</span></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="매물세부정보">
+							<caption>매물세부정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">국토이용</div></th>
+							<td><div class="inner">해당</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">건축허가</div></th>
+							<td><div class="inner">있음</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">진입도로</div></th>
+							<td><div class="inner">있음</div></td>
+							</tr>
+							</tbody>
+							</table>
+							<table cellspacing="0" border="1" summary="매물세부정보">
+							<caption>매물세부정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">도시계획</div></th>
+							<td><div class="inner">해당</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">토지거래허가구역</div></th>
+							<td><div class="inner">해당</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">매물번호</div></th>
+							<td><div class="inner">2029729899</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info_area info_area_v2">
+				<div class="info_wrap">
+					<div class="sale_detail">
+						<h3 class="t_end t_sale"><span>매물세부정보</span></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="매물세부정보">
+							<caption>매물세부정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">해당동</div></th>
+							<td><div class="inner">101동</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">해당면적세대수</div></th>
+							<td><div class="inner">99세대</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">용도</div></th>
+							<td><div class="inner">주거용</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">방향</div></th>
+							<td><div class="inner">남동</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">내부구조</div></th>
+							<td><div class="inner">단층식</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">현관구조</div></th>
+							<td><div class="inner">복도식</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">방범창/베란다</div></th>
+							<td><div class="inner">방범창, 베란다</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">냉방시설</div></th>
+							<td><div class="inner">벽걸이에어컨, 스탠드에어컨, 천장에어컨</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">생활시설</div></th>
+							<td><div class="inner">침대, 책상, 옷장, 붙박이장, 식탁, 소파, 신발장, 냉장고, 세탁기, 건조기, 샤워부스, 비데, 싱크대, 식기세척기, 가스레인지, 인덕션레인지, 전자레인지, 가스오븐</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">매물번호</div></th>
+							<td><div class="inner">2038292092</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="div_detail">
+						<h3 class="t_end t_build"><span>건물정보</span><span class="bar">|</span><strong class="tx_build">드림하우스</strong></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="단지정보">
+							<caption>단지정보</caption>
+							<colgroup>
+							<col width="111"><col>
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">총동수</div></th>
+							<td><div class="inner">10동</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">총세대수</div></th>
+							<td><div class="inner">999세대</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">총주차대수</div></th>
+							<td><div class="inner">1200대(세대당 1.23대)</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">난방방식</div></th>
+							<td><div class="inner">지역난방</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">난방연료</div></th>
+							<td><div class="inner">열병합</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">보안시설</div></th>
+							<td><div class="inner">자체경비원, 비디오폰, 인터폰, 카드키, CCTV, 사설경비, 현관보안</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">기타시설</div></th>
+							<td><div class="inner">엘리베이터, 화재경보기</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">건설사명</div></th>
+							<td><div class="inner">월드건설(주)</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">준공년월</div></th>
+							<td><div class="inner">2000.01</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info_area">
+				<div class="info_wrap">
+					<div class="sale_detail">
+						<h3 class="t_end t_area"><span>매물/구역정보</span></h3>
+						<div class="tbl_end">
+							<table cellspacing="0" border="1" summary="매물/구역정보">
+							<caption>매물/구역정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">시공예정사</div></th>
+							<td><div class="inner">삼성물산(주),대림산업(주), 지에스건설(주),현대산업개발(주) </div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">구역특징</div></th>
+							<td><div class="inner">청계천로, 을지로, 퇴계로 이용 도심진입 용이 성수대교확장개통으로 강남진입용이 내부순환로 마장, 사근램프이용 간선도로 진입용이 뉴타운시범지역으로 단지내 녹지공간 풍부 </div></td>
+							</tr>
+							</tbody>
+							</table>
+							<table cellspacing="0" border="1" summary="매물/구역정보">
+							<caption>매물/구역정보</caption>
+							<colgroup>
+							<col width="111"><col width="">
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row"><div class="inner">조합전화번호</div></th>
+							<td><div class="inner">02)2291-8985,8920</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">건폐율</div></th>
+							<td><div class="inner">100%</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">용적률</div></th>
+							<td><div class="inner">100%</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">건립총세대수</div></th>
+							<td><div class="inner">1369</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">추진현황</div></th>
+							<td><div class="inner">착공 및 분양</div></td>
+							</tr>
+							<tr>
+							<th scope="row"><div class="inner">매물번호</div></th>
+							<td><div class="inner">2029729899</div></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="info_area v3">
+			<div class="site_chk">
+				<h3 class="t_end t_area"><span>현장확인매물 체크리스트</span></h3>
+				<p class="dsc_chk">현장확인 체크리스트는 네이버부동산에서 <em>매물을 직접 방문</em>하여 작성한 리스트입니다.</p>
+				<table cellspacing="0" border="1" summary="현장확인매물 체크리스트" class="tbl_site">
+				<caption>현장확인매물 체크리스트</caption>
+				<colgroup>
+				<col width="136"><col width="135"><col width="135"><col width="135"><col width="136">
+				</colgroup>
+				<tbody>
+				<tr>
+				<th scope="row" rowspan="5">건축물 정보</th>
+				<th scope="row" class="s_tit">엘리베이터</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">관리비/월</th>
+				<td class="last"><strong>5만원</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">엘리베이터 CCTV</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">건물내부 CCTV</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">건물외부 CCTV</th>
+				<td><strong class="x">X</strong></td>
+				<th scope="row" class="s_tit">난방방식</th>
+				<td class="last"><strong>개별</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">경비실</th>
+				<td><strong class="x">X</strong></td>
+				<th scope="row" class="s_tit">주차장</th>
+				<td class="last"><strong class="x">X</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">인터폰</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">출입카드키</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr class="tr_first">
+				<th scope="row" rowspan="4">매물 정보</th>
+				<th scope="row" class="s_tit">큰 창문 방향</th>
+				<td><strong>남향</strong></td>
+				<th scope="row" class="s_tit">거실</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">베란다 유무</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">베란다 확장</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">화장실 개수</th>
+				<td><strong>2</strong></td>
+				<th scope="row" class="s_tit">욕조</th>
+				<td class="last"><strong class="x">X</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">샤워부스</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">다용도실</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr class="tr_first">
+				<th scope="row" rowspan="4">옵션 정보</th>
+				<th scope="row" class="s_tit">붙박이 옷장</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">에어컨</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">신발장</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">드레스룸</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">가스레인지</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">냉장고</th>
+				<td class="last"><strong class="x">X</strong></td>
+				</tr>
+				<tr>
+				<th scope="row" class="s_tit">싱크대</th>
+				<td><strong class="o">O</strong></td>
+				<th scope="row" class="s_tit">세탁기</th>
+				<td class="last"><strong class="o">O</strong></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			</div>
+
+			<div class="price_area">
+				<h3 class="t_end t_price"><span>시세변동  추이</span></h3>
+				<div class="end_com">
+					<div class="graph_area">
+						<!-- 부동산 과거 10년 시세보기 -->
+						<a href="#" class="btn_more logo2"><span>부동산 114</span> 과거시세보기 <span class="ico v3"></span></a>
+						<!-- 부동산 114 과거 10년 시세보기
+						<a href="#" class="btn_more logo"><span>부동산 뱅크</span> 과거10 년시세보기 <span class="ico v2"></span></a>-->
+						<ul class="tab_graph">
+						<li class="frst"><a href="#"><span class="blind">매매</span></a></li>
+						<li class="on"><a href="#"><span class="blind">전세</span></a></li>
+						</ul>
+						<div class="graph_view">
+							<div class="graph_inner">
+								<ul class="lst_stat">
+								<li><span class="bu1"></span>해당매물가</li>
+								<li><span class="bu2"></span>상위평균가</li>
+								<li><span class="bu3"></span>하위평균가</li>
+								</ul>
+								<img src="img/@graph.gif" width="643" height="188" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="more_area">
+					<span class="tx">한국감정원 제공</span>
+					<a href="#" class="btn_more">더보기<span class="ico"></span></a>
+				</div>
+			</div>
+
+			<div class="price_area">
+				<h3 class="t_end t_price"><span>시세변동 추이</span></h3>
+				<div class="end_com">
+					<div class="graph_area">
+						<div class="info_graph">
+							<p class="dsc">(입주일로부터 최장 7 년시세) </p>
+							<ul class="lst_info">
+							<li class="frst selected"><a href="#">1년</a></li>
+							<li><a href="#">3년</a></li>
+							<li><a href="#">5년</a></li>
+							<li><a href="#">7년</a></li>
+							</ul>
+						</div>
+						<ul class="tab_graph">
+						<li class="frst on"><a href="#"><span class="blind">매매</span></a></li>
+						<li><a href="#"><span class="blind">전세</span></a></li>
+						</ul>
+						<div class="graph_view">
+							<div class="graph_inner">
+								<ul class="lst_stat">
+								<li><span class="bu1"></span>해당매물가</li>
+								<li><span class="bu2"></span>상위평균가</li>
+								<li><span class="bu3"></span>하위평균가</li>
+								</ul>
+								<img src="img/@graph.gif" width="643" height="188" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="more_area">
+					<span class="tx">한국감정원 제공</span>
+					<a href="#" class="btn_more">더보기<span class="ico"></span></a>
+				</div>
+			</div>
+
+			<div class="cost_area">
+				<h3 class="t_end t_cost"><span>관리비</span></h3>
+				<table cellspacing="0" border="1" summary="관리비정보">
+				<caption>관리비</caption>
+				<colgroup>
+				<col width="69"><col width="114"><col width="123"><col width="124"><col width="124"><col width="126">
+				</colgroup>
+				<thead>
+				<tr>
+				<th colspan="2" class="b_n">&nbsp;</th>
+				<th>
+					<div id="mnexYm" class="jselectbox-applied ">
+						<select class="jselectbox-source" style="display: none;">
+							<option value="201201">2012년 01월</option>
+							<option value="201112">2011년 12월</option>
+							<option value="201111">2011년 11월</option>
+							<option value="201110">2011년 10월</option>
+							<option value="201109">2011년 09월</option>
+							<option value="201108">2011년 08월</option>
+							<option value="201107">2011년 07월</option>
+							<option value="201106">2011년 06월</option>
+							<option value="201105">2011년 05월</option>
+							<option value="201104">2011년 04월</option>
+							<option value="201103">2011년 03월</option>
+							<option value="201102">2011년 02월</option>
+							<option value="201101">2011년 01월</option>
+						</select>
+						<div class="jselectbox-box" style="width:89px">
+							<div class="jselectbox-label">2012년 01월</div>
+						</div>
+						<div class="jselectbox-layer" style="display:none;position:absolute;">
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+				</th>
+				<th>연평균</th>
+				<th>하절기 평균</th>
+				<th>동절기 평균</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="frst">
+				<th scope="row" rowspan="4" class="b_n"><div class="inner"><strong>175</strong>㎡ <a href="#" class="btn_detail">상세</a></div></th>
+				<th scope="row"><div class="inner">공용 관리비 (원)</div></th>
+				<td><div class="inner">372,912</div></td>
+				<td><div class="inner">372,912</div></td>
+				<td><div class="inner">372,912</div></td>
+				<td><div class="inner">372,912</div></td>
+				</tr>
+				<tr>
+				<th scope="row"><div class="inner">난방비 (원)</div></th>
+				<td><div class="inner">16,478</div></td>
+				<td><div class="inner">16,478</div></td>
+				<td><div class="inner">16,478</div></td>
+				<td><div class="inner">16,478</div></td>
+				</tr>
+				<tr>
+				<th scope="row"><div class="inner">기타개별관리비 (원)</div></th>
+				<td><div class="inner">215,819</div></td>
+				<td><div class="inner">215,819</div></td>
+				<td><div class="inner">215,819</div></td>
+				<td><div class="inner">215,819</div></td>
+				</tr>
+				<tr class="last">
+				<th scope="row"><div class="inner"><strong>총 관리비 (원)</strong></div></th>
+				<td><div class="inner"><strong>605,209</strong></div></td>
+				<td><div class="inner"><strong>605,209</strong></div></td>
+				<td><div class="inner"><strong>605,209</strong></div></td>
+				<td><div class="inner"><strong>605,209</strong></div></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="cost_info">
+					<p class="tx_dsc">하절기 6~8月 / 동절기 12~2月 </p>
+					<p class="tx_spon">아파트아이 제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+            <div class="ad_area_detail">
+                <img src="img/ad_oneroom685x140_2.png" width="685" height="140" alt=""/>
+                <a href="#" target="_blank" class="svc_intro"><span class="blind">서비스 소개</span></a>
+                <a href="#" target="_blank" class="svc_go"><span class="blind">서비스 바로가기</span></a>
+            </div>
+			<div class="sale_info_area">
+				<h3 class="t_end t_sale_info"><span>매물설명</span></h3>
+				<p class="tx_sale_info">
+					- 진흥아파트 정문앞 롯데부동산이에요.<br>- 로얄층으로 내부좋아요.<br>- 입주는 서로 조율하시면 됩니다.
+				</p>
+			</div>
+
+			<div class="info_area">
+			<!-- [D] 왼쪽정보만 있을경우 class="v2" 추가 -->
+			<div class="info_wrap v2">
+				<div class="sale_detail">
+					<h3 class="t_end t_sale"><span>주변정보</span></h3>
+					<div class="tbl_end">
+						<table cellspacing="0" border="1" summary="단지정보">
+						<caption>주변정보</caption>
+						<colgroup>
+						<col width="111"><col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row"><div class="inner">지하철</div></th>
+						<td><div class="inner">대전1호선 대전역 도보 10분 소요</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div class="inner">버스</div></th>
+						<td><div class="inner">대전 전 노선 도보5분</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div class="inner">도로</div></th>
+						<td><div class="inner">대전 중앙로 동서 관톨도로 인근 철도빌딩 앞 대로에서 도보3분</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div class="inner">편의시설</div></th>
+						<td><div class="inner">대전에서 제일 큰 중앙시장 도보 10분, 갤러리아 타임월드 백화점 5분, 롯데백화점과도 가깝고 대전시청 10분거리, 대전의 명동 으능정이문화거리 5분 소요</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div class="inner">교육환경</div></th>
+						<td><div class="inner">도보10분 > 대성 여중교</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div class="inner">공원/녹지</div></th>
+						<td><div class="inner">도보1~2분 > 대동천 녹지공원겸</div></td>
+						</tr>
+						<tr>
+						<th scope="row"><div class="inner">의료시설</div></th>
+						<td><div class="inner">도보1~2분 > 10여개 의원, 대학병원</div></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="com_area">
+				<h3 class="t_end t_com"><span>지금,우리동네는</span><span class="bar">|</span><em class="place">아이파트분당3</em></h3>
+				<table cellspacing="0" border="1" summary="관리비정보">
+				<caption>관리비</caption>
+				<colgroup>
+				<col width="80"><col><col width="110"><col width="61"><col width="73"><col width="40">
+				</colgroup>
+				<thead>
+				<tr>
+				<th>
+					<div id="mnexYm" class="jselectbox-applied ">
+						<select class="jselectbox-source" style="display: none;">
+							<option>전체</option>
+						</select>
+						<div class="jselectbox-box" style="width:65px">
+							<div class="jselectbox-label">전체</div>
+						</div>
+						<div class="jselectbox-layer" style="display:none;position:absolute;">
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+				</th>
+				<th>제목</th>
+				<th>아이디</th>
+				<th class="sort"><a href="#" class="selected">등록일<span class="bu"></span></a></th>
+				<th class="sort"><a href="#">조회<span class="bu"></span></a></th>
+				<th class="sort"><a href="#">추천<span class="bu"></span></a></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="frst">
+				<td><div class="inner">Q&amp;A</div></td>
+				<td>
+					<div class="inner">
+						<a href="#">51/51로 가격이 써있는데요~</a>
+						<span class="bx_n"><span class="bx_i">답변<strong class="n_r">2</strong></span></span>
+					</div>
+				</td>
+				<td class="t_r t_r2"><div class="inner">lanz****</div></td>
+				<td class="t_r"><div class="inner">13.03.27</div></td>
+				<td class="t_r"><div class="inner">4</div></td>
+				<td class="t_r"><div class="inner">0</div></td>
+				</tr>
+				<tr class="even">
+				<td><div class="inner">이야기</div></td>
+				<td>
+					<div class="inner">
+						<a href="#">매물문의</a>
+						<span class="bx_n"><span class="bx_i">댓글<strong class="n_b">3</strong></span></span>
+						<span class="bx_n"><span class="bx_i">답변<strong class="n_r">1</strong></span></span>
+					</div>
+				</td>
+				<td class="t_r t_r2"><div class="inner">sm72****</div></td>
+				<td class="t_r"><div class="inner">13.03.27</div></td>
+				<td class="t_r"><div class="inner">24</div></td>
+				<td class="t_r"><div class="inner">0</div></td>
+				</tr>
+				<tr>
+				<td><div class="inner">이야기</div></td>
+				<td>
+					<div class="inner">
+						<a href="#">매물문의</a>
+					</div>
+				</td>
+				<td class="t_r t_r2"><div class="inner">sm72****</div></td>
+				<td class="t_r"><div class="inner">13.03.27</div></td>
+				<td class="t_r"><div class="inner">24</div></td>
+				<td class="t_r"><div class="inner">0</div></td>
+				</tr>
+				<tr class="even">
+				<td><div class="inner">이야기</div></td>
+				<td>
+					<div class="inner">
+						<a href="#">매물문의</a>
+						<span class="bx_n"><span class="bx_i">댓글<strong class="n_b">3</strong></span></span>
+						<span class="bx_n"><span class="bx_i">답변<strong class="n_r">1</strong></span></span>
+					</div>
+				</td>
+				<td class="t_r t_r2"><div class="inner">sm72****</div></td>
+				<td class="t_r"><div class="inner">13.03.27</div></td>
+				<td class="t_r"><div class="inner">24</div></td>
+				<td class="t_r"><div class="inner">0</div></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="btn_group">
+					<a href="#" class="btn_write"><span class="blind">글쓰기</span></a>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+			<div class="com_area">
+				<h3 class="t_end t_com"><span>지금,우리동네는</span><span class="bar">|</span><em class="place">아이파트분당3</em></h3>
+				<table cellspacing="0" border="1" summary="관리비정보">
+				<caption>관리비</caption>
+				<colgroup>
+				<col width="80"><col><col width="110"><col width="61"><col width="73"><col width="40">
+				</colgroup>
+				<thead>
+				<tr>
+				<th>
+					<div id="mnexYm" class="jselectbox-applied ">
+						<select class="jselectbox-source" style="display: none;">
+							<option>전체</option>
+						</select>
+						<div class="jselectbox-box" style="width:65px">
+							<div class="jselectbox-label">전체</div>
+						</div>
+						<div class="jselectbox-layer" style="display:none;position:absolute;">
+							<div class="jselectbox-list"></div>
+						</div>
+					</div>
+				</th>
+				<th>제목</th>
+				<th>아이디</th>
+				<th class="sort"><a href="#" class="selected">등록일<span class="bu"></span></a></th>
+				<th class="sort"><a href="#">조회<span class="bu"></span></a></th>
+				<th class="sort"><a href="#">추천<span class="bu"></span></a></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="nodata">
+				<td colspan="6"><div class="inner"><strong>선택한 동네에 해당되는 글이 등록되어있지 않습니다.</strong><br>동네에 대한 질문이나 알고 계신 이야기를 등록해주세요.</div></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="btn_group">
+					<a href="#" class="btn_write"><span class="blind">글쓰기</span></a>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<div class="noti_area">
+				<p class="tx_noti"><em class="tx"><span class="blind">NBP</span></em>는 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다. </p>
+				<a href="#" class="btn_sale_lst">추천맞춤매물리스트</a>
+			</div>
+			<div class="noti_area">
+				<p class="tx_noti"><em class="tx"><span class="blind">NBP</span></em>는 본 매물정보의 정확성에 대한 보증하지 아니하며, 게시되는 매물정보는<br>실제 현장 매물 또는 건축물 대장 등의 정보와 다를 수 있으므로 주의를 부탁 드립니다.</p>
+				<a href="#" class="btn_sale_lst">추천맞춤매물리스트</a>
+			</div>
+
+		</div>
+
+		<div class="aside aside_end">
+
+			<div class="bx_com">
+				<h4 class="t_end t_focus"><em class="ic"></em><span>포커스 회원업소</span></h4>
+				<div class="mem_area">
+					<div class="thmb"><img src="img/@tmp_member2.gif" width="246" height="117" alt=""></div>
+					<h5 class="t_mem"><a href="#">로얄공인중개사사무소</a></h5>
+					<ul class="lst_mem">
+					<li><em>대표</em>  이현흥&nbsp;<span class="recom">한국공인중개사협회추천</span></li>
+					<li><em>전화</em>  02-575-0066 / 017-350-6050</li>
+					<li><a href="#">현장확인: <strong>40</strong></a><span class="and">|</span><a href="#">매물: <strong>10</strong></a><span class="and">|</span><a href="#">맞춤매물: <strong>3</strong></a></li>
+					</ul>
+					<div class="btn_group">
+						<a href="#" class="btn_v2"><span class="blind">위치보기</span></a>
+
+					</div>
+					<div class="premium_btn_page2">
+						<p class="pagenum"><strong>1</strong>/2</p>
+						<a href="#" title="이전" class="btn_prev_on"><span>이전</span></a>
+						<a href="#" title="다음" class="btn_next_on"><span>다음</span></a>
+					</div>
+				</div>
+				<div class="special">
+					<h5>전문답변인</h5>
+					<div class="mem_area v2">
+						<ul class="lst_mem lst_mem_v2">
+						<li><em>주요답변분야</em>  분양/청약</li>
+						<li><em>답변</em> 5,820  <span class="bar">l</span>  <em>채택</em> 1,049  <span class="bar">l</span>  <em>등급</em> <img width="18" height="18" src="http://static.land.naver.net/static/service/20131028/community/new/ico_l6.gif" alt="전문답변인 Level6"></li>
+						</ul>
+						<div class="btn_group">
+							<a href="#" class="btn_v3"><span class="blind">답변보기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bx_com">
+				<h4 class="t_end t_premium"><em class="ic"></em><span>프리미엄 회원업소</span></h4>
+				<div class="mem_area">
+					<div class="thmb"><img src="img/@tmp_member2.gif" width="246" height="117" alt=""></div>
+					<h5 class="t_mem"><a href="#">로얄공인중개사사무소</a></h5>
+					<ul class="lst_mem">
+					<li><em>대표</em>  이현흥&nbsp;<span class="recom">한국공인중개사협회추천</span></li>
+					<li><em>전화</em>  02-575-0066 / 017-350-6050</li>
+					<li><a href="#">현장확인: <strong>40</strong></a><span class="and">|</span><a href="#">매물: <strong>10</strong></a><span class="and">|</span><a href="#">맞춤매물: <strong>3</strong></a></li>
+					</ul>
+					<div class="btn_group">
+                        <a href="#" class="btn_biztalk"><span class="blind">1:1 톡</span></a>
+						<a href="#" class="btn_v2"><span class="blind">위치보기</span></a>
+					</div>
+                    <p class="tx_biztalk">매물에 대한 자세한 문의는 1:1톡으로 물어보세요.</p>
+
+                    <div class="premium_btn_page2"><span class="pagenum"><strong>3</strong>/32</span> <a href="#" class="btn_prev_on NPI=a:prev" title="이전" onclick="rltrMbrProfile.changeProfile('prev');return false;"><span>이전</span></a><a href="#" title="멈춤" class="btn_stop_on NPI=a:stop" onclick="rltrMbrProfile.rolling();return false;"><span>멈춤</span></a><a href="#" class="btn_next_on NPI=a:next" title="다음" onclick="rltrMbrProfile.changeProfile('next');return false;"><span>다음</span></a></div>
+				</div>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end t_tax"><span>이매금강 인테리어 시공정보</span></h4>
+				<div class="interior_area">
+					<!-- [D] 디폴트로 pic1 이미지가 노출되어야 합니다. 노이미지가 오버될 경우 큰 이미지는 최종 오버된 이미지가 되어야 합니다 -->
+					<ul class="interior">
+					<li class="pic1">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방1</span></div>
+						</a>
+					</li>
+					<li class="pic2">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방2</span></div>
+						</a>
+					</li>
+					<li class="pic3">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방3</span></div>
+						</a>
+					</li>
+					<li class="pic4">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방4</span></div>
+						</a>
+					</li>
+					<li class="pic5">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방5</span></div>
+						</a>
+					</li>
+					<li class="pic6">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방6</span></div>
+						</a>
+					</li>
+					<li class="pic7">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방7</span></div>
+						</a>
+					</li>
+					<li class="pic8">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방8</span></div>
+						</a>
+					</li>
+					<li class="pic9">
+						<a href="#" class="thmb">
+							<img src="img/@thmb_interior.jpg" width="131" height="87" alt=""><span class="stroke"></span>
+							<div class="img_box"><img src="img/@thmb_interior.jpg" width="209" height="139" alt=""><span class="tx_bg"></span><span class="tx">[70㎡] 주방9</span></div>
+						</a>
+					</li>
+					<li class="pic10">
+						<img src="img/img_no.gif" width="69" height="69" alt="이미지가 없습니다.">
+					</li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">전체보기 <span class="ico"></span></a>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end t_tax"><span>세금&amp;수수료정보</span></h4>
+				<ul class="lst_tax">
+				<li><em>취득세</em> <strong>30</strong>만원</li>
+				<li><em><a href="#">중개보수</a></em> <a href="#">최대 <strong>66</strong>만원</a></li>
+				<li><em>등기비용</em> <strong>20</strong>만원</li>
+				</ul>
+				<p class="self_register"><a href="#">법무사 등기보수</a><span class="bar"></span><a href="#">Self 등기하는 방법</a></p>
+				<div class="tx_info">
+					<p class="tx"><span class="ico"></span>세금 &amp; 수수료 정보는 실제 거래 시 적용되는 금액과 다를 수 있습니다.</p>
+					<p class="tx"><span class="ico"></span>지식산업센터로 지정된 아파트형 공장은 표기된 취득세의 50%가 감면됩니다.</p>
+				</div>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end t_tax"><span>세금&amp;수수료정보</span></h4>
+				<ul class="lst_tax">
+				<li><em>취득세</em> <strong>30</strong>만원</li>
+				<li><em><a href="#">중개보수</a></em> <a href="#">최대 <strong>66</strong>만원</a></li>
+				<li><em>등기비용</em> <strong>20</strong>만원</li>
+				</ul>
+				<p class="self_register"><a href="#">법무사 등기보수</a><span class="bar"></span><a href="#">Self 등기하는 방법</a></p>
+				<div class="tx_info">
+					<p class="tx"><span class="ico"></span>세금 &amp; 수수료 정보는 실제 거래 시 적용되는 금액과 다를 수 있습니다.</p>
+				</div>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end t_loan"><span>담보대출정보</span></h4>
+				<div class="loan_tbl">
+					<table cellspacing="0" border="1" summary="담보대출정보">
+					<caption>담보대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="96"><col width="72">
+					</colgroup>
+					<thead>
+					<tr>
+					<th class="frst">금융기관</th>
+					<th>대출금리</th>
+					<th class="last">대출한도</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td><div class="inner"><a href="#">농협은행</a></div></td>
+					<td class="t_r"><div class="inner"><a href="#">3.34~3.96%</a></div></td>
+					<td class="t_r t_r2"><div class="inner"><a href="#"><strong>34,200</strong>만원</a></div></td>
+					</tr>
+					<tr>
+					<td><div class="inner"><a href="#">MI(모기지보험)대출</a></div></td>
+					<td class="t_r"><div class="inner">2<a href="#">.8~4.05%</a></div></td>
+					<td class="t_r t_r2"><div class="inner"><a href="#"><strong>59,850</strong>만원</a></div></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">(주) 와우크레딧 제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end t_loan2"><span>전세자금대출정보</span></h4>
+				<div class="loan_tbl">
+					<table cellspacing="0" border="1" summary="전세자금대출정보">
+					<caption>전세자금대출정보</caption>
+					<colgroup>
+					<col width="80"><col width="106"><col width="72">
+					</colgroup>
+					<thead>
+					<tr>
+					<th class="frst">금융기관</th>
+					<th>대출금리</th>
+					<th class="last">대출한도</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="frst">
+					<td><div class="inner"><a href="#">농협은행</a></div></td>
+					<td class="t_r"><div class="inner"><a href="#">3.34~3.96%</a></div></td>
+					<td class="t_r t_r2"><div class="inner"><a href="#"><strong>34,200</strong>만원</a></div></td>
+					</tr>
+					<tr>
+					<td><div class="inner"><a href="#">주택금융공사</a></div></td>
+					<td class="t_r"><div class="inner">2<a href="#">.8~4.05%</a></div></td>
+					<td class="t_r t_r2"><div class="inner"><a href="#"><strong>59,850</strong>만원</a></div></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="tx_spon">(주) 와우크레딧 제공</p>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<div class="bx_com eng">
+				<h4 class="t_end t_loan2"><span>에너지 사용량 정보</span><a href="#" class="ic_q">에너지 사용량 정보란?</a></h4>
+				<div class="energy">
+					<span class="tx">A 에너지 사용구간에 가까울수록 에너지 사용량이 적음</span>
+					<div class="energy_table">
+						<h5 class="blind">건축물 연간 에너지 사용량</h5>
+						<table class="cl_table">
+						<!-- [D] 전기 class="el" , 열 class="he" , 전기/열 class="el he" -->
+						<tr>
+						<th scope="row" class="blind">A</th>
+						<td class="c1"><span class="el">전기</span></td>
+						<th scope="row" class="blind">B</th>
+						<td class="c2"><span class="he">열</span></td>
+						<th scope="row" class="blind">C</th>
+						<td class="c3"><span class="el he">전기/열</span></td>
+						<th scope="row" class="blind">D</th>
+						<td class="c4"></td>
+						<th scope="row" class="blind">E</th>
+						<td class="c5"></td>
+						</tr>
+						</table>
+						<!-- [D] A ~ E 는 class="c1 ~ c5"  -->
+						<div class="cl_area"><span class="cl c1">A</span></div>
+						<dl class="info">
+						<dt>경기 성남</dt>
+						<dd>3<span class="txt">구간</span></dd>
+						<dt>전기 사용량</dt>
+						<!-- [D] 배경컬러 A ~ E 는 class="c1 ~ c5"  -->
+						<dd class="c1"><span class="num">50.0</span><span class="blind">kWh/㎡(년)</span></dd>
+						<dt><em>열</em> 사용량</dt>
+						<dd class="c2">107.0<span class="blind">kWh/㎡(년)</span></dd>
+						</dl>
+						<span class="blind">녹색건출물조정지원법에 의한 표시</span>
+					</div>
+					<span class="tx2">국토교통부 제공</span>
+				</div>
+				<a href="#" class="btn_more">크게보기 <span class="ico"></span></a>
+				<!-- [D ]에너지 사용량 크게보기 / 크게보기 클릭시 display: block -->
+				<div class="bx_com_ly energy" style="display: none">
+					<h4 class="t_end t_loan2"><span>에너지 사용량 정보</span><a href="#" class="ic_q">에너지 사용량 정보란?</a></h4>
+					<a href="#" class="btn_close">닫기</a>
+					<div class="energy_table">
+						<h5 class="blind">건축물 연간 에너지 사용량</h5>
+						<table class="cl_table">
+						<!-- [D] 전기 class="el" , 열 class="he" , 전기/열 class="el he" -->
+						<tr>
+						<th scope="row" class="blind">A</th>
+						<td class="c1"><span class="el">전기</span></td>
+						<th scope="row" class="blind">B</th>
+						<td class="c2"><span class="he">열</span></td>
+						<th scope="row" class="blind">C</th>
+						<td class="c3"><span class="el he">전기/열</span></td>
+						<th scope="row" class="blind">D</th>
+						<td class="c4"></td>
+						<th scope="row" class="blind">E</th>
+						<td class="c5"></td>
+						</tr>
+						</table>
+						<!-- [D] A ~ E 는 class="c1 ~ c5"  -->
+						<div class="cl_area"><span class="cl c1">A</span></div>
+						<dl class="info">
+						<dt>경기 성남시</dt>
+						<dd>3<span class="txt">구간</span><span class="area">(60㎡~85㎡)</span></dd>
+						<dt>전기 사용량</dt>
+						<!-- [D] 배경컬러 A ~ E 는 class="c1 ~ c5"  -->
+						<dd class="c1"><span class="num">50.0</span><span class="txt v2">kWh/㎡(년)</span></dd>
+						<dt><em>열</em> 사용량</dt>
+						<dd class="c4">107.0<span class="txt v2">kWh/㎡(년)</span></dd>
+						</dl>
+						<span class="blind">녹색건출물조정지원법에 의한 표시</span>
+					</div>
+				</div>
+				<!-- //에너지 사용량 크게보기 -->
+			</div>
+
+			<div class="bx_com ts">
+				<h4 class="t_end t_traffic"><span>교통정보</span></h4>
+				<div class="traffic_dsc">
+					<h5><span class="ic_hot">HOT</span> 분당선 도곡역 도보 7분</h5>
+				</div>
+				<div class="traffic_srch">
+					<h5>빠른길 찾기</h5>
+					<p class="input">
+						<input type="text" id="path_input" class="_inputArea" value="출발지" title="출발지 입력">
+						<span>→</span>
+						<strong title="타워팰리스3차">타워팰리스3차</strong>
+						<a class="srch" href="#">찾기</a>
+					</p>
+					<!-- [D]빠른길 찾기 레이어 활성화시 style="display: block -->
+					<div class="ly_traffic_srch" style="display: ">
+						<div class="ts_top">
+							<h5>출발지검색</h5><input type="text" id="ly_path_input" value="출발지" title="출발지 입력"><a href="#"><span>검색</span></a>
+						</div>
+						<div class="ts_con scroll">
+							<div class="ts_con_top">출발지 검색 결과<strong>0건</strong></div>
+							<ul class="ts_lst">
+							<li><span><input type="checkbox" id="ts1"></span><label for="ts1"><em>광교상록</em> (경기도 수원시 영통구 이의동 하동 116-2)</label></li>
+							<li><span><input type="checkbox" id="ts2"></span><label for="ts2"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts3"></span><label for="ts3"><em>KT</em> (경기도 성남시 분당구 정자동 206)</label></li>
+							<li><span><input type="checkbox" id="ts4"></span><label for="ts4"><em>토다이 분당점 </em> (경기도 성남시 분당구 정자동 174-1 더샵스타파크 지하1층)</label></li>
+							<li><span><input type="checkbox" id="ts5"></span><label for="ts5"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts6"></span><label for="ts6"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							<li><span><input type="checkbox" id="ts7"></span><label for="ts7"><em>광교상록자이</em> (경기도 소원시 영통구 이의동 116-7)</label></li>
+							</ul>
+							<!-- [D]내용없을 시 style="block" -->
+							<span class="nodata" style="display: ">원하시는 출발지를 검색하세요.</span>
+						</div>
+						<a href="#" class="btn_close"><span class="blind">레이어닫기</span></a>
+					</div>
+				</div>
+				<div class="traffic">
+					<h5>주변 대중교통 <span class="means">(지하철, 버스)</span></h5>
+
+					<div class="subway_area">
+						<p class="subway">
+							<span class="s3"></span><a href="#" title="수도권3호선" class="_subway">3호선(구파발)</a>
+						</p>
+						<p class="subway">
+							<span class="s100"></span><a href="#" title="분당선" class="_subway">분당선(정자)</a>
+						</p>
+						<p class="subway">
+							<span class="s109"></span><a href="#" title="신분당선" class="_subway" id="733">신분당선(정자)</a>
+						</p>
+					</div>
+
+					<ul>
+					<li>
+						<em title="마을버스" class="bus3">마을버스</em>
+						<a href="#">강남05</a> , <a href="#">강남09</a> , <a href="#">강남02</a>
+					</li>
+					<li>
+						<em title="일반" class="bus1">일반</em>
+						<a href="#">917</a> , <a href="#">11-3</a>
+					</li>
+					<li>
+						<em title="공항버스" class="bus5">공항버스</em>
+						<a href="#">6009</a>
+					</li>
+					<li>
+						<em title="직행좌석" class="bus4">직행좌석</em>
+						<a href="#">9414</a>
+					</li>
+					<li>
+						<em title="간선" class="bus11">간선</em>
+						<a href="#">141</a> , <a href="#">402</a>  , <a href="#">406</a> , <a href="#">N37</a> , <a href="#">472</a>
+					</li>
+					<li>
+						<em title="지선" class="bus12">지선</em>
+						<a href="#">2413</a> , <a href="#">6411</a> , <a href="#">3012</a> , <a href="#">4319</a> , <a href="#">4432</a> , <a href="#">4434</a> , <a href="#">2415</a> , <a href="#">3219</a> ,<a href="#">4433</a>
+					</li>
+					</ul>
+				</div>
+				<a href="#" class="btn_more">더보기 <span class="ico"></span></a>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end"><span>정자동 많이 본 단지</span></h4>
+				<ul class="lst_view_div">
+				<!-- [D]말줄임 처리-->
+				<li class="on"><em class="ic_num num1">1</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num2">2</em> <a href="#">느티마을경남선경</a> <span class="state up"><em></em>1</span></li>
+				<li><em class="ic_num num3">3</em> <a href="#">느티마을경남선경</a> <span class="state dn"><em></em>2</span></li>
+				<li><em class="ic_num num4">4</em> <a href="#">느티마을경남선경</a> <span class="state"><em></em>0</span></li>
+				<li><em class="ic_num num5">5</em> <a href="#">느티마을경남선경</a> <span class="new"><em></em><span class="blind">new</span></span></li>
+				</ul>
+			</div>
+
+			<div class="bx_com">
+				<h4 class="t_end"><span>가장 많이 본 뉴스</span></h4>
+				<ul class="lst_news">
+				<!-- [D]말줄임 처리-->
+				<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+				<li><a href="#">살아나고 있는 부동산시장에 웬 '된서리'</a></li>
+				<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+				<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+				<li><a href="#">전세난에 막상 집사려니 호가 뛰고, 세입이</a></li>
+				</ul>
+				<a href="#" class="btn_more">더보기<span class="ico"></span></a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="footwrap">
+			<fieldset>
+				<legend class="blind">검색</legend>
+				<div class="sta_search_box">
+					<input type="text" id="queryInputFooter" title="검색" value="&quot;주택담보대출&quot;을 쳐보세요" class="sta_search_text">
+					<a href="#" class="btn_search">검색</a>
+					<a href="#" class="btn_search2">통합검색</a>
+				</div>
+			</fieldset>
+			<ul>
+			<li class="first"><a href="#">부동산 도움말</a></li>
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#" target="_blank"><strong>개인정보취급방침 </strong></a></li>
+			<li><a href="#">책임의 한계와 법적고지</a></li>
+			<li><a href="#" target="_blank">광고안내</a></li>
+			<li><a href="#" target="_blank">고객센터</a></li>
+			</ul>
+			<p class="info"> 네이버부동산은 중개업소 및 개인회원이 등록하는 매물정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련정보를 제공하며,<br> 중개업소 및 개인회원이 네이버 부동산에 등록한 매물정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+			<address>
+				<a href="#" target="_blank" class="logo">NHN BUSINESS PLATFORM</a>
+				<em>Copyright ⓒ</em> <a href="#" target="_blank">NHN BUSINESS PLATFORM Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

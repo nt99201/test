@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>filter</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/rangeSlider.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_filter">
+		<!--filter-->
+		<div class="filter">
+			<div class="flt_top" style="position:fixed">
+				<h2><strong>8</strong>개의 결과</h2>
+				<button type="button" class="btn_alarm"><span>알림</span></button>
+				<button type="button" class="btn_cancel"><span>취소</span></button>
+			</div>
+			<div class="flt_sect" style="margin:50px 0 66px 0">
+				<div class="flt_spec">
+					<ul class="pdt_mode">
+						<li class="on"><a href="#"><span>매매</span></a></li>
+						<li class="on"><a href="#"><span>전세</span></a></li>
+						<li><a href="#"><span>월세</span></a></li>
+						<li><a href="#"><span>단기임대</span></a></li>
+					</ul>
+					<div class="ctrl_sec">
+						<div class="h_wrap">
+							<h3>매물유형</h3>
+							<span class="sub_txt">다중선택가능</span>
+						</div>
+						<div class="pdt_crcl_info">
+						<ul>
+							<li class="on"><a href="#" class="pdt_type1"><span>아파트</span></a></li>
+							<li><a href="#" class="pdt_type2"><span>오피스텔</span></a></li>
+							<li><a href="#" class="pdt_type3"><span>분양권</span></a></li>
+							<li><a href="#" class="pdt_type4"><span>연립/빌라</span></a></li>
+							<li><a href="#" class="pdt_type5"><span>도시형</span></a></li>
+							<li><a href="#" class="pdt_type6"><span>상가</span></a></li>
+							<li><a href="#" class="pdt_type7"><span>사무실</span></a></li>
+							<li class="short_rent"><a href="#" class="pdt_type8"><span>공장</span></a></li>
+							<li class="short_rent"><a href="#" class="pdt_type9"><span>건물</span></a></li>
+							<li class="short_rent"><a href="#" class="pdt_type10"><span>토지</span></a></li>
+						</ul>
+						</div>
+
+						<div class="btn_dir_room"><a href="#"><span>원룸 매물은 <em>네이버 원룸</em>에서 보실 수 있습니다.</span></a></div>
+					</div>
+					<div class="ctrl_sec">
+						<div class="h_wrap price_set">
+							<h3>매매가</h3>
+							<span class="sub_txt"><em><input type="text" class="w85" placeholder="최소" maxlength="6"><i>~</i><input type="text" maxlength="6" class="w85" value="350000"></em>만원</span>
+						</div>
+						<div class="range_area_wrap">
+							<div class="_range">
+								<span class="irs js-irs-3">
+									<span class="irs">
+										<span class="irs-line" tabindex="-1">
+											<span class="irs-line-left"></span>
+											<span class="irs-line-mid"></span>
+											<span class="irs-line-right"></span>
+										</span>
+										<span class="irs-min" style="display: none;">0</span>
+										<span class="irs-max" style="display: none;">1</span>
+										<span class="irs-from" style="display: none; left: 0%;">0</span>
+										<span class="irs-to" style="display: none; left: 0%;">0</span>
+										<span class="irs-single" style="display: none; left: 0%;">0</span>
+									</span>
+									<span class="irs-grid"></span>
+									<span class="irs-bar" style="left: 1.18152%; width: 75.93985%;"></span>
+									<span class="irs-shadow shadow-from" style="display: none;"></span>
+									<span class="irs-shadow shadow-to" style="display: none;"></span>
+									<span class="irs-slider from" style="left: 0%;"></span>
+									<span class="irs-slider to type_last" style="left: 74%;"></span>
+								</span>
+								<div id="spc_range" class="irs-hidden-input"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ctrl_sec">
+						<div class="h_wrap price_set">
+							<h3>면적</h3>
+							<span class="sub_txt"><em><input type="text" maxlength="3" value="99"><i>~</i><input type="text" maxlength="3" value="166"></em>m<sup>2</sup></span>
+							<button type="button" class="btn_chg_mode" style="display:none">평단위로 변경하기</button>
+							<button type="button" class="btn_chg_mode v2">제곱미터단위로 변경하기</button>
+						</div>
+						<div class="range_area_wrap">
+							<div class="_range">
+								<span class="irs js-irs-3">
+									<span class="irs">
+										<span class="irs-line" tabindex="-1">
+											<span class="irs-line-left"></span>
+											<span class="irs-line-mid"></span>
+											<span class="irs-line-right"></span>
+										</span>
+										<span class="irs-min" style="display: none;">0</span>
+										<span class="irs-max" style="display: none;">1</span>
+										<span class="irs-from" style="display: none; left: 0%;">0</span>
+										<span class="irs-to" style="display: none; left: 0%;">0</span>
+										<span class="irs-single" style="display: none; left: 0%;">0</span>
+									</span>
+									<span class="irs-grid"></span>
+									<span class="irs-bar" style="left: 1.18152%; width: 75.93985%;"></span>
+									<span class="irs-shadow shadow-from" style="display: none;"></span>
+									<span class="irs-shadow shadow-to" style="display: none;"></span>
+									<span class="irs-slider from" style="left: 0%;"></span>
+									<span class="irs-slider to type_last" style="left: 74%;"></span>
+								</span>
+								<div id="spc_range" class="irs-hidden-input"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ctrl_sec add_line">
+						<div class="h_wrap">
+							<h3>계약기간</h3>
+							<span class="sub_txt2"><em class="prc_txt">1</em>년이하</span>
+						</div>
+						<div class="pdt_sq_info2">
+							<ul>
+								<li class="on"><a href="#">상관없음</a></li>
+								<li><a href="#">1개월이내</a></li>
+								<li><a href="#">3개월이내</a></li>
+								<li><a href="#">6개월이내</a></li>
+								<li><a href="#">1년이내</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ctrl_sec">
+						<div class="h_wrap">
+							<h3>관리비</h3>
+							<span class="sub_txt"><em class="prc_txt2">~10</em>만원</span>
+						</div>
+						<div class="pdt_sq_info">
+							<ul>
+								<li class="on"><a href="#">상관없음</a></li>
+								<li><a href="#">~10</a></li>
+								<li><a href="#">~20</a></li>
+								<li><a href="#">~30</a></li>
+								<li><a href="#">~40</a></li>
+								<li><a href="#">~50</a></li>
+								<li><a href="#">~60</a></li>
+								<li><a href="#">~70</a></li>
+								<li><a href="#">~80</a></li>
+								<li><a href="#">~80이상</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ctrl_sec">
+						<div class="h_wrap">
+							<h3>준공년도</h3>
+							<span class="sub_txt2"><em class="prc_txt">1</em>년이하</span>
+						</div>
+						<div class="pdt_sq_info2">
+							<ul>
+								<li class="on"><a href="#">상관없음</a></li>
+								<li><a href="#">1년이하</a></li>
+								<li><a href="#">3년이내</a></li>
+								<li><a href="#">5년이내</a></li>
+								<li><a href="#">10년이내</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ctrl_sec">
+						<div class="h_wrap">
+							<h3>융자금</h3>
+							<span class="sub_txt2"><em class="prc_txt">30</em>%이하(시세대비)</span>
+						</div>
+						<div class="pdt_sq_info2 bank_loan">
+							<ul>
+								<li class="on"><a href="#">상관없음</a></li>
+								<li><a href="#">30%이하<span>(시세대비)</span></a></li>
+								<li><a href="#">융자금없음</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ctrl_sec add_line">
+						<div class="h_wrap">
+							<h3>방갯수</h3>
+							<span class="sub_txt2"><em class="prc_txt">2</em>개</span>
+						</div>
+						<div class="pdt_crcl_info">
+						<ul>
+							<li><a href="#" class="pdt_rn1"><span>상관없음</span></a></li>
+							<li><a href="#" class="pdt_rn2"><span>1개</span></a></li>
+							<li class="on"><a href="#" class="pdt_rn3"><span>2개</span></a></li>
+							<li><a href="#" class="pdt_rn4"><span>3개</span></a></li>
+							<li><a href="#" class="pdt_rn5"><span>4개이상</span></a></li>
+						</ul>
+						</div>
+					</div>
+					<div class="ctrl_sec">
+						<div class="h_wrap">
+							<h3>욕실갯수</h3>
+							<span class="sub_txt2"><em class="prc_txt">4</em>개이상</span>
+						</div>
+						<div class="pdt_crcl_info">
+						<ul>
+							<li><a href="#" class="pdt_bn1"><span>상관없음</span></a></li>
+							<li><a href="#" class="pdt_bn2"><span>1개</span></a></li>
+							<li><a href="#" class="pdt_bn3"><span>2개</span></a></li>
+							<li><a href="#" class="pdt_bn4"><span>3개</span></a></li>
+							<li class="on"><a href="#" class="pdt_bn5"><span>4개이상</span></a></li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			 <div class="flt_btn_area" style="position:fixed">
+                <button type="button" class="flt_reset"><span>초기화</span></button>
+                <button type="button" class="flt_setting"><span>필터적용</span></button>
+            </div>
+		</div>
+		<!--//filter-->
+	</div>
+</div>
+<!-- 디자인 검수용 적용시 삭제 -->
+<script>
+$(document).ready(function(){
+$('.pdt_crcl_info>ul').find('li').click(function(){
+$(this).parent().parent().find('li').removeClass('on');
+$(this).addClass('on');
+return false; });
+});
+</script>
+<!-- //디자인 검수용 적용시 삭제 -->
+</body>
+</html>

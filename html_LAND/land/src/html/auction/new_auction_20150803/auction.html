@@ -1,0 +1,2360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+	<head>
+		<title>경매탭 : 네이버 부동산</title>
+		<!-- og:tag -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta property="og:title" content="네이버 부동산" />
+		<meta property="og:type" content="article" />
+		<meta property="og:description" content="네이버 부동산 경매" />
+		<meta property="og:image" content="http://static.land.naver.net/static/service/lnb/ico_og_tag_2.png"/>
+		<meta property="og:image:width" content="200" />
+		<meta property="og:image:height" content="200" />
+		<meta property="og:article:author" content="네이버 부동산" />
+		<meta property="og:url" content="http://land.naver.com/auction/" />
+		<meta property="og:article:author:url" content="http://land.naver.com/" />
+		<!-- //og:tag -->
+		<link rel="stylesheet" href="css/auction.css" type="text/css">
+		<script type="text/javascript">	document.domain = 'naver.com';</script>
+		<script src="http://static.land.naver.net/static/service/js/201507282123/lib/flashObject.js" type="text/javascript"></script>
+	</head>
+	<body  class="">
+		<div id="wrap">
+			<div id="u_skip">
+				<a href="#lnb"><span>메인 메뉴로 바로가기</span></a>
+				<a href="#container"><span>본문으로 바로가기</span></a>
+			</div>
+			<div id="pvframe" style="display:none;"></div>
+			<!-- header -->
+			<script src="http://static.land.naver.net/static/service/js/201507282123/lib/lcslog.js" type="text/javascript"></script>
+			<script type="text/javascript">lcs_do();</script>
+			<style type="text/css">
+				#gnb{float:right;right:5px;top:-3px;}
+			</style>
+			<div id="header">
+				<div id="gnb">
+					<script type="text/javascript" charset="utf-8" src="http://static.gn.naver.net/template/gnb_utf8.nhn?20150803"></script>
+				</div>
+				<div id="sta_wrap" class="NE=a:STA">
+					<h1>
+						<a href="http://www.naver.com/" class="logo NPI=a:naverlogo">NAVER</a>
+						<a href="http://land.naver.com/" class="land NPI=a:land">부동산</a>
+					</h1>
+					<fieldset>
+						<legend>검색</legend>
+						<div class="sta_search_box">
+							<div class="sta_search_box_sub">
+								<!-- [D] 입력위해 focus 가지면 sta_text_ovr 추가 -->
+								<input type="hidden" name="where" value="nexearch" />
+								<input type="hidden" name="sm" value="top_hty" />
+								<input type="hidden" name="fbm" value="1" />
+								<input type="hidden" name="query" id="serviceInternalSearchQuery" value="" />
+								<input type="hidden" name="internalSearchURL" id="internalSearchURL" value="http://land.naver.com" />
+								<input type="text" title="검색" id="queryInputHeader" value='' query='' onKeyUp="serviceInternalSearchEnterCheck(event,0);" accesskey="s" searchAreaClicked="false" searchType="Promotion" class="sta_search_text" onFocus="searchInputBoxFocus(this);">
+							</div>
+							<a href="#" class="btn_search NPI=a:search" onclick="serviceInternalSearch();return false;">검색</a>
+							<a href="#" class="btn_search2 NPI=a:nx" onclick="serviceInternalTotalSearch();return false;">통합검색</a>
+						</div>
+					</fieldset>
+				</div>
+				<div id="lnb" class="lnb_menu lnb_sub">
+					<ul class="menu NE=a:LNB">
+						<li class="m1">
+							<a href="/" class="NPI=a:home">부동산홈</a>
+						</li>
+						<li class="m2">
+							<a href="/article/" class="NPI=a:article">매물</a>
+						</li>
+						<li class="m3">
+							<a href="/isale/" class="NPI=a:sale">분양</a>
+						</li>
+						<li class="m4">
+							<a href="/news/" class="NPI=a:news">뉴스</a>
+						</li>
+						<li class="m5">
+							<a href="/community/" class="NPI=a:community">커뮤니티</a>
+						</li>
+						<li class="m6 m6_on on">
+							<a href="/auction/" class="NPI=a:auction">경매</a>
+							<ul>
+								<li class="s_m1"><a href="http://goodauction.land.naver.com/auction/ca_list.php" class="NPI=a:">물건상세조회</a></li>
+								<li class="s_m2"><a href="http://goodauction.land.naver.com/auction/ca_calendar.php " class="NPI=a:">일정별조회</a></li>
+								<li class="s_m3"><a href="http://goodauction.land.naver.com/auction/ca_sample.php" class="NPI=a:">무료조회물건</a></li>
+							</ul>
+						</li>
+						<li class="m7">
+							<a href="/mypage/interestArticle.nhn" class="NPI=a:mypage">MY페이지</a>
+						</li>
+					</ul>
+					<ul class="etc NE=a:LNB">
+						<li class="e1"><a href="http://finance.naver.com/" target="_blank" class="NPI=a:finance">금융</a></li>
+						<li class="e2"><a href="http://moneybook.naver.com/" target="_blank" class="NPI=a:moneybook">가계부</a></li>
+						<li class="e3"><a href="http://landad.naver.com/" target="_blank" class="NPI=a:landad">매물관리센터</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //header -->
+			<!--하위 컨텐츠  영역  -->
+			<div id="container">
+				<div class="region_wrap">
+					<form action="">
+						<legend>지역별 검색</legend>
+						<div class="region_search">
+							<div class="region_options">
+								<div class="region_type">
+									<ul>
+										<li class="select_all">
+											<input type="checkbox" id="">
+											<label for="">전체</label>
+										</li>
+										<!-- [D] 선택된 영역은 on 클래스 부여 -->
+										<li class="on">
+											<input type="checkbox" id="">
+											<label for="">아파트</label>
+										</li>
+										<!-- //[D] 선택된 영역은 on 클래스 부여 -->
+										<li>
+											<input type="checkbox" id="">
+											<label for="">오피스텔</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">주택</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">토지</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">상가점포</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">사무실</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">공장</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">건물</label>
+										</li>
+										<li>
+											<input type="checkbox" id="">
+											<label for="">기타</label>
+										</li>
+									</ul>
+								</div>
+								<div class="region_location">
+									<div class="region_location_select region_location_select0">
+										<select class="selectbox-source" name="" id="">
+											<option value="">서울특별시</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label">서울특별시</div>
+										</div>
+									</div>
+									<span class="vertical"><span class="blind">&gt;</span></span>
+									<div class="region_location_select region_location_select1">
+										<select class="selectbox-source" name="" id="">
+											<option value="">시/군/구</option>
+										</select>
+										<div class="selectbox-box">
+											<div class="selectbox-label">시/군/구</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="region_law_search">
+								<dl>
+									<dt>법원조회</dt>
+									<dd>
+										<!-- [D] 각 셀렉트박스에서 항목 선택시 .selectbox-applied 에 on 클래스 추가 -->
+										<div class="selectbox-applied law00">
+											<select name="" id="" class="selectbox-source">
+												<option value="">법원전체</option>
+											</select>
+											<div class="selectbox-box">
+												<div class="selectbox-label">법원전체</div>
+											</div>
+										</div>
+										<div class="selectbox-applied law01">
+											<select name="" id="" class="selectbox-source">
+												<option value="">계</option>
+											</select>
+											<div class="selectbox-box">
+												<div class="selectbox-label">계</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>사건번호조회</dt>
+									<dd>
+										<div class="selectbox-applied law10">
+											<select name="" id="" class="selectbox-source">
+												<option value="">전체</option>
+											</select>
+											<div class="selectbox-box">
+												<div class="selectbox-label">전체</div>
+											</div>
+										</div>
+										<div class="selectbox-applied law11">
+											<select name="" id="" class="selectbox-source">
+												<option value="">타경번호</option>
+											</select>
+											<div class="selectbox-box">
+												<div class="selectbox-label">타경번호</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<div class="button"><button type="submit">조회</button></div>
+							</div>
+						</div>
+					</form>
+					<div class="region_finding">
+						<div class="region_map">
+							<div class="region_mapview">
+								<img src="img/@img_map.jpg" alt="지도 이미지">
+								<div class="mini_mapview">
+									<button class="close_map"><span class="blind">작은 지도 닫기</span></button>
+									<img src="img/@img_minimap.jpg" alt="작은지도 이미지">
+								</div>
+							</div>
+						</div>
+						<div class="region_list">
+							<div class="region_headline">
+								<h3>지역리스트</h3>
+								<em>(진행건)</em>
+							</div>
+							<div class="region_regions">
+								<ul class="region_regions_list">
+									<li><a href="#">강남구<em>(12)</em></a></li>
+									<li><a href="#">강동구<em>(0)</em></a></li>
+									<li><a href="#">강북구<em>(12)</em></a></li>
+									<li><a href="#">강서구<em>(0)</em></a></li>
+									<li><a href="#">관악구<em>(12)</em></a></li>
+									<li><a href="#">광진구<em>(0)</em></a></li>
+									<li><a href="#">구로구<em>(12)</em></a></li>
+									<li><a href="#">금천구<em>(0)</em></a></li>
+									<li><a href="#">노원구<em>(12)</em></a></li>
+									<li><a href="#">도봉구<em>(0)</em></a></li>
+									<li><a href="#">동대문구<em>(12)</em></a></li>
+									<li><a href="#">동작구<em>(0)</em></a></li>
+									<li><a href="#">마포구<em>(12)</em></a></li>
+									<li><a href="#">서대문구<em>(0)</em></a></li>
+									<li><a href="#">서초구<em>(12)</em></a></li>
+									<li><a href="#">성동구<em>(0)</em></a></li>
+									<li><a href="#">성북구<em>(12)</em></a></li>
+									<li><a href="#">송파구<em>(0)</em></a></li>
+									<li><a href="#">양천구<em>(12)</em></a></li>
+									<li><a href="#">영등포구<em>(0)</em></a></li>
+									<li><a href="#">용산구<em>(12)</em></a></li>
+									<li><a href="#">은평구<em>(0)</em></a></li>
+									<li><a href="#">종로구<em>(12)</em></a></li>
+									<li><a href="#">중구<em>(0)</em></a></li>
+									<li><a href="#">중랑구<em>(12)</em></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="content">
+					<!-- 경매 홈 -->
+					<div class="auction_list">
+						<div class="auction_newbie">
+							<div class="tabCtrler _areaTabCtrler">
+								<div class="h_top">
+									<h3><span class="popular"><em class="blind">지역별 인기 경매 물건</em></span></h3>
+									<span class="more"><a href="http://goodauction.land.naver.com/auction/ca_list.php?si=41&state=91&order=view_count DESC" class="moreUrl"><em class="blind">더보기</em></a></span>
+								</div>
+								<ul class="areaTab" page="1">
+									<li class="prev"><a href="javascript:onClickAreaPage('_areaTabCtrler','prev');"><em class="blind">이전</em></a></li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=11&state=91&order=view_count DESC" cortar="1100000000"
+										class="1100000000 page1  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','1100000000');">서울시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=41&state=91&order=view_count DESC" cortar="4100000000"
+										class="4100000000 page1 on " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4100000000');">경기도</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=28&state=91&order=view_count DESC" cortar="2800000000"
+										class="2800000000 page1  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','2800000000');">인천시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=26&state=91&order=view_count DESC" cortar="2600000000"
+										class="2600000000 page1  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','2600000000');">부산시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=30&state=91&order=view_count DESC" cortar="3000000000"
+										class="3000000000 page1  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','3000000000');">대전시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=27&state=91&order=view_count DESC" cortar="2700000000"
+										class="2700000000 page1  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','2700000000');">대구시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=31&state=91&order=view_count DESC" cortar="3100000000"
+										class="3100000000 page1  last" >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','3100000000');">울산시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=36&state=91&order=view_count DESC" cortar="3600000000" style="display:none;"
+										class="3600000000 page2  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','3600000000');">세종시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=29&state=91&order=view_count DESC" cortar="2900000000" style="display:none;"
+										class="2900000000 page2  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','2900000000');">광주시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=42&state=91&order=view_count DESC" cortar="4200000000" style="display:none;"
+										class="4200000000 page2  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4200000000');">강원</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=43&state=91&order=view_count DESC" cortar="4300000000" style="display:none;"
+										class="4300000000 page2  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4300000000');">충북</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=44&state=91&order=view_count DESC" cortar="4400000000" style="display:none;"
+										class="4400000000 page2  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4400000000');">충남</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=47&state=91&order=view_count DESC" cortar="4700000000" style="display:none;"
+										class="4700000000 page2  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4700000000');">경북</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=48&state=91&order=view_count DESC" cortar="4800000000" style="display:none;"
+										class="4800000000 page2  last" >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4800000000');">경남</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=45&state=91&order=view_count DESC" cortar="4500000000" style="display:none;"
+										class="4500000000 page3  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4500000000');">전북</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=46&state=91&order=view_count DESC" cortar="4600000000" style="display:none;"
+										class="4600000000 page3  " >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','4600000000');">전남</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=50&state=91&order=view_count DESC" cortar="5000000000" style="display:none;"
+										class="5000000000 page3  last" >
+										<a href="javascript:onClickAreabyTab('_areaTabCtrler','5000000000');">제주</a>
+									</li>
+									<li class="next"><a href="javascript:onClickAreaPage('_areaTabCtrler', 'next');"><em class="blind">다음</em></a></li>
+								</ul>
+								<div class="thumBox _atcl_1100000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1518344&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150727_150/auction_home_1437974581786cRH6Q_JPEG/s1518344_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>54,616만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>14,317만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>13958</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1469947&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_162/auction_home_1437370382755txXsT_JPEG/s1469947_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>8,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,342만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>12974</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1504674&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_217/auction_home_14373703867885FB3V_JPEG/s1504674_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>148,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>60,620만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>11384</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4100000000" >
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1413982&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_141/auction_home_1437370388373uub3C_JPEG/s1413982_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>960,477만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>470,634만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>12745</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1394061&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_120/auction_home_1437370387626Xpsqx_JPEG/s1394061_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>17,645만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>2,075만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>24066</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1569238&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150728_296/auction_home_1438042383508msRVi_JPEG/s1569238_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>42,336만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>14,521만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>12615</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2800000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1541431&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150724_122/auction_home_1437706981385wvmjB_JPEG/s1541431_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>10,665만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>5,226만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4334</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1580419&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150802_53/auction_home_1438499581345l5kSD_JPEG/s1580419_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>130,797만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>91,558만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4215</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1583362&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150727_297/auction_home_1437955981751Qv4YH_JPEG/s1583362_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>187,213만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>131,049만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>6117</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2600000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1540493&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_147/auction_home_1437370402278WkB57_JPEG/s1540493_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>37,648만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>9,869만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>24149</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1573674&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150723_28/auction_home_1437624181211aO70l_JPEG/s1573674_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>1,797만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>920만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5472</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1593289&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_104/auction_home_1437370403786i5jt3_JPEG/s1593289_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>14,389만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>5,894만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>8861</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_3000000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1610832&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_140/auction_home_14385715818203bw3E_JPEG/s1610832_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>17,760만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>12,432만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3035</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1492299&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20141022_279/auction_home_1413983580647M98IL_JPEG/s1492299_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>25,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>4,285만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>16925</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1567558&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_295/auction_home_1437370410161b7V2Q_JPEG/s1567558_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>31,659만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>15,513만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>6585</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2700000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1593093&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_62/auction_home_1437370420994mx8Yn_JPEG/s1593093_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>855,071만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>293,289만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>2917</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626971&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150730_15/auction_home_1438222981399Ug4mG_JPEG/s1626971_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>35,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>24,500만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3003</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1612243&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_252/auction_home_1437370417523s9ouO_JPEG/s1612243_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>20,142만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>14,099만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5877</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_3100000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1577236&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150722_20/auction_home_1437531781728SXpV6_JPEG/s1577236_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>50,785만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>26,002만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>6242</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1559638&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_49/auction_home_1437370428675WwIa1_JPEG/s1559638_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>23,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>3,858만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>2890</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1597731&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150723_13/auction_home_1437630781770GtkaX_JPEG/s1597731_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>42,479만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>27,187만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3338</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_3600000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1644182&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150729_168/auction_home_1438134181498YcALu_JPEG/s1644182_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>20,121만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>14,085만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>2841</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1610117&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_87/auction_home_1437370432024OtU0k_JPEG/s1610117_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>43,232만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>21,183만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3031</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1599466&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_42/auction_home_1437370431152NXdbu_JPEG/s1599466_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>29,360만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>10,070만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3524</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2900000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1210576&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150730_148/auction_home_14382235819382w025_JPEG/s1210576_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>722,106만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>165,633만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>11511</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1506302&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_40/auction_home_1437370440046GWHcO_JPEG/s1506302_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>13,097만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>9,168만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>8135</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1368352&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_148/auction_home_1437370440782BMYs7_JPEG/s1368352_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>5,200만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>488만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>6115</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4200000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1417983&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_132/auction_home_1437370447293cGV4U_JPEG/s1417983_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>90,823만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>44,503만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>7798</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1205788&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_280/auction_home_1437370447954wcGBk_JPEG/s1205788_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>125,109만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>87,577만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>7398</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1604914&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150730_72/auction_home_143825238421604Yki_JPEG/s1604914_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>30,187만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>14,791만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5106</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4300000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1607842&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_189/auction_home_1438564381736xessx_JPEG/s1607842_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>5,077만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>3,249만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4083</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1613663&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150727_171/auction_home_1437970981626WYpkg_JPEG/s1613663_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>1,980만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>649만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4409</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1593103&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_207/auction_home_143737046225671a03_JPEG/s1593103_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>108,458만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>35,539만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4655</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4400000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1611624&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150801_48/auction_home_1438356182261nhKoI_JPEG/s1611624_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>5,047만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>2,473만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5308</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1517108&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150721_98/auction_home_14374399824710mvew_JPEG/s1517108_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>189,788만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>92,996만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5481</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1557948&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_274/auction_home_1437370467808vrnAW_JPEG/s1557948_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>11,460만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,348만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5341</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4700000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1483225&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150728_265/auction_home_14380477821633JyUu_JPEG/s1483225_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>567,098만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>277,878만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4621</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1548155&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150730_6/auction_home_1438222982491dLA5t_JPEG/s1548155_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>22,426만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,692만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5648</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1579299&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_225/auction_home_1437370476708GJt1f_JPEG/s1579299_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>7,900만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,896만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5367</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4800000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1603697&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_210/auction_home_1437370482382AhSDT_JPEG/s1603697_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>1,173만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>480만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5328</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1531720&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_92/auction_home_1437370480308am4Od_JPEG/s1531720_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>372,604만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>153,738만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>6444</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1296798&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150722_156/auction_home_1437530581702LF31P_JPEG/s1296798_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>53,273만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>53,273만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>4891</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4500000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626311&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_105/auction_home_1437370484627kiQAe_JPEG/s1626311_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>5,811만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>2,380만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>7315</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1586910&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_290/auction_home_1437370485399rwQSv_JPEG/s1586910_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>4,337만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,776만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>6706</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1599014&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150723_55/auction_home_14376457818601wMVM_JPEG/s1599014_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>2,534만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,038만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3792</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4600000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1595311&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_90/auction_home_14373704981456JXBF_JPEG/s1595311_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>4,292만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>2,403만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>5372</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1459640&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150730_293/auction_home_14382247820932NQyu_JPEG/s1459640_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>2,844만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>334만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>7052</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1350243&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150721_21/auction_home_1437437584985LJm0v_JPEG/s1350243_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>166,652만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>166,652만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>7922</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_5000000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1596302&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_160/auction_home_1437370502298OFqVA_JPEG/s1596302_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>42,388만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>20,770만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>3754</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1536975&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_190/auction_home_14385727840789T9Nh_JPEG/s1536975_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>212,881만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>212,881만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>1627</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1471903&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_93/auction_home_1438572783447qERqm_JPEG/s1471903_1.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>1,388만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,388만원</dd>
+													<dt class="views">조회수</dt>
+													<dd>1841</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="hotNews">
+								<div class="h_top">
+									<h3><span class="hotAuc"><em class="blind">핫 경매 뉴스</em></span></h3>
+								</div>
+								<div class="thumbDesc">
+									<a href="http://land.naver.com/news/newsRead.nhn?type=breaking&bss_ymd=20150803&prsco_id=024&arti_id=0000050045">
+										<p class="thumb"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_177/land_naver_1438567707334dPWzV_JPEG/photoinfra_1438567706732.jpg?type=m93_2" onerror="errorImg(this)"></p>
+										<div class="ImgInfo">
+											<h4>깊은 잠에서 깬 영종도 부동산 주택·상가 땅 속속 공급…</h4>
+											<p class="from"><span>매경이코노미</span><span>2015.08.03</span></p>
+											<p class="txInfo">한때 '미분양 무덤'이라는 오명으로 아파트 공급이 미뤄졌던 영종하늘도시에서 8년 만에 아파트용지가 공급되는가 하면 기존 아파트 가격이 오르는 등 투자자를 다시 불러 모으고 있다.</p>
+										</div>
+									</a>
+									<dl>
+										<dt>지&nbsp;&nbsp;&nbsp;&nbsp;역</dt>
+										<dd>중구 </dd>
+										<dt>물건종류</dt>
+										<dd>아파트</dd>
+									</dl>
+									<form name="hotAuctNews" id="hotAuctNews" action='http://goodauction.land.naver.com/auction/ca_list.php' method="post">
+										<input type='hidden' name='search_mode' value='1'>
+										<input type='hidden' name='class1' id='class1' value='1'/>
+										<input type='hidden' name='flag' value='1'>
+										<input type='hidden' name='si' id='si' value="28"/>
+										<input type='hidden' name='gu' id='gu' value="110"/>
+										<input type='hidden' name='dong' id='dong' value=""/>
+									</form>
+									<p class="btn_cfrm"><a href="javascript:showHotAuctNews();"><em class="blind">경매물건 확인</em></a></p>
+								</div>
+							</div>
+						</div>
+						<div class="auction_member">
+							<div class="tabCtrler _priceTabCtrler">
+								<div class="h_top">
+									<h3><span class="aptAuc"><em class="blind">저렴한 아파트/빌라 경매</em></span></h3>
+									<span class="more"><a href="http://goodauction.land.naver.com/auction/ca_list.php?si=41&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" class="moreUrl"><em class="blind">더보기</em></a></span>
+								</div>
+								<ul class="areaTab"  page="1">
+									<li class="prev"><a href="javascript:onClickAreaPage('_priceTabCtrler','prev');"><em class="blind">이전</em></a></li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=11&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="1100000000"
+										class="1100000000 page1  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','1100000000');">서울시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=41&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4100000000"
+										class="4100000000 page1 on ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4100000000');">경기도</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=28&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="2800000000"
+										class="2800000000 page1  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','2800000000');">인천시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=26&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="2600000000"
+										class="2600000000 page1  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','2600000000');">부산시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=30&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="3000000000"
+										class="3000000000 page1  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','3000000000');">대전시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=27&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="2700000000"
+										class="2700000000 page1  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','2700000000');">대구시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=31&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="3100000000"
+										class="3100000000 page1  last">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','3100000000');">울산시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=36&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="3600000000" style="display:none;"
+										class="3600000000 page2  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','3600000000');">세종시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=29&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="2900000000" style="display:none;"
+										class="2900000000 page2  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','2900000000');">광주시</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=42&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4200000000" style="display:none;"
+										class="4200000000 page2  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4200000000');">강원</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=43&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4300000000" style="display:none;"
+										class="4300000000 page2  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4300000000');">충북</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=44&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4400000000" style="display:none;"
+										class="4400000000 page2  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4400000000');">충남</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=47&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4700000000" style="display:none;"
+										class="4700000000 page2  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4700000000');">경북</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=48&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4800000000" style="display:none;"
+										class="4800000000 page2  last">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4800000000');">경남</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=45&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4500000000" style="display:none;"
+										class="4500000000 page3  ">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4500000000');">전북</a>
+									</li>
+									<li moreUrl="http://goodauction.land.naver.com/auction/ca_list.php?si=46&state=91&class1=1,8,19&b_count1=1&order=address ASC&special=34" cortar="4600000000" style="display:none;"
+										class="4600000000 page3  last">
+										<a href="javascript:onClickAreabyTab('_priceTabCtrler','4600000000');">전남</a>
+									</li>
+									<li class="next"><a href="javascript:onClickAreaPage('_priceTabCtrler', 'next');"><em class="blind">다음</em></a></li>
+								</ul>
+								<div class="thumBox _atcl_1100000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1590457&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150730_69/auction_home_1438234985613hxCPG_JPEG/s1590457_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>78,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>62,400만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1567858&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_290/auction_home_1438582382199bgQaG_JPEG/s1567858_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>652,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>333,824만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>51%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1586200&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_284/auction_home_1437382982020FVn0F_JPEG/s1586200_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,680만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>64%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4100000000" >
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1617943&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150723_249/auction_home_14375875833265uyLX_JPEG/s1617943_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>27,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>18,900만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1586492&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_258/auction_home_1437395583977b3NJj_JPEG/s1586492_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,100만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>8,470만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1627175&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_259/auction_home_1437382988701gKdOL_JPEG/s1627175_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>24,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>17,080만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2800000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1617421&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150722_197/auction_home_1437543783998OSDTu_JPEG/s1617421_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>6,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>4,550만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1611679&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150721_185/auction_home_1437412385138UU5C6_JPEG/s1611679_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>6,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>2,940만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>49%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1609644&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150724_207/auction_home_1437735182064oDsSH_JPEG/s1609644_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>7,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>4,900만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2600000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1625863&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_133/auction_home_1437381200815S3pWe_JPEG/s1625863_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>29,700만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>23,760만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1654386&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_252/auction_home_1437390790366Rz2hw_JPEG/s1654386_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>9,600만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1637524&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150728_190/auction_home_1438081383173AY0V2_JPEG/s1637524_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>16,600만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>13,280만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_3000000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626597&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_119/auction_home_1437372813862EvFUQ_JPEG/s1626597_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>17,800만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>12,460만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1627840&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150803_260/auction_home_1438582382911UiENr_JPEG/s1627840_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>11,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,700만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1617042&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_261/auction_home_1437373411341enSKY_JPEG/s1617042_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>9,900만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>6,930만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2700000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1635048&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_156/auction_home_1437370548477NOi8Q_JPEG/s1635048_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>26,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>18,550만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626155&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_185/auction_home_1437370546875Sd4Cr_JPEG/s1626155_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>13,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>9,380만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1624300&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_77/auction_home_1437370546066pmbsS_JPEG/s1624300_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>35,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>24,500만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_3100000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1595858&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150722_293/auction_home_1437540182233hDEI6_JPEG/s1595858_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>29,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>23,200만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1588080&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150723_24/auction_home_1437628383752ks76K_JPEG/s1588080_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>40,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>32,000만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1627909&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_293/auction_home_14373705521400lyAj_JPEG/s1627909_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>13,200만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>5,406만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>40%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_3600000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626184&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_258/auction_home_1437370557486FKk3j_JPEG/s1626184_32.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>23,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>16,450만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626604&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150715_116/auction_home_1436965981669xLtDA_JPEG/s1626604_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>20,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>14,000만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1598181&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150723_49/auction_home_1437614584244oArC3_JPEG/s1598181_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>23,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>16,450만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_2900000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1623422&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_248/auction_home_1437370560794BGdlj_JPEG/s1623422_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>13,800만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>9,660만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1626863&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_50/auction_home_1437370559120dvxE7_JPEG/s1626863_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,600만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>8,820만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1616458&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_52/auction_home_1437370561570GG7SB_JPEG/s1616458_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>17,700만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>12,390만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4200000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1650798&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_223/auction_home_1437371625125l1yNp_JPEG/s1650798_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,100만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>8,470만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1649451&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_28/auction_home_1437373416128QxGro_JPEG/s1649451_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>3,200만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>1,568만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>49%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1601582&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_83/auction_home_1437370566360qKshX_JPEG/s1601582_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>24,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>16,800만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4300000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1630454&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_74/auction_home_14373705726231f1Hr_JPEG/s1630454_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>9,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>4,812만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>51%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1645489&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_191/auction_home_1437371630738sLnPU_JPEG/s1645489_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,936만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>64%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1627806&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_73/auction_home_1437370574743u8Lpx_JPEG/s1627806_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>16,900만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>10,816만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>64%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4400000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1589862&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_286/auction_home_1437376407749x1xq5_JPEG/s1589862_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>14,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,105만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>49%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1642045&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150728_183/auction_home_1438059182540EYsp9_JPEG/s1642045_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>4,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>3,080만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1651865&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_113/auction_home_1437376408997hNKjr_JPEG/s1651865_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>8,900만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>6,230만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4700000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1620720&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_183/auction_home_1437371641148D8zqC_JPEG/s1620720_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>10,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,000만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1617202&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150719_200/auction_home_1437311580703GV1us_JPEG/s1617202_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>8,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>5,880만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1631238&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_103/auction_home_1437370586176DkX7F_JPEG/s1631238_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>14,300만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>10,010만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4800000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1602892&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150722_189/auction_home_1437541983193McvDz_JPEG/s1602892_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>16,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>12,800만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1499343&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150731_296/auction_home_14383027829392YKNw_JPEG/s1499343_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>11,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>8,800만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1645441&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_160/auction_home_1437375218488OhK3B_JPEG/s1645441_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,000만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,680만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>64%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4500000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1653149&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_46/auction_home_1437377011464Yhaen_JPEG/s1653149_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>8,400만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>5,880만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1616695&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_211/auction_home_1437371650221JkFiE_JPEG/s1616695_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>13,500만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>10,800만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1617850&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150727_112/auction_home_1437976385188nfgqo_JPEG/s1617850_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,200만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>9,760만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>80%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="thumBox _atcl_4600000000" style="display:none;">
+									<ul>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1622892&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_150/auction_home_1437372849091UIIAg_JPEG/s1622892_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>11,200만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,840만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1650976&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_226/auction_home_14373728464362DYMF_JPEG/s1650976_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>8,600만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>6,020만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>70%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+										<li class="picObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view.php?redirect_page=/auction/ca_list.php&product_id=1643474&flag=1&no_view_count=1">
+												<span class="thumb" style="width:96px;"><img height="74" width="96" src="http://landthumb.phinf.naver.net/20150720_113/auction_home_14373829940361z0NT_JPEG/s1643474_31.jpg" onerror="errorImg(this)"></span>
+												<dl>
+													<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+													<dd>12,600만원</dd>
+													<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+													<dd>7,056만원</dd>
+													<dt class="views">감정가대비</dt>
+													<dd>56%</dd>
+												</dl>
+											</a>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="freeAucArea">
+								<div class="h_top">
+									<h3><span class="freeAuc"><em class="blind">권리분석이 쉬운 초보자 경매 매물</em></span></h3>
+									<span class="more"><a href="http://goodauction.land.naver.com/auction/ca_sample.php"><em class="blind">더보기</em></a></span>
+								</div>
+								<div class="imgInfo">
+									<ul>
+										<li class="divObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view_free.php?redirect_page=/auction/ca_free_list.php&product_id=1617042&MenuCode=30">
+												<p><img height="74" alt="아파트" width="96" src="http://landthumb.phinf.naver.net/20150720_261/auction_home_1437373411341enSKY_JPEG/s1617042_31.jpg" onerror="errorImg(this)"></p>
+												<div class="desc">
+													<h4>
+														<strong>아파트</strong>
+														<span>대전광역시 동구 용전동</span>
+													</h4>
+													<dl>
+														<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+														<dd>9,900만원</dd>
+														<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+														<dd>6,930만원</dd>
+													</dl>
+												</div>
+											</a>
+										</li>
+										<li class="divObj">
+											<a href="http://goodauction.land.naver.com/auction/ca_view_free.php?redirect_page=/auction/ca_free_list.php&product_id=1580347&MenuCode=30">
+												<p><img height="74" alt="아파트" width="96" src="http://landthumb.phinf.naver.net/20150720_54/auction_home_14373752127010XHKY_JPEG/s1580347_31.jpg" onerror="errorImg(this)"></p>
+												<div class="desc">
+													<h4>
+														<strong>아파트</strong>
+														<span>충청남도 아산시 풍기동</span>
+													</h4>
+													<dl>
+														<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+														<dd>13,200만원</dd>
+														<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+														<dd>9,240만원</dd>
+													</dl>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="auction_info">
+						<div class="h_top">
+							<h3>
+								<span class="focusIssue"><em class="blind">경매 결과 포커스 이슈</em></span>
+								<span class="date">07/31(금)</span>
+							</h3>
+						</div>
+						<div class="issueWrap">
+							<ul>
+								<li>
+									<a href="http://goodauction.land.naver.com/auction/ca_view.php?product_id=1594110&no_view_count=1">
+										<p class="thumb">
+											<span class="label">가평군 농지</span>
+											<img height="108" alt="가평군 농지" width="150" src="http://landthumb.phinf.naver.net/20150731_7/auction_home_1438347783230JXiJU_JPEG/s1594110_1.jpg" onerror="errorImg(this)">
+										</p>
+										<p class="thumbDesc">
+											<span>최고매각가</span>
+											<span>73,200만원</span>
+										</p>
+										<dl class="price">
+											<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+											<dd>117,872만원</dd>
+											<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+											<dd>60,350만원</dd>
+											<dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+											<dd>73,200만원</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="http://goodauction.land.naver.com/auction/ca_view.php?product_id=1612775&no_view_count=1">
+										<p class="thumb">
+											<span class="label">부산시 주택</span>
+											<img height="108" alt="부산시 주택" width="150" src="http://landthumb.phinf.naver.net/20150731_1/auction_home_1438347785867Jpeyo_JPEG/s1612775_1.jpg" onerror="errorImg(this)">
+										</p>
+										<p class="thumbDesc">
+											<span>최고매각가율</span>
+											<span>123.66%</span>
+										</p>
+										<dl class="price">
+											<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+											<dd>12,629만원</dd>
+											<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+											<dd>12,629만원</dd>
+											<dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+											<dd>15,618만원</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="http://goodauction.land.naver.com/auction/ca_view.php?product_id=1633295&no_view_count=1">
+										<p class="thumb">
+											<span class="label">인천시 아파트</span>
+											<img height="108" alt="인천시 아파트" width="150" src="http://landthumb.phinf.naver.net/20150721_267/auction_home_1437433982529eI312_JPEG/s1633295_31.jpg" onerror="errorImg(this)">
+										</p>
+										<p class="thumbDesc">
+											<span>최고경쟁률</span>
+											<span>43명</span>
+										</p>
+										<dl class="price">
+											<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+											<dd>8,300만원</dd>
+											<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+											<dd>5,810만원</dd>
+											<dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+											<dd>8,216만원</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="http://goodauction.land.naver.com/auction/ca_view.php?product_id=1504824&no_view_count=1">
+										<p class="thumb">
+											<span class="label">부산시 도로</span>
+											<img height="108" alt="부산시 도로" width="150" src="http://landthumb.phinf.naver.net/20150731_244/auction_home_14383477866139dLgX_JPEG/s1504824_1.jpg" onerror="errorImg(this)">
+										</p>
+										<p class="thumbDesc">
+											<span>최저매각가율</span>
+											<span>26.68%</span>
+										</p>
+										<dl class="price">
+											<dt><span class="aucIco obj1"><em class="blind">감정</em></span></dt>
+											<dd>1,279만원</dd>
+											<dt><span class="aucIco obj2"><em class="blind">최저</em></span></dt>
+											<dd>214만원</dd>
+											<dt><span class="aucIco obj3"><em class="blind">낙찰</em></span></dt>
+											<dd>341만원</dd>
+										</dl>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //경매 홈 -->
+				</div>
+				<div class="aside">
+					<!-- 배너 -->
+					<div class="banner_area">
+						<div id="da_280240" name="da_280240">
+							<iframe id="f280240" name="f280240" src="http://ad.naver.com/adshow?unit=779A" width="280" height="240" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" align="middle" title="광고"></iframe>
+						</div>
+					</div>
+					<!-- //배너 -->
+					<!-- 로그인  -->
+					<div class="login_section" style="display:;">
+						<div class="login_area">
+							<div class='user'>
+								<p><strong>naninyang님</strong></p>
+								<a href='https://nid.naver.com/nidlogin.logout' class='btn_logout'><span>로그아웃</span></a>
+							</div>
+							<div class="info">
+								<ul>
+									<li><strong>무료 열람/관심 물건</strong> <a href='http://goodauction.land.naver.com/member/inter_list.php' class='btn_num'><span id='COUNT_INTER'>0/0</span></a> 건</li>
+									<li>(이달의 무료 열람 건 0/3건 이용중)</li>
+									<li style="width:200px;">
+										<strong>결제내역</strong> <a href='javascript:viewPayHistory(1)' class='btn_num'><span id='COUNT_PAY'>0</span></a> 건 <a href='http://goodauction.land.naver.com/member/pay.php'><img src='http://static.land.naver.net/static/service/20150727/auction/btn_approval2.gif' width='52' height='19' alt='결제하기'></a>
+										<div id='pay_history' style='display:none;' class='ly ly_on'>
+											<ul id='his_item'>
+											</ul>
+											<a href='http://goodauction.land.naver.com/member/pay.php?default_tab=1' class='btn_detail'>자세히보기</a>
+											<a href='javascript:viewPayHistory(0)' class='btn_clse'><span>닫기</span></a>
+										</div>
+									</li>
+								</ul>
+								<a href='http://goodauction.land.naver.com/member/pay.php' class='btn_info'>결제안내</a>
+							</div>
+						</div>
+					</div>
+					<!-- 사건번호/법원 조회 -->
+					<form name="fmAsideENoSrch" action="http://goodauction.land.naver.com/auction/ca_list.php" method="post">
+						<div id="searchDiv1" class="aside_content section_search">
+							<ul class="tab_search search1">
+								<li class="tab1"><a href="javascript:showSearchTab(1)"><span>사건번호 조회</span></a></li>
+								<li class="tab2"><a href="javascript:showSearchTab(2)"><span>법원 조회</span></a></li>
+							</ul>
+							<div class="search_area">
+								<div id="num" class="selectbox-applied " style="float:left;width: 57px;margin:0px 13px 0 0">
+									<select name="num1" class="selectbox-source" title="사건번호 조회 년도">
+										<option value="_">전체</option>
+										<option value='2015'>2015</option>
+										<option value='2014'>2014</option>
+										<option value='2013'>2013</option>
+										<option value='2012'>2012</option>
+										<option value='2011'>2011</option>
+										<option value='2010'>2010</option>
+										<option value='2009'>2009</option>
+										<option value='2008'>2008</option>
+										<option value='2007'>2007</option>
+										<option value='2006'>2006</option>
+										<option value='2005'>2005</option>
+										<option value='2004'>2004</option>
+										<option value='2003'>2003</option>
+										<option value='2002'>2002</option>
+										<option value='2001'>2001</option>
+										<option value='2000'>2000</option>
+										<option value='1999'>1999</option>
+										<option value='1998'>1998</option>
+										<option value='1997'>1997</option>
+									</select>
+									<div class="selectbox-box">
+										<div class="selectbox-label">전체</div>
+									</div>
+									<div class="selectbox-layer">
+										<div class="selectbox-list"></div>
+									</div>
+								</div>
+								<span class="p_num">타경</span>
+								<input type="text" class="input_txt" name="num2" title="사건번호 조회 타경">
+								<input type="image" src="http://static.land.naver.net/static/service/20150727/auction/btn_search.gif" alt="조회">
+							</div>
+						</div>
+					</form>
+					<form name="fmAsideLawSrch" action="http://goodauction.land.naver.com/auction/ca_list.php" method="post">
+						<div id="searchDiv2" style="display:none;" class="aside_content section_search">
+							<ul class="tab_search search2">
+								<li class="tab1"><a href="javascript:showSearchTab(1);"><span>사건번호 조회</span></a></li>
+								<li class="tab2"><a href="javascript:showSearchTab(2);"><span>법원 조회</span></a></li>
+							</ul>
+							<div class="search_area">
+								<div id="layer_law1" class="selectbox-applied "  style="float:left;margin-right:7px">
+									<select name="lawsup" class="selectbox-source" title="법원 조회 법원">
+										<option value="_">법원전체</option>
+										<option value='91'>서울지법</option>
+										<option value='1010'>서울중앙 본원</option>
+										<option value='1110'>서울동부 본원</option>
+										<option value='1210'>서울서부 본원</option>
+										<option value='1310'>서울남부 본원</option>
+										<option value='1410'>서울북부 본원</option>
+										<option value='15'>의정부지법</option>
+										<option value='1510'>의정부 본원</option>
+										<option value='1511'>의정부 고양</option>
+										<option value='16'>인천지법</option>
+										<option value='1610'>인천 본원</option>
+										<option value='1611'>인천 부천</option>
+										<option value='17'>수원지법</option>
+										<option value='1710'>수원 본원</option>
+										<option value='1711'>수원 성남</option>
+										<option value='1712'>수원 여주</option>
+										<option value='1713'>수원 평택</option>
+										<option value='1714'>수원 안산</option>
+										<option value='1715'>수원 안양</option>
+										<option value='18'>춘천지법</option>
+										<option value='1810'>춘천 본원</option>
+										<option value='1811'>춘천 강릉</option>
+										<option value='1812'>춘천 원주</option>
+										<option value='1813'>춘천 속초</option>
+										<option value='1814'>춘천 영월</option>
+										<option value='19'>대전지법</option>
+										<option value='1910'>대전 본원</option>
+										<option value='1911'>대전 홍성</option>
+										<option value='1912'>대전 논산</option>
+										<option value='1913'>대전 천안</option>
+										<option value='1914'>대전 공주</option>
+										<option value='1915'>대전 서산</option>
+										<option value='20'>대구지법</option>
+										<option value='201018'>대구 본원/서부</option>
+										<option value='2010'>대구 본원</option>
+										<option value='2018'>대구 서부</option>
+										<option value='2011'>대구 안동</option>
+										<option value='2012'>대구 경주</option>
+										<option value='2013'>대구 김천</option>
+										<option value='2014'>대구 상주</option>
+										<option value='2015'>대구 의성</option>
+										<option value='2016'>대구 영덕</option>
+										<option value='2017'>대구 포항</option>
+										<option value='21'>부산지법</option>
+										<option value='2110'>부산 본원</option>
+										<option value='2111'>부산 동부</option>
+										<option value='2210'>울산 본원</option>
+										<option value='23'>창원지법</option>
+										<option value='2310'>창원 본원</option>
+										<option value='2311'>창원 진주</option>
+										<option value='2312'>창원 통영</option>
+										<option value='2313'>창원 밀양</option>
+										<option value='2314'>창원 거창</option>
+										<option value='24'>광주지법</option>
+										<option value='2410'>광주 본원</option>
+										<option value='2411'>광주 목포</option>
+										<option value='2412'>광주 장흥</option>
+										<option value='2413'>광주 순천</option>
+										<option value='2414'>광주 해남</option>
+										<option value='25'>전주지법</option>
+										<option value='2510'>전주 본원</option>
+										<option value='2511'>전주 군산</option>
+										<option value='2512'>전주 정읍</option>
+										<option value='2513'>전주 남원</option>
+										<option value='26'>청주지법</option>
+										<option value='2610'>청주 본원</option>
+										<option value='2611'>청주 충주</option>
+										<option value='2612'>청주 제천</option>
+										<option value='2613'>청주 영동</option>
+										<option value='2710'>제주 본원</option>
+									</select>
+									<div class="selectbox-box">
+										<div class="selectbox-label">법원전체</div>
+									</div>
+									<div class="selectbox-layer">
+										<div class="selectbox-list"></div>
+									</div>
+								</div>
+								<div id="layer_law2" class="selectbox-applied " style="float:left;margin-right:15px">
+									<select name="lesson" class="selectbox-source" title="법원 조회 계">
+										<option value="_">계</option>
+										<option value='1'>1계</option>
+										<option value='2'>2계</option>
+										<option value='3'>3계</option>
+										<option value='4'>4계</option>
+										<option value='5'>5계</option>
+										<option value='6'>6계</option>
+										<option value='7'>7계</option>
+										<option value='8'>8계</option>
+										<option value='9'>9계</option>
+										<option value='10'>10계</option>
+										<option value='11'>11계</option>
+										<option value='12'>12계</option>
+										<option value='13'>13계</option>
+										<option value='14'>14계</option>
+										<option value='15'>15계</option>
+										<option value='16'>16계</option>
+										<option value='17'>17계</option>
+										<option value='18'>18계</option>
+										<option value='19'>19계</option>
+										<option value='20'>20계</option>
+										<option value='21'>21계</option>
+										<option value='22'>22계</option>
+										<option value='23'>23계</option>
+										<option value='24'>24계</option>
+										<option value='25'>25계</option>
+										<option value='26'>26계</option>
+										<option value='27'>27계</option>
+										<option value='28'>28계</option>
+										<option value='29'>29계</option>
+										<option value='30'>30계</option>
+										<option value='31'>31계</option>
+										<option value='32'>32계</option>
+										<option value='33'>33계</option>
+										<option value='34'>34계</option>
+										<option value='35'>35계</option>
+										<option value="99">기타</option>
+									</select>
+									<div class="selectbox-box">
+										<div class="selectbox-label">계</div>
+									</div>
+									<div class="selectbox-layer">
+										<div class="selectbox-list"></div>
+									</div>
+								</div>
+								<input type="image" src="http://static.land.naver.net/static/service/20150727/auction/btn_search.gif" alt="조회">
+							</div>
+						</div>
+						<input type="hidden" name="flag" value="1">
+						<input type="hidden" name="search_mode" value="1">
+						<input type="hidden" name="state" value="91">
+					</form>
+					<!-- //사건번호/법원 조회 -->
+					<!-- 배너 -->
+					<div class="aside_content section_banner">
+						<a href="http://www.goodauction.com/" target="_blank"><img src="http://static.land.naver.net/static/service/20150727/auction/banner_goodauction.gif" width="240" height="41" alt="경매정보 자료제공 - 굿옥션"></a>
+					</div>
+					<!-- //배너 -->
+				</div>
+			</div>
+			<!-- footer -->
+			<script type="text/javascript" language="javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js"></script>
+			<div id="footer">
+				<div class="footwrap NE=a:fot">
+					<fieldset>
+						<legend class="blind">검색</legend>
+						<div class="sta_search_box NE=a:lsc">
+							<input type="text" title="검색" id="queryInputFooter" value='' query='' onKeyUp="serviceInternalSearchEnterCheck(event,1);" accesskey="s" searchAreaClicked="false" searchType="Promotion" class="sta_search_text" onFocus="searchInputBoxFocus(this);">
+							<a href="#" class="btn_search NPI=a:search" onclick="serviceInternalSearchFooter();return false;">검색</a>
+							<a href="#" class="btn_search2 NPI=a:nx" onclick="serviceInternalTotalSearchFooter();return false;">통합검색</a>
+						</div>
+					</fieldset>
+					<ul class="NE=a:fot">
+						<li class="first"><a href="http://land.naver.com/index/service.nhn" class="NPI=a:service">이용약관</a></li>
+						<li><a href="/index/declaredArticlePolicy.nhn">매물신고운영</a></li>
+						<li><a href="http://www.naver.com/rules/privacy.html" target="_blank" class="NPI=a:privacy"><strong>개인정보취급방침 </strong></a></li>
+						<li><a href="http://land.naver.com/index/disclaimer.nhn" class="NPI=a:limit">책임의 한계와 법적고지</a></li>
+						<li><a href="#" onclick="OPS.viewOPS('ops', {url : 'https://help.naver.com/support/service/main.nhn',  param : 'serviceNo=746'}); return false;" class="NPI=a:help">부동산 고객센터</a></li>
+					</ul>
+					<p class="info" tabindex="0">네이버부동산은 제휴 부동산 정보업체가 전송한 매물 정보가 노출될 수 있도록 광고 플랫폼 및 부동산 관련 정보를 제공하며,<br>제휴 부동산 정보업체가 네이버 부동산으로 전송한 매물 정보 및 이와 관련한 실제 거래에 대하여 어떠한 책임도 부담하지 않습니다.</p>
+					<address>
+						<a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="logo N=a:fot.nbpcorp"><span class="blind">NAVER</span></a>
+						<em>Copyright ⓒ</em> <a href="http://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a> <span>All Rights Reserved.</span>
+					</address>
+				</div>
+			</div>
+			<!-- //footer -->
+		</div>
+	</body>
+	<script src="http://static.land.naver.net/static/service/js/201507282123/min/auction/jindo.min.js" type="text/javascript"></script>
+	<script src="http://static.land.naver.net/static/service/js/201507282123/lnb/land_lnb.js" type="text/javascript"></script>
+	<script src="http://static.land.naver.net/static/service/js/201507282123/min/util.min.js" type="text/javascript"></script>
+	<script src="http://static.land.naver.net/static/service/js/201507282123/min/auction/auction.js" type="text/javascript"></script>
+	<script src="http://static.land.naver.net/static/service/js/201507282123/min/common/chart.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var chartData={
+			graphValue1 : "",
+			graphValue2 : "",
+			graphValue3 : "",
+			graphValue4 : "",
+			graphValue5 : "",
+			graphValue6 : "",
+			graphValue7 : "",
+			chartValue1 : ""
+		};
+
+		$Fn(function(){
+			auctionInit(chartData);
+			setSmallMapImg("");
+		}).attach(document, "domready");
+	</script>
+	<script>
+		function _initAuctFlashMap() {
+			var obj = {};
+			obj.wmode = "transparent";
+			obj.bgColor = "#F8F8F8";
+			obj.flashVars = "";
+			obj.tabindex = "-1";
+
+			nhn.FlashObject.showAt("mapFlash", nhn.FlashObject.generateTag("http://static.land.naver.net/static/service/20150727/flash/auction/minimap.swf", "mapFlashObject", '171', '149', obj));
+			if ($('mapFlash') && $('mapFlash').childNodes && $('mapFlash').childNodes.length > 0) {
+				$Element($('mapFlash').childNodes[0]).attr("tabIndex", "-1");
+			}
+		}
+
+		if (window.addEventListener) {
+			window.addEventListener('load', _initAuctFlashMap, false);
+		}
+		else if (window.attachEvent) {
+			window.attachEvent('onload', _initAuctFlashMap );
+		}
+	</script>
+</html>

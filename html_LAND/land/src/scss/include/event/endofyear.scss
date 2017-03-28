@@ -1,0 +1,122 @@
+@import "../../common/_variable";
+@import "../../common/_mixin";
+@import "../../common/_common";
+
+/* HiveLab  / author : YHS */
+
+#container.promotion{margin-top:5px;padding:0;background:none}
+#container.promotion .content{float:none;width:100%;margin:0}
+
+/* sprite img */
+.sp_pro{overflow:hidden;background:url(#{$imgUrl-service}/report/sp_promotion.png) no-repeat}
+
+.pro_spot{height:109px}
+.bx_spot{overflow:hidden;height:290px;background:#fafafb;border:1px solid #d1d5db;border-top:0}
+.bx_spot .lst_mem{margin:19px 0 0 22px}
+.bx_spot .lst_mem li{float:left;margin-right:21px}
+.bx_spot .lst_mem li a{display:block;width:170px;height:254px}
+.bx_spot .lst_mem li.mem{background-position:0 -115px}
+.bx_spot .lst_mem li.mem2{background-position:-175px -115px}
+.bx_spot .lst_mem li.mem3{background-position:-350px -115px}
+.bx_spot .lst_mem li.mem4{background-position:-525px -115px}
+.bx_spot .lst_mem li.mem5{background-position:-700px -115px}
+
+/* tit */
+.tit_hot{width:149px;height:19px;background-position:0 -375px}
+.tit_issue{width:149px;height:19px;background-position:-155px -375px}
+.tit_poll{width:132px;height:19px;background-position:-130px -400px}
+.tit_poll2{width:443px;height:22px;margin:29px 0 0 114px;background-position:0 -675px}
+
+/* content */
+.bx_pro{overflow:hidden;margin-top:10px;border:1px solid #d1d5db;border-top:2px solid #434851}
+.bx_pro_v2{border-width:2px 0 0}
+.bx_pro .bx_l{float:left;width:230px}
+.bx_pro .bx_r{position:relative;float:left;width:749px;background:#fcfcfd;border:1px solid #d1d5db;border-width:0 1px 1px 0}
+.issue_area .bx_pro .bx_r{height:444px}
+.poll_area .bx_pro .bx_r{height:201px}
+.lst_hot{overflow:hidden;width:953px;padding:25px 0 4px 25px}
+.lst_hot li{position:relative;float:left;width:135px;height:155px;margin-right:24px}
+.lst_hot li.item2,.lst_hot li.item3,.lst_hot li.item8,.lst_hot li.item9{margin-right:23px}
+.lst_hot li .mask{position:absolute;top:0;left:0;z-index:10;width:132px;height:93px;border:1px solid #000;opacity:.1;filter:alpha(opacity=10)}
+.lst_hot li .sp_pro{position:absolute;top:0;left:0;z-index:20;width:35px;height:28px;line-height:999px}
+.lst_hot li.item1 .sp_pro{background-position:-875px -145px}
+.lst_hot li.item2 .sp_pro{background-position:-915px -145px}
+.lst_hot li.item3 .sp_pro{background-position:-875px -180px}
+.lst_hot li.item4 .sp_pro{background-position:-915px -180px}
+.lst_hot li.item5 .sp_pro{background-position:-875px -215px}
+.lst_hot li.item6 .sp_pro{background-position:-915px -215px}
+.lst_hot li.item7 .sp_pro{background-position:-875px -250px}
+.lst_hot li.item8 .sp_pro{background-position:-915px -250px}
+.lst_hot li.item9 .sp_pro{background-position:-875px -285px}
+.lst_hot li.item10 .sp_pro{background-position:-915px -285px}
+.lst_hot li.item11 .sp_pro{background-position:-875px -320px}
+.lst_hot li.item12 .sp_pro{background-position:-915px -320px}
+.lst_hot li a,.lst_hot li img{display:block;margin-bottom:9px}
+.lst_hot li a{line-height:17px;color:#2f2f2f;letter-spacing:-1px}
+.hot_area{margin-top:34px}
+.issue_area{margin-top:32px}
+.issue_area .tit_area{height:167px;padding:43px 0 0 51px;border-left:1px solid #d1d5db;border-right:1px solid #e1e4e8}
+.issue_area h5.sp_pro{width:124px;height:96px;background-position:0 -400px}
+.issue_area .nav_issue{overflow:hidden;width:230px;height:235px}
+.issue_area .nav_issue li{float:left;margin-bottom:-1px}
+.issue_area .nav_issue li a{display:block;width:230px;height:40px}
+.issue_area .nav_issue li.nav a{background-position:-305px -375px}
+.issue_area .nav_issue li.nav2 a{background-position:-305px -414px}
+.issue_area .nav_issue li.nav3 a{background-position:-305px -453px}
+.issue_area .nav_issue li.nav4 a{background-position:-305px -492px}
+.issue_area .nav_issue li.nav5 a{background-position:-305px -531px}
+.issue_area .nav_issue li.nav6 a{background-position:-305px -570px}
+.issue_area .nav_issue li.nav_on,.issue_area .nav_issue li.nav2_on,.issue_area .nav_issue li.nav3_on,.issue_area .nav_issue li.nav4_on,.issue_area .nav_issue li.nav5_on,.issue_area .nav_issue li.nav6_on{position:relative}
+.issue_area .nav_issue li.nav_on a{background-position:-540px -375px}
+.issue_area .nav_issue li.nav2_on a{background-position:-540px -414px}
+.issue_area .nav_issue li.nav3_on a{background-position:-540px -453px}
+.issue_area .nav_issue li.nav4_on a{background-position:-540px -492px}
+.issue_area .nav_issue li.nav5_on a{background-position:-540px -531px}
+.issue_area .nav_issue li.nav6_on a{background-position:-540px -570px}
+.issue_area .tit_top{width:636px;height:46px;margin:28px 0 0 28px;background-position:0 -700px}
+.issue_area .tit_top2{width:497px;background-position:0 -750px}
+.issue_area .tit_top3{width:652px;background-position:0 -800px}
+.issue_area .tit_top4{width:588px;background-position:0 -850px}
+.issue_area .tit_top5{width:540px;background-position:0 -900px}
+.issue_area .tit_top6{width:634px;background-position:0 -950px}
+.issue_area .bx_issue{margin:21px 28px 0;border:1px solid #e9ecef;background:#fff}
+.issue_area .bx_issue .headline_list{margin:22px 25px 20px}
+.issue_area .bx_issue .headline_list li{width:100%;margin-top:19px}
+.issue_area .bx_issue .headline_list li dl{width:100%}
+.issue_area .bx_issue .headline_list li dl:after{display:block;clear:both;content:''}
+.issue_area .bx_issue .headline_list li dl dt{font-size:14px;font-weight:bold;line-height:20px}
+.issue_area .bx_issue .headline_list li dl dt.photo{display:inline;float:left;position:relative;margin:3px 6px 0 0}
+.issue_area .bx_issue .headline_list li dl dt a{color:#000063}
+.issue_area .bx_issue .headline_list li dl dd{margin-top:3px;color:#444;line-height:16px}
+.issue_area .bx_issue .headline_list li dl dd.sub{overflow:hidden;clear:both;position:relative;width:100%;margin:0 0 -8px;line-height:16px}
+.issue_area .bx_issue .headline_list li dl dd.sub ul{margin-top:6px}
+.issue_area .bx_issue .headline_list li dl dd.sub ul li{margin:6px 0 0;padding-left:11px;background:url(#{$imgUrl-service}/news/ico_sub_list2.gif) no-repeat 0 5px}
+.issue_area .bx_issue .headline_list li dl dd.sub ul li a{color:#333}
+.issue_area .bx_issue .writing{color:#d17575;font-size:11px}
+.issue_area .bx_issue .date{padding-left:7px;background:url(#{$imgUrl-service}/news/bar_date.gif) no-repeat 0 0;font-family:tahoma;color:#999;font-size:11px;letter-spacing:0}
+.issue_area .btn_more{position:absolute;top:27px;right:28px;width:77px;height:23px;background-position:-875px -115px}
+
+.poll_area{margin:34px 0 -1px}
+.poll_area .tit_area{height:161px;padding:40px 0 0 50px;border-left:1px solid #d1d5db;border-right:1px solid #e1e4e8;border-bottom:1px solid #d1d5db}
+.poll_area h5.sp_pro{width:123px;height:96px;background-position:0 -500px}
+.poll_area .ico_q{position:absolute;top:28px;left:27px;width:67px;height:66px;background-position:-130px -425px;line-height:999px}
+.poll_area .tx_poll{margin:10px 0 0 115px;line-height:19px;color:#6e6e6f}
+.poll_area .poll_sel{width:695px;height:54px;margin:20px 0 0 28px;background-position:0 -615px}
+.poll_area .lst_poll{overflow:hidden;}
+.poll_area .lst_poll li{position:relative;float:left}
+.poll_area .lst_poll li a{display:block;width:116px;height:54px}
+.poll_area .lst_poll li.type a{width:115px}
+.poll_area .lst_poll .num{position:absolute;top:13px;left:50px}
+.poll_area .lst_poll .frst .num{left:55px}
+.poll_area .lst_poll .num em{overflow:hidden;float:left;height:16px;background:url(#{$imgUrl-service}/report/sp_promotion.png) no-repeat;line-height:999px}
+.poll_area .lst_poll .num .num0{width:9px;background-position:-130px -500px}
+.poll_area .lst_poll .num .num1{width:6px;background-position:-145px -500px}
+.poll_area .lst_poll .num .num2{width:10px;background-position:-155px -500px}
+.poll_area .lst_poll .num .num3{width:10px;background-position:-170px -500px}
+.poll_area .lst_poll .num .num4{width:10px;background-position:-185px -500px}
+.poll_area .lst_poll .num .num5{width:10px;background-position:-200px -500px}
+.poll_area .lst_poll .num .num6{width:10px;background-position:-215px -500px}
+.poll_area .lst_poll .num .num7{width:8px;background-position:-230px -500px}
+.poll_area .lst_poll .num .num8{width:10px;background-position:-245px -500px}
+.poll_area .lst_poll .num .num9{width:9px;background-position:-260px -500px}
+.poll_area .lst_poll .num .com{width:4px;background-position:-275px -500px}

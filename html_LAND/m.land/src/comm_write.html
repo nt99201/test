@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>커뮤니티 글쓰기</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link media="only screen and (orientation:portrait)" rel="stylesheet" type="text/css" href="css/main_port.css">
+	<link media="only screen and (orientation:landscape)" rel="stylesheet" type="text/css" href="css/main_land.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/behavior.js"></script>
+</head>
+<body>
+<div>
+	<!--content start-->
+	<div id="dom_detail">
+		<!--detail-->
+		<div class="detail comm_detail">
+			<div class="h_loc agnt_datail">
+<!--            한줄일 경우 <h1 class="sngl">-->
+                <h2>느티나무 공무원 3단지 커뮤니티</h2>
+                <p class="sub_info">
+                	<strong>매매<em>29</em>건</strong>/
+                	<strong>전세<em>21</em>건</strong>/
+                	<strong>월세<em>35</em>건</strong>
+                </p>
+                <a href="" class="prev"><em>뒤로</em></a>
+            </div>
+
+            <div class="sort_menu board">
+            	<ul>
+					<li>
+						<a href="#" class="on">우리동네 Q&amp;A</a>
+					</li>
+					<li>
+						<a href="#">우리동네 이야기</a>
+					</li>
+				</ul>
+            </div>
+			<div class="kind_checkbox">
+				<ul>
+				<li>
+					<input id="check1" type="checkbox">
+					<label for="check1">교육</label>
+				</li>
+				<li>
+					<input id="check2" type="checkbox">
+					<label for="check2">교통</label>
+				</li>
+				<li>
+					<input id="check3" type="checkbox">
+					<label for="check3">개발</label>
+				</li>
+				<li>
+					<input id="check4" type="checkbox">
+					<label for="check4">생활편의</label>
+				</li>
+				<li>
+					<input id="check5" type="checkbox">
+					<label for="check5">자연</label>
+				</li>
+				<li>
+					<input id="check6" type="checkbox">
+					<label for="check6">기타</label>
+				</li>
+			</div>
+			<div class="inp_title_box">
+				<input type="text" placeholder="제목을 입력해주세요.">
+			</div>
+			<div class="inp_content_box">
+				<!-- [D] 디바이스 크기에 따라 height 값 수정 필요.(디바이스 height - 311px) -->
+				<textarea placeholder="지역, 매물정보에 대한 모든것. 묻고 답하고 알려주세요." style="height:257px"></textarea>
+			</div>
+			<div class="btn_group_box">
+				<div class="btn_group">
+					<a href="#" class="btn_cancle">취소</a>
+					<span></span>
+					<a href="#" class="btn_register">등록</a>
+				</div>
+			</div>
+		</div>
+		<!--//detail-->
+	</div>
+</div>
+</body>
+</html>
+<!-- 마크업 검수용, 개발 적용시 삭제 -->
+<script>
+$(document).ready(function(){
+$('.sort_menu>ul').find('a').click(function(){
+$(this).parent().parent().find('a').removeClass('on');
+$(this).addClass('on');
+return false; });
+});
+</script>
+<!-- // 마크업 검수용, 개발 적용시 삭제 -->

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="me2:title" content="네이버영어사전:say" property="me2:title" />
+<title>[고급퀴즈]오늘의 퀴즈 결과 페이지</title>
+<link rel="stylesheet" type="text/css" href="css/w.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/e.css" /-->
+<link rel="stylesheet" type="text/css" href="css/Ngnb.css"/>
+<link rel="shortcut icon" href="/favicon_pc.ico" />
+</head>
+<body class="">
+<!-- gnb 영역 -->
+<div id="header" class="header">
+</div>
+
+<!-- 페이지 타이틀 영역 -->
+<div class="top_tab_area">
+</div>
+<!-- 20160823 접근성 tab 타이틀
+    [D] 전체 html의 tab 영역이 현재 비어있으니 해당 tab 영역을 클릭시
+        아래의 타이틀도 같이 변경부탁드립니다.
+ -->
+<div class="t_content">
+	<h3 class="hc">오늘의 단어</h3>
+	<!-- //20160823 접근성 tab 타이틀 -->
+	<div class="h_area">
+		<a href="#" class="btn_lt">목록</a>
+		<h3 class="tit_h">고급퀴즈</h3>
+		<span class="txt_rt"><em class="ct_num">2</em> / <em class="all_num">15</em></span>
+	</div>
+	<div class="rest_area">
+	<div class="rest_box">
+		<!-- [D] 초급:level,중급:level2,고급:level3 -->
+		<span class="level3"><span class="hc">고급</span></span>
+		<div class="score_area">
+			<span class="score1"><span class="hc">1</span></span>
+			<span class="score0"><span class="hc">0</span></span>
+			<span class="score0"><span class="hc">0</span></span>
+		</div>
+		<p class="rest_rgt"><span class="rgt_img1">perfect!</span><span class="rest_rgt_txt">와우~당신은 영어 능력자!</span></p>
+		<!-- <span class="rgt_img2">very good!</span>
+		<span class="rgt_img3">good!</span>
+		<span class="rgt_img4">study more!</span>
+		<span class="rgt_img5">study hard!</span>
+		<span class="rgt_img6">opps!</span> -->
+		<ul class="rest_dn">
+		<li><p class="rest_dn_txt">맞은 단어<span class="cole">22</span></p></li>
+		<li><a href="#" class="rest_dn_txt">틀린 단어<span class="cola">35</span><span class="colbl">다시 외우기</span></a></li>
+		</ul>
+	</div>
+	<div class="btn_dn_area">
+		<a href="#" class="btm_btn">다음단계 퀴즈 풀기</a>
+		<a href="#" class="btm_btn">다음단계 외우기</a>
+	</div>
+    <p class="net_bg btm_txt">맞은 단어는 &acute;암기&acute;상태로<br>틀린 단어는 &acute;미암기&acute;상태로 변경 됩니다.</p>
+</div>
+</div>
+<hr />
+<!-- 공통 푸터 영역 -->
+<div class="cm_footer __ver2"></div>
+<a href="#" class="dicj" style="display:none">
+	<span id="loading" class="dicj" style="display:none;">로딩중</span>
+</a>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ibjs.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript">
+    IBJS.include([
+        {path:'include/header_gnb.html', sel:'.header'},
+        {path:'include/header_today_en.html', sel:'.top_tab_area', callback: function(){$($('.tab_link').get(1)).toggleClass("on");}},
+        {path:'include/footer.html', sel:'.__ver2'},
+        {path:'include/common_ham_menu.html', sel:'.sidenav'}
+    ]);
+</script>
+<script type="text/javascript" async ntemplate src="http://egjs.navercorp.com/ntemplate/dist/common/script/common.js"></script>
+<!-- https://github.com/cubiq/iscroll 에서 https://github.com/cubiq/iscroll/releases/tag/v5.2.0 버전의 lite버전을 아래와 같이 삽입한다.-->
+<script type="text/javascript" src="http://egjs.navercorp.com/ntemplate/bower_components/egscroll/build/iscroll-lite.js"></script>
+<script type="text/javascript" src="http://view.ui.naver.com/dict/m.common/feature_onenaver/js/common_menu_template_v2.js"></script>
+<script type="text/javascript">
+    var sideTemplate = new SideTemplate("word_en");
+    sideTemplate.init();
+</script>
+</body>
+</html>

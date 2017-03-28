@@ -1,0 +1,242 @@
+/* Nsearch */
+.Nsearch {
+	padding: 6px;
+	background-color: #00c73c;
+	font-size: 14px;
+	font-family: helvetica, sans-serif;
+	line-height: 14px;
+}
+.Nsearch.is_fold {
+	margin-top: -48px;
+}
+.Nsearch.is_slide {
+	margin-top: 0;
+	-webkit-transition: margin-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) ;
+	transition: margin-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) ;
+}
+
+.Ngnb + .Nsearch {
+	padding-top: 0;
+}
+
+.Nsearch_inner {
+	display: table;
+	width: 100%;
+}
+
+.Nsearch_navigation {
+	display: table-cell;
+	width: 40px;
+	vertical-align: top;
+}
+.Nsearch_navigation .Nnavigation_link {
+	position: relative;
+	display: block;
+	margin-right: 6px;
+	width: 36px;
+	height: 42px;
+}
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	color: transparent;
+}
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon.Nicon_prev {
+	width: 22px;
+	height: 20px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -68px -5px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+}
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon.Nicon_logo {
+	width: 19px;
+	height: 18px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -5px -40px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+}
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon.Nicon_home {
+	width: 23px;
+	height: 22px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -35px -5px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+}
+
+.Nsearch_box {
+	display: table-cell;
+	width: 100%;
+	background-color: #fff;
+	vertical-align: top;
+}
+.Nsearch_box .Nbox_tool {
+	display: table-cell;
+	vertical-align: top;
+	white-space: nowrap;
+	font-size: 0;
+}
+.Nsearch_box .Nbox_button {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	border: 0;
+	background: none;
+	vertical-align: top;
+	line-height: 42px;
+}
+.Nsearch_box .Nbox_button.Nbox_search {
+	margin-right: 6px;
+	width: 30px;
+}
+.Nsearch_box .Nbox_button.Nbox_delete {
+	width: 29px;
+}
+.Nsearch_box .Nbox_button.Nbox_delete:only-child {
+	margin-right: 6px;
+}
+.Nsearch_box .Nbox_button.Nbox_realize {
+	width: 32px;
+}
+.Nsearch_box .Nbox_button .Nicon_delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 18px;
+	height: 18px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -34px -40px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+	color: transparent;
+}
+.Nsearch_box .Nbox_button .Nicon_realize {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto auto 5px;
+	width: 20px;
+	height: 25px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -5px -5px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+	color: transparent;
+}
+.Nsearch_box .Nbox_button .Nicon_submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 18px;
+	height: 18px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -5px -68px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+	color: transparent;
+}
+
+.Nsearch_box_inner {
+	display: table;
+	width: 100%;
+}
+.Nsearch_box_inner .Nbox_text {
+	display: table-cell;
+	width: 100%;
+	vertical-align: top;
+}
+.Nsearch_box_inner .Nbox_input_text {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 12px;
+	width: 100%;
+	height: 42px;
+	border: 0;
+	background: none;
+	color: #000;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 26px;
+
+	-webkit-appearance: none;
+}
+.Nsearch_box_inner .Nbox_input_text::-webkit-input-placeholder {
+	color: #bbb;
+	font-weight: normal;
+}
+.Nsearch_box_inner .Nbox_input_text:-moz-placeholder {
+	color: #bbb;
+	font-weight: normal;
+}
+.Nsearch_box_inner .Nbox_input_text:-ms-input-placeholder {
+	color: #bbb;
+	font-weight: normal;
+}
+.Nsearch_box_inner .Nbox_input_text:input-placeholder {
+	color: #bbb;
+	font-weight: normal;
+}
+
+.Nsearch_tool {
+	display: table-cell;
+	vertical-align: top;
+	white-space: nowrap;
+	font-size: 0;
+}
+.Nsearch_tool .Ntool_search {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	width: 42px;
+	height: 42px;
+	border: 0;
+	background: rgba(0, 0, 0, 0.1);
+	color: #fff;
+	vertical-align: top;
+	letter-spacing: -1px;
+	font-size: 14px;
+	line-height: 42px;
+}
+.Nsearch_tool .Ntool_search.Ntool_search_total {
+	margin: 0 0 0 6px;
+	width: 60px;
+}
+.Nsearch_tool .Ntool_search .Nicon_search {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 18px;
+	height: 18px;
+	background-image: url(http://static.land.naver.net/static/oneroom/20160608/sp_search.png);
+	background-image: linear-gradient(transparent, transparent), url(http://static.land.naver.net/static/oneroom/20160608/sp_search.svg);
+	background-position: -62px -40px;
+	background-size: 95px 91px;
+	background-repeat: no-repeat;
+	color: transparent;
+}

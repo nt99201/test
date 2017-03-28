@@ -1,0 +1,892 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>네이버 부동산 :: 내집마련의 시작, 네이버 부동산</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/land_article.css">
+</head>
+
+<body class="">
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+	</div>
+	<!-- //header -->
+	<div class="search">
+		<!-- 지도 상단 카테고리 -->
+		<div class="map_top">
+			<ul class="cate">
+			<div id="top_rlet_tp">
+				<li class="m1"><a href="#" class="selected">아파트</a></li>
+				<li class="m2"><a href="#" class="">오피스텔</a></li>
+				<li class="m3"><a href="#" class="">분양권</a></li>
+				<li class="m4"><a href="#" class="">빌라</a></li>
+				<li class="m5"><a href="#" class="">주택</a></li>
+				<li class="m6"><a href="#" class="">토지</a></li>
+				<li class="m7"><a href="#" class="">원룸</a></li>
+				<li class="m8"><a href="#" class="">상가</a></li>
+				<li class="m9"><a href="#" class="">사무실</a></li>
+				<li class="m10"><a href="#" class="">공장</a></li>
+				<li class="m11"><a href="#" class="">재개발</a></li>
+				<li class="m12"><a href="#" class="">건물</a></li>
+			</div>
+			<div id="top_trad_tp">
+				<li class="m13"><a href="#" class="selected">전체</a></li>
+				<li class="m14"><a href="#" class="">매매</a></li>
+				<li class="m15"><a href="#" class="">전세</a></li>
+				<li class="m16"><a href="#" class="">월세</a></li>
+			</div>
+			</ul>
+		</div>
+		<!-- //지도 상단 카테고리 -->
+	</div>
+
+	<div class="map_sub _map_area" id="map">
+		<!-- 위치 선택 -->
+		<div id="locationArea" class="location">
+			<div class="loc_view">
+				<div class="sel" id="loc_view1">
+					<select class="selectbox-source">
+					<option selected="" value="1100000000">서울시</option>
+					<option value="4100000000">경기도</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label" unselectable="on">서울시</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div class="sel" id="loc_view2">
+					<select class="selectbox-source">
+					<option selected="" value="1168000000">강남구</option>
+					<option value="1174000000">강동구</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label" unselectable="on">강남구</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div class="sel" id="loc_view3">
+					<select style="position:absolute; top : -1000px; left:-1000px;" class="selectbox-source">
+					<option selected="" value="1168010300">개포동</option>
+					<option value="1168010800">논현동</option>
+					</select>
+				    <div class="selectbox-box">
+						<div class="selectbox-label" unselectable="on">개포동</div>
+					</div>
+				</div>
+				<span class="bar">&gt;</span>
+				<div class="sel" id="loc_view4">
+					<select class="selectbox-source">
+					<option class="selectbox-default" value="_">단지</option>
+					<option selected="" value="8928">LG개포자이</option>
+					</select>
+					<div class="selectbox-box">
+						<div class="selectbox-label" unselectable="on">LG개포자이</div>
+					</div>
+				</div>
+			</div>
+			<div class="lastest">
+				<p>최근 검색한 지역과 단지 <a href="javascript:void(0)">보기</a></p>
+				<div class="list_wrap" style="display:block" id="recentComplexList">
+					<ol>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동 LG개포자이</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					 <li><a href="#">개포동</a><button type="button" class="del"><span class="blind">삭제</span></button></li>
+					</ol>
+					<button type="button" class="all_del">전체기록 삭제</button>
+				</div>
+			</div>
+		</div>
+		<!-- 지도 영역 -->
+		<div class="map_viewer">
+			<div class="map_area">
+				<div class="mapplace_useful">
+					<a href="#">현장확인매물활용법</a>
+				</div>
+				<div class="mapplace_banner">
+					<a href="#" class="btn_map">네이버 부동산이 "눈"으로 직접 확인한 현장확인매물을 클릭해보세요</a>
+					<a href="#" class="btn_colse">닫기</a>
+				</div>
+			</div>
+			<!-- 지도 범례 -->
+				<div style="display:none;" id="_ly_legend_container" class="ly_legend NE=a:lgl">
+					<div class="ly_mask"></div>
+					<div class="ly_inner">
+						<div id="_legend_indextab" class="tab_area">
+							<a onclick="$$.getSingle('.btn_more', $('_ly_legend_container')).className='btn_more NPI=a:gmore';$$.getSingle('.btn_more', $('_ly_legend_container')).setAttribute('info', this.getAttribute('info'));$$.getSingle('UL._cadastral', $('_legend_tabs')).style.display='none';$$.getSingle('UL._normal', $('_legend_tabs')).style.display='block';$ElementList($$('SPAN.on', $('_legend_indextab'))).removeClass('on'); $Element($$.getSingle('.tab1 SPAN', $('_legend_indextab'))).addClass('on');$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on');$Element($$.getSingle('.type1', $('_legend_tabs'))).addClass('type_on');" info="http://help.naver.com/ops/step2/faq.nhn?faqId=14410" class="tab1 NPI=a:gtab" href="javascript:void(0);"><span>일반지도 범례</span></a>
+							<a onclick="$$.getSingle('.btn_more', $('_ly_legend_container')).className='btn_more NPI=a:cmore';$$.getSingle('.btn_more', $('_ly_legend_container')).setAttribute('info', this.getAttribute('info'));$$.getSingle('UL._normal', $('_legend_tabs')).style.display='none';$$.getSingle('UL._cadastral', $('_legend_tabs')).style.display='block';$ElementList($$('SPAN.on', $('_legend_indextab'))).removeClass('on'); $Element($$.getSingle('.tab2 SPAN', $('_legend_indextab'))).addClass('on');$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on');$Element($$.getSingle('.type6', $('_legend_tabs'))).addClass('type_on');" info="http://help.naver.com/ops/step2/faq.nhn?faqId=21884" class="tab2 NPI=a:ctab" href="javascript:void(0);"><span class="on">지적편집도 범례</span></a>
+						</div>
+						<div id="_legend_tabs" class="ly_cont">
+							<h3 class="blind" id="legend1">일반지도 범례</h3>
+							<ul style="display:none" class="sub_tab _normal">
+							<li class="type1">
+								<a class="NPI=a:gboundary" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type1', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">경계</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">국가경계</li>
+									<li class="col2">광역시</li>
+									<li class="col1">시도·시군구경계</li>
+									<li class="col2">일반시</li>
+									<li class="col3">택지지구경계</li>
+									<li class="col3">문화거리</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type2">
+								<a class="NPI=a:groad" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type2', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">도로</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">고속도로·고속화도로</li>
+									<li class="col2">일반도로</li>
+									<li class="col1">국도</li>
+									<li class="col2">공사중도로</li>
+									<li class="col1">지방도</li>
+									<li class="col2">인터체인지</li>
+									<li class="col1">주요도로</li>
+									<li class="col2">교차로</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type3">
+								<a class="NPI=a:gtraffic" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type3', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">교통</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">서울1 (인천)</li>
+									<li class="col2">공항철도</li>
+									<li class="col1">분당선</li>
+									<li class="col2">광주1</li>
+									<li class="col1">부산1</li>
+									<li class="col2">대전1</li>
+									<li class="col1">대구1</li>
+									<li class="col2">중앙선</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type4">
+								<a class="NPI=a:gclimb" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type4', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">등산</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">거리·소요시간</li>
+									<li class="col2">매표소</li>
+									<li class="col1">주요등산로</li>
+									<li class="col2">등산안내소</li>
+									<li class="col1">보조등산로</li>
+									<li class="col2">대피소</li>
+									<li class="col1">옛길등산로</li>
+									<li class="col2">산장</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type5">
+								<a class="NPI=a:gapt" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type5', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">아파트</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">아파트세대수</li>
+									<li class="col1">아파트층·호수 (18층,1호~4호)</li>
+									<li class="col1">아파트평형 (105.8m² = 32평)</li>
+									</ul>
+								</div>
+							</li>
+							</ul>
+							<h3 class="blind" id="legend1">지적편집도 범례</h3>
+							<ul class="sub_tab _cadastral">
+							<li class="type6 type_on">
+								<a class="NPI=a:cnum" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type6', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">지번·경계</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">대표지번</li>
+									<li class="col2">시군구경계</li>
+									<li class="col1">독립지번</li>
+									<li class="col2">법정동경계</li>
+									<li class="col1">지번</li>
+									<li class="col2">행정동경계</li>
+									<li class="col1">지적경계</li>
+									<li class="col2">읍면경계</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type7">
+								<a class="NPI=a:cdevelop" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type7', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">개발</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">택지개발지구</li>
+									<li class="col2">도시개발구역</li>
+									<li class="col1">신도시</li>
+									<li class="col2">경제자유구역</li>
+									<li class="col1">정비구역</li>
+									<li class="col2">재개발구역</li>
+									<li class="col1">보금자리개발지구</li>
+									<li class="col2">주택재개발</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type8">
+								<a class="NPI=a:cuse" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type8', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">용도</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">전용주거지역</li>
+									<li class="col2">공업지역</li>
+									<li class="col1">일반주거지역</li>
+									<li class="col2">녹지지역</li>
+									<li class="col1">준주거지역</li>
+									<li class="col2">관리지역</li>
+									<li class="col1">상업지역</li>
+									<li class="col2">농림지역</li>
+									</ul>
+								</div>
+							</li>
+							<li class="type9">
+								<a class="NPI=a:crailroad" onclick="$ElementList($$('.type_on', $('_legend_tabs'))).removeClass('type_on'); $Element($$.getSingle('.type9', $('_legend_tabs'))).addClass('type_on');" href="javascript:void(0);">도로·철로</a>
+								<div class="tab_cont">
+									<ul>
+									<li class="col1">장기계획도로</li>
+									<li class="col2">예정철도</li>
+									<li class="col1">예정고속도로</li>
+									<li class="col2">공사중철도</li>
+									<li class="col1">공사중고속도로1</li>
+									<li class="col2">공사중지하철</li>
+									<li class="col1">공사중고속도로2</li>
+									<li class="col2">일반철도</li>
+									</ul>
+								</div>
+							</li>
+							</ul>
+							<a onclick="window.open(this.getAttribute('info'));" info="http://help.naver.com/ops/step2/faq.nhn?faqId=21884" class="btn_more NPI=a:cmore" href="javascript:void(0);">더보기</a>
+						</div>
+						<div class="ly_btn">
+							<a class="btn_clse NPI=a:close" onclick="$('_ly_legend_container').style.display='none';" href="javascript:void(0);">닫기</a>
+						</div>
+					</div>
+				</div>
+				<!-- //지도 범례 -->
+			<!-- 매물정보 레이어, 중개업소정보 레이어 -->
+			<div id="sideListLayer" class="address_list">
+				<div class="backgroud_png"></div>
+				<div class="map_tab">
+					<ul class="lst_tab">
+						<li class="address_list2 on" id="complexListTitle">
+							<a href="#" class="tab_a">단지</a>
+							<em class="sale_num">매매</em>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="" id="siteListTitle">
+							<a href="#" class="tab_a">현장확인매물</a>
+							<em class="sale_num">매매 0건</em>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li id="realtorListTitle">
+							<a href="#" class="tab_a">중개업소</a>
+							<span class="sale_num">매매</span>
+							<p class="sort sort2"><span class="sort_a"><a href="#" class="fo dw">확인일자순</a></span> <span>|</span> <span class="sort_a"><a href="#">면적순</a></span> <span>|</span> <span class="sort_a"><a href="#">가격순</a></span></p>
+							<div id="realtorListLayer" class="housing scroll">
+								<div class="housing_inner">
+									<ul class="lst_site">
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="tit">LG개포자이(이지빌) 101동</span>
+											<span class="thmb"><img src="img/@thmb.gif" width="45" height="45" alt=""><em class="mask"></em></span>
+											<span class="dsc">월세:<em>10,000/1,000만원</em><br>면적:<em>111/11㎡</em>  층:<em>7/15층</em></span>
+										</a>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_layer"><span class="bg_btn_layer"></span><a href="#"><span class="blind">지역 리스트 크게보기</span></a></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="map_bar" id="map_bar"><a class="_resize_map_bar" href="#"><img alt="지도확대" src="http://static.land.naver.net/static/service/20121211/article/btn_map_down.gif"></a></div>
+	</div>
+		<!--하위 컨텐츠 및 Aside Component 영역 List Container -->
+		<a name="priceLocation"></a>
+		<div id="container">
+		<div id="content">
+		<div class="sale_info sale_info_sise NE=a:trd" id="depth4Content">
+			<fieldset>
+				<legend>관심매물 등록</legend><!-- to-do list : 관심매물등록 스크립트 처리, 단지매물 전체보기링크처리 -->
+				<h2 class="NE=a:ttl" id="depth4Content_Title">[개포동]<span>LG개포자이
+				<a target="_blank" class="map street NPI=a:street" href="#">거리뷰</a>
+				<a target="_blank" class="map airplane NPI=a:flight" href="#">항공뷰</a>
+				</span><a href="javascript:nhn.article.sector.registerInterestComplex('8928');" class="btn NPI=a:mylist">관심단지등록</a><span class="bar">ㅣ</span><a class="btn NPI=a:cpxall" href="javascript:nhn.article.sector.goPage2('/article/articleList.nhn',{'rletNo':8928,'location':nhn.article.common.getScrollHeight()},['mapX','mapY','mapLevel','cortarNo','page','ptpNo','rltrNm','bildNo','articleOrderCode','tradeTypeCd','hscpTypeCd']);">단지매물전체</a> <a style="display:none;" class="view_all _address_move_link NPI=a:dongarticle" href="#"><span><strong></strong>매물보기</span></a></h2>
+
+				<ul class="tab_sale_detail">
+				<li class="w66"><a href="#">매물</a></li>
+				<li class="w66 on"><a href="#">시세<span class="ico_opentab"></span></a></li>
+				<li class="w76"><a href="#">단지정보</a></li>
+				<li class="w92"><a href="#"><span class="ico_newtab">New</span>동/평면도</a></li>
+				<li class="w76"><a href="#">커뮤니티</a></li>
+				<li class="w66"><a href="#">대출</a></li>
+				<li class="w66"><a href="#">세금</a></li>
+				<li class="w76 end"><a href="#">지난매물</a></li>
+				</ul>
+
+				<div class="tab_article">
+					<div class="section_sise">
+						<input type="radio" onclick="nhn.article.sector.refresh({'cpId':'neonet','location':nhn.article.common.getScrollHeight()});" checked="" class="input_radio NPI=a:neonet" name="sise" id="sise_neonet"><label for="sise_neonet">한국감정원 시세</label>
+						<input type="radio" onclick="nhn.article.sector.refresh({'cpId':'r114','location':nhn.article.common.getScrollHeight()});" class="input_radio NPI=a:r114" name="sise" id="sise_r114"><label for="sise_r114">부동산114 시세</label>
+						<input type="radio" onclick="nhn.article.sector.refresh({'cpId':'kria','location':nhn.article.common.getScrollHeight()});" class="input_radio NPI=a:kria" name="sise" id="sise_kria"><label for="sise_kria">조인스랜드부동산 시세</label>
+						<div class="btn_mltm">
+							<a href="#"><span class="blind">국토해양부 실거래가</span></a>
+						</div>
+					</div>
+
+					<h3 style="z-index:-1;" class="tit_sise"><span class="arrow"></span><img width="55" height="13" alt="면적별 시세" src="http://static.land.naver.net/static/service/20121211/article/h3_sale_sise3.gif"></h3>
+					<p class="tbl_info2">
+						<strong>시세 기준일</strong>
+						<span>2013.01.02</span>
+					</p>
+					<!-- 시작 : 카페 / 블로그 담기 추가 2011-03-08
+					<div class="btn_scrap">
+						<span class="bar">l</span>
+					</div>
+					 종료 : 카페 / 블로그 담기 추가 2011-03-08 -->
+					<table cellspacing="0" cellpadding="0" style="margin-bottom: 34px;" class="current_6weeks" summary="단지시세정보">
+					<colgroup>
+						<col width="104"><col width="95"><col width="96"><col width="96"><col width="95"><col width="96"><col width="96">
+					</colgroup>
+					<thead>
+					<tr>
+					<th class="midline" scope="col">면적(㎡)</th>
+					<th class="midline" scope="col" colspan="3"><strong>매매가</strong>(만원)</th>
+					<th class="noline" scope="col" colspan="3"><strong>전세가</strong>(만원)</th>
+					</tr>
+					<tr>
+					<th class="midline" scope="col">공급/전용</th>
+					<th scope="col">하한가</th>
+					<th scope="col">상한가</th>
+					<th class="midline" scope="col">지난주 대비 변동액</th>
+					<th scope="col">하한가</th>
+					<th scope="col">상한가</th>
+					<th class="noline" scope="col">지난주 대비 변동액</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row"><span title="공급 160.71㎡ ">151.08/<strong>114.99</strong></span></th>
+					<td>125,000</td>
+					<td><strong>130,000</strong></td>
+					<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+					<td>60,000</td>
+					<td><strong>66,000</strong></td>
+					<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+					</tr>
+					<tr>
+					<th scope="row"><span title="공급 183.14㎡ ">183</span></th>
+					<td>140,000</td>
+					<td><strong>150,000</strong></td>
+					<td class="midline state_keep"><img title="유지" src="http://static.land.naver.net/static/service/20121211/article/ico_price_keep.gif" height="8" width="7"><strong>0</strong></td>
+					<td>65,000</td>
+					<td><strong>70,000</strong></td>
+					<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+					</tr>
+					<tr>
+					<th scope="row"><span title="공급 201.74㎡ ">201A</span></th>
+					<td>170,000</td>
+					<td><strong>177,500</strong></td>
+					<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+					<td>70,000</td>
+					<td><strong>72,500</strong></td>
+					<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+					</tr>
+					<tr>
+					<th scope="row" class="noline"><span title="공급 204.52㎡ ">204B</span></th>
+					<td class="noline">170,000</td>
+					<td class="noline"><strong>177,500</strong></td>
+					<td class="noline midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+					<td class="noline">70,000</td>
+					<td class="noline"><strong>72,500</strong></td>
+					<td class="noline state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+					</tr>
+					</tbody>
+					</table>
+					<p class="offer">본 시세는 부동산 조사∙평가∙통계 전문기관인 <a href="http://www.kab.co.kr/">한국감정원</a>에서 제공합니다.<br>시세도움 중개업소 : <a href="#">럭키공인중개사</a> 02-2000-3000</p>
+					<!--
+					<ul class="tbl_list">
+					<li><strong>상위평균가</strong> : 해당 평형 내에서 고가로 거래되는 선호 세대들의 평균적인 가격</li>
+					<li><strong>일반평균가</strong> : 해당 평형 내에서 일반적으로 거래되는 세대들의 평균적인 가격</li>
+					<li><strong>하위평균가</strong> : 해당 평형 내에서 저가로 거래되는 세대들의 평균적인 가격</li>
+					</ul>
+					-->
+
+					<h3 class="tit_sise"><span class="arrow"></span><img width="71" height="14" alt="시세변동 추이" src="http://static.land.naver.net/static/service/20121211/article/h3_sale_sise1.gif"></h3>
+					<div class="current_price">
+						<div class="graph">
+							<ul class="etcmenu" id="ptpSelectList">
+							<!-- 선택된 리스트에 on 클래스 추가 -->
+							<li class="num first on"><a title="공급 160.71㎡ " href="#">160/134㎡</a></li>
+							<li class="num "><a title="공급 183.14㎡ " href="#">183/153㎡</a></li>
+							<li class="num "><a title="공급 201.74㎡ " href="#">201A/170㎡</a></li>
+							<li class="num last "><a title="공급 204.52㎡ " href="#">204B/168㎡</a></li>
+							</ul>
+							<div class="graph_area">
+							 <!-- 선택 된 탭 class li on 추가 -->
+							<div class="tab_area">
+								<ul>
+								<li class="on">
+									<a href="#" class="tab">매매</a>
+									<div class="tab_sise">
+										<p>(입주일로부터 최장 7년시세)</p>
+										<a href="#" class="frst">1년</a>
+										<a href="#">3년</a>
+										<a href="#">5년</a>
+										<a href="#" class="on">7년</a>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="tab2">전세</a>
+									<div class="tab_sise">
+										<p>(입주일로부터 최장 7년시세)</p>
+										<a href="#" class="frst">1년</a>
+										<a href="#">3년</a>
+										<a href="#">5년</a>
+										<a href="#" class="on">7년</a>
+									</div>
+								</li>
+								</ul>
+							</div>
+								<div class="legend_area">
+									<ul>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend1.gif">상위평균가</li>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend3.gif">하위평균가</li>
+									</ul>
+								</div>
+							</div>
+							<!-- 좌측 플래시(플래시는 div 안에 넣어주세요)
+							<div id="priceGraph_sale">
+								<p class="desc_graph"><em>매매</em><span class="bar">ㅣ</span><span>160㎡ 시세, <strong id="rightGraphPrice1">130,000</strong> 만원</span></p>
+								<p style="height:188px;" id="chartdiv"></p>
+								<div class="legend_area">
+									<ul>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend1.gif">상위평균가</li>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend2.gif">일반평균가</li>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend3.gif">하위평균가</li>
+									</ul>
+								</div>
+							</div>
+							우측 플래시(플래시는 div 안에 넣어주세요)
+							<div id="priceGraph_lease">
+								<p class="desc_graph"><em>전세</em><span class="bar">ㅣ</span><span>160㎡ 시세, <strong id="articleGraphPrice1">66,000</strong> 만원</span></p>
+								<p style="height:188px;" id="chartdiv2"></p>
+								<div class="legend_area">
+									<ul>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend1.gif">상위평균가</li>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend2.gif">일반평균가</li>
+									<li><img width="5" height="5" alt="" src="http://static.land.naver.net/static/service/20121211/article/ico_legend3.gif">하위평균가</li>
+									</ul>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<div id="depth4PriceInfo_YearDetail">
+
+
+							<h3><span class="arrow"></span><img width="45" height="14" alt="최근 시세" src="http://static.land.naver.net/static/service/20121211/article/h3_sale_sise2.gif"></h3>
+
+						<!-- 시작 : 카페 / 블로그 담기 추가 2011-03-08
+						<div class="btn_scrap">
+							<span class="bar">l</span>
+						</div>
+						 종료 : 카페 / 블로그 담기 추가 2011-03-08 -->
+						<table cellspacing="0" cellpadding="0" class="current_6weeks" summary="월별 시세추이">
+							<colgroup>
+								<col width="74"><col width="100"><col width="101"><col width="101"><col width="100"><col width="101"><col width="101">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="midline" scope="col" rowspan="2">기준일</th>
+									<th class="midline" scope="col" colspan="3">160/<strong>160㎡ 매매가</strong>(만원)</th>
+									<th class="noline" scope="col" colspan="3">160/<strong>160㎡ 전세가</strong>(만원)</th>
+								</tr>
+								<tr>
+									<th scope="col">하한가</th>
+									<th scope="col">상한가</th>
+									<th class="midline" scope="col">평균변동액</th>
+									<th scope="col">하한가</th>
+									<th scope="col">상한가</th>
+									<th class="noline" scope="col">평균변동액</th>
+								</tr>
+							</thead>
+							<tbody>
+
+
+
+									<tr>
+										<th scope="row">2013.01.02</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_keep"><img title="유지" src="http://static.land.naver.net/static/service/20121211/article/ico_price_keep.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.12.26</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.12.18</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.12.12</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.12.05</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.11.21</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.11.14</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.11.07</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+									<tr>
+										<th scope="row">2012.10.31</th>
+										<td>125,000</td>
+										<td><strong>130,000</strong></td>
+										<td class="midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td>60,000</td>
+										<td><strong>66,000</strong></td>
+										<td class="state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+
+
+
+									<tr>
+										<th scope="row" class="noline">2012.10.24</th>
+										<td class="noline">125,000</td>
+										<td class="noline"><strong>130,000</strong></td>
+										<td class="noline midline state_down"><img title="지난주 대비 하락" src="http://static.land.naver.net/static/service/20121211/article/ico_price_down.gif" height="8" width="7"><strong>0</strong></td>
+										<td class="noline">60,000</td>
+										<td class="noline"><strong>66,000</strong></td>
+										<td class="noline state_up"><img title="지난주 대비 상승" src="http://static.land.naver.net/static/service/20121211/article/ico_price_up.gif" height="8" width="7"><strong>0</strong></td>
+									</tr>
+
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+		<!-- 배너 영역 -->
+		<div id="depthAside" class="aside aside_home NE=a:rbn">
+			<!-- DA_280배너 -->
+			<div id="addiv" name="addiv">
+				<div id="da_280240" name="da_280240">
+					<iframe id="f280240" name="f280240" src="http://ad.naver.com/adshow?unit=779A" marginheight="0" marginwidth="0" align="middle" frameborder="0" height="240" scrolling="no" width="280"></iframe>
+				</div>
+			</div>
+
+			<!--  맞춤매물 배너 -->
+			<div class="side_banner" style="position:relative; width:280px; height:100px; background:url(http://static.land.naver.net/static/service/20121211/banner/findhouse/280x100_3_cctv.jpg) no-repeat;">
+				<a class="N=a:rbn.ban,r:3" href="/findhouse/index.nhn" target="_blank" style="position:absolute; left:15px; top:70px; width:50px; height:12px; display:block; text-indent:-99999em;">
+					자세히보기
+				</a>
+				<a class="N=a:rbn.ban,r:4" href="/findhouse/request.nhn" target="_blank" style="position:absolute; left:70px; top:70px; width:80px; height:12px; display:block; text-indent:-99999em;">
+					의뢰바로신청하기
+				</a>
+			</div>
+			<div class="side_banner"><a class="N=a:rbn.ban,r:2" href="http://land.naver.com/community/ourtown.nhn" target="_blank"><img alt="집을 구하는데, 궁금해요!" src="http://static.land.naver.net/static/service/20121211/banner/community_banner.jpg" height="110" width="280"></a></div>
+			<div id="asidePromotionBanner3" class="side_banner">
+				<a class="N=a:rbn.ban,r:5" target="_blank" href="#" onclick="nhn.article.common.popupConfirmPromotionWindow(); return false;"><img src="http://static.land.naver.net/static/service/20121211/banner/confirm_promotion_280_100.jpg" alt="확인매물 프로모션" height="100" width="280"></a>
+			</div>
+			<div class="side_banner">
+				<a target="_blank" href="#"><img src="img/place_banner2.jpg" alt="추운 날씨에 발품팔지 마세요! 네이버 부동산이 눈으로 직접 확인한 현장확인매물을 찾으세요!" width="280" height="100"></a>
+			</div>
+		</div>
+		</div>
+
+
+
+
+	<div id="mySalesLayer" class="my_sales" style="top: 655px; right: -89px; position: absolute;">
+		<div id="mySalesUserInfolayer" class="bg_my_sales_t">
+			<h3 class="type1">MY매물</h3>
+			<div class="cont">
+				<p class="login">로그인을 해주세요</p>
+				<a href="javascript:void(0);" id="aLoginTag" class="N=a:rwb_off.login"><img src="http://static.land.naver.net/static/service/20121211/sale/btn_my_popup_login.gif" alt="로그인" style="margin-bottom:2px;" height="17" width="59"></a>
+			<!--result: home_myatcl processed//-->
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+		<div class="bg_my_sales_t">
+			<div id="mySalesArticleLayer" class="bg_my_sales_t">
+				<h3 class="type2">최근본매물</h3>
+				<div class="cont NE=a:rwb">
+					<!-- 비활성시 btn_up, 활성시 btn_up_on -->
+					<span class="updown btn_up NPI=a:prev" style="display:block;"><a href="javascript:void(0);" class="up"><img src="http://static.land.naver.net/static/service/20121211/article/btn_my_popup_up.gif" alt="위로" height="10" width="57"></a></span>
+					<!-- If exist housing user seen -->
+					<!-- If not exist housing user seen -->
+					<div id="horizon_rollingmask" class="maskarea" style="display: block;">
+						<ul id="articleUI" class="housing">
+						<li class="frst"><a href="http://land.naver.com/article/articleDetailInfo.nhn?atclNo=1204138817&amp;amp;atclRletTypeCd=A01&amp;amp;rletTypeCd=A01" class="NPI=a:alist,r:1,i:1204138817" alt="도곡렉슬" title="타워팰리스1차">타워팰리스1차<br><em>86/59㎡ <span>|</span><br>[매]64,000</em></a></li>
+						<li class=""><a href="http://land.naver.com/article/articleDetailInfo.nhn?atclNo=1300058326&amp;amp;atclRletTypeCd=A03&amp;amp;rletTypeCd=A01" class="NPI=a:alist,r:2,i:1300058326" alt="타워팰리스1차" title="타워팰리스1차">타워팰리스1차<br><em>233/174㎡ <span>|</span><br>[매]260,000</em></a></li>
+						<!-- [D]마우스 오버시 class="hover" 추가 button 영역 추가-->
+						<li class="hover"><a href="http://land.naver.com/article/articleDetailInfo.nhn?atclNo=1300058326&amp;amp;atclRletTypeCd=A03&amp;amp;rletTypeCd=A01" class="NPI=a:alist,r:2,i:1300058326" alt="타워팰리스1차" title="타워팰리스1차">타워팰리스1차<br><em>233/174㎡ <span>|</span><br>[매]260,000</em></a>
+						<!-- [D]마우스 오버시 class="btn_hover" 추가 -->
+						<button type="button" class="btn_hover"><span class="blind">삭제</span></button>
+						</li>
+						<li class=""><a href="http://land.naver.com/article/articleDetailInfo.nhn?atclNo=1300060745&amp;amp;atclRletTypeCd=A01&amp;amp;rletTypeCd=A01" class="NPI=a:alist,r:3,i:1300060745" alt="개포한신" title="개포한신">개포한신<br><em>73/52㎡ <span>|</span><br>[매]62,000</em></a></li>
+						<li class=""><a href="http://land.naver.com/article/articleDetailInfo.nhn?atclNo=1300060745&amp;amp;atclRletTypeCd=A01&amp;amp;rletTypeCd=A01" class="NPI=a:alist,r:3,i:1300060745" alt="개포한신" title="타워팰리스1차">타워팰리스1차<br><em>73/52㎡ <span>|</span><br>[매]62,000</em></a></li>
+						</ul>
+					</div>
+					<span class="updown btn_down NPI=a:next" style="display: block;"><a href="javascript:void(0);" class="down"><img src="http://static.land.naver.net/static/service/20121211/article/btn_my_popup_down_on.gif" alt="아래로" height="10" width="57"></a></span>
+				</div>
+				<!--result: home_recatcl processed//-->
+				<h3 class="type3">평형계산</h3>
+				<div class="cont">
+					<fieldset id="pyLayer">
+						<legend>평형계산</legend>
+						<input class="input_text" title="값 입력" maxlength="5" style="padding-right:1px;cursor:text;" type="text">
+						<a href="javascript:void(0);" onclick="return false;" class="_calc"><img src="http://static.land.naver.net/static/service/20160712/sale/btn_calculate.gif" alt="계산" class="input_btn" height="18" width="61"></a>
+						<input class="input_text" title="값 입력" maxlength="5" style="padding-right:1px;cursor:text;" type="text">
+						<ul class="cal_list" style="display: none;">
+						</ul>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		<div class="bg_my_sales_b"></div>
+	</div>
+
+
+
+	<!-- footer -->
+	<script type="text/javascript" language="javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js"></script>
+	<div id="footer">
+		<div class="footwrap NE=a:fot">
+			<fieldset>
+			<legend class="blind">검색</legend>
+				<div class="sta_search_box NE=a:lsc">
+
+
+					<input title="검색" id="queryInputFooter" value="" query="" onkeyup="serviceInternalSearchEnterCheck(event,1);" accesskey="s" searchareaclicked="false" searchtype="Promotion" class="sta_search_text" onfocus="searchInputBoxFocus(this);" type="text">
+
+
+
+					<a href="#" class="btn_search NPI=a:search" onclick="serviceInternalSearchFooter();return false;">검색</a>
+					<a href="#" class="btn_search2 NPI=a:nx" onclick="serviceInternalTotalSearchFooter();return false;">통합검색</a>
+				</div>
+			</fieldset>
+			<ul class="NE=a:fot">
+				<li class="first"><a href="#" onclick="OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'parentId=63'}); return false;" class="NPI=a:help">부동산 도움말</a></li>
+				<li><a href="http://land.naver.com/index/service.nhn" class="NPI=a:service">이용약관</a></li>
+				<li><a href="http://mktg.naver.com/privacy/privacy.html" target="_blank" class="NPI=a:privacy"><strong>개인정보취급방침 </strong></a></li>
+				<li><a href="http://land.naver.com/index/disclaimer.nhn" class="NPI=a:limit">책임의 한계와 법적고지</a></li>
+				<li><a href="http://landad.naver.com/" target="_blank" class="NPI=a:landad">광고안내</a></li>
+				<li><a href="http://help.naver.com/main.asp" target="_blank">고객센터</a></li>
+<!-- <li><a href="#" onclick="OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/mail.nhn', param : 'upCatg=241'}); return false;"class="NPI=a:helpdesk">문의하기</a></li>-->
+			</ul>
+			<p class="info"> 네이버부동산은 부동산 관련정보를 제공하는 것을 목적으로 하며, <br>
+				네이버부동산은 이용자와 제휴사와의 거래에 대한 오류 및 거래에 관련한 제반문제에 대하여 어떠한 책임도 지지 않습니다. </p>
+			<address>
+			<a href="http://www.nbp-corp.com/" target="_blank" class="logo N=a:fot.nbpcorp">NHN BUSINESS PLATFORM</a>
+			<em>Copyright ⓒ</em> <a href="http://www.nbp-corp.com/" target="_blank">NHN BUSINESS PLATFORM Corp.</a> <span>All Rights Reserved.</span>
+			</address>
+
+		</div>
+	</div>
+	<!-- //footer -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* 스피킹 영역 */
+.speaking_area{
+  padding:42px 0 15px;
+  background-color:#fff;
+  text-align:center;
+
+  .tit{
+    font-size:20px;
+    line-height:26px;
+    color:#000;
+    strong{
+      display:block;
+      color:#4392e3;
+      font-weight:normal;
+    }
+  }
+  .caution{
+    display:block;
+    margin-top:8px;
+    font-size:15px;
+    color:#aaa;
+  }
+  .btn_app{
+    @extend %sprite_conversation_img;
+    @include spriteConversation(154px, 154px, -200px, -360px);
+
+    display:block;
+    margin:23px auto 0;
+  }
+}

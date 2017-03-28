@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>좌측 검색 조건 - 전체탭</title>
+<link rel="stylesheet" type="text/css" href="../../css/land_search.css">
+<script type="text/javascript" src="js/jindo.all.js"></script>
+<script type="text/javascript" src="js/jindo_component.debug.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="snb">
+			
+			<div class="section_option">
+				<div class="calc">
+					
+					<h4>평형 계산기</h4>
+					<input type="text" class="calc_text" title="면적" style="width:34px;">
+					<!-- [D] Select 부분은 Jindo Component 를 활용 하였습니다. -->
+					<div class="selectbox-noscript select_crit" id="select_pyeong_unit">
+						<select class="selectbox-source">
+							<option class="selectbox-default">선택</option>
+					   		<option value="0">평</option>
+					   		<option value="1">㎡</option>
+						</select>
+						<div class="selectbox-box">
+							<div class="selectbox-label"></div>
+						</div>
+					   	<div class="selectbox-layer">
+					   		<div class="selectbox-list"></div>
+					   	</div>
+					</div>
+					<a href="#" class="btn_calc"><img src="img/btn_calc.gif" alt="계산" width="28" height="16" ></a>
+					<p class="result"><strong>175.5</strong> ㎡</p>
+					
+					<script type="text/javascript">
+				    // Constructor
+					var sbxPyeongUnit = new jindo.SelectBox($("select_pyeong_unit"),{
+		                 nWidth : null, //가로 사이즈, null시 자동
+		                 nHeight : 100, //목록의 최대 높이. 그 이상시 스크롤 생김
+		                 bUseLayerPosition : false
+				    });
+					
+					// 초기값 설정
+					sbxPyeongUnit.setSelectedIndex(1);
+					
+					// 레이어가 열려있는 경우 닫음
+					if(sbxPyeongUnit.isLayerOpened) {
+						sbxPyeongUnit.getLayerManager().hideOut();	
+					}
+					
+					// 변경 확인을 위한 이벤트 알림
+					sbxPyeongUnit.attach({
+						change : function(oCustomEvent) {
+							alert(oCustomEvent.nIndex);
+						}
+					});
+					
+					</script>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
