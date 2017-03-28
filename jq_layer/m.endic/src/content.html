@@ -1,0 +1,102 @@
+<?
+	if(!$page) {
+?>
+		<style type="text/css">
+            .file_list,.popup_list{font-size:12px;width:300px;margin:30px auto;border-top:1px solid #1c1c1c}
+            .file_list li, .popup_list li{border:1px solid #000;border-top:0}
+            .popup_list li{background:#000;color:#FFF}
+            .file_list li a,.popup_list li a{display:block;padding:5px 0 5px 10px}
+            .popup_list li a{padding-right:5px;padding-left: 46px;  text-indent: -36px;color:#FFF}
+
+            .popup_list li:nth-child(1),.popup_list li:nth-child(2){background:#FFF}
+            .popup_list li:nth-child(1) a,.popup_list li:nth-child(2) a{color:#000}
+
+            .file_list li:nth-child(even){background:#E87B6A;}
+
+        </style>
+
+        <ul class="popup_list">
+            <li class="auto"><a href="#">[클릭시 활성화] 자동완성</a></li>
+            <li class="set_lang"><a href="#">[팝업] 메인 - 언어설정   </a></li>
+            <li class="toast"><a href="#">[팝업] 단어장 추가 Toast </a></li>
+            <li class="autosave"><a href="#">[팝업] 최근검색 - 자동저장시   </a></li>
+            <li class="autosave1"><a href="#">[팝업] 최근검색 - 삭제  </a></li>
+            <li class="usertrans"><a href="#">[팝업]  번역문 - 이미 참여하셨습니다  </a></li>
+            <li class="usertrans1"><a href="#">[팝업]  번역문 - 신고하기  </a></li>
+            <li class="usertrans2"><a href="#">[팝업]  참여번역  </a></li>
+            <li class="usertrans3"><a href="#">[팝업]  내 번역문에 맞아요,틀려요 선택시  </a></li>
+            <li class="usertrans4"><a href="#">[팝업]  다른 이용자 번역문에 이미 맞아요,틀려요 선택시  </a></li>
+            <li class="usertrans5"><a href="#">[팝업]  이미 신고한 번역문을 재신고 할 경우  </a></li>
+            <li class="usertrans6"><a href="#">[팝업]  평가 제한시간  </a></li>
+            <li class="kan_academy"><a href="#">[팝업]  칸아카데미 - 예문 더보기  </a></li>
+            <li class="kan_academy1"><a href="#">[팝업]  칸아카데미 - 영상보기  </a></li>
+            <li><a href="0pop_new_ver.html">[팝업] 개편 안내 팝업</a></li>
+            <li><a href="event/pop_usertrans_event.html">[팝업] 참여번역 월 번역왕 이벤트</a></li>
+            <li><a href="view_vlive.html">[V LIVE] V LIVE 자막 예문 페이지</a></li>
+        </ul>
+        <ul class="file_list">
+    <?
+        $fileNames = array(
+            'home.html' => '홈(오전판) + 최근 검색어 없습니다',
+            'home2.html' => '홈(오후판, 영어 ver)',
+            'entry.html' => '엔트리(영문)',
+            'entry2.html&word=entry_headword1.html' => '기본 엔트리(영문) - 위첨자, 발음듣기 2줄',
+            'entry2.html&word=entry_headword2.html' => '기본 엔트리(영문) - 문장',
+            'entry2.html&word=entry_headword3.html' => '기본 엔트리(한글+한자) - 위첨자',
+            'entry2.html&word=entry_headword4.html' => '기본 엔트리(한글) - 긴 경우',
+            'entry.html&usefultip=entry_usefultip1.html' => '유용한팁 - 단어 정보만',
+            'entry.html&usefultip=entry_usefultip2.html' => '유용한팁 - 이미지 1개 + 부가설명',
+            'entry.html&usefultip=entry_usefultip3.html' => '유용한팁 - 이미지 N개 + 개별 엔트리 가진 단어',
+            'entry.html&usefultip=entry_usefultip4.html' => '유용한팁(+이미지 정보)',
+            'entry.html&usefultip=entry_usefultip5.html' => '유용한팁 - 대표 타이틀 2개인 경우',
+            'entry.html&usefultip=entry_usefultip6.html' => '유용한팁 - 단어 정보 + 이미지 정보',
+            'entry3.html&usefultip=entry_usefultip5.html' => '[엔트리] - 등급별 뜻',
+            'entry_examples.html&content=entry_examples_tab1.html' => '[엔트리] 명언 - 비슷한 예문',
+            'entry_examples.html&content=entry_examples_tab2.html' => '[엔트리] 명언 - 번역을 기다리는 예문',
+            'entry_examples2.html' => '[엔트리] 자동번역',
+            'entry_examples3.html' => '[엔트리] 이용자 참여 번역문 - 5개 이상 더보기 ',
+            'entry_examples2.html&khan=khan' => '[엔트리] 칸아카데미 자동번역 ',
+            'entry_examples4.html' => '[엔트리] 칸아카데미 예문 ',
+            'entry_webcollect.html&word=entry_headword5.html' => '[엔트리] - 웹수집',
+            'entry_opendic.html&word=entry_headword6.html' => '[엔트리] - 오픈사전',
+            'entry4.html&word=entry_headword7.html' => '[엔트리] - 부표제어(영한)',
+            'search_result_all.html&word=search_result_all_word.html&body=search_result_all_body.html' => '[검색결과] - 전체<p style="padding-right:5px;text-align:right">(+ 기본형도 함께 검색된 경우)</p>',
+            'search_result_all2.html&word=search_result_all_word1.html&body=search_result_all_body1.html' => '[검색결과] - 전체(한글표제어)<p style="padding-right:5px;text-align:right">(+ 제안 : 강제 변환)</p>',
+            'search_tab.html&content=search_result_subject.html' => '[검색결과] - 주제형 검색',
+            'search_tab.html&content=search_tab_word.html' => '[검색결과] - 단어/숙어(이미지 검색결과 포함)',
+            'search_tab.html&content=search_tab_body.html' => '[검색결과] - 본문',
+            'search_tab.html&content=search_tab_example.html' => '[검색결과] - 예문',
+            'search_tab.html&content=search_tab_example_vlive.html' => '[검색결과] - 예문(VLIVE자막)',
+            'search_tab.html&content=search_tab_synonym.html' => '[검색결과] - 유의어/반의어',
+            'search_result_no.html&content=search_result_no1.html' => '[검색결과 없는경우] - 전체/단어,숙어/본문',
+            'search_result_no.html&content=search_result_no2.html' => '[검색결과 없는경우] - 비슷한 단어 추천<p style="padding-right:5px;text-align:right">(+ 제안 : 추천 교정어)</p>',
+            'search_result_no.html&content=search_result_no3.html' => '[검색결과 없는경우] - 예문/유의어',
+            'search_result_no.html&content=search_result_no4.html' => '[검색결과 없는경우] - 본문',
+            'usertrans.html&usertrans=usertrans_tab1.html' => '[이용자 참여번역] - 번역을 기다리는 예문',
+            'usertrans.html&usertrans=usertrans_tab2.html' => '[이용자 참여번역] - 참여 번역문',
+            'usertrans.html&usertrans=usertrans_tab3.html' => '[이용자 참여번역] - 랭킹',
+            'usertrans.html&usertrans=usertrans_tab4.html' => '[이용자 참여번역] - 내 번역 있을 때',
+            'usertrans.html&usertrans=usertrans_tab4_1.html' => '[이용자 참여번역] - 내 번역 없을 때',
+            'view_vlive.html' => '[V LIVE] - V LIVE 자막'
+            );
+
+        foreach ($fileNames as $key => $val) {
+            if($key == 'error.html' || $key == 'terms.html') {
+?>
+                <li><a href="<?= $key ?>" target="_blank"><?= $val ?></a></li>
+<?
+            } else if(strpos($key,'usertrans.html') !== false){ // 이용자 참여 번역 헤더
+?>
+                <li><a href="?head=incl_header_usertrans.html&page=<?= $key ?>"><?= $val ?></a></li>
+<?
+            } else {
+?>
+            <li><a href="?page=<?= $key ?>"><?= $val ?></a></li>
+<?
+		    }
+		}
+	} else {
+		include $page;
+	}
+?>
+</ul>

@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+%clear{
+    &:before,
+    &:after{
+        content: "";
+        display:table;
+    }
+    &:after{
+        clear:both;
+    }
+    &{
+        zoom:1;
+    }
+}
+
+%center-both{
+    position:absolute;
+    top:50%;
+    left:50%;
+    @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
+}
+
+%android_element_bug_fix{
+    &:after{
+        content:'\00a0'
+    }
+}
+
+%hide_text{
+    font-size:1px;
+    line-height:1px;
+    color:rgba(1, 0, 0, 0); //rgba(0,0,0,0) is compiled into transparent.
+}
+
+%display_flex{
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:flex;
+}
+
+//gnb 이미지
+%sprite_gnb_img{
+  background: url(../img/sp_gnb.png) no-repeat;
+  background-size: 100px 100px;
+  -webkit-background-size: 100px 100px;
+}
+
+//엔트리&홈
+%sprite_common_img{
+  background:url(../img/sp_common.png) no-repeat;
+  background-size:150px 200px;
+  -webkit-background-size:150px 200px;
+}
+
+//이용자 참여번역 이미지
+%sprite_usertrans_img{
+  background:url(../img/sp_usertrans.png) no-repeat;
+  background-size:23px 100px;
+  -webkit-background-size:23px 100px;
+}
+
+//팝업 이미지
+%sprite_popup_img{
+  background:url(../img/sp_popup.png) no-repeat;
+  background-size:21px 100px;
+  -webkit-background-size:21px 100px;
+}
+
+//점선 이미지
+%common_dot_patt{
+  display:block;
+  position:absolute;
+  bottom:0;
+  left:3px;
+  right:2px;
+  content:'';
+  height:1px;
+  background-image:url("../img/border_dot_patt.png");
+  background-size:4px 1px;
+  -webkit-background-size:4px 1px;
+  background-repeat:repeat-x;
+}
+
+//더보기 버튼
+%common_btn_more_show{
+  float:right;
+  padding:5px;
+  margin:-5px;
+  font-size:13px;
+  line-height:24px;
+  color:#666;
+
+  &:after{
+    @extend %sprite_common_img;
+
+    display:inline-block;
+
+    content:'';
+    width:5px; height:10px;
+    margin-left:3px;
+    background-position:-50px -20px;
+  }
+}
+
+%sprite_footer_img{
+  background:url(../img/sp_footer.png) no-repeat;
+  background-size:10px 20px;
+  -webkit-background-size:10px 20px;
+}
+
+
+//보조사전
+%sprite_helpdic_img{
+  background:url(../img/sp_subDic.png) no-repeat;
+  background-size:50px 50px;
+}
+
+%common_select_style{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-size: 0;
+  line-height: 0;
+
+  option{
+    font-size:14px;
+  }
+}
+
+//보조사전
+%sprite_vlive_img{
+  display:inline-block;
+  background:url(../img/sp_vlive.png) no-repeat;
+  -webkit-background-size:75px 75px;
+  background-size:75px 75px;
+  vertical-align: top;
+}

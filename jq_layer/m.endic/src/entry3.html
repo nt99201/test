@@ -1,0 +1,134 @@
+<!--[D] 엔트리 폰트 조정 -->
+<!--[D] 1단계 - 클래스 없음 -->
+<!--[D] 2단계 - fs2-->
+<!--[D] 3단계 - fs3-->
+<!--[D] 4단계 - fs4-->
+<!--[D] 5단계 - fs5-->
+
+<!-- 등급별 뜻 탭 페이지 -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+
+    <section class="section_entry">
+        <h2 class="u_hc">단어 섹션</h2>
+        <? include 'layer_option_menu.html' ?>
+
+        <div class="entry_word">
+            <? include ''.$word_type ?>
+        </div>
+        <? include 'entry_quick_menu.html' ?>
+    </section>
+
+    <section class="section_entry">
+        <h2 class="u_hc">정의 섹션</h2>
+        <ul class="source_tab">
+            <li class="tab_item"><a href="#">옥스퍼드</a></li>
+            <li class="tab_item "><a href="#">동아</a></li>
+            <li class="tab_item "><a href="#">YBM</a></li>
+            <li class="tab_item"><a href="#">교학사</a></li>
+            <li class="tab_item on"><a href="#">등급별 뜻</a></li>
+        </ul>
+        <!-- 20160819 접근성수정
+            [D] 상위 tab에 활성화에 따라 아래의 타이틀을 변경해주세요.
+            예)<h3 class="blind">옥스퍼드</h3>
+            <h3 class="blind">동아</h3>
+            <h3 class="blind">YBM</h3>
+            <h3 class="blind">교학사</h3>
+            <h3 class="blind">등급별 뜻</h3>
+        -->
+        <h3 class="blind">옥스퍼드</h3>
+        <!-- //20160819 접근성수정 -->
+        <!-- 20160819 접근성 수정
+            [D] label for 와 id 맞춰서 작업해주세요
+        -->
+        <div class="rating_tab">
+            <a href="#"><input type="radio" name="radio" id="radio1" value="전체등급" class="radio" checked="checked"><label for="radio1">전체등급</label></a>
+            <a href="#"><input type="radio" name="radio" id="radio2" value="초급" class="radio on"><label for="radio2">초급</label></a>
+            <a href="#"><input type="radio" name="radio" id="radio3" value="중급" class="radio"><label for="radio3">중급</label></a>
+            <a href="#"><input type="radio" name="radio" id="radio4" value="고급" class="radio"><label for="radio4">고급</label></a>
+        </div>
+        <!-- 20160819 접근성 수정 -->
+        <div class="entry_mean">
+            <h3 class="h_tit">타동사<span class="word_class">[단어나 문장의 일부를 서로 연결하여], (참고: and/or)</span></h3>
+            <ul class="mean_wrap">
+               <li class="mean_itm">
+                   <em class="num">1</em>
+                   <div class="inner_wrap">
+                       <p class="mean"><span class="tag black">초급</span><strong class="point">가지고 가다</strong>, 이동시키다; <strong class="point">가져다주다</strong>; (carry)(cf. bring).</p>
+                       <h4 class="u_hc">예문 리스트</h4>
+                       <div class="example_mean_wrap">
+                           <ol class="lst_example">
+                               <li class="example_itm">
+                                   <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                                   <p class="example_stc"><strong class="target">Take</strong> your umbrella with you.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></p>
+                                   <p class="example_mean">우산을 가지고 가거라.</p>
+                               </li>
+                           </ol>
+                           <button type="button" class="btn_open"><span class="ico hc">예문 더보기</span></button>
+                       </div>
+                   </div>
+               </li>
+                <li class="mean_itm">
+                    <em class="num">2</em>
+                    <div class="inner_wrap">
+                        <p class="mean"><span class="tag black">중급</span>(손 등을)<strong class="point">잡다</strong>, 쥐다, 집다, 들다, <strong class="point">안다</strong>(seize, grasp, grip, embrace).</p>
+                        <h4 class="u_hc">예문 리스트</h4>
+                        <div class="example_mean_wrap">
+                            <ol class="lst_example">
+                                <li class="example_itm">
+                                    <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                                    <p class="example_stc"><strong class="target">Take</strong> arms<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></p>
+                                    <p class="example_mean">무기를 잡다[들다].</p>
+                                </li>
+                                <li class="example_itm">
+                                    <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                                    <p class="example_stc"><strong class="target">take</strong> a person by the hand<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></p>
+                                    <p class="example_mean">남의 손을 잡다.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 class="h_tit">타동사</h3>
+            <ul class="mean_wrap">
+                <li class="mean_itm">
+                    <em class="num">1</em>
+                    <div class="inner_wrap">
+                        <p class="mean"><span class="tag black">고급</span><strong class="point">잡다, 붙잡다</strong>(lay hold, capture); (기계·장치가) 엇걸리다(catch); (톱니바퀴 등이) <strong class="point">맞물다</strong>(engage); (미끼·낚시·올가미 등에) 걸리다; (물고기·새가) 잡히다(be caught)</p>
+                        <h4 class="u_hc">예문 리스트</h4>
+                        <div class="example_mean_wrap">
+                            <ol class="lst_example">
+                                <li class="example_itm">
+                                    <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                                    <p class="example_stc"><strong class="target">Take</strong> your umbrella with you. <a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a></p>
+                                    <p class="example_mean">우산을 가지고 가거라.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </li>
+                <li class="mean_itm">
+                    <em class="num">2</em>
+                    <div class="inner_wrap">
+                        <p class="mean"><span class="tag black">고급</span>(뿌리가> 내리다, <strong class="point">뿌리박다</strong>(take root); (종자가) 싹트다(begin to grow), (접목 < 接木 >이) 붙다.</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="source">출처: Frendict Level English-Korean Dictionary</a>
+        </div>
+    </section>
+
+    <h2 class="section_tit">유용한팁</h2>
+    <section class="section_card">
+        <div class="entry_usefultip">
+            <? include ''.$usefultip_type ?>
+        </div>
+    </section>
+
+    <? include 'layer_totalSearchResult.html' ?>
+    <? include 'layer_opendic.html' ?>
+    <? include 'layer_another_search.html' ?>
+    <? include 'entry_footer.html' ?>
+</div>

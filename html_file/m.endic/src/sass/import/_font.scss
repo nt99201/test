@@ -1,0 +1,227 @@
+@charset "UTF-8";
+.entry_wrap {
+	@for $i from 1 through 5 {
+		@if $i != 1 {
+			&.fs#{$i} {
+				// 표제어 뜻
+				.entry_word .desc_lst {
+					font-size: (17+ $i) +px;
+					line-height: (24+ $i) +px;
+				}
+				//글자 크기 옵션 레이어
+				.ly_option .font_wrap .preview:after{
+					font-size: (16+ $i) +px;
+				}
+				//뜻 엔트리
+				.entry_mean .mean_itm{
+					.num{
+						font-size: (15+ $i) +px;
+						line-height: (23+ $i) +px;
+					}
+					.mean{
+						font-size: (17+ $i) +px;
+						line-height: (23+ $i) +px;
+					}
+					.parts{
+						font-size: (16+ $i) +px;
+						line-height: (23+ $i) +px;
+					}
+					.example_mean_wrap .example_itm{
+						.example_stc{
+							font-size: (16+ $i) +px;
+							line-height: (23+ $i) +px;
+						}
+						.example_mean{
+							font-size: (14+ $i) +px;
+							line-height: (20+ $i) +px;
+						}
+					}
+				}
+				//유용한 팁
+				.entry_usefultip .mean_wrap,
+				.entry_usefultip .usefultip_lst_wrap{
+					.word{
+						font-size: (24+ $i) +px;
+						line-height: (29+ $i) +px;
+					}
+					.mean{
+						font-size: (17+ $i) +px;
+						line-height: (23+ $i) +px;
+					}
+					.lst_userfultip .exam{
+						font-size: (15+ $i) +px;
+						line-height: (19+ $i) +px;
+					}
+					.source{
+						font-size: (13+ $i) +px;
+						line-height: (19+ $i) +px;
+					}
+				}
+				//예문
+				.entry_example{
+					.example_wrap{
+						.example_stc{
+							font-size: (19+ $i) +px;
+							line-height: (24+ $i) +px;
+
+							&+ .example_mean{
+								font-size: (14+ $i) +px;
+								line-height: (20+ $i) +px;
+							}
+						}
+						.source{
+							font-size: (13+ $i) +px;
+							line-height: (24+ $i) +px;
+						}
+						.user_mean_wrap .user_mean{
+							font-size: (14+ $i) +px;
+							line-height: (20+ $i) +px;
+						}
+					}
+					.lst_usertrans > li .user_mean{
+						font-size: (17+ $i) +px;
+						line-height: (23+ $i) +px;
+					}
+				}
+				.example_mean_wrap{
+					.lst_example{
+						.example_stc{
+							font-size: (14+ $i) +px;
+							line-height: (20+ $i) +px;
+						}
+						.example_mean{
+							font-size: (16+ $i) +px;
+							line-height: (21+ $i) +px;
+						}
+					}
+				}
+				//활용표
+				.entry_conjugate .lst_conjugate li{
+					.title{
+						font-size: (14+ $i) +px;
+						line-height: (25+ $i) +px;
+					}
+					.words{
+						font-size: (16+ $i) +px;
+						line-height: (25+ $i) +px;
+					}
+				}
+
+				//타이틀
+				.entry_mean .h_tit {
+					font-size: (18+ $i) +px;
+					line-height: (24+ $i) +px;
+				}
+				//출처
+				.entry_mean .source{
+					font-size: (13+ $i) +px;
+					line-height: (19+ $i) +px;
+				}
+				//숙어
+				.entry_phrase .phrase_lst{
+					.mean_lst{
+						.sub_title{
+							font-size: (16+ $i) +px;
+							line-height: (22+ $i) +px;
+						}
+						.num,.desc{
+							font-size: (14+ $i) +px;
+							line-height: (20+ $i) +px;
+						}
+					}
+					.word{
+						font-size: (19+ $i) +px;
+						line-height: (24+ $i) +px;
+					}
+					.mean{
+						font-size: (14+ $i) +px;
+						line-height: (20+ $i) +px;
+
+						&:lang(en){
+							font-size: (16+ $i) +px;
+							line-height: (21+ $i) +px;
+						}
+					}
+				}
+
+				//유의어.반의어
+				.syno_antonym_lst .mean{
+					font-size: (17+ $i) +px;
+					line-height: (21+ $i) +px;
+				}
+				.synonyms .tit, .antonyms .tit{
+					font-size: (14+ $i) +px;
+					line-height: (24+ $i) +px;
+				}
+				.synonyms .words, .antonyms .words{
+					font-size: (20+ $i) +px;
+					line-height: (24+ $i) +px;
+				}
+
+				//연관단어
+				.entry_related{
+					.word{
+						font-size: (17+ $i) +px;
+						line-height: (25+ $i) +px;
+						&:lang(en){
+							font-size: (19+ $i) +px;
+							line-height: (23+ $i) +px;
+						}
+					}
+				}
+				.section_card_wrap .lst_mean{
+					font-size: (15+ $i) +px;
+					line-height: (20+ $i) +px;
+				}
+
+				//오픈사전 뜻
+				.entry_opendic .user_mean{
+					font-size: (17+ $i) +px;
+					line-height: (23+ $i) +px;
+				}
+				//속담
+				.cp_trans_area{
+					font-size: (17+ $i) +px;
+					line-height: (23+ $i) +px;
+				}
+				//번역기 결과 내용
+				.ly_sub .trans_result{
+					font-size: (15+ $i) +px;
+					line-height: (20+ $i) +px;
+				}
+			}
+		}
+	}
+}
+
+// 글자 크기 안내 레이
+.ly_fontsize_wrap{
+	display:none;
+	position:fixed;
+	z-index:5000;
+	top:50%;
+	width:100%;
+	height:35px;
+	margin:-18px 0 0;
+	overflow:hidden;
+	text-align:center;
+	opacity:1;
+
+	.ly_fontsize{
+		display:inline-block;
+		width:202px;
+		font-weight:400;
+		text-align:center;
+		letter-spacing: -1px;
+		color:#fff;
+		line-height:35px;
+		text-shadow:0 -1px 0 #000;
+		background-color:rgba(0,0,0,0.8);
+	}
+	.min{
+		color:#5afe8a;
+	}
+	.max{
+		color:#ff7171;
+	}
+}

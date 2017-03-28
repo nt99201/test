@@ -1,0 +1,749 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- ipad대응 -->
+<meta name="viewport" content="width=100%" />
+<!-- //ipad대응 -->
+<link rel="shortcut icon" href="http://www.naver.com/favicon.ico" type="image/x-icon" />
+<title>'a' : 네이버 영어사전</title>
+<link type="text/css" rel="stylesheet" href="css/mini_pop_font.css" />
+<link type="text/css" rel="stylesheet" href="css/entry_add_mini.css" />
+
+<script type="text/javascript" >
+var isPad = false
+</script>
+<script type="text/javascript">
+var searchQuery="a";
+var windowType="mini";
+</script>
+<script type="text/javascript" src="js/clickcr.js?20130807114836" ></script>
+<script type="text/javascript" src="js/Common.org.js?20130807114836" ></script>
+<script type="text/javascript" src="js/Mini.js?20130807114836" ></script>
+<script type="text/javascript" src="js/nclktag.js?20130807114836"></script>
+
+<script type="text/javascript" language="javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js"></script>
+
+<script type="text/javascript">
+if (document.location.host.indexOf('naver.com') != -1)
+	document.domain = "naver.com";
+//Global 변수 선언
+//<![CDATA[
+var g_ssc = "dic.en.all";
+var g_query = "a";
+var ccsrv="cc.naver.com";
+var nclk_evt = 3;
+
+// 이벤트 Listener 함수 호출
+nclk_do();
+try{
+        var w0=405;
+        var h0=513;
+        var w1=window.opera?document.body.clientWidth:document.documentElement.clientWidth||document.body.clientWidth;
+        var h1=window.opera?document.body.clientHeight:document.documentElement.clientHeight||document.body.clientHeight;
+        var stepX=w0-w1;
+        var stepY=h0-h1;
+        window.resizeBy(stepX,stepY);
+}
+catch(e){
+}
+var cssImgUrl = "http://dicimg.naver.com/endic/style/201308011731/img";
+//]]>
+</script>
+
+<script type="text/javascript">
+	jindo.$Cookie().set("small_deleteExampleCookie", "true");
+	var	config_userId = "cookibisket";
+	var entryIdForWB=""
+	var autoCompleteUrl="http://ac.endic.naver.com/ac";
+	var wordbookUrl="http://wordbook.naver.com";
+	var searchOption = "all";
+	if(!searchOption) searchOption = "";
+	//window.resizeTo(415, 590);
+	jindo.$Fn(function() {
+			if(window.UTB) window.UTB.destroy();
+			window.UTB = new nhn.UserTransButtonCtrl({
+				url: "example.nhn?method=addExampleTrsl"
+			});
+		}).attach(document, "domready");
+
+
+	function doChanged4DicType(){
+	 	var mutilEntriesDiv=document.getElementById('mutilEntries4DifferDicType');
+	 	if(mutilEntriesDiv==null){
+	 		var url= document.getElementById('transferedURL4DicType').value;
+	  		 window.location.href=url;
+	 	}else{
+	 	//	var divShowOrHidden=mutilEntriesDiv.style.display;
+	 	//	if(divShowOrHidden=="none"){
+		//   		document.getElementById('mutilEntries4DifferDicType').style.display="";
+		//   	}else{
+		//   	 	document.getElementById('mutilEntries4DifferDicType').style.display="none";
+		//   	}
+			var url="/popManager.nhn?m=search&query=a&searchOption=all";
+			if ('N'=='Y') {
+				url=url+"&isOnlyViewEE=N";
+			} else {
+				url=url+"&isOnlyViewEE=Y";
+			}
+			window.location.href=url;
+	 	}
+	}
+
+	function searchEE2EKChange(obj){
+		var searchOptionStr="all";
+
+		if(searchOptionStr=="example"){
+			jindo.$Cookie().set("small_deleteExampleCookie", "false");
+			location.href = "popSearchExample.nhn?query=a&isOnlyViewEE="+obj.value;
+		}else{
+			location.href = "/popManager.nhn?m=search&query="+'a'+"&searchOption="+searchOptionStr+"&isOnlyViewEE="+obj.value;
+		}
+	}
+
+	function searchChange(obj){
+		location.href = "/popManager.nhn?m=search&query="+'a'+"&searchOption="+obj.value;
+	}
+
+	   <!--用来判断改entry是否已经添加到单词本中-->
+</script>
+
+</head>
+
+<body>
+<script type="text/javascript" src="js/Sub.js?20130807114836" ></script>
+<!-- 20160830 접근성 추가 -->
+<div id="u_skip"><a href="#container">본문 바로가기</a></div>
+<!-- //20160830 접근성 추가 -->
+<div id="wrap">
+	<div id="header">
+		<h1>
+			<a href="http://www.naver.com/" target="_blank">NAVER</a><!-- 20090116 edit -->
+			<a href="/popManager.nhn?m=miniPopMain" class="service">영어사전</a>
+		</h1>
+		<div class="lnb">
+			<ul class="menu">
+			<li><a href="javascript:window.location.reload(true);"><img src="http://dicimg.naver.com/endic/img/tab_eng_on_02.gif" alt="영어/영영사전" /></a></li>
+				<li><a href="http://krdic.naver.com/small_search.nhn?query=SafeZone"><img src="http://static.naver.com/dic/small/cndic/tab_kor_off.gif" width="47" height="30" alt="국어사전" /></a></li>
+				<li><a href="http://hanja.naver.com/small/search?query=SafeZone"><img src="http://static.naver.com/dic/small/cndic/tab_oldkor_off.gif" width="47" height="30" alt="한자사전" /></a></li>
+				<li><a href="http://jpdic.naver.com/mini_search.nhn?query=SafeZone"><strong><img src="http://static.naver.com/dic/small/cndic/tab_jp_off.gif" width="60" height="30" alt="일본어사전" /></strong></a></li><!-- 20090116 edit -->
+				<li class="on"><a href="http://cndic.naver.com/mini/search/all?q=SafeZone"><img src="http://static.naver.com/dic/small/cndic/tab_chi_off.gif" width="60" height="30" alt="중국어사전" /></a></li>
+				<li><a href="http://frdic.naver.com/search_mini.nhn?query=SafeZone"><img height="30" width="73" alt="프랑스어사전" src="http://dicimg.naver.com/common/tab_fr_off.gif"></a></li>
+				</ul>
+		</div>
+		<ul class="useful">
+		<li><a href="#" target="_blank">큰창</a></li>
+		<li><a href="#" target="_blank">내단어장</a></li>
+		<li><a href="#" target="_blank">사전홈</a></li>
+		</ul>
+
+		<p class="goback">
+			<a href="javascript:history.back()" title="이전">이전</a><a href="javascript:history.forward()" title="다음">다음</a>
+		</p>
+	</div>
+	<div class="search" id="top_search">
+		<fieldset class="sel_box">
+			<legend>검색영역</legend>
+			<span class="keybox"><input id="ac_input" type="text" name="ac_input" value="SafeZone" class="keyword" title="검색어" accesskey="s" maxlength="70"/></span>
+			<input type="hidden" id="hidac" name="hidac" value="SafeZone"/>
+			<span class="static_keyword" style="display:none">SafeZone</span>
+			<div class="auto_complete2" id="ac_layer">
+				<ul class="list_a">
+
+				</ul>
+
+				<p class="auto_on_info">현재 자동완성 기능을 사용하고 계십니다.</p>
+                <p class="auto_off_info">네이버 <strong>검색어 자동완성</strong>을 아시나요?<br/>검색어를 한 글자만 입력해도 찾으시려는 단어를 추천해주는 편리한 기능입니다.<br/><a href="#"><img height="18" width="99" alt="자동완성 사용하기" src="http://sstatic.naver.com/search/images11/btn_atcmp.gif"/></a></p>
+                <p class="nothing">해당 단어로 추천어가 없습니다.</p>
+                <div class="option"><a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'fcatid=184'})">도움말</a> <span class="bar">| <a href="#">기능끄기</a></span></div>
+
+			</div>
+
+			<img src="img/btn_srch.gif" alt="검색" class="s1 ajax_searchbutton"/>
+			<img class="arrow" height="15" width="15" alt="" src="http://dicimg.naver.com/endic/img/blank.gif"/>
+		</fieldset>
+		<div class="device">
+				<a href="/search.nhn?query=SafeZone" target="_blank">
+		<img src="http://dicimg.naver.com/endic/img/btn_bigwin_seach.gif" alt=""/></a></div>
+	</div>
+	<div id="start" class="skip">본문시작</div>
+
+<div id="container">
+ <a name="hittop" id="hittop"></a>
+
+      <div id="content">
+        		<!--  -->
+		<div class="dic_tit1">
+			<span class="txt"><strong class="do_ellipsis">'a'</strong>에 대한 검색결과 </span>
+	        <div id="dts_area" class="sel">
+	        	<!-- 20160819 접근성 label for값 리얼 id 값으로 변경 -->
+	        	<input name="" type="checkbox" value="Y" id="isOnlyReviewEnenDone" onclick="searchEE2EKChange(this)"/>
+	        	<label for="isOnlyReviewEnenDone"><strong>영영사전</strong></label>
+	        	<!-- //20160819 접근성 label for값 리얼 id 값으로 변경 -->
+	        	<div class="tip_over" style="display: none;"><p><span>영영사전 전용 모드로 변경합니다.</span></p></div>
+	        </div>
+	    </div>
+        <div class="view_list">
+            <ul>
+            	<li class="tx_depth1"><strong><a href="/popManager.nhn?m=search&query=a&searchOption=all&preQuery=&forceRedirect=N" class="N=a:tab.all"><span>전체</span></a></strong></li>
+                <li class="tx_depth2"><a href="/popManager.nhn?m=search&query=a&searchOption=entry_idiom&preQuery=&forceRedirect=N" class="N=a:tab.word"><span>단어/숙어</span></a></li>
+                <li class="tx_depth3"><a href="/popManager.nhn?m=search&query=a&searchOption=mean&preQuery=&forceRedirect=N" class="N=a:tab.content"><span>본문</span></a></li>
+                <li class="tx_depth4"><a href="/popSearchExample.nhn?query=a&searchOption=example&preQuery=&forceRedirect=N" class="N=a:tab.example"><span>예문</span></a></li>
+                <li class="tx_depth5"><a href="/popManager.nhn?m=search&query=a&searchOption=thesaurus&preQuery=&forceRedirect=N" class="N=a:tab.thesaurus"><span>유의어/반의어</span></a></li>
+            <!--
+            <li><input name="searchOption" type="radio" value="all" checked="checked" id="s1" onclick="searchChange(this)" class="N=a:tab.all"/><label for="s1"><img src="http://dicimg.naver.com/endic/img/view_list01_on.gif" alt="전체"/></label></li>
+            <li><input name="searchOption" type="radio" value="entry_idiom"  id="s2"  onclick="searchChange(this)" class="N=a:tab.word"/><label for="s2"><img src="http://dicimg.naver.com/endic/img/view_list02_off.gif" alt="단어/숙어"/></label></li>
+            <li><input name="searchOption" type="radio" value="mean" 　id="s5"  onclick="searchChange(this)" class="N=a:tab.content"/><label for="s5"><img src="http://dicimg.naver.com/endic/img/view_list05_off.gif" alt="본문"/></label></li>
+            <li><input name="searchOption" type="radio" value="example"   id="s3"  onclick="searchChange(this)" class="N=a:tab.example"/><label for="s3"><img src="http://dicimg.naver.com/endic/img/view_list03_off.gif" alt="예문"/></label></li>
+            <li><input name="searchOption" type="radio" value="thesaurus"   id="s4"  onclick="searchChange(this)" class="N=a:tab.thesaurus"/><label for="s4"><img src="http://dicimg.naver.com/endic/img/view_list04_off.gif" alt="유의어/반의어"/></label></li>
+            -->
+            </ul>
+        </div>
+        <!--//  -->            <!-- entry/idiom部分 -->
+            <div class="word_num  ">
+            <h3 class="dic_tit2 dic_tit2x"><img src="http://dicimg.naver.com/endic/img/dic_tit2.gif" alt="단어/숙어"/><span class="fnt_k03">(121,622건)</span></h3>
+            <dl class="list_e2">
+				<dt class="first">
+						<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=d6ecf932325646719c4a783d084ef562&query=a" ><strong>a</strong></a></span>
+					미국&middot;영국
+						<span class="fnt_e25">[ə;강형eɪ]</span>
+						<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/us/000/000227.mp3?vcode=3938392002137510945030" class="play3">
+							<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="미국∙영국식 발음듣기"/>
+						</a>
+					영국식
+
+						<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/uk/000/C00001.mp3?vcode=3938398065137577945030" class="play3">
+							<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="영국식 발음듣기"/>
+						</a>
+					<a href="#" class="wordbook"><input type="hidden" value="d6ecf932325646719c4a783d084ef562"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+						<img src="http://dicimg.naver.com/endic/img/star_num2.gif" alt="매우중요" title="매우중요" class="star"/>
+				</dt>
+				<dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+                       <span class="fnt_k09">[부정관사]</span>
+                       <span class="fnt_k09">[글 속에 처음 언급되는 단수형 명사 앞에 쓰임]</span>
+                       		<span class="fnt_k05"></span>
+                     </p>
+                    <p class="bg"><span class="fnt_e07">I <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=can">can</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=only">only</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=carry">carry</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=two">two</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=at a time">at a time</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a></p>
+                    <p class="pad_left"><span class="fnt_k10">나는 한 번에 두 개밖에 못 나른다.</span></p>
+
+                    <p class="pad6"><span class="fnt_k23"><a href="popManager.nhn?m=enkrEntry&entryId=d6ecf932325646719c4a783d084ef562&query=a"><strong class="fnt_k14">10</strong>개 뜻 더보기</a> :</span>
+                        <a href="popManager.nhn?m=enkrEntry&entryId=d6ecf932325646719c4a783d084ef562#indefinite article" class="fnt_k23">
+                        [부정관사] <단수 명사 앞에 쓰여 그 부류를 통칭함>
+                        </a>
+                        <!-- 뜻 더보기에 품사 없을때 보여줌. -->
+                    </p>
+					</div>
+                </dd>
+				<dt >
+						<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=a7242ff31a714f4abd122dc6ab74d8e8&query=a" ><strong>a</strong></a>
+
+
+					</span>
+					영국식
+
+						<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/uk/000/C00001.mp3?vcode=3938398065137577945030" class="play3">
+							<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="영국식 발음듣기"/>
+						</a>
+					<a href="#" class="wordbook"><input type="hidden" value="a7242ff31a714f4abd122dc6ab74d8e8"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+				</dt>
+				<dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+                       <span class="fnt_k09">[전치사]</span>
+                       		<span class="fnt_k05">(공간적·시간적으로) …으로부터</span>
+                     </p>
+
+                    <p class="pad6"><span class="fnt_k23"><a href="popManager.nhn?m=enkrEntry&entryId=a7242ff31a714f4abd122dc6ab74d8e8&query=a"><strong class="fnt_k14">3</strong>개 뜻 더보기</a> :</span>
+                        <a href="popManager.nhn?m=enkrEntry&entryId=a7242ff31a714f4abd122dc6ab74d8e8#Preposition" class="fnt_k23">
+                        [전치사] (공간적으로) …에서 떨어져서
+                        </a>
+                        <!-- 뜻 더보기에 품사 없을때 보여줌. -->
+                    </p>
+					</div>
+                </dd>
+				<dt >
+						<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=15933541c86d4de6a651d08c0104debf&query=a" ><strong>a</strong></a>
+
+
+					</span>
+					영국식
+
+						<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/uk/000/C00001.mp3?vcode=3938398065137577945030" class="play3">
+							<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="영국식 발음듣기"/>
+						</a>
+					<a href="#" class="wordbook"><input type="hidden" value="15933541c86d4de6a651d08c0104debf"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+				</dt>
+				<dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+                       <span class="fnt_k09">[전치사]</span>
+                       		<span class="fnt_k05">…에서, …으로, …의</span>
+                     </p>
+                    <p class="bg"><span class="fnt_e07">À <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=la">LA</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=carte">CARTE</a></i>, À <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=la">LA</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=mode">MODE</a></i></span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a></p>
+
+					</div>
+                </dd>
+				<dt >
+						<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=ca679a9d6a004b438017998aff05284d&query=a" ><strong>a</strong></a>
+
+
+					</span>
+					영국식
+
+						<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/uk/000/C00001.mp3?vcode=3938398065137577945030" class="play3">
+							<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="영국식 발음듣기"/>
+						</a>
+					<a href="#" class="wordbook"><input type="hidden" value="ca679a9d6a004b438017998aff05284d"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+				</dt>
+				<dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+                       <span class="fnt_k05">(물리)</span>
+                       		<span class="fnt_k05"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=angstrom">angstrom</a></i></span>
+                     </p>
+
+					</div>
+                </dd>
+				<dt >
+						<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=e73e56bf46b147c5b8027237676f36db&query=a" ><strong>a</strong>.</a>
+
+
+					</span>
+					미국식
+						<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/us/102/102899.mp3?vcode=3938390901137541945030" class="play3">
+							<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="미국식 발음듣기"/>
+						</a>
+					<a href="#" class="wordbook"><input type="hidden" value="e73e56bf46b147c5b8027237676f36db"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+				</dt>
+				<dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+                       		<span class="fnt_k05"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=about">about</a></i>; <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=acre">acre</a></i>(s); <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=act">act</a></i>(<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=ing">ing</a></i>); <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=adjective">adjective</a></i>; <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=age">age</a></i>(d); <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=alto">alto</a></i>; <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=ampere">ampere</a></i>; anno ((L = <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=in the">in the</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=year">year</a></i>))</span>
+                     </p>
+
+					</div>
+                </dd>
+                </dl>
+                	<p class="dic_more"><a href="/popManager.nhn?m=search&query=a&searchOption=entry_idiom" class="fnt_k12">단어/숙어 더보기</a></p>
+        	</div>
+            <!-- 正文部分 -->
+            <div class="word_num word_num2 ">
+            	<h3 class="dic_tit2"><img src="http://dicimg.naver.com/endic/img/dic_tit19.gif" alt="본문"/><span class="fnt_k03">(95,928건)</span></h3>
+                <dl class="list_e2">
+                <dt class="first">
+                	<span class="fnt_e30"><a href="popManager.nhn?m=krenEntry&entryId=575cd9454d6f40daa61cfbee61e8c954&query=a" class="N=ctt.entry,r:1,i:575cd9454d6f40daa61cfbee61e8c954">한<sup>1</sup></a>
+
+
+	                </span>
+
+                	<a href="#" class="wordbook b_add"><input type="hidden" value="575cd9454d6f40daa61cfbee61e8c954"/><input type="hidden" value="3"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+                </dt>
+                <dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        	<span class="fnt_k05"><SPAN class="SIGNPOST">(하나)</SPAN> <SPAN class="EQUIV"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><strong>a</strong></a></i></SPAN>, <SPAN class="EQUIV"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=an">an</a></i></SPAN>, <SPAN class="EQUIV"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=one">one</a></i></SPAN></span>
+                    </p>
+                    <p class="pad4 bg"><span class="fnt_e07">노래 한 곡 불러 주시겠어요?</span></p>
+                    <p class="pad5 pad_left"><span class="fnt_k10"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=would">Would</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=you">you</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=sing">sing</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><strong>a</strong></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=song">song</a></i> (for us)?</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a></p>
+                    <p class="pad6"><span class="fnt_k23"><a href="popManager.nhn?m=krenEntry&entryId=575cd9454d6f40daa61cfbee61e8c954&query=a"><strong class="fnt_k14">3</strong>개 뜻 더보기</a> :</span>
+                        <!-- 뜻 더보기에 품사 없을때 보여줌. -->
+                        <a href="popManager.nhn?m=krenEntry&entryId=575cd9454d6f40daa61cfbee61e8c954" class="fnt_k23"><SPAN class="SIGNPOST">(하나)</SPAN> <SPAN class="EQUIV"><autoLink search="a"><strong>a</strong></autoLink></SPAN>, <SPAN class="EQUIV"><autoLink search="an">an</autoLink></SPAN>, <SPAN class="EQUIV"><autoLink search="one">one</autoLink></SPAN></a>
+                    </p>
+                    </div>
+                </dd>
+                <dt >
+                	<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=41e384f821024235a24cff30555c47d8&query=a" class="N=ctt.entry,r:2,i:41e384f821024235a24cff30555c47d8">four-pointer</a>
+
+
+	                </span>
+                	미국&middot;영국
+                		<span class="fnt_e25">[-pɔ́intər]</span>
+	                	<a  href="#" playlist="http://naverdic.dn.naver.com/naver/dic/naverdic/endic/sound/clear/us/066/066646.mp3?vcode=3938397511137579945030" class="play3">
+	                		<img src="http://dicimg.naver.com/endic/img/play.gif" class="play" alt="발음듣기"/>
+	                	</a>
+
+                	<a href="#" class="wordbook b_add"><input type="hidden" value="41e384f821024235a24cff30555c47d8"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+                </dt>
+                <dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+						<span class="fnt_k09">[명사]</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        	<span class="fnt_k05">[미·학생속어] (성적의) <strong>A</strong>, 수; 우등생 ((<strong>A</strong>가 4점으로 계산되는 데서))</span>
+                    </p>
+                    </div>
+                </dd>
+                <dt >
+                	<span class="fnt_e30"><a href="popManager.nhn?m=enkrIdiom&idiomId=20c4f40848c849a1a2aeafb633d00a7e&query=a" class="N=ctt.entry,r:3,i:20c4f40848c849a1a2aeafb633d00a7e">alpha plus</a>
+
+
+	                </span>
+
+                	<a href="#" class="wordbook b_add"><input type="hidden" value="20c4f40848c849a1a2aeafb633d00a7e"/><input type="hidden" value="4"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+                </dt>
+                <dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        	<span class="fnt_k05">(학업 성적의) <strong>A</strong>+, 수</span>
+                    </p>
+                    </div>
+                </dd>
+                <dt >
+                	<span class="fnt_e30"><a href="popManager.nhn?m=krenEntry&entryId=44848df610944309aa4c321f98fdb55d&query=a" class="N=ctt.entry,r:4,i:44848df610944309aa4c321f98fdb55d">에이</a>
+
+
+	                </span>
+
+                	<a href="#" class="wordbook b_add"><input type="hidden" value="44848df610944309aa4c321f98fdb55d"/><input type="hidden" value="3"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+                </dt>
+                <dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        	<span class="fnt_k05">[평점의] <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><strong>A</strong></a></i>.</span>
+                    </p>
+                    </div>
+                </dd>
+                <dt >
+                	<span class="fnt_e30"><a href="popManager.nhn?m=enkrEntry&entryId=8aa648220c294cf6bdb2108f0100c4e4&query=a" class="N=ctt.entry,r:5,i:8aa648220c294cf6bdb2108f0100c4e4">aw<sup>2</sup></a>
+
+
+	                </span>
+
+                	<a href="#" class="wordbook b_add"><input type="hidden" value="8aa648220c294cf6bdb2108f0100c4e4"/><input type="hidden" value="1"/><img src="http://dicimg.naver.com/endic/img/btn_addword.gif" id="minidic" alt="단어장추가"/></a>
+                </dt>
+                <dd>
+                    <div class="align_right"        style="width:100%;"    >
+                    <p>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <span class="fnt_k05">(스코)</span>
+
+                        	<span class="fnt_k05">⇨ <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a'"><strong>A</strong>'</a></i></span>
+                    </p>
+                    </div>
+                </dd>
+                </dl>
+
+                	<p class="dic_more"><a href="/popManager.nhn?m=search&query=a&searchOption=mean" class="fnt_k12">본문 더보기</a></p>
+            </div>
+            <!-- 例句部分 -->
+            <div class="word_num word_num2 ">
+            	<h3 class="dic_tit2"><img src="http://dicimg.naver.com/endic/img/dic_tit3.gif" alt="예문"/><span class="fnt_k03">(6,880,887건)</span><span><a href="/popManager.nhn?m=search&query=a&searchOption=example" class="fnt_k15">특정 분야의 예문만 보기</a></span></h3>
+                <ul class="list_a list_ax">
+                    <li  class="first utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=He">He</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=doer">doer</a></i>, <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=not">not</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=talker">talker</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:두산 동아</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>중급</li>
+		                        <li class="last"><a href="http://www.doosandonga.com/" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="He is &lt;b&gt;a&lt;/b&gt; doer, not &lt;b&gt;a&lt;/b&gt; talker.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">그는 공론가가 아니고 실천하는 사람이다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=The">The</a></i> lions devoured <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=deer">deer</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=in">in</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=short">short</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=time">time</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:능률교육</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>중급</li>
+		                        <li class="last"><a href="http://www.teensup.com/pages/index/index.asp" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="The lions devoured &lt;b&gt;a&lt;/b&gt; deer in &lt;b&gt;a&lt;/b&gt; short time.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">사자들이 단 시간에 사슴 한마리를 먹어 치웠다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=A"><b>A</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=millimeter">millimeter</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=tenth">tenth</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=of">of</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=centimeter">centimeter</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:YBM</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>초급</li>
+		                        <li class="last"><a href="http://www.ybmsisa.com/" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="&lt;b&gt;A&lt;/b&gt; millimeter is &lt;b&gt;a&lt;/b&gt; tenth of &lt;b&gt;a&lt;/b&gt; centimeter.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">1밀리미터는 1센티미터의 10분의 1이다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=He">He</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=famous">famous</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=as">as</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=tailor">tailor</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:능률교육</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>초급</li>
+		                        <li class="last"><a href="http://www.teensup.com/pages/index/index.asp" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="He is &lt;b&gt;a&lt;/b&gt; famous as &lt;b&gt;a&lt;/b&gt; tailor.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">그는 재봉사로 유명하다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=A"><b>A</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=major">major</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=above">above</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=captain">captain</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:두산 동아</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>초급</li>
+		                        <li class="last"><a href="http://www.doosandonga.com/" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="&lt;b&gt;A&lt;/b&gt; major is above &lt;b&gt;a&lt;/b&gt; captain.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">소령이 대위보다 지위가 더 높다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=He">He</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=not">not</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> laywer <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=but">but</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> accounter.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:YBM</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>초급</li>
+		                        <li class="last"><a href="http://www.ybmsisa.com/" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="He is not &lt;b&gt;a&lt;/b&gt; laywer but &lt;b&gt;a&lt;/b&gt; accounter.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">그는 변호사가 아니라 회계사다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=A"><b>A</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=miracle">miracle</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=is">is</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=wrought">wrought</a></i>. <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=or">or</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=A"><b>A</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=miracle">miracle</a></i> occurs[happens].</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:두산 동아</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>중급</li>
+		                        <li class="last"><a href="http://www.doosandonga.com/" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="&lt;b&gt;A&lt;/b&gt; miracle is wrought. or &lt;b&gt;A&lt;/b&gt; miracle occurs[happens].">
+		                </div>
+
+	                    	<p><span class="fnt_k10">이적이 나타난다 </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=She">She</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=works">works</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=as">as</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=cocktail">cocktail</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=waitress">waitress</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=in">in</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=bar">bar</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:능률교육</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>중급</li>
+		                        <li class="last"><a href="http://www.teensup.com/pages/index/index.asp" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="She works as &lt;b&gt;a&lt;/b&gt; cocktail waitress in &lt;b&gt;a&lt;/b&gt; bar.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">그녀는 칵테일바의 웨이트리스 급사로 일한다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=He">He</a></i> accosted <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=shopkeeper">shopkeeper</a></i> using <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=gun">gun</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:능률교육</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>중급</li>
+		                        <li class="last"><a href="http://www.teensup.com/pages/index/index.asp" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="He accosted &lt;b&gt;a&lt;/b&gt; shopkeeper using &lt;b&gt;a&lt;/b&gt; gun.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">그는 총으로 위협해 가게주인을 털었다. </span></p>
+                    </li>
+                    <li class="utb">
+	                    <div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09"><i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=She">She</a></i> smiled <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=all">all</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=day">day</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=like">like</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=possum">possum</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=up">up</a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=a"><b>a</b></a></i> <i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=gum">gum</a></i>-<i class="fnt_e08 N=a:smd.words" ><a href="popManager.nhn?m=search&query=tree">tree</a></i>.</span><a href="#" class="play2"><img src="http://dicimg.naver.com/endic/img/play2.gif" alt="예문 발음듣기"/></a>
+		                <a href="#" class="source fnt_k10">출처:YBM</a>
+		                <div style="left:169px; top: -10px;" class="tips2">
+		                    <div>
+		                        <ul>
+		                        <li class="first">현대</li>
+		                        <li>미국</li>
+		                        <li>중급</li>
+		                        <li class="last"><a href="http://www.ybmsisa.com/" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <input name="" type="hidden" value="She smiled all day like &lt;b&gt;a&lt;/b&gt; possum up &lt;b&gt;a&lt;/b&gt; gum-tree.">
+		                </div>
+
+	                    	<p><span class="fnt_k10">그녀는 행복으로 가득하여 하루종일 웃었다. </span></p>
+                    </li>
+                </ul>
+                <p class="dic_more"><a href="/popManager.nhn?m=search&query=a&searchOption=example" class="fnt_k12">예문 더보기</a></p>
+				<!-- add_layer start -->
+				<div class="ly_sword" id="add_layer_wblist" style="display: none;"><dl><dt></dt><dd></dd></dl><a id="add_layer_close" href="javascript:void(0);" class="btn_close2" href="#"><span class="blind">단어장 리스트 레이어 닫기</span></a></div>
+				<div class="ly_sword" id="add_layer_msg" style="display: none;"><dl><dt></dt><dd></dd></dl></div>
+				<!-- add_layer end -->
+            </div>
+
+            <!-- 同义词/反义词部分 -->
+        <!--//  -->
+        <p class="bot_info"><a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/mail.nhn',  param : 'upCatg=236'})">[사용자와 함께 만드는 네이버 사전] <b>오류 신고 및 의견 제안</b></a></p>
+ 		<p class="hit_top"><a href="#hittop"><img src="http://dicimg.naver.com/endic/img/hit_top2.gif" alt="맨위로"/></a></p>
+	<div id="pop_footer">
+		<strong class="blind">자료제공</strong>
+		<ul class="ref">
+		<li><a href="http://www.oxford.co.kr/" target="_blank" class="en">Oxford University Press</a></li>
+		<li><a href="http://www.doosandonga.com/" target="_blank">두산동아</a></li>
+		</ul>
+		<ul class="ref">
+		<li><a href="http://www.harpercollins.com/" target="_blank" class="en">HapperCollins Publishers LTD</a></li>
+		<li><a href="http://www.ybmsisa.com/" target="_blank">YBM시사닷컴</a></li>
+		<li><a href="http://www.neungyule.com/" target="_blank">능률교육</a></li>
+		</ul>
+		<div class="warning">본 콘텐츠의 저작권은 제공처에 있으며,<br>이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</div>
+		<address>
+			<em>Copyright ©</em>
+			<a href="http://www.nhncorp.com/" target="_blank">NAVER Corp.</a>
+			<span>All Rights Reserved.</span>
+		</address>
+	</div>
+</div>
+</div>
+
+	<!-- add_layer2 start -->
+	<div class="add_layer2" id="add_layer_info">
+		<p class="txt">단어장 이용약관에 동의하신 후 이용이 가능합니다.</p>
+		<p class="btn"><a href="http://wordbook.naver.com/endic" target="_blank"><img src="http://dicimg.naver.com/endic/img/btn_view_reg.gif" alt="단어장 약관보기"/></a></p>
+	</div>
+
+	<!-- add_layer_tip start -->
+	<div class="add_layer_tip" id="add_layer_tip" style="display: none;">추가 되었습니다</div>
+	<!-- add_layer_tip end -->
+
+	<!-- creat_layer start -->
+	<div class="creat_layer" id="create_layer_wbname">
+		<h3><span class="fnt_k24"><strong>영어단어장 추가</strong></span></h3>
+		<p class="des"><span class="fnt_k26">단어장을 추가합니다. 단어장 이름을 지어주세요.</span></p>
+		<!-- 20160819 접근성 title 추가 -->
+		<p class="in1"><span class="fnt_k25">단어장 이름</span><input class="txt" type="text" maxlength="16" title="단어장 이름" /></p> <div class="add_tiplayer">&lt; 혹은 &gt; 기호는 사용하실 수 없습니다.</div>
+		<!-- //20160819 접근성 title 추가 -->
+
+		<p class="btn_area"><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_submit2.gif" alt="단어장 추가 확인" width="45" height="26"/><input name="" type="image" src="http://dicimg.naver.com/endic/img/btn_cancel2.gif" alt="단어장 추가 취소" width="45" height="26" class="mar"/></p>
+		<a href="#"><img src="http://dicimg.naver.com/endic/img/btn_close3.gif" alt="영어단어장 추가 팝업 닫기" class="close"/></a>
+	</div>
+	<!-- creat_layer end -->
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	SPS.__inst.minisearch = new SPS.minisearch("minisrch", null);
+</script>
+
+<div id="itt_info_tip_box" class="tip_cx">
+	<div><span>verb+noun phrase+adverb or prepositional phrase <br/>동사+명사구+부사구/전치사구</span></div>
+</div>
+<script type="text/javascript" src="js/launcher.js?20130807114836" ></script>
+<script type="text/javascript" src="js/lcslog.js?20130807114836"></script>
+<script type="text/javascript">lcs_do();</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>slide up down</title>
+<script language="JavaScript" type="text/javascript" src="jquery-1.9.1.js"></script>
+<link rel="stylesheet" type="text/css" href="reset.css" />
+<style type="text/css">
+a, a:hover{text-decoration:none;}
+
+.total_warp {position:relative; width:1000px; margin:0 auto; border:1px solid #f00; border-bottom:none;}
+
+.total_warp .close {position:absolute; top:0; right:0;}
+.total_warp .close a {display:block; width:30px; height:30px; text-align:center; line-height:30px;}
+
+.nav_wrap {position:absolute; top:0; left:0;  border-left:1px solid #f00;}
+.nav_wrap li {float:left; border-right:1px solid #f00; border-bottom:1px solid #f00;}
+.nav_wrap li a {display:block; width:100px; height:15px; padding:5px 0; text-align:center;}
+
+.sub_wrap {margin-top:27px;}
+.sub_wrap .cont_wrap {border-bottom:1px solid #f00;}
+.sub_wrap .cont1 {height:250px;}
+.sub_wrap .cont2 {height:260px;}
+.sub_wrap .cont3 {height:300px;}
+.sub_wrap .cont4 {height:280px;}
+.sub_wrap .cont5 {height:290px;}
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function(){
+
+	var $liLeng = $(".nav_wrap .nav li").length;
+	var $winHig = $(window).height();
+
+	$(".nav_wrap .nav li > a").click(function(){
+		var $liIndex = $(this).parent().index();	
+
+		for(i=0;i<=$liLeng;i++){
+//			//클릭link값과 cont값 찾기 (cont와의 연결고리)
+//			if($(".cont_wrap").eq(i).index() == $liIndex){
+//				//현재 클릭값 찾기
+//				if($(".cont_wrap").eq(i).index() == i){
+//					//지도 top 위치 찾기
+//					//$cwOffset = $(".cont_wrap").eq(i).offset();
+//					//$cwoffTop = parseInt($cwOffset.top);
+//
+////					if(){
+////						$(".cont_wrap").eq(i).animate({Top:-$cwoffTop},1000);
+////					}
+//					alert(1);
+//				}
+//			}
+
+			$cwOffset = $(".cont_wrap").eq(i).offset();
+			$cwoffTop = $cwOffset.top;
+
+			//클릭link값과 cont값 찾기 (cont와의 연결고리)
+			if($(".cont_wrap").eq(i).index() == $liIndex){
+								
+			}
+
+		}
+	
+		return false;
+	});
+
+
+});
+
+//]]>
+</script>
+
+
+</head>
+<body>
+
+<div class="total_warp">
+	<div class="visual_wrap">
+		
+	</div>
+
+	<div class="nav_wrap">		
+		<ul class="nav">
+			<li><a href="#1">1</a></li>
+			<li><a href="#1">2</a></li>
+			<li><a href="#1">3</a></li>
+			<li><a href="#1">4</a></li>
+			<li><a href="#1">5</a></li>
+			<li class="last"><a href="#1">6</a></li>
+		</ul>		
+	</div>
+
+	<div class="sub_wrap">
+		<div class="cont_wrap cont1">
+			1
+		</div>
+		<div class="cont_wrap cont2">
+			2
+		</div>
+		<div class="cont_wrap cont3">
+			3
+		</div>
+		<div class="cont_wrap cont4">
+			4
+		</div>
+		<div class="cont_wrap cont5">
+			5
+		</div>
+	</div>
+
+	<div class="close">
+		<a href="#1">x</a>
+	</div>
+</div>
+
+</body>
+</html>

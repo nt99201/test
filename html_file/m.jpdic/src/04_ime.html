@@ -1,0 +1,149 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<title>일본어입력기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+<link type="text/css" rel="stylesheet" href="css/w.css">
+<!--<link type="text/css" rel="stylesheet" href="css/e.css">-->
+<style>
+body,html {	height: 100%;}
+
+#_writer_Content {	min-height: 100%;	position: relative;}
+
+#ct {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<div id="_writer_Content">
+    <div id="_wirter_Header">
+        <a href="#ct" class="hc">본문 바로가기</a>
+        <!-- 입력기 상단 -->
+        <div class="ts">
+            <h1>
+                <ul>
+                    <li class="top_a on"><a href="#"><span class="tab_name">필기인식</span></a></li>
+                    <li class="top_a2"><span class="line"></span><a href="#"><span class="tab_name">히라가나</span></a></li>
+                    <li class="top_a3"><span class="line"></span><a href="#"><span class="tab_name">가타가나</span></a></li>
+                </ul>
+                <div class="help_wrap">
+                    <a href="#" class="help"><span class="hc">도움말</span></a>
+                    <!-- [D] 도움말 클릭시, display:block-->
+                    <div id="helpter" class="helpt" style="display:none">
+                        <div class="sbox wr">필기 인식기에 글자를 써서 검색할 수 있습니다.<p class="se">[1획 지우기],[전체 지우기]를 누르면<br>필기한 획을 수정할 수 있습니다.</p><p class="se">[한자입력],[가나입력]을  누르면 한자/가나 입력을 전환할 수 있습니다.</p></div>
+                    </div>
+                </div>
+                <a href="#" class="kiclo"><span class="btn_txt">닫기</span></a>
+            </h1>
+        </div>
+
+        <!-- 검색 -->
+        <form name="search"  onsubmit="return searchSubmit();" id="search" method="get">
+        <input type="hidden" name="range" value="all"/>
+        <input type="hidden" name="q" id="nx_query" maxlength="255" value="" />
+        <input type="hidden" name="sm" value="jpd_hty" />
+            <fieldset class="hs ki">
+                <legend class="hc">검색</legend>
+                <div class="hsw _searchArea">
+                    <span class="itw _characterDisplay" id="_selectCharacterDisplay"></span>
+                    <button type="button" class="clrt _clear_input" onclick><span id="clear_input" class="_clear_input">입력 내용 삭제</span></button>
+                    <button type="submit" class="hssbt _searchBtn" onclick><span class="hc">검색</span></button>
+                </div>
+            </fieldset>
+        </form>
+        <!-- //검색 -->
+        <!-- //입력기 상단 -->
+        <!-- 자동완성 -->
+        <div class="atcp atcpt ime_atcpt" id="autocomplete_layer" style="display:none;">
+        <div class="atcpw"><div class="atcpw3">
+            <h3 class="hc">자동완성</h3>
+            <ul id="autoComplete">
+                <li class="atcpli"><a href="javascript:void(0);" onClick="nclk(this,'jwm.keyword','',1);oAutoComplete.setValue(this);return false;" onMouseover="oAutoComplete.setSelected(this);" class="atcpa">@name@</a><input type="hidden" id="hidden_input" value="@in_txt@" /></li>
+            </ul>
+        </div>
+        </div></div>
+        <!-- //자동완성 -->
+
+    </div>
+
+
+    <!-- 자동완성 결과 영역 -->
+    <div class="_backPanel" id="backPanel" style="display:block;"></div>
+    <!-- //자동완성 결과 영역 -->
+
+    <div id="ct" style="position:fixed;">
+	<!-- 입력기(필기) -->
+    <!-- [D] 가로모드 : wide 추가 -->
+	<div class="kib _fingerWrite" style="display:block;"><!-- [D]가로화면 전환일 경우 wide클래스 추가되어야 합니다. -->
+		<div class="canv _fingerWriteCanvas" id="_fingerWriteCanvas" style="float:left;">
+			<div class="txt" style="display:block"><span class="hc">The written word will disappears when converting to and form vertical and horizontal screens.</span></div>
+		</div>
+		<div class="pre _fingerWriteKeyboard">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span class="pg">1/1</span>
+		</div>
+
+		<div class="butt _fingerWriteBtn">
+			<a href="javascript:void(0);" class="del _delKey"><span class="ico"></span><span class="hc">삭제</span></a><!--[D]활성화될 경우 on클래스 추가-->
+			<a href="javascript:void(0);" class="del1 _drawDelKey"><span class="txt">Delete<br />1 Stroke</span></a><!--[D]활성화될 경우 on클래스 추가-->
+			<a href="javascript:void(0);" class="dela _allDelKey"><span class="txt">Delete<br />All Strokes</span></a><!--[D]활성화될 경우 on클래스 추가-->
+            <!-- 20120411 -->
+
+            <a href="javascript:void(0);" class="del_v1 _hanjaImeSelect _imeSelect"><span class="txt">Kana<br />Input</span></a>
+            <!-- //20120411 -->
+		</div>
+	</div>
+	<!-- //입력기(필기) -->
+</div>
+</div>
+
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/jindo-component-1.4.0/jindo.Component.js?20130709182459" ></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/jindo-component-1.4.0/jindo.UIComponent.js?20130709182459" ></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/jindo-component-1.4.0/jindo.Timer.js?20130709182459" ></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/jindo-component-1.4.0/jindo.WatchInput.js?20130709182459" ></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/dic.firstlayer2.mobile.js?20130709182459"></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/temp/autoCompleteMobile.js?20130709182459"></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/temp/jindo.finger_writing.js?20130709182459"></script>
+<script type="text/javascript" src="http://10.101.41.10/dev-20130114-jpdic2/js/temp/nhn.jpdic.ime.js?20130709182459"></script>
+<script type="text/javascript">window.onload=function(){setTimeout(function(){window.scrollTo(0,1)},100);}</script>
+<script type="text/javascript">
+lcs_do();
+
+jindo.$Fn(function () {
+jpdicView._selectImeOn($Element($$.getSingle("a._hirakataImeSelect")));
+jpdicView._selectImeView();
+window.buildURL = new nhn.dic.PatternBasedURLBuilder(nhn.dic.urlPatternConfig).buildURL;
+}).attach(document, "domready");
+function searchSubmit() {
+		var query = document.getElementById("nx_query").value.replace(/&quot/g, "\"").trim();
+
+		if(query.length == 0) {
+			alert("검색어를 입력해 주세요.");
+			return false;
+		}
+		/*
+		var selectedSearchType = document.getElementById("selectedSearchType").value;
+		if (selectedSearchType == "start") {
+			query = query + "*";
+		} else if (selectedSearchType == "end") {
+			query = "*"+ query;
+		} else if (selectedSearchType == "exact") {
+			query = "\""+ query + "\"";
+		}
+		*/
+		document.activeElement.blur();
+		window.location.href = buildURL("jpdic.search.all", query) + "&sm=jpd_hty";
+		return false;
+	}
+
+</script>
+
+
+</body>
+</html>

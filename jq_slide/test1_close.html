@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>slide up down</title>
+<script language="JavaScript" type="text/javascript" src="jquery-1.9.1.js"></script>
+<link rel="stylesheet" type="text/css" href="reset.css" />
+<style type="text/css">
+a, a:hover {text-decoration:none;}
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+var myWindow;
+
+function openWin() {
+    myWindow = window.open("test.html", "_blank", "width=1000, height=500");
+}
+
+function closeWin() {
+	myWindow.close();
+}
+
+//]]>
+</script>
+
+
+
+</head>
+<body>
+
+<button onclick="openWin();">Open w3schools.com in a new window</button>
+
+</body>
+</html>

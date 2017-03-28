@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-XSS-Protection" content="1">
+<!-- ipad대응 -->
+<meta name="viewport" content="width=100%">
+<!-- //ipad대응 -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<title>네이버 영어사전</title>
+<link type="text/css" rel="stylesheet" href="css/mini_pop_font.css">
+<link type="text/css" rel="stylesheet" href="css/entry_add_mini.css">
+
+<script type="text/javascript">
+var isPad = false
+</script>
+<script type="text/javascript">
+var searchQuery="";
+var windowType="mini";
+</script>
+<script type="text/javascript" src="js/clickcr.js?20160818142126"></script>
+<script type="text/javascript" src="js/Common.js?20160818142126"></script>
+<script type="text/javascript" src="js/Mini.js?20160818142126"></script>
+<script type="text/javascript" language="javascript" src="http://static.naver.com/common/js/cs_ops_webncc.js"></script>
+<script type="text/javascript">
+if (document.location.host.indexOf('naver.com') != -1)
+	document.domain = "naver.com";
+//Global 변수 선언
+//<![CDATA[
+var nsc = "endic.home";
+var ccsrv="cc.naver.com";
+var nclk_evt = 3;
+
+// 이벤트 Listener 함수 호출
+nclk_do();
+try{
+        var w0=405;
+        var h0=513;
+        var w1=window.opera?document.body.clientWidth:document.documentElement.clientWidth||document.body.clientWidth;
+        var h1=window.opera?document.body.clientHeight:document.documentElement.clientHeight||document.body.clientHeight;
+        var stepX=w0-w1;
+        var stepY=h0-h1;
+        window.resizeBy(stepX,stepY);
+}
+catch(e){
+}
+var cssImgUrl = "http://dicimg.naver.net/endic/style/201608111014/img";
+var endic_sKin_lang = "kr";
+//]]>
+</script>
+
+<script type="text/javascript">
+	jindo.$Cookie().set("small_deleteExampleCookie", "true");
+	var	config_userId = "";
+	var entryIdForWB=""
+	var autoCompleteUrl="http://ac.endic.naver.com/ac";
+	var wordbookUrl="http://wordbook.naver.com";
+	var searchOption = "";
+	var translateSiteUrl="http://translate.naver.com";
+	if(!searchOption) searchOption = "";
+	//window.resizeTo(415, 590);
+	jindo.$Fn(function() {
+			if(window.UTB) window.UTB.destroy();
+			window.UTB = new nhn.UserTransButtonCtrl({
+				url: "example.nhn?sLn=kr&method=addExampleTrsl"
+			});
+		}).attach(document, "domready");
+
+
+	function doChanged4DicType(){
+	 	var mutilEntriesDiv=document.getElementById('mutilEntries4DifferDicType');
+	 	if(mutilEntriesDiv==null){
+	 		var url= document.getElementById('transferedURL4DicType').value;
+	  		 window.location.href=url;
+	 	}else{
+	 	//	var divShowOrHidden=mutilEntriesDiv.style.display;
+	 	//	if(divShowOrHidden=="none"){
+		//   		document.getElementById('mutilEntries4DifferDicType').style.display="";
+		//   	}else{
+		//   	 	document.getElementById('mutilEntries4DifferDicType').style.display="none";
+		//   	}
+			var url="/popManager.nhn?sLn=kr&m=search&query=&searchOption=all";
+			if ('N'=='Y') {
+				url=url+"&isOnlyViewEE=N";
+			} else {
+				url=url+"&isOnlyViewEE=Y";
+			}
+			window.location.href=url;
+	 	}
+	}
+
+	function searchEE2EKChange(obj){
+		var searchOptionStr="";
+
+		if(searchOptionStr=="example"){
+			jindo.$Cookie().set("small_deleteExampleCookie", "false");
+			location.href = "popSearchExample.nhn?sLn=kr&query=&isOnlyViewEE="+obj.value;
+		}else{
+			location.href = "/popManager.nhn?sLn=kr&m=search&query="+''+"&searchOption="+searchOptionStr+"&isOnlyViewEE="+obj.value;
+		}
+	}
+
+	function searchChange(obj){
+		location.href = "/popManager.nhn?sLn=kr&m=search&query="+''+"&searchOption="+obj.value;
+	}
+
+	   <!--用来判断改entry是否已经添加到单词本中-->
+   jindo.$Fn( function() {
+     if(config_userId!=""){
+     	url = wordbookUrl+"/wordBookEntry.nhn";
+		var ajax = jindo.$Ajax(
+			url,
+			{
+				type :"jsonp",
+				onload : function(res) {
+					if(res.json().status=="0"){
+						return;
+					}else if(res.json().status=="-98"){
+							return;
+					}else if(res.json().status==undefined){
+						return;
+					}else{
+						var entryEditLink=wordbookUrl+res.json().entryEditLink;
+						if($("entry_wb_nm")) {
+							var inner = '<p class="desc"><a target="endicWordBook" href="';
+							inner += entryEditLink;
+							inner += '">‘';
+							inner += res.json().wordBookName;
+							inner += ' 단어장’</a>에 이미 추가된 단어입니다.</p>';
+							$("entry_wb_nm").innerHTML= inner;
+						}
+					}
+
+				}
+			}).request( {
+		m :'getLastestEntryForEditByOriginEntryId',
+		originEntryID :entryIdForWB,
+		userId :config_userId,
+		dicType:1
+	});
+     }
+}).attach(document, "domready");
+</script>
+
+
+
+</head>
+
+<body><iframe src="http://endic.naver.com/js/tts.html" title="TTS 발음듣기" frameborder="0" tabindex="-1" style="position: absolute; width: 1px; height: 1px; top: -100px; left: -100px; z-index: 100; background: rgb(245, 245, 245);"></iframe>
+<script type="text/javascript" src="js/Sub.js?20160818142126"></script><div style="position:absolute; left:-99999px; top:-99999px;"><embed tabindex="-1" src="js/pronunciation.swf" quality="high" wmode="window" allowfullscreen="false" flashvars="" bgcolor="#ff0000" width="1" height="1" name="FAP10000" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></div>
+<!-- 20160830 접근성 추가 -->
+<div id="u_skip"><a href="#container">본문 바로가기</a></div>
+<!-- //20160830 접근성 추가 -->
+<div id="wrap">
+	<!-- 필요없는 영역이여서 삭제 하였습니다. -->
+	<!-- http://nwars.navercorp.com/issueRead.do?groupSeq=2470628 -->
+	<!-- div id="skip"><a href="#main_content2" class="skip_to_content" tabindex="2">본문 바로가기</a></div -->
+	<div id="header">
+		<h1>
+			<a href="http://www.naver.com/" target="_blank" lang="en">NAVER</a>
+            <a href="/popManager.nhn?sLn=kr&amp;m=miniPopMain" class="service">영어사전</a>
+		</h1>
+		<div class="lnb">
+			<ul class="menu">
+			<li><a href="javascript:window.location.reload(true);"><img src="http://dicimg.naver.net/endic/img/tab_eng_on_02.gif" alt="영어/영영사전"></a></li>
+				<li><a href="http://krdic.naver.com/small_index.nhn"><img src="http://static.naver.com/dic/small/cndic/tab_kor_off.gif" width="47" height="30" alt="국어사전"></a></li>
+				<li><a href="http://hanja.naver.com/small.naver?where=index"><img src="http://static.naver.com/dic/small/cndic/tab_oldkor_off.gif" width="47" height="30" alt="한자사전"></a></li>
+				<li><a href="http://jpdic.naver.com/small.naver?where=index"><strong><img src="http://static.naver.com/dic/small/cndic/tab_jp_off.gif" width="60" height="30" alt="일본어사전"></strong></a></li><!-- 20090116 edit -->
+				<li class="on"><a href="http://cndic.naver.com/small_index.nhn"><img src="http://static.naver.com/dic/small/cndic/tab_chi_off.gif" width="60" height="30" alt="중국어사전"></a></li>
+				<li><a href="http://frdic.naver.com/main_mini.nhn"><img height="30" width="73" alt="프랑스어사전" src="http://dicimg.naver.net/common/tab_fr_off.gif"></a></li>
+				</ul>
+		</div>
+		<ul class="useful">
+			<li>
+					<a href="http://endic.naver.com" target="_blank">큰창</a>
+			</li>
+            <li><a href="http://wordbook.naver.com/endic" target="_blank">내단어장</a></li>
+            <li><a href="http://dic.naver.com" target="_blank">사전홈</a></li>
+            <li><a href="javascript:void(0);" onclick="goTransMach();">번역기</a></li>
+        </ul>
+		<p class="goback">
+			<a href="javascript:history.back()" title="이전">이전</a><a href="javascript:history.forward()" title="다음">다음</a>
+		</p>
+	</div>
+	<div class="search auto_on" id="top_search">
+		<fieldset class="sel_box">
+			<legend>검색영역</legend>
+			<span class="keybox"><input id="ac_input" type="text" name="ac_input" value="" class="keyword" title="검색어" maxlength="150"></span>
+			<input type="hidden" id="hidac" name="hidac" value="">
+			<span class="static_keyword" style="display:none"></span>
+			<div class="auto_complete2" id="ac_layer">
+				<h3 class="blind">자동완성 영역</h3>
+				<ul class="list_a"><li></li></ul>
+				<p class="auto_on_info">현재 자동완성 기능을 사용하고 계십니다.</p>
+                <p class="auto_off_info">네이버 <strong>검색어 자동완성</strong>을 아시나요?<br>검색어를 한 글자만 입력해도 찾으시려는 단어를 추천해주는 편리한 기능입니다.<br><a href="#"><img height="18" width="99" alt="자동완성 사용하기" src="http://sstatic.naver.com/search/images11/btn_atcmp.gif"></a></p>
+                <p class="nothing">해당 단어로 추천어가 없습니다.</p>
+                <div class="option"><a href="javascript:OPS.viewOPS('ops', {url : 'https://help.naver.com/support/service/main.nhn',  param : 'serviceNo=606&amp;categoryNo=1987'})"><span class="blind">자동완성 </span>도움말</a> <span class="bar" style="display: inline;">| <a href="#"><span class="blind">자동완성 </span>기능끄기</a></span></div>
+			</div>
+			<img tabindex="0" src="http://dicimg.naver.net/endic/style/201608111014/img/btn_srch.gif" alt="검색" class="s1 ajax_searchbutton">
+			<img class="arrow" height="15" width="15" alt="" src="http://dicimg.naver.net/endic/img/blank.gif">
+		</fieldset>
+		<div class="device">
+			<a href="/?sLn=kr" target="_blank">
+		<img src="http://dicimg.naver.net/endic/img/btn_bigwin_seach.gif" alt="큰창에서 검색"></a></div>
+	</div>
+	<div id="start" class="skip">본문시작
+	</div>
+
+
+
+<div id="container">
+	<a name="hittop" id="hittop"></a>
+
+	<div id="content">
+		<!--  -->
+		<h3 class="dic_tit7 mar_top"><img src="http://sstatic.naver.com/dic/images4/ico_02.gif" alt="" class="ico"><img src="http://dicimg.naver.net/endic/img/tit_endic.gif" alt="네이버 영어사전의 특징"></h3>
+		<!-- 20160819 접근성 이미지css로 빼기 -->
+		<ul class="list_endic">
+			<li><span>&nbsp;</span><p>옥스퍼드, 능률, 동아, 코빌드의 최고의 컨텐츠</p></li>
+			<li><span>&nbsp;</span><p>사전, 웹문서를 아우르는 2200만 문장의 풍부한 예문</p></li>
+			<li><span>&nbsp;</span><p>간편하게 뜻을 확인하는 보조사전 기능 제공</p></li>
+			<li><span>&nbsp;</span><p>모든 예문의 발음듣기 기능 제공</p></li>
+		</ul>
+		<!-- //20160819 접근성 이미지css로 빼기 -->
+		<!--<p class="hit_top"><a href="#"><img src="http://dicimg.naver.net/endic/img/hit_top3.gif" alt="top"/></a></p>-->
+		<!--//  -->
+		<div id="pop_footer">
+    <strong class="blind">자료제공</strong>
+    <ul class="ref">
+    <li lang="en"><a href="http://www.oxford.co.kr/" target="_blank" class="en" lang="en">Oxford University Press</a></li>
+    <li><a href="http://www.doosandonga.com/" target="_blank">동아출판</a></li>
+    </ul>
+    <ul class="ref">
+    <li lang="en"><a href="http://www.harpercollins.com/" target="_blank" class="en" lang="en">HarperCollins Publishers LTD</a></li>
+    <li><a href="http://www.ybmsisa.com/" target="_blank">YBM시사닷컴</a></li>
+    <li><a href="http://www.neungyule.com/" target="_blank">능률교육</a></li>
+    </ul>
+        <address lang="en">
+        <em lang="en">Copyright ©</em>
+        <a href="http://www.nhncorp.com/" target="_blank" lang="en">NAVER Corp.</a>
+        <span lang="en">All Rights Reserved.</span>
+    </address>
+  </div>
+</div>	</div>
+
+
+
+<!-- add_layer2 start -->
+ <div class="add_layer2" id="add_layer_info">
+            <p class="txt">단어장 이용약관에 동의하신 후 이용이 가능합니다.</p>
+            <p class="btn"><a href="http://wordbook.naver.com/endic" target="_blank"><img src="http://dicimg.naver.net/endic/img/btn_view_reg.gif" alt="단어장 약관보기"></a></p>
+        </div>
+        <!-- add_layer_tip start -->
+        <div class="add_layer_tip" id="add_layer_tip" style="display: none;">추가 되었습니다</div>
+        <!-- add_layer_tip end -->
+
+        <!-- creat_layer start -->
+        <div class="creat_layer" id="create_layer_wbname">
+            <h3><span class="fnt_k24"><strong>영어단어장 추가</strong></span></h3>
+            <p class="des"><span class="fnt_k26">단어장을 추가합니다. 단어장 이름을 지어주세요.</span></p>
+            <!-- 20160819 접근성 title 추가 -->
+            <p class="in1"><span class="fnt_k25">단어장 이름</span><input class="txt" type="text" maxlength="16" title="단어장 이름" ></p> <div class="add_tiplayer">&lt; 혹은 &gt; 기호는 사용하실 수 없습니다.</div>
+            <!-- //20160819 접근성 title 추가 -->
+
+            <p class="btn_area"><input name="" type="image" src="http://dicimg.naver.net/endic/img/btn_submit2.gif" alt="단어장 추가 확인" width="45" height="26"><input name="" type="image" src="http://dicimg.naver.net/endic/img/btn_cancel2.gif" alt="단어장 추가 취소" width="45" height="26" class="mar"></p>
+            <a href="#"><img src="http://dicimg.naver.net/endic/img/btn_close3.gif" alt="영어단어장 추가 팝업 닫기" class="close"></a>
+        </div>
+        <!-- creat_layer end -->
+
+		</div>
+
+
+
+
+<script type="text/javascript">
+	SPS.__inst.minisearch = new SPS.minisearch("minisrch", null);
+
+	var goTransMach = function () {
+		//번역기 바로가기 링크 수정
+		var transCon = "";
+		var sLang = checkLanguage(transCon)==2?"ko":"en";
+		var tLang = sLang=="ko"?"en":"ko";
+		var dic = sLang=="ko"?"k2e":"e2k";
+		window.open('http://translate.naver.com/#/' + sLang + '/' + tLang + '/' + transCon,'newwindow','height=800, width=510, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no');
+	}
+</script>
+
+<div id="itt_info_tip_box" class="tip_cx">
+	<div><span>verb+noun phrase+adverb or prepositional phrase <br>동사+명사구+부사구/전치사구</span></div>
+</div>
+<script type="text/javascript" src="js/launcher.js?20160818142126"></script>
+<script type="text/javascript" src="js/lcslog.js?20160818142126"></script>
+<script type="text/javascript">lcs_do();</script>
+
+</body></html>

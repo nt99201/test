@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+$G-font-helveticaNeue:HelveticaNeue,Helvetica,sans-serif;
+$G-font-basic:HelveticaNeue-Light,Helvetica-light,sans-serif;
+$G-font-middle:HelveticaNeue,Helvetica,AppleSDGothicNeo-SemiBold,sans-serif;
+
+$N-color-primary : #00c73c;
+$N-font-primary : helvetica,sans-serif;
+$N-timing-function : 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+
+// GNB 영역 배경 색상
+// @ 기본 : 서비스 컬러 적용 $N-color-primary 변수 사용 권장
+// @ GNB가 투명일 경우 rgba(0,0,0,.2)
+$gnb-background-color: $N-color-primary;
+
+
+// N 로고 배경 색상
+// @ 기본 : rgba(0,0,0,.1)
+// @ GNB 흰색일경우 서비스 컬러 적용 $N-color-primary 변수 사용 권장
+// @ GNB가 투명일 경우 rgba(0,0,0,.2)
+$logo-background-color: rgba(0,0,0,.1);
+
+// GNB 폰트 패밀리
+// @ 서비스에 맞게 설정 가능 $N-color-primary 변수 사용 권장
+$gnb-font-family: $N-font-primary;
+
+$search-background-color: $N-color-primary;//각 서비스 color 변경
+$search-font-family: $N-font-primary;

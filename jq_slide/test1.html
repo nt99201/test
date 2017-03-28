@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>slide up down</title>
+<script language="JavaScript" type="text/javascript" src="jquery-1.9.1.js"></script>
+<link rel="stylesheet" type="text/css" href="reset.css" />
+<style type="text/css">
+a, a:hover {text-decoration:none;}
+
+.total_warp {width:1000px; margin:0 auto;}
+.nav_wrap {position:absolute; top:200px; left:0; width:100%; min-width:1000px; z-index:200;}
+.nav_wrap .nav {width:1000px; margin:0 auto;}
+.nav_wrap .nav li {float:left; width:100px; text-align:center;}
+.nav_wrap .nav li.last {border-right:1px solid #f00;}
+.nav_wrap .nav li a {display:block; height:15px; padding:5px 0; border-left:1px solid #f00; border-top:1px solid #f00; border-bottom:1px solid #f00;}
+.nav_wrap .nav li a.on {background-color:red;}
+
+.visual_wrap {position:relative; height:200px; background-color:gray; }
+.sub_wrap {position:relative; margin-top:27px;}
+.cont_wrap {position:absolute; top:0; left:0; width:100%;}
+.sub_wrap .cont1 {height:250px; background-color:pink;}
+.sub_wrap .cont2 {height:300px; background-color:red;}
+.sub_wrap .cont3 {height:270px; background-color:blue;}
+.sub_wrap .cont4 {height:220px; background-color:green;}
+.sub_wrap .cont5 {height:200px; background-color:yellow;}
+.total_warp .close {position:absolute; top:0; right:0; font-weight:bold;}
+.total_warp .close a {display:block;  width:30px; height:30px; border:1px solid #f00; text-align:center;  font-size:14px; line-height:28px;}
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+
+	$(document).ready(function(){
+		//초기화
+		$(".cont_wrap").not(" .cont1").hide();
+
+		//nav link Click
+		navClick();
+
+	});
+
+
+	function navClick(){
+		$(".nav_wrap .nav li > a").click(function(){
+			var $liLeng = $(".nav_wrap li").length;
+			var $contLeng = $(".cont_wrap").length;
+
+			//li의 index값 찾기
+			$liIndex = $(this).parent().index();
+
+			for(i=0;i<=$contLeng;i++){
+				//li와 cont의 같은 index값 찾기
+				if($(".cont_wrap").eq(i).index() == $liIndex){
+					$(this).addClass("on");
+					//cont slide 제어
+					if($(".cont_wrap").eq(i).index() == i){
+						$(".cont_wrap").eq(i).slideDown();
+						$(".cont_wrap").eq(i).siblings(".cont_wrap").slideUp();
+						$(".visual_wrap").slideUp(100);
+						$(".nav_wrap").animate({top:0}, 100).css("position","fixed");
+						$(".sub_wrap").animate({marginTop:27}, 100);
+					}
+				}else if($(this).parent().index() == 5){
+						$(".visual_wrap").slideDown(100);
+						$(".nav_wrap").animate({top:200}, 100).end().css("position","absolute");
+						$(".sub_wrap").animate({marginTop:27}, 100);
+						$(".nav_wrap li a").removeClass("on");
+						$(".nav_wrap li").eq(0).find("a").addClass("on");
+						$(".cont_wrap").eq(0).slideDown();
+						$(".cont_wrap").eq(0).siblings().slideUp();
+				}else{
+					
+					$(this).parent().siblings().find("a").removeClass("on");					
+				}
+			}
+			return false;
+		});
+	}
+
+
+
+
+	//이벤트 핸들러로 이벤트 발생 호출
+	function closeWindow() { 
+	   try{    
+		 parent.closeWin(); //부모창으로 function값 전달
+	   }catch(e){
+		 alert(e);
+	   }
+	}
+
+
+//]]>
+</script>
+
+
+
+</head>
+<body>
+
+<div class="total_warp">
+	<div class="visual_wrap">
+		
+	</div>
+
+	<div class="nav_wrap">		
+		<ul class="nav">
+			<li><a href="#1">1</a></li>
+			<li><a href="#1">2</a></li>
+			<li><a href="#1">3</a></li>
+			<li><a href="#1">4</a></li>
+			<li><a href="#1">5</a></li>
+			<li class="last"><a href="#1">6</a></li>
+		</ul>		
+	</div>
+
+	<div class="sub_wrap">
+		<div class="cont_wrap cont1">
+			1
+		</div>
+		<div class="cont_wrap cont2">
+			2
+		</div>
+		<div class="cont_wrap cont3">
+			3
+		</div>
+		<div class="cont_wrap cont4">
+			4
+		</div>
+		<div class="cont_wrap cont5">
+			5
+		</div>
+	</div>
+
+	<!-- onclick의 스크립트에 window는 open에 해당되는 founction 네이밍으로 변경되어야 된다 -->
+	<div class="close">
+		<a href="#1" onclick="closeWindow();">x</a>
+	</div>
+</div>
+
+</body>
+</html>

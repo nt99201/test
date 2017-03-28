@@ -1,0 +1,169 @@
+<!-- 번역을 기다리는 예문 -->
+<!-- 구조는 검색결과 예문 영역과 비슷 -->
+<!-- v1클래스 추가 -->
+
+<div class="section_card">
+    <div class="entry_example v1">
+        <div class="example_wrap">
+            <p class="example_stc">
+                <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                You shouldn't do <strong class="target">take</strong> too much exercise.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a>
+            </p>
+            <a href="#" class="waiting_record">대기중<em class="num">4</em></a>
+            <div class="exam_btn_area">
+                <button type="button" class="btn_auto_trans">자동번역</button>
+
+                <!-- 언어 선택 select박스와 번역 참여 영역이 항상 같은 너비여야 함 -->
+                <!-- [D] 영역 오픈시 display:inline-block; -->
+                <div class="trans_btn_wrap" style="display:inline-block;">
+                    <a href="#" class="btn_join_trans">번역 참여</a>
+                    <div class="trans_lang_select">
+                        <!-- 20160819 접근성 수정 -->
+                        <select id="select_lang" title="언어선택">
+                            <option value="ko" selected="selected">한국어</option>
+                            <option value="es">Español</option>
+                            <option value="zh-cn">中文</option>
+                            <option value="ja">日本語</option>
+                            <option value="vi">Tiếng Việt</option>
+                            <option value="th">ภาษาไทย</option>
+                            <option value="id">Indonesia</option>
+                        </select>
+                        <!-- //20160819 접근성 수정 -->
+                    </div>
+                </div>
+                <button type="button" class="btn_show_exam"><span class="hc">예문 상세보기</span></button>
+            </div>
+            <button type="button" class="btn_detail_show">상세보기</button>
+        </div>
+        <!-- [D] 자동번역, 번역 참여 레이어 전부 close시 display:none해주세요 -->
+        <!-- [D] 자동번역 누르고, 번역 참여 누를 시에 v1 클래스 추가-->
+        <div class="ly_sub" style="display:none">
+            <h4 class="hc">번역기 결과 내용</h4>
+            <p class="trans_result" style="display:block">
+                과격한 운동은 금물입니다.
+                <a href="#" class="translator">네이버 번역기</a>
+            </p>
+            <div class="transbox_wrap" style="display:block;">
+                <div class="inner_wrap">
+                    <!-- [D] 클릭 시 label 요소에 display:none -->
+                    <textarea rows="4" class="transbox">장난, 욕설 여부 확인 후 바로 이용자 참여 번역문으로 등록됩니다.</textarea>
+                    <!--<textarea rows="4" class="transbox">그래서 당신은 1973년까지 회상, 어디 공식적으로 북쪽, 남쪽, 남한과 미국인들 간의 평화 파리</textarea>-->
+                    <!-- [D] 텍스트 입력 시 숫자 변경 -->
+                    <p class="num_area">
+                        <strong class="num">15</strong><span class="total_num">/1500</span>
+                    </p>
+                    <div class="btn_area">
+                        <a href="#" class="btn_ok">확인</a>
+                        <a href="#" class="btn_cancel">취소</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section_card">
+    <div class="entry_example v1">
+        <div class="example_wrap">
+            <p class="example_stc">
+                <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                <span class="tag blue">칸아카데미</span>You shouldn't do <strong class="target">take</strong> too much exercise.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a>
+            </p>
+            <a href="#" class="waiting_record">대기중<em class="num">4</em></a>
+            <div class="exam_btn_area">
+                <button type="button" class="btn_auto_trans">Auto trans</button>
+                <!-- [D] 영역 오픈시 display:inline-block; -->
+                <div class="trans_btn_wrap" style="display:inline-block;">
+                    <a href="#" class="btn_join_trans">Translate</a>
+                    <div class="trans_lang_select">
+                        <!-- 20160819 접근성 수정 -->
+                        <select id="select_lang" title="언어선택">
+                            <option value="ko" selected="selected">한국어</option>
+                            <option value="zh-cn">中文</option>
+                            <option value="ja">日本語</option>
+                        </select>
+                        <!-- 20160819 접근성 수정 -->
+                    </div>
+                </div>
+                <button type="button" class="btn_show_exam"><span class="hc">예문 상세보기</span></button>
+            </div>
+            <button type="button" class="btn_detail_show">Details</button>
+        </div>
+        <!-- [D] 자동번역, 번역 참여 레이어 전부 close시 display:none해주세요 -->
+        <!-- [D] 자동번역 누르고, 번역 참여 누를 시에 v1 클래스 추가 -->
+        <div class="ly_sub" style="display:block">
+            <h4 class="hc">번역기 결과 내용</h4>
+            <p class="trans_result" style="display:block">
+                과격한 운동은 금물입니다.
+                <a href="#" class="translator">네이버 번역기</a>
+            </p>
+            <div class="transbox_wrap" style="display:none;">
+                <div class="inner_wrap">
+                    <!-- [D] 클릭 시 label 요소에 display:none -->
+                    <textarea rows="4" class="transbox">장난, 욕설 여부 확인 후 바로 이용자 참여 번역문으로 등록됩니다.</textarea>
+                    <!--<textarea rows="4" class="transbox">그래서 당신은 1973년까지 회상, 어디 공식적으로 북쪽, 남쪽, 남한과 미국인들 간의 평화 파리</textarea>-->
+                    <!-- [D] 텍스트 입력 시 숫자 변경 -->
+                    <p class="num_area">
+                        <strong class="num">15</strong><span class="total_num">/1500</span>
+                    </p>
+                    <div class="btn_area">
+                        <a href="#" class="btn_ok">확인</a>
+                        <a href="#" class="btn_cancel">취소</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section_card">
+    <div class="entry_example v1">
+        <div class="example_wrap">
+            <p class="example_stc">
+                <!-- [D] 보조 레이어 나오는 단어 -> 클래스 on추가 -->
+                <span class="tag blue">칸아카데미</span>You shouldn't do <strong class="target">take</strong> too much exercise.<a href="#" class="voice_ico_default"><em class="u_hc">발음듣기</em></a>
+            </p>
+            <a href="#" class="waiting_record">대기중<em class="num">4</em></a>
+            <div class="exam_btn_area">
+                <button type="button" class="btn_auto_trans on">자동번역</button>
+                <!-- [D] 영역 오픈시 display:inline-block; -->
+                <div class="trans_btn_wrap" style="display:inline-block;">
+                    <a href="#" class="btn_join_trans">번역 참여</a>
+                    <div class="trans_lang_select">
+                        <!-- 20160819 접근성 수정 -->
+                        <select id="select_lang" title="언어선택">
+                            <option value="ko" selected="selected">한국어</option>
+                            <option value="zh-cn">中文</option>
+                            <option value="ja">日本語</option>
+                        </select>
+                        <!-- 20160819 접근성 수정 -->
+                    </div>
+                </div>
+                <button type="button" class="btn_show_exam"><span class="hc">예문 상세보기</span></button>
+            </div>
+            <button type="button" class="btn_detail_show">상세보기</button>
+        </div>
+        <!-- [D] 자동번역, 번역 참여 레이어 전부 close시 display:none해주세요 -->
+        <!-- [D] 자동번역 누르고, 번역 참여 누를 시에 v1 클래스 추가-->
+        <div class="ly_sub v1" style="display:block">
+            <h4 class="hc">번역기 결과 내용</h4>
+            <p class="trans_result" style="display:block">
+                과격한 운동은 금물입니다.
+                <a href="#" class="translator">네이버 번역기</a>
+            </p>
+            <div class="transbox_wrap" style="display: block;">
+                <div class="inner_wrap">
+                    <!-- [D] 클릭 시 label 요소에 display:none -->
+                    <textarea rows="4" class="transbox">장난, 욕설 여부 확인 후 바로 이용자 참여 번역문으로 등록됩니다.</textarea>
+                    <!--<textarea rows="4" class="transbox">그래서 당신은 1973년까지 회상, 어디 공식적으로 북쪽, 남쪽, 남한과 미국인들 간의 평화 파리</textarea>-->
+                    <!-- [D] 텍스트 입력 시 숫자 변경 -->
+                    <p class="num_area">
+                        <strong class="num">15</strong><span class="total_num">/1500</span>
+                    </p>
+                    <div class="btn_area">
+                        <a href="#" class="btn_ok">확인</a>
+                        <a href="#" class="btn_cancel">취소</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,412 @@
+﻿<? include '00_header.html' ?>
+<div id="ct" role="main">
+		<!-- content -->
+		<div id="content" class="huri_off detail_jpkr">
+			<ul class="m_tab">
+			<li class="on"><a href="javascript:clickcr(this,'nav.all','','',event);window.location.href='/search.nhn?range=all&q=1';">뜻</a></li>
+			<li><a href="javascript:clickcr(this,'nav.word','','',event);window.location.href='/search.nhn?range=word&page=1&q=%E3%81%8F%E3%82%8B';">단어</a></li>
+			<li><a href="javascript:clickcr(this,'nav.example','','',event);window.location.href='/search.nhn?range=example&page=1&q=%E3%81%8F%E3%82%8B';">예문</a></li>
+			<li class="last"><a href="javascript:clickcr(this,'nav.body','','',event);window.location.href='/search.nhn?range=meaning&page=1&q=%E3%81%8F%E3%82%8B';">본문</a></li>
+			</ul>
+            <!-- 20160823 접근성 추가
+                [D]tab 영역을 선택시 아래의 타이틀을 변경해주세요.
+                예) <h3 class="blind">뜻</h3>
+                <h3 class="blind">단어</h3>
+                <h3 class="blind">예문</h3>
+                <h3 class="blind">본문</h3>
+             -->
+            <h3 class="blind">뜻</h3>
+            <!-- //20160823 접근성 추가 -->
+			<!-- entry_header -->
+			<div class="spot_area">
+				<div id="reviewWord" data-entryType="JK" data-entryId="JK000000024990" data-entryName="くる(来る)" style="display:none"></div>
+				<div class="jp">
+					<h3 lang="ja"><span class="maintitle">くる</span><em class="ps">[来る]</em></h3>
+					<span class="player">
+						<button type="button" title="재생" class="play" onclick="clickcr(this, 'ent.listen','','',event);" data-purl="http://naverdic.dn.naver.com/naver/dic/naverdic//jpdic/female/0/F-7740.mp3?vcode=2219727138136842089165|http://naverdic.dn.naver.com/naver/dic/naverdic//jpdic/male/0/M-7740.mp3?vcode=2219728484136830089165">재생</button>
+						<button type="button" title="반복" class="repeat"  onclick="if (this.className=='repeat') {clickcr(this, 'ent.listenrepeat','','',event);} else {clickcr(this, 'ent.listenend','','',event);}" data-purl="http://naverdic.dn.naver.com/naver/dic/naverdic//jpdic/female/0/F-7740.mp3?vcode=2219727138136842089165|http://naverdic.dn.naver.com/naver/dic/naverdic//jpdic/male/0/M-7740.mp3?vcode=2219728484136830089165" data-audioId="audio_001">반복</button>
+						<button type="button" title="속도" class="speed" onclick="if (this.className=='speed') {clickcr(this, 'ent.listenspeedopen','','',event);} else {clickcr(this, 'ent.listenspeedclose','','',event);}" style="display:none" data-audioId="audio_001">속도</button>
+					</span>
+					<span class="ico_star ico_star1"><span class="hc">중요도1</span></span>
+					<!--
+					<span class="ico_star ico_star2"><span class="hc">중요도2</span></span>
+					<span class="ico_star ico_star3"><span class="hc">중요도3</span></span>
+					<span class="ico_star ico_star4"><span class="hc">중요도4</span></span>
+					<span class="ico_star ico_star5"><span class="hc">중요도5</span></span>
+					-->
+					<div class="area_jlpt jp">
+						<a href="#" class="btn_jlpt">N1</a>
+					</div>
+                    <!-- 웹수집 도움말 -->
+                    <div class="con_clt">
+                        <span class="txt_box1"><span class="hc">웹수집</span></span><span class="ask">
+                            <a href="#"><span class="hc">웹수집 도움말</span></a>
+                            <!--[D] m.endic 오픈영어 참고하여 left 속성값 구현 -->
+                            <div class="pop_clt" style="left:-40px">
+                                <p><strong>웹수집</strong>: 지식백과, 전문정보, 뉴스 등의 웹 페이지에서 수집한 영어 단어입니다.</p>
+                                <p><strong>출현 횟수</strong>: 웹 페이지에서 특정 뜻으로 언급된 횟수입니다.</p>
+                                <a href="#"><span class="hc">닫기</span></a>
+                            </div>
+                            <span class="arr_top"></span>
+                        </span>
+                    </div>
+                    <!-- //웹수집 도움말 -->
+				</div>
+				<p>오다, 이리로 오다;다가오다, 일어나...</p>
+				<a href="javascript:void;" id="btn_${entry.entryId}" class="btn_add" style="display:none"><span class="hc">+ 단어장</span></a>
+				<!-- 20160808 접근성 title 수정 -->
+				<select class="btn_add" style="display:block" title="단어장 추가">
+					<option value="0">모두 단어장 추가</option>
+					<option value="+">+ 새 단어장 만들기</option>
+					<option value="111013528">asdsadsa(1)</option>
+					<option value="111013525">aaaaad(1)</option>
+					<option value="111013512">cccc(0)</option>
+					<option value="111013405">aaaaa(0)</option>
+					<option value="110017107">WWWWWWWWWWWWWWWW(0)</option>
+					<option value="107756130">ㅋㅋㅋㅋ(0)</option>
+				</select>
+				<!-- //20160808 접근성 title 수정 -->
+				<div class="pop_txt" style="display:block">추가했습니다.<span class="arr_top"></span></div>
+			</div>
+			<!-- //entry_header -->
+			<!-- tc-panels -->
+			<div class="tc-panels">
+			<!-- tc-panel 1 -->
+			<div class="tc-panel tc-selected">
+			<!--mobile 활용형-->
+						<div class="dlst on">
+					    		<a href="javascript:void(0);" onclick="nclk(this, 'top.katuyou', '', 1);" id="conj_view" class="fd_btn"><span class="hc">펼치기</span></a>
+					       	 	<dl class="lst_dl lst_open" id="defaultConj" style="display:block">
+					    			<dt class="lst"><span>ます형(~ㅂ니다) </span></dt>
+						       		<dd class="lst">
+						       			<span class="tbl">来<sup class="huri">き</sup>ます</span>
+						       		</dd>
+					        	</dl>
+					        <dl class="lst_dl lst_open" id="conj_list" style="display:none">
+						        	<dt class="lst"><span>ます형(~ㅂ니다) </span></dt>
+							       	<dd class="lst">
+							       		<span>来<sup class="huri">き</sup>ます</span>
+							       	</dd>
+						        	<dt class="lst"><span>부정형(~지 않다)</span></dt>
+							       	<dd class="lst">
+							       		<span>来<sup class="huri">こ</sup>ない</span>
+							       	</dd>
+						        	<dt class="lst"><span>청유형(~하자)</span></dt>
+							       	<dd class="lst">
+							       		<span>来<sup class="huri">こ</sup>よう</span>
+							       	</dd>
+						        	<dt class="lst"><span>가정형(~한다면)</span></dt>
+							       	<dd class="lst">
+							       		<span>来<sup class="huri">く</sup>れば</span>
+							       	</dd>
+						        	<dt class="lst"><span>명령형(~해라)</span></dt>
+							       	<dd class="lst">
+							       		<span>来<sup class="huri">こ</sup>い</span>
+							       	</dd>
+						        	<dt class="lst"><span>가능형(~할 수 있다)</span></dt>
+							       	<dd class="lst">
+							       		<span>来<sup class="huri">こ</sup>られる</span>
+							       	</dd>
+					        </dl>
+					    </div>
+			<!--mobile 활용형-->
+			<div class="view_ctrl">
+				<div class="hurigana">
+					<input type="checkbox" id="hurigana" class="huriOnChk">
+					<label for="hurigana"><strong>Furigana</strong></label>
+				</div>
+                <!--
+				<button type="button" title="예문닫기" class="ex close expand_all_exam_bt btn_txt_style1"><span class="hc">예문닫기</span></button>
+                -->
+                <button type="button" title="예문더보기" class="ex open expand_all_exam_bt btn_txt_style1"><span class="hc">View more Examples</span></button>
+
+                <a href="javascript:void(0);" onclick="nclk (this, 'top.small', '', 1);" class="fontSizeBtn ft_small btn_txt_style1 on" size="" act="small" title="글자크기 작게"><span class="hc">가</span></a>
+                <a href="javascript:void(0);" onclick="nclk (this, 'top.large', '', 1);" class="fontSizeBtn ft_big btn_txt_style1 on" size="ft_mod" act="big" title="글자크기 크게"><span class="hc">가</span></a>
+			</div>
+<div class="dc section_box" id="dc_cont">
+			<!-- meaning_body -->
+			<div class="section last section_article">
+				<h5>カ행변격 자동사</h5>
+				<ol class="lst mean_level_2">
+				<li>
+		<span class="lst_txt"><a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>.</span>
+					<ol class="mean_level_3">
+					<li>
+		<span class="lst_txt">(<a class="kor_link" href="/search.nhn?query=%EA%B1%B0%EB%A6%AC">거리</a><span class="mid_ico">·</span><a class="kor_link" href="/search.nhn?query=%EC%8B%9C%EA%B0%84%EC%A0%81">시간적</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a>) <a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EB%A6%AC%EB%A1%9C">이리로</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>; <a class="kor_link" href="/search.nhn?query=%EB%8B%A4%EA%B0%80%EC%98%A4%EB%8B%A4">다가오다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_0"><span class="autolink jp" lang="ja" data-query="%E8%A1%8C%E3%81%8F%E5%B9%B4"><span class="jp" lang="ja">行く年<sup class="huri">ゆくとし</sup></span></span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B%E5%B9%B4"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span><span class="jp" lang="ja">年<sup class="huri">とし</sup></span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EA%B0%80%EB%8B%A4">가는</a> <a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">해</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오는</a> <a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">해</a></span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990003" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_1"><span class="autolink jp" lang="ja" data-query="%E6%89%8B%E7%B4%99"><span class="jp" lang="ja">手紙<sup class="huri">てがみ</sup></span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_1">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%ED%8E%B8%EC%A7%80">편지</a>가 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_2"><span class="autolink jp" lang="ja" data-query="%E6%98%A5"><span class="jp" lang="ja">春<sup class="huri">はる</sup></span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_2">재생</button></span>
+			<span class="kor" lang="ko">봄이 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_3"><span class="autolink jp" lang="ja" data-query="%E3%83%81%E3%83%A3%E3%83%B3%E3%82%B9"><span class="jp" lang="ja">チャンス</span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_3">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EA%B8%B0%ED%9A%8C">기회</a>가 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_4"><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span><span class="autolink jp" lang="ja" data-query="%E8%80%85"><span class="jp" lang="ja">者<sup class="huri">もの</sup></span></span><span class="jp" lang="ja">はこばまない</span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_4">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오는</a> 자는 <a class="kor_link" href="/search.nhn?query=%EB%A7%89%EB%8B%A4">막지</a> <a class="kor_link" href="/search.nhn?query=%EC%95%8A%EB%8B%A4">않는다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_5"><span class="autolink jp" lang="ja" data-query="%E3%81%8B%E3%81%A1%E3%82%93%E3%81%A8%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">かちんと</span><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_5">재생</button></span>
+			<span class="kor" lang="ko">(<a class="kor_link" href="/search.nhn?query=%EC%83%81%EB%8C%80">상대</a>의 <a class="kor_link" href="/search.nhn?query=%EC%96%B8%EB%8F%99">언동</a>이) <a class="kor_link" href="/search.nhn?query=%EC%8B%A0%EA%B2%BD">신경</a>을 <a class="kor_link" href="/search.nhn?query=%EA%B1%B4%EB%93%9C%EB%A6%AC%EB%8B%A4">건드리다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_6"><span class="autolink jp" lang="ja" data-query="%E3%81%B4%E3%82%93%E3%81%A8"><span class="jp" lang="ja">ぴんと</span></span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_6">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%A7%81%EA%B0%90%EC%A0%81">직감적</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a> <a class="kor_link" href="/search.nhn?query=%EC%95%8C%EB%8B%A4">알다</a>; <a class="kor_link" href="/search.nhn?query=%EB%8B%A8%EB%B0%95">단박</a>에 <a class="kor_link" href="/search.nhn?query=%EA%B9%A8%EB%8B%AB%EB%8B%A4">깨닫다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_7"><span class="autolink jp" lang="ja" data-query="%E5%BD%BC"><span class="jp" lang="ja">彼<sup class="huri">かれ</sup></span></span><span class="jp" lang="ja">も</span><span class="autolink jp" lang="ja" data-query="%E3%82%82%E3%81%86"><span class="jp" lang="ja">もう</span></span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span><span class="autolink jp" lang="ja" data-query="%E3%81%93%E3%82%8D"><span class="jp" lang="ja">ころ</span></span><span class="jp" lang="ja">だ</span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_7">재생</button></span>
+			<span class="kor" lang="ko">그도 <a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EC%A0%9C">이제</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">올</a> 때가 <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">됐다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_8"><span class="autolink jp" lang="ja" data-query="%E7%9F%A5%E3%82%89%E3%81%9B"><span class="jp" lang="ja">知<sup class="huri">し</sup></span><span class="jp" lang="ja">らせ</span></span><span class="jp" lang="ja">が</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_8">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%86%8C%EC%8B%9D">소식</a>이 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">왔다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_9"><span class="autolink jp" lang="ja" data-query="%E9%A0%86%E7%95%AA"><span class="jp" lang="ja">順番<sup class="huri">じゅんばん</sup></span></span><span class="jp" lang="ja">が</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_9">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%B0%A8%EB%A1%80">차례</a>가 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">왔다</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_10"><span class="autolink jp" lang="ja" data-query="%E3%81%84%E3%81%A4"><span class="jp" lang="ja">いつ</span></span><span class="jp" lang="ja">か</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span><span class="autolink jp" lang="ja" data-query="%E7%94%BA"><span class="jp" lang="ja">町<sup class="huri">まち</sup></span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_10">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%96%B8%EC%A0%A0%EA%B0%80">언젠가</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">왔던</a> <a class="kor_link" href="/search.nhn?query=%EB%8F%84%EC%8B%9C">도시</a></span>
+		</p>
+		<p class="ex_JK000000024990003" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990003_11"><span class="autolink jp" lang="ja" data-query="%E5%87%BA%E7%99%BA"><span class="jp" lang="ja">出発<sup class="huri">しゅっぱつ</sup></span></span><span class="jp" lang="ja">の</span><span class="autolink jp" lang="ja" data-query="%E6%97%A5"><span class="jp" lang="ja">日<sup class="huri">ひ</sup></span></span><span class="jp" lang="ja">が</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990003_11">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%B6%9C%EB%B0%9C">출발</a>할 날이 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">왔다</a>.</span>
+		</p>
+					</li>
+					<li>
+		<span class="lst_txt">(<a class="kor_link" href="/search.nhn?query=%EC%96%B4%EB%96%A4">어떤</a> <a class="kor_link" href="/search.nhn?query=%EC%9B%90%EC%9D%B8">원인</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a>) <a class="kor_link" href="/search.nhn?query=%EC%9D%BC%EC%96%B4%EB%82%98%EB%8B%A4">일어나다</a>; <a class="kor_link" href="/search.nhn?query=%EC%83%9D%EA%B8%B0%EB%8B%A4">생기다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990004_0"><span class="autolink jp" lang="ja" data-query="%E9%81%8E%E5%8A%B4"><span class="jp" lang="ja">過労<sup class="huri">かろう</sup></span></span><span class="jp" lang="ja">から</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span><span class="autolink jp" lang="ja" data-query="%E7%97%85%E6%B0%97"><span class="jp" lang="ja">病気<sup class="huri">びょうき</sup></span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990004_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EA%B3%BC%EB%A1%9C">과로</a><a class="kor_link" href="/search.nhn?query=%EC%97%90%EC%84%9C">에서</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오는</a> <a class="kor_link" href="/search.nhn?query=%ED%83%80%EB%8B%A4">탈</a></span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990004" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990004" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990004_1"><span class="autolink jp" lang="ja" data-query="%E4%B8%8D%E6%B3%A8%E6%84%8F"><span class="jp" lang="ja">不<sup class="huri">ふ</sup>注意<sup class="huri">ちゅうい</sup></span></span><span class="jp" lang="ja">から</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span><span class="autolink jp" lang="ja" data-query="%E4%BA%8B%E6%95%85"><span class="jp" lang="ja">事故<sup class="huri">じこ</sup></span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990004_1">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EB%B6%80%EC%A3%BC%EC%9D%98">부주의</a><a class="kor_link" href="/search.nhn?query=%EC%97%90%EC%84%9C">에서</a> <a class="kor_link" href="/search.nhn?query=%EC%83%9D%EA%B8%B0%EB%8B%A4">생긴</a> <a class="kor_link" href="/search.nhn?query=%EC%82%AC%EA%B3%A0">사고</a>.</span>
+		</p>
+					</li>
+					</ol>
+				</li>
+				<li>
+		<span class="lst_txt">…<a class="kor_link" href="/search.nhn?query=%EC%B2%98%EB%9F%BC">처럼</a> <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">되다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990005_0"><span class="autolink jp" lang="ja" data-query="%E3%81%9D%E3%81%86%E3%81%93"><span class="jp" lang="ja">そう</span></span><B><span class="autolink jp" lang="ja" data-query="%E3%81%9D%E3%81%86%E3%81%93"><span class="jp" lang="ja">こ</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%AA%E3%81%8F%E3%81%A1%E3%82%83"><span class="jp" lang="ja">なくちゃ</span></span><span class="jp" lang="ja">おもしろく</span><span class="autolink jp" lang="ja" data-query="%E3%81%AA%E3%81%84"><span class="jp" lang="ja">ない</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990005_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EA%B7%B8%EB%A0%87%EB%8B%A4">그렇게</a> <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">되지</a> <a class="kor_link" href="/search.nhn?query=%EC%95%8A%EB%8B%A4">않으면</a> <a class="kor_link" href="/search.nhn?query=%EC%9E%AC%EB%AF%B8">재미</a>가 <a class="kor_link" href="/search.nhn?query=%EC%97%86%EB%8B%A4">없다</a>.</span>
+		</p>
+				</li>
+				<li>
+		<span class="lst_txt">[<span class="jp" lang="ja">くる</span>]</span>
+					<ol class="mean_level_3">
+					<li>
+		<span class="lst_txt">(‘<span class="jp" lang="ja">ときている</span>’‘<span class="jp" lang="ja">ときたものだ</span>’의 <a class="kor_link" href="/search.nhn?query=%ED%98%95%EC%8B%9D">형식</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a>) …<a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EB%8B%A4">이다</a>; …<a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">하다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990007_0"><span class="autolink jp" lang="ja" data-query="%E3%81%9D%E3%82%8C"><span class="jp" lang="ja">それ</span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E9%9D%A2%E7%99%BD%E3%81%84"><span class="jp" lang="ja">面白<sup class="huri">おもしろ</sup></span><span class="jp" lang="ja">い</span></span><span class="jp" lang="ja">と</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D"><span class="jp" lang="ja">き</span></span></B><span class="jp" lang="ja">て</span><span class="autolink jp" lang="ja" data-query="%E3%81%84%E3%82%8B"><span class="jp" lang="ja">いる</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990007_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EA%B7%B8%EA%B2%83">그것</a>이 <a class="kor_link" href="/search.nhn?query=%EC%9E%AC%EB%AF%B8%EC%9E%88%EB%8B%A4">재미있게</a> <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">되어</a> <a class="kor_link" href="/search.nhn?query=%EC%9E%88%EB%8B%A4">있다</a></span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990007" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990007" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990007_1"><span class="autolink jp" lang="ja" data-query="%E5%BD%BC"><span class="jp" lang="ja">彼<sup class="huri">かれ</sup></span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E8%BB%BD%EF%A5%A1"><span class="jp" lang="ja">軽<sup class="huri">けい</sup></span><span class="jp" lang="ja">率</span></span><span class="jp" lang="ja">と</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span><span class="autolink jp" lang="ja" data-query="%E3%82%82%E3%82%93"><span class="jp" lang="ja">もん</span></span><span class="jp" lang="ja">だから</span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990007_1">재생</button></span>
+			<span class="kor" lang="ko">그가 <a class="kor_link" href="/search.nhn?query=%EA%B2%BD%EC%86%94">경솔</a>하게 <a class="kor_link" href="/search.nhn?query=%EB%82%98%EC%98%A4%EB%8B%A4">나왔기</a> <a class="kor_link" href="/search.nhn?query=%EB%95%8C%EB%AC%B8">때문</a>에.</span>
+		</p>
+					</li>
+					<li>
+		<span class="lst_txt">(‘<span class="jp" lang="ja">ときたら</span>’‘<span class="jp" lang="ja">ときては</span>’‘<span class="jp" lang="ja">とくると</span>’‘<span class="jp" lang="ja">ときた</span><span class="jp" lang="ja">日<sup class="huri">ひ</sup></span><span class="jp" lang="ja">には</span>’의 <a class="kor_link" href="/search.nhn?query=%ED%98%95%EC%8B%9D">형식</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a>) …<a class="kor_link" href="/search.nhn?query=%EB%9D%BC%EB%A9%B4">라면</a>; …라 <a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">하면</a>; …의 <a class="kor_link" href="/search.nhn?query=%EA%B2%BD%EC%9A%B0">경우</a>는.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990008_0"><span class="autolink jp" lang="ja" data-query="%E9%87%8E%E7%90%83"><span class="jp" lang="ja">野球<sup class="huri">やきゅう</sup></span></span><span class="jp" lang="ja">と</span><span class="autolink jp" lang="ja" data-query="%E3%81%8F%E3%82%8B"><span class="jp" lang="ja">くる</span></span><span class="jp" lang="ja">と</span><span class="autolink jp" lang="ja" data-query="%E9%A3%AF"><span class="jp" lang="ja">飯<sup class="huri">めし</sup></span></span><span class="jp" lang="ja">より</span><span class="autolink jp" lang="ja" data-query="%E5%A5%BD%E3%81%8D"><span class="jp" lang="ja">好<sup class="huri">す</sup></span><span class="jp" lang="ja">き</span></span><span class="jp" lang="ja">だ</span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990008_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%95%BC%EA%B5%AC">야구</a>라 <a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">하면</a> 밥 <a class="kor_link" href="/search.nhn?query=%EB%A8%B9%EB%8B%A4">먹는</a> 것<a class="kor_link" href="/search.nhn?query=%EB%B3%B4%EB%8B%A4">보다</a> 더 <a class="kor_link" href="/search.nhn?query=%EC%A2%8B%EB%8B%A4">좋다</a></span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990008" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990008" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990008_1"><span class="autolink jp" lang="ja" data-query="%E3%81%82%E3%81%AE%E4%BA%BA"><span class="jp" lang="ja">あの</span><span class="jp" lang="ja">人<sup class="huri">ひと</sup></span></span><span class="jp" lang="ja">と</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D"><span class="jp" lang="ja">き</span></span></B><span class="jp" lang="ja">たら</span><span class="autolink jp" lang="ja" data-query="%E5%85%A8%E3%81%8F"><span class="jp" lang="ja">全<sup class="huri">まった</sup></span><span class="jp" lang="ja">く</span></span><span class="autolink jp" lang="ja" data-query="%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84"><span class="jp" lang="ja">問題<sup class="huri">もんだい</sup></span><span class="jp" lang="ja">にならない</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990008_1">재생</button></span>
+			<span class="kor" lang="ko">저 <a class="kor_link" href="/search.nhn?query=%EC%82%AC%EB%9E%8C">사람</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a> <a class="kor_link" href="/search.nhn?query=%EB%A7%90%ED%95%98%EB%8B%A4">말하자면</a> <a class="kor_link" href="/search.nhn?query=%EC%A0%84%EC%97%B0">전연</a> <a class="kor_link" href="/search.nhn?query=%EB%AC%B8%EC%A0%9C">문제</a>가 안 <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">된다</a></span>
+		</p>
+		<p class="ex_JK000000024990008" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990008_2"><span class="autolink jp" lang="ja" data-query="%E7%94%98%E3%81%84"><span class="jp" lang="ja">甘<sup class="huri">あま</sup></span><span class="jp" lang="ja">い</span></span><span class="autolink jp" lang="ja" data-query="%E3%82%82%E3%81%AE"><span class="jp" lang="ja">もの</span></span><span class="jp" lang="ja">と</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D"><span class="jp" lang="ja">き</span></span></B><span class="jp" lang="ja">たら</span><span class="autolink jp" lang="ja" data-query="%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84"><span class="jp" lang="ja">目<sup class="huri">め</sup></span><span class="jp" lang="ja">がない</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990008_2">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EB%8B%A8%EA%B2%83">단것</a><a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EB%9D%BC%EB%A9%B4">이라면</a> <a class="kor_link" href="/search.nhn?query=%EC%82%AC%EC%A1%B1%EC%9D%84%EB%AA%BB%EC%93%B0%EB%8B%A4">사족을 못 쓴다</a>.</span>
+		</p>
+					</li>
+					</ol>
+				</li>
+				<li>
+		<span class="lst_txt">[<span class="jp" lang="ja">くる</span>](<span class="jp" lang="ja">動詞<sup class="huri">どうし</sup>連用<sup class="huri">れんよう</sup>形<sup class="huri">けい</sup></span>＋‘<span class="jp" lang="ja">て</span>’를 <a class="kor_link" href="/search.nhn?query=%EB%B0%9B%EB%8B%A4">받아서</a>)</span>
+					<ol class="mean_level_3">
+					<li>
+		<span class="lst_txt"><a class="kor_link" href="/search.nhn?query=%EC%9D%B4%EC%AA%BD">이쪽</a><a class="kor_link" href="/search.nhn?query=%EC%9C%BC%EB%A1%9C">으로</a> (다<a class="kor_link" href="/search.nhn?query=%EA%B0%80%EB%8B%A4">가</a>) <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990010_0"><span class="jp" lang="ja">走<sup class="huri">はし</sup></span><span class="jp" lang="ja">って</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990010_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EB%9B%B0%EC%96%B4%EC%98%A4%EB%8B%A4">뛰어오다</a>; <a class="kor_link" href="/search.nhn?query=%EB%8B%AC%EB%A0%A4%EC%98%A4%EB%8B%A4">달려오다</a></span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990010" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990010" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990010_1"><span class="autolink jp" lang="ja" data-query="%E6%9C%A8"><span class="jp" lang="ja">木<sup class="huri">き</sup></span></span><span class="jp" lang="ja">が</span><span class="jp" lang="ja">流<sup class="huri">なが</sup></span><span class="jp" lang="ja">れて</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990010_1">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EB%82%98%EB%AC%B4">나무</a>가 <a class="kor_link" href="/search.nhn?query=%EB%96%A0%EB%82%B4%EB%8B%A4">떠내려</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>.</span>
+		</p>
+					</li>
+					<li>
+		<span class="lst_txt">…<a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">하고</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990011_0"><span class="autolink jp" lang="ja" data-query="%E8%8F%93%E5%AD%90"><span class="jp" lang="ja">菓子<sup class="huri">かし</sup></span></span><span class="jp" lang="ja">を</span><span class="jp" lang="ja">買<sup class="huri">か</sup></span><span class="jp" lang="ja">って</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990011_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EA%B3%BC%EC%9E%90">과자</a>를 <a class="kor_link" href="/search.nhn?query=%EC%82%AC%EC%98%A4">사오</a>다</span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990011" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990011" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990011_1"><span class="autolink jp" lang="ja" data-query="%E7%94%A8"><span class="jp" lang="ja">用<sup class="huri">よう</sup></span></span><span class="jp" lang="ja">を</span><span class="jp" lang="ja">済<sup class="huri">す</sup></span><span class="jp" lang="ja">まして</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990011_1">재생</button></span>
+			<span class="kor" lang="ko">일을 다 <a class="kor_link" href="/search.nhn?query=%EB%B3%B4%EB%8B%A4">보고</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>.</span>
+		</p>
+					</li>
+					<li>
+		<span class="lst_txt"><a class="kor_link" href="/search.nhn?query=%EC%A0%90%EC%B0%A8">점차</a> …<a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">하게</a> <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">되다</a>.</span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990012_0"><span class="jp" lang="ja">わかって</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990012_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%A0%90%EC%B0%A8">점차</a> <a class="kor_link" href="/search.nhn?query=%EC%95%8C%EB%8B%A4">알게</a> <a class="kor_link" href="/search.nhn?query=%EB%90%98%EB%8B%A4">되다</a></span>
+			<button class="expand_single_exam_btn ex_open" exId="ex_JK000000024990012" title="예문보기" type="button" style="display:none"><span class="blind_">예문보기</span></button>
+		</p>
+		<p class="ex_JK000000024990012" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990012_1"><span class="autolink jp" lang="ja" data-query="%E9%9B%BB%E8%BB%8A"><span class="jp" lang="ja">電車<sup class="huri">でんしゃ</sup></span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E3%81%93%E3%82%93"><span class="jp" lang="ja">こん</span></span><span class="jp" lang="ja">で</span><span class="autolink jp" lang="ja" data-query="%E6%9D%A5%E3%82%8B"><span class="jp" lang="ja">来<sup class="huri">く</sup></span><span class="jp" lang="ja">る</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990012_1">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%A0%84%EC%B0%A8">전차</a>가 <a class="kor_link" href="/search.nhn?query=%ED%98%BC%EC%9E%A1">혼잡</a><a class="kor_link" href="/search.nhn?query=%ED%95%B4%EC%A7%80%EB%8B%A4">해지다</a></span>
+		</p>
+		<p class="ex_JK000000024990012" style="display:none" >
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990012_2"><span class="autolink jp" lang="ja" data-query="%E9%9B%A8"><span class="jp" lang="ja">雨<sup class="huri">あめ</sup></span></span><span class="jp" lang="ja">が</span><span class="autolink jp" lang="ja" data-query="%E9%99%8D%E3%81%A3%E3%81%A6"><span class="jp" lang="ja">降<sup class="huri">ふ</sup></span><span class="jp" lang="ja">って</span></span><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">きた</span></span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990012_2">재생</button></span>
+			<span class="kor" lang="ko">비가 <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EA%B8%B0">오기</a> <a class="kor_link" href="/search.nhn?query=%EC%8B%9C%EC%9E%91">시작</a>했다.</span>
+		</p>
+					</li>
+					<li>
+		<span class="lst_txt">…<a class="kor_link" href="/search.nhn?query=%ED%95%98%EB%8B%A4">해</a> <a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">오다</a>.<octopus_type>[<a class="kor_link" href="/search.nhn?query=%EB%AC%B8%EC%96%B4">문어</a>형]</octopus_type><relt_pos>[<span class="jp" lang="ja">カ</span>변]</relt_pos><relt_word><span class="jp" lang="ja">く</span></relt_word></span>
+		<p>
+			<span class="ico_bl"></span>
+			<span id="entryTts_JK000000024990013_0"><span class="autolink jp" lang="ja" data-query="%E4%BB%8A"><span class="jp" lang="ja">今<sup class="huri">いま</sup></span></span><span class="jp" lang="ja">まで</span><span class="jp" lang="ja">述<sup class="huri">の</sup></span><span class="jp" lang="ja">べて</span><B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">き</span></span></B><span class="autolink jp" lang="ja" data-query="%E3%81%8D%E3%81%9F"><span class="jp" lang="ja">た</span></span><span class="autolink jp" lang="ja" data-query="%E4%BA%8B"><span class="jp" lang="ja">事<sup class="huri">こと</sup></span></span><span class="jp" lang="ja">は</span></span>
+			<span class="player"><button type="button" title="재생" class="play" data-tts="jp" data-ttsAreaId="entryTts_JK000000024990013_0">재생</button></span>
+			<span class="kor" lang="ko"><a class="kor_link" href="/search.nhn?query=%EC%97%AC%ED%83%9C">여태</a><a class="kor_link" href="/search.nhn?query=%EA%B9%8C%EC%A7%80">까지</a> <a class="kor_link" href="/search.nhn?query=%EB%A7%90%ED%95%98%EB%8B%A4">말해</a><a class="kor_link" href="/search.nhn?query=%EC%98%A4%EB%8B%A4">온</a> 것은.</span>
+		</p>
+					</li>
+					</ol>
+				</li>
+				</ol>
+			</div>
+			</div>
+			<!-- //meaning_body -->
+			<!--
+			<div class="more">
+				<a onclick="clickcr(this,'wrd.more','','',event);" href="http://dic.search.yahoo.co.jp/search?p=%E3%81%8F%E3%82%8B&aq=-1&oq=&dic_id=all&ei=UTF-8" target="_blank" title="일일사전(야후 재팬) 검색결과 보기">일일사전(야후 재팬) 검색결과 보기</a>
+			</div>
+			<div class="section idiom section_relhanja">
+				<h4>
+					<span title="관련 한자" class="tit3"><span class="blind">관련 한자</span></span>
+				</h4>
+				<h6 class="entry2"><a href="/entry/jk/1510.nhn" class="jp" lang="ja"><strong><span class='jp' lang='ja'>来</span></strong></a>
+
+
+
+				<a href="/jlpt/level-4/parts-0/p1.nhn" class="ico_jlpt4"><span class="blind">JLPT 4급</span></a>
+
+
+
+
+
+
+
+				<button title="단어장 저장" class="btn_add save2wordbook_btn" type="button"><span class="blind">단어장 저장</span></button></h6>
+				<dl class="top_dn">
+				<dt class="top_dt"><span class="blind">음독</span></dt>
+				<dd class="jp" lang="ja"><span class='jp' lang='ja'>らい</span></dd>
+				<dt class="top_dt2"><span class="blind">훈독</span></dt>
+				<dd class="jp" lang="ja"><span class='jp' lang='ja'>きたす</span><span class="mid_ico">·</span><span class='jp' lang='ja'>きたる</span><span class="mid_ico">·</span><span class='jp' lang='ja'>くる</span></dd>
+				</dl>
+				<dl class="top_dn top_dn_v2">
+				<dt class="top_dt3"><span class="blind">총획</span></dt>
+				<dd>7획</dd>
+				<dt class="top_dt4"><span class="blind">부수</span></dt>
+				<dd><span class="jp" lang="ja">木</span>(4획)<span class="bar">|</span><span class="ft_col3">올 래</span></dd>
+				</dl>
+			</div>
+	-->
+            <p class="txt_origin">출처: 위키백과</p>
+			<div class="section2">
+				<div class="nav_sec">
+					<a onclick="clickcr(this,'ext.all','','',event);" class="all" href="/search.nhn?range=all&q=%E3%81%8F%E3%82%8B" title="'くる'의 전체 검색결과 보기">'<strong><span class="jp" lang="ja">くる</span></strong>'의 전체 검색결과 보기</a>
+					<a onclick="clickcr(this,'ext.word','','',event);" href="/search.nhn?range=word&page=1&q=%E3%81%8F%E3%82%8B" title="'くる'의 단어 검색결과 보기">단어</a><em>(49)</em> <span class="bar">|</span>
+					<a onclick="clickcr(this,'ext.idiom','','',event);" href="/search.nhn?range=example&page=1&q=%E3%81%8F%E3%82%8B" title="'くる'의 예문 검색결과 보기">예문</a><em>(2,672)</em> <span class="bar">|</span>
+					<a onclick="clickcr(this,'ext.example','','',event);" href="/search.nhn?range=meaning&page=1&q=%E3%81%8F%E3%82%8B" title="'くる'의 본문 검색결과 보기">본문</a><em>(231)</em>
+				</div>
+			</div>
+			</div>
+			<!-- //tc-panel 1 -->
+			<!-- tc-panel 2 -->
+			<div class="tc-panel">
+			</div>
+			<!-- //tc-panel 2 -->
+			<!-- tc-panel 3 -->
+			<div class="tc-panel">
+			</div>
+			<!-- //tc-panel 3 -->
+			</div>
+			<!-- //tc-panels -->
+		</div>
+		<!-- //content -->
+    </div>
+
+<? include '00_footer_entry.html' ?>

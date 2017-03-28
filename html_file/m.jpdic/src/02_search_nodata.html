@@ -1,0 +1,185 @@
+<? include '00_header.html';?>
+<a href="#ct" class="hc">본문 바로가기</a>
+<div id="ct" role="main">
+
+		<!-- content -->
+		<div id="content" class="huri_off srch_nodata">
+			<ul class="m_tab">
+			<li class="on"><a href="/search.nhn?range=all&q=%E4%91%82" onclick="clickcr(this,'tab.all','','',event);">전체</a></li>
+			<li><a href="/search.nhn?range=word&page=1&q=%E4%91%82" onclick="clickcr(this,'tab.word','','',event);">단어</a></li>
+			<li><a href="/search.nhn?range=example&page=1&q=%E4%91%82" onclick="clickcr(this,'tab.example','','',event);">예문</a></li>
+			<li class="last"><a href="/search.nhn?range=meaning&page=1&q=%E4%91%82" onclick="clickcr(this,'tab.content','','',event);">본문</a></li>
+			</ul>
+
+			<h3 class="blind">전체</h3>
+			<div class="resize">
+				<div class="top_area">
+					<h4><span class="fnt_k17"><strong>'<span><span class="jp" lang="ja">䑂</span></span>'</strong></span>에 대한 검색결과가 없습니다.</h4>
+				</div>
+				<div class="view_ctrl srch_area">
+					<div class="hurigana">
+						<input type="checkbox" onclick="nclk(this, 'top.hurikana', '', 1);" id="hurigana" class="huriOnChk">
+						<label for="hurigana"><strong>후리가나</strong></label>
+					</div>
+				    <a href="javascript:void(0);" onclick="nclk (this, 'top.small', '', 1);" class="fontSizeBtn ft_small btn_txt_style1 on" size="" act="small" title="글자크기 작게"><span class="hc">가</span></a>
+                         <a href="javascript:void(0);" onclick="nclk (this, 'top.large', '', 1);" class="fontSizeBtn ft_big btn_txt_style1 on" size="ft_mod" act="big" title="글자크기 크게"><span class="hc">가</span></a>
+				</div>
+				<h4 class="top_h">혹시 다음과 같은 내용을 원하셨나요?</h4>
+				<h5 class="top_h2">외부 사전에서 검색한 결과</h5>
+				<div class="txt_info">
+					<div class="txt_box">
+						<div class="srch_box">
+							<dl>
+							<dt><a class="dt_hz" onClick="clickcr(this,'chr.chrja','35108','1',event)" href="http://hanja.naver.com/hanja?q=%E4%91%82">䑂</a></dt>
+							<dd>
+								<a class="dd_hz" onClick="clickcr(this,'chr.sound','35108','1',event)" href="http://hanja.naver.com/hanja?q=%E4%91%82"><span>살찔 여,살찔 애</span></a>
+								<span class="origin2">네이버 한자사전</span>
+								<div class="meaning">1. 살찌다 a. 살찌다 (애)</div>
+								<ul class="sub_info">
+								<li><em>[부수]</em><span class="hanja">月</span>(육달월)</li>
+								<li ><em>[총획]</em>18획</li>
+								<li></li>
+								</ul>
+							</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<ul class="openword_none">
+					<li>뜻/번역이 궁금할 땐 물어 보세요.<a href="javascript:void(0);" class="btn_regist">질문하기<span class="ico"></span></a></li>
+					<li>뜻을 알고 있다면 등록해 보세요!<a href="javascript:void(0)" class="btn_regist">뜻 등록하기<span class="ico"></span></a></li>
+				</ul>
+				<div class="section all last section_sptrans">
+					<h4>
+						<span title="번역 결과" class="tit4"><span class="blind">번역 결과</span></span>
+					</h4>
+					<div class="srch_box">
+						<p class="lst_p"><span class="jap_ico jp" lang="ja"><strong>䑂</strong></span><span>䑂</span></p>
+					</div>
+				</div>
+				<p class="text"><strong>'<span class="jp" lang="ja">䑂</span>'</strong>에 대한 <a href="https://m.search.naver.com/search.naver?where=m_ldic&sm=msv_nrs&query=%E4%91%82" class="fnt_k01" onclick="clickcr(this,'nsr.alldic','','',event);">사전 전체 검색</a>, <a href="https://m.search.naver.com/search.naver?sm=msv_nrs&query=%E4%91%82" class="fnt_k01" target="_blank" onclick="clickcr(this,'nsr.nx','','',event);">통합검색 결과 보기</a></p>
+			</div>
+		</div>
+		<!-- //content -->
+<script type="text/javascript">
+var g_ssc = "mdic.jp.all";
+var lParam = window.i18n("locale.locale","ko");
+if(lParam !="ko" && lParam !="zh_CN"){
+	g_ssc = g_ssc +"_"+lParam;
+}else if(lParam =="zh_CN"){
+	g_ssc = g_ssc +"_zhcn";
+}
+
+addOnloadEventListener(function () {
+	//add nclick to autoLink
+	var autoLinkList = $ElementList($$("span.autolink"));
+	autoLinkList.attr("onclick","nclk(this, 'han.autolink', '', 1);");
+
+	var autoLinkList2 = $ElementList($$("span.autolink2"));
+	autoLinkList2.attr("onclick","nclk(this, 'han.autolink', '', 1);");
+});
+</script>
+
+<div id="autolinkDiv" class="layer_dic" style="visibility:hidden;z-index:9999;">
+    <div id="autolinkContentDiv" class="layer_dic_inner huri_off">
+    </div>
+    <a onclick= "nclk(this, 'han.close', '', 1);" id="autolink_close" href="javascript:void(0)" class="btn_close" title="닫기">닫기</a>
+</div>
+<hr />
+
+<div id="spiLayer"><div style="padding:20px 0;margin-bottom:5px;text-align:center;background-color:rgba(255,255,0,.2)">소셜플러그인영역</div></div>
+
+<div class="warning">본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 사용 시 저작권법 등에 따라 법적 책임을 질 수 있습니다.</div>
+
+<!-- 퀴즈 -->
+<? include 'incl_quiz.html'; ?>
+
+<div class="ly_media">
+	<div class="cont_wrap">
+		미디어 볼륨 크기가 '0'인 경우에는 발음이 들리지 않습니다.&nbsp;발음 재생 전에 미디어 볼륨 크기를 확인해 주시기 바랍니다.<br>
+		<a href="http://m.help.naver.com/serviceMain.nhn?falias=mo_dic_comm&amp;type=faq#faqDetail?faqId=22353&amp;readType=1" onClick="nclk(this, 'mvg.help', '', 1);">미디어 볼륨 크기 확인 방법</a>
+	</div>
+</div>
+<!-- word_otr -->
+<div class="entry_dn">
+	<div class="section_box" style="display:block">
+		<div class="word_otr word_line">
+			<span class="word_otr_h"><em class="more_b">'<span class="ellip">䑂</span>'</em>의 다른 어학사전 결과 보기</span>
+			<!-- [D] btn_open 클릭시 on 클래스 추가 -->
+			<ul id="dic_search_linkes_container" class="word_otr_lst">
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//전체사전 "다른 어학사전 결과 보기" 영역 공동 JS
+	$Fn(function(){
+		var host_prefix = location.hostname.indexOf("dev.") > -1 ? "dev." :( location.hostname.indexOf("local.") > -1 ? "dev." : (location.hostname.indexOf("stg.") > -1 ? "stg." :""));
+		var jsUrl = "http://" + host_prefix + "dict-plugin.naver.com/js";
+		LazyLoad.js(jsUrl + "/dic.AllDicSearchLinks.mobile_new.js?" + Date.now(), function() {
+		    window.dnb_query = "䑂";
+			window.dnb_service = "jpdic";
+			showAllDicSearchLinks();
+		});
+	}, this).attach(window, "load");
+
+/*addOnloadEventListener( function(){
+		window.dnb_query = "䑂";
+		window.dnb_service = "jpdic";
+		showAllDicSearchLinks();
+});*/
+</script>
+<!-- //word_otr -->
+
+<script type="text/javascript">
+//개인화 플러그인 --> 시작
+(function(){
+	var spLocale= window.i18n("locale.locale","ko");
+	if(spLocale=="en"){
+		spLocale = "en_US";
+	}else if(spLocale=="en"){
+		spLocale = "en_US";
+	}else if(spLocale=="ja"){
+		spLocale = "ja_JP";
+	}else if(spLocale=="zh_CN"){
+	}else {
+		spLocale = "ko_KR";
+	}
+	var id = "naver-splugin-sdk";
+	var s = document.createElement("script"); s.id = id; s.type = "text/javascript", s.charset = "utf-8", s.async = false;
+	s.src = ("http://spi.naver.net/js/release/"+spLocale+"/splugin.m.js?" + nhn.dic.Utils.getFormattedDate());
+	var d = document.getElementsByTagName('head')[0]; d.appendChild(s, d);
+})();
+//개인화 플러그인 --> 종료
+</script>
+<div class="sch2">
+	<form id="search_form_bottom" action="" onsubmit="return searchSubmit();" method="GET">
+		<fieldset class="sc3_n">
+			<legend class="hc2">검색</legend>
+			<div class="sc4_n">
+				<span class="sc_box2"><input id="ac_input_bottom" type="search" name="query" title="검색어 입력" value="䑂" maxlength="50" class="it2" autocomplete="off" autocapitalize="off" autocorrect="off"></span>
+				<button id="clear_input_bottom" type="button" title="입력 내용 삭제" class="sbt4" style="display:none"><span class="blind">입력 내용 삭제</span></button>
+				<button type="submit" class="sbt3"><span class="blind">검색</span></button>
+			</div>
+		</fieldset>
+	</form>
+</div>
+
+<!-- 언어스킨설정 -->
+<div class="set_lang">
+    <form id="" action="">
+        <label for="selec_lang">언어설정</label>
+        <div class="selec_wrap">
+            <select id="selec_lang">
+                    <option value="ko">한국어</option>
+                    <option value="ja">日本語</option>
+                    <option value="en">English</option>
+                    <option value="zh_CN">简体中文</option>
+            </select>
+        </div>
+    </form>
+    <a href="javascript:nclk(this, 'btm.top', '', '1');window.scrollTo(0, 1);" class="u_ftst ico_top">맨위로</a>
+</div>
+<!-- //언어스킨설정 -->
+<? include '00_footer.html';?>

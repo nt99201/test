@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<title></title>
+<style type="text/css">
+html,body{width:100%;margin:0px;padding:0px;background:whitesmoke}
+#body{position:relative;overflow:hidden;text-align:center;margin:10px 10px 0 10px;padding-bottom:10px}
+#body img{display: block;margin:0 auto;border:0px none;vertical-align:top;text-align:center}
+#body .thmb{margin-bottom:15px}
+.t .thmb{width:100%}
+.t .close{width:11%}
+</style>
+<script type="text/javascript">
+var elImg=document.createElement("img");	// NCD-165 把 elImg 放在全局,可以解决IE img onload的问题
+window.onload=function()
+{
+	var elBody=document.getElementById("body");
+	var elA=document.createElement("a");
+	elA.href="javascript:window.close();";
+	//var elImg=document.createElement("img");
+	elA.appendChild(elImg);
+	elBody.insertBefore(elA,elBody.firstChild);
+	elImg.alt="";
+	elImg.className="thmb"
+	elImg.src=location.search.substring(5);
+	if(navigator.userAgent.toLowerCase().indexOf("ipad") != -1)
+	document.body.className="t";
+};
+</script>
+</head>
+<body>
+
+<div id="body">
+		<a href="javascript:window.close();"><img src="http://dicimg.naver.net/cndic/web/btn_close1.gif" width="38" alt="close" class="close" /></a>
+</div>
+
+</body>
+</html>

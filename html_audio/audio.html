@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>audio</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style type="text/css">
+.Ugc_audio {overflow:hidden; position:relative; min-width:320px; max-width:480px; height:62px; padding:24px 14px 0 64px; background-color:rgba(153, 153, 153, 0.1); color:#000;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+.Ugc_audio .button_control {position:absolute; top:13px; left:14px; display:block; width:36px; height:36px; border:1px solid #444; border-radius:50px; background-color:#eee; text-align:center; cursor:pointer;}
+.Ugc_audio .button_control .ico {overflow:hidden; display:inline-block;}
+.Ugc_audio .button_control .ico.play {width:0; height:0; margin:3px 0 0 -6px; border-right:14px solid transparent; border-bottom:14px solid #575756; 
+transform:rotate(225deg);
+-ms-transform:rotate(225deg);
+-webkit-transform:rotate(225deg);
+-moz-transform:rotate(225deg);
+-o-transform:rotate(225deg);
+}
+.Ugc_audio .button_control .ico.pause {width:12px; height:14px; margin-top:3px; background:url('images/btn_pause.png') left top no-repeat; background-size:12px 14px;}
+
+.Ugc_audio .audio_section {overflow:hidden; position:relative; height:15px; padding:0 40px;}
+.Ugc_audio .audio_section .audio_time_current  {position:absolute; top:0; left:0; display:block; font-size:13px; line-height:15px; color:#999999;}
+.Ugc_audio .audio_section .audio_time_duration {position:absolute; top:0; right:0; display:block; font-size:13px; line-height:15px;}
+
+.Ugc_audio .audio_section .audio_time_current.is_active {color:#00c73c;}
+
+.Ugc_audio .audio_section .audio_bar {overflow:hidden; position:relative; height:3px; margin-top:5px; background-color:rgba(153, 153, 153, 0.1); cursor:pointer;}
+.Ugc_audio .audio_section .audio_bar .audio_bar_progress {position:absolute; top:0; left:0; width:100%; height:3px; background-color:#00c73c; cursor:pointer;}
+.Ugc_audio .audio_section .audio_bar .prs_btn {float:right; width:5px; height:3px; background-color:#00c73c;}
+
+.audio_html5 {display:none;}
+.audio_html5 figcaption {width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden;}
+
+/*************** 650px ***************/
+@media screen and (min-width:650px){
+	.Ugc_audio {height:60px; padding:23px 20px 0 68px;}
+
+	.Ugc_audio .audio_section .audio_time_current {height:14px; font-size:12px; line-height:14px;}
+	.Ugc_audio .audio_section .audio_time_duration {height:14px; font-size:12px; line-height:14px;}
+
+	.Ugc_audio .button_control {left:20px; width:32px; height:32px;}
+	.Ugc_audio .button_control .ico.play {margin-top:3px;}
+	.Ugc_audio .button_control .ico.pause {margin-top:3px;}
+
+	.Ugc_audio .audio_section {padding:0 45px;}
+}
+</style>
+</head>
+<body>
+
+<!-- 
+	오디오 : 별도의 플러그인 없이 브라우져 자체로 지원
+	각 브라우져가 지원하는 코덱의 종류가 한정적이라는 단점이 있음,, (ogg,mp3,wav 파일 정도의 확장자)
+
+	- ogg : 파이어폭스, 크롬, 오페라
+	- mp3 : ie9, 크롬, 사파리
+	- wav : 파이어폭스, 크롬, 오페라, 사파리
+-->
+
+	<!-- [s]audio_html5 -->
+	<figure class="audio_html5">
+		<figcaption>뮤직플레이</figcaption>
+		<audio controls>
+			<source src="data/old_melody.mp3" />
+			<source src="data/old_melody.ogg" />
+			<p>현재 사용중인 브라우져에서는 음악을 재생 할 수 없습니다. 외부 플레이어를 이용하시기 바랍니다. <a href="data/old_melody.mp3">재생</a></p>
+		</audio>
+	</figure>
+	<!-- //[e]audio_html5 -->
+
+
+<!-- 
+	role : 정해진 caption
+	aria-label : 추상적 summary
+-->
+
+	<!-- 오디오 컴포넌트 -->
+	<div class="Ugc_audio" role="application" aria-label="audio" title="audio">
+		<!-- [D] 버튼 제어 : 재생(ico play), 일시정지(ico pause) / title은 제어 버튼에 따른 명칭 추가 : 재생, 일시정지 -->
+		<button type="button" class="button_control" title="재생"><span class="ico play"></span></button>
+		<!-- [D] 재생중 : is_active 추가 / 진행률 : style width값 적용 -->  
+		<div class="audio_section">
+			<span class="audio_time_current is_active" title="재생시간">99:99</span>
+			<div class="audio_bar">
+				<div class="audio_bar_progress" style="width:1%;"></div> <!-- [d]진행률 제어 -->
+			</div>
+			<span class="audio_time_duration" title="재생종료시간">99:99</span>
+		</div>
+	</div>
+
+
+</body>
+</html>

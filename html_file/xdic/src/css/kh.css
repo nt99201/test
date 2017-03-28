@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* NHNC Web Standard Team JHY 121115 */
+/* 캄보디아어 폰트 */
+@font-face {
+     font-family: 'Hanuman';
+     font-style: normal;
+     src: url('../img/kh/Hanuman.eot')}/* xp-ie */
+@font-face {
+     font-family: 'Hanuman';
+     font-style: normal;
+     src: url('../img/kh/Hanuman.eot') format('embedded-opentype'),
+     url('../img/kh/Hanuman.woff') format('woff'),
+     url('../img/kh/Hanuman.ttf') format('truetype')
+}
+
+body #container *,body .u_ft *{font-family:'Hanuman',arial,Helvetica,'굴림',Gulim !important}
+body.s #container *,body .u_ft *{font-family:'Hanuman',arial,Helvetica,'굴림',Gulim !important}
+
+/* 사전Tip노출개수 */
+.m_tab_v2 .m_tab_l{width:50%}
+.m_tab_v2 .m_tab_l:nth-child(1){width:50%}
+
+/* 각 사전 별 수정부분 */
+.cont_main h2 .logo{width:320px;background:url(../img/kh/sp_header_pc.png) no-repeat}
+.cont_main.change_lang h2 .logo{width:241px;margin-left:288px;background-position:0 -92px}
+.cont_main.change_lang .main_srch .btn_srch{width:64px;background:url(../img/kh/sp_header_pc.png) no-repeat 0 -186px}
+.cont_main.change_lang .main_srch .device{left:406px;}
+
+.dic_lk .img{background:url(../img/kh/sp_dic.png) no-repeat;background-size:122px 157px}
+.pc .lyr_mobile div{background:url(../img/kh/img_qr.gif) no-repeat}
+.pc .header h1 a{background:url(../img/kh/sp_dic_s.png) no-repeat 0 6px}
+.pc .dic_lk .img{background:url(../img/kh/sp_dic_s.png) no-repeat}
+
+/* 캄보디아어 사전 수정 */
+.u_hsft .u_itw{overflow:hidden}
+.more_b .ellip{line-height:22px}
+
+/* 레이어 팝업 */
+.ly_pop{position:absolute;top:0;right:0;left:0;bottom:0;z-index:120;width:100%;height:100%;background:rgba(0,0,0,.5)}
+.ly_wrap{position:relative;margin:143px auto 0;background:#f6f6f6;border-radius:3px;box-shadow:2px 2px 2px rgba(0,0,0,.3)}
+.ly_wrap .cont{padding:29px 25px 30px}
+.ly_wrap .cont .tit{margin-bottom:10px;font-size:22px;color:#333;line-height:24px}
+.ly_wrap .cont .tit strong{display:block;color:#6888e3}
+.ly_wrap .cont .tx{margin:0 6px 18px 1px;font-size:12px;line-height:16px;color:#666}
+.ly_wrap .cont .btn{display:block;padding:8px 0 7px;font-size:15px;color:#fff;text-align:center;font-weight:bold;text-shadow:1px 1px 2px #5078be;border-radius:2px;border:1px solid #517bc5;background:#5f8ddd}
+.ly_wrap .btm{height:32px;text-align:center;border-bottom-left-radius:3px;border-bottom-right-radius:3px;background:#e8e8e8}
+.ly_wrap .btm label{display:inline-block;font-size:13px;line-height:36px;letter-spacing:-1px;color:#666;vertical-align:top}
+.ly_wrap .btm input{background:url(../img/kh/ly_btn_a.png) no-repeat;background-size:231px 67px;-webkit-background-size:231px 67px}
+.ly_wrap .btm .chk{display:inline-block;width:17px;height:17px;margin:9px 6px 0 0;border:0;border-radius:0;background-position:0 -51px;vertical-align:top;-webkit-appearance:none}
+.ly_wrap .btm .chk:checked{background-position:-20px -51px !important}
+.ly_wrap .btn_clse{position:absolute;top:0;right:0;width:40px;height:40px;font-size:0;color:transparent;background:url(../img/kh/ly_btn_close.png) no-repeat 13px 10px;background-size:17px 17px;-webkit-background-size:17px 17px}
+
+/* 사전배너 */
+.main_dn.app .main_np .pnt{word-break:break-all}
+
+/* opn_dic */
+.device a.opn_dic{padding-left:0px;background:none;}
+.device a.opn_xdic{padding-left:0px;background:none;margin-left:29px;}
+
+/* GNB 타이틀 */
+.Ngnb_service .Nservice_item .Nicon_service {
+     width: 129px; /* 서비스에 맞게 변경 */
+     background-image: url(../img/kh/Nicon_khdic.png); /* 서비스에 맞게 변경 */
+     background-image: linear-gradient(transparent, transparent), url(../img/kh/Nicon_khdic.svg);
+     -webkit-background-size: 129px auto; /* 서비스에 맞게 변경 */
+     background-size: 129px auto; /* 서비스에 맞게 변경 */
+}

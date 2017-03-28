@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Main :: 일본어 사전</title>
+    <link rel="stylesheet" href="css/w.css">
+</head>
+<body>
+    <!-- container -->
+    <div class="container">
+        <div class="info_box">
+            <!-- [D] 재생 버튼 클릭시 로딩 끝나고 player 에 on 클래스 추가 요망 -->
+            <h3 class="info_tit">JLPT 단어목록 <a href="#" class="ico_help"><span class="blind">도움말</span></a>
+                <!-- [D] 도움말 클릭시 노츌-->
+                <div class="help_dsc" style="display:block">
+                    <p>
+                        <em>The Difficulty of the word increases with higher levels.</em>
+                        <strong>N<span>1</span> &gt; N<span>2</span> &gt; N<span>3</span> &gt; N<span>4</span> &gt; N<span>5</span></strong>
+                    </p>
+                    <a href="#" class="btn_clse" title="닫기"><span class="blind">닫기</span></a>
+                    <span class="effect"></span>
+                </div>
+            </h3>
+
+            <div class="wc_btn_area">
+                <!-- [D] 버튼 클릭시 slt_wrap에 on클래스 추가 및 아이콘 -->
+                <!-- 20160808 접근성 title 수정 -->
+                <span class="slt_wrap on">
+                    <select title="난이도 선택">
+                        <option>N1</option>
+                        <option>N2</option>
+                        <option>N3</option>
+                        <option>N4</option>
+                        <option>N5</option>
+                    </select>
+                    <span class="ico_arr"></span>
+                </span>
+                <span class="slt_wrap">
+                    <select title="품사선택">
+                        <option>Whole Part of Speech</option>
+                        <option>명사</option>
+                        <option>대명사</option>
+                        <option>동사</option>
+                        <option>조사</option>
+                        <option>형용사</option>
+                        <option>접사</option>
+                        <option>부사</option>
+                        <option>감동사</option>
+                        <option>형용동사</option>
+                        <option>기타</option>
+                    </select>
+                    <span class="ico_arr"></span>
+                </span>
+                <!-- //20160808 접근성 title 수정 -->
+            </div>
+
+            <ul class="td_lst v1">
+                <li class="td_li">
+                    <h4><a href="#" class="jp" lang="ja"><ruby><rb>うんざり</rb></ruby></a><span class="player load"><button type="button" class="btn_play play" title="발음 듣기">재생</button></span></h4>
+                    <p class="td_txt">지긋지긋하게, 지겹게</p>
+                </li>
+                <li class="td_li">
+                    <h4><a href="#" class="jp" lang="ja"><ruby><rb>がい-こくじん<em>[外国人]</em></rb></ruby></a></h4>
+                    <p class="td_txt">일어나다. 기상하다</p>
+                </li>
+                <li class="td_li">
+                    <h4><a href="#" class="jp" lang="ja"><ruby><rb>おち-つ·く</rb></ruby></a><span class="player on"><button type="button" class="btn_play play" title="발음 듣기">재생</button></span></h4>
+                    <p class="td_txt">섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- //언어스킨설정 -->
+    </div>
+    <!-- //container -->
+    <hr>
+    <!-- footer -->
+
+    <? include '00_footer.html';?>

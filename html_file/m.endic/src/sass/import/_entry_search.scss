@@ -1,0 +1,985 @@
+@charset "utf-8";
+
+/* 엔트리 - 검색결과 */
+.keyword_box, .suggest_box {
+	position: relative;
+	margin: 8px 0 0;
+	overflow: hidden;
+	padding: 10px 17px 10px 14px;
+	line-height: 21px;
+
+	.title {
+		float: left;
+		margin-right: 9px;
+		color: #000;
+		font-family: $G-font-helveticaNeue;
+		font-size: 15px;
+	}
+
+	.keyword, .suggest {
+		font-family: $G-font-helveticaNeue;
+		font-size: 15px;
+		color: #666;
+
+		a {
+			display: inline-block;
+			white-space: nowrap;
+			padding: 3px;
+			margin: -3px;
+			color: #666;
+		}
+
+		.btn_keyword_open {
+			float: right;
+			overflow: hidden;
+			position: relative;
+			width: 32px;
+			height: 22px;
+			margin-right: -10px;
+			background: none;
+
+			a {
+				display: inline-block;
+			}
+
+			&:before {
+				@extend %sprite_common_img;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 12px;
+				height: 7px;
+				background-position: 0 -114px;
+				margin: -1px 0 0 -6px;
+				content: '';
+			}
+
+			&.on {
+				&:before {
+					background-position: -16px -83px;
+				}
+			}
+		}
+	}
+
+	.notice {
+		font-family: $G-font-helveticaNeue;
+		font-size: 15px;
+
+		& > a {
+			margin-left: 4px;
+			font-weight: bold;
+			font-family: $G-font-helveticaNeue;
+			color: #005fc1;
+		}
+	}
+
+	& + .notice_box {
+		border-top: 1px solid #f3f3f3;
+		padding-top: 12px;
+	}
+}
+.keyword_box {
+	&.open {
+		padding: 0;
+
+		.title {
+			float: none;
+			height: 40px;
+			line-height: 42px;
+			padding-left: 14px;
+			padding-right: 17px;
+		}
+		.btn_keyword_open {
+			float: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 40px;
+			margin-right: 7px;
+
+			&:before {
+				background-position: -16px -83px;
+				margin-top: -3px;
+			}
+		}
+
+		.keyword {
+			overflow: hidden;
+			padding: 8px 14px 8px 17px;
+			border-top: 1px solid #dbdbdd;
+			line-height: 30px;
+			a {
+				float: left;
+				padding: 0;
+				display: inline-block;
+				overflow: hidden;
+				width: 50%;
+				margin: 0;
+			}
+
+			span {
+				display: none
+			}
+		}
+	}
+}
+//기본형
+.notice_box {
+	padding: 15px 14px;
+	margin-top: 8px;
+	color: #666;
+	font-size: 15px;
+
+	span {
+		font-family: $G-font-helveticaNeue;
+	}
+}
+//강제 변환의 경우
+.suggest_box.v1 {
+	.notice {
+		color: #666;
+	}
+}
+.add_wordbook {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px;
+	display: block;
+
+	&:before {
+		@extend %sprite_common_img;
+		content: '';
+		display: block;
+		width: 21px;
+		height: 21px;
+		background-position: -43px -114px;
+	}
+}
+.select_wordbook {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 41px;
+	height: 41px;
+	@extend %common_select_style;
+}
+.entry_search_word, .entry_search_body, .entry_search_subject {
+	position: relative;
+	color: #000;
+	background: #fff;
+	padding-bottom: 1px;
+
+	& ~ & {
+		border-top: 1px solid #e8e8e8;
+	}
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+
+	.word_wrap, .example_wrap {
+		position: relative;
+	}
+
+	.example_wrap {
+		color: #828282;
+
+		.example_stc {
+			margin-bottom: 3px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		.example_mean {
+			margin-bottom: 3px;
+			font-family: $G-font-helveticaNeue;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	.image_info_wrap {
+		position: relative;
+		padding: 9px 12px;
+		overflow: hidden;
+		background-color: #fff;
+		color: #000;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-webkit-box-align: center;
+		align-items: center;
+
+		&:before {
+			top: 0;
+			@extend %common_dot_patt;
+		}
+
+		.mask {
+			position: absolute;
+			left: 12px;
+			width: 100px;
+			height: 73px;
+			border: 5px solid #fff;
+		}
+
+		.image_area {
+			position:relative;
+			padding-right:110px;
+			height: 83px;
+			margin: 0 10px 0 0;
+			line-height: 70px;
+			font-size: 0;
+			overflow: hidden;
+			display: -webkit-box;
+			background-size: auto 100%;
+			-webkit-background-size: auto 100%;
+			background-position: 50% 0;
+			background-repeat: no-repeat;
+
+			&:after{
+				position:absolute;
+				top:0;right:0;bottom:0;left:0;
+				border:5px solid #fff;
+				content:'';
+			}
+		}
+
+		.info {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			max-height: 60px;
+			word-wrap: break-word;
+			overflow: hidden;
+			font-size: 13px;
+			line-height: 18px;
+			color: #666;
+		}
+	}
+
+	.h_word {
+		position:relative;
+		display: block;
+		margin-bottom: 3px;
+		font-family: $G-font-helveticaNeue;
+		font-weight: normal;
+		font-size: 21px;
+		line-height: 26px;
+		color: #005fc1;
+
+		.link_wrap {
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			overflow:hidden;
+			color:transparent;
+		}
+
+		.ask {
+			position:relative;
+			z-index:10;
+		}
+
+		.hanja {
+			margin-left: 8px;
+			font-weight: normal;
+			color: #999;
+		}
+
+		.tag {
+			vertical-align:top;
+		}
+
+		.target + .tag {
+			vertical-align: top;
+			margin-top: 6px;
+			margin-left: 7px;
+		}
+	}
+
+	//뜻이 1개
+	p.desc_lst {
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		word-wrap: normal;
+		margin-bottom: -1px;
+		font-family: $G-font-helveticaNeue;
+	}
+
+	//뜻이 여러개
+	.desc_lst {
+		overflow: hidden;
+
+		li {
+			margin-right: 10px;
+			color: #000;
+			font-family: $G-font-helveticaNeue;
+			display: block;
+
+			.desc {
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-height: 50px;
+				word-wrap: break-word;
+			}
+		}
+
+		.num {
+			float: left;
+			margin: 0 4px 0 0;
+			font-weight: normal;
+		}
+	}
+
+	.pronun_wrap {
+		margin-top: 6px;
+		color: #666;
+	}
+
+	&.top {
+		.word_wrap {
+			padding: 15px 10px 17px 14px;
+		}
+
+		.h_word {
+			font-weight: bold;
+			font-size: 26px;
+			line-height: 31px;
+			sup {
+				vertical-align: 13px;
+				font-size: 13px;
+			}
+		}
+
+		.desc_lst {
+			font-weight: bold;
+		}
+
+		.pronun_wrap {
+			margin-bottom: -7px;
+		}
+	}
+}
+.entry_search_word {
+	&.top {
+		.desc_lst li {
+			.desc {
+				font-size: 15px;
+				line-height: 21px;
+			}
+		}
+
+		.desc_lst {
+			.num {
+				margin-top: 2px;
+			}
+		}
+
+		&.kr {
+			.desc_lst {
+				.num {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+
+	&.kr {
+		.desc_lst {
+			.num {
+				margin-top: 2px;
+			}
+		}
+	}
+
+	.word_wrap {
+		padding: 13px 10px 10px 14px;
+	}
+
+	.h_word {
+		padding-right: 20px;
+		margin-bottom: 6px;
+		font-size: 21px;
+		line-height: 26px;
+		word-break: break-all;
+		sup {
+			margin-left: 3px;
+			vertical-align: 12px;
+			font-size: 12px;
+			line-height: 10px;
+			font-weight: bold;
+		}
+	}
+
+	.example_wrap {
+		padding: 12px 30px 12px 14px;
+
+		&:before {
+			@extend %common_dot_patt;
+			top: 0;
+		}
+
+		.example_stc + .example_mean {
+			margin-bottom: 3px;
+		}
+
+		.example_mean + .example_stc {
+			margin-bottom: -3px;
+		}
+	}
+
+	p.desc_lst {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		word-wrap: break-word;
+		white-space: normal;
+		li {
+			overflow: hidden;
+			margin-bottom: 0;
+			font-weight: bold;
+
+			.num {
+				float: left;
+				margin-right: 4px;
+				line-height: 22px;
+			}
+
+			.desc {
+				font-size: 15px;
+				line-height: 21px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	p.desc_lst {
+		font-size: 15px;
+		line-height: 21px;
+	}
+
+	.tag {
+		vertical-align: middle;
+	}
+
+	.count {
+		font-weight: normal;
+		color: #828282;
+	}
+
+	&.kr {
+		.h_word {
+			font-size: 19px;
+			line-height: 23px;
+		}
+
+		.desc_lst {
+			& > li {
+				.desc {
+					font-size: 16px;
+					line-height: 22px;
+					font-weight: normal;
+				}
+			}
+		}
+
+		p.desc_lst {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.word_wrap {
+			/*padding:13px 10px 4px 14px*/
+		}
+
+		.example_wrap {
+			.example_stc {
+				margin-bottom: 0;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			.example_mean {
+				margin-bottom: 3px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+
+		&.top {
+			.h_word {
+				font-size: 23px;
+				line-height: 28px;
+				margin-bottom: 4px;
+				sup {
+					vertical-align: 13px;
+					font-size: 13px;
+				}
+			}
+
+			.desc_lst {
+				& > li {
+					.desc {
+						font-size: 16px;
+						line-height: 23px;
+						font-weight: bold;
+					}
+				}
+			}
+			p.desc_lst {
+				font-size: 16px;
+				line-height: 23px;
+				font-weight: normal;
+			}
+
+			.word_wrap {
+				padding: 13px 10px 12px 14px
+			}
+		}
+	}
+	.ask {
+		margin-left:-2px;
+	}
+}
+.entry_search_word + .btn_wrap {
+	@extend %btn_wrap;
+	margin-top: 0;
+	border-top: 1px solid #dbdbdd;
+}
+.entry_search_body, .entry_search_subject {
+	&.end_page {
+		.h_word {
+			font-weight: bold;
+		}
+	}
+
+	.h_word {
+		padding-right: 20px;
+		margin-bottom: 7px;
+
+		sup {
+			vertical-align: 9px;
+			font-size: 12px;
+			line-height: 10px;
+		}
+	}
+
+	.desc_lst {
+		margin-bottom: 3px;
+	}
+
+	.example_mean {
+		line-height: 15px;
+	}
+
+	.example_mean + .example_stc {
+		margin-bottom: -5px;
+	}
+}
+.entry_search_body {
+	.h_word {
+		font-size: 21px;
+		line-height: 26px;
+		margin-bottom: 0;
+	}
+
+	.word_wrap {
+		padding: 10px 10px 15px 14px;
+	}
+
+	.add_wordbook + .example_wrap + .word_wrap {
+		background-color: #f00
+	}
+
+	.pronun_wrap {
+		margin-bottom: -7px;
+	}
+
+	.word_wrap + .example_wrap {
+		margin-top: -2px;
+	}
+
+	p.desc_lst {
+		font-size: 15px;
+		line-height: 21px;
+	}
+
+	.desc_lst {
+		li {
+			.desc {
+				font-size: 15px;
+				line-height: 21px;
+			}
+		}
+	}
+
+	.example_wrap {
+		position: relative;
+		padding: 12px 10px 8px 14px;
+
+		&:before {
+			@extend %common_dot_patt;
+			top: 0;
+		}
+
+		.example_mean + .example_stc {
+			margin-bottom: 4px;
+		}
+	}
+
+	&.kr {
+		.h_word {
+			font-size: 19px;
+			line-height: 23px;
+		}
+
+		.desc_lst, p.desc_lst {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+}
+.entry_search_subject {
+	padding: 15px 10px 11px 14px;
+
+	.h_word {
+		padding-right: 20px;
+		font-family: $G-font-helveticaNeue;
+	}
+
+	.desc_lst li, p.desc_lst {
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 21px;
+	}
+
+	.example_stc + .example_mean {
+		margin-bottom: -5px;
+	}
+
+	.desc_lst {
+		.num {
+			margin-top: 0
+		}
+	}
+}
+//리스트 펼치기 버튼
+.btn_lst_more_show {
+	display: block;
+	width: 100%;
+	height: 38px;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #000;
+
+	&:before {
+		@extend %sprite_common_img;
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 13px;
+		height: 7px;
+		margin: 4px 5px 0 0;
+		background-position: -73px 0;
+	}
+
+	&.on {
+		&:before {
+			background-position: -60px -7px;
+		}
+	}
+
+	.txt, .num, .total_num {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 35px;
+	}
+
+	.txt {
+		font-size: 14px;
+	}
+
+	.num {
+		margin-left: 4px;
+		font-family: $G-font-helveticaNeue;
+		font-weight: normal;
+		font-size: 13px;
+		color: #005fc1;
+	}
+
+	.total_num {
+		font-size: 13px;
+		color: #999;
+	}
+}
+.example_tab {
+	background-color: #fbfbfb;
+	padding: 0 17px;
+	overflow: hidden;
+	position: relative;
+	min-height: 20px;
+
+	& > li {
+		position: relative;
+		float: left;
+		padding-right: 23px;
+		display: block;
+		line-height: 38px;
+		font-size: 14px;
+
+		&:last-of-type {
+			padding-right: 10px;
+		}
+
+		.title {
+			display: block;
+			width: 100%;
+			color: #666;
+			line-height: 40px;
+			background-color: #fbfbfb;
+
+			&:after {
+				@extend %sprite_common_img;
+
+				display: inline-block;
+				vertical-align: top;
+				content: '';
+				width: 6px;
+				height: 4px;
+				margin-top: 18px;
+				margin-left: 4px;
+				background-position: -29px -114px;
+			}
+		}
+		select {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: transparent;
+			border: 0;
+			-webkit-appearance: none;
+			border-radius: 0;
+			font-size: 0;
+			line-height: 0;
+			width: 100%;
+			height: 40px;
+			overflow: hidden;
+			z-index: 15;
+
+			option {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.entry_search_synonym {
+	.syno_antonym_lst {
+		padding: 0;
+
+		& > li {
+			padding: 11px 17px 15px;
+		}
+
+		.mean {
+			font-size: 16px;
+			color: #828282;
+		}
+
+		li.title {
+			padding-top: 12px;
+			.mean {
+				color: #828282;
+
+				& > strong {
+					font-weight: normal;
+					color: #000;
+				}
+			}
+		}
+
+		.subject_word {
+			margin-right: 4px;
+			font-weight: normal;
+			font-family: HelveticaNeue, Helvetica, sans-serif;
+			font-size: 18px;
+		}
+
+		.example {
+			margin-top: 2px;
+			line-height:18px;
+			color: #828282;
+			word-break: break-all;
+			.voice_ico_small {
+				margin-top:0;
+			}
+		}
+
+		.synonyms, .antonyms {
+			.tit {
+				color: #000;
+			}
+			.word {
+				margin-bottom: 2px;
+			}
+		}
+	}
+}
+.entry_search_no {
+	padding: 23px 17px;
+	margin-top: 8px;
+	text-align: center;
+
+	.result {
+		font-family: $G-font-helveticaNeue;
+
+		& > strong {
+			font-family: $G-font-helveticaNeue;
+			font-size: 17px;
+			color: #fd4c4d;
+		}
+
+		margin-bottom: 4px;
+		font-size: 17px;
+		line-height: 20px;
+		color: #000;
+	}
+
+	.notice {
+		font-size: 14px;
+		line-height: 20px;
+		color: #666;
+	}
+
+	.btn_notice {
+		padding: 0 15px;
+		margin: 8px 0 7px 0;
+		font-size: 15px;
+		line-height: 34px;
+		color: #666;
+		font-family: $G-font-helveticaNeue;
+		border: 1px solid #e6e6e6;
+	}
+}
+.entry_search_opendic {
+	.question_wrap {
+		position: relative;
+		padding: 15px 0;
+		display: table;
+		width: 100%;
+	}
+
+	.question_wrap ~ .question_wrap {
+		&:before {
+			@extend %common_dot_patt;
+			top: 0;
+		}
+	}
+
+	.question {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 17px;
+		padding-right: 10px;
+		font-size: 14px;
+		line-height: 15px;
+		color: #444;
+	}
+
+	.btn_wrap {
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: 17px;
+	}
+
+	.btn_question, .btn_register_mean {
+		display: inline-block;
+		vertical-align: middle;
+		float: right;
+		white-space: nowrap;
+		min-width: 76px;
+		margin-top: 0;
+	}
+}
+.lst_recommend {
+	& > li {
+		padding: 17px;
+
+		&.top {
+			font-family: $G-font-helveticaNeue;
+			font-weight: bold;
+		}
+
+		.word {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 22px;
+			color: #005fc1;
+		}
+
+		.mean {
+			font-size: 15px;
+			color: #000;
+		}
+	}
+
+	& > li ~ li {
+		border-top: 1px solid #e8e8e8;
+	}
+}
+.search_notice_area {
+	padding: 15px 11px;
+	font-size: 13px;
+	color: #666;
+
+	strong {
+		font-weight: normal;
+		color: #000
+	}
+
+	span {
+		font-family: $G-font-helveticaNeue;
+	}
+}
+.search_quiz_area {
+	margin: 0 7px;
+}
+// 엔트리 오픈사전 배너
+.banner_opendict {
+	float:right;
+	margin-right:7px;
+	background: #fff;
+
+	.banner_inner {
+		display: block;
+		height: 22px;
+		line-height:22px;
+		padding:0 6px 0 25px;
+		background-color: #fff;
+		background-image: url(../img/ico_opendict.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: 25px 22px;
+		-webkit-background-size: 25px 22px;
+		-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.08),0 0 1px rgba(0,0,0,0.02);
+		box-shadow: 0 0 1px rgba(0,0,0,0.08),0 0 1px rgba(0,0,0,0.02);
+		font-size:15px;
+		color:#000;
+	}
+}

@@ -1,0 +1,134 @@
+﻿<? include '00_header.html';?>
+<!-- container -->
+<div class="container">
+	<!-- [D] 찾은 단어가 있을 경우 보여줌 -->
+	<div class="info_box word_srch_area" style="display:block">
+		<h3 class="info_tit">내가 찾은 단어</h3>
+		<a href="#" class="btn_all_del"><span class="ico_x"></span>전체삭제</a>
+		<!-- [D] 내가 찾은 데이터 있을시 노출 -->
+		<ul class="myw_lst" style="display:none">
+		<li class="myw_li"><a href="#" class="myw_txt jp">うんざりうんざり</a><a href="#" class="ico_x2"><span class="hc">삭제</span></a></li>
+		<li class="myw_li"><a href="#" class="myw_txt jp">うんざり</a><a href="#" class="ico_x2"><span class="hc">삭제</span></a></li>
+		<li class="myw_li"><a href="#" class="myw_txt">간[間]</a><a href="#" class="ico_x2"><span class="hc">삭제</span></a></li>
+		<li class="myw_li"><a href="#" class="myw_txt jp">うんざり</a><a href="#" class="ico_x2"><span class="hc">삭제</span></a></li>
+		<li class="myw_li"><a href="#" class="myw_txt jp">うんざり</a><a href="#" class="ico_x2"><span class="hc">삭제</span></a></li>
+		</ul>
+		<!-- [D] 내가 찾은 데이터가 없을시 노출 -->
+		<p class="no_data" style="display:block"><strong>検索した単語がありません。</strong></p>
+	</div>
+	<div class="info_box jlpt_area">
+		<!-- [D] 재생 버튼 클릭시 로딩 끝나고 player 에 on 클래스 추가 요망 -->
+		<h3 class="info_tit">今日の<span class="en">JLPT</span>おすすめ単語 <span class="feature"><a href="#" class="btn_class_word">等級別に単語を見る</a><a href="#" class="btn_refresh">새로고침</a></span></h3>
+		<ul class="td_lst">
+		<li class="td_li">
+			<strong class="num">1급</strong>
+			<h4><a href="#" class="jp" lang="ja">うんざり</a><span class="player load"><button type="button" class="btn_play play" title="발음 듣기">재생</button></span></h4>
+			<p class="td_txt">지긋지긋하게, 지겹게</p>
+		</li>
+		<li class="td_li">
+			<strong class="num">2급</strong>
+			<h4><a href="#" class="jp" lang="ja">がい-こくじん<em>[外国人]</em></a></h4>
+			<p class="td_txt">일어나다. 기상하다</p>
+		</li>
+		<li class="td_li last_li">
+			<strong class="num">3급</strong>
+			<h4><a href="#" class="jp" lang="ja">おち-つ·く</a><span class="player on"><button type="button" class="btn_play play" title="발음 듣기">재생</button></span></h4>
+			<p class="td_txt">섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다, 섬기다, 봉사하다, 예배하다, 사용하다, 이용하다</p>
+		</li>
+		</ul>
+	</div>
+	<div class="info_box">
+		<h3 class="info_tit">오늘의 예문</h3>
+		<div class="today_cvr">
+			<span class="jp" lang="ja">ねこの首に鈴をつける</span>
+			<span class="player"><button type="button" class="btn_play play" title="발음 듣기">재생</button></span>
+			<p class="td_txt">고양이 목에 방울을 달다.</p>
+            <!-- 일본어 웹번역기 배너 -->
+            <div class="bnr webtrans">
+                <a href="#"><strong>일본어 사이트를 번역하는 방법!</strong><span>사전앱 설치 후 번역 결과를 확인하세요. 배너가 길어진다이이이이이이이이이아</span></a>
+            </div>
+            <!-- //일본어 웹번역기 배너 -->
+		</div>
+	</div>
+    <div class="info_box dtr_area">
+        <h3 class="info_tit">사전 기능소개</h3>
+        <ul class="td_lst td_lst_v2">
+            <li class="td_li">
+                <a href="#" class="dic_lk">
+                    <span class="thumb th_voice"></span>
+                    <p class="td_txt">
+                        검색도 <em class="colb2">음성으로</em> 간단하게
+                        <span class="dsc">일본어 음성 검색 <span class="ico_arr"></span></span>
+                    </p>
+                </a>
+            </li>
+            <li class="td_li">
+                <a href="#" class="dic_lk">
+                    <span class="thumb th_jap"></span>
+                    <p class="td_txt">
+                        일본어 뜻 <em class="colb2">찍어서</em> 확인하기 배너가 길어진다면 어떻게 될까? 테스트를 해봐야지
+                        <span class="dsc">일본어 비주얼 검색 길어진다 더 길어진다 완전 길어진다<span class="ico_arr"></span></span>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+	<div class="main_dn">
+		<a href="#" class="main_np">
+			<span class="cont_wrap">
+            	<span class="img_area"><span class="thumb th_phrase"></span></span>
+            	<span class="txt_area"><span class="colb2">글로벌회화</span> 출시!<br>스마트폰에 담아두는 13개국<br>여행회화사전 배너가 길어진다으아아아아아아아아아아아</span>
+			</span>
+		</a>
+	</div>
+	<div class="main_dn app">
+		<a href="#" class="main_np">
+			<span class="cont_wrap">
+            	<span class="img_area"><span class="thumb th_dicapp"></span></span>
+            	<span class="txt_area">기다리던 앱이 드디어 나왔다! <br><b>네이버사전</b> <span class="colb2">앱 출시</span></span>
+			</span>
+		</a>
+	</div>
+    <div class="main_offer">
+        <h4 class="main_h4">자료제공 : 민중서림</h4>
+    </div>
+    <!-- 언어스킨설정 -->
+    <div class="set_lang">
+        <form id="" action="">
+            <label for="selec_lang">언어설정</label>
+            <div class="selec_wrap">
+                <select id="selec_lang">
+                    <option value="korean" selected>한국어</option>
+                    <option value="japan">일본어</option>
+                    <option value="english">영어</option>
+                    <option value="english">인도네시아어</option>
+                </select>
+            </div>
+        </form>
+        <a href="javascript:nclk(this, 'btm.top', '', '1');window.scrollTo(0, 1);" class="u_ftst ico_top">맨위로</a>
+    </div>
+    <!-- //언어스킨설정 -->
+</div>
+<!-- //container -->
+<hr>
+<!-- Popup : [D] 신규 추가 layer popup -->
+<div class="shadow_view"></div>
+<div class="new_pop">
+    <p class="txt_view">네이버 영어사전을<br><b>한국어</b>로 이용합니다.</p>
+    <div class="option_area">
+        <span class="txt">다른 언어로 변경하려면 선택하세요.</span>
+        <!-- 20160808 접근성 수정 : label에 select id값을 for 달기 -->
+        <div class="select">
+            <label for="selec_lang2">언어 선택</label>
+            <select name="lang" id="selec_lang2">
+                <option>한국어</option>
+            </select>
+        </div>
+        <!-- //20160808 접근성 수정 : label에 select id값을 for 달기 -->
+        <a href="#" class="btn_confirm">확인</a>
+    </div>
+    <a href="#" class="btn_close">close</a>
+</div>
+<!-- //Popup : [D] 신규 추가 layer popup -->
+
+<? include '00_footer.html' ?>

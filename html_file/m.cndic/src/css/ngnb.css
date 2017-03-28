@@ -1,0 +1,837 @@
+@charset "utf-8";
+
+/* GNB */
+.Ngnb {
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+    font-family: helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #00c73c;
+}
+
+.Ngnb.is_scale .Ngnb_logo {
+    -webkit-transform: scale(.75);
+    transform: scale(.75);
+}
+
+.Ngnb.is_scale .Ngnb_service {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+}
+
+.Ngnb_logo {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    float: left;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Ngnb_logo .Nlogo_link {
+    display: block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    line-height: 39px;
+    text-align: center;
+}
+
+.Ngnb_logo .Nlogo_link .Nicon_logo {
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    margin: 0 auto;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
+    background-size: 150px 150px;
+    color: transparent;
+    vertical-align: middle;
+}
+
+.Ngnb_navigation {
+    float: left;
+}
+
+.Ngnb_navigation + .Ngnb_service {
+    padding-left: 0;
+}
+
+.Ngnb_navigation .Nnavigation_link {
+    display: block;
+    overflow: hidden;
+    height: 40px;
+    margin: 4px;
+    line-height: 39px;
+    text-align: center;
+}
+
+.Ngnb_navigation .Nnavigation_link .Nicon_home {
+    display: inline-block;
+    width: 23px;
+    height: 22px;
+    margin: 0 8px 0 11px;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: -25px 0;
+    color: transparent;
+    vertical-align: middle;
+}
+
+.Ngnb_service {
+    overflow: hidden;
+    height: 48px;
+    margin: 0 42px 0 0;
+    padding-left: 10px;
+    line-height: 48px;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.Ngnb_service .Nservice_item {
+    float: left;
+    font-size: 19px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.Ngnb_service .Nservice_item > a {
+    color: #fff;
+}
+
+.Ngnb_service .Nservice_subitem > a {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.Ngnb_service .Nservice_item .Nicon_service {
+    display: inline-block;
+    overflow: hidden;
+    width: 92px; /* 서비스에 맞게 변경 */
+    height: 24px; /* 서비스에 맞게 변경 */
+    margin: -2px 0 2px;
+    background-image: url(../img/Nicon_cndic.png); /* 서비스에 맞게 변경 */
+    background-image: linear-gradient(transparent, transparent), url(../img/Nicon_cndic.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 92px auto; /* 서비스에 맞게 변경 */
+    background-size: 92px auto; /* 서비스에 맞게 변경 */
+    color: transparent;
+    vertical-align: middle;
+}
+
+.Ngnb_service .Nservice_subitem {
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    white-space:nowrap;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.Ngnb_service .Nservice_subitem .Nicon_family {
+    display: inline-block;
+    overflow: hidden;
+    height: 24px; /* 서비스에 맞게 변경 */
+    margin: -1px 0 1px;
+    color: transparent;
+    vertical-align: middle;
+    -webkit-background-size: 100% auto; /* 서비스에 맞게 변경 */
+    background-size: 100% auto; /* 서비스에 맞게 변경 */
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.Ngnb_service .Nservice_subitem:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    float: left;
+    margin: 16px 11px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.Ngnb_service .Nservice_subitem .Nicon_translate {
+    width: 45px;
+    background-image: url(../img/Nicon_translate.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nicon_translate.svg);
+}
+
+.Ngnb_service .Nservice_subitem .Nicon_wordbook {
+    width: 47px;
+    background-image: url(../img/Nicon_wordbook.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nicon_wordbook.svg);
+}
+
+.Ngnb_tool {
+    position: absolute;
+    top: 0;
+    right: 9px;
+    font-size: 0;
+}
+
+.Ngnb_tool .Ntool_button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    height: 48px;
+    padding: 0 3px;
+    border: 0;
+    vertical-align: top;
+    color: transparent;
+    font-size: 0;
+    line-height: 48px;
+    background: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.Ngnb_tool .Ntool_button.is_hide {
+    display: none;
+}
+
+.Ngnb_tool .Ntool_button:active {
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transform: scale(0.9);
+    transition: transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Ngnb_tool .Ntool_button [class*="Nicon_"] {
+    display: inline-block;
+    margin: 0 6px;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+    vertical-align: middle;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_search {
+    width: 18px;
+    height: 18px;
+    background-position: 0 -25px;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_search.is_active {
+    width: 18px;
+    height: 18px;
+    line-height: 100px;
+    background-position: -25px -25px;
+    opacity: 0.3;
+}
+
+.Ngnb_tool .Ntool_button .Nicon_drawer {
+    width: 15px;
+    height: 16px;
+    background-position: 0 0;
+}
+
+/* Nsearch */
+.Nsearch {
+    position: relative;
+    z-index: 100;
+    padding: 0 6px 6px;
+    font-family: helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #00c73c;
+    -webkit-transform: translateZ(0);
+}
+
+.Nsearch.is_slide {
+    -webkit-transition: margin-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: margin-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 0;
+}
+
+.Nsearch.is_css {
+    -webkit-transition: margin-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: margin-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.Nsearch_inner {
+    display: table;
+    width: 100%;
+}
+
+.Nsearch_navigation {
+    display: table-cell;
+    width: 40px;
+    vertical-align: top;
+}
+
+.Nsearch_navigation .Nnavigation_link {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 42px;
+    margin-right: 6px;
+}
+
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: transparent;
+}
+
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon.Nicon_prev {
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: -50px 0;
+    background-size: 150px 150px;
+}
+
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon.Nicon_logo {
+    width: 19px;
+    height: 18px;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-position: -5px -40px;
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+}
+
+.Nsearch_navigation .Nnavigation_link .Nnavigation_icon.Nicon_home {
+    width: 23px;
+    height: 22px;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: -35px -5px;
+    background-size: 150px 150px;
+}
+
+.Nsearch_box {
+    display: table-cell;
+    width: 100%;
+    background-color: #fff;
+    vertical-align: top;
+}
+
+.Nsearch_box .Nbox_tool {
+    display: table-cell;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.Nsearch_box .Nbox_button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    line-height: 42px;
+    vertical-align: top;
+}
+
+.Nsearch_box .Nbox_button.Nbox_search {
+    width: 30px;
+    margin-right: 6px;
+}
+
+.Nsearch_box .Nbox_button.Nbox_delete {
+    width: 29px;
+}
+
+.Nsearch_box .Nbox_button.Nbox_delete:only-child {
+    margin-right: 6px;
+}
+
+.Nsearch_box .Nbox_button.Nbox_realize {
+    width: 32px;
+}
+
+.Nsearch_box .Nbox_button .Nicon_delete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: -50px -25px;
+    background-size: 150px 150px;
+    color: transparent;
+}
+
+.Nsearch_box_inner {
+    display: table;
+    width: 100%;
+}
+
+.Nsearch_box_inner .Nbox_text {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+}
+
+.Nsearch_box_inner .Nbox_input_text {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 0;
+    background: none;
+    font-size: 18px;
+    color: #000;
+    line-height: 26px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.Nsearch_box_inner .Nbox_input_text::-webkit-input-placeholder {
+    color: #bbb;
+    font-weight: normal;
+}
+
+.Nsearch_box_inner .Nbox_input_text:-moz-placeholder {
+    color: #bbb;
+    font-weight: normal;
+}
+
+.Nsearch_box_inner .Nbox_input_text:-ms-input-placeholder {
+    color: #bbb;
+    font-weight: normal;
+}
+
+.Nsearch_box_inner .Nbox_input_text:input-placeholder {
+    color: #bbb;
+    font-weight: normal;
+}
+
+.Nsearch_tool {
+    display: table-cell;
+    font-size: 0;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.Nsearch_tool .Ntool_search {
+    display: inline-block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #fff;
+    line-height: 42px;
+    letter-spacing: -1px;
+    vertical-align: top;
+}
+
+.Nsearch_tool .Ntool_search.Ntool_writing,
+.Nsearch_tool .Ntool_search.Nicon_input {
+    margin: 0 0 0 6px;
+}
+
+.Nsearch_tool .Ntool_search .Nicon_search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -25px;
+    background-size: 150px 150px;
+    color: transparent;
+}
+
+.Nsearch_tool .Ntool_search .Nicon_writing {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 22px;
+    height: 19px;
+    margin: auto;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: -75px -50px;
+    background-size: 150px 150px;
+    color: transparent;
+}
+
+.Nsearch_tool .Ntool_search .Nicon_input {
+    position: absolute;
+    overflow: hidden;
+    top: 8px;
+    left: 5px;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -75px;
+    background-size: 150px 150px;
+    color: transparent;
+}
+
+.Nsearch_tool .Ntool_search .Nicon_input.is_active {
+    background-position: 0 -105px;
+}
+
+/* 입력기 선택 레이어 */
+.write_select_wrap {
+    display: none;
+}
+
+.write_select_wrap.is_opened {
+    display: block;
+}
+.write_select {
+    position: relative;
+    z-index: 70;
+    padding: 0 10%;
+    height: 48px;
+    line-height: 48px;
+    border-top: 1px solid #00bd39;
+    background-color: #00c73c;
+    overflow: hidden;
+}
+.is_fixed .write_select,
+.is_fixed .wrap_keyboard{
+    position:fixed;
+    top:54px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.write_select .btn_write {
+    float: left;
+    width: 50%;
+    font-size: 15px;
+    color: #fff;
+}
+
+.write_select .btn_write:before {
+    display: inline-block;
+    width: 23px;
+    height: 14px;
+    margin: 15px 9px 0 0;
+    background-image: url(../img/Nsp_gnb.png);
+    background-image: linear-gradient(transparent, transparent), url(../img/Nsp_gnb.svg);
+    background-repeat: no-repeat;
+    background-position: -25px -50px;
+    background-size: 150px 150px;
+    vertical-align: top;
+    content: '';
+}
+
+.write_select .btn_write.cn:before {
+    width: 22px;
+    height: 19px;
+    margin: 12px 9px 0 0;
+    background-position: -75px -50px;
+}
+
+/* keyboard */
+.wrap_keyboard {
+    display: none;
+    position: relative;
+    z-index: 70;
+    background: #d7d7d7;
+    padding: 19px 0 8px 0;
+    text-align: center
+}
+
+.wrap_keyboard.is_opened {
+    display: block;
+}
+
+.wrap_keyboard .key_item {
+    font-size: 0;
+    text-align: center;
+    margin-bottom: 11px
+}
+
+.wrap_keyboard .key_item .btn {
+    display: inline-block;
+    width: 8.2%;
+    height: 40px;
+    background: #fff;
+    font-size: 20px;
+    color: #68696b;
+    border-radius: 2px;
+    margin: 0 0.8%;
+    box-shadow: 0px 1px 0px 0px rgba(161, 161, 161, 1);
+    border: none
+}
+
+.wrap_keyboard .key_item .del {
+    width: 10%;
+    height: 40px;
+    margin: 0 0 0 3.2%;
+    background-color: #b5b5b5
+}
+
+.wrap_keyboard .key_item .inner {
+    display: inline-block;
+    text-indent: -999em;
+    overflow: hidden;
+    width: 25px;
+    height: 19px;
+    background: url(../img/sp_header.png) no-repeat;
+    background-size: 150px 150px;
+    -webkit-background-size: 150px 150px;
+    background-position: -65px -120px;
+    vertical-align: middle;
+    margin-top: -3px
+}
+
+/* 검색어 자동완성 */
+.autocomplet_wrap {
+    position: relative;
+    z-index: 70;
+    width: 100%;
+    border-bottom: 1px solid #dde0e1;
+    background-color: #fff
+}
+
+.autocomplet_wrap .btn_wrap {
+    overflow: hidden;
+    margin-top: -1px;
+    padding: 0 0 0 14px;
+    background: #fcfcfc;
+    border-top: 1px solid #e9edef;
+}
+
+.autocomplet_wrap .btn_wrap a, .autocomplet_wrap .btn_wrap button {
+    color: #828A93
+}
+
+.autocomplet_wrap .btn_wrap .btn_auto_off {
+    float: left;
+    line-height: 35px
+}
+
+.autocomplet_wrap .btn_wrap .btn_close {
+    float: right;
+    position: relative;
+    padding: 0 15px;
+    line-height: 35px;
+    border: none;
+    border-left: 1px solid #f1f4f5;
+    background: none
+}
+
+.autocomplet_wrap .lst_word {
+    text-align: left;
+}
+
+.autocomplet_wrap .lst_word > li {
+    display: block;
+    padding: 9px 14px 8px;
+    line-height: 20px;
+    color: #888;
+    border-top: 1px solid #f9f9f9;
+    font-size: 18px
+}
+
+.autocomplet_wrap .lst_word > li:first-child {
+    border-top: none;
+}
+
+.autocomplet_wrap .lst_word > li a {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-family: inherit;
+    text-overflow: ellipsis;
+    color: #828282;
+    line-height: 20px;
+    max-height: 40px
+}
+
+.autocomplet_wrap .lst_word > li a .word_wrap {
+    color: #000
+}
+
+.autocomplet_wrap .lst_word > li a .word_wrap .simplified {
+    margin-left: 2px;
+    vertical-align: top;
+}
+
+.autocomplet_wrap .lst_word > li a .py {
+    margin-left: 4px;
+    font-size: 15px;
+    color: #828282;
+    vertical-align: top;
+}
+
+.autocomplet_wrap .lst_word > li a .mean {
+    margin-left: 6px;
+    font-size: 15px;
+    color: #828282;
+    vertical-align: top;
+}
+
+.autocomplet_wrap .lst_word > li a .mean .label_opendict {
+    color: #79a8de
+}
+
+.autocomplet_wrap .lst_word > li a .word_wrap .keyword,
+.autocomplet_wrap .lst_word > li a .mean .keyword,
+.autocomplet_wrap .lst_word > li a .py .keyword {
+    color: #0361c2;
+    vertical-align: top;
+}
+
+.writer_header.autocomplet_wrap .lst_word > li a {
+    display: block;
+    white-space: nowrap;
+}
+.header .dimmed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 60;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.Ngnb_tooltip {
+    position: absolute;
+    right: 10px;
+    top: 42px;
+    z-index: 110;
+    padding: 9px 11px;
+    border: 1px solid #c3c1a2;
+    background-color: #fffef0;
+    max-width: 140px;
+}
+
+.Ngnb_tooltip .Ntit {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    color: #11c948;
+}
+
+.Ngnb_tooltip .Ntip_txt {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -1px;
+    font-family:  "Helvetica Neue", HelveticaNeue, sans-serif;
+    color: #000;
+    word-break: keep-all;
+}
+
+.Ngnb_tooltip .Ntip_txt .green {
+    color: #11c948;
+}
+
+.Ngnb_tooltip .Ntip_txt .green:before {
+    display: inline-block;
+    width: 9px;
+    height: 8px;
+    margin: 5px 4px 0 0;
+    background: url(../img/Nsp_gnb_tooltip.png) no-repeat;
+    background-size: 26px auto;
+    background-position: 0 -15px;
+    content: '';
+    vertical-align: top;
+}
+
+.Ngnb_tooltip .Nbtn_close {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 29px;
+    height: 29px;
+    border: 0;
+    vertical-align: top;
+    color: transparent;
+    font-size: 0;
+    line-height: 29px;
+    background: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.Ngnb_tooltip .Nbtn_close .Nicon_close {
+    display: inline-block;
+    background: url(../img/Nsp_gnb_tooltip.png) no-repeat;
+    background-size: 26px auto;
+    background-position: 0 0;
+    width: 12px;
+    height: 12px;
+    margin: 0 auto;
+    color: transparent;
+    vertical-align: middle;
+}
+
+.Ngnb_tooltip:after {
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    right: 9px;
+    width: 11px;
+    height: 6px;
+    background: url(../img/Nsp_gnb_tooltip.png) no-repeat;
+    background-size: 26px auto;
+    background-position: -15px 0;
+    content: '';
+}
+
+.is_fixed .Nsearch{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    z-index:2100;
+    height: 42px;
+    padding-top: 6px;
+}
+.is_fixed .Ngnb_tooltip{
+    display:none;
+}
+@media (max-width: 321px) {
+    .Ngnb_service .Nservice_subitem .Nicon_translate {
+        width: 28px;
+        background-image: url(../img/Nicon_translate_320.png);
+        background-image: linear-gradient(transparent, transparent), url(../img/Nicon_translate_320.svg);
+    }
+}

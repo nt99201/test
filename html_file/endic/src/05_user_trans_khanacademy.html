@@ -1,0 +1,754 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<title>상세페이지 칸아카데미 :  네이버 영어사전</title>
+<link type="text/css" rel="stylesheet" href="css/common_font.css?20160821194245"/>
+<link type="text/css" rel="stylesheet" href="css/style_font.css?20160821194245"/>
+<link type="text/css" rel="stylesheet" href="css/entry_add.css?20160821194245"/>
+<link type="text/css" rel="stylesheet" href="css/style_category.css?20160821194245"/>
+<link type="text/css" rel="stylesheet" href="css/comment.css?20160821194245"/>
+<link rel="stylesheet" type="text/css" href="http://dicimg.naver.net/gnbcommon/style/dnb_onenaver/css/onenaver_gnb.css?2016082414">
+</head>
+<body onload="">
+<div id="u_skip">
+	<a href="#" onclick="skip_navigation('content');"><span>본문 영역으로 바로가기</span></a>
+	<a href="#" onclick="skip_navigation('aside');"><span>사이드 영역으로 바로가기</span></a>
+</div>
+<div id="wrap">
+	<div id="header">
+		<!-- 원네이버 중국어사전 GNB 마크업 -->
+		<!--[D] 다국어 일때 Nmulti_lang 클래스 추가 -->
+		<div class="Ngnb_wrap">
+			<div class="Ngnb">
+				<div class="Ngnb_inner">
+					<a href="#" class="Nlogo_link"><span class="Nsp_gnb">NAVER</span></a>
+					<div class="Ngnb_service">
+						<h1 class="Nservice_item"><a href="#" class="Nhome Ndic"><span class="Nsp_gnb">사전</span></a></h1>
+						<span class="Nservice_subitem"><a href="#" class="Ntranslate"><span class="Nsp_gnb">번역기</span></a></span>
+						<span class="Nservice_subitem"><a href="#" class="Nusertranslation"><span class="Nsp_gnb">참여번역</span></a></span>
+						<span class="Nservice_subitem"><a href="#" class="Nknowledge"><span class="Nsp_gnb">지식백과</span></a></span>
+					</div>
+
+					<div class="Ngnb_common">
+						<!-- GNB -->
+						<div id="gnb"><strong class="blind">사용자 링크</strong><ul class="gnb_lst" id="gnb_lst" style="display:none"><li class="gnb_login_li" id="gnb_login_layer"><a class="gnb_btn_login" href="#" id="gnb_login_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span class="gnb_txt">로그인</span></a></li><li class="gnb_my_li" id="gnb_my_layer" style="display:none"><div class="gnb_my_namebox" id="gnb_my_namebox"><a href="javascript:;" class="gnb_my" onclick="gnbUserLayer.clickToggle(); return false;"><img id="gnb_profile_img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" width="26" height="26" alt=""> <span class="gnb_name" id="gnb_name1"></span><em class="blind">내정보 보기</em><span class="ico_arrow"></span></a><a href="#" class="gnb_emp" id="gnb_emp">(임직원혜택)</a></div><div class="gnb_my_lyr" id="gnb_my_lyr"><div class="gnb_my_content"><div class="gnb_img_area"><span class="gnb_mask"></span><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" width="80" height="80" alt=""><a href="https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType" class="gnb_change"><span class="blind">프로필 사진 변경</span></a></div><div class="gnb_txt_area"><p class="gnb_account"><span class="gnb_name" id="gnb_name2"><a class="gnb_nick" href="https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType"></a>님</span><a class="gnb_btn_login" href="#" id="gnb_logout_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span class="gnb_txt">로그아웃</span></a></p><a href="http://mail.naver.com" class="gnb_mail_address">@naver.com</a><ul class="gnb_edit_lst"><li class="gnb_info"><a href="https://nid.naver.com/user2/help/myInfo.nhn?menu=home">내정보</a></li><li class="gnb_secure" id="gnb_secure_lnk"><a href="https://nid.naver.com/user2/help/myInfo.nhn?m=viewSecurity&amp;menu=security">보안설정</a></li></ul><p class="gnb_pay_check" id="gnb_pay_check"><em>N Pay</em><a href="http://pay.naver.com" id="gnb_pay_point"></a></p></div></div><div class="gnb_my_community"><a href="http://blog.naver.com/MyBlog.nhn" class="gnb_blog">내 블로그</a><a href="http://section.cafe.naver.com" class="gnb_cafe">가입한 카페</a><a href="http://pay.naver.com" class="gnb_pay"><span>N Pay</span></a></div><a href="#" class="gnb_my_interface" style="display:none"><span class="blind">환경설정</span></a></div><iframe id="gnb_my_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="top:34px;right:-4px;width:318px;height:174px;display:none;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li><li class="gnb_notice_li" id="gnb_notice_layer" style="display:none"><a href="javascript:;" class="gnb_notice" onclick="gnbNaverMeLayer.clickToggle(); return false;"><span class="blind">알림</span><span class="gnb_icon"></span><em class="gnb_ico_num" id="gnb_me_menu" style="display:none"><span class="gnb_ico_new"><span class="gnb_count" id="gnb_me_count"></span></span></em><span class="ico_arrow"></span></a><div class="gnb_notice_lyr" id="gnb_notice_lyr"><div class="svc_noti svc_panel"><div class="svc_scroll"><div class="svc_head"><strong class="gnb_tit">전체 알림</strong><div class="task_right"><button onclick="gnbNaverMeLayer.deleteReadList(this, event);" id="gnb_btn_read_noti_del">읽은 알림 삭제</button><button onclick="gnbNaverMeLayer.showDeleteAlert();" id="gnb_btn_all_noti_del">모두 삭제</button></div></div><div class="svc_body" id="gnb_naverme_layer"></div></div><div class="gnb_ly_alert" id="gnb_ly_alert" style="display: none;"><p class="gnb_msg"><strong>알림을 모두 삭제하시겠습니까?</strong></p><div class="gnb_btns"><button id="ly_alert_confirm" onclick="gnbNaverMeLayer.deleteAllList(this, event);">확인</button><button onclick="gnbNaverMeLayer.hideDeleteAlert();">취소</button></div><button class="gnb_btn_close" onclick="gnbNaverMeLayer.hideDeleteAlert();"><i>레이어 닫기</i></button></div><a href="http://me.naver.com/box/noti.nhn" class="gnb_notice_all">내 알림 전체보기</a></div></div><iframe id="gnb_notice_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="top:34px;right:-4px;width:299px;height:332px;display:none;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li><li class="mail_li" id="gnb_mail_layer" style="display:none"><a href="http://mail.naver.com" class="gnb_mail"><span class="blind">메일</span><span class="gnb_icon"></span><em class="gnb_ico_num" id="gnb_mail_menu" style="display:none"><span class="gnb_ico_new"><span class="gnb_count" id="gnb_mail_count"></span></span></em></a></li><li class="gnb_service_li" id="gnb_service_layer"><a href="javascript:;" class="gnb_service" onclick="gnbMoreLayer.clickToggle(); return false;"><span class="blind">서비스 더보기</span><span class="gnb_icon"></span><span class="ico_arrow"></span></a><div class="gnb_service_lyr" id="gnb_service_lyr"><div class="gnb_favorite_search" id="gnb_favorite_search"><div class="gnb_favorite_area"><div class="gnb_favorite_lstwrp"><div class="gnb_first_visit" style="display:none"><span class="blind">나만의 즐겨찾기를 추가해 보세요!</span><a href="#" class="gnb_close"><span class="blind">닫기</span></a></div><strong class="blind">즐겨찾는 서비스</strong><ul class="gnb_favorite_lst" id="gnb_favorite_lst"><li class="gnb_add"><a href="#">추가</a></li><li class="gnb_add"><a href="#">추가</a></li><li class="gnb_add"><a href="#">추가</a></li><li class="gnb_add"><a href="#">추가</a></li></ul><a href="#" class="gnb_my_interface" onclick="gnbMoreLayer.clickToggleWhole(); return false;"><span class="blind">즐겨찾기 설정</span></a></div></div><div class="gnb_search_area"><div class="gnb_search_box" onmouseover="gnb_search.mouseOver(this);" onmouseout="gnb_search.mouseOut(this);"><input id="gnb_svc_search_input" type="text" title="서비스 검색" value="더 많은 서비스를 간편하게 시작하세요!" onfocus="gnb_search.clearInput(this);" onblur="gnb_search.resetInput(this);" onkeydown="gnb_search.keyDown(event);" onkeyup="gnb_search.keyUp(event);"><a href="#" class="gnb_del_txt" id="gnb_del_txt" style="display:none"><span class="blind">삭제</span></a><div class="gnb_pop_input" id="gnb_pop_input" onmouseover="gnb_search.searchPopOnMouse = true; return false;" onmouseout="gnb_search.searchPopOnMouse = false; return false;" style="display:none"><ul class="gnb_pop_lst"></ul></div></div><div class="gnb_search_lstwrp"><ul class="gnb_search_lst gnb_first"><li class="gnb_first"><a href="http://cafe.naver.com/">카페</a></li><li><a href="http://news.naver.com/">뉴스</a></li><li><a href="http://map.naver.com/">지도</a></li><li><a href="http://sports.news.naver.com/">스포츠</a></li><li><a href="http://game.naver.com/">게임</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://section.blog.naver.com/">블로그</a></li><li><a href="http://post.naver.com/main.nhn">포스트</a></li><li><a href="http://dic.naver.com/">사전</a></li><li><a href="http://kin.naver.com/">지식iN</a></li><li><a href="http://weather.naver.com/">날씨</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://mail.naver.com/">메일</a></li><li><a href="http://stock.naver.com/">증권</a></li><li><a href="http://land.naver.com/">부동산</a></li><li><a href="http://music.naver.com/">뮤직</a></li><li><a href="http://book.naver.com">책</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://shopping.naver.com/">쇼핑</a></li><li><a href="http://comic.naver.com/">웹툰</a></li><li><a href="http://movie.naver.com/">영화</a></li><li><a href="http://cloud.naver.com/">클라우드</a></li><li><a href="http://auto.naver.com/">자동차</a></li></ul></div></div><div class="gnb_banner"><a href="http://campaign.naver.com/pointevent/" class="gnb_service_event"><img id="gnb_promo" alt="네이버페이 | 8월 이벤트" width="265" height="47" src="https://ssl.pstatic.net/static/common/gnb/2014/promo_npay.png"></a></div><div class="gnb_linkwrp"><a href="http://www.naver.com/more.html" class="gnb_service_all" id="gnb_service_all">전체 서비스 보기</a></div></div><div class="gnb_svc_more" id="gnb_svc_more" style=""><strong class="blind">네이버 주요 서비스</strong><div class="gnb_bg_top"></div><div class="gnb_svc_hd"><strong class="gnb_svc_tit">바로가기 설정</strong><span class="link"><a href="http://www.naver.com/more.html">전체 서비스 보기</a></span></div><div class="gnb_svc_lstwrp"><div class="gnb_svc_lst1"><ul class="gnb_first"><li><input type="checkbox" id="nsvc_game" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_game">게임</label></li><li><input type="checkbox" id="nsvc_weather" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_weather">날씨</label></li><li><input type="checkbox" id="nsvc_shopping" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_shopping">네이버쇼핑</label></li><li><input type="checkbox" id="nsvc_navercast" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_navercast">네이버캐스트</label></li><li><input type="checkbox" id="nsvc_cloud" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cloud">네이버클라우드</label></li><li class="gnb_event"><input type="checkbox" id="nsvc_naverpay" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_naverpay">네이버페이</label><em class="ic_gnb_new">New</em></li><li><input type="checkbox" id="nsvc_news" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_news">뉴스</label></li><li><input type="checkbox" id="nsvc_comic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_comic">만화/웹툰</label></li><li><input type="checkbox" id="nsvc_memo" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_memo">메모</label></li><li><input type="checkbox" id="nsvc_mail" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_mail">메일</label></li><li><input type="checkbox" id="nsvc_music" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_music">뮤직</label></li><li><input type="checkbox" id="nsvc_land" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_land">부동산</label></li><li><input type="checkbox" id="nsvc_bookmark" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_bookmark">북마크</label></li></ul><ul class=""><li><input type="checkbox" id="nsvc_blog" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_blog">블로그</label></li><li><input type="checkbox" id="nsvc_dic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_dic">사전</label></li><li><input type="checkbox" id="nsvc_software" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_software">소프트웨어</label></li><li><input type="checkbox" id="nsvc_sports" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_sports">스포츠</label></li><li><input type="checkbox" id="nsvc_ya9" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_ya9">야구9단</label></li><li><input type="checkbox" id="nsvc_movie" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_movie">영화</label></li><li><input type="checkbox" id="nsvc_office" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_office">오피스</label></li><li><input type="checkbox" id="nsvc_novel" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_novel">웹소설</label></li><li><input type="checkbox" id="nsvc_auto" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_auto">자동차</label></li><li><input type="checkbox" id="nsvc_contact" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_contact">주소록</label></li><li><input type="checkbox" id="nsvc_finance" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_finance">증권(금융)</label></li><li><input type="checkbox" id="nsvc_map" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_map">지도</label></li><li><input type="checkbox" id="nsvc_kin" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_kin">지식iN</label></li></ul><ul class=""><li><input type="checkbox" id="nsvc_terms" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_terms">지식백과</label></li><li><input type="checkbox" id="nsvc_book" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_book">책</label></li><li><input type="checkbox" id="nsvc_cafe" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cafe">카페</label></li><li><input type="checkbox" id="nsvc_calendar" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_calendar">캘린더</label></li><li><input type="checkbox" id="nsvc_photo" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_photo">포토갤러리</label></li><li><input type="checkbox" id="nsvc_nstore" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_nstore">N스토어</label></li><li><input type="checkbox" id="nsvc_tvcast" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_tvcast">TV캐스트</label></li></ul></div><div class="svc_lst2"><div class="svc_spc gnb_first"><strong><a href="http://dic.naver.com/">어학사전</a></strong><ul class=""><li><input type="checkbox" id="nsvc_krdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_krdic">국어사전</label></li><li><input type="checkbox" id="nsvc_endic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_endic">영어/영영사전</label></li><li><input type="checkbox" id="nsvc_hanja" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_hanja">한자사전</label></li><li><input type="checkbox" id="nsvc_jpdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_jpdic">일어사전</label></li><li><input type="checkbox" id="nsvc_cndic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cndic">중국어사전</label></li><li><input type="checkbox" id="nsvc_frdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_frdic">프랑스어사전</label></li><li><input type="checkbox" id="nsvc_dedic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_dedic">독일어사전</label></li><li><input type="checkbox" id="nsvc_rudic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_rudic">러시아어사전</label></li><li><input type="checkbox" id="nsvc_vndic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_vndic">베트남어사전</label></li><li><input type="checkbox" id="nsvc_spdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_spdic">스페인어사전</label></li><li><input type="checkbox" id="nsvc_translate" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_translate">번역기</label></li></ul></div><div class="svc_spc"><strong>인기/신규서비스</strong><ul class=""><li><input type="checkbox" id="nsvc_grafolio" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_grafolio">그라폴리오</label></li><li><input type="checkbox" id="nsvc_post" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_post">포스트</label></li><li><input type="checkbox" id="nsvc_luncherapp" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_luncherapp">도돌런처</label></li><li><input type="checkbox" id="nsvc_band" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_band">밴드</label></li><li><input type="checkbox" id="nsvc_line" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_line">라인</label></li></ul></div></div></div><div class="svc_btnwrp"><div class="svc_btns"><button class="gnb_save" onclick="if(gnbFavorite.addService()){gnbMoreLayer.clickToggleWhole()} return false;"><strong class="blind">확인</strong></button><button class="gnb_close" onclick="gnbFavorite.cancle(); return false;"><span class="blind">취소</span></button><button class="gnb_return" onclick="gnbFavorite.resetService(); return false;"><span class="blind">초기 설정으로 변경</span></button></div></div><div class="gnb_bg_btm"></div></div></div><iframe id="gnb_service_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="display:none;top:34px;right:297px;width:585px;height:385px;opacity:0;-ms-filter:alpha(opacity=0)"></iframe><iframe id="gnb_svc_more_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="display:none;top:34px;right:-4px;width:295px;height:385px;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li></ul><!-- 인코딩등에 따른 주소는 상단 개발 위키 참조 -->
+						</div>
+						<!-- //GNB -->
+					</div>
+				</div>
+			</div>
+			<div class="Nlnb" id="Nlnb">
+				<div class="Nlnb_inner">
+					<ul class="Nnav">
+						<!--[D] 선택메뉴에 Nnav_item_active 추가-->
+						<li class="Nnav_cell"><a href="#" class="Nnav_item Nnav_item_active">사전홈</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">영어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">국어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">한자</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">일본어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">중국어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">프랑스어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">스페인어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">독일어</a></li>
+						<li class="Nnav_cell"><a href="#" class="Nnav_item">베트남어</a><span class="Nsp_gnb Nupdate">업데이트</span></li>
+						<li class="Nnav_cell Nmore">
+							<a href="#" class="Nnav_item">더보기</a><span class="Nsp_gnb Nnew">신규추가</span><span class="Nsp_gnb Nico_more"></span>
+							<div class="Nmore_dic">
+								<div class="Nalldic_wrap">
+									<div class="Nview_dic">
+										<h3 class="Nblind">어학사전 바로가기</h3>
+										<div class="Ndic_wrap Nhot">
+											<p class="Ntit">인기</p>
+											<ul>
+												<li><a href="#">영어/영영</a></li>
+												<li><a href="#">국어</a></li>
+												<li><a href="#">한자</a></li>
+												<li><a href="#">일본어</a></li>
+												<li><a href="#">중국어</a></li>
+												<li><a href="#">글로벌회화</a></li>
+											</ul>
+										</div>
+										<div class="Ndic_wrap Nasia">
+											<p class="Ntit">아시아/아프리카</p>
+											<ul>
+												<li><a href="#">베트남어<span class="Nsp_gnb Nupdate">update</span></a></li>
+												<li><a href="#">인도네이사어<span class="Nsp_gnb Nupdate">update</span></a></li>
+												<li><a href="#">태국어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">아랍어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">캄보디아어</a></li>
+												<li><a href="#">몽골어</a></li>
+												<li><a href="#">힌디어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">페르시아어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">네팔어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">스와힐리어<span class="Nsp_gnb Nnew">new</span></a></li>
+											</ul>
+										</div>
+										<div class="Ndic_wrap Neu">
+											<p class="Ntit">유럽/아메리카</p>
+											<ul>
+												<li><a href="#">프랑스어</a></li>
+												<li><a href="#">스페인어</a></li>
+												<li><a href="#">이탈리아어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">포르투갈어<span class="Nsp_gnb Nupdate">update</span></a></li>
+												<li><a href="#">조지아어</a></li>
+												<li><a href="#">우크라이나어</a></li>
+												<li><a href="#">루마니아어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">스웨덴어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">폴란드어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">독일어</a></li>
+												<li><a href="#">러시아어<span class="Nsp_gnb Nupdate">update</span></a></li>
+												<li><a href="#">라틴어</a></li>
+												<li><a href="#">터키어<span class="Nsp_gnb Nupdate">update</span></a></li>
+												<li><a href="#">알바니아어</a></li>
+												<li><a href="#">우즈베크어</a></li>
+												<li><a href="#">네덜란드어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">헝가리어<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">체코어<span class="Nsp_gnb Nnew">new</span></a></li>
+											</ul>
+										</div>
+										<div class="Ndic_wrap Ngo_trans">
+											<p class="Ntit">번역기 바로가기</p>
+											<ul>
+												<li><a href="#">영어<span class="Nsp_gnb Nico_trans">에서</span>한국어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">일본어<span class="Nsp_gnb Nico_trans">에서</span>한국어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">중국어<span class="Nsp_gnb Nico_trans">에서</span>한국어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">스페인어<span class="Nsp_gnb Nico_trans">에서</span>영어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">포르투갈어<span class="Nsp_gnb Nico_trans">에서</span>영어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">태국어<span class="Nsp_gnb Nico_trans">에서</span>영어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">인도네시아어<span class="Nsp_gnb Nico_trans">에서</span>영어<span class="Nblind">로 번역하기</span></a></li>
+												<li><a href="#">사이트 번역<span class="Nsp_gnb Nnew">new</span></a></li>
+											</ul>
+										</div>
+										<div class="Ndic_wrap Nusr_service">
+											<p class="Ntit">이용자 참여 서비스</p>
+											<ul>
+												<li><a href="#">오픈사전<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">사전퀴즈<span class="Nsp_gnb Nnew">new</span></a></li>
+												<li><a href="#">참여번역<span class="Nsp_gnb Nnew">new</span></a></li>
+											</ul>
+										</div>
+										<div class="Ndic_wrap Netc_svc">
+											<p class="Ntit Nblind">바로가기</p>
+											<ul>
+												<li><a href="#">단어장</a><span class="Nbar"></span></li>
+												<li><a href="#">글로벌회화</a><span class="Nbar"></span></li>
+												<li><a href="#">작은창 사전</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<div class="Nlnb_tool">
+						<a href="#" class="Nlink">작은창 사전</a>
+						<a href="#" class="Nlink">단어장</a>
+
+						<div class="Nlang_setting">
+							<label class="Nlabel">언어설정</label>
+							<button class="Nbtn_select"><span>한국어</span><span class="Nsp_gnb Nico_more">더보기</span></button>
+
+							<div class="Nlist">
+								<!-- [D] 선택된 언어에 class="Nitem_active" 추가 -->
+								<a href="#" class="Nitem Nitem_active">한국어<span class="Nline"></span></a>
+								<a href="#" class="Nitem">English<span class="Nline"></span></a>
+								<a href="#" class="Nitem">日本語<span class="Nline"></span></a>
+								<a href="#" class="Nitem">中文(简体)<span class="Nline"></span></a>
+								<a href="#" class="Nitem">中文(繁體)<span class="Nline"></span></a>
+								<a href="#" class="Nitem">Español<span class="Nline"></span></a>
+								<a href="#" class="Nitem">Português<span class="Nline"></span></a>
+								<a href="#" class="Nitem">Indonesian<span class="Nline"></span></a>
+								<a href="#" class="Nitem">ภาษาไทย<span class="Nline"></span></a>
+								<a href="#" class="Nitem">Deutsch<span class="Nline"></span></a>
+								<a href="#" class="Nitem Nitem_last">Tiếng Việt<span class="Nline"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--[D] gnb 공통 css,js-->
+			<link type="text/css" rel="stylesheet" href="http://view.ui.naver.com/dict/common/develop/css/onenaver_gnb.css">
+			<script type="text/javascript" src="http://view.ui.naver.com/dict/common/develop/js/ui.js"></script>
+			<!--//[D] gnb 공통 css,js-->
+		</div>
+		<!-- //원네이버 GNB -->
+	</div>
+	<div id="top_search" class="sta">
+		<input type="hidden" name="searchOptionValue" id="searchOptionValue" value="">
+		<h2><a href="/" title="영어사전" class="N=a:DTP.endic"><span class="blind">영어사전</span></a></h2>
+		<fieldset class="auto_on">
+			<legend>검색영역</legend>
+			<div class="gbox">
+				<div class="gbox_inner">
+					<dl class="selectlist">
+						<dt><a href="#" class="value(0)">전체</a></dt>
+						<input type="hidden" name="rcsection" id="selectRange" value="">
+						<dd id="isubGbox">
+							<ul class="opt">
+								<li><a href="#" onclick="clickcr(this,'DTP.all','','',event,1)" class="value(0)">전체</a></li>
+								<li><a href="#" onclick="clickcr(this,'DTP.word','','',event,1)" class="value(1)">단어/숙어</a></li>
+								<li><a href="#" onclick="clickcr(this,'DTP.content','','',event,1)" class="value(2)">본문</a></li>
+								<li><a href="#" onclick="clickcr(this,'DTP.example','','',event,1)" class="value(3)">예문</a></li>
+								<li><a href="#" onclick="clickcr(this,'DTP.thesaurus','','',event,1)" class="value(4)">유의어/반의어</a></li>
+							</ul>
+						</dd>
+					</dl>
+          <span class="keybox">
+            <input type="text" name="query" id="ac_input" title="검색어" value="fuel" accesskey="s" maxlength="70" class="keyword">
+          </span> <a href="#" class="btn_sch ajax_searchbutton"><img src="http://dicimg.naver.com/endic/img/search_new.gif" width="47" height="35" alt="검색" onclick="clickcr(this,'DTP.search','','',event,1)"></a> <span class="static_keyword" style="display:none">fuel</span> <a href="#" title="자동완성 펼치기" class="btn_arw arrow"><span class="blind">자동완성 펼치기</span></a>
+					<!-- 자동완성 레이어 -->
+					<div id="ac_layer" class="auto_complete2">
+						<ul class="list_head">
+						</ul>
+						<p class="auto_on_info">현재 자동완성 기능을 사용하고 계십니다.</p>
+						<p class="auto_off_info">네이버<strong>검색어 자동완성</strong>을 아시나요?<br> 검색어를 한 글자만 입력해도 찾으시려는 단어를 추천해주는 편리한 기능입니다.<br>
+							<a href="#" onclick="clickcr(this,'DTP.autoon','','',event,1)"><img src="http://sstatic.naver.com/search/images11/btn_atcmp.gif" width="99" height="18" alt="자동완성 사용하기"></a></p>
+						<p class="nothing">해당 단어로 추천어가 없습니다.</p>
+						<div class="option"><a href="#" onclick="clickcr(this,'DTP.autohelp','','',event,1)">도움말</a> <span class="bar">|<a href="#" onclick="clickcr(this,'DTP.autooff','','',event,1)">기능끄기</a></span></div>
+					</div>
+					<!-- //자동완성 레이어 -->
+				</div>
+			</div>
+		</fieldset>
+		<a href="javascript:openDetailedSearch()" class="btn_detail N=a:DTP.detail"><img src="http://dicimg.naver.com/endic/img/btn_detail2_new.gif" width="42" height="12" alt="상세검색" class="s1 s2 N=a:LNB.detail"></a>
+		<!-- //상세검색 레이어 -->
+		<div id="detail_layer" class="detail_layer" style="display:none">
+			<p class="tit"><span class="blind">영어사전 상세검색</span> <a href="javascript:openDetailedSearch()" class="btn_close N=a:dti.close"><span class="blind">닫기</span></a> </p>
+			<div class="inqu_area">
+				<dl class="srch">
+					<dt class="tit2">부분단어 검색</dt>
+					<dd class="srch_con">
+						<form action="">
+							<fieldset>
+								<legend>부분단어 검색</legend>
+								<input type="text" name="open_words" id="open_words" onkeydown="javascript: if (event.keyCode == 13) {goDetailedSearch();}">
+								<label for="open_words">(으)로 시작하는 단어 검색하기</label>
+								<input type="text" name="end_words" id="end_words" onkeydown="javascript: if (event.keyCode == 13) {goDetailedSearch();}">
+								<label for="end_words">(으)로 끝나는 단어 검색하기</label>
+								<input type="text" name="of_words" id="of_words" onkeydown="javascript: if (event.keyCode == 13) {goDetailedSearch();}">
+								<label for="of_words">(이)가 포함된 단어 검색하기</label>
+							</fieldset>
+						</form>
+						<p class="tips">포함된 단어 검색은 한 가지 조건만 선택이 가능합니다.</p>
+					</dd>
+				</dl>
+				<a href="javascript:goDetailedSearch()" class="btn_check N=a:dti.search"><img src="http://dicimg.naver.com/endic/img/btn_check.gif" width="57" height="20" alt="검색하기"></a>
+				<p class="txt">사전검색 입력창에서 직접 와일드 카드(*,?)를 사용하여 검색이 가능합니다.</p>
+				<dl class="case">
+					<dt>예시)</dt>
+					<dd>s로 시작하는 모든 단어 : s*</dd>
+					<dd>s로 끝나는 모든 단어 : *s</dd>
+					<dd>s가 포함된 모든 단어 : *s*</dd>
+					<dd>s앞에 두 글자가 포함된 모든 단어 : ??s</dd>
+				</dl>
+				<a href="javascript:OPS.viewOPS('ops', {url : 'http://help.naver.com/ops/step2/faq.nhn',  param : 'faqId=23440'});openDetailedSearch()" class="more_link N=a:dti.guide">상세검색 규칙보기</a> </div>
+		</div>
+		<div class="pre_old_main">
+			<input type="checkbox" id="english" value="Y" class="N=a:rrt.engver" style="display:none;">
+		</div>
+		<ul class="select_dic_lang">
+			<li><a href="javascript:Kor2Eng('N');" class="ko on N=a:DTP.korver">한국어</a></li>
+			<li><a href="javascript:Kor2Eng('Y');" class="en N=a:DTP.engver">영어</a></li>
+		</ul>
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="view_list2">
+				<h3 class="blind">검색 결과 선택 옵션</h3>
+				<ul>
+					<li class="tx_depth1"><a href="#"><span>전체</span></a></li>
+					<li class="tx_depth2"><a href="#"><span>단어/숙어</span></a></li>
+					<li class="tx_depth3"><a href="#"><span>본문</span></a></li>
+					<li class="tx_depth4"><a href="#"><span>예문</span></a></li>
+					<li class="tx_depth5"><a href="#"><span>유의어/반의어</span></a></li>
+				</ul>
+				<div id="dts_area" class="sel" style="display:none">
+					<span class="blind">영영사전만 보기 기능을 선택 혹은 해제하시면 화면이 새로고침되면서 포커스가 검색창으로 이동합니다.</span>
+					<input name="" type="checkbox" id="ss" lang="en"><label for="ss">영영사전만 보기</label>
+					<div class="tip_over"><p><span>영영사전 전용 모드로 변경합니다.</span></p></div>
+				</div>
+			</div>
+			<div class="word_view user_translate">
+				<p class="tit2">
+					<span class="fnt_e15" lang="en"><i class="fnt_e08" lang="en">That</i>'<i class="fnt_e08" lang="en">s</i> <i class="fnt_e08" lang="en">what</i> <i class="fnt_e08" lang="en">it</i> <i class="fnt_e08" lang="en">is</i> ... </span>
+					<span class="theme">칸아카데미</span>
+					<a href="#" class="btn_play2 play2">듣기</a>
+				</p>
+				<div class="source2">
+					<a href="#" class="source fnt_k10">출처 : 칸아카데미</a>
+					<!-- [D] 활성화시 display:block / 비활성화시 display:none   -->
+					<div style="display:none" class="tips2">
+						<div>
+							<ul>
+								<li class="first">현대</li>
+								<li>미국</li>
+								<li>초급</li>
+								<li class="last"><a href="#" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section_user">
+				<div class="tit_user">
+					<h3>이용자 참여 번역문</h3>
+					<a href="#" class="help btn_help">도움말</a>
+					<div class="ly_help" style="display:none">
+						<p>이용자들이 직접 번역한 예문입니다.<br>맞아요/틀려요 평가를 해주세요.</p>
+						<a href="#" class="close btn_help_close">닫기</a>
+						<span class="edge"></span>
+					</div>
+					<span class="user_count">총 <b lang="en">3</b> 개</span><span class="wait_count"></span>
+					<div class="tit_btn_area">
+						<a href="#" target="_blank" class="bt_show_movie N=a:par.video"><span class="ico"></span><span class="txt">영상 보기</span></a>
+						<a href="#" id="btnShowSentence" class="bt_show_sentence"><span class="ico"></span><span class="txt">문장더보기</span></a>
+					</div>
+				</div>
+
+				<div class="list_user_wrap">
+					<!-- [D] 칸아카데미인 경우 list_khan 클래스 추가 -->
+					<ul class="list_user first list_khan">
+						<li>
+							<span class="sentence2">
+								그런 거예요... 부럽네요! 행운을 빌며, 존 그린. <span class="user_id" lang="en">action(1996**** )</span>
+								<img src="http://dicimg.naver.net/usertranslation/img/18/trsl_5000.png" width="18" height="18" alt="" class="badge"><img src="http://dicimg.naver.net/usertranslation/img/18/king_2015.png" width="18" height="18" alt="" class="badge">
+							</span>
+							<span class="date2" lang="en">2015.08.21</span>
+						</li>
+						<li>
+							<span class="sentence2">
+								그랬던거군..정말 부럽네! 잘되길 빌어, 존 그린. <span class="user_id" lang="en">꼼막(alsw**** )</span>
+								<img src="http://dicimg.naver.net/usertranslation/img/18/trsl_100.png" width="18" height="18" alt="" class="badge">
+							</span>
+							<span class="date2" lang="en">2015.08.21</span>
+						</li>
+						<li>
+							<span class="sentence2">
+								그랬던거군..정말 부럽네! 잘되길 빌어, 존 그린. <span class="user_id" lang="en">페페페페(wkrk**** )</span><span class="m">모바일 등록</span>
+								<img src="http://dicimg.naver.net/usertranslation/img/18/trsl_100.png" width="18" height="18" alt="" class="badge">
+							</span>
+							<span class="date2" lang="en">2015.08.21</span>
+						</li>
+					</ul>
+				</div>
+				<!-- [D] 칸아카데미인 경우 노출 -->
+				<div class="btn_khan_area">
+					<a href="#" class="btn_move"><i class="ico"></i>전체 문장 바로가기</a>
+				</div>
+				<p class="tx">이용자 참여 번역문은 일부 정확하지 않은 정보가 포함될 수 있습니다.</p>
+			</div>
+
+			<div class="section_user" id="section_example" style="display: block;">
+				<ul class="tab_user3 tab_similar_exam">
+					<li class="tab1 on" data-index="0"><a href="#" class="N=a:xt2.smr">비슷한 예문</a><span class="blind">선택됨</span></li>
+					<li class="tab2" data-index="1"><a href="#" class="N=a:xt2.wat">번역을 기다리는 예문</a></li>
+				</ul>
+				<ul class="list_a list_exam" id="ul_similar_exam"><li class="utb user_trsl_tip"><div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09 tts_play_text"><i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="now">Now</i>, <b>I</b> <i class="fnt_e08" tabindex="0">don</i>'t <i class="fnt_e08" tabindex="0">mind</i> <i class="fnt_e08" tabindex="0">people</i> <i class="fnt_e08" tabindex="0">disagreeing with</i> <i class="fnt_e08" tabindex="0">me</i> - <i class="fnt_e08" tabindex="0"><b>that</b></i><b>'s </b><i class="fnt_e08" tabindex="0"><b>what</b></i> <i class="fnt_e08" tabindex="0"><b>it's</b></i> <i class="fnt_e08" tabindex="0">all</i> <i class="fnt_e08" tabindex="0">about</i>.</span><a href="#" vcode="263771" class="btn_play N=a:smr.tts,i:1,r:16335557">듣기</a><div class="tips2" style="left:169px; top: -10px;" data-nopen="smr.source" data-nhide="smr.source"><div><ul><li class="first">현대</li><li>영국</li><li>초급</li><li class="last"><a href="http://www.guardian.co.uk/commentisfree/2006/dec/17/itstimeforabloggerasbo?commentpage=1" target="_blank" class="N=a:smr.sourcelink">이동</a></li></ul></div></div><input name="" type="hidden" value="Now, I don't mind people disagreeing with me - that's what it's all about."></div><div class="mar_top1"><div class="fnt_k10"><a href="#" class="user_ts" onclick="return false;">이용자 참여<span class="arr_right"></span><!-- 레이어팝업 --><span class="que_con"><strong class="blind">이용자 참여 안내문</strong>이용자 참여 번역문은 여러분들의 참여로 만들어 집니다.<br>일부 정확하지 않은 정보가 포함될 수 있으니 <br>좀 더 정확한 번역문이 될 수 있도록 많은 참여를 부탁 드립니다.<br><span class="arr_top"></span></span><!-- //레이어팝업 --></a> <a href="/example.nhn?sLn=kr&amp;exampleId=16335557&amp;webCrawl=1&amp;query=Now%2C+I+don%27t+mind+people+disagreeing+with+me+-+that%27s+what+it%27s+all+about." class="N=a:smr.detail">이제 나는 다른사람들이 나를 거부하는<b>것</b>을 신경쓰지 않는다. 그것이 전부일 뿐이다</a><em class="user_id"> <span>|</span><a href="/userTrsl.nhn?sLn=kr&amp;userTrslLoc=f6ae18228b38deadc6e068f757e8fed5&amp;tab=2" class="N=a:smr.id">번역 : 페얼러브(fair****)</a></em><span class="m">모바일 등록</span></div><!-- 맞아요,틀려요 --><div class="vote"><span class="correct2"><a href="#" class="btn_good search_btn_appr  N=a:smr.right" data-trslid="389126" data-apprtype="1">맞아요</a><strong class="appr_num">1</strong><span class="tip_correct"></span></span><span class="wrong"><a href="#" class="btn_bad search_btn_appr  N=a:smr.wrong" data-trslid="389126" data-apprtype="2">틀려요</a><strong class="appr_num">0</strong><span class="tip_wrong"></span></span></div><!-- //맞아요,틀려요 --></div><a href="/example.nhn?sLn=kr&amp;exampleId=16335557&amp;webCrawl=1&amp;query=Now%2C+I+don%27t+mind+people+disagreeing+with+me+-+that%27s+what+it%27s+all+about." class="btn_detail2  detail_url_link N=a:smr.detail">상세</a></li><li class="utb user_trsl_tip"><div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09 tts_play_text"><b>I</b> <i class="fnt_e08" tabindex="0">don</i>'t <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="know how">know how</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="many">many</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="times">times</i> <i class="fnt_e08" tabindex="0"><b>it's</b></i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="saved">saved</i> a <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="match">match</i>, <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="because">because</i> <i class="fnt_e08" tabindex="0"><b>that</b></i><b>'s </b><i class="fnt_e08" tabindex="0"><b>what</b></i> <i class="fnt_e08" tabindex="0"><b>it's</b></i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="there">there</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="for">for</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="really">really</i>.</span><a href="#" vcode="818993" class="btn_play N=a:smr.tts,i:2,r:15159095">듣기</a><div class="tips2" style="left:169px; top: -10px;" data-nopen="smr.source" data-nhide="smr.source"><div><ul><li class="first">현대</li><li>미국</li><li>초급</li><li class="last"><a href="http://www.foxnews.com/story/0%2C2933%2C413883%2C00.html" target="_blank" class="N=a:smr.sourcelink">이동</a></li></ul></div></div><input name="" type="hidden" value="I don't know how many times it's saved a match, because that's what it's there for really."></div><div class="mar_top1"><div class="fnt_k10"><a href="#" class="user_ts" onclick="return false;">이용자 참여<span class="arr_right"></span><!-- 레이어팝업 --><span class="que_con"><strong class="blind">이용자 참여 안내문</strong>이용자 참여 번역문은 여러분들의 참여로 만들어 집니다.<br>일부 정확하지 않은 정보가 포함될 수 있으니 <br>좀 더 정확한 번역문이 될 수 있도록 많은 참여를 부탁 드립니다.<br><span class="arr_top"></span></span><!-- //레이어팝업 --></a> <a href="/example.nhn?sLn=kr&amp;exampleId=15159095&amp;webCrawl=1&amp;query=I+don%27t+know+how+many+times+it%27s+saved+a+match%2C+because+that%27s+what+it%27s+there+for+really." class="N=a:smr.detail">나는 그게 몇번이나 경기를 살렸는지 모르겠어 왜냐하면 그것이 정말로 그곳에 왜 있는지거든</a><em class="user_id"> <span>|</span><a href="/userTrsl.nhn?sLn=kr&amp;userTrslLoc=851da81f4429c8c72b08070135018ee9&amp;tab=2" class="N=a:smr.id">번역 : KIMCW1029(kimc****)</a></em><img src="http://dicimg.naver.net/usertranslation/img/18/trsl_1000.png" width="18" height="18" alt="" class="badge"></div><!-- 맞아요,틀려요 --><div class="vote"><span class="correct2"><a href="#" class="btn_good search_btn_appr  N=a:smr.right" data-trslid="949902" data-apprtype="1">맞아요</a><strong class="appr_num">0</strong><span class="tip_correct"></span></span><span class="wrong"><a href="#" class="btn_bad search_btn_appr  N=a:smr.wrong" data-trslid="949902" data-apprtype="2">틀려요</a><strong class="appr_num">0</strong><span class="tip_wrong"></span></span></div><!-- //맞아요,틀려요 --></div><a href="/example.nhn?sLn=kr&amp;exampleId=15159095&amp;webCrawl=1&amp;query=I+don%27t+know+how+many+times+it%27s+saved+a+match%2C+because+that%27s+what+it%27s+there+for+really." class="btn_detail2  detail_url_link N=a:smr.detail">상세</a></li><li class="utb user_trsl_tip"><div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09 tts_play_text"><b>I'm</b> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="sure">sure</i> <i class="fnt_e08" tabindex="0"><b>that</b></i> <b>wasn't</b> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="the">the</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="intention">intention</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="at">at</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="the">the</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="time">time</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="but that">but <b>that</b></i><b>'s </b><i class="fnt_e08" tabindex="0"><b>what</b></i> <i class="fnt_e08" tabindex="0"><b>it's</b></i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="become">become</i>.</span><a href="#" vcode="224457" class="btn_play N=a:smr.tts,i:3,r:4517192">듣기</a><div class="tips2" style="left:169px; top: -10px;" data-nopen="smr.source" data-nhide="smr.source"><div><ul><li class="first">현대</li><li>영국</li><li>중급</li><li class="last"><a href="http://www.bbc.co.uk/blogs/thereporters/markeaston/2009/06/britains_got_diversity.html" target="_blank" class="N=a:smr.sourcelink">이동</a></li></ul></div></div><input name="" type="hidden" value="I'm sure that wasn't the intention at the time but that's what it's become."></div><div class="mar_top1"><div class="fnt_k10"><a href="#" class="user_ts" onclick="return false;">이용자 참여<span class="arr_right"></span><!-- 레이어팝업 --><span class="que_con"><strong class="blind">이용자 참여 안내문</strong>이용자 참여 번역문은 여러분들의 참여로 만들어 집니다.<br>일부 정확하지 않은 정보가 포함될 수 있으니 <br>좀 더 정확한 번역문이 될 수 있도록 많은 참여를 부탁 드립니다.<br><span class="arr_top"></span></span><!-- //레이어팝업 --></a> <a href="/example.nhn?sLn=kr&amp;exampleId=4517192&amp;webCrawl=1&amp;query=I%27m+sure+that+wasn%27t+the+intention+at+the+time+but+that%27s+what+it%27s+become." class="N=a:smr.detail">그것이 처음 의도한 <b>것</b>이 아닌<b>것</b>이라고 난 확신한다.</a><em class="user_id"> <span>|</span><a href="/userTrsl.nhn?sLn=kr&amp;userTrslLoc=9912ff1cebd8dbabf4bd1525927fec04&amp;tab=2" class="N=a:smr.id">번역 : 깡총깡총(dydg****)</a></em></div><!-- 맞아요,틀려요 --><div class="vote"><span class="correct2"><a href="#" class="btn_good search_btn_appr  N=a:smr.right" data-trslid="452784" data-apprtype="1">맞아요</a><strong class="appr_num">0</strong><span class="tip_correct"></span></span><span class="wrong"><a href="#" class="btn_bad search_btn_appr  N=a:smr.wrong" data-trslid="452784" data-apprtype="2">틀려요</a><strong class="appr_num">0</strong><span class="tip_wrong"></span></span></div><!-- //맞아요,틀려요 --></div><a href="/example.nhn?sLn=kr&amp;exampleId=4517192&amp;webCrawl=1&amp;query=I%27m+sure+that+wasn%27t+the+intention+at+the+time+but+that%27s+what+it%27s+become." class="btn_detail2  detail_url_link N=a:smr.detail">상세</a></li><li class="utb user_trsl_tip"><div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09 tts_play_text"><i class="fnt_e08" tabindex="0"><b>It's</b></i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="for">for</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="everyone">everyone</i>, <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="you know">you know</i> <i class="fnt_e08" tabindex="0"><b>what</b></i> <b>I</b> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="mean">mean</i>? <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="so that">So <b>that</b></i><b>'s </b><i class="fnt_e08" tabindex="0"><b>what</b></i> <b>I'm</b> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="really">really</i>, <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="really">really</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="focus on">focusing on</i>.</span><a href="#" vcode="622515" class="btn_play N=a:smr.tts,i:4,r:16880820">듣기</a><div class="tips2" style="left:169px; top: -10px;" data-nopen="smr.source" data-nhide="smr.source"><div><ul><li class="first">현대</li><li>호주</li><li>중급</li><li class="last"><a href="http://www.abc.net.au/news/stories/2008/07/16/2305233.htm" target="_blank" class="N=a:smr.sourcelink">이동</a></li></ul></div></div><input name="" type="hidden" value="It's for everyone, you know what I mean? So that's what I'm really, really focusing on."></div><div class="mar_top1"><div class="fnt_k10"><a href="#" class="user_ts" onclick="return false;">이용자 참여<span class="arr_right"></span><!-- 레이어팝업 --><span class="que_con"><strong class="blind">이용자 참여 안내문</strong>이용자 참여 번역문은 여러분들의 참여로 만들어 집니다.<br>일부 정확하지 않은 정보가 포함될 수 있으니 <br>좀 더 정확한 번역문이 될 수 있도록 많은 참여를 부탁 드립니다.<br><span class="arr_top"></span></span><!-- //레이어팝업 --></a> <a href="/example.nhn?sLn=kr&amp;exampleId=16880820&amp;webCrawl=1&amp;query=It%27s+for+everyone%2C+you+know+what+I+mean%3F+So+that%27s+what+I%27m+really%2C+really+focusing+on." class="N=a:smr.detail">그것은 모두를 위한거야. 내말 알겠어? 그게 내가 정말로, 정말로 집중하고 있는거야</a><em class="user_id"> <span>|</span><a href="/userTrsl.nhn?sLn=kr&amp;userTrslLoc=abdb50a8085be0da&amp;tab=2" class="N=a:smr.id">번역 : Whoknows(angw****)</a></em></div><!-- 맞아요,틀려요 --><div class="vote"><span class="correct2"><a href="#" class="btn_good search_btn_appr  N=a:smr.right" data-trslid="514781" data-apprtype="1">맞아요</a><strong class="appr_num">0</strong><span class="tip_correct"></span></span><span class="wrong"><a href="#" class="btn_bad search_btn_appr  N=a:smr.wrong" data-trslid="514781" data-apprtype="2">틀려요</a><strong class="appr_num">0</strong><span class="tip_wrong"></span></span></div><!-- //맞아요,틀려요 --></div><a href="/example.nhn?sLn=kr&amp;exampleId=16880820&amp;webCrawl=1&amp;query=It%27s+for+everyone%2C+you+know+what+I+mean%3F+So+that%27s+what+I%27m+really%2C+really+focusing+on." class="btn_detail2  detail_url_link N=a:smr.detail">상세</a></li><li class="utb user_trsl_tip"><div class="lineheight18 mar_top01"><span class="fnt_k09">[일반]</span><span class="fnt_e09 tts_play_text">TWITTY: <b>I</b> <i class="fnt_e08" tabindex="0">don</i>'t <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="know">know</i>, <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="and that">and <b>that</b></i><b>'s </b><i class="fnt_e08" tabindex="0"><b>what</b></i> <b>I'm</b> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="so ">so </i><i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="anxious">anxious</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="to">to</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="find out">find out</i> <i class="fnt_e08" tabindex="0">about</i>, <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="if">if</i> <i class="fnt_e08" tabindex="0"><b>it's</b></i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="involvement">involvement</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="or">or</i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="if">if</i> <i class="fnt_e08" tabindex="0"><b>it's</b></i> <i class="fnt_e08" tabindex="0"><input type="hidden" name="assist" value="information">information</i>.</span><a href="#" vcode="225136" class="btn_play N=a:smr.tts,i:5,r:5500089">듣기</a><div class="tips2" style="left:169px; top: -10px;" data-nopen="smr.source" data-nhide="smr.source"><div><ul><li class="first">현대</li><li>미국</li><li>초급</li><li class="last"><a href="http://www.foxnews.com/story/0%2C2933%2C192141%2C00.html" target="_blank" class="N=a:smr.sourcelink">이동</a></li></ul></div></div><input name="" type="hidden" value="TWITTY: I don't know, and that's what I'm so anxious to find out about, if it's involvement or if it's information."></div><div class="mar_top1"><div class="fnt_k10"><a href="#" class="user_ts" onclick="return false;">이용자 참여<span class="arr_right"></span><!-- 레이어팝업 --><span class="que_con"><strong class="blind">이용자 참여 안내문</strong>이용자 참여 번역문은 여러분들의 참여로 만들어 집니다.<br>일부 정확하지 않은 정보가 포함될 수 있으니 <br>좀 더 정확한 번역문이 될 수 있도록 많은 참여를 부탁 드립니다.<br><span class="arr_top"></span></span><!-- //레이어팝업 --></a> <a href="/example.nhn?sLn=kr&amp;exampleId=5500089&amp;webCrawl=1&amp;query=TWITTY%3A+I+don%27t+know%2C+and+that%27s+what+I%27m+so+anxious+to+find+out+about%2C+if+it%27s+involvement+or+if+it%27s+information." class="N=a:smr.detail">TWITTY: 그것이 개입된다면 인지 그것의 정보인지 나는 잘 모르겠고 그게 내가 알아내기 두려운 <b>것</b>입니다.</a><em class="user_id"> <span>|</span><a href="/userTrsl.nhn?sLn=kr&amp;userTrslLoc=bc359686eea05dd7f8b1ed7f0bf525f8&amp;tab=2" class="N=a:smr.id">번역 : 1996acsky(1996****)</a></em><img src="http://dicimg.naver.net/usertranslation/img/18/trsl_5000.png" width="18" height="18" alt="" class="badge"><img src="http://dicimg.naver.net/usertranslation/img/18/king_2015.png" width="18" height="18" alt="" class="badge"></div><!-- 맞아요,틀려요 --><div class="vote"><span class="correct2"><a href="#" class="btn_good search_btn_appr  N=a:smr.right" data-trslid="474357" data-apprtype="1">맞아요</a><strong class="appr_num">0</strong><span class="tip_correct"></span></span><span class="wrong"><a href="#" class="btn_bad search_btn_appr  N=a:smr.wrong" data-trslid="474357" data-apprtype="2">틀려요</a><strong class="appr_num">0</strong><span class="tip_wrong"></span></span></div><!-- //맞아요,틀려요 --></div><a href="/example.nhn?sLn=kr&amp;exampleId=5500089&amp;webCrawl=1&amp;query=TWITTY%3A+I+don%27t+know%2C+and+that%27s+what+I%27m+so+anxious+to+find+out+about%2C+if+it%27s+involvement+or+if+it%27s+information." class="btn_detail2  detail_url_link N=a:smr.detail">상세</a></li></ul>
+				<a href="/search_example.nhn?sLn=kr&amp;m=example&amp;tab=1" class="more more_exam_link N=a:wat.more" style="display:none"><span class="blind">번역을 기다리는 예문</span>더보기<span class="ico"></span></a>
+			</div>
+
+			<div class="ly_alert another" id="trsl_save_alert" style="display:none;">
+				<h1 class="another_tit" id="alertCountMsg" lang="en">welcome ONE</h1>
+				<p>작성한 번역문은 상세 페이지에서<br>확인 할 수 있습니다.
+					<a href="#" id="examdDetail" class="btn_detail2">상세<span class="ico"></span></a></p>
+				<p class="exam" style="display:none;">
+					<strong>하나 더 번역해 보세요!</strong>
+					<span class="tts_play_text eng" lang="en">Philosophy studies wisdom,is the study of idea about God.</span> <a href="#" vcode="" class="btn_play N=a:etr.tts">듣기</a>
+    	<span class="link_area">
+	        <a href="#" class="confirm" id="save_alert_confirm" style="display:none;">번역하기<span class="ico"></span></a>
+	        <a href="/myexample.nhn?sLn=kr&amp;tab=2" id="my_trsl_page">내  번역 보기<span class="ico"></span></a>
+	    </span>
+				</p>
+				<div class="btn_more"><a href="http://usertranslation.naver.com/" target="_blank">새로운 <em>참여번역</em>을 이용해 보세요<span class="arw"></span></a></div>
+				<a href="#" id="save_alert_close" class="close">닫기</a>
+			</div>    <div class="ly_alert" id="trsl_report_confirm" style="display:none;position: absolute; z-index: 1000;">
+			<strong>신고하기</strong>
+			<p>이 번역문을 신고 하시겠습니까?</p>
+			<div class="btn_area">
+				<a href="#" class="confirm">신고하기</a>
+				<a href="#" class="close_alert">닫기</a>
+			</div>
+		</div>
+			<div class="ly_alert" id="trsl_report_alert" style="display:none">
+				<strong>신고하기</strong>
+				<p>이미 신고한 번역문 입니다.<br>검토중이니 기다려 주세요.</p>
+				<div class="btn_area">
+					<a href="#" class="close_alert">닫기</a>
+				</div>
+			</div>
+			<!-- //소셜플러그인 영역 -->
+		</div>
+
+	<div id="aside" class="aside">
+		<div class="eng_pos">
+			<ul class="word_popup">
+				<li class="first"><a href="http://wordbook.naver.com/endic" class="word N=a:rmn.wordbook">단어장</a></li>
+				<li><a href="#" onclick="window.open('popManager.nhn?sLn=kr&m=search&query=Thats what it is ... Im jealous! Best wishes, John Green.', 'mini', 'left=150, top=150, width=405, height=513, toolbar=no, scrollbars=no, status=no, resizable=no');return false;" class="popup N=a:rmn.small" title="팝업창" target="_blank">작은창 사전</a></li>
+				<li class="last transMach"><a href="http://translate.naver.com/#/en/ko" target="_blank" class="gotrans N=a:rmn.translate" title="팝업창">번역기</a></li>
+				<li class="open_dic"><a href="http://opendict.naver.com/participation/word_list.dict#common/register/en/ko/" class="N=a:rmn.opendict">오픈사전</a><span class="new">new</span></li>
+			</ul>
+		</div>
+
+		<!-- ENG TALK BANNER 151015 -->
+		<div class="banner_toktok">
+			<a href="#" id="eng_bm_banner_on" onclick="window.open('http://talkie.naver.com/tok_tok.dict?mode=pc', 'toktok', 'left=150, top=150, width=550, height=700, toolbar=no, scrollbars=yes, status=no, resizable=no');return false;" class="N=a:rbn.chat"><img src="http://dicimg.naver.net/endic/style/201608111014/img/banner_toktok_on.png" alt="외국인과 영어톡톡 체험하기"></a>
+		</div>
+
+		<div class="ranking">
+			<!--<ul class="tab_ranking">-->
+			<!--<li class="tab1 on" data-className="rank_trsl_num"><a href="#" class="N=a:rrr.joinrank"><em>참여 랭킹</em></a><span class="blind">선택됨</span></li>
+            <li class="tab2"  data-className="rank_good_num"><a href="#" class="N=a:rrr.rightrank"><em>맞아요 랭킹</em></a></li>-->
+			<!--</ul>-->
+			<h2>주간 번역왕<span>08.15~08.21</span></h2>
+			<ul class="list_ranking rank_trsl_num">
+				<li class="no1 "><em>1</em><a href="/userTrsl.nhn?sLn=kr&userTrslLoc=e8382a8e5780f78f&tab=2" class="N=a:rrr.id">메르베이(psys****)</a><span>5617점</span></li>
+				<li class="no2 "><em>2</em><a href="/userTrsl.nhn?sLn=kr&userTrslLoc=b1a8e517354ecd20&tab=2" class="N=a:rrr.id">finnandjake(2ssu****)</a><span>4794점</span></li>
+				<li class="no3 "><em>3</em><a href="/userTrsl.nhn?sLn=kr&userTrslLoc=35c612a470ead765dec049bb66ac8f4f&tab=2" class="N=a:rrr.id">amanda(girr****)</a><span>3730점</span></li>
+				<li class="no4 "><em>4</em><a href="/userTrsl.nhn?sLn=kr&userTrslLoc=402914da3613f124f668bb185533302b&tab=2" class="N=a:rrr.id">하루(smil****)</a><span>3529점</span></li>
+				<li class="no5 "><em>5</em><a href="/userTrsl.nhn?sLn=kr&userTrslLoc=019a83a88280ea0f&tab=2" class="N=a:rrr.id">A Little Bit(2byp****)</a><span>2877점</span></li>
+			</ul>
+			<p>참여 건수, 문장 수준, 번역 품질 종합 점수 입니다.</p>
+			<a href="halloffame.nhn?sLn=kr&tab=1" class="more"><span class="blind">주간 번역왕</span>더보기<span class="ico"></span></a>
+		</div>
+		<div class="user_trans2" id="randomWaitTrslExam">
+			<h2>이용자 번역 참여하기</h2>
+			<div class="sentence">
+				<a href="/example.nhn?sLn=kr&exampleId=9660659&webCrawl=1&query=We%20are%20preparing%20for%20a%20really%20busy%2048%20hour%20to%20seven%20day%20operation."><span class="fnt_e09" lang="en">We are preparing for a really busy 48 hour to seven day operation.</span></a>
+				<a href="#" vcode="074361" class="btn_play N=a:rru.tts" title="듣기"  >듣기</a>
+				<div class="btm">
+
+					<div  class="tips2">
+						<div>
+							<ul>
+								<li class="first">현대</li>
+								<li>미국</li>
+								<li>초급</li>
+								<li class="last"><a href="http://www.foxnews.com/story/0%2C2933%2C422184%2C00.html" class="N=a:rru.sourcelink" target="_blank"><span class="blind">예문 출처 페이지로</span>이동</a></li>
+							</ul>
+						</div>
+					</div>
+            <span class="arr" id="changeRightExam">
+                <a href="#" class="pre N=a:rru.next" title="이전 예문">이전 예문</a>
+                <a href="#" class="next N=a:rru.next" title="다음 예문">다음 예문</a>
+				<!-- [D] 더 이상 페이지 없을 때 아래 태그로 적용해주세요.
+                <span class="pre N=a:rru.next">이전 예문 없음</span>
+                <span class="next N=a:rru.next">다음 예문 없음</span>
+                -->
+            </span>
+				</div>
+				<input name=""  type="hidden" value="We are preparing for a really busy 48 hour to seven day operation.">
+			</div>
+			<fieldset>
+				<legend>이용자 참여 번역하기</legend>
+				<!-- [D] 텍스트 입력영역에 포커싱될때 클래스 focus 추가 -->
+				<p class="input_text2" id="rightTrslExam">
+					<textarea name="_9660659" id="exam_9660659" data-webCrawl="1" data-gdid="98097022_00000cb300000000009368f3" data-query="We%20are%20preparing%20for%20a%20really%20busy%2048%20hour%20to%20seven%20day%20operation." cols="30" rows="10" title="번역문을 여기에 입력하세요.">번역문을 여기에 입력하세요.</textarea>
+					<span class="text_count"><b>0</b>/500</span>
+					<a href="#" class="btn_trans5 submit N=a:rru.translate" data-detailUrl="/example.nhn?sLn=kr&exampleId=9660659&webCrawl=1&query=We%20are%20preparing%20for%20a%20really%20busy%2048%20hour%20to%20seven%20day%20operation."><span class="ico"></span>참여하기</a>
+				</p>
+			</fieldset>
+			<a href="search_example.nhn?sLn=kr&m=example&query=&tab=1" class="more"><span class="blind N=a:rru.more">이용자 번역 참여하기</span>더보기<span class="ico"></span></a>
+			<input id="currentPageType"  type="hidden" value="exampleDetail">
+		</div>
+		<!--// 미니 번역기 start -->
+		<!-- 번역기 -->
+		<form id="form_short_trans" action="http://translate.naver.com" method="post" >
+			<input name="srcLang" type="hidden" value="en" />
+			<input name="tarLang" type="hidden" value="ko" />
+			<input name="query" type="hidden" value="" />
+			<input name="transType" class="transType" type="hidden" value="" />
+			<input name="auto" type="hidden" value="1" />
+			<div class="side_trans">
+				<h3>번역기</h3>
+				<dl class="st_lang"><!-- [D] dt 클릭시 class selected 부여 -->
+					<dt>
+						한국어<span class="ico_arrow"></span>영어<span class="select_arrow"></span>
+					</dt>
+					<dd class="st_con">
+						<ul class="st_list">
+							<li><a href="#">영어<span class="ico_arrow"></span>한국어</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<div class="st_input">
+					<textarea id="txt_origin" data-LangType="koen" data-isNull="1" maxlength="333" cols="30" rows="3">번역할 내용을 여기에 입력하세요.</textarea>
+					<a href="#" onclick="submitTransCont();" class="btn_st N=a:rtr.translate"><span class="ico_check"></span>번역하기</a>
+				</div>
+			</div>
+		</form>
+		<!-- //번역기 -->
+		<!--// 미니 번역기 end -->
+
+		<script language="javascript" type="text/javascript">
+			function addAllReviewedWords(){
+				return '';
+			}
+			function autoSaveEntryToWB(obj){
+				if (config_userId == "") {
+					url = "https://nid.naver.com/nidlogin.login?mode=form&url="
+							+ encodeURIComponent(location.href);
+					location.href = url;
+					return;
+				}
+				location.href = "wordbook.nhn?sLn=kr&m=autoAddMoreEntries&moreEntryIds=&ifAutoSaveEntryToWB="+obj.value ;
+			}
+
+			function removeReviewedWord(entryId,entryType){
+				location.href="/setting.nhn?sLn=kr&m=removeReviewedWord&entryId="+entryId+"&entryType="+entryType+"&historyURL="+encodeURIComponent(location.href);
+			}
+			function removeAllofReviewedWord(){
+				location.href="/setting.nhn?sLn=kr&m=removeAllofReviewedWord&historyURL="+encodeURIComponent(location.href);
+			}
+		</script>
+		<div class="myword nolist">
+			<h2><img src="http://dicimg.naver.net/endic/img/tit_myword.gif" alt="내가 찾은 단어" width="75" height="18" class="tit"/></h2>
+			<p class="nocon">찾은 단어가 없습니다.</p><!-- 찾는단어없을때 style삭제 -->
+
+		</div>
+		<div class="con_study">
+			<h2><img height="12" width="44" alt="단어학습" src="http://dicimg.naver.net/endic/img/tit_study.gif"></h2>
+			<!--<p class="txt"><img height="11" width="164" alt="학습할 단어를 저장하고 퀴즈도 풀어보세요" src="http://dicimg.naver.net/endic/img/txt_study.gif"></p>-->
+			<!--p class="btn"><a href="/category.nhn?sLn=kr"><img height="34" width="98" alt="분야별 단어찾기" src="http://dicimg.naver.net/endic/img/btn_style01.gif"></a><a href="/rank.nhn?sLn=kr"><img height="34" width="132" alt="중요도/품사별 단어찾기" src="http://dicimg.naver.net/endic/img/btn_style02.gif"></a></p-->
+			<dl>
+				<dt><a href="/category.nhn?sLn=kr" class="N=a:rws.category">분야별 단어 찾기</a></dt>
+				<dd><a href="/category.nhn?sLn=kr" class="N=a:rws.catall">전체</a>|<a href="/category.nhn?sLn=kr&fristId=1001&secondId=&thirdId=&pageNo=1&pubLev=all&firstWord=all" class="N=a:rws.philosophy">철학</a>|<a href="/category.nhn?sLn=kr&fristId=1002&secondId=&thirdId=&pageNo=1&pubLev=all&firstWord=all" class="N=a:rws.religion">종교</a>|<a href="/category.nhn?sLn=kr&fristId=1003&secondId=&thirdId=&pageNo=1&pubLev=all&firstWord=all" class="N=a:rws.history">역사</a>|<a href="/category.nhn?sLn=kr&fristId=1004&secondId=&thirdId=&pageNo=1&pubLev=all&firstWord=all" class="N=a:rws.literature">문학</a>|<a href="/category.nhn?sLn=kr&fristId=1005&secondId=&thirdId=&pageNo=1&pubLev=all&firstWord=all" class="N=a:rws.language">언어</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="/rank.nhn?sLn=kr" class="N=a:rws.rank">중요도/품사별 단어 찾기</a></dt>
+				<dd><a href="/rank.nhn?sLn=kr" class="N=a:rws.rankall">전체</a>|<a href="/rank.nhn?sLn=kr&pubLev=2&firstWord=all&posp=all&pageNo=1" class="N=a:rws.2star">매우중요</a>|<a href="/rank.nhn?sLn=kr&pubLev=1&firstWord=all&posp=all&pageNo=1" class="N=a:rws.1star">중요</a>|<a href="/rank.nhn?sLn=kr&pubLev=0&firstWord=all&posp=all&pageNo=1" class="N=a:rws.nostar">중요도없음</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="/lesson.nhn?sLn=kr" class="N=a:rws.lesson">중고등학교 교과서 단어 찾기</a></dt>
+				<dd><a href="/lesson.nhn?sLn=kr&fristId=110001&secondId=&thirdId=&fourId=&pageNo=1&pubLev=all&firstWord=all&posp=all" class="N=a:rws.mid1">중1</a>|<a href="/lesson.nhn?sLn=kr&fristId=110002&secondId=&thirdId=&fourId=&pageNo=1&pubLev=all&firstWord=all&posp=all" class="N=a:rws.mid2">중2</a>|<a href="/lesson.nhn?sLn=kr&fristId=110003&secondId=&thirdId=&fourId=&pageNo=1&pubLev=all&firstWord=all&posp=all" class="N=a:rws.mid3">중3</a>|<a href="/lesson.nhn?sLn=kr&fristId=110004&secondId=&thirdId=&fourId=&pageNo=1&pubLev=all&firstWord=all&posp=all" class="N=a:rws.high">고교 공통</a>|<a href="/lesson.nhn?sLn=kr&fristId=110005&secondId=&thirdId=&fourId=&pageNo=1&pubLev=all&firstWord=all&posp=all" class="N=a:rws.high1">고교 영어1</a>|<a href="/lesson.nhn?sLn=kr&fristId=110006&secondId=&thirdId=&fourId=&pageNo=1&pubLev=all&firstWord=all&posp=all" class="N=a:rws.high2">고교 영어2</a></dd>
+			</dl>
+		</div>
+		<!--// 미니 번역기 start -->
+		<!--// 미니 번역기 end -->
+		<div class="ad5">
+			<a href="#" title="팝업창" onClick="javaScript:popupAbbrHTML();return false;" class="N=a:rbn.abbreviation"><img src="http://dicimg.naver.net/endic/img/banner_eng011_1.jpg" width="280" height="42" alt="영어사전 약어표"/></a>
+		</div>
+		<div class="ad5">
+			<a href="javascript:OPS.viewOPS('ops', {url : 'https://help.naver.com/support/contents/contents.nhn',  param : 'serviceNo=1000&categoryNo=2702&contentsNo=12572&interactiveMainNo=12570'})" class="N=a:rbn.report" title="새 창"><img src="http://dicimg.naver.net/endic/img/banner_eng021_1.jpg" width="280" height="56" alt="사용자와 함께 만드는 네이버 사전 사전 내용 오류 신고 및 의견 제안하기"/></a>
+			<a target="_blank" href="http://blog.naver.com/dic_master"><img src="http://dicimg.naver.net/endic/img/banner_eng031.jpg" width="280" height="39" alt="사전 공식 블로그 방문하기"/></a>
+		</div>
+
+		<!-- 160523 오픈사전 광고 API -->
+		<div class="ad5">
+			<div id="opendict_banner" class="open_banner">
+				<a class="lnk_box bg_img b1" href="http://tvcast.naver.com/v/828159/list/71978" target="_blank"><p class="txt_area"><span class="txt_tit">NAVER Open Dictionary</span><span class="txt_dt">그 남자 그 여자 이야기</span><span class="txt_dd"><em class="txt_light">[썸타다]</em><span class="txt_p">Some</span></span></p></a>
+			</div>
+		</div>
+
+		<div class="ad5">
+			<!-- 트렌드 베너 -->
+			<!-- [D] type01~type20 랜덤 배경 이미지 -->
+			<div id="trendBanner" style="display:none"></div>
+		</div>
+		<div class="ad5">
+			<a target="_blank" class="N=a:rbn.newstts" href="http://news.naver.com/main/hotissue/sectionList.nhn?mid=hot&sid1=104&cid=933879"><img src="http://dicimg.naver.net/endic/img/banner_news_tts_1.jpg" width="280" height="60" alt="뉴스,이제 영어로 듣자!영문 뉴스 음성지원 서비스를 이용해보세요!"/></a>
+		</div>
+		<div class="ad5">
+			<a href="http://usertranslation.naver.com/" target="_blank"><img src="http://dicimg.naver.net/endic/style/201608111014/img/banner_aside_usertranslation.png" width="280" height="60" alt="새로운 참여번역 오픈"></a>
+		</div>
+		<ul class="dicTypeImg">
+			<li><span><img src="http://dicimg.naver.net/endic/img/dictype_01_1_1.gif" width="52" height="10" alt="단어발음제공"/></span><img src="http://dicimg.naver.net/endic/img/dictype_02_1_new.png" width="115" height="10"  alt="동아출판/Harper Collins"/></li>
+			<li><span><img src="http://dicimg.naver.net/endic/img/autoenglish_01_1_1.gif" width="80" height="10" alt="중고교과서 목록제공"/></span><a href="http://www.autoenglish.co.kr/" target="_blank"><img src="http://dicimg.naver.net/endic/img/autoenglish_02_1.gif" width="118" height="10" alt="오토잉글리쉬(AutoEnglish)"/></a></li>
+		</ul>
+		<!--  mouse popup  -->
+		<div id="PronPlayerLayer" style="position: absolute"></div>
+		<div class="mouse_pop" id="sub_dic_layer">
+			<h3 class="blind">보조사전 영역</h3>
+			<a href="#" class="ico_close"><img src="http://dicimg.naver.net/endic/img/ico_close2.gif" alt="보조사전 닫기" onClick="clickcr(this, 'sdc.close', '', '', null)" width="13" height="13"/></a>
+			<h3 class="loading"><span class="t1">ghandle</span><span class="swf"><object tabindex="-1" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="17" height="17">
+				<param name="movie" value="http://dicimg.naver.net/endic/flash/loading.swf"/>
+				<param name="quality" value="high"/>
+				<embed tabindex="-1" src="http://dicimg.naver.net/endic/flash/loading.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="17" height="17"></embed>
+			</object></span></h3>
+			<div class="sd_res_box">
+			</div>
+			<p class="btn"><a href="#" onClick="clickcr(this, 'sdc.close', '', '', null)"><img src="http://dicimg.naver.net/endic/img/btn_close.gif" alt="보조사전 닫기" width="41" height="21"/></a></p>
+		</div>
+		<div id="pvLayer" style="display:none;"></div>
+		<!--  mouse popup  -->
+	</div>
+	<!-- add_layer2 start -->
+	<div class="add_layer2" id="add_layer_info">
+		<p class="txt">단어장 이용약관에 동의하신 후 이용이 가능합니다.</p>
+		<p class="btn"><a href="#"><img src="http://dicimg.naver.net/endic/img/btn_view_reg.gif" alt="단어장 약관보기" width="63" height="23"/></a></p>
+	</div>
+	<!--// add_layer2 end -->
+	<!-- add_layer_agreement start -->
+
+	<div class="add_layer_agreement" id="add_layer_agreement">
+		<h2><span class="fnt_k24">단어장 이용약관</span></h2>
+		<div class="reg_con">
+			<h3>제 1조 (목적)</h3>
+			<p> 네이버 단어장 이용약관(이하 “약관”이라 합니다)은 “이용자”가 NAVER주식회사(이하 “회사”라 합니다)가 제공하는 단어장 서비스를 이용함에 있어 “회사”와 “이용자”간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+
+			<h3>제 2조 (용어의 정의)</h3>
+			<ol>
+				<li><span class="first_letter">①</span>“단어장”이란 구현되는 단말기(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 이용자가 네이버 사전상의 모든 단어, 숙어, 예문 등을 저장하여 열람, 편집, 인쇄 등을 할 수 있는 네이버 단어장 서비스를 의미합니다.</li>
+				<li><span class="first_letter">②</span>“이용자”란 네이버 이용약관(<a href="http://www.naver.com/rules/service.html" target="_blank">http://www.naver.com/rules/service.html</a>)에 동의한 네이버 회원 중 “회사”가 제공하는 단어장 서비스를 이용하기 위해 본 약관에 동의한 고객을 말합니다.</li>
+
+			</ol>
+
+			<h3>제 3조 (이용약관의 효력 및 변경)</h3>
+			<ol>
+				<li><span class="first_letter">①</span>본 약관은 “이용자”가 쉽게 알 수 있도록 “서비스” 초기 화면에 게시하고, “이용자”가 동의를 함으로써 효력이 발생합니다.</li>
+				<li><span class="first_letter">②</span>“회사”는 관련 법령에 위배되지 않는 범위 내에서 약관의 내용을 개정할 수 있습니다.</li>
+				<li><span class="first_letter">③</span>“회사”가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 제1항의 방식에 따라 그 개정약관의 적용일자 30일 전부터 적용일자 전일까지 공지합니다. 다만, “이용자”에게 불리한 약관 개정의 경우에는 공지 외에 일정기간 네이버 서비스를 통한 전자우편, 전자쪽지, 동의창 등의 전자적 수단을 통해 따로 명확히 통지하도록 합니다.</li>
+
+				<li><span class="first_letter">④</span>“회사”가 전항에 따라 개정약관을 공지 또는 통지하면서 “이용자”에게 30일 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 “이용자”가 명시적으로 거부의 의사표시를 하지 아니한 경우 “이용자”가 개정약관에 동의한 것으로 봅니다.</li>
+				<li><span class="first_letter">⑤</span>“이용자”가 개정약관의 적용에 동의하지 않는 경우 “회사”는 개정 약관의 내용을 적용할 수 없으며, 이 경우 “이용자”는 “단어장” 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 “회사”는 단어장 이용계약을 해지할 수 있습니다.</li>
+			</ol>
+			<h3>제 4조 (회사의 의무)</h3>
+			<p>회사는 계속적이고 안정적인 단어장 서비스의 제공을 위해 설비에 장애가 생기거나 멸실된 때에는 부득이한 사유가 없는 한 지체 없이 이를 수리 또는 복구합니다.</p>
+			<h3>제 5조 (이용자의 의무)</h3>
+
+			<p>“이용자”는 본인 사용의 목적에 한해서만 “단어장”의 내용을 열람, 편집, 인쇄, 사용할 수 있으며, 그 이외의 목적으로 “단어장”을 이용해서는 아니됩니다.</p>
+			<h3>제 6조 (단어장 컨텐츠의 저작권)</h3>
+			<p>네이버 사전으로부터 “단어장”으로 저장되는 모든 단어, 숙어, 예문의 저작권은 사전 컨텐츠 제공업체에 있습니다.</p>
+			<h3>제 7조 (서비스의 변경)</h3>
+			<ol>
+				<li><span class="first_letter">①</span>회사의 사정, 사전 컨텐츠 제공업체의 변경 등으로 인해 단어장 서비스의 일부 또는 전부가 변경, 종료될 수 있으며, 이 경우 “회사”는 그 사유를 변경 또는 종료 전 30일 이상 단어장 서비스 메인페이지에 게시하여야 합니다.</li>
+
+				<li><span class="first_letter">②</span>단어장 서비스의 변경 또는 종료에 따라 “단어장”에 저장된 내용이 삭제될 수 있습니다.</li>
+				<li><span class="first_letter">③</span>“회사”는 제1, 2항과 관련하여 관련법에 특별한 규정이 없는 한 “이용자”에게 별도의 보상을 하지 않습니다.</li>
+			</ol>
+			<h3>제 8조 (기타)</h3>
+			<p>본 약관에 명시되지 않은 사항은 네이버 이용약관(<a href="http://www.naver.com/rules/service.html" target="_blank">http://www.naver.com/rules/service.html</a>) 및 전기통신사업법 등 관계법령과 상관습에 따릅니다.</p>
+
+			<h3>&lt;부칙&gt;</h3>
+			<ol>
+				<li><span class="first_letter">1.</span>본 약관은 2009년 12월 29일부터 적용됩니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			</ol>
+
+		</div>
+		<div class="confirm">
+			<p style="_position:absolute; left:205px; top:425px"><img src="http://dicimg.naver.net/endic/img/txt_reg_agree.gif" alt="이용약관에 동의하시겠습니까?" width="152" height="11"/></p>
+
+			<p class="btn" id="agr_btn" style="_position:absolute; left:200px; top:450px"><a href="#" id="agree_btn"><img src="http://dicimg.naver.net/endic/img/btn_reg_agree.gif" alt="단어장 이용약관 동의" width="46" height="26"/></a><a href="#" class="mar1"><img src="http://dicimg.naver.net/endic/img/btn_reg_disagree.gif" alt="단어장 이용약관에 동의하지 않습니다" width="118" height="26"/></a></p>
+		</div>
+		<a class="close_reg" href="#;return false;" ><img src="http://dicimg.naver.net/endic/img/btn_close3.gif" alt="단어장 이용약관 팝업 닫기" class="close" width="19" height="19"/></a>
+
+	</div>
+
+	<!--// add_layer_agreement end -->
+	<!--// add_layer_agreement end -->
+	<!-- add_layer start -->
+	<div class="ly_sword" id="add_layer_wblist" style="display: none;"><dl><dt></dt><dd></dd></dl><a id="add_layer_close" href="#" class="btn_close2"><span class="blind">단어장 리스트 레이어 닫기</span></a></div>
+	<div class="ly_sword" id="add_layer_msg" style="display: none;"><dl><dt></dt><dd></dd></dl></div>
+	<!-- add_layer end -->
+	<!-- add_layer_tip start -->
+	<div class="add_layer_tip" id="add_layer_tip" style="display: none;">추가 되었습니다</div>
+	<!-- add_layer_tip end -->
+	<!-- creat_layer start -->
+	<div class="creat_layer" id="create_layer_wbname">
+		<h3><span class="fnt_k24"><strong>영어단어장 추가</strong></span></h3>
+
+		<p class="des"><span class="fnt_k26">단어장을 추가 합니다. 단어장 이름을 지어주세요.</span></p>
+		<p class="in1"><label for="wordbook_name" class="fnt_k25">단어장 이름</label><input id="wordbook_name" class="txt" type="text" maxlength="16"/></p> <div class="add_tiplayer">&lt; 혹은 &gt; 기호는 사용하실 수 없습니다.</div>
+		<p class="btn_area"><input name="" type="image" src="http://dicimg.naver.net/endic/img/btn_submit2.gif" alt="단어장 추가 확인" width="45" height="26"/><input name="" type="image" src="http://dicimg.naver.net/endic/img/btn_cancel2.gif" alt="단어장 추가 취소" width="45" height="26" class="mar"/></p>
+		<a href="#"><img src="http://dicimg.naver.net/endic/img/btn_close3.gif" alt="영어단어장 추가 팝업 닫기" class="close" width="19" height="19"/></a>
+	</div>
+</div>
+	<div id="footer">
+		<div class="f_noti">
+			<a href="#header" class="btn_top N=a:fot.top"><img src="http://dicimg.naver.net/endic/img/hit_top2.gif" width="42" height="11" alt="맨위로"></a>
+		</div>
+		<div class="f_ref">
+			<ul>
+				<li class="copyRightImg"><img src="http://dicimg.naver.net/endic/img/copyright_dictype_2.gif" width="35" height="11" alt="자료제공"></li>
+				<li><a href="http://www.oxford.co.kr" target="_blank" class="N=a:fot.oxford"><img src="http://dicimg.naver.net/endic/img/origin_01.gif" width="116" height="11" alt="Oxford University Press"></a></li>
+				<li><a href="http://www.neungyule.com" target="_blank" class="N=a:fot.neungryul"><img src="http://dicimg.naver.net/endic/img/origin_02.gif" width="54" height="11" alt="능률 한영사전"></a></li>
+				<li><a href="http://www.doosandonga.com" target="_blank" class="N=a:fot.doosan"><img src="http://dicimg.naver.net/endic/img/origin_03_new.png" width="102" height="11" alt="동아출판 프라임 영어사전"></a></li>
+				<li><a href="http://www.harpercollins.com" target="_blank" class="N=a:fot.collins"><img src="http://dicimg.naver.net/endic/img/origin_04.gif" width="141" height="11" alt="HarperCollins Publishers Ltd"></a></li>
+				<li><a href="http://www.ybmsisa.com/" target="_blank" class="N=a:fot.ybm"><img src="http://dicimg.naver.net/endic/img/origin_05.gif" width="59" height="11" alt="YBM 시사닷컴"></a></li>
+				<li><a href="http://blog.naver.com/eduoneyes" target="_blank"><img src="http://dicimg.naver.net/endic/img/origin_06.gif" width="73" height="11" alt="잉글리시히든카드"></a></li>
+				<li class="last"><a href="http://www.timescore.co.kr/" target="_blank"><img src="http://dicimg.naver.net/endic/img/origin_07.gif" width="46" height="11" alt="타임즈코어"></a></li>
+			</ul>
+			<a href="http://toolbar.naver.com" target="_blank" class="btn_tool N=a:fot.toolbar"><img src="http://dicimg.naver.net/endic/img/footer_download.gif" width="107" height="21" alt="네이버 툴바 다운로드"></a>
+		</div>
+		<div class="f_terms">
+			<dl class="policy">
+				<dt class="blind">네이버 정책 및 약관</dt>
+				<dd class="frst"><a href="http://www.naver.com/rules/service.html" target="_blank" class="N=a:fot.agreement">이용약관</a></dd>
+				<dd><a href="http://www.naver.com/rules/privacy.html" target="_blank" class="N=a:fot.privacy"><strong>개인정보취급방침</strong></a></dd>
+				<dd><a href="http://www.naver.com/rules/disclaimer.html" target="_blank" class="N=a:fot.disclaimer">책임의 한계와 법적고지</a></dd>
+				<dd><a href="javascript:OPS.viewOPS('ops', {url : 'https://help.naver.com/support/service/main.nhn',  param : 'serviceNo=1000&categoryNo=2722'})" class="N=a:fot.help">사전 고객센터</a></dd>
+				<dd><a href="javascript:OPS.viewOPS('ops',{url:'https://help.naver.com/support/contents/contents.nhn',param:'serviceNo=1000&categoryNo=2702&contentsNo=12572&interactiveMainNo=12570'})" class="N=a:fot.helpdesk">콘텐츠 수정</a> 및 <a href="javascript:OPS.viewOPS('ops',{url:'https://help.naver.com/support/service/main.nhn',param:'serviceNo=1000&categoryNo=2705'})" class="N=a:fot.helpdesk">오류 신고</a></dd>
+			</dl>
+			<div class="warning">본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</div>
+			<address>
+				<a href="http://www.nhncorp.com/" target="_blank" class="logo"><img src="http://static.naver.net/common/footer/ci_naver.gif" width="63" height="11" alt="NAVER"></a>
+				<em>Copyright ©</em>
+				<a href="http://www.nhncorp.com/" target="_blank">NAVER Corp.</a>
+				<span>All Rights Reserved.</span>
+			</address>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		SPS.__inst.top_search = new SPS.top_search("top_search", undefined);
+
+		// socialplugin ver2 150625
+		(function(){
+			var id = "naver-splugin-sdk", t = new Date(), yyyy = t.getFullYear(), mm = t.getMonth() + 1, dd = t.getDate();
+			var s = document.createElement("script"); s.id = id; s.type = "text/javascript", s.charset = "utf-8", s.async = false;
+			s.src = ("http://spi.naver.net/js/release/ko_KR/splugin.js?" + yyyy + (mm < 10 ? '0' + mm : mm) + (dd < 10 ? '0' + dd : dd));
+			var d = document.getElementsByTagName('head')[0];
+			d.appendChild(s, d);
+		})();
+		window.onload = function() {
+			window.__splugin = SocialPlugIn_Core({
+				// nEvent Key
+				"evKey"	: 'endic',
+				// title
+				"title" : document.title,
+				// 서비스명
+				"serviceName" : "영어사전",
+				// 출처명
+				"sourceName" : "",
+				// 딤드레이어 타입(default,fixed,custom)
+				"dimmed"      : "fixed",
+				// 버튼 클릭후 호출되는 콜백함수
+				"onClick"     : function(button) {
+					// button = 버튼명(band:밴드보내기)
+				},
+				// 공유하기 레이어 노출 후 호출되는 콜백함수
+				"onShow"      : function() {
+				},
+				// 공유하기 레이어 닫기 후 호출되는 콜백함수
+				"onHide"      : function() {
+				},
+				// window.resize 이벤트를 사용하지 않을때 resize 후 호출되는 콜백 함수
+				"onResize"    : function(event) {
+				},
+				// window.onorientationchange 이벤트를 사용하지 않을때 가로/세로 전환 후 호출되는 콜백 함수
+				"onRotate"    : function(event) {
+				}
+			});
+		}
+	</script>
+</div>
+<!-- 20150406 예문문장더보기팝업 -->
+<div class="pop_area pop_example" id="popKhanMoreExamDiv" style="display:none">
+	<h2 class="hide_txt">예문 문장 더보기 팝업</h2>
+	<div class="pop_wrap" style="top: 200px; left: 100px;">
+		<p class="example_tit">
+			<a href="#" id="kHanExamMoreClose" class="bt_close hide_txt  N=a:par.mpclose">닫기 버튼</a>
+			<span class="txt"></span><span class="tmp_height"></span>
+		</p>
+		<div class="content_wrap" id="khanMoreExamListDiv">
+			<!-- [D] 강조 컨텐츠일 경우에는 highlight 클래스 추가 & 내부를 <strong>태그로 감싸줍니다.-->
+		</div>
+	</div>
+</div>
+<!-- //예문문장더보기팝업 --><div id="itt_info_tip_box" class="tip_cx">
+	<div><span>verb+noun phrase+adverb or prepositional phrase <br/>동사+명사구+부사구/전치사구</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* NHNC Web Standard Team JHY 121115 */
+
+/* 사전이용TIP 3개 노출 시 삭제
+.m_tab_v2 .m_tab_l{width:50%}
+.m_tab_v2 .m_tab_l:nth-child(1){width:50%}*/
+
+/* 각 사전 별 수정부분 */
+.pc .cont_main h2 .logo{height:35px;}
+.cont_main h2 .logo{width:258px;background:url(../img/mn/sp_header_pc.png) no-repeat}
+.cont_main.change_lang h2 .logo{width:381px;margin-left:288px;background-position:0 -92px}
+.cont_main.change_lang .main_srch .btn_srch{width:62px;background:url(../img/mn/sp_header_pc.png) no-repeat 0 -186px}
+.cont_main.change_lang .main_srch .device{left:403px;}
+.cont_main .main_srch{*width:449px}
+
+.dic_lk .img{background:url(../img/mn/sp_dic.png) no-repeat;background-size:122px 227px}
+.pc .lyr_mobile div{background:url(../img/mn/img_qr.gif) no-repeat}
+.pc .header h1 a{background:url(../img/mn/sp_dic_s.png) no-repeat 0 6px}
+.pc .dic_lk .img{background:url(../img/mn/sp_dic_s.png) no-repeat;}
+
+.cont_main .title_type{width:258px}
+
+/* 콘텐츠 교체 팝업 */
+.pc .pc_ly_pop {display:block;}
+.pc .m_ly_pop {display:none;}
+.pc_ly_pop {position:fixed;top:0;right:0;left:0;bottom:0;z-index:2147483647;width:100%;height:100%;background:rgba(0,0,0,.6)}
+.pc_ly_pop .ly_wrap {position:relative;top:50%;width:788px;height:407px;margin:-203.5px auto 0;background:url('../img/mn/pc_bg_mnCt.png') no-repeat left top;box-shadow:0 0 7px rgba(0,0,0,.2);letter-spacing:-1px;font-family:'나눔바른고딕',NanumBarunGothic;}
+.pc_ly_pop .ly_wrap .cont {padding:42px 40px 0;}
+.pc_ly_pop .ly_wrap .cont .tit {overflow:hidden;width:323px;height:84px;background:url('../img/mn/pc_title1.png') no-repeat left top;line-height:0;font-size:0;text-indent:-500000em;}
+.txt_img {overflow:hidden;font-size:0;line-height:0;width:359px;height:166px;background:url('../img/mn/pc_txt1.png') no-repeat left top;margin:25px 0 26px;}
+/*
+.pc_ly_pop .ly_wrap .cont > p {font-size:16px;color:#000;line-height:26px;}
+.pc_ly_pop .ly_wrap .cont > p span {color:#009d38;}
+.pc_ly_pop .ly_wrap .cont .txt1 {padding-top:13px;}
+.pc_ly_pop .ly_wrap .cont .txt2 {padding-top:8px;}
+.pc_ly_pop .ly_wrap .cont .txt3 {padding:8px 0 19px;}
+*/
+.pc_ly_pop .ly_wrap .cont .btn_more {position:relative;display:inline-block;padding-right:12px;font-size:16px;color:#0090ff;}
+.pc_ly_pop .ly_wrap .cont .btn_more:before{display:block;position:absolute;top:50%;right:0;width:5px;height:7px;margin-top:-4px;background:url('../img/mn/pc_btn_icon.png') no-repeat -85px -1px;content:'';z-index:20}
+.pc_ly_pop .ly_wrap .btn_clse {overflow:hidden;position:absolute;right:5px;top:-45px;display:inline-block;width:30px;height:30px;line-height:0;font-size:0;text-indent:-500000em;background:url('../img/mn/pc_btn_icon.png') no-repeat -35px -1px;}
+.pc_ly_pop .ly_wrap .btn_more_no {position:absolute;right:20px;bottom:18px;display:inline-block;padding-right:20px;font-family:돋움;font-size:12px;color:#fff;letter-spacing:-1px;}
+.pc_ly_pop .ly_wrap .btn_more_no:before{display:block;position:absolute;top:50%;right:0;width:14px;height:13px;margin-top:-7px;background:url('../img/mn/pc_btn_icon.png') no-repeat -1px -1px;content:'';z-index:20}
+
+.mo .pc_ly_pop {display:none;}
+.mo .m_ly_pop {display:block;}
+.m_ly_pop {position:fixed;top:0;right:0;left:0;bottom:0;z-index:2147483647;width:100%;height:100%;background:rgba(0,0,0,.75)}
+.m_ly_pop .ly_wrap {overflow:hidden;position:relative;top:50%;width:282px;height:354px;margin:-177px auto 0;border-radius:3px;background:#fff;font-family:AppleSDGothicNeo;}
+.m_ly_pop .cont {padding-left:23px;}
+.m_ly_pop .cont .tit_top {position:relative;height:28px;font-family:HelveticaNeue;font-size:11px;color:#00C345;letter-spacing:3px;background:url('../img/mn/mo_bg_news.png') no-repeat left top;background-size:5px 28px;}
+.m_ly_pop .cont .tit_top span {position:absolute;left:12px;bottom:0;}
+.m_ly_pop .ly_wrap .cont .tit {overflow:hidden;width:199px;height:52px;margin-top:18px;background:url('../img/mn/mo_title1.png') no-repeat left top;background-size:199px 52px;line-height:0;font-size:0;text-indent:-500000em;}
+.m_ly_pop .ly_wrap .cont > p {font-size:13px;color:#222;line-height:18px;}
+.m_ly_pop .ly_wrap .cont > p em {font-family:Helvetica;}
+.m_ly_pop .ly_wrap .cont .txt1 {padding-top:12px;}
+.m_ly_pop .ly_wrap .cont .txt2 {padding-top:8px;}
+.m_ly_pop .ly_wrap .cont .txt3 {padding:8px 0 15px;}
+.m_ly_pop .ly_wrap .cont .btn_more {position:relative;display:inline-block;color:#0090ff;height:18px;line-height:18px;padding-right:9px;}
+.m_ly_pop .ly_wrap .cont .btn_more:before{display:block;position:absolute;top:50%;right:0;width:5px;height:10px;margin-top:-5px;background:url('../img/mn/mo_btn_icon.png') no-repeat 0 0;background-size:5px 9px;content:'';z-index:20}
+.m_ly_pop .btm {overflow:hidden;position:absolute;left:0;bottom:0;width:100%;height:51px;background:#ebeced;}
+.m_ly_pop .btm a {display:block;float:left;width:50%;height:51px;padding-top:19px;color:#3b3a48;font-size:14px;text-align:center;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.m_ly_pop .btm a:first-child{border-right:1px solid #fff;}
+
+/* GNB 타이틀 */
+.Ngnb_service .Nservice_item .Nicon_service {
+	width: 92px; /* 서비스에 맞게 변경 */
+	background-image: url(../img/mn/Nicon_mndic.png); /* 서비스에 맞게 변경 */
+	background-image: linear-gradient(transparent, transparent), url(../img/mn/Nicon_mndic.svg);
+	-webkit-background-size: 92px auto; /* 서비스에 맞게 변경 */
+	background-size: 92px auto; /* 서비스에 맞게 변경 */
+}

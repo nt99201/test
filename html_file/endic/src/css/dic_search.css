@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* common */
+body,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,table,th,td,ul,ol,li,form,fieldset,legend {margin:0;padding:0;list-style:none;}
+fieldset,img {border:none;}
+legend,hr {display:none;}
+a {displat:inline-block;text-decoration:none;}
+a:hover {text-decoration:underline;}
+em,address {font-style:normal;}
+a em {font-weight:bold;}
+body,select,input,textarea {font-family:Dotum,Gulim,"MS PGothic",AppleGothic,Sans-serif;font-size:12px;line-height:14px;}
+/* layout */
+body {text-align:center;}
+#container {float:left;width:980px;margin:10px 0 0 0;}
+#content {position:relative;float:left;width:720px;margin:0 0 24px 0;overflow:hidden;}
+.search_result_area {font-family:"MS PGothic";}
+.aside2 {float:right;width:240px;}
+#footer {clear:both;}
+/* header */
+#skip,.skip {position:absolute;width:0;height:0;overflow:hidden;}
+/* search_result_area */
+.search_result {margin:-5px 0 15px 0;border-top:1px solid #dbdbdb;}
+.search_result h3.dic {margin:21px 0 0 -1px;font-size:13px;}
+	.search_result h3.dic span {margin:0 0 0 7px;color:#888;font-weight:normal;font-size:12px;}
+.search_result p.dic {margin:-14px 0 13px 0;color:#525252;font-size:12px;letter-spacing:-1px;text-align:right;}
+	.search_result p.dic strong {font-weight:normal;}
+	.search_result p.dic strong a {color:#0d6ab2;font-weight:bold;text-decoration:underline;}
+.search_result dl {margin:-3px 0 43px 15px;font-size:13px;font-family:새굴림,gulim;line-height:19px;}
+	.search_result dl dt {width:100%;margin:17px 0 0 0;}
+	.search_result dl dt.first {margin:14px 0 0 0;}
+	.search_result dl dt a {text-decoration:underline;}
+	.search_result dl dt .play {margin-left:0;margin-bottom:0px;vertical-align:middle;position:relative}
+	.search_result dl dt .star {margin-left:0;vertical-align:middle;}
+	.search_result dl dt .fnt_k10 {padding-left:4px;}
+	.search_result dl dt sup{padding-left:1px;color:#0000cc;font-family:arial;}
+	.search_result dl dd {width:100%;margin:3px 0 0 0;overflow:hidden;}
+	.search_result dl dd .thumb {float:left;margin:0 6px 0 0;border:none;}
+	.search_result dl dd ul {margin:-3px 0 4px 10px;}
+	.search_result dl dd ul li {list-style:none;margin:0;}
+	.search_result dl dd ul li .jp {margin-left:5px;}
+	.search_result dl dd.read {margin:9px 0;}
+	.search_result dl dd.read img {margin:-1px 0 1px 0;vertical-align:middle;}
+	.search_result dl dd.stroke {margin:-7px 0 -2px 0;}
+	.search_result dl dd.bigNo {margin:11px 0 -6px -1px;}
+	.search_result dl dd.bigNo .no {color:#0a5196;}
+	.search_result dl .bu {margin:-3px -2px 0 0;vertical-align:4px;}
+	.search_result dl .jp {margin:0 0 0 1px;font-size:14px;font-family:"MS PGothic";}
+	.search_result dl .pos {color:#a0a0a0;}
+	.search_result dl .huri {margin:0 2px;color:#f56d6d;vertical-align:4px;}
+.search_result p.more {margin:-17px 0 0 0;color:#525252;font-size:12px;letter-spacing:-1px;text-align:right;}
+	.search_result p.more a {padding:0 0 0 10px;background:url(http://dicimg.naver.com/main/bu_more_arrow.gif) no-repeat 3px 3px;color:#000;text-decoration:underline;}
+.search_result dl a {color:#0000cc;}
+.search_result dl a:visited {color:#87124f;}
+/* aside2 */
+.aside2 .section {position:relative;width:218px;_width /**/:240px;margin:5px 0 0 0;padding:0 10px;border:1px solid #ddd;}
+.aside2 .jp {font-size:12px;font-family:"MS PGothic";}
+.aside2 .myword {}
+	.aside2 h3 {padding:6px 0;border-bottom:1px solid #e9e9e9;font-size:12px;line-height:14px;}
+	.aside2 .myword ul {margin:14px 0 11px 0;}
+	.aside2 .myword ul li {width:206px;_width /**/:218px;overflow:hidden;margin:4px 0 0 0;padding:0 0 0 12px;background:url(http://dicimg.naver.com/main/bu_square.gif) no-repeat 4px 6px;line-height:16px;word-wrap:break-word;word-break:break-all;}
+	.aside2 .myword ul li a {display:inline-block;color:#525252;}
+	.aside2 .myword ul li .x {margin:0 0 0 -3px;vertical-align:-1px;}
+	.aside2 .myword p {margin:15px 0 12px;color:#525252;text-align:center;}
+	.aside2 .section .empty {position:absolute;right:9px;top:4px;}
+.open_dic{color:#737373;font-family:돋움,dotum;font-size:11px;font-weight:normal;text-decoration:none}
+#history {font-family:"네이버사전",naverdic,"새굴림","굴림",Gulim,AppleGothic,Sans-serif;}
+/* //080415 수정본 */
+dl.selectlist a:hover {text-decoration:none;color:#373737;}
+dl.selectlist a:visited {text-decoration:none;color:#373737;}
+dl.selectlist dd ul.opt li.selected{background-color:#e1e1e1}
+.type {color:#717171;padding-left:3px;font-size:12px}
+.hanja_status2{font-size:12px;color:#717171;}
+.cndic_search{font-family:네이버사전,SimSun,새굴림 ;}
+.hanja_search{font-size:16px ;}
+.hanja_char{font-size:14px ;}
+.gray_char{color:#717171;}
+.pinyin{font-family:arial,font-size:14px;}
+.fantizi{font-size:14px;}
+#sub_footer{margin-top:0}

@@ -1,0 +1,70 @@
+<!-- 검색결과 엔드 페이지 -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+    <? include 'layer_search_keyword.html' ?>
+    <? include 'layer_search_keyword2.html' ?>
+
+    <!-- 검색결과 [단어/숙어] 엔드 페이지 -->
+    <div class="section_tit"><h2>단어·숙어</h2><em class="num">4,095건</em><button type="button" class="btn_lnk">오픈사전 보기</button></div>
+    <div class="section_card">
+        <div class="entry_search_word">
+            <div class="word_wrap">
+				<div class="h_word">
+					<strong class="target">삼계탕</strong>
+					<a href="#" class="link_wrap">자세히 보기</a>
+				</div>
+                <!-- change (ul -> p태그)-->
+                <p class="desc_lst">[음식](한식) Ginseng Chicken Soup</p>
+            </div>
+            <a href="#" class="image_info_wrap">
+                <span class="image_area" style="background-image:url('http://dev.ui.naver.com/tmp/?110x83_default_y_FFB4B4_50')"></span>
+                <p class="info">어린 닭의 배 속에 인삼, 대추, 밤, 찹쌀, 마늘 등을 넣고 푹 고아 만든 음식이다. 닭고기와 인삼이 조화를 이룬 전통적인 여름철 보양식이다.</p>
+            </a>
+            <div class="add_wordbook">
+                <span class="hc">단어장에 추가</span>
+                <!-- 20160819 접근성 수정 -->
+                <select class="select_wordbook" title="단어장 선택">
+                    <option value="0">단어장 선택</option>
+                    <option value="+">+ 새 단어장 만들기</option>
+                    <option value="145573456">0926(1)</option>
+                </select>
+                <!-- //20160819 접근성 수정 -->
+            </div>
+        </div>
+    </div>
+    <div class="section_card">
+        <div class="entry_search_word">
+            <div class="word_wrap">
+				<div class="h_word">
+					옻<strong class="target">삼계탕</strong>
+					<a href="#" class="link_wrap">자세히 보기</a>
+				</div>
+                <!-- change (ul -> p태그)-->
+                <p class="desc_lst">[음식](한식) Ginseng Chicken Soup with Sumac (로마자표기: Ot-samgye-tang)</p>
+            </div>
+            <div class="add_wordbook">
+                <span class="hc">단어장에 추가</span>
+                <!-- 20160819 접근성 수정 -->
+                <select class="select_wordbook" title="단어장 선택">
+                    <option value="0">단어장 선택</option>
+                    <option value="+">+ 새 단어장 만들기</option>
+                    <option value="145573456">0926(1)</option>
+                </select>
+                <!-- //20160819 접근성 수정 -->
+            </div>
+        </div>
+    </div>
+    <!-- 더보기 영역 -->
+    <div class="common_btn_wrap">
+        <button class="btn_lst_more_show"><span class="txt">더보기</span><strong class="num">15</strong><span class="total_num">/120,647</span></button>
+    </div>
+
+    <!-- 검색결과 1500건이 넘을 경우 -->
+    <div class="common_box_wrap">
+        <p class="search_notice_area">최상의 검색 품질을 위해, <span>1,500</span>건 이상의 검색결과를 제공하지 않습니다. <br>
+        원하시는 결과가 없는 경우, <strong>보다 구체적인 검색어</strong>를 입력해 보세요.</p>
+    </div>
+
+    <? include 'layer_opendic.html' ?>
+    <? include 'entry_footer.html' ?>
+</div>

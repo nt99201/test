@@ -1,0 +1,55 @@
+<!-- 검색결과 없는 경우 -->
+<div class="entry_wrap">
+    <? include 'entry_header.html' ?>
+
+    <? include ''.$content_type ?>
+    
+    <div class="section_tit"><h2>번역 결과</h2>
+    </div>
+    <section class="section_card">
+        <div class="entry_trans">
+            <!-- [D] 원문이 영어일때 en 추가 -->
+            <!-- [D] 원문이 한글일때 kr 추가 -->
+            <a href="#" class="trans_wrap en">                
+                <span class="trans_stc">
+                    <!-- [D] 검색어와 매칭되는 단어 <span class="match_word"></span>로 감싼다. -->
+                    <span class="match_word">It</span> is <span class="match_word">cold and hungry.</span>
+                </span>
+                <span class="trans_mean">춥고 배고프다.</span>
+            </a>
+        </div>
+    </section>
+    <section class="section_card">
+        <div class="entry_trans">
+            <!-- [D] 원문이 영어일때 en 추가 -->
+            <!-- [D] 원문이 한글일때 kr 추가 -->
+            <a href="#" class="trans_wrap kr">                
+                <span class="trans_stc">
+                    <!-- [D] 검색어와 매칭되는 단어 <span class="match_word"></span>로 감싼다. -->
+                    <span class="match_word">춥고</span> 배고프다배고프다배고프다배고프다배고프다<span class="match_word">배고프다</span>.
+                </span>
+                <span class="trans_mean">It is cold and hungry.</span>
+            </a>
+        </div>
+    </section>
+    <div class="common_btn_wrap v1 trans">
+        <button type="button" class="btn_more_show">번역기 바로가기</button>
+    </div>
+
+    <div class="common_btn_wrap">
+        <button type="button" class="btn_total_result v1">
+            <!-- [D] 영문일 경우 lang="en" 추가 -->
+            <span class="word"><strong>어학사전</strong> 전체 검색 결과보기</span>
+        </button>
+    </div>
+
+    <div class="common_btn_wrap ">
+        <button type="button" class="btn_total_result v1">
+            <!-- [D] 영문일 경우 lang="en" 추가 -->
+            <span class="word"><strong>통합검색</strong> 전체 검색 결과보기</span>
+        </button>
+    </div>
+
+    <? include 'layer_opendic.html' ?>
+    <? include 'entry_footer.html' ?>
+</div>

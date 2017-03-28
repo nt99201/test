@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>폰트 테스트</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+발음기호하나만 폰트를 지정하는 경우 - 정상<br>
+1. <span style="font-family:serif">ɑ</span><br>
+2. <span style="font-family:serif">ɒ</span><br>
+3. <span style="font-family:serif">ɑ́</span><br>
+4. <span style="font-family:serif">ɑ̀</span><br>
+5. <span style="font-family:serif">ɔ</span><br>
+6. <span style="font-family:serif">ɔ́</span><br>
+7. <span style="font-family:serif">ɔ̃</span><br>
+8. <span style="font-family:serif">ʃ</span><br>
+9. <span style="font-family:serif">ə</span><br>
+10. <span style="font-family:serif">ə́</span><br>
+11. <span style="font-family:serif">h</span><br>
+12. <span style="font-family:serif">ɪ</span><br>
+13. <span style="font-family:serif">ṃ</span><br>
+14. <span style="font-family:serif">ʊ</span><br>
+15. <span style="font-family:serif">ʌ</span><br>
+16. <span style="font-family:serif">ʌ́</span><br>
+17. <span style="font-family:serif">ʌ̀</span><br>
+18. <span style="font-family:serif">Ʒ</span><br>
+19. <span style="font-family:serif">ʒ</span>
+<br><br><br>
+윗 첨자가 있는 발음기호와 묶여 표시되는경우 - <span style="color:#f00">오류1</span><br>
+<span style="font-family:serif">ɑ ɒ ɑ́ ɑ̀ ɔ ɔ́ ɔ̃ ʃ ə ə́ h ɪ ṃ ʊ ʌ ʌ́ ʌ̀ Ʒ ʒ</span>
+<br><br><br>
+윗 첨자가 없는 발음기호와 묶여 표시되는경우 - 정상<br>
+<span style="font-family:serif">ɑ ɒ ɔ ʃ ə h ɪ ṃ ʊ ʌ Ʒ ʒ</span>
+<br><br><br>
+알파벳과 묶여 표시되는경우 - 정상<br>
+<span style="font-family:serif">a b c d e f ṃ g h Ʒ z</span>
+<br><br><br>
+샘플<br>
+<span style="font-family:serif">lan·guage [|lӕŋgwɪdƷ]</span> - 정상<br>
+<span style="font-family:serif">hal·lu·ci·no·gen·ic [həlù:sənədʒénik]</span> - 정상<br>
+ɑ ɒ ɑ́ ɑ̀ ɔ ɔ́ ɔ̃ ʃ ə ə́ h ɪ <span style="font-family:serif">ṃ</span> ʊ ʌ ʌ́ ʌ̀<span style="font-family:serif">Ʒ</span> ʒ - 정상<br>
+<span style="font-family:serif">ɑ ɒ ɑ́ ɑ̀ ɔ ɔ́ ɔ̃ ʃ ə ə́ h ɪ <span style="font-family:serif">ṃ</span> ʊ ʌ ʌ́ ʌ̀<span style="font-family:serif">Ʒ</span> ʒ</span> - <span style="color:#f00">오류2</span>
+</body>
+</html>
