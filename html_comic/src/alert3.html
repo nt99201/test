@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="initial-scale=0.75, maximum-scale=0.75, minimum-scale=0.75, user-scalable=no" />
+<title>네이버 웹툰</title>
+<link rel="stylesheet" type="text/css" href="css/w.css">
+</head>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+<header>
+	<!-- 로고 -->
+	<h1 class="u_ts">
+		<a href="#"><span>웹툰</span></a><a href="#"><span>웹소설</span></a>
+	</h1>
+	<!-- //로고 -->
+
+	<!-- 검색 -->
+	<!--[D] u_hsbt_smart 추가로 검색 버튼 위치 스마트 툰 페이지에 맞게 조정 -->
+	<!-- [D] 검색창 접기: <a href="#u_gnbw" class="u_hsbt u_hsbt_fd"><div><span class="u_vc">검색창 접기</span></div></a> -->
+	<a href="#u_hs" class="u_hsbt u_hsbt_op"><div><span class="u_vc">검색창 펼치기</span></div></a>
+	<form action="#">
+
+		<!-- [D] 통합검색 버튼 유무에 따라,
+			 * 통합검색 버튼이 있는 경우: class="u_hs"
+			 * 통합검색 버튼이 없는 경우: class="u_hs u_hs_nous" -->
+		<fieldset id="u_hs" class="u_hs" style="display:none;">
+			<legend class="u_hc">검색</legend>
+			<div class="u_hsw">
+				<!-- [D] placeholder는 HTML5 DTD에서만 사용 가능. 그 외 DTD에서는 스크립트로 처리.
+					 * HTML5 : <input ... placeholder="안내메시지" class="u_it">
+					 * 그 외 : <input ... value="안내메시지" class="u_it u_sd"> -->
+						<div class="u_itw">
+							<div class="u_itwi">
+								<input type="text" name="msearch" title="" class="u_it"  placeholder="제목 또는 작가명 검색">
+								<button type="button" class="u_clrt">입력 내용 삭제</button>
+							</div>
+						</div>
+				<button type="submit" class="u_hssbt u_hssbt_ss"><span class="u_vc">검색</span></button>
+				<button type="submit" class="u_hssbt u_hssbt_us">통합검색</button>
+			</div>
+		</fieldset>
+	</form>
+
+	<!-- 자동완성 기능 -->
+	<div id="autocompleteArea" class="atcp atcpt" style="display:none">
+		<div class="atcpw">
+			<div class="atcpw2">
+			    <ul>
+				    <li class="atcpli"><a href="#none" class="atcpa"><em>돌아온</em> 액션 퍼즐 패밀리</a>
+						<input id="hidden_input" type="hidden" value="돌아온 액션 퍼즐 패밀리">
+						<span class="tp">웹툰</span>
+					</li>
+			    
+				    <li class="atcpli"><a href="#none" class="atcpa"><em>돌아온</em> 액션 퍼즐 패밀리 공략</a>
+						<input id="hidden_input2" type="hidden" value="돌아온 액션 퍼즐 패밀리 공략">
+						<span class="tp">베스트도전</span>
+					</li>
+			    
+				    <li class="atcpli"><a href="#none" class="atcpa"><em>돌아온</em> 럭키짱</a>
+						<input id="hidden_input3" type="hidden" value="돌아온 럭키짱">
+						<span class="tp">만화</span>
+					</li>
+			    
+				    <li class="atcpli"><a href="#none" class="atcpa"><em>돌아온</em> 탕자</a>
+						<input id="hidden_input4" type="hidden" value="돌아온 탕자">
+						<span class="tp">만화</span>
+					</li>
+			    
+				    <li class="atcpli"><a href="#none" class="atcpa"><em>돌아온</em> 일지매</a>
+						<input id="hidden_input5" type="hidden" value="돌아온 일지매">
+						<span class="tp">만화</span>
+					</li>
+			    </ul>
+			    <p class="atbt"><button id="closeAutocomplete" type="button" class="atbt_b">닫기</button></p>
+			</div>
+		</div>
+	</div>
+	<!-- //자동완성 기능 -->
+
+	<!-- MY -->
+	<div class="my_page"><a href="#"><span>MY</span></a></div>
+	<!-- //MY -->
+</header>
+
+<!-- ct  -->
+<hr />
+<div id="ct">
+
+<div class="al1 alc">
+	<h2><span>해당 만화는 관심 웹툰에<br />
+	등록되어 있습니다.</span></h2>
+	<div class="ac"><a href="#" class="bt5">이전</a> </div>
+</div>
+
+</div>
+<hr />
+<!-- //ct -->
+<div class="ft">
+	<p class="ft1"><a href="#" class="f">네이버홈</a> <a href="#">메일</a> <a href="#">카페</a> <a href="#">블로그</a> <a href="#">뉴스</a></p>
+	<p class="ft2"><a href="#" class="lk1">로그아웃</a> <a href="#" class="lk2">PC버전</a></p>
+</div>
+<address class="cr">&copy;2009 <a href="#">NAVER Corp.</a></address>
+
+</body>
+</html>

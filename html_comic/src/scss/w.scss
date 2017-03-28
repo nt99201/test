@@ -1,0 +1,1122 @@
+@charset "utf-8";
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0;-webkit-text-size-adjust:none}
+body,input,textarea,select{font-size:14px;font-family:Helvetica,sans-serif;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica,sans-serif}
+body{position:relative;background-color:#f4f4f4;color:#000;word-wrap:break-word;word-break:break-all}
+.it,textarea{border:1px solid #bcbcbc}
+li{list-style:none}
+table{border-collapse:collapse}
+img,fieldset{border:none}
+a{color:#000;text-decoration:none;cursor:pointer}
+label{cursor:pointer}
+strong{font-weight:normal}
+em,address{font-style:normal}
+.hc,hr{display:none !important}
+.is{width:19px;height:19px}
+.fx{max-width:100%}
+.dim{display:none;position:fixed;top:0;left:0;z-index:990;width:100%;height:150%}
+.dim.open{display:block}
+.dim .bg{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:.5;filter:alpha(opacity=50)}
+div[class^=ly_dim]{display:none}
+div[class^=ly_dim].on{display:block !important}
+.ly_dim,.dimmed,.ly_dim_video_full{position:absolute;top:0;left:0;z-index:3100;width:100%;height:100%}
+.ly_dim .bg,.dimmed,.ly_dim_video_full{width:100%;height:100%;background:#212121;opacity:.5;filter:alpha(opacity=50)}
+.ly_dim.v2 .bg{background:#000;opacity:.6;filter:alpha(opacity=60)}
+.spot_txt{color:#fe4e31}
+.blind,.hc,.u_hc,.u_vc,.u_skip,#u_skip{overflow:hidden;position:absolute !important;width:1px;height:1px;font-size:1px !important;line-height:1px !important;color:transparent !important}
+#ct{clear:both;width:100%;background-color:#fff;-webkit-box-shadow:none}
+#ct:after{display:block;clear:both;content:''}
+.cr{clear:both;padding:5px 0 11px;font-size:10px;color:#909090;text-align:center}
+.cr a{color:#909090}
+.cr .dd{margin-left:.5em;font-size:12px}
+header{position:relative}
+header a{z-index:30}
+header a span,.lnb li span,.u_clrt,.u_hs .u_hssbt,.u_hssbt_ss:before{display:inline-block;background:url(http://static.naver.com/m/comic/im/u_gnb.png) no-repeat;-webkit-background-size:140px 75px;background-size:140px 75px;vertical-align:top;color:transparent}
+header h1 a{display:inline-block;overflow:hidden;position:relative;width:47px;height:100%;text-align:center}
+header h1 a+a{padding-left:1px}
+header h1 a+a:before{position:absolute;top:16px;left:0;width:1px;height:12px;background:#1b1d23;content:''}
+header h1 a span{width:32px;height:17px;margin-top:14px;background-position:-68px 0}
+header h1 a+a span{width:35px;height:13px;margin-top:16px;background-position:-105px 0}
+.u_ts{position:relative;z-index:20;height:44px;border-bottom:1px solid #202229;background:#292c35;text-align:center}
+.u_gnbh{position:absolute;top:0;left:0;width:63px;height:26px;padding:18px 0 0 15px}
+.u_gnbh span{width:49px;height:9px}
+.u_gnbw{clear:both}
+.u_gnbuw{position:relative;padding:7px;border-top:1px solid #161616;border-bottom:1px solid #191919;background:#202020;text-align:left}
+.u_gnbu_w{background:#fff;-webkit-box-shadow:0 0 1px #000}
+.u_gnbuwm{margin-bottom:0}
+.u_gnbu{overflow:hidden;clear:both;position:relative;padding:9px 0 9px 10px;border-top:1px solid #e5e5e5}
+.u_gnbuf{padding-top:11px;border-top:none}
+.u_gnb{overflow:hidden;float:left;position:relative;width:91px;padding:2px 0 3px}
+.u_gnb_v1{width:13em}
+.u_gnba{display:inline-block;height:31px;padding:0 .25em;line-height:31px;color:#222;white-space:nowrap}
+.u_gnba_v1{font-size:15px}
+.u_gnbn{display:inline-block;overflow:hidden;width:11px;height:11px;background:url(http://static.naver.net/m/comic/im/2012/u_cm2.png) no-repeat;background-color:#e12;text-indent:15px;vertical-align:0}
+.u_gnba_v1 .u_gnbn{vertical-align:-1px}
+.u_hsbt{display:block;overflow:hidden;position:absolute;top:1px;right:43px;width:17px;height:16px;padding:14px 8px}
+.u_hsbt div,.u_hsbt span{display:block;width:14px;height:15px}
+.u_hsbt_op span{background-position:0 -34px}
+.u_hsbt_fd span{background-position:-20px -57px}
+.u_hs{position:relative;width:100%;height:39px;border-bottom:1px solid #292c35;background-color:#25262e}
+.u_hsw{padding:5px 105px 5px 6px}
+.u_hs .u_itw{overflow:hidden}
+.u_hs .u_itwi{position:relative;height:23px;padding:6px 39px 0 7px;background:#fff}
+.u_hs .u_it{width:100%;border:0;font-size:14px;color:#191c1c;-webkit-border-radius:0;-webkit-appearance:none}
+.u_hs .u_it::-webkit-input-placeholder{color:#a4abb9}
+.u_hs .u_it:-moz-placeholder{color:#a4abb9}
+.u_hs .u_it.u_sd{color:#888}
+.u_clrt{overflow:hidden;position:absolute;top:0;right:4px;z-index:10;width:30px;height:29px;margin:0;padding:0;border:0;background-position:-36px -16px;text-indent:40px;white-space:nowrap}
+.u_hs .u_hssbt{position:absolute;top:5px;height:29px;border:0;background:#40454f;font-size:12px;line-height:29px;color:#fff;-webkit-border-radius:0;-webkit-appearance:none}
+.u_hs .u_hssbt_ss{right:71px;width:35px}
+.u_hs .u_hssbt_ss:before{display:inline-block;width:17px;height:16px;margin-top:7px;background-position:0 -34px;content:''}
+.u_hs .u_hssbt_us{right:6px;width:60px;white-space:nowrap}
+.my_page{display:block;overflow:hidden;position:absolute;top:0;right:7px;z-index:30}
+.my_page a{display:block;height:18px;padding:16px 8px 10px}
+.my_page a span{width:23px;height:12px;background-position:-117px -16px}
+.no_lst{display:-webkit-box;display:-moz-box;width:100%;height:270px;font-size:15px;color:#828282;text-align:center;-webkit-box-pack:center;-webkit-box-orient:vertical;-moz-box-pack:center;-moz-box-orient:vertical;-moz-box-align:center}
+.no_lst [class^=ico]{display:block;margin:-40px auto 13px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat;text-indent:-9999px;-webkit-background-size:150px 450px;background-size:150px 450px}
+.no_lst .ico_not{width:56px;height:56px;background-position:-94px -215px}
+.no_lst .srch_word{padding-top:1px !important;font-size:15px;font-weight:bold;color:#f13e07}
+.no_lst p.msg{font-size:13px;font-weight:normal;line-height:19px;color:#5e5e5e;margin:10px 0 -3px 0}
+.srch_sc article{position:relative;margin-top:14px}
+.srch_sc article:nth-of-type(1){margin:0}
+.srch_sc h3{height:36px;padding:2px 0 0 12px;border-bottom:1px solid #b0b1b1;font-weight:normal;font-size:14px;color:#191c1c;line-height:40px}
+.srch_sc.v1 h3{border-color:#d9d9d9}
+.srch_sc h3 em{font-size:15px;color:#fe4e31}
+.srch_sc .more{position:absolute;top:10px;right:3px;padding:5px 6px 5px 10px;font-weight:normal;font-size:12px;color:#8e8e8e}
+.srch_sc .more:after{display:inline-block;overflow:hidden;width:8px;height:9px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat 3px -85px;font-size:0;-webkit-background-size:150px 450px;background-size:150px 450px;content:''}
+.srch_sc .toon_lst{margin-left:12px;border-top:0}
+.srch_sc .toon_lst li .lst{margin-left:-12px}
+.srch_sc .toon_lst li .im_br{left:12px}
+.srch.no_lst{height:342px;color:#191c1c}
+.srch.no_lst h3{margin-top:2px;font-weight:normal}
+.srch.no_lst h3 span{color:#fd313b}
+.srch.no_lst .msg{margin:9px 0 0;font-size:12px;color:#8e8e8e;line-height:17px}
+.no_lst .ico_srch{width:56px;height:56px;margin-top:4px !important;background-position:0 -215px}
+.srch_sc .u_pg2{margin-top:15px;padding-bottom:20px}
+.srch_sc .toon_lst li .text_area.v2 .toon_info{padding-right:152px}
+.atcp{position:relative;z-index:900;width:100%}
+.atcpw{width:100%;border-bottom:1px solid #d9d9d9;background:#fff;text-align:left}
+.atcpli{position:relative;border-bottom:1px solid #ebebeb;font-size:14px}
+.atcpli .tp{position:absolute;top:13px;right:9px;font-size:13px;color:#777}
+.atcpa{display:block;overflow:hidden;padding:12px 0 13px 8px;font-size:15px;color:#191c1c;white-space:nowrap;text-overflow:ellipsis}
+.atcpa em{color:#fd313b}
+.atbt{height:34px;margin-top:-1px;border-top:1px solid #e8e8e8;background:#f8f8f8;text-align:right;line-height:34px}
+.atbt .atbt_b{overflow:visible;margin-top:8px;padding:0 7px 0 11px;border:0;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat 0 -70px;font-size:13px;color:#8e8e8e;cursor:pointer;-webkit-appearance:none;-webkit-background-size:150px 450px;background-size:150px 450px}
+
+/* common icon */
+.ico_adult,.ico_store,.ico_store2,.ico_smart,.ico_cut,.ico_break,.aside_info [class^=ico_],.ico_android,.ico_ios,.ico_won,.toon_notice [class^=ico_],.ico_new,.ico_new2,.ico_end,.ico_hot,.ico_cbt,.ico_npay,.mark_serial,.mark_poten,.ico_game, .ico_srch{display:inline-block;overflow:hidden;background:url(http://static.naver.com/m/comic/im/sp_ico_v3_160823.png) no-repeat;-webkit-background-size:150px 450px;background-size:150px 450px;vertical-align:top;font-size:0;line-height:0;color:transparent !important}
+.aside_info [class^=ico_]{margin-left:3px}
+.aside_info [class^=ico_]:first-child{margin-left:6px}
+.ico_up{width:23px;height:14px;background-position:0 -20px !important}
+.ico_smart{width:33px;height:14px;background-position:0 -40px !important}
+.ico_cut{width:24px;height:14px;background-position:-60px -20px !important}
+.ico_break{overflow:hidden;width:24px;height:14px;background-position:-30px -20px !important}
+.ico_pre-register{width:39px;height:14px;background-position:-70px -135px !important}
+.ico_adult{width:16px;height:16px;margin:1px 3px 0 0;background-position:-20px 0}
+.ico_adult2{width:15px;height:15px;margin-right:-1px;background-position:-135px -20px !important}
+.ico_store{width:22px;height:22px;background-position:-25px -135px !important}
+.ico_store.v2{width:17px;height:17px;background-position:-50px -135px !important}
+.ico_store2{width:33px;height:14px;background-position:-35px -40px !important}
+.ico_notice{width:36px;height:18px;background-position:-110px -40px !important}
+.ico_android{width:11px;height:13px;margin:2px 4px 0 0;background-position:-100px -85px}
+.ico_ios{width:11px;height:13px;margin:2px 4px 0 0;background-position:-115px -85px}
+.ico_new{width:17px;height:17px;background-position:-90px -20px}
+.ico_new2{width:11px;height:11px;background-position:-95px -40px}
+.ico_end{width:17px;height:17px;background-position:-115px -20px}
+.ico_end.v2{width:22px;height:22px;background-position:0 -135px}
+.ico_npay{width:29px;height:13px;margin-bottom:3px;background-position:-65px 0;font-size:0 !important}
+.mark_serial{width:22px;height:27px;background-position:0 -160px}
+.mark_poten{width:24px;height:23px;background-position:-25px -160px}
+.ico_game{width:21px;height:17px;background-position:-70px -40px}
+.ico_cbt{width:34px;height:34px;background-position:-70px -100px !important}
+/* badge */
+.category_lst .ico_srch {overflow:hidden;position:absolute;top:20px;left:6px;z-index:50;width:32px;height:32px;padding:11px 0 0;color:#fff;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.category_lst .ico_srch.tp5 {background-position:0 -280px;}
+.category_lst .ico_srch.tp6 {background-position:-40px -280px;}
+
+.category_lst{overflow:hidden}
+.category_lst li{min-height:118px;margin-left:12px;border-bottom:1px solid #ededed}
+.category_lst li a{display:block;padding:14px 12px 11px 3px}
+.category_lst li:last-child{border:0}
+.category_lst .sc_thumb{float:left;position:relative}
+.category_lst .sc_thumb:after{position:absolute;top:0;right:0;bottom:0;left:-1px;width:64px;height:92px;background:url(http://static.naver.com/m/comic/im/cover_list.png) no-repeat;-webkit-background-size:64px 92px;background-size:64px 92px;content:''}
+.category_lst .sc_thumb .mask_adult{display:inline-block;width:62px;height:58px;padding-top:32px;background:#f2f2f2;font-size:11px;color:#b3b7ba;line-height:12px;text-align:center}
+.category_lst .sc_thumb .mask_adult em{font-size:12px}
+.category_lst .sc_thumb .mask_deal{position:absolute;bottom:4px;left:0;z-index:100;height:20px;padding:0;background:rgba(100,100,100,.9);font-size:12px;color:#fff;line-height:20px}
+.category_lst .sc_thumb .thmb_mark{position:absolute;bottom:4px;left:0;z-index:100;width:62px;height:20px;font-size:10px;line-height:20px;background-color:rgba(116, 113, 246, 0.7);color:#fff;text-align:center;}
+.category_lst .sc_thumb .thmb_mark.v2{background-color: rgba(255, 65, 109, 0.7);}
+.category_lst .lst_cnt{display:block;margin:13px 0 0 12px;color:#191c1c}
+.category_lst .lst_cnt em{margin-left:4px;font-size:15px;color:#fe4e31}
+.category_lst li .info{margin-left:-12px}
+.category_lst li .info dt{display:-webkit-box;display:box;overflow:hidden;margin-bottom:3px;font-size:15px;color:#191c1c;line-height:20px;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.category_lst li .info .aside_info [class^=ico_]{margin:2px 0 0 1px}
+.category_lst li .info dd{margin:0;font-size:12px;color:#8e8e8e}
+.category_lst li .info dd.ticket{color:#fe4e31}
+.category_lst li .info dd.price{color:#009cfd}
+.category_lst li .info dd.price em{margin-left:1px;font-weight:bold}
+.category_lst li .info dd.price .txt{color:#67b8fe}
+.category_lst li .info .bar{display:inline-block;width:1px;height:11px;margin:3px 5px 0;background:#e3e3e5;font-size:12px;color:transparent;vertical-align:top}
+.category_lst dl{overflow:hidden}
+.category_lst .u_pg2{margin:15px auto 0;padding-bottom:20px}
+.ser_lstw_v1{padding-bottom:15px}
+.ser_lst{overflow:hidden;border-top:1px solid #ececec}
+.ser_lst:nth-of-type(1){border:none}
+.ser_lst_v1{border-bottom:1px solid #dfdfdf}
+.ser_lst a{display:block;overflow:hidden;padding:8px .71em 7px}
+.ser_lst .thmp{overflow:hidden;float:left;margin-right:10px;margin-bottom:3px;padding-top:2px}
+.ser_lst dl{overflow:hidden}
+.ser_lst dt{padding-bottom:2px;font-size:14px}
+.ser_lst dt span{margin-left:7px;color:#777}
+.ser_lst dt a{font-size:14px;color:#1172b6}
+.ser_lst dd{font-size:13px;line-height:1.43em;color:#000}
+.ft{clear:both;border-top:1px solid #dfe1e3;color:#d5d6d8;text-align:center;white-space:nowrap}
+.ft a{color:#666}
+.ft1{padding:13px 0 12px;color:#909090}
+.ft1 a,.ft1 span{display:inline-block;margin-right:-4px;padding:0 .5em 0 .6em;background:url(http://static.naver.com/www/m/cm/im/ftv2.gif) no-repeat 0 3px;font-size:15px}
+.ft1 a.f,.ft1 span.f{background:none}
+.ft2 a{display:inline-block;width:61px;height:28px;background:#ddd url(http://static.naver.com/www/m/cm/im/ftv2.gif) no-repeat 0 -42px;line-height:28px;font-size:13px;letter-spacing:-1px}
+.ft2 a.lk2{width:58px;background-position:0 -70px}
+.ft2 a.lk3{width:111px;background-position:0 -98px}
+.st1{color:#ed1b23}
+.st2{color:#1172b6}
+.st3{color:#32a800}
+.tx1{color:#000}
+.tx2{color:#666}
+.tx3{color:#909090}
+.tx4{color:#fff}
+.bt3{display:inline-block;height:20px;padding:0 .4em;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 0;line-height:20px;font-size:.85em;color:#666;letter-spacing:-1px;text-align:center;vertical-align:middle;white-space:nowrap}
+.bt3 .x{display:inline-block;padding-left:1.1em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 2px -144px}
+.bt4{display:inline-block;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 -65px;color:#666;letter-spacing:-1px;text-align:center;vertical-align:middle;white-space:nowrap}
+.bt4pv img,.bt4nx img{width:100%;height:100%;background:url(http://static.naver.com/www/m/cm/im/ib3.gif) no-repeat 12px 8px}
+.bt4nx img{background-position:4px -31px}
+.bt5{display:inline-block;height:25px;padding:0 8px 0 7px;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 -65px;line-height:25px;font-size:.93em;color:#5e5e5e;letter-spacing:-1px;text-align:center;vertical-align:middle;white-space:nowrap}
+.bt5.on{border-color:#30c70a;color:#33a600}
+.bt5pv,.bt5nx{width:30px;padding:0}
+.bt5pv img,.bt5nx img{width:100%;height:100%;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 12px 8px}
+.bt5nx img{background-position:4px -31px}
+.bt7{display:block;overflow:hidden;height:33px;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 -139px;line-height:33px;font-size:.93em;color:#181818;letter-spacing:-1px;text-align:center;font-weight:bold;vertical-align:middle;white-space:nowrap}
+.bt7 .pv{display:inline-block;padding-left:.8em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 0 11px}
+.bt7 .nx{display:inline-block;padding-right:1em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 100% -28px}
+.bt7 a{position:relative;float:left;height:100%}
+.bt7 a:nth-child(n+2):after{display:block;overflow:hidden;position:absolute;left:0;top:0;width:1px;height:100%;border-left:1px solid #bcbcbc;background:#fff;content:''}
+.btn_bx{display:inline-block;min-width:26px;height:24px;padding:0 8px 0 9px;border:1px solid #dedede;background:#fff;color:#191c1c;font-size:13px;color:#444;line-height:24px;text-align:center}
+.btn_bx .all{display:inline-block;padding-left:15px;margin-left:-3px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -139px -181px;-webkit-background-size:150px 450px;background-size:150px 450px}
+.btn_bx.v2{border:0;background:#16afff;color:#fff}
+.btn_bx .pv{display:inline-block;padding-left:1em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 2px 7px}
+.sbt1{display:inline-block;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 0;vertical-align:middle}
+.sbt1 input{overflow:visible;width:66px;height:25px;border:none;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 8px -180px;font-size:.93em;color:#666;text-indent:9px;vertical-align:middle;white-space:nowrap;cursor:pointer;-webkit-border-radius:0}
+.sbt2{overflow:visible;width:58px;height:22px;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 0;font-size:.85em;color:#666;text-indent:-7px;vertical-align:middle;white-space:nowrap;cursor:pointer;-webkit-border-radius:0}
+.pg1{padding:10px 0;text-align:center;white-space:nowrap}
+.pg1 a{display:inline-block;width:24px;height:24px;margin-right:2px;border:1px solid #e3e3e3;background-color:#fff;line-height:24px;font-size:.85em;color:#666;text-align:center;vertical-align:middle}
+.pg1 a.on{border-color:#3c0;color:#32a800}
+.pg1 .bt4{width:30px;border-color:#bcbcbc;background-color:#f1f1f1}
+.pg1 .bt4pv{margin-right:6px}
+.pg1 .bt4nx{margin-left:4px}
+.pg1 em{margin:0 .5em;font-size:.93em;color:#666}
+.pg1 strong{color:#ed1b23}
+.pg12 .bt4nx{margin-left:0}
+.pg2{position:relative;width:100%;height:35px;color:#000;text-align:center}
+.pg2.t{margin-top:15px}
+.pg2 .no{display:inline-block;line-height:35px;font-size:15px;vertical-align:middle}
+.pg2 .no.pg{display:inline;padding:0 12px;line-height:35px;font-size:15px;vertical-align:middle}
+.pg2 .no em{margin:0 1.2em 0 .8em;font-size:.93em;color:#666}
+.pg2 .no strong{color:#32a800}
+.pg2 a,.pg2 .bt4{display:inline-block;width:38px;height:33px;margin-right:6px;border:1px solid #e3e3e3;background-color:#fff;line-height:33px;font-size:.85em;color:#666;text-align:center;vertical-align:middle}
+.pg2 .bt4pv img{background-position:16px 12px}
+.pg2 .bt4nx img{background-position:8px -27px}
+.pg2 .bt4nxr{margin-right:0}
+.pg2 .bt4pv5 img{background-position:14px -642px}
+.pg2 .bt4nx5 img{background-position:10px -681px}
+.pg2 a.on{border-color:#3c0;color:#32a800}
+.pg2 .bt4{width:38px;border-color:#bcbcbc;background-color:#f1f1f1}
+.pg2 .bt4nx5,.pg12 .bt4nx{margin-right:0}
+.pg2 span.bt4{visibility:hidden;overflow:hidden}
+.pgl{top:0;left:10px}
+.pgr{top:0;right:10px}
+.pg3{margin:20px 0;text-align:center}
+.pg3 a{display:inline-block;font-size:1em;font-family:tahoma;color:#999;vertical-align:middle}
+.pg3 span{font-size:1em;font-family:tahoma;color:#999}
+.pg3 span.start{margin-left:15px;color:#32a800}
+.pg3 span.end{margin-right:15px}
+.ic1{width:13px;height:13px;background:url(http://static.naver.com/www/m/cm/im/ic_bd.gif) no-repeat 0 0}
+.ic_mo{background-position:-13px 0}
+.ic_fi{background-position:-26px 0}
+.ic_vt{background-position:-39px 0}
+.ic_mp{background-position:-76px 0}
+.ic_re{width:12px;background-position:-52px 0}
+.ic_re2{width:12px;background-position:-63px 0}
+.ic_nw{width:11px;height:11px;background-position:-219px 0}
+.fi3{display:inline-block;padding-left:.85em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 1px -313px}
+.bt3 .fi3{background-position:1px -310px}
+.pl,.pr,.pr2{position:absolute;white-space:nowrap}
+.pl{top:4px;left:5px}
+.pr{top:4px;right:5px}
+.pr2{top:4px;right:66px}
+.btm1{position:relative;width:100%;margin:-1px 0 .35em;border-top:1px solid #dfdfdf;border-bottom:1px solid #cecece;background:#e6e7e7 url(http://static.naver.com/m/cm/im/bt.gif) repeat-x 0 -222px;text-align:center}
+.btm1m{display:block;height:43px;margin-right:53px;border-right:1px solid #bfc1c1;line-height:1.15em}
+.btm1mw{display:inline-block;padding:7px 0 0 27px;background:url(http://static.naver.com/m/cm/im/ib3.png) no-repeat 0 -801px}
+.btm1lod{position:absolute;margin:3px 0 0 -32px}
+.btm1mn{font-family:Helvetica;font-size:11px;color:#8b999c}
+.btm1t{display:block;position:absolute;top:0;right:0;width:52px;height:25px;padding-top:18px;border-left:1px solid #fff;background:url(http://static.naver.com/m/cm/im/ib3.png) no-repeat 50% -854px;font-size:11px;letter-spacing:-1px}
+.btm1to{position:relative;width:100%;border-left:0}
+.al1{padding:4.6em 10px 4em;background:url(http://static.naver.com/www/m/cm/im/ic_ac.gif) no-repeat 50% 1.43em;font-size:1em;text-align:center}
+.al1,.al1 *{word-break:normal}
+.alq{background-image:url(http://static.naver.com/www/m/cm/im/ic_aq.gif)}
+.aln{background-image:url(http://static.naver.com/www/m/cm/im/ic_an.gif)}
+.al1 h2{font-size:1em}
+.al1 h2 strong{font-weight:bold;color:#32a800}
+.al1 h2 span{white-space:nowrap}
+.al1 .w{white-space:nowrap}
+.al1 p{margin-top:.5em;color:#909090}
+.al1 .ac{margin-top:1.25em}
+.al1 .bx1{margin:1.78em 20px;border:1px solid #e6e6e6;text-align:left}
+.al1 .bx1 li{padding:.7em 1em;border-top:1px solid #f3f3f3}
+.al1 .bx1 .f{border-top:none}
+.al1 .bx2{margin:1em 20px;padding:.8em;border:1px solid #dfdfdf}
+.al1 .bx2 em{color:#32a800}
+.al1 .dl2{width:100%;font-size:.93em;text-align:left}
+.al1 .dl2 dt{float:left;padding-right:.4em}
+.al1 .dl2 dd{overflow:hidden;padding-left:.4em;background:url(http://static.naver.com/www/m/cm/im/bu_dv.gif) no-repeat 0 .2em}
+.al1 .dv{display:inline-block;overflow:hidden;width:1px;height:13px;background:#d7d7d7;color:#d7d7d7;text-indent:-100em;vertical-align:-.1em}
+.ts{position:relative;width:100%;height:33px;background:#3B3B3B url(http://static.naver.com/m/comic/im/bg.gif) repeat-x 0 0;color:#fff;text-align:center}
+.ts a{color:#fff}
+.ts .lg{position:absolute;top:0;left:50%;width:93px;margin-left:-46px;font-size:12px}
+.ts .lg a{display:block;overflow:hidden;float:left;position:relative;height:33px;line-height:33px;color:#fff}
+.ts .lg span{display:block;float:left;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background:url(http://static.naver.com/m/comic/im/ts.gif) no-repeat 2px 0}
+.ts .lg .n{width:58px}
+.ts .lg .s{width:35px}
+.ts .lg .s span{background-position:-56px 0}
+.ts .ql{display:block;position:absolute;top:3px;right:5px;width:70px;height:28px;background:#748289 url(http://static.naver.com/m/comic/im/ts.gif) no-repeat 0 -33px;line-height:28px;font-size:13px;letter-spacing:-1px;text-align:left;text-indent:8px;white-space:nowrap}
+.tn{position:relative;width:100%;height:35px;background:#3B3B3B url(http://static.naver.com/www/m/im/bgtn.gif) repeat-x 0 0;color:#fff;text-align:center}
+.tn a{color:#fff}
+.tn .lg a{display:block;overflow:hidden;position:relative;width:74px;height:35px;margin:0 auto;line-height:35px;font-size:.8em;color:#6f0}
+.tn .lg span{display:block;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background:url(http://static.naver.com/www/m/im/tn.gif) no-repeat 10px 0}
+.tn .bk{display:block;position:absolute;top:3px;left:5px;width:48px;height:28px;background:#2a3650 url(http://static.naver.com/www/m/im/tn.gif) no-repeat 0 -35px;line-height:28px;font-size:13px;letter-spacing:-1px;text-align:left;text-indent:17px;white-space:nowrap}
+.hh{position:relative;width:100%;height:35px;background:#3B3B3B url(http://static.naver.com/m/comic/im/bg.gif) repeat-x 0 -33px;color:#fff;text-align:center}
+.hh a{color:#fff}
+.hh h1{overflow:hidden;height:35px;padding:0 80px;line-height:35px;font-size:15px}
+.hh h1 em{color:#1dd938}
+.hh .bt{display:inline-block;width:70px;height:28px;background:#748289 url(http://static.naver.com/m/comic/im/ts.gif) no-repeat 0 -61px;line-height:28px;font-size:13px;letter-spacing:-1px;white-space:nowrap}
+.lnb{position:relative;height:40px;border-bottom:1px solid #202229;background:#292c35;text-align:center}
+.lnb.v2{background:#25262e}
+.lnb .my_lnb{margin-left:-5px}
+.lnb li{position:relative}
+.lnb li a{height:40px;font-size:15px;color:#f6f6f6;line-height:41px}
+.lnb li.on a{color:#fe4e31}
+.lnb li .ico_new{overflow:hidden;position:absolute;top:-7px;left:50%;z-index:40;width:16px;height:18px;margin-left:-8px;background-position:0 -57px}
+.lnb .btn_prev{position:absolute;left:0;top:0;width:70px;height:40px;color:#cfd0d1;line-height:40px}
+.lnb .btn_prev span{display:inline-block;padding-left:13px;background:url(http://static.naver.com/m/comic/im/sp_arr.png) no-repeat -2px -108px;color:#cfd0d1;-webkit-background-size:15px 390px;background-size:15px 390px}
+.lnb .my_lnb a{display:inline-block;width:81px;height:40px;font-size:15px;color:#fff;line-height:40px}
+.lnb .my_lnb a.on{color:#fe4e31}
+.lnb h2{display:block;overflow:hidden;padding:0 57px 0 62px;font-weight:normal;font-size:15px;color:#fff;line-height:40px;text-align:center}
+.lnb h2 em{color:#fe4e31}
+.lnb_sub{position:relative}
+.lnb_sub,.end_h{overflow:hidden;height:38px;background:#fff;line-height:38px;text-align:center}
+.lnb_sub:after,.end_h:after{display:block;height:1px;margin-top:-1px;background:url(http://static.naver.com/m/comic/im/bg_line.png) repeat-x;-webkit-background-size:1px 1px;background-size:1px 1px;content:''}
+.lnb_sub li a{color:#191c1c}
+.lnb_sub li.on a{color:#fe4e31}
+.lnb_sub h3{font-weight:normal;font-size:14px}
+.lnb_sub .lst_btn{position:absolute;top:0;left:10px}
+.lnb_sub .lst_btn .arrow{display:inline-block;overflow:hidden;width:6px;height:10px;margin:2px 4px 0 0;text-indent:-9999px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) 0 -60px no-repeat;background-size:150px 450px;-webkit-background-size:150px 450px}
+.bx_tab ul,ul.bx_tab{display:-webkit-box;display:-webkit-flex;display:-ms-flex;display:flex;text-align:center}
+.bx_tab li{display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-flow:row;flex-flow:row;-webkit-box-flex:1;-webkit-flex:auto;flex:auto;white-space:nowrap}
+.bx_tab li a,.flt_tab li a{display:block;width:100%}
+.tb_tab{display:table}
+.tb_tab li{display:table-cell}
+.flt_tab{display:block;position:relative}
+.flt_tab:after{position:absolute;left:0;bottom:0;width:100%;height:1px;margin:0;background:url(http://static.naver.com/m/comic/im/bg_line.png) repeat-x;-webkit-background-size:1px 1px;background-size:1px 1px;content:''}
+.flt_tab.opn{height:152px}
+.flt_tab ul{overflow:hidden;position:relative;padding-right:34px}
+.flt_tab li{float:left;overflow:hidden;width:25%;height:37px;padding-top:1px;background:url(http://static.naver.com/m/comic/im/bg_line5.png) repeat-x;-webkit-background-size:1px 1px;background-size:1px 1px}
+.flt_tab li:nth-child(-n+4){height:36px;background:none;line-height:37px !important}
+.flt_tab a.more{display:block;position:absolute;top:0;right:0;width:37px;height:100%;background:#fff url(http://static.naver.com/m/comic/im/tab_line.png) repeat-y;-webkit-background-size:1px 1px;background-size:1px 1px}
+.flt_tab a.more span{position:absolute;top:50%;left:50%;width:10px;height:6px;margin:-3px 0 0 -4px;background:url(http://static.naver.com/m/comic/im/sp_arr.png) no-repeat -3px -350px;vertical-align:middle;line-height:999px;-webkit-background-size:15px 390px;background-size:15px 390px}
+.flt_tab.opn a.more span{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+.tab_tp{overflow:hidden;height:38px;border-top:1px solid #d0d0d0}
+.tb_tab.tab_tp li{width:50%;height:100%}
+.tab_tp li{position:relative;top:0;border-left:1px solid #d0d0d0}
+.tab_tp li a,.tab_tp li>span{display:block;position:relative;top:0;width:100%;height:100%;padding-top:1px;border-bottom:1px solid #d0d0d0;background:#f4f5f7;color:#444;text-align:center;line-height:36px}
+.tab_tp li:first-child,.tab_tp li:first-child>span{border-left:0}
+.tab_tp li.on a{position:relative;border-bottom-color:#f8f8f8;background:#fff;color:#fe4e31}
+.tab_tp li>span{color:#bbbbbd}
+.tab_tp.v2{border:0}
+.tab_tp.v2 li,.tab_tp.v2 a{border-color:#e2e2e2}
+.tab_tp ~ #ct{-webkit-box-shadow:none}
+.hh2{position:relative;width:100%;height:33px;border-bottom:1px solid #b0b0b0;background:#fff;color:#000;text-align:center}
+.hh2 h1{line-height:34px;font-size:16px}
+.hh2 .bt5{padding:0 .4em;color:#666}
+.hh2 .pl,.hh2 .pr{top:3px}
+.hh2 .pl .bt5{margin-right:-1px}
+.hh2 .pr .bt5{margin-left:-1px;padding:0 1.1em 0 .6em}
+.gb{overflow:hidden;width:100%;height:5px;border-bottom:1px solid #b0b0b0;background:#f4f5f5}
+.cb{overflow:hidden;width:100%;height:4px;background:#3368d4 url(http://static.naver.com/m/comic/im/bg.gif) repeat-x 0 -68px}
+.cht{position:relative;width:100%;height:34px;background:#f4f5f5 url(http://static.naver.com/m/comic/im/bg.gif) repeat-x 0 -72px;color:#000;text-align:center}
+.nv2{overflow:hidden;width:100%}
+.nv2 ul{margin-right:-8px;padding:4px 4px 0 2px}
+.nv2 li{overflow:hidden;float:left;height:30px;margin-right:-2px;background:url(http://static.naver.com/m/comic/im/bg.gif) no-repeat 0 -354px;line-height:28px;text-align:center;white-space:nowrap}
+.nv2 .l1{background:none}
+.nv2 a,.nv2 span{display:block;height:100%}
+.nv2 li.on{background:#fff url(http://static.naver.com/m/comic/im/bg.gif) repeat-x 0 -226px;line-height:33px}
+.nv2 .on a{background:url(http://static.naver.com/m/comic/im/bg.gif) no-repeat 0 -196px;color:#000}
+.nv2 .on span{background:url(http://static.naver.com/m/comic/im/bg.gif) no-repeat 100% -256px}
+.chh{position:relative;width:100%;min-width:320px;min-height:37px;border-bottom:2px solid #383838;background:#fff;color:#000;text-align:center}
+.chh h1{height:35px;padding:0 93px;line-height:35px;font-size:15px;text-align:center}
+.chh h1 span{display:inline-block;overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis}
+.chh .pl .btn_bx{height:25px;padding:0 6px 0 7px;line-height:25px}
+.chh .pr .btn_bx{height:25px;padding:0 4px 0 5px;line-height:25px}
+.option_sc{position:relative;height:40px;background:#fff}
+.option_sc:before{display:block;position:absolute;top:-1px;width:100%;height:1px;background:url(http://static.naver.com/m/comic/im/bg_line2.png) repeat-x;-webkit-background-size:1px 1px;background-size:1px 1px;content:''}
+.option_sc .pl{top:7px;left:7px}
+.option_sc .pl a:first-child{margin-right:6px}
+.option_sc .txt{position:absolute;right:10px;top:0;color:#999;font-size:12px;line-height:40px}
+.option_sc .btn_bx.v2{float:right;margin:7px 7px 0 0}
+.chh.toon_info{min-width:300px;width:auto;padding:10px;border-bottom:1px solid #bfbfbf;background:#e8e8e8;text-align:left}
+.chh.toon_info .im_br{float:left;width:63px;height:51px;margin-bottom:10px}
+.chh.toon_info .info_in{display:-webkit-box}
+.chh.toon_info .info_in dl{-webkit-box-flex:1;margin:2px 0 0 12px}
+.chh.toon_info .info_in dt,.chh.toon_info .info_in dl .info_name{display:table}
+.chh.toon_info .info_in dt{overflow:hidden;margin:0 15px 2px 0;font-size:17px}
+.chh.toon_info .info_in dt .title,.chh.toon_info .info_in dt .aside_info,.chh.toon_info .info_in dl .info_name span{display:table-cell}
+.chh.toon_info .info_in dt .aside_info{padding-top:1px;white-space:nowrap;vertical-align:middle;line-height:14px}
+.chh.toon_info .info_in dt strong{font-weight:bold}
+.chh.toon_info .info_in dt strong,.chh.toon_info .info_in dl .info_name span.nm span{display:-webkit-box;display:box;overflow:hidden;word-wrap:break-word;line-height:1.5em;-webkit-box-flex:1;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.chh.toon_info .info_in dt img{margin:6px 0 0 2px}
+.chh.toon_info ~ .toon_lst{border-top:0}
+.chh.toon_info .info_in .info_name{font-size:13px;color:#545454}
+.chh.toon_info .info_in .info_name a{margin-right:12px;padding:0 0 10px 8px;white-space:nowrap;text-decoration:underline}
+.chh.toon_info .info_in .info_name span a:before{display:inline-block;position:relative;top:1px;left:-8px;width:1px;height:11px;margin-left:8px;background:#d6d6d6;content:''}
+.chh.toon_info .info_in .info_name span a:after{display:inline-block;width:4px;height:7px;margin-left:3px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -55px 0;-webkit-background-size:150px 450px;background-size:150px 450px;content:''}
+.chh.toon_info .info_in .ico_break{margin:0 0 0 4px}
+.t12{font-size:.86em}
+.t13{font-size:.93em}
+.txn{font-weight:normal}
+.bl1{border-bottom:1px solid #dfdfdf}
+.iic2{display:inline-block;padding-right:17px;background:url(http://static.naver.com/m/comic/im/ti_i2_20.png) no-repeat 100% 11px !important;background-size:15px 15px !important}
+.pp12{top:120px}
+.frst_view{display:block;width:300px;height:37px;margin:12px auto;border-radius:2px;border:1px solid #069e12;background:#0baf18;color:transparent;vertical-align:top;line-height:11px}
+.frst_view:after{display:block;width:123px;height:16px;margin:0 auto;background:url(http://static.naver.net/m/comic/im/frst_view.png) no-repeat 0 -19px;-webkit-background-size:136px 35px;background-size:136px 35px;content:''}
+.frst_view.end:after{width:136px !important;background-position:0 0}
+.frst_view.v1{width:177px;margin-top:31px}
+.chh.toon_info ~ .frst_view ~ .toon_lst{border-top:1px solid #d9d9d9}
+.im_c{padding:0 10px;text-align:center}
+.ic_fn img{background-position:-28px 0}
+.sc1{padding:10px}
+.sc2{padding:20px 10px}
+.sc3{padding:0 10px}
+.sc4{padding:10px 0}
+.sc5{padding:10px 10px 0}
+.sc6{padding:30px 10px}
+.bt3 .p{display:inline-block;padding-left:1.1em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 2px -386px}
+.bt51{display:inline-block;border:1px solid #bcbcbc;background:#f1f1f1 url(http://static.naver.com/www/m/cm/im/bt.gif) repeat-x 0 0;color:#666;letter-spacing:-1px;text-align:center;vertical-align:middle;white-space:nowrap}
+.bt51{height:25px;padding:0 .6em;background-position:0 -65px;line-height:25px;font-size:.93em}
+.bt5 .pv{display:inline-block;padding-left:1em;background:url(http://static.naver.net/m/comic/im/ib3.png) no-repeat 2px 7px}
+.bt7 .w16b{width:16%;border-left:1px solid #bcbcbc;background:none}
+.bt7 .w17{width:17%}
+.bt7 .w25{width:25%}
+.bt7 .w25b{width:24%;border-left:1px solid #bcbcbc;background:none}
+.bt7 .w33{width:33%}
+.bt7 .w50{width:49%}
+.bt7 .w100{width:100%}
+.fx2{width:100%}
+.top_bgm{position:relative}
+.btn_bgm{display:block;overflow:hidden;position:absolute;top:15px;right:15px;z-index:30;width:58px;height:23px;border:0;background:url(http://static.naver.net/m/comic/im/2013/btn_bgm.png) no-repeat 0 0;background-color:transparent;cursor:pointer;text-indent:-999px;-webkit-background-size:58px 50px}
+.btn_bgm.on{background-position:0 -27px}
+.o .sbt2{text-indent:0 !important}
+.cmt{margin:25px 0 0}
+.cmt .line{display:block;margin:0 10px;padding:1px;border:1px solid #898989;border-width:1px 0}
+.cmt .wr{padding:19px 20px 15px}
+.cmt h3{margin-bottom:6px;font-size:15px;color:#000}
+.cmt h3 span{margin-right:3px}
+.cmt .wr .c{margin-top:-2px;font-size:13px;color:#444;line-height:18px}
+.star{position:relative}
+.star h3{padding-left:20px}
+.star .pnt{margin:0 0 25px 20px;font-size:13px}
+.star .pnt .score{font-weight:bold}
+.star .pnt .num{font-family:Helvetica;font-size:14px;color:#f13e07}
+.star .pnt .tjoin,.star .pnt a,.star .pnt a ~ span{margin-left:5px;padding-left:10px;background:url(http://static.naver.com/m/comic/im/sp_bu2.gif) 0 3px no-repeat;color:#444}
+.star .pnt a,.star .pnt a ~ span{width:100px;height:30px;padding:5px 5px 5px 10px;background-position:0 7px !important;font-size:13px !important;color:#000 !important}
+.a .star .pnt a,.a .star .pnt a ~ span{background-position:0 6px !important}
+.star .pnt a{text-decoration:underline}
+.star .pnt a span:after{display:inline-block;width:6px;height:5px;margin-left:3px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -55px -10px;-webkit-background-size:150px 450px;background-size:150px 450px;content:''}
+.star .pnt a .up:after{margin-bottom:3px;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+.cmt .in{padding:14px 0 0;border-top:2px solid #383838}
+.cmt .in h3{margin:0 0 8px 9px;font-size:1em;font-weight:normal}
+.cmt .in .bx{padding:10px 9px 15px;border-top:1px solid #e7e7e7;border-bottom:1px solid #dfdfdf;background:#f5f5f5}
+.cmt .in .bx textarea{width:100%;border:1px solid #bcbcbc;font-size:.929em;line-height:1.2em;color:#666}
+.cmt .in .bx .b{height:35px}
+.cmt .in .bx .b a{float:right;margin-top:8px}
+.cmt .fbtn{height:53px;margin:0;border-top:1px solid #d4d4d5}
+.cmt .fbtn a{display:block;float:right;margin:17px 10px 0 0;padding-right:.9em;background:url(http://static.naver.com/m/comic/im/sp_bu2.gif) 100% -97px no-repeat;font-size:1em;font-weight:bold;color:#181818}
+.cmt .pg1{padding:15px 0 1px}
+.cmt .u_comment_box.u_comment_v2{border-top:2px solid #383838}
+.cmt .likeit_wrap{margin:8px 10px 0 0}
+.cmt .u_likeit_list_module{margin:0 10px}
+.grade{margin:-7px 0 0;padding:15px 0 20px;border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;background:#f5f5f5;text-align:center}
+.grade .bt5{height:24px;padding:0 .85em;line-height:25px}
+.u_grp,.u_grp_v{display:inline-block;overflow:hidden;height:13px;background:url(http://static.naver.com/m/comic/im/ico_grp_star.png) repeat-x;font-size:0;vertical-align:top;-webkit-background-size:15px 30px;background-size:15px 30px}
+.u_grp{width:75px;margin-top:1px;background-position:0 -17px}
+.u_grp_v{background-position:0 0}
+.u_grade{position:relative;width:300px;margin:0 auto;padding-bottom:13px;text-align:center}
+.u_grade_bw{overflow:hidden;width:175px;margin:0 auto}
+.u_grade_b,.u_grade_b2,.u_grade_bon,.u_grade_m,.u_grade_p{background:url(http://static.naver.com/m/comic/im/ico_grade_l.gif) no-repeat;-webkit-background-size:32px 124px;background-size:32px 124px;text-indent:-100em}
+.u_grade_b,.u_grade_b2{overflow:hidden;float:left;width:14px;height:26px;border:0;cursor:pointer}
+.u_grade_b2{background-color:#ddd;background-position:-14px 0}
+.u_grade_bon{background-position:0 -26px}
+.u_grade_b2.u_grade_bon{background-color:#ea2b0c;background-position:-14px -26px}
+.u_grade_n{float:left;width:35px;font-size:2em;line-height:normal;letter-spacing:-1px;white-space:nowrap}
+.u_grade_n a{display:block}
+.u_grade_dsc{clear:both;padding-top:5px;font-size:.857em;color:#ed1b23}
+.u_grade_m,.u_grade_p{display:inline-block;overflow:hidden;position:absolute;top:1px;width:32px;height:26px}
+.u_grade_m{left:0;background-position:0 -58px}
+.u_grade_p{right:0;background-position:0 -87px}
+.u_pg_wrap{height:100%}
+.u_pg_lod{height:45px}
+.u_pg_lodic,.u_pg_lodjs{width:21px}
+.u_pg_lodic{background:url(http://static.comic.naver.com/staticImages/COMICWEB/NAVER/img/common/ico_lod2.gif) no-repeat 50% 50%}
+.u_pg_lodjs{background:url(http://static.comic.naver.com/staticImages/COMICWEB/NAVER/img/common/ico_lod2_ngif.png) no-repeat}
+.u_pg_cnt{font-size:.79em;color:#666}
+.u_pg_total{color:#a6a6a6}
+.u_pg_end .u_pg_btn{height:45px;background-color:#fff !important}
+.u_pg_top{background:url(http://static.comic.naver.com/staticImages/COMICWEB/NAVER/img/common/ico_pg.gif) no-repeat 50% -53px}
+.pg_area:before{display:block;margin-left:12px;border-top:1px solid #ededed;content:''}
+.u_pg2{position:relative;width:154px;height:29px;padding-bottom:20px;margin:15px auto 0;text-align:center}
+.u_pg2 a{display:inline-block;overflow:hidden;position:absolute;top:0;width:29px;height:27px;border:1px solid #cdcdcd;background:#fff url(http://static.naver.com/m/comic/im/sp_arr.png) no-repeat;-webkit-background-size:15px 390px;background-size:15px 390px;text-indent:-99999px}
+.u_pg2 .prev{left:0;background-position:6px 6px}
+.u_pg2 .next{right:0;background-position:7px -28px}
+.u_pg2_pg{display:inline-block;font-size:15px;line-height:28px;color:#191c1c}
+.u_pg2_pg span{color:#8e8e8e}
+.u_pg3{position:relative;width:200px;margin:14px auto 0;padding-bottom:15px;text-align:center}
+.u_pg3 a{display:inline-block;overflow:hidden;position:absolute;top:0;width:38px;height:22px;border:1px solid #bcbcbc;background:url(http://static.naver.net/m/comic/im/ib_l2.gif) no-repeat,-webkit-gradient(linear,0 0,0 100%,from(#f8f8f8),to(#efefef));background:url(http://static.naver.net/m/comic/im/ib_l2.gif) no-repeat,-moz-linear-gradient(#f8f8f8,#efefef);background-color:#f9f9f9;-webkit-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 -1px 0 #f6f6f6,inset 0 1px 0 #fff;box-shadow:inset 0 -1px 0 #f6f6f6,inset 0 1px 0 #fff;-webkit-background-size:15px 546px,auto auto;background-size:15px 546px,auto auto;text-indent:-99999px}
+.u_pg3 .prev{left:0;background-position:14px 5px,0 0}
+.u_pg3 .next{right:0;background-position:8px -34px,0 0}
+.u_pg3_pg{display:inline-block;font-size:1.07em;font-weight:bold;line-height:1.57em;color:#181818}
+.u_pg3_pg span{color:#5e5e5e}
+.u_comment_box .u_pg_lod{background:#fff !important}
+.u_comment_box .u_pg_area{height:45px !important;padding-left:0 !important;padding-right:13px}
+.u_comment_box .u_pg,.u_comment_box .u_pg_lod{border-bottom:none !important;background:#fff !important;-webkit-box-shadow:inset 0 1px 0 #fefefe !important}
+.u_comment_box .u_pg_txt{padding-top:1px}
+.u_comment_box .u_pg_area::before{top:10px !important;right:0 !important;left:auto !important;width:10px !important;height:11px !important;background-position:0 -239px !important}
+.u_pg_end .u_pg_area{padding:0 !important}
+.books_banner{position:absolute;left:50%;bottom:7px;z-index:9000;margin-left:-152px}
+.books_banner_g{position:relative;width:397px;height:84px;margin:0 auto}
+.tx_hide{display:none}
+.btn_cls_off{display:block;position:absolute;top:10px;right:10px;width:40px;height:40px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.banner_area{position:absolute;top:123px;left:27px}
+.gnb,.u_ftlkbt:before{background-color:transparent;background-image:url(http://static.naver.net/m/comic/im/2012/u_cm2.png);background-repeat:no-repeat}
+.ico_l,.u_ftst:before{background-color:transparent;background-image:url(http://static.naver.net/m/comic/im/2012/ico_l_10.png);background-repeat:no-repeat}
+.flick-view{overflow:hidden;position:relative;z-index:10;height:100%}
+.flick-view .flick-container{float:none;clear:both;height:100%}
+.flick-view .flick-container:after{display:block;clear:both;content:' '}
+.flick-view .flick-ct{float:left;width:100%;height:100%;vertical-align:middle}
+.flick-view .flick-ct img{vertical-align:middle}
+
+/* main */
+#realtimeflick,#recommendflick,#recentlyTitleflick,#recommendGenreflick{clear:both;overflow:hidden;position:relative;width:100%;height:356px}
+.realtimeflick-container,.recommendflick-container,.recentlyTitleflick-container,.recommendGenreflick-container{clear:both}
+.realtimeflick-panel,.recommendflick-panel,.recentlyTitleflick-panel,.recommendGenreflick-panel{float:left;position:absolute;width:100%;height:100%}
+#newWebtoonflick{clear:both;position:relative;overflow:hidden;width:100%;height:124px}
+.newWebtoonflick-container{clear:both}
+.newWebtoonflick-panel{float:left;position:absolute;width:100%;height:100%}
+.new_webtoon{overflow:hidden;position:relative;width:100%;height:124px;padding:16px 0;background:url(http://static.naver.net/m/comic/im/2012/bg_l_newwebtoon.png) repeat-x 0 0;-webkit-background-size:55px 159px;background-size:55px 159px}
+.new_webtoon .tit{float:left;margin-left:10px;font-size:14px;font-weight:bold;text-shadow:0 1px 0 #fff}
+.new_webtoon .tit strong{font-weight:bold;color:#fa3b03}
+.new_webtoon .tit strong span{font-style:italic}
+.new_webtoon .pageing{float:right;width:54px}
+.new_webtoon .pageing .pg_num_area_v2{width:46px;margin-top:-5px;padding-bottom:8px;line-height:20px;letter-spacing:0;text-align:right}
+.new_webtoon .pageing .pg_num_on2{color:#32a800}
+.new_webtoon .pageing .pg_num{display:inline-block;overflow:hidden;width:7px;height:7px;border:1px solid #c6c6c6;background:#dfdfdf;color:transparent;vertical-align:middle;border-radius:4px}
+.new_webtoon .pageing .pg_num_on{border-color:#ee3c14;background:#fe8505;background:-webkit-gradient(linear,0 0,0 100%,from(#fe880f),to(#fe8000));border-radius:4px}
+.im_br{display:block;position:relative;z-index:10}
+.im_br:before{display:block;position:absolute;top:1px;left:1px;bottom:1px;right:1px;z-index:10;border:1px solid rgba(255,255,255,.15);content:''}
+.im_br:after{display:block;position:absolute;top:0;right:0;bottom:0;left:0;z-index:10;border:1px solid rgba(0,0,0,.1);content:''}
+.im_br .ico_new,.im_br .ico_end,.im_br .ico_store{position:absolute;top:-1px;left:-1px}
+
+/* lst */
+.webtoon_lst ul{clear:both;overflow:hidden;padding:4px 0 0 7px}
+.webtoon_lst li{float:left;width:33%;text-align:center}
+.webtoon_lst li a{display:block;position:relative;width:96px;margin:0 auto}
+.webtoon_lst li .im_br{width:96px;height:53px}
+.webtoon_lst li .im_br [class^=ico_]{position:absolute;right:5px;bottom:5px;z-index:20}
+.webtoon_lst li .im_br [class^=ico_] strong{display:block;text-indent:-9999px}
+.webtoon_lst .author{margin-top:8px}
+.webtoon_lst .author strong{display:block;overflow:hidden;width:100%;margin-bottom:1px;font-size:15px;font-weight:bold;color:#181818;white-space:nowrap;text-overflow:ellipsis}
+.a .webtoon_lst .author strong{margin-bottom:0;padding-bottom:5px}
+.webtoon_lst .author span{display:block;overflow:hidden;width:100%;font-size:12px;color:#5e5e5e;white-space:nowrap;text-overflow:ellipsis}
+.new_ribbon{position:absolute;right:0;top:0;display:block;width:43px;height:43px;background:url(http://static.naver.net/m/comic/im/2012/ico_l_cartoon_new.png) no-repeat;-webkit-background-size:43px 43px;background-size:43px 43px}
+.toon_tit{position:relative;border-top:1px solid #313741}
+.toon_tit p{height:27px;padding:8px 0 0 9px;background:#e4e7ea;background:-webkit-gradient(linear,0 0,0 100%,from(#e4e7ea),to(#e0e2e4));border-top:1px solid #090c11;border-bottom:1px solid #a6abaf;font-size:15px;font-weight:bold;color:#181818;text-shadow:0 1px 0 #fff}
+.toon_tit .sub_menu{position:absolute;right:7px;top:5px;width:143px;height:27px;background:url(http://static.naver.net/m/comic/im/2012/bg_tabtoon4g.png) no-repeat 0 0;-webkit-background-size:143px 54px;background-size:143px 54px}
+.toon_tit .sub_menu a{display:inline-block;width:73px;height:26px;margin:0 -1px;font-size:13px;text-align:center;line-height:26px}
+.toon_tit .code1 .web{color:#fff;text-shadow:0 1px 0 #000}
+.toon_tit .code1 .best{color:#000;text-shadow:0 1px 0 #fff}
+.toon_tit .code2{background-position:0 -27px}
+.toon_tit .code2 .web{color:#000;text-shadow:0 1px 0 #fff}
+.toon_tit .code2 .best{color:#fff;text-shadow:0 1px 0 #000}
+.votetop .toon_tit{border-bottom:1px solid #eeeeef}
+.toon_lst{clear:both;overflow:hidden;border-top:1px solid #d9d9d9;border-bottom:1px solid #f2f2f2}
+.toon_lst li{clear:both;position:relative;min-height:81px;border-top:1px solid #ebebeb}
+.toon_lst li:first-child{border:0}
+.toon_lst li .lst{display:-webkit-box;display:-moz-box;position:relative;clear:both;height:100%}
+.o .toon_lst li .lst{width:100%}
+.toon_lst li .lst a{display:-webkit-box;display:-moz-box;width:100%;min-height:81px;-webkit-box-orient:vertical;-webkit-box-pack:center;-moz-box-orient:vertical;-moz-box-pack:center}
+.sort+.toon_lst li .lst a{padding-right:25px}
+.toon_lst li .im_br{position:absolute;top:15px;left:10px;width:63px;height:51px}
+.toon_lst li .im_br .ico_new,.toon_lst li .im_br .ico_end,.toon_lst li .im_br .ico_store.v2{top:4px;left:4px;z-index:50}
+.toon_lst .ico_game{position:absolute;top:4px;left:4px}
+.toon_lst li .toon_info{padding:0 20px 0 84px}
+.toon_lst li .toon_info h4{display:table;overflow:hidden;position:relative;width:auto;max-width:100%;height:17px;vertical-align:top}
+.toon_lst li .toon_info h4+.sub_info{margin:0}
+.toon_lst li .toon_name{display:table-cell;overflow:hidden;position:relative;width:auto;max-width:100%;margin-right:2px;vertical-align:top;font-size:15px;color:#181818}
+.toon_lst li .toon_name strong{display:inline-block;overflow:hidden;font-weight:bold;line-height:17px}
+.toon_lst li .toon_name strong>span{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-box-flex:1;-webkit-line-clamp:1}
+.toon_lst li .bar{display:inline-block;margin:0 4px 0 5px;font-size:14px;color:#dedede;vertical-align:top}
+.toon_lst li .best{font-size:13px;color:#5e5e5e}
+.toon_lst li .rank{margin-right:5px;color:#fa3b03;font-weight:bold;white-space:nowrap}
+.toon_lst li .toon_name em{font-size:15px}
+.toon_lst li a:visited .toon_name{color:#7d7d7d}
+.toon_lst li .sub_info{display:-webkit-box;overflow:hidden;width:auto;max-width:100%;margin-top:3px;vertical-align:top;font-size:13px;color:#5e5e5e;-webkit-box-orient:vertical;-webkit-line-clamp:1}
+.o .toon_lst li .sub_info{display:block}
+.toon_lst li .sub_info strong{color:#fa3b03}
+.toon_lst li .sub_info+.sub_info .bar{vertical-align:middle}
+.toon_lst li .sub_info .ico_bgm{display:inline-block;width:11px;height:17px;background:url(http://static.naver.net/m/comic/im/2013/ico_bgm.png) no-repeat 0 5px;text-indent:-999px;-webkit-background-size:11px 10px;background-size:11px 10px}
+.a .toon_lst li .sub_info .ico_bgm{background-position:0 3px}
+.toon_lst li .ckbox{position:absolute;top:50%;left:0;margin-top:-19px}
+.toon_lst input{display:inline-block;width:38px;height:38px;border:0;background:transparent;color:transparent;vertical-align:middle;-webkit-border-radius:0;-webkit-appearance:none}
+.toon_lst input:after{display:block;width:15px;height:15px;margin:11px auto;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -35px -60px;-webkit-background-size:150px 450px;background-size:150px 450px;color:transparent;content:''}
+.toon_lst input[type=checkbox]:checked:after{background-position:-55px -60px}
+.toon_lst input[type=checkbox]:disabled:after{background-position:-15px -60px}
+.toon_lst li a.right_arr:after{position:absolute;top:50%;right:11px;width:17px;height:9px;margin-top:-5px;background:url(http://static.naver.net/m/comic/im/2012/bu_arr_x2.png) no-repeat 11px 0;-webkit-background-size:17px 9px;background-size:17px 9px;content:''}
+.toon_lst li .lst .stop_notice{padding:4px 0 0 1px;font-size:13px;color:#5e5e5e}
+.toon_lst .if1{font-size:12px;color:#5e5e5e;vertical-align:middle}
+.toon_lst .st_r{color:#f13e07;vertical-align:middle}
+.toon_lst li.smart_toon{background:#f4f4f4;border-top:1px solid #b2b3b4}
+.toon_lst li .ckbox+.lst{margin-left:38px}
+.toon_lst li .ckbox+.lst .toon_info{padding:0 26px 0 72px !important}
+.toon_lst li .ckbox+.lst .im_br{left:0}
+.toon_lst .aside_info{display:table-cell;position:relative;padding-top:1px;font-weight:normal;white-space:nowrap;vertical-align:top}
+.toon_lst .aside_info span:first-child{margin-left:4px}
+.toon_lst .aside_info .ico_adult2{margin-right:1px}
+.toon_lst.lst2 li{min-height:70px}
+.toon_lst.lst2 li .lst a{min-height:70px}
+.toon_lst.lst2 li .im_br{top:14px;width:71px;height:42px}
+.toon_lst.lst2 li .sub_info{margin:1px 0 0 1px !important}
+.toon_lst.lst2 li .ckbox+a{padding-left:78px !important}
+.toon_lst.lst2 li .ckbox+a .im_br{top:14px}
+.toon_lst.lst2 li .ico_break{margin-left:4px}
+.toon_lst.lst2 li .toon_info{padding-left:90px}
+.toon_lst.lst2 li .ckbox+.lst .toon_info{padding:0 15px 0 80px !important}
+.votetop .toon_lst li a,.age_top .toon_lst li a{padding-right:35px}
+.flick_wrap .toon_lst{border-top:0}
+.votetop .flick_wrap .toon_lst.lst2 a .toon_info,.age_top .flick_wrap .toon_lst a .toon_info{padding:0 40px 0 90px}
+#AD_WEBTOON_MOBILEWEB_UP a{display:block;height:85px}
+.votetop ~ #AD_WEBTOON_MOBILEWEB_UP{margin-top:17px}
+.votetop ~ #AD_WEBTOON_MOBILEWEB_UP ~ .age_top{margin:0}
+.votetop ~ #AD_WEBTOON_MOBILEWEB_UP ~ .age_top .toon_tit,.votetop ~ #AD_WEBTOON_MOBILEWEB_UP ~ .age_top .toon_tit p{border-top:0}
+.right_area{clear:both;position:absolute;top:0;right:0;display:block;width:30px;height:70px;line-height:70px;font-family:helvetica;font-size:9px;color:#f3352d;font-weight:bold}
+.right_area em{display:inline-block;font-size:11px;margin-left:14px;color:#5e5e5e}
+.right_area .ico{background:url(http://static.naver.net/m/comic/im/2012/ico_l_size.png) no-repeat;-webkit-background-size:20px 100px}
+.right_area .up{background-position:0 0}
+.right_area .down{background-position:0 -20px !important}
+.right_area .none{height:2px;margin-top:0;background-position:0 -40px !important;vertical-align:top}
+.toon_lst.notice li a{padding-right:0}
+.toon_lst.notice li a.right_arr:after{background:none}
+.toon_lst.notice .app_notice{display:block;position:absolute;top:50%;right:1px;width:36px;height:26px;margin:-12px 0 0;padding:0}
+.toon_lst.notice .app_notice span{display:block;width:18px;height:13px;margin:6px auto 0;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -75px -60px;color:transparent;text-indent:-9999px;-webkit-background-size:150px 450px;background-size:150px 450px}
+.toon_lst.notice .app_notice.on span{background-position:-75px -80px}
+.age_top{margin-top:25px}
+.age_top .right_area{height:80px;line-height:80px}
+.age_lst{display:-webkit-box;display:-webkit-flex;display:-ms-flex;display:flex;overflow:hidden;background:url(http://static.naver.net/m/comic/im/2012/bg_age.png) no-repeat 100% 0}
+.age_lst li{display:-webkit-box;display:-webkit-flex;display:-ms-flex;display:flex;width:100%;height:50px;background:url(http://static.naver.net/m/comic/im/2012/bg_age_l.png) no-repeat 100% 0;font-size:12px;font-weight:bold;text-align:center;-webkit-background-size:320px 100px;background-size:320px 100px;-webkit-box-orient:vertical;flex-flow:row;-webkit-box-flex:1;flex:auto}
+.age_lst li.on,.age_lst li.on a{background-position:0 -50px}
+.age_lst li.on strong{color:#fdcb00}
+.age_lst li.on span{color:#fff}
+.age_lst li a{display:block;width:100%;height:41px;margin-right:1px;padding-top:9px;background:url(http://static.naver.net/m/comic/im/2012/bg_age_l.png) no-repeat 0 0;color:#cfcfd2;-webkit-background-size:320px 100px;background-size:320px 100px}
+.age_lst a strong{display:block;font-size:13px;font-weight:bold}
+.pg{clear:both;padding:4px 0 20px;border-bottom:1px solid #dedede;text-align:center}
+.pg.in{padding:4px 76px 18px}
+.pg.hn{padding:12px 76px 13px;border-bottom:0}
+.pg.hn2{padding:13px 76px 13px;border-bottom:0}
+.pg_btn{overflow:hidden;width:40px;height:24px;border:0;background:url(http://static.naver.net/m/comic/im/2012/u_cm_l2.png) no-repeat;font-size:0;color:#fbfbfb;letter-spacing:-1px;text-align:left;vertical-align:middle;text-indent:-9999px;-webkit-background-size:81px 456px;background-size:81px 456px}
+.pg_num_area{display:inline-block;width:54px;margin-top:-1px;font-size:.93em;line-height:23px;color:#999;letter-spacing:2px;vertical-align:top}
+.pg_num_area_v1{width:69px;padding-bottom:3px;line-height:20px;letter-spacing:0}
+.pg_num_area_v2{width:48px;padding-bottom:3px;line-height:20px;letter-spacing:0}
+.pg_num_on2{color:#32a800}
+.pg_num{display:inline-block;overflow:hidden;width:5px;height:5px;border:1px solid #c6c6c6;background:#dfdfdf;color:transparent;vertical-align:middle;border-radius:3px}
+.pg_num_on{width:7px;height:7px;border-color:#118d07;background:#29b80a;background:-webkit-gradient(linear,0 0,0 100%,from(#36bd0e),to(#15af04));border-radius:4px}
+.u_pg_str{letter-spacing:-1px}
+.pg_btn_next{margin-left:4px;background-position:100% -220px}
+.pg_btn_prev{margin-right:3px;background-position:0 -220px}
+.other_webtoon{border-top:1px solid #515151}
+.other_webtoon:nth-child(n+2){margin-top:25px}
+.other_webtoon h3{overflow:hidden;height:33px;border-top:1px solid #444;border-bottom:1px solid #c0c0c0;background:-webkit-gradient(linear,0 0,0 100%,from(#f7f7f7),to(#f2f2f2))}
+.other_webtoon h3 span{display:inline-block;overflow:hidden;padding:9px 0 0 11px;font-size:14px;font-weight:bold;color:#181818}
+.other_webtoon h3 em{color:#f13e07}
+.other_webtoon #recentlyTitleflick{height:214px}
+.other_webtoon #recommendGenreflick{height:122px;border-bottom:1px solid #ebebeb}
+.other_webtoon .toon_lst.lst2 li .text_area.v2 .toon_info{padding-right:160px}
+.toon_lst2{margin-top:15px}
+.toon_lst2 li{float:left;width:24.9%;text-align:center}
+.toon_lst2 li a{display:block;width:100%;height:100%}
+.toon_lst2 li .thumb{display:inline-block;position:relative;width:63px;height:51px;vertical-align:top}
+.toon_lst2 li .thumb:after{display:block;position:absolute;top:0;right:0;bottom:0;left:0;z-index:10;width:61px;height:49px;border:1px solid rgba(0,0,0,.1);content:''}
+.toon_lst2 li .thumb:before{display:block;position:absolute;top:1px;right:1px;bottom:1px;left:1px;z-index:10;width:59px;height:47px;border:1px solid rgba(255,255,255,.15);content:''}
+.toon_lst2 .author{margin:7px 5px 0}
+.toon_lst2 .author strong{display:block;overflow:hidden;width:100%;margin-bottom:1px;font-size:14px;font-weight:bold;color:#181818;white-space:nowrap;text-overflow:ellipsis}
+.toon_lst2 .author span{display:block;overflow:hidden;width:100%;font-size:12px;color:#5e5e5e;white-space:nowrap;text-overflow:ellipsis}
+.toon_lst2 .ico_break{position:absolute;right:3px;bottom:2px;z-index:30}
+.toon_lst2 .ico_smart{position:absolute;right:2px;bottom:2px;z-index:20}
+.toon_lst2 .ico_smart strong{display:block;text-indent:-9999px}
+.plugin{padding:5px 0;border-bottom:1px solid #d5d5d5}
+.sort{width:100%;overflow:hidden;border-bottom:1px solid #ebebeb}
+.sort li{float:left;padding:.5em 0;color:#5e5e5e;font-size:13px;white-space:nowrap}
+.sort li:first-child{padding-left:16px}
+.sort li.on{color:#000}
+.sort li input{position:relative;margin-top:1px;vertical-align:top}
+.sort ~ .toon_lst,.sort ~ .toon_lst li.smart_toon{border-top:0}
+.lin{clear:both;padding:.7em .7em .6em;border-bottom:1px solid #e6e6e6;color:#909090;text-align:center}
+.notice_box{clear:both;overflow:hidden;width:100%}
+.best_notice{height:53px;margin:3px 10px 0 10px;padding:20px 0 0 27px;background:#fafafa;border:1px solid #eee}
+.best_notice p{font-size:13px;line-height:18px}
+.best_notice p img{margin:2px 4px 0 0;vertical-align:top}
+.best_notice p strong{color:#f03209}
+.best_notice p .sub{margin-left:17px}
+.smart_gnb{background:#f1f1f1;border-bottom:1px solid #cecece;font-size:14px}
+.smart_gnb h1{padding:0;line-height:37px}
+.smart_gnb .ico_beta{display:inline-block;width:17px;height:8px;margin:12px 0 0 2px;background:url(http://static.naver.net/m/comic/im/2012/ico_beta.png) no-repeat;-webkit-background-size:17px 8px;vertical-align:top}
+.smart_gnb .ico_beta strong{display:block;overflow:hidden;text-indent:-9999px}
+.smart_guide{overflow:hidden;position:relative;width:100%;background:url(http://static.naver.net/m/comic/im/2012/bg_banner_pattan.png) repeat-x 0 0;-webkit-background-size:14px 82px;text-align:left;z-index:20}
+.smart_guide a{display:block}
+.smart_guide a img{vertical-align:top}
+.smart_guide .arrow{display:block;position:absolute;right:11px;top:50%;width:6px;height:9px;margin-top:-4px;background:url(http://static.naver.net/m/comic/im/2012/bu_arrow.png) no-repeat;-webkit-background-size:6px 9px}
+.smart_guide+.toon_lst{border-top:0}
+.smart_guide+.toon_lst li a{padding-right:25px}
+.u_hsbt_smart{right:5px}
+.toon_view_lst{overflow:hidden;margin:0;background:url(http://static.naver.net/m/comic/im/2012/bg_viewbody.jpg) repeat}
+.toon_view_lst li,.toon_view_lst img{vertical-align:top}
+
+/* 정식연재&포텐업 */
+.mark_serial,.mark_poten{position:absolute;top:0;left:4px;z-index:50}
+.mark_bg{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);content:''}
+.notice_potenup{margin:9px 0 -1px;font-size:13px;color:#000;line-height:18px}
+
+.ads_sc{overflow:hidden;padding-top:50px;background:#fff}
+.ads_sc a{display:block}
+.ads_sc a img{vertical-align:top}
+.ads_sc .adsby{display:block;padding:15px 10px 5px;text-align:center;line-height:9px}
+.ads_sc.video{background:transparent}
+.ads_image_area{vertical-align:top}
+.ads_sc .support_no{display:none}
+.ads_sc .support_no.on{display:block}
+.ads_sc .support_no.on ~ .support{display:none}
+body.video_full{overflow:hidden;height:100%;background:#000}
+.video_full .ads_sc{padding:0}
+.video_full .ads_sc.video{display:table;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;background:#000;vertical-align:middle}
+.ads_sc.video [class^=ico_],.ads_sc.video .btn_clse,.btn_mov_play{display:inline-block;background:url(http://static.naver.net/m/comic/im/sp_ad_video.png) no-repeat;text-indent:-9999px;background-size:350px 180px;-webkit-background-size:350px 180px}
+.ads_video{height:auto;vertical-align:top}
+.ads_sc.video .ads_video_area{position:relative}
+.video_full .ly_dim_video_full{opacity:.8;filter:alpha(opacity=80)}
+.video_full .ads_sc.video .ads_video_area{position:static}
+.ads_video_area.end .video_mask{background:#1a1a1a}
+.ads_video_area.end{min-height:196px;height:100%}
+.progress_play{height:2px;background:#28dc18}
+.progress_load{height:2px;background:rgba(255,255,255,.4)}
+.progress_controls{position:absolute;top:0;right:10px;bottom:0;left:12px;z-index:100;text-align:left}
+.progress_controls [class*=_area]{position:absolute;z-index:120}
+.play_area{bottom:0;left:-9px}
+.play_area a{width:25px !important;height:35px !important}
+.volume_area{right:-2px;bottom:2px}
+.full_area{position:absolute;top:12px;left:12px}
+.video_btn_area{position:absolute;top:50%;left:0;z-index:3300;width:100%;margin-top:-33px;text-align:center}
+.video_btn_area [class^=ico_]{width:47px;height:47px;margin-bottom:2px;text-indent:0}
+.video_full .video_btn_area{margin-top:-45px}
+.video_full .video_btn_area [class^=ico_]{width:66px;height:66px;margin-bottom:5px}
+.video_btn_area a{display:inline-block;margin-left:12px;text-decoration:none}
+.video_full .video_btn_area a{margin-left:23px}
+.video_btn_area a:first-child{margin-left:0}
+.video_btn_area span{display:block;font-size:13px;color:#00e633;white-space:nowrap}
+.video_btn_area a:first-child span,.video_btn_area .btn_replay span{color:#fff}
+.video_full .video_btn_area span{font-size:15px}
+.video_mask{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.66)}
+.video_shadow{position:absolute;bottom:0;left:0;width:100%;height:204px;background:url(http://static.naver.net/m/comic/im/video_shadow.png) repeat-x;background-size:360px 204px;-webkit-background-size:360px 204px}
+.video_outline{position:absolute;top:0;right:0;bottom:0;left:0;border:1px solid rgba(0,0,0,.05);border-width:1px 0}
+.ads_sc.video .player_func_area [class*=btn_]{width:35px;height:35px}
+.btn_event{position:absolute;top:10px;right:10px;z-index:100;min-width:54px;height:25px;padding:0 11px 0 12px;font-size:13px;color:#fff;border-radius:75px;background:#03d732 !important;line-height:25px;white-space:nowrap;text-indent:0 !important;text-align:center}
+.a .btn_event{line-height:27px}
+.btn_mov_play{position:absolute;top:50%;left:50%;z-index:150;width:60px !important;height:60px !important;margin:-30px 0 0 -30px;background-position:0 -25px !important}
+.btn_clse{width:16px;height:16px;background-position:-105px 0 !important}
+.ico_play{width:11px;background-position:0 0}
+.ico_pause{width:8px;background-position:-20px 0 !important}
+.play_area [class^=ico_]{height:16px;margin:9px 0 0 9px}
+.ico_volume{width:23px;height:18px;padding-left:2px;margin:9px 0 0 8px;background-position:-40px 0 !important}
+.ico_volume.off{width:25px;padding:0;background-position:-70px 0 !important}
+.video_full .ico_volume{margin-left:8px}
+.ico_replay{background-position:-75px -25px !important}
+.ico_event{background-position:-135px -25px !important}
+.ico_dnld{background-position:-195px -25px !important}
+.ico_info{background-position:-255px -25px !important}
+.video_full .ico_replay{background-position:0 -100px !important}
+.video_full .ico_event{background-position:-90px -100px !important}
+.video_full .ico_dnld{background-position:-180px -100px !important}
+.video_full .ico_info{background-position:-265px -100px !important}
+.video_full .ads_video_area{display:table-cell;vertical-align:middle}
+.video_full .ads_video_inner{position:relative}
+.video_full .player_func_area{position:relative;z-index:120}
+.video_full .player_func_area ~ .video_btn_area{z-index:3400}
+.play_time{position:absolute;bottom:9px;left:28px;font-size:13px}
+.play_time [class^=time_]{float:left;font-family:tahoma;color:#fff}
+.play_time .time_current{color:#3ef22e}
+.play_time .time_separator{width:1px;height:10px;margin:2px 5px 0 4px;background:rgba(255,255,255,.3);text-indent:-9999px}
+.video_full .progress_bar_area{overflow:hidden;position:absolute;right:43px;bottom:17px;left:117px;height:2px;background:rgba(255,255,255,.4);cursor:pointer}
+.ads_sc.slide .slide_wrap{overflow:hidden;z-index:2000}
+.ads_sc.slide .slide_wrap .eg-flick-panel{float:left}
+.ads_sc.slide .slide_wrap .item_dsc{display:table;position:relative;width:100%;height:55px;background:#efefef}
+.ads_sc.slide .slide_wrap .item_dsc:after{position:absolute;top:0;left:0;bottom:0;right:0;border:1px solid #d8d8d8;border-top:none;content:''}
+.ads_sc.slide .item_dsc [class^=item_]{display:table-cell;position:relative;z-index:50;vertical-align:middle}
+.ads_sc.slide .item_txt span{display:-webkit-box;overflow:hidden;margin-top:1px;padding:0 10px;font-size:14px;color:#000;line-height:17px;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.ads_sc.slide .item_btn{text-align:right}
+.ads_sc.slide .item_btn span{display:inline-block;width:81px;height:29px;margin-right:11px;background:#32da57;border-radius:4px;border:1px solid #30d554;font-size:13px;color:#fff;text-align:center;line-height:29px;letter-spacing:-1px;white-space:nowrap;vertical-align:middle}
+.ads_sc.slide .adsby{margin:1px 0 6px}
+.cmt .star ~ .sc2{margin-top:10px;border-top:1px solid #e1e1e1}
+.webtoon_banner{width:100%;background:url(http://static.naver.net/m/comic/im/promo/da_promo_pattan2.gif) repeat-x;-webkit-background-size:35px 50px;background-size:35px 50px}
+.webtoon_banner a{display:block}
+.rpt_area{text-align:right;margin:8px 14px -3px}
+.rpt_area a{font-size:13px;font-weight:bold;color:#2a81be}
+.end_pl{overflow:hidden;height:185px;border-top:1px solid #c9c9c9;background:#fff;text-align:left}
+.end_pl .tit .mb,.end_pl .tit .mge,.end_pl .tit .cart,.end_pl .npay,.end_pl .lk_w .lnk_call,.end_pl .ads,.end_pl .ly_lnk a,.end_pl .btn_clse span{display:inline-block;background:url(http://static.naver.com/m/comic/im/sp_ap.png) no-repeat;-webkit-background-size:108px 175px;background-size:108px 175px}
+.end_pl .pl{padding:0 0 5px 10px;font-size:1.15em;font-weight:bold}
+.end_pl .pl_h{position:relative;margin:0}
+.end_pl .ads{display:block;overflow:hidden;position:absolute;top:8px;right:8px;width:72px;height:11px;background-position:0 -53px;text-indent:-9999em}
+.end_pl .lk{position:relative;height:92px;border-bottom:1px solid #dcdcdc}
+.end_pl .lk.on:after{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.3);content:''}
+.end_pl li.lk:last-child{border-bottom:none}
+.end_pl .lk .lk_w{display:block;height:74px;padding:18px 9px 0}
+.end_pl .tit{display:block;padding-bottom:3px}
+.end_pl .tit a{color:#005fc1}
+.end_pl .tit em{position:relative;margin-left:2px;text-indent:-5000px;vertical-align:top}
+.end_pl .tit .mb{top:-2px;width:10px;height:14px;background-position:0 0;vertical-align:middle}
+.end_pl .tit .mge{top:2px;width:13px;height:13px;background-position:0 -20px}
+.end_pl .tit .npay{top:2px;left:1px;width:29px;height:13px;background-position:-20px -20px}
+.end_pl .cnt{display:block;overflow:hidden;padding-bottom:3px;color:#666;font-size:13px;white-space:nowrap;text-overflow:ellipsis}
+.end_pl .ly_lnk{display:none;position:absolute;bottom:12px;z-index:30}
+.end_pl .lk.on .ly_lnk{display:block;width:100%;text-align:center}
+.end_pl .ly_lnk a{display:inline-block;width:108px;height:41px;text-indent:-9999px}
+.end_pl .ly_lnk a:first-child{margin:0}
+.end_pl .ly_lnk .lnk_call{background-position:0 -85px}
+.end_pl .ly_lnk .lnk_page{margin-left:3px;background-position:0 -131px}
+.end_pl .lnk_hp{display:block;overflow:hidden;color:#32a800;font-size:13px;white-space:nowrap;text-overflow:ellipsis}
+.end_pl .lk_w .lnk{padding-top:3px}
+.end_pl .lk_w .lnk .lnk_call{float:left;margin:-1px 7px 0 0;padding:1px 6px 2px 18px;border:1px solid #d1dee2;background-color:#f9fafa;background-position:4px -64px;color:#666;font-size:13px}
+.end_pl .btn_clse{display:none;position:absolute;top:0;right:0;z-index:30;width:35px;height:35px}
+.end_pl .btn_clse span{width:19px;height:18px;margin:8px 0 0 8px;background-position:-89px 0;text-indent:-9999px}
+.end_pl .lk.on .btn_clse{display:block}
+.a .end_pl{height:166px}
+.a .end_pl .lk{height:83px}
+.a .end_pl li.lk:last-child{height:84px;border-bottom:none}
+.a .end_pl .lk .lk_w{display:block;height:72px;padding:12px 9px 0}
+.a .end_pl ul{overflow:hidden;height:167px}
+.product_area{border-top:2px solid #0a0a0a;border-bottom:1px solid #a9a9a9;background:#f5f5f5}
+.product_lst{display:-webkit-box;display:-moz-box;padding:10px 9px 10px 2px}
+.product_lst li{-webkit-box-flex:1;margin:0 0 0 7px;text-align:center}
+.product_lst a{display:block;width:96px;height:99px;margin:0 auto;padding:10px 4px;border:1px solid #ddd;border-radius:3px;background:#fff;-webkit-box-sizing:border-box}
+.product_lst [class*=thmb_]:before,.product_lst [class^=ic]{background:url(http://static.naver.net/m/comic/im/sp_product_v2.png) no-repeat;background-size:100px 135px}
+.product_lst .thmb{display:inline-block;overflow:hidden;position:relative;height:55px;line-height:54px;font-size:12px;font-family:gulim}
+.product_lst .thmb img{vertical-align:middle}
+.product_lst .thmb_ost{padding:0 0 0 4px}
+.product_lst [class*=thmb_]:before{display:block;position:absolute;top:0;left:0;width:46px;height:70px;content:''}
+.product_lst .thmb_book:before{background-position:0 -20px}
+.product_lst .thmb_ost:before{top:0;width:59px;background-position:0 -80px}
+.product_lst [class^=ic]{display:inline-block;overflow:hidden;width:15px;height:15px;margin:0 4px 0 0;text-indent:-9999px;vertical-align:top}
+.product_lst .ic_nstore{background-position:0 0}
+.product_lst .ic_ebook{width:13px;background-position:-20px 0}
+.product_lst .ic_apps{width:12px;background-position:-60px 0}
+.product_lst .ic_npay{width:29px;height:13px;margin-top:2px;background-position:-70px -20px}
+.product_lst .tit{display:-webkit-box;overflow:hidden;-webkit-line-clamp:1;-webkit-box-orient:vertical;margin-top:7px;font-size:13px;font-weight:bold;color:#181818}
+.product_lst2{overflow:hidden;padding:13px 10px 6px;border-bottom:1px solid #f2f2f2}
+.product_lst2 li{float:left;width:33.33%;font-size:12px;text-align:center}
+.product_lst2 a{display:block;width:94px;margin:0 auto}
+.product_lst2 .thmb{display:-webkit-box;display:-moz-box;overflow:hidden;position:relative;height:89px;font-size:12px;-webkit-box-align:center;-webkit-box-pack:center;-moz-box-align:center;-moz-box-pack:center}
+.product_lst2 .thmb img{vertical-align:top}
+.product_lst2 .thmb_ost{padding:0 0 0 4px}
+.product_lst2 [class*=thmb_]:before{display:block;position:absolute;top:0;left:50%;width:59px;height:89px;margin:0 0 0 -30px;background:url(http://static.naver.net/m/comic/im/sp_product_mask.png) no-repeat;-webkit-background-size:75px 240px;background-size:75px 240px;content:''}
+.product_lst2 .thmb_book:before{background-position:0 0}
+.product_lst2 .thmb_ost:before{top:50%;width:64px;margin:-30px 0 0 -32px;background-position:0 -95px}
+.product_lst2 .store{display:block;margin-top:2px;color:#40b10a}
+.product_lst2 .tit{display:-webkit-box;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:1px 0 0;line-height:16px;font-size:14px;font-weight:bold;color:#181818}
+.product_lst2 .etc{font-weight:bold;color:#5e5e5e}
+.product_lst2 .pay{font-weight:bold;color:#2d6acb}
+.app_product_lst{display:-webkit-box;padding:10px 9px 10px 2px}
+.app_product_lst li{-webkit-box-flex:1;margin:0 0 0 7px;text-align:center}
+.app_product_lst a{display:block;width:96px;height:130px;margin:0 auto;padding:10px;border:1px solid #ddd;border-radius:3px;background:#fff;-webkit-box-sizing:border-box}
+.app_product_lst [class*=thmb_]:before,.app_product_lst [class^=ic]{background:url(http://static.naver.net/m/comic/im/sp_product_v2.png) no-repeat;-webkit-background-size:100px 135px;background-size:100px 135px}
+.app_product_lst .thmb{display:inline-block;overflow:hidden;position:relative;height:70px;line-height:69px;font-size:12px;font-family:gulim}
+.app_product_lst .thmb img{vertical-align:middle}
+.app_product_lst .thmb_ost{padding:0 0 0 4px}
+.app_product_lst [class*=thmb_]:before{display:block;position:absolute;top:0;left:0;width:46px;height:70px;content:''}
+.app_product_lst .thmb_book:before{background-position:0 -20px}
+.app_product_lst .thmb_ost:before{top:5px;width:64px;background-position:0 -95px}
+.app_product_lst [class^=ic]{display:inline-block;overflow:hidden;width:15px;height:15px;margin:0 4px 0 0;text-indent:-9999px}
+.app_product_lst .ic_nstore{background-position:0 0}
+.app_product_lst .ic_ebook{width:13px;background-position:-20px 0}
+.app_product_lst .ic_apps{width:12px;background-position:-60px 0}
+.app_product_lst .ic_npay{position:relative;top:2px;width:29px;height:13px;background-position:-70px -20px}
+.app_product_lst .tit{display:-webkit-box;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:13px;font-weight:bold;color:#181818}
+.product_pg{margin:-9px 0 4px;padding:0;border-bottom:none}
+.contest_head{background:#e64952;text-align:center}
+.contest_head h2{display:inline-block;margin:15px 0 12px;overflow:hidden;line-height:999px;width:180px;height:17px;background:url(http://static.naver.com/m/comic/im/sp_contest.png) no-repeat;background-size:180px 17px;-webkit-background-size:180px 17px}
+.contest_head .contest_nav{border-top:1px solid #d1444c;display:table;width:100%;height:39px}
+.contest_head .contest_nav li{display:table-cell;font-size:15px;font-weight:bold;color:#fff}
+.contest_head .contest_nav li:nth-child(1){width:26%}
+.contest_head .contest_nav li:nth-child(2){width:16%}
+.contest_head .contest_nav li:nth-child(3){width:16%}
+.contest_head .contest_nav li:nth-child(4){width:13%}
+.contest_head .contest_nav li:nth-child(5){width:13%}
+.contest_head .contest_nav li:nth-child(6){width:13%}
+.contest_head .contest_nav li:nth-child(7){width:3%}
+.contest_head .contest_nav a{display:block;line-height:39px;font-size:15px;font-weight:bold;color:#f77e85}
+.contest_head .contest_nav a .num{font-size:17px}
+.contest_ban{background:url(http://static.naver.net/m/comic/im/bg_contest_ban.png);text-align:center;background-size:5px 100px;-webkit-background-size:5px 100px}
+.contest_subhead{background:#e4e5e5;overflow:hidden;height:41px}
+.contest_subhead h2{float:left;font-size:15px;font-weight:bold;color:#000}
+.contest_subhead h2 .num{font-size:16px}
+.contest_subnav{float:right;overflow:hidden;display:table;table-layout:fixed}
+.contest_subnav li{display:table-cell;width:41px}
+.contest_lstwrap{background:#e4e5e5;padding:0 8px}
+.contest_lst{margin-bottom:8px;overflow:hidden;border:1px solid #bfbfbf;background:#fff}
+.contest_lst li{float:left;width:50%}
+.contest_lst li:first-child{border-right:1px solid #f2f2f2;margin-right:-1px}
+.contest_lst a{display:block;padding:9px}
+.cardwrap{position:relative;margin-bottom:7px;padding:8px 0 8px;border-top:0;background:#efefef}
+.cardwrap h3{border-bottom:0}
+.cardwrap .card{position:relative;margin:0 8px 12px;background:#fff}
+.cardwrap .card:after{position:absolute;top:0;right:0;bottom:0;left:0;-webkit-box-shadow:0 0 1px #d4d4d4;box-shadow:0 0 1px #d4d4d4;content:''}
+.info{position:relative;min-height:50px;padding:11px 10px 9px}
+.info .sc_thmb{float:left}
+.info .sc_thmb img{border-radius:8px}
+.cardwrap .ico_new,.cardwrap .ico_hot,.cardwrap .ico_cbt{position:absolute;bottom:-14px;right:9px;width:32px;height:32px;background-position:0 -100px}
+.cardwrap .ico_hot{background-position:-35px -100px}
+.info dl{display:-webkit-box;display:-moz-box;min-height:53px;padding:1px 0 0 10px;-webkit-box-orient:vertical;-webkit-box-pack:center;-moz-box-orient:vertical;-moz-box-pack:center}
+.info dt{overflow:hidden;margin-bottom:3px;font-size:15px;color:#191c1c}
+.info dd{font-size:12px;color:#777}
+.ells{overflow:hidden;width:auto;max-width:100%;text-overflow:ellipsis;white-space:nowrap}
+.cardwrap .aside_info [class^=ico_]{margin-top:2px}
+.cardwrap dd.ells{margin-bottom:-1px}
+.cardwrap dd span{color:#00a1fe}
+.cardwrap .bar{display:inline-block;width:1px;height:9px;margin:4px 5px 0 4px;background:#cecece;color:transparent;vertical-align:top}
+.cardwrap .sc_img{min-height:114px;margin:0;-webkit-box-sizing:border-box}
+.cardwrap .sc_img img{vertical-align:top}
+.cardwrap .ells{overflow:hidden;width:auto;max-width:100%;text-overflow:ellipsis;white-space:nowrap}
+.cardwrap .cate{color:#999}
+.cardwrap a.lnk{display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:50;color:transparent;opacity:0}
+.end_game{overflow:hidden}
+.end_game .info{padding-right:82px}
+.end_game .bg_line{height:1px;margin-left:10px;background:url(http://static.naver.com/m/comic/im/bg_line6.png) repeat-x;vertical-align:top;-webkit-background-size:1px 1px;background-size:1px 1px}
+.end_game dt{color:#181818}
+.end_game .lnk_dnld{display:inline-block;position:absolute;top:22px;right:10px;width:62px;height:29px;background:#16afff;font-size:13px;color:#fff;text-align:center;line-height:29px}
+.end_game .pht_ct{position:relative;margin:10px 0 10px 5px}
+.end_game #view>div{height:200px;-webkit-box-sizing:border-box}
+.end_game .pht_lst{display:-webkit-box;display:box;overflow:hidden;height:200px}
+.end_game .pht_lst li{display:-webkit-box;display:box;margin-left:5px;-webkit-box-flex:1;-webkit-box-orient:vertical}
+.end_game .pht_lst a{display:block;height:100%}
+.end_game .detail_info{margin:13px 10px 20px 15px;font-size:14px;color:#5e5e5e}
+.end_game .lnk_wrap{margin:15px 0 14px}
+.end_game .lnk_wrap ul{display:box;display:-webkit-box;margin:0 10px}
+.end_game .lnk_wrap li{display:box;display:-webkit-box;-webkit-box-flex:1;-webkit-box-orient:vertical;width:50%;text-align:center;height:41px;line-height:41px;background:#16afff}
+.end_game .lnk_wrap li:only-child{width:100%}
+.end_game .lnk_wrap li:last-child{margin-left:5px}
+.end_game .lnk_wrap li:first-child{margin-left:0}
+.end_game .lnk_wrap a{display:block;color:#fff;font-size:15px}
+.end_game .lnk_wrap .ico_android{width:18px;height:21px;margin:10px 6px 0 0;background-position:-100px -60px}
+.end_game .lnk_wrap .ico_ios{width:17px;height:20px;margin:10px 5px 0 0;background-position:-120px -60px}
+.end_game .lnk_wrap .ico_won{width:14px;height:11px;margin:15px -1px 0 0;background-position:-130px -85px}
+.viewer_wrap{background:#000}
+.viewer_wrap .tit_wrap{position:absolute;top:0;left:0;z-index:100;width:100%;height:39px;background:rgba(0,0,0,.7);line-height:39px;z-index:2200}
+.viewer_wrap .tit_wrap .pg_info{display:block;font-size:17px;color:#fff;text-align:center}
+.viewer_wrap .tit_wrap:after{display:block;position:relative;bottom:1px;height:1px;background:url(http://static.naver.com/m/comic/im/bg_line7.png) repeat-x;-webkit-background-size:1px 1px;background-size:1px 1px;content:''}
+.viewer_wrap .btn_clse{position:absolute;top:-1px;right:0;width:40px;height:40px}
+.viewer_wrap .btn_clse span{display:block;width:21px;height:21px;margin:10px auto 0;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -109px -156px;color:transparent;text-indent:-9999px;-webkit-background-size:150px 450px;background-size:150px 450px;vertical-align:top}
+.pht_wrap{overflow:hidden;width:100%;height:100%;background-color:#000}
+.pht_wrap .cont{display:-webkit-box;display:box;width:100%;padding:80px 0 55px;height:100%;-webkit-box-orient:vertical;-webkit-box-sizing:border-box;-webkit-box-pack:center;-webkit-box-align:center}
+.pht_wrap .cont img{width:100%;max-width:100%;height:auto;max-height:100%}
+.pht_wrap .btn_area a{display:inline-block;overflow:hidden;position:absolute;top:50%;z-index:500;width:43px;height:55px;margin-top:-28px}
+.pht_wrap a.bt_prv{left:0;background-position:0 0}
+.pht_wrap a.bt_prv.disabled{display:none}
+.pht_wrap a.bt_nxt{right:0;background-position:-46px 0}
+.pht_wrap a.bt_nxt.disabled{display:none}
+.pht_wrap .flick-ct{display:-webkit-box;display:box;text-align:center;-webkit-box-orient:vertical;-webkit-box-align:center;-webkit-box-pack:center}
+.pht_wrap .flick-ct img{width:100%;height:auto;vertical-align:middle}
+.toon_notice{display:-webkit-box;overflow:hidden;position:relative;padding:9px 0 10px;font-size:13px}
+.toon_notice:after,.toon_notice.type_img:before{position:absolute;bottom:0;left:0;width:100%;height:1px;background:url(http://static.naver.com/m/comic/im/bg_line10.png) repeat-x;-webkit-background-size:1px 1px;background-size:1px 1px;content:''}
+.toon_notice.type_img:before{top:0;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transform:rotate(180deg)}
+.toon_notice em{font-size:14px}
+.toon_notice [class^=ico_]{position:absolute;margin:-1px 5px 0 10px}
+.toon_notice ~ .cmt{margin:0}
+.toon_notice ~ .cmt .line{display:none}
+.toon_view_lst+.toon_notice,.ads_sc+.toon_notice{margin-top:16px;border-top:1px solid #bfbfbf}
+.toon_notice .spot_txt{font-weight:bold !important}
+.toon_notice .notice_lnk{display:block;color:#181818}
+.toon_notice .notice_lnk .txt{position:relative;min-height:20px;padding:0 11px 0 39px;font-weight:bold;line-height:20px;white-space:nowrap}
+.toon_notice .notice_lnk .txt:after{overflow:hidden;position:absolute;top:3px;right:0;width:6px;height:12px;background:url(http://static.naver.com/m/comic/im/sp_arr2.png) no-repeat 50% -403px;-webkit-background-size:15px 450px;background-size:15px 450px;content:''}
+.toon_notice .ico_notice{margin-top:1px}
+.toon_notice .ico_notice ~ .txt{display:-webkit-box;overflow:hidden;min-height:20px;padding:0 10px 0 53px;line-height:18px;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-box-pack:center;-webkit-line-clamp:2}
+.toon_notice.type_img{margin-top:-1px;padding:0}
+.toon_notice.type_img img{vertical-align:top}
+.toon_notice.type_img .notice_lnk{width:100%;text-align:center}
+.toon_view_lst+.toon_notice.type_img,.ads_sc+.toon_notice.type_img{margin-top:15px;border:0}
+
+/* layer */
+.ly_alignbox{display:inline-block;width:0;height:100%;vertical-align:middle}
+.ly_wrap{position:absolute;top:0;left:0;right:0;bottom:0;z-index:3200;width:100%;height:100%;text-align:center}
+.ly_wrap .ly_cont{display:inline-block;position:relative;top:179px;width:296px;min-height:147px;padding-top:28px;background:#fff;text-align:center;-webkit-box-shadow:0 1px 10px rgba(0,0,0,.15)}
+.ly_wrap .ly_cont.v1{min-height:106px;padding-top:39px}
+.ly_wrap .ly_cont.v2{min-height:141px;padding-top:29px}
+.ly_wrap .ly_cont .info{padding:0 15px}
+.ly_wrap .ly_cont .info strong{margin-bottom:14px;font-size:16px;color:#333}
+.ly_wrap .ly_cont .info strong span{color:#1eb2ff}
+.ly_wrap .ly_cont .info p{margin-top:6px;color:#555;line-height:18px}
+.ly_wrap .ly_cont .info p ~ p{margin-top:1px;font-size:13px;color:#888}
+.ly_wrap .ly_cont.v2 .info p{margin-top:7px}
+.ly_wrap .ly_cont .btn_set{display:-webkit-box;display:box;position:absolute;bottom:15px;width:100%;-webkit-box-pack:center}
+.ly_wrap .ly_cont .btn_set button{width:118px;height:34px;background:#bec9cf;font-size:15px;color:#fff;border:none;vertical-align:top;-webkit-appearance:none;-webkit-border-radius:0;cursor:pointer}
+.ly_wrap .ly_cont .btn_set button ~ button{margin-left:6px}
+.ly_wrap .ly_cont .btn_set .btn_bx2{background:#1cb2ff;font-weight:bold}
+.ly_wrap .ly_cont.v2 .btn_set{bottom:45px}
+.ly_wrap .ly_cont .btn_set ~ a{position:absolute;top:0;right:1px;width:30px;height:30px;background:none}
+.ly_wrap .ly_cont .btn_set ~ a span{display:inline-block;width:16px;height:16px;margin-top:8px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -134px -160px;font-size:0;color:transparent;text-indent:-9999px;-webkit-background-size:150px 450px;background-size:150px 450px;vertical-align:top}
+.ly_wrap .chk_sc{position:absolute;bottom:0;left:0}
+.ly_wrap .chk_sc input[type=checkbox]{display:inline-block;width:31px;height:38px;margin-right:-5px;padding-right:4px;border:0;background:transparent;color:transparent;vertical-align:middle;-webkit-border-radius:0;-webkit-appearance:none}
+.ly_wrap .chk_sc input[type=checkbox]:after{display:block;width:15px;height:15px;margin:11px 0 11px auto;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat -35px -60px;-webkit-background-size:150px 450px;background-size:150px 450px;color:transparent;content:''}
+.ly_wrap .chk_sc input[type=checkbox]:checked:after{background-position:-55px -80px}
+.ly_wrap .chk_sc input[type=checkbox]:disabled:after{background-position:-15px -60px}
+.ly_wrap .chk_sc input[type=checkbox] ~ label{display:inline-block;position:relative;top:1px;font-size:13px;color:#888;letter-spacing:-1px}
+.ly_wrap .chk_sc a{font-weight:bold;color:#999}
+.ly_wrap .chk_sc a.on{color:#24272b}
+.ly_wrap .chk_sc a ~ a:before{display:inline-block;position:relative;top:2px;width:1px;height:14px;margin:0 10px 0 6px;background:#e6e6e6;content:''}
+.ly_store{position:fixed}
+.ly_store .ly_tit{margin-bottom:12px;font-weight:normal;font-size:16px;color:#1cb2ff}
+.ly_store .ly_cont{position:absolute;top:50% !important;left:50%;width:283px;height:138px;margin:-85px 0 0 -141px;padding-top:23px}
+.ly_store .ly_txt{margin:0 !important;font-size:14px !important;color:#151515 !important;line-height:14px}
+.ly_store .ly_txt~.ly_txt{margin-top:5px !important;color:#666 !important;white-space:nowrap}
+.ly_store .btn_set button{width:112px !important;height:32px !important}
+.ly_store .btn_set .btn_bx2{font-weight:normal !important}
+.ly_app_setup{display:none;position:fixed;top:50%;left:50%;z-index:3200;margin:-145px 0 0 -106px;background:transparent !important}
+.ly_app_setup .ly_cont{position:relative;width:212px;min-height:289px}
+.ly_app_setup .ly_cont .btn_clse{position:absolute;top:0;right:0;width:30px;height:30px}
+.ly_app_setup .btn_app{position:absolute;top:203px;width:100%;height:86px}
+.ly_app_setup .btn_app li a{display:block;height:41px}
+.ly_app_setup .btn_app li:first-child{margin-bottom:3px}
+
+/* like */
+.likeit_wrap{clear:both;position:relative;min-height:34px;margin:8px 0 0;text-align:center}
+.likeit_wrap .u_likeit_list_module{margin-right:140px}
+.likeit_wrap .u_likeit_list_module .u_btn_value span{line-height:34px}
+.likeit_wrap .btn_wrap{position:absolute;top:0;right:0;width:129px;padding:0 0 0 6px;-webkit-box-sizing:padding-box}
+.likeit_wrap .btn_wrap:before,.likeit_wrap.game .btn_game:before{display:block;position:absolute;top:2px;left:0;width:1px;height:29px;background:#d6d6d6;content:''}
+.likeit_wrap .btn_mark,.likeit_wrap .spi_sns_share,.likeit_wrap .btn_game{float:left;position:relative;width:82px;height:32px;border:1px solid #9c9c9c;border-radius:3px;background:#fdfdfd;line-height:32px;font-size:13px;font-weight:bold;color:#3c3c3c;-webkit-border-radius:3px}
+.likeit_wrap .btn_mark input{-webkit-appearance:none;display:inline-block;position:absolute;top:0;left:0;z-index:20;width:100%;height:100%;opacity:0;cursor:pointer}
+.likeit_wrap .btn_mark label{display:inline-block;overflow:hidden;position:relative;width:100%;height:100%}
+.likeit_wrap .btn_mark input:checked+label:before{background-position:0 -12px}
+.u_likeit_list_module .u_btn_likeit{padding:0 5px !important}
+.u_likeit_list_module .u_likeit_share .u_chk{padding-left:12px !important}
+.likeit_wrap .spi_sns_share{overflow:hidden;width:38px;margin-left:5px;font-size:0}
+.likeit_wrap .spi_sns_share:after{display:inline-block;position:absolute;top:9px;left:10px;width:18px;height:14px;background:url(http://static.naver.net/m/comic/im/sp_ico_v2.png) no-repeat 0 0;-webkit-background-size:150px 450px;background-size:150px 450px;vertical-align:top;content:''}
+.likeit_wrap ~ #spiLayer1{text-align:center}
+.likeit_wrap ~ #spiLayer1 .spi_unity{margin:7px 0 0}
+.likeit_wrap.game .u_likeit_list_module{margin-right:181px}
+.likeit_wrap.game .btn_wrap{width:176px}
+.likeit_wrap.game .btn_wrap:before{display:none}
+.likeit_wrap.game .btn_mark{width:58px}
+.likeit_wrap.game .spi_sns_share{margin-right:5px}
+.likeit_wrap.game .btn_game{min-width:58px;width:auto;margin-left:6px}
+.likeit_wrap.game .btn_game:before{left:-7px}
+.likeit_wrap.game .btn_game img{margin:7px 5px 0 1px;vertical-align:top}
+.likeit_wrap.game .ico_new2{position:absolute;top:3px;left:3px}
+
+.u_crt{clear:both;padding:12px 0 0;background:#f4f4f4;font-size:12px;line-height:14px;color:#a2a2a2;text-align:center}
+.ccl{padding:15px 10px 1px;background:#f4f4f4;font-size:12px;color:#9e9e9e;text-align:center;line-height:15px}
+.u_cr{clear:both;padding:6px 0 12px;background:#f4f4f4;font-size:12px;line-height:14px;color:#9e9e9e;text-align:center}
+.u_cri{display:inline-block;margin:0 2px}
+.u_cri_v1{margin-left:1px;padding-left:7px;background:url(http://static.naver.net/m/comic/im/2012/u_cm.png) no-repeat 0 -83px}
+.u_cra{font-size:12px;color:#9e9e9e}
+.u_cra_v1{font-size:11px}
+.u_ft{position:relative;padding-top:14px;border-top:1px solid #d9d9d9;background:#fff}
+.u_ft_none{padding-top:7px;border:0}
+.u_hsft{padding:0 5px 0 4px}
+.u_hsft .u_hs{padding-bottom:3px;border:0;background:transparent;-webkit-box-shadow:none}
+.u_hsft .u_itwi{padding-top:5px;border:1px solid #cecece;-webkit-border-radius:1px}
+.u_hsft .u_hssbt{height:30px;border:1px solid #cecece;background-color:#fcfcfc;color:#555;-webkit-border-radius:1px}
+.u_hsft .u_hs .u_it::-webkit-input-placeholder{color:#a9a9a9}
+.u_hsft .u_hs .u_it:-moz-placeholder{color:#a9a9a9}
+.u_hsft .u_clrt{top:-1px;right:3px}
+.u_hsft .u_hs .u_hssbt_ss:before{margin-top:6px;background-position:0 -14px}
+.u_hsft .u_hs .u_hssbt_ss{right:70px}
+.u_hsft .u_hs .u_hssbt_us{right:5px}
+.u_hsft .u_hsw{padding-right:104px}
+.u_ftsw{overflow:hidden;margin:13px 0 8px;font-size:12px}
+.u_ftsw .u_ftst{float:right;position:relative;margin:1px 5px 2px 0;padding-right:8px;border:1px solid #cecece;background-color:#fcfcfc;line-height:25px;color:#444;-webkit-border-radius:1px}
+.u_ftsw .u_ftst .u_ico{display:inline-block;width:20px;height:25px;margin-right:2px;background:url(http://static.naver.net/m/comic/im/2012/arr_top.gif) 7px 8px no-repeat;background-size:9px 8px;vertical-align:top}
+.u_ftsa{float:left;margin:4px 0 0 6px;letter-spacing:-1px}
+.u_ftsa_v1 .u_ico{background-position:-57px -186px}
+.u_ftsw [class^=u_ftsa] .u_ico{display:inline-block;width:19px;height:19px;margin-right:5px;background:url(http://static.naver.net/m/comic/im/ico_l_size.png);vertical-align:-5px;-webkit-background-size:20px 100px;background-size:20px 100px}
+.u_ftsa .u_ico{background-position:0 -50px !important}
+.u_ftsa2{margin-left:19px}
+.u_ftsa2 .u_ico{background-position:0 -80px !important}
+.u_ftst .u_ico{display:inline-block;height:19px;margin-right:4px;vertical-align:-5px}
+.u_ftlkw{border-top:1px solid #dcdcdc;padding-top:7px;background:#f4f4f4;text-align:center}
+.u_ftlkw .u_ftlk{display:inline-block;width:58px;border:1px solid #afafaf;border-radius:3px;background-color:#fff;background:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f3f3f3));font-size:12px;line-height:25px;color:#444;text-align:center;vertical-align:top}
+.u_ftlkw .u_ftlkbt{display:inline-block;position:relative;width:73px;border:1px solid #afafaf;border-radius:3px;background-color:#fff;background:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f3f3f3));font-size:.85em;line-height:25px;color:#444;text-align:center;vertical-align:top}
+.goto_area{display:none;overflow:hidden;background-color:#f4f4f4}
+.a .goto_area{display:block}
+.goto_area a.goto{display:block;height:30px;margin:0 10px 57px;padding:10px 10px 10px;border:1px solid #d3d5d9;border-radius:2px;background-color:#fcfcfc;font-size:14px;color:#333}
+.goto_area a.goto .app_comic,.goto_area a.goto .ico_add{background:url(http://static.naver.net/m/comic/im/ic_app.png) no-repeat;vertical-align:top;font-size:0;line-height:0;color:transparent;-webkit-background-size:30px 65px;background-size:30px 65px}
+.goto_area a.goto .app_comic{float:left;width:30px;height:30px;margin:0 9px 0 0;background-position:0 -35px}
+.goto_area a.goto em{display:block;position:relative;top:-2px;margin-bottom:-3px;font-size:11px;color:#666}
+.goto_area a.goto strong{font-weight:normal;color:#009403}
+.goto_area a.goto .ico_add{display:inline-block;width:13px;height:13px;margin-top:1px;background-position:0 0}
+.ft_info{background:#f4f4f4;font-size:12px;color:#666;line-height:15px;text-align:left}
+.ft_info .ft_box{max-width:400px;margin:0 auto}
+.ft_info .ft_box .cprt_tit{display:block;padding:15px 17px 0;color:#444}
+.ft_info .copyright_info{padding:15px 17px 0;text-align:left}
+.ft_info .copyright_info.cf_v2{padding-top:2px}
+.ft_info .business_info{display:block;position:relative;padding:27px 0 0 17px}
+.ft_info .business_info:after{position:absolute;top:13px;height:0;left:17px;right:17px;border-bottom:1px solid #dcdcdc;content:''}
+.ft_info .business_info dt{float:left;margin-bottom:1px}
+.ft_info .business_info dd{overflow:hidden;padding-left:4px;margin-bottom:1px}
+.ft_info .business_info dd em{display:inline-block;font-size:11px;vertical-align:top;letter-spacing:0}
+.ft_info .if_lnk{position:relative;padding:10px 10px 13px 17px}
+.ft_info .if_lnk:after{position:absolute;bottom:-1px;left:17px;right:17px;border-bottom:1px solid #dcdcdc;content:''}
+.ft_info .if_lnk li~li{padding-top:12px}
+.ft_info .if_lnk .app_iflnk{display:none}
+.ft_info .if_lnk a{display:inline-block;padding-right:9px;background:url(http://static.naver.net/m/nstore/bg_if_lnk.png) no-repeat 100% 4px;font-weight:bold;color:#444;-webkit-background-size:5px 7px;background-size:5px 7px}
+.a .ft_info,.s.s2 .ft_info{font-size:11px}
+
+@media screen and (orientation:landscape){.goto_area a.goto{padding-bottom:10px;font-size:16px;line-height:30px}
+	.goto_area a.goto em{display:inline-block;top:0;font-size:16px;color:#333}
+	.goto_area a.goto .ico_add{vertical-align:-1px}
+	.ly_attendance{top:10px !important;margin-top:0 !important}
+	.pht_wrap .flick-ct img{width:auto;height:100%}
+}
+/* event gnb logo */
+.event .u_gnbh{width:92px;height:39px;padding:0;margin:3px 0 0 7px;}
+.event .u_gnbh span{width:100%;height:100%}
+
+/* event popup */
+.ly_event_wrap{display:none;position:absolute;top:43px;left:50%;margin-left:-160px;z-index:3200}
+.ly_event_wrap.after{top:99px}
+#AD_WEBTOON_MOBILEWEB_UP ~ .ly_event_wrap{top:93px}
+#AD_WEBTOON_MOBILEWEB_UP ~ .ly_event_wrap.after{top:149px}
+.ly_event_wrap .ly_event_cont{position:relative;width:320px;background:transparent}
+.ly_event_wrap .ly_event_cont img{vertical-align:top}
+.ly_event_wrap .ly_event_cont .btn_clse{position:absolute;top:0;right:10px;width:35px;height:35px}
+.ly_event_wrap .ly_event_cont .btn_clse.v2{top:72px}
+.ly_event_wrap .ly_event_cont .btn_cls_forever{position:absolute;top:0;left:10px;width:100px;height:35px}
+.ly_event_wrap .ly_event_cont .lk_evt_detail{position:absolute;top:282px;left:102px;width:125px;height:23px}
+.ly_event_wrap .ly_event_cont .lk_evt_detail.v2{left:96px}
+.ly_event_wrap .ly_event_cont .lk_evt_detail.v3{top:237px;left:98px}
+.ly_event_wrap .ly_event_cont .btn_coupon{position:absolute;bottom:11px;left:53px;width:215px;height:55px}
+.ly_event_wrap .ly_event_cont .btn_read{position:absolute;bottom:11px;left:63px;width:194px;height:46px}
+
+.ly_event_wrap.v1 .ly_event_cont .btn_clse{right:0}
+.ly_event_wrap.v1 .ly_event_cont .btn_view{position:absolute;bottom:20px;left:85px;width:150px;height:40px}
+.ly_event_wrap.v1 .ly_event_cont .btn_chk{position:absolute;top:0;left:0;width:95px;height:30px}
+.ly_event_wrap.v1.temp_phoneryung .btn_view{bottom:auto;top:186px;left:46px;width:227px;height:41px}

@@ -1,0 +1,181 @@
+﻿@charset "utf-8";
+
+html{height:100%}
+body{overflow:hidden;position:relative;height:100%;margin:0;padding:0;background:#fff!important}
+body.viewer_cmnt{overflow-y:auto}
+#ct{clear:both;width:100%;background-color:#fff;padding-bottom:0;-webkit-box-shadow:none}
+#ct:after{display:block;clear:both;content:''}
+.hide{display:none}
+.viewer{position:relative;width:100%;height:100%}
+.view_section{position:relative}
+.view_section .img{position:absolute;left:0;top:0}
+.view_section .img img{position:absolute;left:0;top:0}
+.view_pattan{background:url(http://static.naver.net/m/comic/im/viewer/bg_pattern.jpg) repeat}
+.viewer [class^=btn_] a{display:block;height:100%}
+.viewer .btn_star span{font-size:13px;color:#000}
+.viewer header ~ .viewer_gnb{margin-top:46px}
+.viewer [class^=btn_] span:nth-of-type(2),.tool_area a[class*=btn_] span,.viewer_gnb a[class*=btn_] span,.btn_group a span,.viewer .btn_tprev span,.viewer .btn_tool span,.viewer_da_ly .btn_skip span,.viewer.cuttoon .cmnt_wrap a:before,.viewer.cuttoon [class^=pg_]{display:inline-block;background-image:url(http://static.naver.net/m/comic/im/viewer/sp_viewer.png);background-repeat:no-repeat;line-height:1px;font-size:1px;color:transparent;-webkit-background-size:325px 250px;background-size:325px 250px;vertical-align:top}
+.viewer_gnb{position:absolute;left:0;z-index:100;width:100%;height:45px;background:url(http://static.naver.net/m/comic/im/viewer/bg_h.png) repeat-x 0 0;-webkit-background-size:20px 45px;background-size:20px 45px}
+.viewer_gnb a{display:block;overflow:hidden;position:absolute;top:0;z-index:40;width:50px;height:45px;text-align:center}
+.viewer_gnb .btn_prev{left:0;top:0}
+.viewer_gnb .btn_prev span{width:25px;height:18px;margin:13px 0 0 3px;background-position:0 0}
+.viewer_gnb .btn_info{right:0;text-align:right}
+.viewer_gnb .btn_info span{width:26px;height:19px;margin:14px 12px 0 0;background-position:-30px 0}
+.viewer_gnb .btn_clse{right:0;top:0;width:44px;height:39px;padding:6px 0 0 6px}
+.viewer_gnb .btn_clse span{width:20px;height:20px;margin-top:6px;background-position:-61px -29px}
+.viewer_gnb .btn_replay{right:0;width:52px;height:32px;padding:13px 9px 0 6px;font-size:13px;color:#fff}
+.viewer_gnb .btn_fresh{right:0;top:0;width:44px}
+.viewer_gnb .btn_fresh span{width:20px;height:23px;margin-top:11px;background-position:-120px -200px}
+.viewer_gnb .tit{display:block;overflow:hidden;padding:0 50px;font-size:19px;font-weight:normal;color:#fff;text-align:center;line-height:45px;text-overflow:ellipsis;white-space:nowrap}
+.viewer_gnb .tit em{position:relative;top:-1px}
+.tool_area{overflow:hidden;position:absolute;bottom:-1px;left:0;z-index:19;width:100%}
+.tool_area .tool{position:relative;background:url(http://static.naver.net/m/comic/im/viewer/bg_toolbar2.png) repeat-x;-webkit-background-size:5px 50px;background-size:5px 50px}
+.tool_area .tool_lst{position:relative;padding:0 100px 0 50px}
+.tool_area .tool_lst .btn_feed{position:absolute;top:0;left:0;width:49px;height:37px;padding-top:12px;border-right:1px solid rgba(0,0,0,.3);text-align:center;vertical-align:top}
+.tool_area .tool_lst .btn_feed span{width:23px;height:27px;background-position:-61px 0}
+.tool_area .tool_lst .btn_feed.on span{background-position:-89px 0}
+.tool_area .tool_lst .btn_area{position:absolute;right:0;top:0;height:50px}
+.tool_area .tool_lst .btn_area a{float:left;width:27px;height:49px;border-left:1px solid rgba(0,0,0,.3)}
+.tool_area .tool_lst .btn_area .btn_prev{text-align:right;padding-right:21px}
+.tool_area .tool_lst .btn_area .btn_next{text-align:left;padding-left:22px}
+.tool_area .tool_lst .btn_area a span{width:12px;height:18px;margin-top:17px}
+.tool_area .tool_lst .btn_area a.btn_prev span{background-position:0 -55px}
+.tool_area .tool_lst .btn_area a.btn_next span{background-position:-17px -55px}
+.tool_area .paging{position:relative;height:50px;padding:0 13px 0 14px}
+.tool_area .paging .page_bar{position:relative;height:29px;padding-top:21px}
+.tool_area .paging .page_bar .bar_gage{display:inline-block;position:relative;z-index:10;width:100%;height:6px;background:url(http://static.naver.net/m/comic/im/viewer/bg_toolbar.png) repeat-x;vertical-align:top;-webkit-background-size:1px 6px;background-size:1px 6px}
+.tool_area .paging .page_bar .bar_gage:before{position:absolute;top:0;left:-3px;width:3px;height:6px;background:url(http://static.naver.net/m/comic/im/viewer/sp_smart.png) no-repeat 0 -78px;-webkit-background-size:325px 250px;background-size:325px 250px;content:''}
+.tool_area .paging .page_bar .bar_gage:after{position:absolute;top:0;right:-3px;width:3px;height:6px;background:url(http://static.naver.net/m/comic/im/viewer/sp_smart.png) no-repeat -142px -78px;-webkit-background-size:325px 250px;background-size:325px 250px;content:''}
+.tool_area .paging .page_bar .gage{display:inline-block;position:absolute;left:0;top:0;z-index:30;height:6px;background:url(http://static.naver.net/m/comic/im/viewer/bg_toolbar_on.png) repeat-x;-webkit-background-size:1px 6px;background-size:1px 6px}
+.tool_area .paging .page_bar .gage:before{position:absolute;top:0;left:-3px;width:3px;height:6px;background:url(http://static.naver.net/m/comic/im/viewer/sp_smart.png) no-repeat 0 -96px;-webkit-background-size:325px 250px;background-size:325px 250px;content:''}
+.tool_area .paging .page_bar .gage:after{position:absolute;top:0;right:-3px;width:3px;height:6px;background:url(http://static.naver.net/m/comic/im/viewer/sp_smart.png) no-repeat -128px -96px;-webkit-background-size:325px 250px;background-size:325px 250px;content:''}
+.tool_area .paging .page_bar .page_num{display:block;margin:-8px -2px 0 0;font-family:Helvetica,sans-serif;font-size:11px;color:#fff;vertical-align:top;text-align:right}
+.tool_area .paging .page_bar .page_num em{color:#f65202;font-weight:bold;vertical-align:top}
+.tool_area .paging .page_bar .page_num .bar{color:#b4b4b5;font-weight:normal;vertical-align:top}
+.tool_area .paging .page_bar .page_num span{vertical-align:top}
+.tool_area .paging .page_bar .bar_section{position:relative}
+.tool_area .paging .page_bar .control_section{display:block;left:-5px;position:absolute;width:100%}
+.tool_area .paging .page_bar .control{display:block;position:absolute;top:-5px;z-index:40;width:24px;height:18px;margin-left:-7px;background:url(http://static.naver.net/m/comic/im/viewer/sp_smart.png) -34px -55px;-webkit-background-size:325px 250px;background-size:325px 250px}
+.btn_tool{position:absolute;right:0;bottom:0;z-index:20;width:58px;height:54px}
+.btn_tool .btn_tbox{height:100%}
+.btn_tool a{text-align:center}
+.btn_tool span{width:27px;height:21px;margin-top:16px;background-position:-22px -23px}
+.btn_tool .up a{background-position:-966px -50px}
+.view_lst{overflow:hidden;padding:70px 15px 15px 5px;background:url(http://static.naver.net/m/comic/im/viewer/bg_pattern_x2.jpg);-webkit-background-size:65px 65px;background-size:65px 65px}
+.view_lst li{float:left;width:75px;margin:0 0 20px 0}
+.view_lst .num{float:left;width:21px;margin:-4px 0 0 0;padding-right:3px;font-size:11px;color:#5b5b5b;font-weight:bold;text-align:right;vertical-align:top;text-shadow:0 1px #b9babe}
+.view_lst .thumb{position:relative;float:left;width:51px;height:87px;background:url(http://static.naver.net/m/comic/im/viewer/bg_loading_x2.png) no-repeat;vertical-align:top;-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.2),-1px -1px 2px rgba(0,0,0,.2);-webkit-background-size:51px 87px;background-size:51px 87px}
+.view_lst .thumb a{display:block;position:relative;height:87px}
+.view_lst .mask{display:none;position:absolute;left:0;top:0;width:51px;height:87px;background:url(http://static.naver.net/m/comic/im/viewer/bg_mask_x2.png) no-repeat;-webkit-background-size:51px 87px;background-size:51px 87px}
+.view_lst li.selected .mask{display:block}
+.viewer_lyr{position:absolute;top:50%;left:50%;z-index:3500;width:256px;height:125px;margin:-80px 0 0 -128px;padding:36px 0 0 0;background:url(http://static.naver.net/m/comic/im/viewer/bg_bx.png) no-repeat;font-size:19px;color:#fff;text-align:center;z-index:60;-webkit-background-size:256px 161px;background-size:256px 161px}
+.viewer_lyr .tit{color:#f65202}
+.viewer_lyr .tit.v2{margin:-4px 0 -5px;color:#fff;line-height:24px}
+.viewer_lyr .txt{padding-top:8px;font-size:15px}
+.viewer_lyr .btn_group{overflow:hidden;padding:20px 21px 0 22px}
+.viewer_lyr .btn_group .btn_clse{position:absolute;top:0;right:0;width:45px;height:45px;text-align:right}
+.viewer_lyr .btn_group .btn_clse span{width:20px;height:20px;margin:11px 11px 0 0;background-position:-61px -29px}
+.viewer .btn_group .btn_bx{display:block;overflow:hidden;width:140px;height:35px;margin:0 auto 6px;padding:0;border:none;background:none}
+.viewer .btn_group .btn_bx span{width:140px;height:35px;font-size:16px;color:#fff;line-height:35px;background-position:0 -110px}
+.viewer .btn_group .btn_bx.v2{float:left;width:104px;background:none}
+.viewer .btn_group .btn_bx.v2:first-child{margin-right:5px}
+.viewer .btn_group .btn_bx.v2 span{width:104px;background-position:0 -148px;font-size:15px;text-shadow:0 1px #28292a}
+.viewer_end_ly{position:absolute;top:0;left:0;z-index:60;width:100%;height:100%;text-align:center}
+.viewer_end_ly .viewer_end{display:-webkit-box;display:box;width:100%;height:100%;-webkit-box-orient:vertical}
+.viewer_end_ly .viewer_inner{display:-webkit-box;display:box;overflow:hidden;-webkit-box-flex:1;-webkit-box-orient:vertical;-webkit-box-pack:center}
+.viewer_end_ly .viewer_inner a{display:block;overflow:hidden;width:140px;height:36px;margin:0 auto;background:url(http://static.naver.net/m/comic/im/sp_smart_v2.png) no-repeat;font-size:16px;font-weight:bold;color:#fff;line-height:35px;-webkit-text-shodow:0 1px 0 #000;text-shadow:0 1px 0 #000;-webkit-background-size:151px 250px;background-size:151px 250px}
+.viewer_end_ly .title{padding:1px 0 0 6px;font-size:23px;color:#f65202;line-height:29px}
+.viewer_end_ly .title em{display:block}
+.viewer_end_ly .btn_group{position:relative;margin-top:19px}
+.viewer_end_ly .btn_group .btn_prev,.viewer_end_ly .btn_group .btn_next{position:absolute;top:0;width:71px;height:77px}
+.viewer_end_ly .btn_group .btn_prev{left:0;background-position:0 -45px}
+.viewer_end_ly .btn_group span{width:71px;height:77px}
+.viewer_end_ly .btn_group .btn_prev span{background-position:-157px -77px}
+.viewer_end_ly .btn_group .btn_prev.on span,.viewer_end_ly .btn_group a.btn_prev span:hover{background-position:-157px -164px}
+.viewer_end_ly .btn_group .btn_next{right:0;background-position:100% -45px}
+.viewer_end_ly .btn_group .btn_next span{background-position:-247px -77px}
+.viewer_end_ly .btn_group .btn_next.on span,.viewer_end_ly .btn_group a.btn_next span:hover{background-position:-247px -164px}
+.viewer_end_ly .btn_group .btn_list{margin-top:6px}
+.viewer_end_ly .viewer_inner .btn_clse{position:absolute;top:0;right:0;width:60px;height:60px;background-position:19px -210px !important;text-indent:-999px}
+.viewer_end_ly .viewer_inner .btn_clse span{width:25px;height:25px;background-position:-87px -29px;text-indent:-999px}
+.viewer_end_ly .end_pl{display:-webkit-box;display:box;border-top:none;-webkit-box-orient:vertical}
+.viewer.cuttoon{overflow:hidden;position:relative}
+.viewer.cuttoon .flick-view .flick-container{width:100%;height:100%}
+.viewer.cuttoon .cut_flick_wrap .flick-ct{display:-webkit-box;display:-moz-box;display:-ms-flexbox;width:100%;height:100%;-webkit-box-pack:center;-webkit-box-align:center;-webkit-box-orient:vertical}
+.viewer.cuttoon .flick-ct .cut_img{display:-webkit-box;width:100%;height:100%;text-align:center;-webkit-box-orient:vertical;-webkit-box-pack:center;-webkit-box-align:center}
+.viewer.cuttoon .flick-ct img{height:auto}
+.cut_viewer_last{overflow-x:hidden;overflow-y:auto;width:100%;height:100%;background:#fff}
+.cut_viewer_last h2.tit{margin:0 0 4px 20px;font-size:15px;color:#000}
+.cut_viewer_last h2.tit span{margin-right:3px}
+.cut_viewer_last .wr{overflow:hidden}
+.cut_viewer_last .wr .dsc{display:-webkit-box;display:-moz-box;display:-ms-flexbox;overflow:hidden;margin:0 20px 18px;font-size:13px;color:#444;line-height:16px;-webkit-line-clamp:8;-webkit-box-orient:vertical}
+@-moz-document url-prefix(){.cut_viewer_last .wr .dsc{overflow:visible}
+}.cut_viewer_last .product_lst_wrap{position:relative;border-top:1px solid #dcdcdc}
+.cut_viewer_last .product_lst_wrap .product_lst2{padding:20px 29px 17px 29px}
+.cut_viewer_last .product_lst_wrap .product_lst2 a{width:auto}
+.cut_viewer_last .product_lst2 .store{display:inline-block;margin-right:3px;font-size:12px}
+.cut_viewer_last .product_lst2 .tit{margin-top:10px;-webkit-line-clamp:1}
+.viewer.cuttoon .product_lst2 .thmb{height:60px}
+.viewer.cuttoon .product_lst2 .thmb.thmb_book img{width:auto;height:60px}
+.viewer.cuttoon .product_lst2 .thmb_book:before{width:40px;height:60px;margin:0 0 0 -20px;background-position:0 -175px}
+.cut_viewer_last .paging_wrap2 .pg_prev,.viewer.cuttoon .paging_wrap2 .pg_next{position:absolute;top:50%;width:25px;height:40px;margin-top:-20px}
+.cut_viewer_last .paging_wrap2 span.pg_prev,.viewer.cuttoon .paging_wrap2 span.pg_next{opacity:.5}
+.cut_viewer_last .paging_wrap2 .pg_prev{left:0;background-position:0 -220px}
+.cut_viewer_last .paging_wrap2 .pg_next{right:0;background-position:-25px -220px}
+.cut_viewer_last .star{margin:57px 0 12px}
+.cut_viewer_last .star .pnt{margin-bottom:0}
+.cut_viewer_last .grade{margin:13px 0 13px}
+.cut_viewer_last .end_pl{padding-bottom:42px}
+.cut_viewer_last #view>div{display:-webkit-box;display:-moz-box;width:100%;min-height:100%;-webkit-box-orient:vertical;-webkit-box-flex:1;-moz-box-orient:vertical;-moz-box-flex:1}
+.cut_viewer_last .viewer_last_top_area,.cut_viewer_last .viewer_last_btm_area{display:-webkit-box;display:-moz-box;width:100%;-webkit-box-orient:vertical;-webkit-box-flex:1;-moz-box-orient:vertical;-moz-box-flex:1}
+.cut_viewer_last .viewer_last_top_area{-webkit-box-pack:start;-moz-box-pack:start}
+.cut_viewer_last .viewer_last_btm_area{-webkit-box-pack:end;-moz-box-pack:end}
+.ly_wrap{display:none;position:relative}
+.ly_dim .bg{background:#000;opacity:.8;filter:alpha(opacity=80)}
+.viewer .ly_dim{position:fixed;z-index:50}
+.viewer .ly_dim.v2{z-idnex:100}
+.viewer.cuttoon .ly_wrap{position:absolute;z-index:35000}
+.viewer.cuttoon .ly_dim{z-index:35000}
+.viewer.cuttoon .ly_cut_guide .ly_cut_cont{position:absolute;top:50%;left:50%;width:248px;height:116px;margin:-58px 0 0 -124px}
+.viewer.cuttoon .ly_cut_guide .ly_cut_btns,.ly_cut_btns .btns_lft,.ly_cut_btns .btns_rgt{position:absolute;bottom:2px}
+.viewer.cuttoon .ly_cut_guide .ly_cut_btns{bottom:0;width:100%}
+.viewer.cuttoon .ly_cut_guide .ly_cut_btns .btns_lft{left:8px}
+.viewer.cuttoon .ly_cut_guide .ly_cut_btns .btns_rgt{right:8px}
+.viewer.cuttoon .ly_cut_guide .ly_clse{position:absolute;top:10px;right:15px;width:26px;height:24px;background-position:-85px -200px}
+.viewer_da_ly{text-align:center}
+.viewer_da_ly .ly_box{display:-webkit-box;position:absolute;top:0;left:0;right:0;bottom:0;z-index:10;margin:0 8px;-webkit-box-orient:vertical;-webkit-box-pack:center}
+.viewer_da_ly .btn_tprev{display:block;position:absolute;left:6px;bottom:6px;z-index:20;width:33px;height:34px}
+.viewer_da_ly .ly_txt{padding:0 0 8px 0;font-size:14px;color:#aeaeae;text-align:left}
+.a .viewer_da_ly .ly_txt{font-size:12px}
+.viewer_da_ly .da_image{display:block;position:relative}
+.viewer_da_ly .da_image:after{position:absolute;top:0;right:0;bottom:0;left:0;border:1px solid #cdcdcd;content:''}
+.viewer_da_ly .da_image img{vertical-align:top}
+.viewer_da_ly .adsby{text-align:right}
+.viewer_da_ly .adsby .adsby_cont{display:inline-block;margin-right:2px;padding:10px 0 7px}
+.viewer_da_ly .adsby .adsby_cont span{display:block;width:100px;height:11px;background:url(http://static.naver.net/m/comic/im/viewer/txt_ads2.png) no-repeat;font-size:0;color:transparent;-webkit-background-size:100px 11px;background-size:100px 11px}
+.viewer_da_ly .btn_skip{display:inline-block;overflow:hidden;width:88px;height:33px;margin:12px auto 0;background:#727272;font-size:15px;color:#fff;line-height:33px}
+.viewer_da_ly .ads_sc{padding:0}
+.viewer_da_ly .ico_volume{margin-left:1px}
+.viewer_da_ly .volume_area{right:-5px}
+.viewer .btn_tprev{display:block;position:absolute;left:0;bottom:0;z-index:35000;height:54px}
+.viewer .btn_tprev a{display:block;width:54px;text-align:center}
+.viewer .btn_tprev span{width:17px;height:27px;margin:13px 0 0 -8px;background-position:0 -23px}
+.cmt{overflow:hidden;margin-top:0}
+.cmt .wr{margin-top:49px;border-top:0}
+.cmt .fbtn{margin-bottom:-1px;border-bottom:1px solid #dfe1e3!important}
+.cmt .star{overflow:hidden;border-bottom:0}
+.commentDiv{overflow:hidden}
+.star ~ .u_comment_box{margin-top:10px}
+.cmt .sc2 ~ .u_comment_box{margin:0}
+.u_comment_box{margin-top:45px}
+.popup_bg{position:absolute;left:0;top:0;width:100%;height:100%;background:url(http://static.naver.net/m/comic/im/viewer/bg_pattan3.png) repeat 0 0;-webkit-background-size:25px 25px;z-index:300}
+.popup{position:absolute;left:0;top:0;width:100%;height:100%;z-index:900}
+.popup img{vertical-align:top}
+.popup .blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.popup .btn_close{position:absolute;top:0;right:0;z-index:400;width:45px;height:45px}
+.popup .btn_close span{display:inline-block;width:25px;height:25px;margin:11px 0 0 8px;background:url(http://static.naver.net/m/comic/im/viewer/pop_btn_close.png) no-repeat;font-size:0;color:transparent;-webkit-background-size:25px 25px;background-size:25px 25px}
+.pop_ct{overflow:hidden}
+.likeit_wrap .btn_wrap span{background:#fdfdfd;font-size:13px;color:#3c3c3c}
+.likeit_wrap .spi_sns_share{height:32px!important}
+.ads_sc.video .ly_dim{z-index:2900;background:#212121}
+

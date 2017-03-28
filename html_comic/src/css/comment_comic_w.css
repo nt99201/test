@@ -1,0 +1,339 @@
+﻿﻿@charset "utf-8";
+/* NTS UIT MHN */
+
+/* Common */
+.u_cbox{position:relative;background-color:#fff;color:#000;text-align:left;-webkit-text-size-adjust:none}
+.u_cbox .u_vc{overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:1px;color:transparent;line-height:1px}
+.u_cbox .u_vh{visibility:hidden}
+.u_cbox,.u_cbox p,.u_cbox h1,.u_cbox h2,.u_cboxh3,.u_cbox h4,.u_cbox h5,.u_cbox h6,.u_cbox ul,.u_cbox ol,.u_cbox li,.u_cbox dl,.u_cbox dt,.u_cbox dd,.u_cbox table,.u_cbox th,.u_cbox td,.u_cbox form,.u_cbox fieldset,.u_cbox legend,.u_cbox input,.u_cbox textarea,.u_cbox button,.u_cbox select{margin:0;padding:0;font-family:Helvetica,sans-serif}
+.u_cbox,.u_cbox input,.u_cbox textarea,.u_cbox select,.u_cbox button,.u_cbox table{font-size:14px;line-height:1.25em}
+.s .u_cbox,.s .u_cbox input,.s .u_cbox textarea,.s .u_cbox select,.s .u_cbox button,.s .u_cbox table{font-family:Helvetica,tahoma,sans-serif}
+.u_cbox img,.u_cbox fieldset{border:0}
+.u_cbox ul,.u_cbox ol{list-style:none}
+.u_cbox em,.u_cbox address{font-style:normal}
+.u_cbox a{color:#000;text-decoration:none}
+.u_cbox table{border-collapse:collapse}
+.u_cbox hr{display:none !important}
+.u_cbox b,.u_cbox strong{font-weight:normal}
+
+/* image */
+.u_cbox .u_cbox_btn_refresh .u_cbox_ico_refresh,.u_cbox .u_cbox_manage_wrap .u_cbox_ico_option,.u_cbox .u_cbox_manage_wrap .u_cbox_bg_wrap .u_cbox_bg_left,.u_cbox .u_cbox_manage_wrap .u_cbox_bg_wrap .u_cbox_bg_right,.u_cbox .u_cbox_layer_comment_manage .u_cbox_ico_check,.u_cbox .u_cbox_manage .u_cbox_ico_manage,.u_cbox .u_cbox_help_info .u_cbox_ico_help,.u_cbox .u_cbox_layer_help .u_cbox_btn_info_close,.u_cbox .u_cbox_layer_help .u_cbox_ico_help,.u_cbox .u_cbox_inform_status .u_cbox_ico_status,.u_cbox .u_cbox_thumb .u_cbox_thumb_mask,.u_cbox .u_cbox_notice .u_cbox_ico_notice,.u_cbox .u_cbox_notice .u_cbox_btn_notice_close,.u_cbox .u_cbox_refresh_wrap .u_cbox_bg_left,.u_cbox .u_cbox_refresh_wrap .u_cbox_bg_right,.u_cbox .u_cbox_refresh_wrap .u_cbox_ico_refresh_man,.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_none,.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_restrict,.u_cbox .u_cbox_comment .u_cbox_ico_best,.u_cbox .u_cbox_info_sub .u_cbox_work_sub .u_cbox_ico_open,.u_cbox .u_cbox_recomm_set .u_cbox_ico_recomm,.u_cbox .u_cbox_recomm_set .u_cbox_ico_unrecomm,.u_cbox .u_cbox_ico_reply,.u_cbox .u_cbox_paginate .u_cbox_ico_more,.u_cbox .u_cbox_social_login_area .u_cbox_box_social_naver .u_cbox_ico_social,.u_cbox .u_cbox_social_login_area .u_cbox_box_social_twitter .u_cbox_ico_social,.u_cbox .u_cbox_social_login_area .u_cbox_box_social_facebook .u_cbox_ico_social,.u_cbox .u_cbox_ico_fold,.u_cbox .u_cbox_btn_top .u_cbox_ico_top,.u_cbox .u_cbox_sns_icons,.u_cbox .u_cbox_view_comment .u_cbox_ico_view_comment,.u_cbox .u_cbox_ico_stat_secret,.u_cbox .u_cbox_image_section .u_cbox_image_icon_gif,
+.u_cbox .u_cbox_image_section .u_cbox_image_icon_crop,.u_cbox .u_cbox_login_area .u_cbox_ico_login_link,.u_cbox .u_cbox_login_area .u_cbox_btn_login .u_cbox_ico_login,.u_cbox .u_cbox_sort_scroll::before,.u_cbox .u_cbox_sort_scroll::after{background-image:url(http://static.naver.net/m/comic/im/comment/sp_cbox_w.png);background-repeat:no-repeat;-webkit-background-size:400px 800px;background-size:400px 800px}
+.u_cbox .u_cbox_login_section .u_cbox_login_ico{background-image:url(http://static.naver.net/m/comic/im/comment/sp_cbox_login_w.png);background-repeat:no-repeat;-webkit-background-size:200px 200px;background-size:200px 200px}
+
+.u_cbox .u_cbox_wrap{padding:44px 0 189px}
+.s .u_cbox .u_cbox_wrap{padding:44px 0 61px}
+.u_cbox .u_cbox_head{display:none;height:41px;padding:3px 0 0 3px;line-height:41px}
+.u_cbox .u_cbox_head::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_title{display:none;float:left;font-size:17px;font-weight:bold}
+.u_cbox .u_cbox_count{display:none;float:left;padding:1px 0 0 5px;font-size:18px;color:#000;font-family:HelveticaNeue-Light,Helvetica-Light,sans-serif;line-height:39px;vertical-align:top}
+.u_cbox .u_cbox_btn_refresh{display:none;float:left;overflow:hidden;width:23px;height:23px;margin:9px 0 0 7px;border:0;font-size:0;text-indent:-9999px;color:transparent;vertical-align:top}
+.u_cbox .u_cbox_btn_refresh .u_cbox_ico_refresh{display:block;width:21px;height:21px;border:1px solid #d9d9d9;background-position:-82px -29px;background-color:#fff}
+
+.u_cbox .u_cbox_back{display:block!important;position:fixed;top:0;left:0;z-index:200;width:50px;height:44px;line-height:44px}
+
+.u_cbox .u_cbox_btn_back{display:block;font-size:16px;font-weight:bold}
+.u_cbox .u_cbox_btn_back .u_cbox_ico_back{font-size:0;line-height:0;color:transparent}
+.u_cbox .u_cbox_btn_back .u_cbox_ico_back::before{display:inline-block;width:25px;height:18px;margin:13px 10px 0 14px;background-image:url(http://static.naver.net/m/comic/im/viewer/sp_viewer.png);background-repeat:no-repeat;background-position:0 0;line-height:1px;font-size:1px;color:transparent;-webkit-background-size:325px 250px;background-size:325px 250px;vertical-align:top;content:''}
+.u_cbox .u_cbox_write_box{position:relative}
+.u_cbox .u_cbox_profile_area{display:none;position:relative;height:23px;padding:10px 14px 0}
+.u_cbox .u_cbox_write::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_write .u_cbox_write_inner{position:relative;background-color:#edeef0}
+.u_cbox .u_cbox_write .u_cbox_write_inner .u_cbox_thumb{display:none}
+.u_cbox .u_cbox_write .u_cbox_write_area{overflow:hidden;max-width:100%}
+.u_cbox .u_cbox_write .u_cbox_inbox{position:relative;margin-right:68px;padding:11px 12px 10px;border:1px solid #b3b3b3;background-color:#fff}
+.u_cbox .u_cbox_write .u_cbox_inbox .u_cbox_text{display:block;position:relative;z-index:1;width:100%;height:20px;border:none;background-color:#fefefe;font-size:16px;color:#333;line-height:20px;-webkit-appearance:none;resize:none}
+.u_cbox .u_cbox_write .u_cbox_inbox .u_cbox_guide{overflow:hidden;position:absolute;top:9px;right:10px;bottom:10px;left:14px;z-index:10;border:none;font-size:16px;color:#999;line-height:17px}
+
+.u_cbox .u_cbox_box_name{display:block;overflow:hidden;position:absolute;top:7px;right:0;bottom:0;left:0;height:22px;font-size:16px;color:#000;font-weight:bold;line-height:22px;white-space:nowrap;text-overflow:ellipsis;vertical-align:top}
+.u_cbox .u_cbox_box_name .u_cbox_write_name{font-weight:bold}
+
+.u_cbox .u_cbox_social_login_area{display:none;position:relative;height:22px;padding:10px 82px 0 12px;background-color:#fff}
+.u_cbox .u_cbox_write_count{display:none;position:absolute;bottom:11px;right:82px;font-size:14px;color:#aaa;line-height:22px}
+.u_cbox .u_cbox_write .u_cbox_btn_upload{display:block;position:absolute;top:0;bottom:-1px;right:0;z-index:50;min-width:69px;height:40px;background:#00c73c;border:1px solid rgba(0,0,0,.1);font-size:15px;font-weight:bold;text-align:center;color:#fff}
+
+.u_cbox .u_cbox_edit .u_cbox_upload .u_cbox_btn_cancel{position:absolute;top:6px;right:10px;padding:5px;background:none;border:none;font-size:14px;color:#999;line-height:20px}
+.u_cbox .u_cbox_edit .u_cbox_social{display:none}
+.u_cbox .u_cbox_edit .u_cbox_addition .u_cbox_social{display:block}
+
+.u_cbox .u_cbox_edit .u_cbox_upload,
+.u_cbox .u_cbox_focus .u_cbox_upload,
+.u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_upload{height:43px;border-top:1px solid #ededed}
+.u_cbox .u_cbox_edit .u_cbox_btn_upload,
+.u_cbox .u_cbox_focus .u_cbox_btn_upload,
+.u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_btn_upload{top:auto !important;height:45px !important;}
+.u_cbox .u_cbox_edit .u_cbox_inbox,
+.u_cbox .u_cbox_focus .u_cbox_inbox,
+.u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_inbox{padding-bottom:13px;margin-right:0}
+
+.u_cbox .u_cbox_edit .u_cbox_inbox .u_cbox_text,
+.u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_inbox .u_cbox_text{z-index:20;height:120px}
+.u_cbox .u_cbox_focus .u_cbox_inbox .u_cbox_guide{left:15px;right:10px;font-size:16px;color:#999;line-height:20px}
+.u_cbox .u_cbox_writing .u_cbox_inbox .u_cbox_guide{display:none}
+
+.u_cbox .u_cbox_edit .u_cbox_upload,
+.u_cbox .u_cbox_edit .u_cbox_addition,
+.u_cbox .u_cbox_edit .u_cbox_write_count,
+.u_cbox .u_cbox_edit .u_cbox_social_login_area,
+.u_cbox .u_cbox_edit .u_cbox_upload_image,
+.u_cbox .u_cbox_focus .u_cbox_upload,
+.u_cbox .u_cbox_focus .u_cbox_addition,
+.u_cbox .u_cbox_focus .u_cbox_write_count,
+.u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_write_count,
+.u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_profile_area,
+.u_cbox .u_cbox_focus .u_cbox_profile_area,
+.u_cbox .u_cbox_focus .u_cbox_social_login_area,
+.u_cbox .u_cbox_focus .u_cbox_upload_image,
+.u_cbox .u_cbox_writing .u_cbox_profile,
+.u_cbox .u_cbox_writing .u_cbox_upload,
+.u_cbox .u_cbox_writing .u_cbox_addition,
+.u_cbox .u_cbox_writing .u_cbox_social_login_area,
+.u_cbox .u_cbox_writing .u_cbox_upload_image{display:block}
+.u_cbox .u_cbox_edit .u_cbox_social_login_area+.u_cbox_write_area .u_cbox_inbox,
+.u_cbox .u_cbox_focus .u_cbox_social_login_area+.u_cbox_write_area .u_cbox_inbox,
+.u_cbox .u_cbox_writing .u_cbox_social_login_area+.u_cbox_write_area .u_cbox_inbox{margin-top:-7px;border-top:0}
+
+/* 로그인 */
+.u_cbox_body{height:100%;margin:0;padding:0;background-color:#f9f9f9}
+.u_cbox_body .u_cbox{border:0;background:0}
+.u_cbox .u_cbox_login_header{overflow:hidden;height:44px;margin:0 -15px;background-color:#33d263;border-bottom:1px solid #2ebd59;text-align:center}
+.u_cbox .u_cbox_login_header .u_cbox_btn_prev{position:absolute;top:7px;left:7px;z-index:10;height:32px;width:30px;}
+.u_cbox .u_cbox_login_header .u_cbox_btn_prev .u_cbox_ico_prev{display:block;overflow:hidden;width:10px;height:17px;margin:7px 0 0 7px;background-position:-100px -50px}
+.u_cbox .u_cbox_login_header .u_cbox_btn_prev .u_cbox_txt_prev{overflow:hidden;position:absolute;width:1px;height:1px;font-size:1px;line-height:1px;color:transparent}
+.u_cbox .u_cbox_login_header .u_cbox_login_title{display:block;font-size:17px;font-weight:bold;color:#fff;line-height:45px}
+.u_cbox .u_cbox_login_section{padding:39px 0 16px;text-align:center}
+.u_cbox .u_cbox_login_section .u_cbox_login_ico{display:inline-block;overflow:hidden;width:144px;height:87px;background-position:0 0;vertical-align:top}
+.u_cbox .u_cbox_login_section .u_cbox_login_msg{padding:14px 0 22px;font-size:16px;color:#777;letter-spacing:-1px;line-height:23px}
+.u_cbox .u_cbox_login_section .u_cbox_login_msg .u_cbox_msg_point{color:#1ec800}
+.u_cbox .u_cbox_login_area{max-width:290px;margin:0 auto}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login{display:block;position:relative;padding:0 44px 0 15px;border:1px solid #eaeaeb;background-color:#fff;font-size:18px;color:#333;line-height:48px;text-align:left}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login::after{display:table;clear:both;content:''}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login+.u_cbox_btn_login,
+.u_cbox .u_cbox_login_area .u_cbox_btn_login~.u_cbox_btn_login{margin-top:5px}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login .u_cbox_ico_login{display:inline-block;overflow:hidden;float:left;width:22px;height:22px;margin:13px 10px 0 0;vertical-align:top}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login_naver .u_cbox_ico_login{background-position:0 -83px}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login_twitter .u_cbox_ico_login{background-position:-27px -83px}
+.u_cbox .u_cbox_login_area .u_cbox_btn_login_facebook .u_cbox_ico_login{background-position:-54px -83px}
+.u_cbox .u_cbox_login_area .u_cbox_ico_login_link{position:absolute;top:17px;right:15px;width:7px;height:14px;margin:0;background-position:-98px -130px}
+.u_cbox .u_cbox_login_area .u_cbox_txt_login{float:left}
+.u_cbox .u_cbox_login_footer{padding:13px 0;border-top:1px solid #eaeaeb;text-align:center}
+.u_cbox .u_cbox_login_footer .u_cbox_btn_footer{font-size:12px;color:#d2d2d2}
+
+/* 정렬 옵션 */
+.u_cbox .u_cbox_sort{overflow:hidden;margin:0 -15px;border-bottom:2px solid #5e5f64}
+.u_cbox .u_cbox_sort::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_sort .u_cbox_sort_option{position:relative;z-index:1;height:37px}
+.u_cbox .u_cbox_sort .u_cbox_sort_scroller{position:absolute;left:0;right:0;z-index:1}
+.u_cbox .u_cbox_sort_scroll::before,.u_cbox .u_cbox_sort_scroll::after{display:block;position:absolute;top:0;bottom:0;z-index:2;content:''}
+.u_cbox .u_cbox_sort_scroll::before{left:-15px;width:16px;background-position:-343px -108px}
+.u_cbox .u_cbox_sort_scroll::after{right:-15px;width:34px;background-position:-366px -108px}
+.u_cbox .u_cbox_sort_scroll .u_cbox_sort_option{overflow:hidden;margin:0 -15px}
+.u_cbox .u_cbox_sort_scroll .u_cbox_sort_scroller{padding:0 35px 0 15px}
+.u_cbox .u_cbox_sort .u_cbox_sort_option_list{display:table;width:100%;text-align:center;white-space:nowrap}
+.u_cbox .u_cbox_sort .u_cbox_sort_option_list::after{dislay:block;clear:both;content:''}
+.u_cbox .u_cbox_sort .u_cbox_select ~ .u_cbox_select .u_cbox_sort_label:before{display:block;overflow:hidden;position:absolute;top:11px;left:0;width:1px;height:16px;background:#e3e3e3;content:''}
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap{display:table-cell;width:50%}
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap+.u_cbox_sort_option_wrap,.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap~.u_cbox_sort_option_wrap{margin-left:11px}
+.u_cbox .u_cbox_sort .u_cbox_select{display:block;overflow:hidden;position:relative;padding-right:2px;vertical-align:top}
+.u_cbox .u_cbox_sort .u_cbox_ico_select{display:inline-block;overflow:hidden;position:absolute;width:0;height:0;text-indent:-999px;vertical-align:top;color:transparent}
+.u_cbox .u_cbox_sort .u_cbox_sort_label{display:inline-block;font-size:14px;color:#999;font-weight:bold;line-height:37px;vertical-align:top}
+.s .u_cbox .u_cbox_sort .u_cbox_sort_label{font-size:15px}
+.u_cbox .u_cbox_sort .u_cbox_sort_option_on .u_cbox_sort_label{padding-left:18px;color:#ed232b}
+.u_cbox .u_cbox_sort .u_cbox_sort_option_on .u_cbox_ico_select{top:7px;left:0;width:13px;height:9px;background-position:-80px -130px}
+.a .u_cbox .u_cbox_sort .u_cbox_sort_option_on .u_cbox_ico_select{top:6px}
+.u_cbox_sort_option_wrap ~ .u_cbox_sort_option_wrap .u_cbox_sort_label:before{display:block;overflow:hidden;position:absolute;top:11px;left:0;width:1px;height:16px;background:#e3e3e3;content:''}
+.u_cbox .u_cbox_help_info{float:left;text-align:right}
+.u_cbox .u_cbox_help_info .u_cbox_info_label{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:1px;color:transparent}
+.u_cbox .u_cbox_help_info .u_cbox_btn_help{display:inline-block;overflow:hidden;width:28px;height:28px;font-size:0;text-indent:-9999px;color:transparent;vertical-align:top}
+.u_cbox .u_cbox_help_info .u_cbox_ico_help{display:block;width:28px;height:28px;background-position:-135px -25px}
+.u_cbox .u_cbox_layer_help{right:15px;width:284px;padding:20px 15px 16px 15px;margin:34px 0 0 21px;border:1px solid #e0e0e0;background-color:#f8f8f8;-webkit-box-sizing:border-box;box-sizing:border-box}
+.u_cbox .u_cbox_layer_help .u_cbox_info_title{display:block;font-size:14px;line-height:18px}
+.u_cbox .u_cbox_layer_help .u_cbox_info_txt+.u_cbox_info_title,.u_cbox .u_cbox_layer_help .u_cbox_info_txt~.u_cbox_info_title{margin-top:25px}
+.s .u_cbox .u_cbox_layer_help .u_cbox_info_title{font-size:15px}
+.u_cbox .u_cbox_layer_help .u_cbox_ico_help{display:inline-block;overflow:hidden;width:17px;height:17px;margin-right:7px;background-position:-168px -31px;line-height:999px;vertical-align:top}
+.u_cbox .u_cbox_layer_help .u_cbox_info_txt{padding-top:7px;font-size:15px;color:#808080;line-height:20px;letter-spacing:-.5px}
+.u_cbox .u_cbox_layer_help .u_cbox_info_txt+.u_cbox_info_txt{padding-top:15px}
+.u_cbox .u_cbox_layer_help .u_cbox_btn_info_close{overflow:hidden;position:absolute;top:6px;right:6px;width:22px;height:22px;background-position:-108px -56px;line-height:999px}
+
+.u_cbox .u_cbox_head .u_cbox_help_info{line-height:normal}
+.u_cbox .u_cbox_sort .u_cbox_layer_help{margin-top:35px;right:5px}
+
+/* 자동완성 */
+.u_cbox .u_cbox_user_wrap_on{background-color:#e5e4ea}
+
+.u_cbox .u_cbox_layer_userlist.u_cbox_type_down{border-top:none}
+.u_cbox .u_cbox_layer_userlist.u_cbox_type_up{border-bottom:none}
+
+.u_cbox_content_wrap{min-height:335px}
+
+/* 공지사항 */
+.u_cbox .u_cbox_notice{position:relative;padding:11px 13px 10px;margin-top:7px;background-color:#f8f8f8;border:1px solid #ededed}
+.u_cbox .u_cbox_notice .u_cbox_notice_tit{display:block;overflow:hidden;font-size:15px;color:#555;line-height:20px;white-space:nowrap;text-overflow:ellipsis}
+.u_cbox .u_cbox_notice .u_cbox_ico_notice{display:inline-block;overflow:hidden;width:19px;height:15px;margin:2px 4px 0 0;background-position:-22px -130px;vertical-align:top}
+.u_cbox .u_cbox_notice .u_cbox_txt_notice{}
+.u_cbox .u_cbox_notice .u_cbox_box_notice{display:none}
+.u_cbox .u_cbox_notice .u_cbox_con_notice{padding-top:7px;font-size:15px;color:#808080;line-height:19px;word-break:break-all;word-wrap:break-word}
+.u_cbox .u_cbox_notice .u_cbox_notice_date{display:block;padding:5px 0 7px;font-size:13px;color:#999;font-family:HelveticaNeue-Light,Helvetica,sans-serif}
+.u_cbox .u_cbox_notice .u_cbox_btn_notice_close{overflow:hidden;position:absolute;bottom:3px;right:3px;width:22px;height:22px;background-position:-135px -56px;line-height:999px}
+
+.u_cbox .u_cbox_notice_on .u_cbox_notice_tit{white-space:normal;text-overflow:initial;word-break:break-all;word-wrap:break-word}
+.u_cbox .u_cbox_notice_on .u_cbox_box_notice{display:block}
+
+.u_cbox .u_cbox_list{padding:0 15px}
+
+/* 댓글 없을 때 */
+.u_cbox .u_cbox_comment_none{position:relative;padding:48px 0 44px;font-size:15px;color:#333;line-height:22px;text-align:center}
+.s .u_cbox .u_cbox_comment_none{padding:140px 0 142px;font-size:16px}
+.u_cbox .u_cbox_con_inform{max-width:257px;margin:0 auto}
+.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_none{display:block;width:57px;height:52px;background-position:-343px 0;margin:0 auto 13px}
+.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_restrict{display:block;width:57px;height:57px;background-position:-282px 0;margin:3px auto 11px}
+.u_cbox .u_cbox_con_inform .u_cbox_txt_mark{color:#333}
+
+/* 댓글 안내 */
+.u_cbox .u_cbox_inform{padding:42px 0;font-size:15px;color:#333;line-height:22px;text-align:center}
+.u_cbox .u_cbox_head+.u_cbox_inform,
+.u_cbox .u_cbox_head~.u_cbox_inform{border-top:1px solid #ededed}
+.s .u_cbox .u_cbox_inform{font-size:16px}
+.u_cbox .u_cbox_item_inform{display:inline-block;padding-top:11px;font-size:15px;color:#999;line-height:20px;text-align:left;vertical-align:top}
+.u_cbox .u_cbox_item_inform::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_item_inform .u_cbox_tit_item{display:block;float:left;clear:left}
+.u_cbox .u_cbox_item_inform .u_cbox_con_item{float:left}
+.u_cbox .u_cbox_item_inform .u_cbox_ico_bar{display:inline-block;overflow:hidden;float:right;position:static;margin:4px 6px 0 5px;width:1px;height:10px;background-color:#ededed;line-height:99px;vertical-align:top}
+
+/* 댓글 리스트 */
+.u_cbox .u_cbox_comment_box{position:relative;border-bottom:1px solid #ddd}
+.u_cbox .u_cbox_area{margin:0 -15px;padding:15px}
+.u_cbox .u_cbox_comment_box .u_cbox_thumb{display:none;float:left}
+.u_cbox .u_cbox_comment_box .u_cbox_info::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_ico_stat_secret{display:inline-block;overflow:hidden;float:left;width:12px;height:15px;margin:5px 5px 0 0;background-position:-6px -130px;line-height:999px;vertical-align:top}
+.u_cbox .u_cbox_name{display:inline-block;float:left;overflow:hidden;max-width:55%;padding:1px 6px 4px 0;font-size:16px;line-height:22px;color:#000;font-weight:bold;white-space:nowrap;text-overflow:ellipsis;vertical-align:top}
+
+.u_cbox .u_cbox_work_sub{position:absolute;top:13px;right:-10px}
+.u_cbox .u_cbox_work_box{display:none;position:absolute;top:23px;right:0;z-index:100;width:150px;height:0}
+.u_cbox .u_cbox_work_sub_on .u_cbox_work_box{display:block}
+.u_cbox .u_cbox_work_inner{float:right;padding:10px;border:1px solid #ccc;background-color:#fff}
+.u_cbox .u_cbox_info_sub .u_cbox_work_sub .u_cbox_btn_open{float:left;overflow:hidden;width:22px;height:22px;font-size:0;text-indent:-9999px;color:transparent}
+.u_cbox .u_cbox_info_sub .u_cbox_work_sub .u_cbox_ico_open{display:block;width:22px;height:22px;background-position:-81px -56px}
+.u_cbox .u_cbox_info_sub .u_cbox_work_box .u_cbox_btn_delete,
+.u_cbox .u_cbox_info_sub .u_cbox_work_box .u_cbox_btn_block{display:block;padding:8px 9px 8px;font-size:15px}
+.u_cbox .u_cbox_info_sub .u_cbox_work_box .u_cbox_btn_edit,
+.u_cbox .u_cbox_info_sub .u_cbox_work_box .u_cbox_ico_edit,
+.u_cbox .u_cbox_info_sub .u_cbox_work_box .u_cbox_ico_delete,
+.u_cbox .u_cbox_info_sub .u_cbox_work_box .u_cbox_ico_block{display:none}
+.u_cbox .u_cbox_info_base{padding-top:6px}
+.u_cbox .u_cbox_info_base::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_date{display:inline-block;float:left;font-size:13px;color:#999;font-family:Helvetica-Light,Helvetica,sans-serif}
+.u_cbox .u_cbox_btn_report{display:inline-block;overflow:initial;float:left;position:relative;top:1px;width:auto;height:auto;font-size:13px;color:#999}
+.u_cbox .u_cbox_btn_report .u_cbox_ico_bar{display:inline-block;float:left;position:relative;top:2px;width:1px;height:12px;margin:0 6px 0 7px;background-color:#e6e6e6}
+.u_cbox .u_cbox_pic{float:right;position:relative;margin:-6px 0 2px 16px}
+.u_cbox .u_cbox_pic .u_cbox_img_contents{width:54px;height:54px;vertical-align:top}
+.u_cbox .u_cbox_pic .u_cbox_pic_mask{position:absolute;top:0;right:0;bottom:0;left:0;z-index:20;border:1px solid #000;opacity:.06}
+.u_cbox .u_cbox_comment .u_cbox_text_wrap{overflow:hidden;position:relative;z-index:1;font-size:16px;line-height:20px;word-break:break-all;word-wrap:break-word;color:#333}
+.u_cbox .u_cbox_comment .u_cbox_ico_best{display:inline-block;overflow:hidden;width:33px;height:14px;margin:2px 4px 0 0;background-position:-88px -110px;text-indent:-9999px;vertical-align:top}
+.u_cbox .u_cbox_comment .u_cbox_hash_tag{display:inline-block;font-weight:bold;vertical-align:top}
+
+.u_cbox .u_cbox_image_section{padding:3px 0}
+.u_cbox .u_cbox_image_section .u_cbox_image_wrap{display:block;padding:4px 0 0;*zoom:1}
+.u_cbox .u_cbox_image_section .u_cbox_image_wrap:after{display:table;clear:both;content:''}
+.u_cbox .u_cbox_image_section .u_cbox_image_link{display:block;overflow:hidden;float:left;position:relative;max-width:204px;max-height:306px}
+.u_cbox .u_cbox_image_section .u_cbox_comment_image{max-width:100%;max-height:306px;vertical-align:top}
+.u_cbox .u_cbox_image_section .u_cbox_image_icon_gif,
+.u_cbox .u_cbox_image_section .u_cbox_image_icon_crop{overflow:hidden;position:absolute;top:50%;left:50%;width:42px;height:42px;margin:-21px 0 0 -21px;line-height:999px}
+.u_cbox .u_cbox_image_section .u_cbox_image_icon_gif{background-position:-313px -62px}
+.u_cbox .u_cbox_image_section .u_cbox_image_icon_crop{background-position:-359px -62px}
+
+.u_cbox .u_cbox_tool::after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_tool:empty{display:none}
+
+.u_cbox .u_cbox_recomm_set{float:right}
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm,
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_unrecomm{float:left;position:relative;min-width:15px;height:23px;padding:0 7px 0 24px;margin:8px 0 2px 4px;border:1px solid #e0e0e0;background-color:#fff;font-size:13px;line-height:23px;color:#999;text-align:center}
+.u_cbox .u_cbox_recomm_set .u_cbox_ico_recomm,
+.u_cbox .u_cbox_recomm_set .u_cbox_ico_unrecomm{overflow:hidden;position:absolute;top:5px;left:7px;width:12px;height:14px;text-indent:-9999px;vertical-align:top}
+.u_cbox .u_cbox_recomm_set .u_cbox_ico_recomm{background-position:-46px -130px}
+.u_cbox .u_cbox_recomm_set .u_cbox_ico_unrecomm{background-position:-63px -128px}
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm_on{border:1px solid #ff5151}
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_unrecomm_on{border:1px solid #385da3}
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm_on .u_cbox_cnt_recomm{color:#ff5151}
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_unrecomm_on .u_cbox_cnt_unrecomm{color:#385da3}
+.u_cbox .u_cbox_btn_fold{display:none;padding-left:70px;margin-right:70px;font-size:13px;color:#999;line-height:25px;text-align:center}
+.u_cbox .u_cbox_btn_fold::before{display:block;height:0;margin:0 -70px;border-top:1px solid #e1e1e1;content:''}
+.u_cbox .u_cbox_btn_fold_wrap{display:inline-block;position:relative;vertical-align:top}
+.u_cbox .u_cbox_ico_fold{display:inline-block;float:right;position:relative;width:11px;height:6px;margin:9px 0 0 4px;background-position:-98px -99px;vertical-align:top}
+
+/* 내글 */
+.u_cbox .u_cbox_mine .u_cbox_area{background-color:#fcfff9}
+
+/* 베스트댓글 */
+.u_cbox .u_cbox_type_sort_best .u_cbox_image_section .u_cbox_image_link{max-width:182px;max-height:182px}
+.u_cbox .u_cbox_type_sort_best .u_cbox_image_section .u_cbox_comment_image{max-width:100%;max-height:182px}
+
+/* 더보기 */
+.u_cbox .u_cbox_paginate{position:relative}
+.u_cbox .u_cbox_btn_more{display:block;position:relative;font-size:14px;color:#333;text-align:center}
+.u_cbox .u_cbox_more_wrap{display:inline-block;padding:13px 0;vertical-align:top}
+.u_cbox .u_cbox_more_wrap::after{display:table;clear:both;content:''}
+.u_cbox .u_cbox_more_wrap .u_cbox_page_more{float:left}
+.u_cbox .u_cbox_ico_more{display:inline-block;float:right;width:12px;height:7px;margin:5px 0 0 6px;background-position:-81px -99px;vertical-align:top}
+.u_cbox .u_cbox_btn_more_pre .u_cbox_ico_more{margin:4px 0 0 6px;background-position:-138px -99px;vertical-align:top}
+.u_cbox .u_cbox_btn_top{position:absolute;right:0;top:50%;z-index:10;width:33px;height:31px;margin-top:-16px;background-color:#fcfcfc;border:1px solid #e6e6e6}
+.u_cbox .u_cbox_btn_top .u_cbox_ico_top{overflow:hidden;position:absolute;top:8px;left:11px;width:12px;height:14px;background-position:-160px -83px;line-height:999px}
+
+/* 로딩 */
+.u_cbox .u_cbox_loading{padding:70px 0 110px;text-align:center}
+.u_cbox .u_cbox_loading_bar{position:relative;padding:20px 0;text-align:center}
+.u_cbox .u_cbox_ico_loading{display:inline-block;overflow:hidden;width:20px;height:20px;background:url(http://static.naver.net/m/comic/im/comment/cbox_loading_w.gif) no-repeat;background-size:20px 20px;text-indent:-9999px;color:transparent}
+
+/* 전체 댓글 더보기 */
+.u_cbox .u_cbox_view_comment{padding:13px 0;margin-top:-1px;border-top:1px solid #efefef}
+.u_cbox .u_cbox_view_comment:after{display:block;clear:both;content:''}
+.u_cbox .u_cbox_view_comment .u_cbox_btn_view_comment{float:right}
+.u_cbox .u_cbox_view_comment .u_cbox_count_view_comment,
+.u_cbox .u_cbox_view_comment .u_cbox_in_view_comment{float:left;font-size:14px;color:#000;line-height:22px}
+.u_cbox .u_cbox_view_comment .u_cbox_count_view_comment{padding-right:2px;color:#00c73c}
+.u_cbox .u_cbox_view_comment .u_cbox_ico_view_comment{float:left;width:6px;height:11px;margin:6px 1px 0 6px;background-position:-115px -83px;vertical-align:top}
+.u_cbox .u_cbox_loading_bar+.u_cbox_view_comment,
+.u_cbox .u_cbox_loading_bar~.u_cbox_view_comment,
+.u_cbox .u_cbox_paginate+.u_cbox_view_comment,
+.u_cbox .u_cbox_paginate~.u_cbox_view_comment{margin-top:0}
+.u_cbox .u_pg_end+.u_cbox_view_comment,
+.u_cbox .u_pg_end~.u_cbox_view_comment{margin-top:-1px}
+
+/* 레이어 */
+.u_cbox .u_cbox_layer{display:none;position:absolute;z-index:1000}
+.u_cbox_layer_wrap{display:none;position:absolute;z-index:1000;padding:0;background-color:transparent}
+.u_cbox .u_cbox_layer .u_cbox_layer_tail,.u_cbox_layer_wrap .u_cbox_layer_tail{display:inline-block; height:100%;width:0;vertical-align:middle}
+.u_cbox .u_cbox_layer_dimmed{position:absolute;top:0;right:0;bottom:-300px;left:0;background-color:#000;filter:alpha(opacity=60);opacity:.6;*position:absolute}
+
+/* 얼러트 팝업 */
+.u_cbox .u_cbox_alert_pop_wrap{position:fixed;top:0;right:0;bottom:0;left:0;text-align:center}
+.u_cbox .u_cbox_alert_pop{display:inline-block;position:relative;width:290px;vertical-align:middle}
+.u_cbox .u_cbox_con_alert{padding:37px 23px 33px;-webkit-border-radius:2px;border-radius:2px;background-color:#fff;font-size:17px;color:#333;line-height:23px}
+.a .u_cbox .u_cbox_con_alert{font-size:16px}
+.u_cbox .u_cbox_con_alert .u_cbox_btns_wrap{padding-top:18px}
+.u_cbox .u_cbox_con_alert .u_cbox_btn_confirm{width:79px;height:34px;font-size:14px;line-height:35px;-webkit-text-shadow:none;text-shadow:none}
+
+/* 커스터 마이징 */
+.viewer.cuttoon #ct{height:100%}
+.s .viewer.cuttoon .viewer_gnb{position:absolute !important}
+.viewer .u_cbox{min-height:100%;background:transparent}
+.viewer .u_cbox .u_cbox_write .u_cbox_inbox .u_cbox_text,.viewer .u_cbox .u_cbox_writing .u_cbox_inbox .u_cbox_text{height:17px;line-height:17px}
+.viewer .u_cbox .u_cbox_focus .u_cbox_inbox .u_cbox_text,.viewer .u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_inbox .u_cbox_text{height:60px}
+.viewer .u_cbox .u_cbox_focus .u_cbox_write_count,.viewer .u_cbox .u_cbox_focus .u_cbox_upload{display:block}
+.viewer .u_cbox .u_cbox_focus .u_cbox_write_area,.viewer .u_cbox .u_cbox_focus.u_cbox_writing .u_cbox_write_area{margin-bottom:5px}
+.viewer .u_cbox_write_wrap{position:fixed;left:0;right:0;bottom:0;z-index:2500}
+.viewer .u_cbox .u_cbox_write_box{padding:10px 13px 10px 16px;border-bottom:1px solid #e9e9e9;background:#edeef0}
+.commentDiv .cut_img{position:fixed;top:0;left:0;width:100%;height:100%;text-align:center}
+.commentDiv .cut_img .align_middle{display:-webkit-box;display:-moz-box;display:-ms-flexbox;width:100%;height:100%;-webkit-box-pack:center;-webkit-box-align:center;-webkit-box-orient:vertical;-moz-box-pack:center;-moz-box-align:center;-moz-box-orient:vertical}
+.commentDiv .cut_img .align_middle .align_cont{display:inline-block;*display:inline;zoom:1}
+.commentDiv .cut_img:after{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;background:rgba(255,255,255,.9);content:''}
+.commentDiv .cut_img img{height:auto}
+.commentDiv .cut_img ~ .u_cbox .u_cbox_sort,.commentDiv .cut_img ~ .u_cbox .u_cbox_comment_box .u_cbox_pic{display:none}
+.commentDiv .cut_img ~ .u_cbox .u_cbox_mine .u_cbox_area{background:none}
+
+.s .u_cbox_write_wrap.u_cbox_focus{position:relative;margin-bottom: -61px}
+.u_cbox .u_cbox_writing .u_cbox_profile_area{display:none}
+.u_cbox .u_cbox_writing .u_cbox_inbox{margin-right:68px;padding-bottom:10px}
+.u_cbox .u_cbox_writing .u_cbox_btn_upload{top:0 !important;height:40px !important;}
+.viewer .u_cbox .u_cbox_writing .u_cbox_write_area{margin:0}
+.u_cbox .u_cbox_writing .u_cbox_upload{height:100%}
