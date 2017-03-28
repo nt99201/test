@@ -1,4 +1,23 @@
-[gulp에서 없는 require 명 내려 받기]
+1. npm install
+2. 설정 파일에서 scss 경로 확인
+3. node -v (v4.5.0 버젼나오면 성공), node 업그레이드 (현재 버젼 6임)
+4.  
+[git bash에 업그레이드 버젼 언어]
+npm cache clean -f
+npm install -g n
+안되면 git하고 node 새로 다운받아서 새로 설치해야 함
+
+5. 다시 새로 받았으면 npm install로 다시 설치
+6. pull 받으신 저장소(브랜치) 삭제하고 다시 셋팅 (꼬일수도 있음)
+7. packge.js에 추가
+"devDependencies": {
+	"gulp-sass": "3.0.0"
+}
+
+8. npm install로 다시 설치
+
+
+9. [gulp에서 없는 require 명 내려 받기]
 
 var sourcemaps = require('gulp-sourcemaps');
 * gulp-sourcemaps 부분
